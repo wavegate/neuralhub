@@ -1,1 +1,1 @@
-web: gunicorn neuralhub.app
+web: gunicorn neuralhub.neuralhub
