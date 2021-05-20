@@ -1,0 +1,3 @@
+FLASK_APP=neuralhub.py
+FLASK_CONFIG=development
+FLASK_DEBUG=1
