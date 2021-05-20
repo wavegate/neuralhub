@@ -1,6 +1,6 @@
 from flask import Flask
-app = Flask(__name__)
+neuralhub = Flask(__name__)
 
-@app.route('/')
+@neuralhub.route('/')
 def index():
 	return 'Hello World!'
