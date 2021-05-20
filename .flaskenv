@@ -1,2 +1,2 @@
-FLASK_APP=app.py
+FLASK_APP=match.py
 FLASK_CONFIG=development

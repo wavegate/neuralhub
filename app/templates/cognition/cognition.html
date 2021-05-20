@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+
+{% block page_head %}Cognitive Testing{% endblock %}
+
+{% block content %}
+<div class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="accordion">
+				<div class="card">
+					<div class="card-header" id="test1">
+						Select a test: 
+						<h5 class="mb-0">
+							<button class="btn btn-link" data-toggle="collapse" data-target="#test1collapse" aria-expanded="true" aria-controls="collapseOne">
+								Example Test
+							</button>
+							<button class="btn btn-link" data-toggle="collapse" data-target="#subitizingcollapse" aria-expanded="true" aria-controls="collapseOne">
+								Subitizing
+							</button>
+							<button class="btn btn-link" data-toggle="collapse" data-target="#slumscollapse" aria-expanded="true" aria-controls="collapseOne">
+								SLUMS
+							</button>
+						</h5>
+					</div>
+					<div id="test1collapse" class="collapse" data-parent="#accordion">
+						<div class="card-body">
+							This is an example test. Time taken: 20 seconds<p><a href="{{url_for('main.test1')}}" class="btn btn-primary btn-lg">>>Start test<<</a></p>
+						</div>
+					</div>
+					<div id="subitizingcollapse" class="collapse" data-parent="#accordion">
+						<div class="card-body">
+							<p>Subitizing is the rapid, accurate, and confident judgments of numbers performed for small numbers of items. Time taken: 1 minute</p>
+							<a href="{{ url_for('static', filename='papers/subitizing_kaufman_1949.pdf') }}">Paper</a><p><a href="{{url_for('main.subitizing')}}" class="btn btn-primary btn-lg">>>Start test<<</a></p>
+						</div>
+					</div>
+					<div id="slumscollapse" class="collapse" data-parent="#accordion">
+						<div class="card-body">
+							<p>The Saint Louis University Mental Status Examination is an alternative to the Mini-Mental State Examination to screen for dementia in more educated patients and for mild neurocognitive disorder. Time taken: 10min</p> (In development)
+							<!--<a href="{{ url_for('static', filename='papers/tariq2006.pdf') }}">Paper</a><p><a href="{{url_for('main.slums')}}" class="btn btn-primary btn-lg">>>Start test<<</a></p>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h5 class="card-title">Test Results</h5>
+				</div>
+				<div class="card-body">
+					<div class="table">
+						<table id="program_table" class="table table-responsive" data-toggle="table" data-pagination="true">
+							<thead class="text-primary">
+								<th data-sortable="true" data-field="1">Test Name</th>
+								<th data-sortable="true" data-field="2">Accuracy</th>
+								<th data-sortable="true" data-field="3">Average Reaction Time</th>
+								<th data-field=""></th>
+							</thead>
+							<tbody>
+								{% for test in tests %}
+								<tr data-title="bootstrap table">
+									<td>
+										{{ test.testname }}
+									</td>
+									<td>
+										{{ test.score }}%
+									</td>
+									<td>
+										{{ test.reaction_time }} ms
+									</td>
+									<td>
+										<a href="{{ url_for('main.delete_test', test_id=test.id) }}">Remove score</a>
+									</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

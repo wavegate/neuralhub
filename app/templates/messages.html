@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card ">
+				<div class="card-header ">
+					<h5 class="card-title">Messages</h5>
+					<p class="card-category"></p>
+				</div>
+				<div class="card-body ">
+					{% for post in messages %}
+					{% include '_post.html' %}
+					{% endfor %}
+					<nav aria-label="...">
+						<ul class="pagination">
+							<li class="page-item{% if not prev_url %} disabled{% endif %}">
+								<a href="{{ prev_url or '#' }}" class="page-link">
+									<span aria-hidden="true">&larr;</span> {{ _('Newer messages') }}
+								</a>
+							</li>
+							<li class="page-item{% if not next_url %} disabled{% endif %}">
+								<a href="{{ next_url or '#' }}" class="page-link">
+									{{ _('Older messages') }} <span aria-hidden="true">&rarr;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+{% endblock %}

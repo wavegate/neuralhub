@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block page_head %}{% endblock %}
+
+{% block content %}
+
+<div class="content">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card ">
+          <div class="card-header ">
+            <h5 class="card-title">Login</h5>
+        </div>
+        <div class="card-body">
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    <p>
+                        {{ form.username.label(class_="col-form-label") }}<br>
+                        {{ form.username(class_="form-control") }}
+                        {% for error in form.username.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.password.label(class_="col-form-label") }}<br>
+                        {{ form.password(class_="form-control") }}
+                        {% for error in form.password.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                    </p>
+                </div>
+                <p>{{ form.submit(class_="btn btn-primary") }}</p>
+            </form>
+        </div>
+        <div class="card-footer ">
+            <p>
+             <a href="{{ url_for('auth.register') }}">Create a new account</a>
+         </p>
+         <p>
+            <a href="{{ url_for('auth.reset_password_request') }}">{{ _('Reset password') }}</a>
+        </p>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

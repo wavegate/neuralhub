@@ -1,0 +1,53 @@
+<tr data-title="bootstrap table">
+	<td>
+		{% if program.state %}{{ program.state }}{% endif %}
+	</td>
+	<td>
+		<span style="display:none">{{ program.name }}</span><a href="{{ url_for('main.program', program_id=program.id) }}">
+			{{ program.name }}
+		</a>
+	</td>
+	<td>
+		{% for interview in program.get_latest_interviews() %}
+		{% if interview.date %}<span class="btn btn-primary btn-sm">{{ interview.date.strftime('%m/%d/%y') }}</span>{% endif %}
+		{% endfor %}
+	</td>
+	<td>
+		{% for interview_date in program.get_latest_interview_dates() %}
+		{% if interview_date.full %}
+		<span class="btn btn-danger btn-sm">{{ interview_date.date.strftime('%m/%d/%y') }}</span> 
+		{% else %}
+		<span class="btn btn-success btn-sm">{{ interview_date.date.strftime('%m/%d/%y') }}</span> 
+		{% endif %}
+		{% endfor %}
+	</td>
+		{% if not current_user.is_anonymous %}
+		<td>
+		<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+			<div class="btn-group mr-2" role="group" aria-label="First group">
+				<form action="{{ url_for('main.add_interview', program_id=program.id) }}" method="post" novalidate>
+				<button href="" class="btn btn-primary btn-sm" title="Add Interview Invite" style="margin-right:5px;"><i class="nc-icon nc-simple-add"></i></button>
+				{{ form.hidden_tag() }}
+				</form>
+				{% if not current_user.is_following_program(program) %}
+				<form action="{{ url_for('main.follow_program', program_id=program.id) }}" method="post" novalidate>
+				{{ form.hidden_tag() }}
+				<button href="" class="btn btn-primary btn-sm" style="margin-right:5px;">Follow</button>
+				</form>
+				{% else %}
+				<form action="{{ url_for('main.unfollow_program', program_id=program.id) }}" method="post" novalidate>
+				{{ form.hidden_tag() }}
+				<button href="" class="btn btn-primary btn-sm" style="margin-right:5px;">Unfollow</button>
+				</form>
+				{% endif %}
+				{% if current_user.admin %}
+				<form action="{{ url_for('main.delete_program', program_id=program.id) }}" method="post" novalidate>
+				<button href="" class="btn btn-primary btn-sm" >Delete</button>
+				{{ form.hidden_tag() }}
+				</form>
+				{% endif %}
+			</div>
+		</div>
+		</td>
+		{% endif %}
+</tr>
