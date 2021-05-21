@@ -71,6 +71,16 @@ def test1():
 def subitizing():
 	return render_template('subitizing.html')
 
+@bp.route("/painmodulation", methods = ['GET'])
+@login_required
+def painmodulation():
+	return render_template('painmodulation.html')
+
+@bp.route("/drg", methods = ['GET'])
+@login_required
+def drg():
+	return render_template('drg.html')
+
 @bp.route("/unity", methods = ['GET'])
 @login_required
 def unity():

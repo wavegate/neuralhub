@@ -329,7 +329,10 @@
 }
 
 .logo-container{
-    margin-top: 10px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 .logo-container .logo{
     overflow: hidden;
@@ -360,13 +363,13 @@
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
     text-transform: uppercase;
-    top: 100px;
+    top: 220px;
     z-index: 3;
 
     display: block;
     margin: 0 auto;
     position: relative;
-    width: 306px;
+    width: ;
     height: 0;
 }
 .blurred-container .motto .border{

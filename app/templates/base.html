@@ -16,16 +16,24 @@
     <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" />
 	<link href="{{ url_for('static', filename='css/gsdk.css') }}" rel="stylesheet" />  
     <link href="{{ url_for('static', filename='css/demo.css') }}" rel="stylesheet" /> 
-    {% endblock %}
+    
 
     <!--     Font Awesome     -->
     <link href="{{ url_for('static', filename='css/font-awesome.css') }}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+
+    <style>
+      .nav .caret {
+        border-top-color: #FFFFFF;
+        border-bottom-color: #FFFFFF;
+      }
+    </style>
+    {% endblock %}
 </head>
 <body>
 <div id="navbar-full">
-    <div class="container">
-        <nav class="navbar navbar-ct-blue navbar-transparent navbar-fixed-top" role="navigation">
+    <div id="navbar">
+        <nav class="navbar navbar-ct-blue navbar navbar-fixed-top" role="navigation">
           
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -38,7 +46,7 @@
                 </button>
                 <a href="{{ url_for('main.index') }}">
                      <div class="logo-container">
-                            <img src="{{ url_for('static', filename='img/first_logo.png') }}">
+                            <img src="{{ url_for('static', filename='img/logowhite.png') }}" id="logo" style="width:60%;">
                     </div>
                 </a>
             </div>
@@ -47,32 +55,34 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ url_for('main.about') }}">About</a></li>
+                <li><a href="components.html" id="dropdownMenu2" data-toggle="dropdown">Resources <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">MOOCs</a></li>
+                  </ul></li>
                 <li>
                   <a href="components.html" id="dropdownMenu1" data-toggle="dropdown">Learn <span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li><a href="#">Brain Machine Interfaces</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                    <li><a href="{{ url_for('main.painmodulation') }}">Pain Modulation</a></li>
+                    <li><a href="#">Famous People</a></li>
+                    <li><a href="#">Career paths</a></li>
                   </ul>
 
                 </li>
 
                     <li><a href="{{ url_for('main.cognition') }}">Cognition</a></li>
                </ul>
-              
-            </div><!-- /.navbar-collapse -->
+             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
-    </div><!--  end container-->
-    
-</div>     
-    
+        {% block blurred %}
+        {% endblock %}
+    </div><!--  end navbar -->
 
+</div> <!-- end menu-dropdown -->
 
 <div class="main">
-<div class="container tim-container" style="min-height: 2000px;">
+<div class="container tim-container" style="padding-top:100px">
 {% block content %}
     {% endblock %}
     <div class="row tim-row">
@@ -1577,6 +1587,7 @@ $(&apos;.btn-tooltip&apos;).tooltip();
       {% endwith %}
       $('[data-toggle="tooltip"]').tooltip({ boundary: 'window' });
     });
-  </script>
+</script>
   {% endblock %}
+
 </html>
