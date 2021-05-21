@@ -35,52 +35,96 @@ from flask_socketio import join_room, leave_room, emit
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
 def index():
-	return render_template('newlanding.html', specialties = Specialty.query.order_by(Specialty.name))
+	return render_template('base.html')
 
-@bp.route('/programs/<specialty>', methods=['GET', 'POST'])
-def programs(specialty):
-	form = ProgramForm()
-	if form.validate_on_submit() and current_user.admin:
-		program = Program(name=form.name.data, specialty=form.specialty.data, body=form.body.data, image=form.image.data, state=form.state.data)
-		db.session.add(program)
-		db.session.commit()
-		flash(_('Program added!'))
-		return redirect(url_for('main.programs'))
-	programs = Program.query.filter_by(specialty=specialty).order_by(Program.timestamp.desc())
-	return render_template('programs.html', title=_('Programs'),
-						   programs=programs, form=form, specialty=specialty)
+@bp.route('/postmethod', methods = ['POST'])
+@csrf.exempt
+def get_post_javascript_data():
+	test_name = request.form['test_name']
+	accuracy = request.form['accuracy']
+	score = accuracy
+	rt = request.form['rt']
+	#print(jsdata, file=sys.stderr)
+	#with open('somefile.txt', 'a') as the_file:
+	#    the_file.write(jsdata)
+	files = glob.glob('app/static/img/subitizing/*') #remove subitizing images, must change once more tests added
+	for f in files:
+		os.remove(f)
+	test = Test(testname=test_name, score=score, reaction_time=rt, accuracy=accuracy, author=current_user)
+	db.session.add(test)
+	db.session.commit()
+	return rt
 
-@bp.route('/program/<program_id>', methods=['GET','POST'])
-def program(program_id):
-	specialty2 = session.get('specialty')
-	program = Program.query.filter_by(id=program_id).first_or_404()
-	interviews = program.interviews.order_by(Interview.date.desc())
-	page = request.args.get('page', 1, type=int)
-	postform = PostForm()
-	if postform.validate_on_submit() and current_user.is_authenticated:
-		interview_impression = Interview_Impression(body=postform.post.data, author=current_user, program=program)
-		db.session.add(interview_impression)
-		db.session.commit()
-		flash(_('Your interview impression is now live!'))
-		return redirect(url_for('main.program', program_id=program_id))
-	interview_impressions = program.interview_impressions.order_by(Interview_Impression.timestamp.desc()).paginate(
-		page, current_app.config['POSTS_PER_PAGE'], False)
-	next_url = url_for('main.program', id=program_id,
-					   page=interview_impressions.next_num) if interview_impressions.has_next else None
-	prev_url = url_for('main.program', id=program_id,
-					   page=interview_impressions.prev_num) if interview_impressions.has_prev else None
-	form = EmptyForm()
-	return render_template('program.html', specialty2=specialty2,next_url=next_url, prev_url=prev_url,program=program, interviews=program.interviews, postform=postform, form=form, interview_impressions=interview_impressions.items)
-
-@bp.route('/delete_program/<int:program_id>', methods=['GET','POST'])
+@bp.route("/cognition", methods = ['GET'])
 @login_required
-def delete_program(program_id):
-	if current_user.admin:
-		program = Program.query.get(program_id)
-		specialty = program.specialty
-		db.session.delete(program)
+def cognition():
+	tests = current_user.tests.order_by(Test.timestamp.desc()).all()
+	return render_template('cognition.html', tests=tests)
+
+@bp.route("/test1", methods = ['GET'])
+@login_required
+def test1():
+	return render_template('test1.html')
+
+@bp.route("/subitizing", methods = ['GET'])
+@login_required
+def subitizing():
+	return render_template('subitizing.html')
+
+@bp.route("/unity", methods = ['GET'])
+@login_required
+def unity():
+	return render_template('unity.html')
+
+@bp.route("/det", methods = ['GET'])
+def det():
+	return render_template('det.html')
+
+@bp.route("/slums", methods = ['GET', 'POST'])
+@login_required
+def slums():
+	form = SLUMSForm()
+	if form.validate_on_submit():
+		return render_template('slums.html', form=form)
+	return render_template('slums.html', form=form)
+
+@bp.route('/delete_test/<int:test_id>')
+@login_required
+def delete_test(test_id):
+	test = Test.query.get(test_id)
+	if test.author == current_user:
+		db.session.delete(test)
 		db.session.commit()
-	return redirect(request.referrer)
+	return redirect(request.referrer or url_for('cognition'))
+
+@bp.route('/generate_images')
+def generate_images():
+	sequence = []
+	for i in range(5):
+		N = np.random.random_integers(1,9)
+		x = np.random.rand(N)
+		y = np.random.rand(N)
+		new_dict = {}
+		new_dict['index'] = str(N)
+
+		colors = 'k'
+		area = 20
+
+		plt.scatter(x, y, s=area, c=colors)
+		plt.axis([0, 1, 0, 1])
+		plt.axis('scaled')
+
+		plt.axis('off')
+		loc = 'img/subitizing/{}.png'.format(np.random.random_integers(10000000,90000000))
+		loc2 = 'app/static/' + loc
+		new_dict['loc'] = loc
+		if os.path.isfile(loc2):
+			os.remove(loc2)
+
+		plt.savefig(loc2)
+		sequence.append(new_dict)
+		plt.clf()
+	return json.dumps(sequence)
 
 @bp.route('/delete_post/<int:post_id>', methods=['GET','POST'])
 @login_required
@@ -90,64 +134,6 @@ def delete_post(post_id):
 		db.session.delete(post)
 		db.session.commit()
 		flash('Post deleted!')
-	return redirect(request.referrer)
-
-@bp.route('/delete_interview_impression/<int:interview_impression_id>', methods=['GET','POST'])
-@login_required
-def delete_interview_impression(interview_impression_id):
-	interview_impression = Interview_Impression.query.get(interview_impression_id)
-	if current_user == interview_impression.author:
-		db.session.delete(interview_impression)
-		db.session.commit()
-		flash('Interview impression deleted!')
-	return redirect(request.referrer)
-
-@bp.route('/add_interview/<int:program_id>', methods=['GET', 'POST'])
-@login_required
-def add_interview(program_id):
-	specialty2 = session.get('specialty')
-	program = Program.query.filter_by(id=program_id).first_or_404()
-	form = AddInterviewForm(current_user.username, program)
-	if form.validate_on_submit():
-		interview = Interview(date=form.date.data,interviewer=program,interviewee=current_user, supplemental_required=form.supplemental_required.data, method=form.method.data)
-		dates = None
-		dates2 = None
-		if request.form['interview_dates'] != '':
-			try:
-				available_dates = list(map(lambda x:datetime.strptime(x, '%m/%d/%Y'), request.form['interview_dates'].split(',')))
-				dates = list(map(lambda x: Interview_Date(date=x, interviewer=program,interviewee=current_user, invite=interview,full=False), available_dates))
-			except ValueError:
-				pass
-		if request.form['interview_invites'] != '':
-			try:
-				unavailable_dates = list(map(lambda x:datetime.strptime(x, '%m/%d/%Y'), request.form['interview_invites'].split(',')))
-				dates2 = list(map(lambda x: Interview_Date(date=x, interviewer=program,interviewee=current_user, invite=interview,full=True), unavailable_dates))
-			except ValueError:
-				pass
-		if dates:
-			interview.dates = dates
-		if dates2:
-			interview.dates = dates2
-		if dates and dates2:
-			interview.dates = dates + dates2
-		if not current_user.is_following_program(program):
-			current_user.follow_program(program)
-		db.session.add(interview)
-		db.session.commit()
-		flash(_('Interview added!'))
-		return redirect(url_for('main.program', program_id=program.id))
-	return render_template('add_interview.html',specialty2=specialty2, title=_('Add Interview Offer'),
-						   form=form, program=program)
-
-@bp.route('/delete_interview/<int:interview_id>', methods=['GET','POST'])
-@login_required
-def delete_interview(interview_id):
-	interview = Interview.query.get(interview_id)
-	if current_user == interview.interviewee:
-		program = interview.interviewer
-		db.session.delete(interview)
-		db.session.commit()
-		flash('Interview deleted!')
 	return redirect(request.referrer)
 
 @bp.route('/user/<username>', methods=['GET','POST'])
@@ -174,34 +160,6 @@ def user(username):
 		form.about_me.data = current_user.about_me
 	return render_template('user.html', specialty2=specialty2, user=user, interviews=user.interviews,posts=posts.items, programs=user.programs,
 						   next_url=next_url, prev_url=prev_url, form=form)
-
-@bp.route('/follow_program/<int:program_id>', methods=['GET', 'POST'])
-@login_required
-def follow_program(program_id):
-	form = EmptyForm()
-	if form.validate_on_submit():
-		program = Program.query.filter_by(id=program_id).first()
-		if program is None:
-			flash(_('Program not found.'))
-			return redirect(url_for('main.programs'))
-		current_user.follow_program(program)
-		db.session.commit()
-		flash(_('You are following %(name)s!', name=program.name))
-	return redirect(request.referrer)
-
-@bp.route('/unfollow_program/<int:program_id>', methods=['GET', 'POST'])
-@login_required
-def unfollow_program(program_id):
-	form = EmptyForm()
-	if form.validate_on_submit():
-		program = Program.query.filter_by(id=program_id).first()
-		if program is None:
-			flash(_('Program not found.'))
-			return redirect(url_for('main.programs'))
-		current_user.unfollow_program(program)
-		db.session.commit()
-		flash(_('You are not following %(name)s.', name=program.name))
-	return redirect(request.referrer)
 
 @bp.route('/send_message/<recipient>', methods=['GET', 'POST'])
 @login_required
@@ -250,107 +208,21 @@ def notifications():
 		'timestamp': n.timestamp
 	} for n in notifications])
 
-@bp.route("/upload/<specialty>", methods=['GET', 'POST'])
-@csrf.exempt
-def upload_file(specialty):
-	if request.method == 'POST':
-		def generate():
-			spec = Specialty.query.filter_by(name=specialty).first_or_404()
-			f = request.files['file']
-			f = pd.read_excel(f, engine='openpyxl', sheet_name=specialty, header=0, usecols=[0,1,2,3])
-			f = f.replace({np.nan: None})
-			for index, row in f.iterrows():
-				state = row[0]
-				name = row[1]
-				invited = ast.literal_eval(row[3])
-				if invited:
-					invited = dt.datetime.strptime(ast.literal_eval(row[3])[0], '%m/%d/%Y')
-				else:
-					invited = None
-				dates = ast.literal_eval(row[2])
-				d = []
-				for date in dates:
-					d.append(dt.datetime.strptime(date, '%m/%d/%Y'))
-				program = Program(name=name, state=state, specialty=spec)
-				interview = Interview(date=invited,interviewer=program,interviewee=current_user)
-				dates = list(map(lambda x: Interview_Date(date=x, interviewer=program,interviewee=current_user, invite=interview,full=False), d))
-				interview.dates = dates
-				db.session.add(interview)
-				db.session.commit()
-				yield(str(index))
-		return Response(stream_with_context(generate()))
-	return render_template('upload.html')
-
-@bp.route('/delete_programs')
-def delete_programs():
-	if current_user.admin:
-		Program.query.delete()
-		Interview.query.delete()
-		Interview_Date.query.delete()
-		db.session.commit()
-	return redirect(request.referrer)
 
 @bp.route('/about', methods=['GET','POST'])
 def about():
-	specialty2 = session.get('specialty')
 	form = FeedbackForm()
 	if form.validate_on_submit():
 		send_feedback_email(form)
 		flash(_('Feedback submitted!'))
 		return redirect(url_for('main.about'))
-	return render_template('about.html', specialty2=specialty2, form=form)
+	return render_template('about.html', form=form)
 
 @bp.route('/settings')
 def settings():
 	specialty2 = session.get('specialty')
 	return render_template('settings.html', specialty2=specialty2)
 
-@bp.route('/specialty/<int:id>', methods=['GET', 'POST'])
-def specialty(id):
-	session['specialty'] = str(id)
-	specialty2 = session.get('specialty')
-	form = ProgramForm()
-	specialty = Specialty.query.get(id)
-	current_user.specialty_id = id
-	db.session.commit()
-	if form.validate_on_submit() and current_user.admin:
-		program = Program(name=form.name.data, specialty=specialty, state=form.state.data)
-		db.session.add(program)
-		db.session.commit()
-		flash(_('Program added!'))
-		return redirect(url_for('main.specialty', id=specialty.id))
-	return render_template('specialty.html', specialty2=specialty2, specialty=specialty, title=specialty.name, programs=specialty.programs.order_by(Program.name.asc()), form=form)
-
-@bp.route('/specialty', methods=['POST'])
-@csrf.exempt
-def specialtyselect():
-	specialty = Specialty.query.filter_by(name=request.form['specialtyselect']).first_or_404()
-	return redirect(url_for('main.specialty', id=specialty.id))
-
-@bp.route('/create_specialty', methods=['GET','POST'])
-@login_required
-def create_specialty():
-	if current_user.admin:
-		specialty2 = session.get('specialty')
-		form = CreateSpecialtyForm()
-		if form.validate_on_submit():
-			specialty = Specialty(name=form.name.data)
-			db.session.add(specialty)
-			db.session.commit()
-			flash(_('Specialty Created!'))
-			return redirect(url_for('main.index'))
-		return render_template('create_specialty.html', form=form, specialty2=specialty2)
-	else:
-		return redirect(request.referrer)
-
-@bp.route('/delete_specialty/<int:id>', methods=['GET','POST'])
-@login_required
-def delete_specialty(id):
-	if current_user.admin:
-		specialty = Specialty.query.get(id)
-		db.session.delete(specialty)
-		db.session.commit()
-	return redirect(request.referrer)
 
 @bp.route('/chat/<int:id>', methods=['GET', 'POST'])
 @csrf.exempt
@@ -480,19 +352,6 @@ def delete_thread(thread_id):
 		db.session.commit()
 		flash('Thread deleted!')
 	return redirect(request.referrer)
-
-@bp.route('/seedspecialties')
-def seedspecialties():
-	if current_user.admin:
-		specialties = ['Anesthesiology', 'Child Neurology', 'Dermatology', 'Diagnostic Radiology', 'Emergency Medicine', 'Family Medicine', 'Internal Medicine', 'Interventional Radiology', 'Neurological Surgery', 'Neurology', 'Obstetrics and Gynecology', 'Ophthalmology','Orthopaedic Surgery', 'Otolaryngology', 'Pathology', 'Pediatrics', 'Physical Medicine and Rehabilitation', 'Plastic Surgery', 'Psychiatry', 'Radiation Oncology', 'General Surgery', 'Thoracic Surgery', 'Urology', 'Vascular Surgery', 'Prelim or Transitional Year']
-		for specialty in specialties:
-			db.session.add(Specialty(name=specialty))
-			db.session.commit()
-	return redirect(url_for('main.index'))
-
-@bp.route('/start', methods=['POST'])
-def get_counts():
-    return 1
 
 @bp.route('/angulartest')
 def angulartest():

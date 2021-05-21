@@ -63,9 +63,6 @@ def create_app(config_class=Config):
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
-    from app.cognition import bp as cognition_bp
-    app.register_blueprint(cognition_bp, url_prefix='/cognition')
-
     from app.data import bp as data_bp
     app.register_blueprint(data_bp, url_prefix='/data')
 
