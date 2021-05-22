@@ -58,6 +58,10 @@
 					<input type="radio" name="selectTest" data-toggle="radio" id="optionsRadios2" value="subitizing">
 					<i></i>Subitizing
 				</label>
+				<label class="radio">   
+					<input type="radio" name="selectTest" data-toggle="radio" id="optionsRadios3" value="nback">
+					<i></i>2-back
+				</label>
 			</form>
 		</div>
 		<div class="col-md-8">
@@ -76,7 +80,14 @@
 				<p>Subitizing is the rapid, accurate, and confident judgments of numbers performed for small numbers of items. Time taken: 1 minute</p>
 								<a href="{{ url_for('static', filename='papers/subitizing_kaufman_1949.pdf') }}">Paper</a>
 			</div>
-			
+			<div class="test" name="nback">
+				<h4>2-back</h4>
+				<div class="center" style="text-align:center;margin-bottom:25px;">
+									<a href="{{url_for('main.nback')}}" class="btn btn-primary btn-lg">Start test</a>
+								</div>
+				<p>The n-back task is a continuous performance task that is commonly used to measure working memory. 2-back, as in this test, means two turns back. Time taken: 1 minute</p>
+								<a href="{{ url_for('static', filename='papers/carlson1998.pdf') }}">Paper</a>
+			</div>
 		</div>
 	</div>
 

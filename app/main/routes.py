@@ -71,6 +71,11 @@ def test1():
 def subitizing():
 	return render_template('subitizing.html')
 
+@bp.route("/nback", methods = ['GET'])
+@login_required
+def nback():
+	return render_template('nback.html')
+
 @bp.route("/painmodulation", methods = ['GET'])
 @login_required
 def painmodulation():

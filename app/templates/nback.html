@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2-back</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='jspsych-6.0.5/jspsych.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jspsych-6.0.5/plugins/jspsych-html-keyboard-response.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jspsych-6.0.5/plugins/jspsych-image-keyboard-response.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jspsych-6.0.5/plugins/jspsych-image-slider-response.js') }}"></script>
+    <link href="{{ url_for('static', filename='jspsych-6.0.5/css/jspsych.css') }}" rel="stylesheet" type="text/css"></link>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+  </head>
+  <body></body>
+  <script>
+
+    /* create timeline */
+    var timeline = [];
+    var rt;
+    var accuracy;
+
+    /* define welcome message trial */
+    var welcome = {
+      type: "html-keyboard-response",
+      stimulus: "Welcome to the experiment. Press any key to begin."
+    };
+    timeline.push(welcome);
+
+    /* define instructions trial */
+    var instructions = {
+      type: "html-keyboard-response",
+      stimulus: "<p>In this experiment, a random sequence of letters will appear in the center of the screen." +
+          "</p><p>Press the 'M' key on your keyboard if that letter is the same as the letter that appeared two trials previously.</p>" +
+          "<p>Press any key to begin.</p>",
+      post_trial_gap: 2000
+    };
+    timeline.push(instructions);
+
+    var n_back_set = ['Z', 'X', 'C', 'V', 'B', 'N'];
+    var sequence = [];
+
+    var n_back_trial = {
+      type: 'html-keyboard-response',
+      stimulus: function() {
+        if(sequence.length < 2) {
+          var letter = jsPsych.randomization.sampleWithoutReplacement(n_back_set, 1)[0]
+        } else {
+          if(jsPsych.timelineVariable('match', true) == true){
+            var letter = sequence[sequence.length - 2]
+          } else {
+            var possible_letters = jsPsych.randomization.sampleWithoutReplacement(n_back_set, 2);
+            if(possible_letters[0] != sequence[sequence.length - 2]){
+              var letter = possible_letters[0]
+            } else {
+              var letter = possible_letters[1]
+            }
+          }
+        }
+        sequence.push(letter);
+        return '<span style="font-size: 96px;">'+letter+'</span>'
+      },
+      choices: ['M'],
+      trial_duration: 1500,
+      response_ends_trial: false,
+      post_trial_gap: 500,
+      data: {
+        test_part: 'test',
+        match: jsPsych.timelineVariable('match')
+      },
+      on_finish: function(data){
+        if(data.match == true){
+          data.correct = (data.key_press != null)
+        }
+        if (data.match == false){
+          data.correct = (data.key_press === null)
+        }
+      }
+    }
+
+    var n_back_trials = [
+      {match: true},
+      {match: false}
+    ]
+
+    var n_back_sequence = {
+      timeline: [n_back_trial],
+      timeline_variables: n_back_trials,
+      sample: {
+        type: 'with-replacement',
+        size: 12,
+        weights: [1, 2]
+      }
+    }
+
+    timeline.push(n_back_sequence);
+
+    /* define debrief */
+    var debrief_block = {
+      type: "html-keyboard-response",
+      stimulus: function() {
+
+        var trials = jsPsych.data.get().filter({test_part: 'test'}).filterCustom(function(trial) {
+          return trial.trial_index > 3;
+        });
+        var correct_trials = trials.filter({correct: true});
+        accuracy = Math.round(correct_trials.count() / trials.count() * 100);
+        rt = Math.round(correct_trials.select('rt').mean());
+        score = accuracy;
+        return "<p>You responded correctly on "+accuracy+"% of the trials.</p>"+
+        "<p>Your average response time was "+rt+"ms.</p>"+
+        "<p>Press any key to complete the experiment. Thank you!</p>";
+
+      }
+    };
+    timeline.push(debrief_block);
+
+    /* start the experiment */
+    jsPsych.init({
+    timeline: timeline,
+    on_finish: function() {
+      $.post( "/postmethod", { 
+        score: score,
+        accuracy: accuracy,
+        rt: rt,
+        test_name: '2-back' 
+      }).done(function(response) {
+        window.location.href = '/cognition'
+      }).fail(function() {
+        alert("fail");
+      });
+    }
+    });
+
+  </script>
+</html>
