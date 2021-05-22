@@ -76,6 +76,11 @@ def subitizing():
 def nback():
 	return render_template('nback.html')
 
+@bp.route("/phone", methods = ['GET'])
+@login_required
+def phone():
+	return render_template('phone.html')
+
 @bp.route("/painmodulation", methods = ['GET'])
 @login_required
 def painmodulation():
@@ -90,6 +95,16 @@ def moocs():
 @login_required
 def companies():
 	return render_template('companies.html')
+
+@bp.route("/ethics", methods = ['GET'])
+@login_required
+def ethics():
+	return render_template('ethics.html')
+
+@bp.route("/penfield", methods = ['GET'])
+@login_required
+def penfield():
+	return render_template('penfield.html')
 
 @bp.route("/programminglanguages", methods = ['GET'])
 @login_required

@@ -2,21 +2,21 @@
 
 {% block blurred %}
 <div class="blurred-container">
-            <div class="img-src" style="background-image: url({{ url_for('static', filename='img/kindel2.jpg') }})"></div>
-            <div class="motto">
-              Online Courses
-            </div>
-              <div class="tag">Photo by Kindel Media from Pexels</div>
+  <div class="img-src" style="background-image: url({{ url_for('static', filename='img/kindel2.jpg') }})"></div>
+  <div class="motto">
+    Online Courses
+  </div>
+  <div class="tag">Photo by Kindel Media from Pexels</div>
 </div>
 {% endblock %}
 
 {% block content %}
 <div class="row">
   <a href="{{ url_for('main.drg') }}">
-  <div class="case-study study1 overlay2">
-    <div class="text"><h3>Signal Processing</h3></div>
-  </div>
-</a>
+    <div class="case-study study1 overlay2">
+      <div class="text"><h3>Signal Processing</h3></div>
+    </div>
+  </a>
   <div class="case-study study1 overlay2">
     <div class="text"><h3>Machine Learning</h3></div>
   </div>
@@ -65,57 +65,71 @@
   <div class="case-study study1 overlay2">
     <div class="text"><h3>Artificial Intelligence</h3></div>
   </div>
+  <a href="{{ url_for('main.ethics') }}">
+    <div class="case-study study1 overlay2">
+      <div class="text"><h3>Ethics</h3></div>
+    </div>
+  </a>
 </div>
+<div class="case-study study1 overlay2">
+      <div class="text"><h3>Tissue Engineering</h3></div>
+    </div>
+    <div class="case-study study1 overlay2">
+      <div class="text"><h3>Materials Testing</h3></div>
+    </div>
+    <div class="case-study study1 overlay2">
+      <div class="text"><h3>Modeling</h3></div>
+    </div>
 
 
 <style>
 
-.tag {
-  position: relative;
-  top: 90%;
-  left: 85%;
-  color:white;
-}
+  .tag {
+    position: relative;
+    top: 90%;
+    left: 85%;
+    color:white;
+  }
 
-.text {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  color:white;
-  z-index:1;
-} 
-.case-study {
-  position: relative;
-  display: block;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto 2rem;
-  background-size: cover;
-  border-radius: 10px;
-  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  transition: all .4s ease;
-}
+  .text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color:white;
+    z-index:1;
+  } 
+  .case-study {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 2rem;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: all .4s ease;
+  }
 
-.overlay2 {
-  transition: opacity 0.5s ease;
-  -webkit-transition: opacity 0.5s ease;
-  -moz-transition: opacity 0.5s ease;
-}
+  .overlay2 {
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+  }
 
-.overlay1,
-.overlay2 {
-  max-width: 250px;
-}
-.overlay2 {
-  position: relative;
+  .overlay1,
+  .overlay2 {
+    max-width: 250px;
+  }
+  .overlay2 {
+    position: relative;
 
-}
+  }
 
-.overlay2:after {
+  .overlay2:after {
     content: '\A';
     position: absolute;
     width: 250px;
@@ -128,26 +142,26 @@
     -webkit-transition: opacity 0.5s;
     -moz-transition: opacity 0.5s;
     z-index: 0;
-}
-.overlay2:hover:after {
+  }
+  .overlay2:hover:after {
     opacity: 0;
-}
-
-@media screen and (min-width: 37.5em) {
-  .case-study {
-    height: 250px;
   }
-}
-@media screen and (min-width: 45em) {
-  .case-study {
-    display: inline-block;
-    width: 45%;
-    margin-left: 25px;
-  }
-}
 
-.study1 {
-  background-image: url({{ url_for('static', filename='img/low-back-pain.jpg') }});
+  @media screen and (min-width: 37.5em) {
+    .case-study {
+      height: 250px;
+    }
+  }
+  @media screen and (min-width: 45em) {
+    .case-study {
+      display: inline-block;
+      width: 45%;
+      margin-left: 25px;
+    }
+  }
+
+  .study1 {
+    background-image: url({{ url_for('static', filename='img/low-back-pain.jpg') }});
 }
 
 .case-study__img {
