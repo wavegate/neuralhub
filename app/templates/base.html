@@ -57,15 +57,18 @@
                 <li><a href="{{ url_for('main.about') }}">About</a></li>
                 <li><a href="components.html" id="dropdownMenu2" data-toggle="dropdown">Resources <span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">MOOCs</a></li>
+                    <li><a href="{{ url_for('main.moocs') }}">MOOCs</a></li>
+                    <li><a href="{{ url_for('main.companies') }}">Companies</a></li>
+                    <li><a href="{{ url_for('main.programminglanguages') }}">Programming Languages</a></li>
+                    <li><a href="{{ url_for('main.edu') }}">Educational Paths</a></li>
+                    <li><a href="{{ url_for('main.edu') }}">Interviews with Experts</a></li>
+                    <li><a href="https://neurotree.org/neurotree/clusters.php" target="_blank">Lineage</a></li>
                   </ul></li>
                 <li>
                   <a href="components.html" id="dropdownMenu1" data-toggle="dropdown">Learn <span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Brain Machine Interfaces</a></li>
+                    <li><a href="{{ url_for('main.bmi') }}">Brain Machine Interfaces</a></li>
                     <li><a href="{{ url_for('main.painmodulation') }}">Pain Modulation</a></li>
-                    <li><a href="#">Famous People</a></li>
-                    <li><a href="#">Career paths</a></li>
                   </ul>
 
                 </li>

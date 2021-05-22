@@ -2,9 +2,9 @@
 
 {% block blurred %}
 <div class="blurred-container">
-            <div class="img-src" style="background-image: url({{ url_for('static', filename='img/kindel2.jpg') }})"></div>
+            <div class="img-src" style="background-image: url({{ url_for('static', filename='img/bmi.jpg') }}); background-position:50% 37%;"></div>
             <div class="motto">
-              Pain Modulation
+              Brain-Machine Interfaces
             </div>
               <div class="tag">Photo by Kindel Media from Pexels</div>
 </div>
@@ -12,9 +12,9 @@
 
 {% block content %}
 <div class="row">
-  <a href="{{ url_for('main.drg') }}">
+  <a href="{{ url_for('main.bmiserruya') }}">
   <div class="case-study study1 overlay2">
-    <div class="text"><h3>Dorsal Root Ganglion</h3></div>
+    <div class="text"><h4>Brain-Machine Interfaces: Electrophysiological Challenges and Limitations</h4></div>
   </div>
 </a>
 </div>
@@ -99,7 +99,7 @@
 }
 
 .study1 {
-  background-image: url({{ url_for('static', filename='img/low-back-pain.jpg') }});
+  background-image: url({{ url_for('static', filename='img/aipixabay.jpg') }});
 }
 
 .case-study__img {

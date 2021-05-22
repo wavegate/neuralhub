@@ -76,10 +76,38 @@ def subitizing():
 def painmodulation():
 	return render_template('painmodulation.html')
 
+@bp.route("/moocs", methods = ['GET'])
+@login_required
+def moocs():
+	return render_template('moocs.html')
+
+@bp.route("/companies", methods = ['GET'])
+@login_required
+def companies():
+	return render_template('companies.html')
+
+@bp.route("/programminglanguages", methods = ['GET'])
+@login_required
+def programminglanguages():
+	return render_template('programminglanguages.html')
+
+@bp.route("/edu", methods = ['GET'])
+@login_required
+def edu():
+	return render_template('edu.html')
+
 @bp.route("/drg", methods = ['GET'])
 @login_required
 def drg():
 	return render_template('drg.html')
+
+@bp.route("/bmi", methods = ['GET'])
+def bmi():
+	return render_template('bmi.html')
+
+@bp.route("/bmiserruya", methods = ['GET'])
+def bmiserruya():
+	return render_template('bmiserruya.html')
 
 @bp.route("/unity", methods = ['GET'])
 @login_required

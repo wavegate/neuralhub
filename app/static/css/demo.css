@@ -331,8 +331,7 @@
 .logo-container{
   margin: 0;
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  transform: translate(0, -20%);
 }
 .logo-container .logo{
     overflow: hidden;
