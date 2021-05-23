@@ -81,6 +81,16 @@ def electricalengineering():
 def subitizing():
 	return render_template('subitizing.html')
 
+@bp.route("/jack", methods = ['GET'])
+@login_required
+def jack():
+	return render_template('jackofalltrades.html')
+
+@bp.route("/ultrasound", methods = ['GET'])
+@login_required
+def ultrasound():
+	return render_template('ultrasound.html')
+
 @bp.route("/nback", methods = ['GET'])
 @login_required
 def nback():
