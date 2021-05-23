@@ -66,6 +66,11 @@ def cognition():
 def test1():
 	return render_template('test1.html')
 
+@bp.route("/introtoelectronics", methods = ['GET'])
+@login_required
+def introtoelectronics():
+	return render_template('introtoelectronics.html')
+
 @bp.route("/electricalengineering", methods = ['GET'])
 @login_required
 def electricalengineering():
