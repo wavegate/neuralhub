@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  h4 {
+    margin-top:40px;
+    margin-bottom:5px;
+    text-align: center;
+  }
+
+  h5 {
+    margin-top:20px;
+  }
+
+  h6 {
+    margin-top:30px;
+    margin-bottom:10px;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .caption {
+    text-align:center;
+    font-size: small;
+    margin-bottom:20px;
+  }
+</style>
+<div class="row">
+  
+ <h3>Machine Learning</h3>
+<a href="https://www.coursera.org/learn/machine-learning" target="_blank">View on Coursera</a>
+<h4>Supervised vs Unsupervised Learning</h4>
+<p>Supervised learning (SL) is the machine learning task of learning a function that maps an input to an output based on example input-output pairs. It infers a function from labeled training data consisting of a set of training examples. Supervised learning problems are categorized into "regression" and "classification" problems. In a regression problem, we are trying to predict results witin a continuous output. In a classification problem, we are trying to predict results in a discrete output.</p>
+<p>Unsupervised learning (UL) is a type of algorithm that learns patterns from untagged data. In contrast to supervised learning (SL) where data is tagged by a human, eg. as a "car" or "fish", UL exhibits self-organization that captures patterns as neuronal predilections or probability densities. Two broad methods in UL are Neural Networks and Probabilistic Methods.</p>
+<h4>Model Representation</h4>
+<p>\((x^{(i)},y^{(i)})\) means the i-th input and output values for a given hypothesis (h).</p>
+<img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58.png?expiry=1621987200000&hmac=hHcMU1ozLA4Jj5ob2Xu6S4RYqzxYJpvCDZ40UawXcwI">
+<h4>Cost Function</h4>
+<p>The cost function takes an average difference of all the results of the hypothesis and allows us to measure the accuracy of our hypothesis.</p>
+\[J(\theta_0,\theta_1) = \frac{1}{2m}\sum_{i=1}^m (\hat{y}_i - y_i)^2 = \frac{1}{2m}\sum_{i=1}^m (h_\theta (x_i) - y_i)^2\]
+<p>Note that \(h_\theta(x)\) is a function of x, whereas the cost function, \(J(\theta_1)\) is a function of the parameter \(\theta_1\). The goal is to minimize the cost function. A contour plot can be used to graph the cost function of two variables. Each contour line represents the same result of the cost function. The goal is to minimize the distance from the center of the contour plot.</p>
+<h4>Gradient descent</h4>
+<p>Gradient descent is an algorithm to solve for the hypothesis that gives the minimum cost function by changing \(\theta_0\) and \(\theta_1\) a little bit at a time. With a cost function plot of two variables in linear regression, imagine yourself walking down a hill, choosing the path that decreases the cost function the most at each step. You will eventually end up at a local minimum, but not necessarily the absolute minimum. A "batch" gradient descent uses all the training examples and so ends up with a global minimum.</p> 
+<img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/bn9SyaDIEeav5QpTGIv-Pg_0d06dca3d225f3de8b5a4a7e92254153_Screenshot-2016-11-01-23.48.26.png?expiry=1621987200000&hmac=lZ-1-8-abgMwzxePA8BVgiq16PMpDnL_O2dKTHbN3Vc">
+<p>The gradient descent algorithm is: repeat until convergence (where j-0,1 represents the feature index number):</p>
+\[\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)\]
+<h4>Matrices and Vectors</h4>
+<p>Matrices are 2-dimensional arrays. A vector is a matrix with one column and many rows. \(A_{ij}\) refers to the element in the ith row and j. A vector with 'n' rows is referred to as an 'n'-dimensional vector. \(v_i\) refers to the element in the ith row of the vector. Matrices are usually denoted by uppercase names while vectors are lowercase. "Scalar" means that an object is a single value, not a vector or matrix. \(\mathbb{R}\) refers to the set of scalar real numbers. \(\mathbb{R}^n\) refers to the set of n-dimensional vectors of real numbers.</p>
+<h4>Multiple Features</h4>
+<p>Linear regression with multiple variables is known as "multivariate linear regression."</p>
+\[x_j^{(i)} = \text{value of feature }j \text{ in the } i^{th} \text{ training example}\]
+\[x^{(i)} = \text{the input (features) of the } i^{th} \text{ training example}\]
+\[m = \text{the number of training examples}\]
+\[n = \text{the number of features}\]
+<p>The multivariable form of the hypothesis function accommodating these multiple features is as follows:</p>
+\[h_\theta(x) = \theta_0 + \theta_1x_1 + \theta_2x_2 + \theta_3x_3 + ... + \theta_nx_n\]
+<p>In order to develop intuition about this function, we can think about \(\theta_0\) as the basic price of a house, \(\theta_1\) as the price per square meter, \(\theta_2\) as the price per floor, etc.
+</div>
+{% endblock %}
+

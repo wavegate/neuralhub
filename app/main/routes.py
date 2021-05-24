@@ -76,6 +76,11 @@ def introtoelectronics():
 def electricalengineering():
 	return render_template('electricalengineering.html')
 
+@bp.route("/machinelearning", methods = ['GET'])
+@login_required
+def machinelearning():
+	return render_template('machinelearning.html')
+
 @bp.route("/subitizing", methods = ['GET'])
 @login_required
 def subitizing():
