@@ -52,6 +52,20 @@
 \[\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)\]
 <h4>Matrices and Vectors</h4>
 <p>Matrices are 2-dimensional arrays. A vector is a matrix with one column and many rows. \(A_{ij}\) refers to the element in the ith row and j. A vector with 'n' rows is referred to as an 'n'-dimensional vector. \(v_i\) refers to the element in the ith row of the vector. Matrices are usually denoted by uppercase names while vectors are lowercase. "Scalar" means that an object is a single value, not a vector or matrix. \(\mathbb{R}\) refers to the set of scalar real numbers. \(\mathbb{R}^n\) refers to the set of n-dimensional vectors of real numbers.</p>
+<p>Addition and subtraction are element-wise, so you simply add or subtract each corresponding element. To add or subtract two matrices, their dimensions must be the same. In scalar multiplication, we simply multiply every element by the scalar value. For matrix-vector multiplication, we map the column of the vector onto each row of the matrix, multiplying each element and summing the result (dot product). The result is a vector. The number of columns of the matrix must equal the number of rows of the vector. An m x n matrix multiplied by an n x 1 vector results in an m x 1 vector. An m x n matrix multiplied by an n x o matrix results in an m x o matrix. To multiply two matrices, the number of columns of the first matrix must equal the number of rows of the second matrix.</p>
+\[Av = \begin{bmatrix}
+1 & -1 & 2\\
+0 & -3 & 1\end{bmatrix} \begin{bmatrix}
+2 \\ 1 \\ 0\end{bmatrix}\]
+\[=\begin{bmatrix} 2\cdot1 - 1\cdot1 + 0\cdot2 \\ 2\cdot0 - 1\cdot3+0\cdot1\end{bmatrix}\]
+\[=\begin{bmatrix}1\\-3\end{bmatrix}\]
+\[AB = \begin{bmatrix} 0 & 4 &-2 \\ -4& -3& 0 \end{bmatrix}\begin{bmatrix}0& 1 \\ 1& -1 \\ 2 &3\end{bmatrix}\]
+\[=\begin{bmatrix}0\cdot0+4\cdot1-2\cdot2 &0\cdot1+4\cdot(-1)-2\cdot3 \\ -4\cdot0-3\cdot1+0\cdot2 &-4\cdot1-3\cdot(-1)+0\cdot3\end{bmatrix}\]
+\[=\begin{bmatrix}0+4-4& 0-4-6 \\ 0-3+0& -4+3+0\end{bmatrix}\]
+\[=\begin{bmatrix}0 &-10 \\ -3& -1\end{bmatrix}\]
+<p>Matrices are not commutative: \(A*B\ne B*A\). Matrices are associative: \((A*B)*C = A*(B*C)\).</p>
+<p>The identity matrix, when multiplied by any matrix of the same dimensions, results in the original matrix. It's just like multiplying numbers by 1. The identity matrix simply has 1's on the diagonal (upper left to lower right diagonal) and 0's elsewhere.</p>
+<p>The inverse of a matrix A is denoted \(A^-1\). Multiplying by the inverse results in the identity matrix. A non square matrix does not have an inverse matrix. We can compute inverses of matrices in Matlab with the inv(A) function. Matrices that don't have an inverse are singular or degenerate. The transposition of a matrix is like rotating the matrix 90&#176; in clockwise direction and then reversing it. We can compute transposition of matrices in Matlab with the transpose(A) function.</p>
 <h4>Multiple Features</h4>
 <p>Linear regression with multiple variables is known as "multivariate linear regression."</p>
 \[x_j^{(i)} = \text{value of feature }j \text{ in the } i^{th} \text{ training example}\]
@@ -60,7 +74,40 @@
 \[n = \text{the number of features}\]
 <p>The multivariable form of the hypothesis function accommodating these multiple features is as follows:</p>
 \[h_\theta(x) = \theta_0 + \theta_1x_1 + \theta_2x_2 + \theta_3x_3 + ... + \theta_nx_n\]
-<p>In order to develop intuition about this function, we can think about \(\theta_0\) as the basic price of a house, \(\theta_1\) as the price per square meter, \(\theta_2\) as the price per floor, etc.
+<p>In order to develop intuition about this function, we can think about \(\theta_0\) as the basic price of a house, \(\theta_1\) as the price per square meter, \(\theta_2\) as the price per floor, etc.</p>
+<p>Gradient descent equation is the same for multiple variables; we just have to repeat it for our 'n' features. Make sure to simultaneously update for all features.</p>
+<p>We can speed up gradient descent by having each of our input values in roughly the same range. This is because \(\theta\) will descend quickly on small ranges and slowly on large ranges. Ideally, \(-1 \leq x_{(i)} \leq 1\). Two techniques that help with this are feature scaling and mean normalization. Feature scaling involves dividing the input values by the range of the input variable, resulting in a new range of just 1. Mean normalization involves subtracting the average value for an input variable from the vlaues for that input variable resulting in a new average value for the input variable of just zero. To implement both of these techniques:
+  \[x_i := \frac{x_i - \mu_i}{s_i} \text{ where } \mu_i \text{ is the average of all the values for feature i, and } s_i \text{ is the standard deviation.}\]
+<p>Debugging gradient descent: Make a plot with number of iterations on the x-axis and plot the cost function over the number of iterations. If the cost ever increases, than you probably need to decrease alpha.</p>
+<img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/FEfS3aajEea3qApInhZCFg_6be025f7ad145eb0974b244a7f5b3f59_Screenshot-2016-11-09-09.35.59.png?expiry=1621987200000&hmac=Wjcqw57TpkcQjpxaT3wVuMOUhT-WZ0Qq7YkPNpuAXo4">
+<p>You can make sure gradient descent is working correctly with a convergence test, such that the error decreases by less than \(10^-3\) in one iteration. If \(J(\theta)\) is increasing, then use a smaller \(\alpha\). For sufficiently small \(\alpha\), \(J(\theta)\) should decrease on every iteration. But if \(\alpha\) is too small, gradient descent can be slow to converge.</p>
+<img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/rC2jGKgvEeamBAoLccicqA_ec9e40a58588382f5b6df60637b69470_Screenshot-2016-11-11-08.55.21.png?expiry=1621987200000&hmac=X_hjsabGR5W7B3KcT3N2pAHT1Cw22zWwVLHHp0dgjwQ">
+<p>We can combine multiple features into one. We can change the behavior or curve of our hypothesis function by making it a quadratic, cubic, or square root function.</p>
+<h4>Normal Equation</h4>
+<p>Normal Equation method is another method of minimizing J, by explicitly taking derivatives of J and setting them to zero, allowing us to find the optimum theta without iteration. The normal equation formula is \(\theta = (X^T X)^{-1} X^Ty\). There is no need to do feature scaling with the normal equation. However, it is slow if n is very large as it has a complexity of \(O(n^3)\). When implementing the normal equation, we want to use 'pinv' function rather than 'inv', which gives you a value of theta even if \(X^T X\) is not invertible.</p>
+<img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/dykma6dwEea3qApInhZCFg_333df5f11086fee19c4fb81bc34d5125_Screenshot-2016-11-10-10.06.16.png?expiry=1621987200000&hmac=WNnVoYi43a41HAq7k5UEtRwIAaQ1q2XirUiu6_8JraM">
+<h4>Classification and Representation</h4>
+<p>The classification problem is just like the regression problem, except the values we now want to predict take on only a small number of discrete values. We could approach the classification problem ignoring the fact that y is discrete-valued, and use our old linear regression algorithm. However, it doesn't make sense for \(h_\theta(x)\) to take values larger than 1 or smaller than 9. This is accomplished by plugging theta into the Logistic Function:</p>
+  \[h_\theta(x) = g(\theta^T x)\]
+\[z = \theta^T x\]
+\[g(z) = \frac{1}{1 + e^{-z}}\]
+<img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/1WFqZHntEead-BJkoDOYOw_2413fbec8ff9fa1f19aaf78265b8a33b_Logistic_function.png?expiry=1621987200000&hmac=DgyBjabCytn8_RkMYOVWiJaPwKohssf2QaYJyRGInPQ">
+<p>\(h_\theta(x)\) will give us the probability that our output is 1. The probability that our prediction is 0 is just the complement of our probability that it is 1.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 {% endblock %}
 

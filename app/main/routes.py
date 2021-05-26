@@ -31,6 +31,7 @@ import math
 import time
 import ast
 from flask_socketio import join_room, leave_room, emit
+import molmass
 
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
@@ -75,6 +76,12 @@ def introtoelectronics():
 @login_required
 def electricalengineering():
 	return render_template('electricalengineering.html')
+
+@bp.route("/aCSF", methods = ['GET'])
+@login_required
+def aCSF():
+	toCheck = ['NaCl','KCl','HEPES','D-glucose','MgCl2','CaCl2','NaHCO3','NaH2PO4']
+	return render_template('aCSF.html')
 
 @bp.route("/machinelearning", methods = ['GET'])
 @login_required
@@ -144,7 +151,10 @@ def edu():
 @bp.route("/drg", methods = ['GET'])
 @login_required
 def drg():
-	return render_template('drg.html')
+	if current_user.admin:
+		return render_template('drg.html')
+	else: 
+		return redirect(url_for('main.index'))
 
 @bp.route("/bmi", methods = ['GET'])
 def bmi():
