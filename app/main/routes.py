@@ -31,7 +31,7 @@ import math
 import time
 import ast
 from flask_socketio import join_room, leave_room, emit
-import molmass
+from molmass import Formula
 
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
@@ -80,8 +80,15 @@ def electricalengineering():
 @bp.route("/aCSF", methods = ['GET'])
 @login_required
 def aCSF():
-	toCheck = ['NaCl','KCl','HEPES','D-glucose','MgCl2','CaCl2','NaHCO3','NaH2PO4']
-	return render_template('aCSF.html')
+	toCheck = {'NaCl': 124,'KCl': 5,'C8H18N2O4S': 20,'C6H12O6': 10,'MgCl2': 1.3,'CaCl2.2H2O': 1.5,'NaHCO3': 26,'NaH2PO4.2H2O': 1.25}
+	volume = 0.4
+	end = []
+	for key, value in toCheck.items():
+		form = Formula(key)
+		tup = (form, '%s' % float('%.3g' % (volume * form.mass * value * 0.001)))
+		end.append(tup)
+	result = dict(end)
+	return render_template('aCSF.html', result=result, volume = volume)
 
 @bp.route("/machinelearning", methods = ['GET'])
 @login_required

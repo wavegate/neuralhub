@@ -15,6 +15,24 @@
 <p>Artificial cerebrospinal fluid (aCSF, 124 mM NaCl, 5 mM KCl, 20 mM HEPES, 10 mM D-glucose, 1.3 mM MgCl2, 1.5 mM CaCl2, 26 mM NaHCO3, 1.25 mM NaH2PO4).</p>
 <p>In a 1-L volumetric flask, combine the above reagents. Shake to prevent poorly soluble monobasic crystals from forming. Add MgCl2 from a concentrated stock solution to a final concentration of 10 mM (in 10× ACSF). (For example, add 5 mL of a 2 M MgCl2 stock.) Add H2O to the 1-L line and stir until all reagents are dissolved. Store 10× ACSF in a 1-L flask at 4°C for up to 2 wk. Use this 10× stock solution daily to prepare Artificial Cerebrospinal Fluid (ACSF) (1×). Do not use if crystals form. (10× ACSF can also be prepared without MgCl2 for experiments requiring different calcium concentrations.)</p>
 </div>
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">Formula</th>
+			<th scope="col">molar mass(g)</th>
+			<th scope="col">mass(g)</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for key, value in result.items() %}
+		<tr>
+			<td>{{key}}</td>
+			<td>{{key.mass}}</td>
+			<td>{{value}}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
 
 
 {% endblock %}
