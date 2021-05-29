@@ -44,15 +44,8 @@ def create_app(config_class=Config):
     admin.init_app(app)
     socketio.init_app(app, cors_allowed_origins='*')
     admin.add_view(AdminView(models.User, db.session))
-    admin.add_view(AdminView(models.Specialty, db.session))
-    admin.add_view(AdminView(models.Program, db.session))
-    admin.add_view(AdminView(models.Interview, db.session))
-    admin.add_view(AdminView(models.Interview_Date, db.session))
-    admin.add_view(AdminView(models.Notification, db.session))
-    admin.add_view(AdminView(models.Message, db.session))
     admin.add_view(AdminView(models.Post, db.session))
-    admin.add_view(AdminView(models.Thread, db.session))
-    admin.add_view(AdminView(models.Chat, db.session))
+    admin.add_view(AdminView(models.Test, db.session))
 
     from app.errors import bp as errors_bp
     app.register_blueprint(errors_bp)

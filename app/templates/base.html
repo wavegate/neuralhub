@@ -27,6 +27,16 @@
         border-top-color: #FFFFFF;
         border-bottom-color: #FFFFFF;
       }
+
+      .nav a:hover .caret {
+        border-top-color: #FFFFFF;
+        border-bottom-color: #FFFFFF;
+      }
+
+      .nav .open > a .caret, .nav .open > a:hover .caret, .nav .open > a:focus .caret {
+        border-top-color: #FFFFFF;
+        border-bottom-color: #FFFFFF;
+      }
     </style>
     {% endblock %}
 </head>
@@ -54,9 +64,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                {% if not current_user.is_anonymous %}
                 <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
-                <li><a href="{{ url_for('main.about') }}">About</a></li>
+                {% else %}
+                <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('main.posts') }}">Posts</a></li>
                 <li><a href="components.html" id="dropdownMenu2" data-toggle="dropdown">Resources <span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li><a href="{{ url_for('main.moocs') }}">MOOCs</a></li>
