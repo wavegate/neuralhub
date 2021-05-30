@@ -3,8 +3,8 @@
 {% block content %}
 <div class="row">
 <form method="post">
-  <textarea id="summernote" name="editordata"></textarea>
-  <input type="submit" value="Create Post">
+  <textarea id="summernote" name="editordata">{{ post.body }}</textarea>
+  <input type="submit" value="Edit Post">
 </form>
 {% endblock %}
 

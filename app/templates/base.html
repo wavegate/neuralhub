@@ -1575,41 +1575,7 @@ $(&apos;.btn-tooltip&apos;).tooltip();
       
     
 </script>
-<script>
-    function goBack() {
-  window.history.back();
-}
-    function showNotification(message, from, align) {
-      color = 'primary';
 
-      $.notify({
-        icon: "nc-icon nc-bell-55",
-        message: message
-
-      }, {
-        type: color,
-        timer: 8000,
-        placement: {
-          from: from,
-          align: align
-        }
-      });
-    }
-
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-      //demo.initChartsPages();
-      //showNotification('ddd','top','center');
-      {% with messages = get_flashed_messages() %}
-      {% if messages %}
-      {% for message in messages %}
-      showNotification('{{ message }}','top','center');
-      {% endfor %}
-      {% endif %}
-      {% endwith %}
-      $('[data-toggle="tooltip"]').tooltip({ boundary: 'window' });
-    });
-</script>
   {% endblock %}
 
 </html>

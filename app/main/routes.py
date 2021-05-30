@@ -1,6 +1,6 @@
 from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request, g, \
-	jsonify, current_app, Response, stream_with_context, make_response, session
+	jsonify, current_app, Response, stream_with_context, make_response, session, send_file, send_from_directory, safe_join, abort, Response
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from guess_language import guess_language
@@ -72,9 +72,9 @@ def test1():
 def posts():
 	return render_template('posts.html', posts=Post.query.all())
 
-@bp.route("/display/<int:id>", methods = ['GET'])
+@bp.route("/post/<int:id>", methods = ['GET'])
 @login_required
-def display(id):
+def post(id):
 	post = Post.query.get(id)
 	return render_template('post.html', post=post)
 
@@ -86,8 +86,37 @@ def create_post():
 		post = Post(body=request.form.get('editordata'), author=current_user)
 		db.session.add(post)
 		db.session.commit()
-		return redirect(url_for('main.posts'))
+		return redirect(url_for('main.post', id=post.id))
 	return render_template('create_post.html')
+
+@bp.route("/delete_post/<int:id>", methods = ['GET', 'POST'])
+@login_required
+def delete_post(id):
+	post = Post.query.get(id)
+	db.session.delete(post)
+	db.session.commit()
+	return redirect(url_for('main.post', id=post.id))
+
+@bp.route("/edit_post/<int:id>", methods = ['GET', 'POST'])
+@login_required
+@csrf.exempt
+def edit_post(id):
+	post = Post.query.get(id)
+	if request.method == 'POST':
+		post.body = request.form.get('editordata')
+		db.session.commit()
+		return redirect(url_for('main.post', id=post.id))
+	return render_template('edit_post.html', post=post)
+
+@bp.route("/save_post/<int:id>", methods = ['GET'])
+@nocache
+@login_required
+def save_post(id):
+	post = Post.query.get(id)
+	file = open("post.txt", "w")
+	file.write(post.body)
+	file.close()
+	return send_file("post.txt", as_attachment=True)
 
 @bp.route("/trpc5", methods = ['GET'])
 @login_required
@@ -252,16 +281,6 @@ def generate_images():
 		sequence.append(new_dict)
 		plt.clf()
 	return json.dumps(sequence)
-
-@bp.route('/delete_post/<int:post_id>', methods=['GET','POST'])
-@login_required
-def delete_post(post_id):
-	post = Post.query.get(post_id)
-	if current_user == post.author:
-		db.session.delete(post)
-		db.session.commit()
-		flash('Post deleted!')
-	return redirect(request.referrer)
 
 
 @bp.route('/about', methods=['GET','POST'])
