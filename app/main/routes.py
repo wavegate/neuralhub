@@ -70,7 +70,10 @@ def test1():
 @bp.route("/posts", methods = ['GET'])
 @login_required
 def posts():
-	return render_template('posts.html', posts=Post.query.all())
+	if current_user.admin:
+		return render_template('posts.html', posts=Post.query.all())
+	else:
+		return redirect(request.referrer or url_for('main.index'))
 
 @bp.route("/post/<int:id>", methods = ['GET'])
 @login_required
