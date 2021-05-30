@@ -23,7 +23,6 @@
       {% if post.author == current_user %}
       <a class="float-right" href="{{ url_for('main.post',id=post.id)}}">View post</a>
       <a class="float-right" href="{{ url_for('main.edit_post',id=post.id)}}">Edit post</a>
-      <a class="float-right" href="{{ url_for('main.delete_post',id=post.id)}}">Delete post</a>
       {% endif %}
     </td>
   </tr>
