@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+  <a href="{{ url_for('main.create_task') }}">Create task</a>
+
+{% for task in tasks %}
+<table class="table table-hover">
+  <tr>
+    <td width="70px">
+        <img src="{{ task.author.avatar(70) }}" />
+    </td>
+    <td>
+      {% set user_link %}
+      <span class="user_popup">
+          {{ task.author.username }}
+      </span>
+      {% endset %}
+      {{ _('%(username)s said %(when)s',
+      username=user_link, when=moment(task.date).fromNow()) }}
+      <br>
+      <span id="task{{ task.id }}">{{ task.body|safe }}</span>
+      {% if task.author == current_user %}
+      <a class="float-right" href="{{ url_for('main.task',id=task.id)}}">View task</a>
+      <a class="float-right" href="{{ url_for('main.edit_task',id=task.id)}}">Edit task</a>
+      <a class="float-right" href="{{ url_for('main.delete_task',id=task.id)}}">Delete task</a>
+      {% endif %}
+    </td>
+  </tr>
+</table>
+{% endfor %}
+{% endblock %}

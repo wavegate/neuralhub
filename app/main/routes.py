@@ -6,7 +6,7 @@ from flask_babel import _, get_locale
 from guess_language import guess_language
 from app import db, csrf, socketio
 from app.main.forms import EmptyForm, PostForm, SLUMSForm
-from app.models import User, Post, Test
+from app.models import User, Post, Test, Task
 from app.translate import translate
 from app.main import bp
 from app.auth.email import send_feedback_email
@@ -81,6 +81,12 @@ def post(id):
 	post = Post.query.get(id)
 	return render_template('post.html', post=post)
 
+@bp.route("/task/<int:id>", methods = ['GET'])
+@login_required
+def task(id):
+	task = Task.query.get(id)
+	return render_template('task.html', task=task)
+
 @bp.route("/create_post", methods = ['GET', 'POST'])
 @login_required
 @csrf.exempt
@@ -92,6 +98,21 @@ def create_post():
 		return redirect(url_for('main.post', id=post.id))
 	return render_template('create_post.html')
 
+@bp.route("/create_task", methods = ['GET', 'POST'])
+@login_required
+@csrf.exempt
+def create_task():
+	if request.method == 'POST':
+		date_in = request.form.get('time')
+		date_processing = date_in.replace('T', '-').replace(':', '-').split('-')
+		date_processing = [int(v) for v in date_processing]
+		date_out = dt.datetime(*date_processing)
+		task = Task(date=date_out, taskname=request.form.get('taskname'), notes=request.form.get('editordata'), author=current_user)
+		db.session.add(task)
+		db.session.commit()
+		return redirect(url_for('main.task', id=task.id))
+	return render_template('create_task.html')
+
 @bp.route("/delete_post/<int:id>", methods = ['GET', 'POST'])
 @login_required
 def delete_post(id):
@@ -99,6 +120,14 @@ def delete_post(id):
 	db.session.delete(post)
 	db.session.commit()
 	return redirect(url_for('main.post', id=post.id))
+
+@bp.route("/delete_task/<int:id>", methods = ['GET', 'POST'])
+@login_required
+def delete_task(id):
+	task = Task.query.get(id)
+	db.session.delete(task)
+	db.session.commit()
+	return redirect(url_for('main.tasks'))
 
 @bp.route("/edit_post/<int:id>", methods = ['GET', 'POST'])
 @login_required
@@ -110,6 +139,23 @@ def edit_post(id):
 		db.session.commit()
 		return redirect(url_for('main.post', id=post.id))
 	return render_template('edit_post.html', post=post)
+
+@bp.route("/edit_task/<int:id>", methods = ['GET', 'task'])
+@login_required
+@csrf.exempt
+def edit_task(id):
+	task = task.query.get(id)
+	if request.method == 'POST':
+		date_in = request.form.get('time')
+		date_processing = date_in.replace('T', '-').replace(':', '-').split('-')
+		date_processing = [int(v) for v in date_processing]
+		date_out = dt.datetime(*date_processing)
+		task.taskname = request.form.get('taskname')
+		task.date = date_out
+		task.notes = request.form.get('editordata')
+		db.session.commit()
+		return redirect(url_for('main.task', id=task.id))
+	return render_template('edit_task.html', task=task)
 
 @bp.route("/save_post/<int:id>", methods = ['GET'])
 @nocache
@@ -130,6 +176,11 @@ def trpc5():
 @login_required
 def introtoelectronics():
 	return render_template('introtoelectronics.html')
+
+@bp.route("/tasks", methods = ['GET'])
+@login_required
+def tasks():
+	return render_template('tasks.html', tasks=Task.query.all())
 
 @bp.route("/electricalengineering", methods = ['GET'])
 @login_required

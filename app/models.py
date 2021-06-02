@@ -17,6 +17,7 @@ class User(UserMixin, db.Model):
 	posts = db.relationship('Post', backref='author', lazy='dynamic')
 	admin = db.Column(db.Boolean())
 	tests = db.relationship('Test', backref='author', lazy='dynamic')
+	tasks = db.relationship('Task', backref='author', lazy='dynamic')
 
 	def __repr__(self):
 		return '<User {}>'.format(self.username)
@@ -70,3 +71,10 @@ class Test(db.Model):
 
 	def __repr__(self):
 		return '<Test {}: {}>'.format(self.testname, self.score)
+
+class Task(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	taskname = db.Column(db.String(500))
+	date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+	notes = db.Column(db.Text)
+	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))

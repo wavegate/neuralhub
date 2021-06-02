@@ -66,12 +66,16 @@
               <ul class="nav navbar-nav navbar-right">
                 {% if not current_user.is_anonymous %}
                 <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+                <li><a href="#" id="dropdownMenu3" data-toggle="dropdown">Private <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                    <li><a href="{{ url_for('main.tasks') }}">Tasks</a></li>
+                  </ul></li>
                 {% else %}
                 <li><a href="{{ url_for('auth.login') }}">Login</a></li>
                 {% endif %}
                 <li><a href="{{ url_for('main.posts') }}">Posts</a></li>
-                <li><a href="components.html" id="dropdownMenu2" data-toggle="dropdown">Resources <span class="caret"></span></a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#" id="dropdownMenu2" data-toggle="dropdown">Resources <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <li><a href="{{ url_for('main.moocs') }}">MOOCs</a></li>
                     <li><a href="{{ url_for('main.companies') }}">Companies</a></li>
                     <li><a href="{{ url_for('main.programminglanguages') }}">Programming Languages</a></li>
@@ -81,7 +85,7 @@
                     <li><a href="{{ url_for('main.jack')}}">Jack of All Trades</a></li>
                   </ul></li>
                 <li>
-                  <a href="components.html" id="dropdownMenu1" data-toggle="dropdown">Learn <span class="caret"></span></a>
+                  <a href="#" id="dropdownMenu1" data-toggle="dropdown">Learn <span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li><a href="{{ url_for('main.bmi') }}">Brain Machine Interfaces</a></li>
                     <li><a href="{{ url_for('main.painmodulation') }}">Pain Modulation</a></li>

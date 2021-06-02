@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  {{ task.taskname }}
+  {{ task.notes|safe }}
+  <a href="{{url_for('main.edit_task', id=task.id) }}">Edit task</a>
+  <a href="{{url_for('main.delete_task', id=task.id) }}">Delete task</a>
+</div>
+
+
+{% endblock %}
