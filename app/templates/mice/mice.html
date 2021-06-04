@@ -20,7 +20,7 @@
   <tbody>
     {% for mouse in mice %}
     <tr>
-      <td>{{mouse.cage}}</td>
+      <td>{{mouse.cagetag}}</td>
       <td>{{mouse.dob.strftime("%m-%d-%y")}} ({{ mouse.age() }} days)</td>
       <td>{{mouse.sex}}</td>
       <td>{{mouse.genotype}}</td>
