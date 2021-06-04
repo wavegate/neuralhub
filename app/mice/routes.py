@@ -4,6 +4,7 @@ from flask import render_template, request, redirect, url_for
 from flask_login import current_user, login_required
 import datetime as dt
 from app.models import User, Mouse
+from sqlalchemy import nulls_last
 
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
@@ -26,7 +27,7 @@ def mouse(id):
 @login_required
 @csrf.exempt
 def add_mouse():
-	last_mouse = Mouse.query.filter_by(user_id=current_user.id).order_by(Mouse.timestamp.desc()).limit(1).all()
+	last_mouse = Mouse.query.filter_by(user_id=current_user.id).order_by(nulls_last(Mouse.timestamp.desc())).limit(1).all()
 	if last_mouse:
 		last_mouse = last_mouse[0]
 	if request.method == 'POST':
