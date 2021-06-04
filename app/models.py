@@ -92,7 +92,7 @@ class Task(db.Model):
 
 class Mouse(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
-	sex = db.Column(db.Integer)
+	sex = db.Column(db.String(500))
 	genotype = db.Column(db.String(500))
 	dob = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 	cage = db.Column(db.Integer, db.ForeignKey('cage.id'))
