@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+  <a href="{{ url_for('mice.add_mouse') }}" class="btn btn-primary">Add mouse</a>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Cage Tag</th>
+      <th>Date of Birth</th>
+      <th>Sex</th>
+      <th>Genotype</th>
+      <th>Notes</th>
+      <th>Owner</th>
+      <th>Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for mouse in mice %}
+    <tr>
+      <td>{{mouse.cage}}</td>
+      <td>{{mouse.dob.strftime("%m-%d-%y")}} ({{ mouse.age() }} days)</td>
+      <td>{{mouse.sex}}</td>
+      <td>{{mouse.genotype}}</td>
+      <td>{{mouse.notes|safe}}</td>
+      <td>{{mouse.owner.username}}</td>
+      <td>
+      {% if mouse.owner == current_user %}
+      <a class="float-right" href="{{ url_for('mice.mouse',id=mouse.id)}}">View mouse</a>
+      <a class="float-right" href="{{ url_for('mice.edit_mouse',id=mouse.id)}}">Edit mouse</a>
+      <a class="float-right" href="{{ url_for('mice.remove_mouse',id=mouse.id)}}">Remove mouse</a>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

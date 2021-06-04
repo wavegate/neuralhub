@@ -16,7 +16,16 @@ from flask_admin import Admin, BaseView, expose
 from flask_admin.contrib.sqla import ModelView
 from flask_socketio import SocketIO
 
-db = SQLAlchemy()
+from sqlalchemy import MetaData
+
+naming_convention = {
+    "ix": 'ix_%(column_0_label)s',
+    "uq": "uq_%(table_name)s_%(column_0_name)s",
+    "ck": "ck_%(table_name)s_%(column_0_name)s",
+    "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
+    "pk": "pk_%(table_name)s"
+}
+db = SQLAlchemy(metadata=MetaData(naming_convention=naming_convention))
 migrate = Migrate(render_as_batch=True, compare_type=True)
 login = LoginManager()
 login.login_view = 'auth.login'
@@ -33,7 +42,7 @@ def create_app(config_class=Config):
     app.config.from_object(config_class)
 
     db.init_app(app)
-    migrate.init_app(app, db)
+    migrate.init_app(app, db, render_as_batch=True)
     login.init_app(app)
     mail.init_app(app)
     bootstrap.init_app(app)
@@ -55,6 +64,9 @@ def create_app(config_class=Config):
 
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
+
+    from app.mice import bp as mice_bp
+    app.register_blueprint(mice_bp, url_prefix='/mice')
 
     from app.data import bp as data_bp
     app.register_blueprint(data_bp, url_prefix='/data')

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+
+<form method="post" class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Edit Mouse</legend>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="sex">Sex</label>
+  <div class="col-md-4">
+    <select id="sex" name="sex" class="form-control">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="genotype">Genotype(s)</label>
+  <div class="col-md-4">
+<input id="genotype" name="genotype" class="form-control input-md" placeholder="" type="text" data-role="tagsinput" value="{{mouse.genotype}}">
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cagetag">Cage Tag</label>  
+  <div class="col-md-4">
+  <input id="cagetag" name="cagetag" type="text" placeholder="" class="form-control input-md" value="{{mouse.cage}}">
+    
+  </div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label" for="notes">Notes</label>
+    <div class="col-md-4">
+    <textarea id="summernote" name="editordata">{{mouse.notes}}</textarea>
+</div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label" for="dob">Date of birth</label>
+    <div class="col-md-4">
+    <input class="form-control input-md" type="datetime-local" name="dob" value="{{dob}}">
+</div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <input type="submit" id="submit" name="submit" class="btn btn-primary"></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    $(document).keypress(
+  function(event){
+    if (event.which == '13') {
+      event.preventDefault();
+    }
+});
+</script>
+{% endblock %}

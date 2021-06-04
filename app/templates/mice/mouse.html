@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{mouse.sex}}{{mouse.genotype}}{{mouse.cage}}{{mouse.owner}}{{mouse.dob}}
+  {{ mouse.notes|safe }}
+  <a href="{{url_for('mice.edit_mouse', id=mouse.id) }}">Edit mouse</a>
+  <a href="{{url_for('mice.remove_mouse', id=mouse.id) }}">Remove mouse</a>
+
+
+{% endblock %}

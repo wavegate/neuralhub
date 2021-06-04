@@ -1,4 +1,5 @@
 from datetime import datetime
+import datetime as dt
 from hashlib import md5
 from time import time
 from flask import current_app
@@ -7,6 +8,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
 import json
 from app import db, login
+
+##### USERS ######
 
 class User(UserMixin, db.Model):
 	__tablename__ = 'user'
@@ -18,6 +21,8 @@ class User(UserMixin, db.Model):
 	admin = db.Column(db.Boolean())
 	tests = db.relationship('Test', backref='author', lazy='dynamic')
 	tasks = db.relationship('Task', backref='author', lazy='dynamic')
+	mice = db.relationship('Mouse', backref='owner', lazy='dynamic')
+	cages = db.relationship('Cage', backref='owner', lazy='dynamic')
 
 	def __repr__(self):
 		return '<User {}>'.format(self.username)
@@ -52,12 +57,15 @@ class User(UserMixin, db.Model):
 def load_user(id):
 	return User.query.get(int(id))
 
+##### BLOG #####
+
 class Post(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	body = db.Column(db.Text)
 	timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
+##### COGNITION #####
 
 class Test(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -77,4 +85,28 @@ class Task(db.Model):
 	taskname = db.Column(db.String(500))
 	date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 	notes = db.Column(db.Text)
+	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+
+###### MICE #####
+
+class Mouse(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	sex = db.Column(db.Integer)
+	genotype = db.Column(db.String(500))
+	dob = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+	cage = db.Column(db.Integer, db.ForeignKey('cage.id'))
+	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+	notes = db.Column(db.Text)
+
+	def age(self):
+		return (datetime.now() - self.dob).days
+
+class Cage(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	tag = db.Column(db.String(500))
+	mice = db.relationship('Mouse', backref='house', lazy='dynamic')
+	notes = db.Column(db.Text)
+	mouseline = db.Column(db.String(500))
+	setup_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))

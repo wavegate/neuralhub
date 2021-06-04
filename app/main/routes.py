@@ -180,7 +180,7 @@ def introtoelectronics():
 @bp.route("/tasks", methods = ['GET'])
 @login_required
 def tasks():
-	return render_template('tasks.html', tasks=Task.query.all())
+	return render_template('tasks.html', tasks=Task.query.filter_by(user_id=current_user.id))
 
 @bp.route("/electricalengineering", methods = ['GET'])
 @login_required
