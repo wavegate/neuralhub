@@ -26,7 +26,9 @@ def mouse(id):
 @login_required
 @csrf.exempt
 def add_mouse():
-	last_mouse = Mouse.query.filter_by(user_id=current_user.id).order_by(Mouse.timestamp.desc()).limit(1).all()[0]
+	last_mouse = Mouse.query.filter_by(user_id=current_user.id).order_by(Mouse.timestamp.desc()).limit(1).all()
+	if last_mouse:
+		last_mouse = last_mouse[0]
 	if request.method == 'POST':
 		date_in = request.form.get('dob')
 		date_processing = date_in.replace('T', '-').replace(':', '-').split('-')
@@ -36,7 +38,10 @@ def add_mouse():
 		db.session.add(mouse)
 		db.session.commit()
 		return redirect(url_for('mice.mice'))
-	return render_template('mice/add_mouse.html', mouse=last_mouse, dob=last_mouse.dob.strftime("%Y-%m-%dT%H:%M"))
+	if last_mouse:
+		return render_template('mice/add_mouse.html', mouse=last_mouse, dob=last_mouse.dob.strftime("%Y-%m-%dT%H:%M"))
+	else:
+		return render_template('mice/add_mouse.html')
 
 @bp.route("/edit_mouse/<int:id>", methods = ['GET', 'POST'])
 @login_required

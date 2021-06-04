@@ -9,6 +9,7 @@
 <!-- Form Name -->
 <legend>Add Mouse</legend>
 
+{% if mouse %}
 <!-- Select Basic -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="sex">Sex</label>
@@ -50,6 +51,49 @@
     <input class="form-control input-md" type="datetime-local" name="dob" value="{{dob}}">
 </div>
 </div>
+{% else %}
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="sex">Sex</label>
+  <div class="col-md-4">
+    <select id="sex" name="sex" class="form-control">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="genotype">Genotype(s)</label>
+  <div class="col-md-4">
+<input id="genotype" name="genotype" class="form-control input-md" placeholder="" type="text" data-role="tagsinput">
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cagetag">Cage Tag</label>  
+  <div class="col-md-4">
+  <input id="cagetag" name="cagetag" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label" for="notes">Notes</label>
+    <div class="col-md-4">
+    <textarea id="summernote" name="editordata"></textarea>
+</div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label" for="dob">Date of birth</label>
+    <div class="col-md-4">
+    <input class="form-control input-md" type="datetime-local" name="dob">
+</div>
+</div>
+{% endif %}
 
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit"></label>
