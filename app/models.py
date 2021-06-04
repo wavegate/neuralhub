@@ -96,6 +96,7 @@ class Mouse(db.Model):
 	genotype = db.Column(db.String(500))
 	dob = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 	cage = db.Column(db.Integer, db.ForeignKey('cage.id'))
+	cagetag = db.Column(db.String(500))
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 	notes = db.Column(db.Text)
 

@@ -31,7 +31,7 @@ def add_mouse():
 		date_processing = date_in.replace('T', '-').replace(':', '-').split('-')
 		date_processing = [int(v) for v in date_processing]
 		date_out = dt.datetime(*date_processing)
-		mouse = Mouse(dob=date_out, sex=request.form.get('sex'), notes=request.form.get('editordata'), genotype=request.form.get('genotype'), cage=request.form.get('cagetag'), owner=current_user)
+		mouse = Mouse(dob=date_out, sex=request.form.get('sex'), notes=request.form.get('editordata'), genotype=request.form.get('genotype'), cagetag=request.form.get('cagetag'), owner=current_user)
 		db.session.add(mouse)
 		db.session.commit()
 		return redirect(url_for('mice.mice'))
@@ -51,7 +51,7 @@ def edit_mouse(id):
 		mouse.sex = request.form.get('sex')
 		mouse.notes = request.form.get('editordata')
 		mouse.genotype = request.form.get('genotype')
-		mouse.cage = request.form.get('cagetag')
+		mouse.cagetag = request.form.get('cagetag')
 		db.session.commit()
 		return redirect(url_for('mice.mouse', id=mouse.id))
 	return render_template('mice/edit_mouse.html', mouse=mouse, dob=mouse.dob.strftime("%Y-%m-%dT%H:%M"))
