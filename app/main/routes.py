@@ -310,7 +310,7 @@ def delete_test(test_id):
 @bp.route('/generate_images')
 def generate_images():
 	sequence = []
-	for i in range(5):
+	for i in range(60):
 		N = np.random.random_integers(1,9)
 		x = np.random.rand(N)
 		y = np.random.rand(N)
