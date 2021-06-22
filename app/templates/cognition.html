@@ -66,6 +66,14 @@
 					<input type="radio" name="selectTest" data-toggle="radio" id="optionsRadios4" value="phone">
 					<i></i>phone
 				</label>
+				<label class="radio">   
+					<input type="radio" name="selectTest" data-toggle="radio" id="optionsRadios5" value="ADHD functions">
+					<i></i>Depression functions
+				</label>
+				<label class="radio">   
+					<input type="radio" name="selectTest" data-toggle="radio" id="optionsRadios5" value="ADHD functions">
+					<i></i>ADHD functions
+				</label>
 			</form>
 		</div>
 		<div class="col-md-8">
@@ -91,6 +99,20 @@
 								</div>
 				<p>The n-back task is a continuous performance task that is commonly used to measure working memory. 2-back, as in this test, means two turns back. Time taken: 1 minute</p>
 								<a href="{{ url_for('static', filename='papers/carlson1998.pdf') }}">Paper</a>
+			</div>
+			<div class="test" name="phone">
+				<h4>2-back</h4>
+				<div class="center" style="text-align:center;margin-bottom:25px;">
+									<a href="{{url_for('main.phone')}}" class="btn btn-primary btn-lg">Start test</a>
+								</div>
+				<p>How good are you at memorizing phone numbers quickly?</p>
+			</div>
+			<div class="test" name="phone">
+				<h4>2-back</h4>
+				<div class="center" style="text-align:center;margin-bottom:25px;">
+									<a href="{{url_for('main.phone')}}" class="btn btn-primary btn-lg">Start test</a>
+								</div>
+				<p>How good are you at memorizing phone numbers quickly?</p>
 			</div>
 			<div class="test" name="phone">
 				<h4>2-back</h4>

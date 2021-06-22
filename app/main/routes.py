@@ -168,12 +168,14 @@ def save_post(id):
 	return send_file("post.txt", as_attachment=True)
 
 @bp.route("/trpc5", methods = ['GET'])
-@login_required
 def trpc5():
 	return render_template('trpc5.html')
 
+@bp.route("/malfait", methods = ['GET'])
+def malfait():
+	return render_template('malfait.html')
+
 @bp.route("/introtoelectronics", methods = ['GET'])
-@login_required
 def introtoelectronics():
 	return render_template('introtoelectronics.html')
 
@@ -183,7 +185,6 @@ def tasks():
 	return render_template('tasks.html', tasks=Task.query.filter_by(user_id=current_user.id))
 
 @bp.route("/electricalengineering", methods = ['GET'])
-@login_required
 def electricalengineering():
 	return render_template('electricalengineering.html')
 
@@ -201,7 +202,6 @@ def aCSF():
 	return render_template('aCSF.html', result=result, volume = volume)
 
 @bp.route("/machinelearning", methods = ['GET'])
-@login_required
 def machinelearning():
 	return render_template('machinelearning.html')
 
@@ -211,12 +211,10 @@ def subitizing():
 	return render_template('subitizing.html')
 
 @bp.route("/jack", methods = ['GET'])
-@login_required
 def jack():
 	return render_template('jackofalltrades.html')
 
 @bp.route("/ultrasound", methods = ['GET'])
-@login_required
 def ultrasound():
 	return render_template('ultrasound.html')
 
@@ -231,22 +229,18 @@ def phone():
 	return render_template('phone.html')
 
 @bp.route("/painmodulation", methods = ['GET'])
-@login_required
 def painmodulation():
 	return render_template('painmodulation.html')
 
 @bp.route("/moocs", methods = ['GET'])
-@login_required
 def moocs():
 	return render_template('moocs.html')
 
 @bp.route("/companies", methods = ['GET'])
-@login_required
 def companies():
 	return render_template('companies.html')
 
 @bp.route("/ethics", methods = ['GET'])
-@login_required
 def ethics():
 	return render_template('ethics.html')
 
