@@ -5,43 +5,90 @@
 <style>
 	h3 {
 		margin-top:40px;
-		margin-bottom:5px;
+		margin-bottom:40px;
       text-align: center;
 	}
    h4 {
    }
-   #behavior, #calcium_imaging, #background, #single_cell {
-      background-color: rgba(0,0,0,0.1);
-      padding:  15px 25px 15px 25px;
-      border: 1px solid black;
-      border-radius: 5px;
+   .lbl-toggle {
+      padding:  15px 25px 5px 25px;
+      border-bottom: 3px solid black;
       cursor: pointer;
-   }
-   .behavior, .calcium_imaging, .background, .single_cell {
-      display:  none;
+      display: inline-block;
    }
 
-   #malfait {
+   .lbl-toggle:hover {
+      color: rgb(48 152 226 / 100%);
+   }
+
+   .lbl-toggle::before {
+     content: ' ';
+     display: inline-block;
+
+     border-top: 5px solid transparent;
+     border-bottom: 5px solid transparent;
+     border-left: 5px solid currentColor;
+
+     vertical-align: middle;
+     margin-right: .7rem;
+     transform: translateY(-2px);
+
+     transition: transform .2s ease-out;
+   }
+   .lbl-toggle.down::before {
+     transform: rotate(90deg) translateX(-3px);
+   }
+
+   .row {
+      margin: 0;
+   }
+
+   .lbl-toggle.down {
+     border-bottom-right-radius: 0;
+     border-bottom-left-radius: 0;
+   }
+   .behavior, .calcium_imaging, .background, .single_cell {
+      display: none;
+   }
+
+   #card {
       width: 300px;
       float: left;
       margin: 0 25px 0 0;
+      text-align: center;
    }
-   .bio {
-      display: block;
+
+   #youtube_link {
+   }
+   
+   .intro {
+      background-color: rgb(48 152 226 / 10%);
+      padding: 10px 10px 10px 10px;
+   }
+
+   .main img {
+      max-width: 100%;
    }
 </style>
-<div class="row">
-  
- <h3>Neurobiology of joint pain in osteoarthritis in the mouse model</h4>
-<div class="row">
-    <p><a href="https://www.youtube.com/watch?v=H41hXkTAd5o&amp;ab_channel=NeuralHub" target="_blank">View on Youtube</a><br></p>
- <p>These are notes from the Summer Education Series on June 18th, 2021 with the Musculoskeletal Research Center at Washington University in St Louis, MO.</p><p><img src="https://www.rushu.rush.edu/sites/default/files/Malfait_AM-min.jpg" width=300 id="malfait"><b>Anne-Marie Malfait, MD. Ph.D,</b>&nbsp;(<a href="https://scholar.google.com/citations?user=lrDAxIcAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>) is an expert on the development of disease-modifying osteoarthritis drugs (DMOADs), with 24 years of expertise with animal models of rheumatoid and osteoarthritis. She was directly involved with all aspects of the DMOAD discovery process, from target identification, compound development, animal modeling, safety assessments, biomarker development, and design of phase I clinical trials. She is currently a professor of internal medicine and rheumatology at Rush Medical College, where she has established a laboratory for translational osteoarthritis research. </p>
 
+ <h3>Neurobiology of joint pain in osteoarthritis in the mouse model</h3>
+<div class="row">
+
+<div class="intro">
+   <div id="card">
+      <img src="https://www.rushu.rush.edu/sites/default/files/Malfait_AM-min.jpg" width=300 id="malfait">
+      <a class="btn btn-primary btn-fill" id="youtube_link" href="https://www.youtube.com/watch?v=H41hXkTAd5o&ab_channel=NeuralHub" target="_blank">View Presentation on YouTube</a>
+   </div>
+   <p>These are notes from the Summer Education Series on June 18th, 2021 with the Musculoskeletal Research Center at Washington University in St Louis, MO.</p>
+   <p><b>Summary: </b>Worldwide, osteoarthritis is one of the leading causes of disability and chronic pain. In this inspiring talk, Dr. Malfait, seminal thinker in pain in musculoskeletal pathology, discusses current advancements in pain research in osteoarthritis in the mouse model, covering topics including in vivo imaging of calcium transients in the dorsal root ganglion, comprehensive behavioral assessments of pain in mice, and advancing the NIH's Helping to End Addiction Long-term (HEAL) Initiative by applying single cell RNA sequencing.</p>
+ 
+ <p><b>Quick Bio:</b> Anne-Marie Malfait, MD. Ph.D, (<a href="https://scholar.google.com/citations?user=lrDAxIcAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>) is an expert on the development of disease-modifying osteoarthritis drugs (DMOADs), with 24 years of expertise with animal models of rheumatoid and osteoarthritis. She was directly involved with all aspects of the DMOAD discovery process, from target identification, compound development, animal modeling, safety assessments, biomarker development, and design of phase I clinical trials. She is currently a professor of internal medicine and rheumatology at Rush Medical College, where she has established a laboratory for translational osteoarthritis research. </p>
+</div>
 </div>
 <div class="row">
-<h4 id="background">Background</h4>
-<div class="background">
-    <p>Worldwide, osteoarthritis is one of the leading causes of disability and chronic pain:
+<h4 id="background" class="lbl-toggle">Background</h4>
+<div class="background toggle">
+    <p>Worldwide, osteoarthritis is one of the leading causes of disability and chronic pain:</p>
     <ul>
         <li>It is the most common form of arthritis (300 million people worldwide).</li>
         <li>It is the 3rd most rapidly rising condition associated with disability after diabetes and dementia.</li>
@@ -59,16 +106,16 @@
  <p></p><p>Amplification of these signals in the peripheral nervous system (PNS) is<b> primary hyperalgesia (noxious stimuli)</b> and <b>primary allodynia (innocuous stimuli)</b>. Amplication of these signals in the CNS is <b>secondary hyperalgesia and allodynia</b>. These amplifications can lead to complex processes such as catastrophizing, anxiety, sleep problems, and depression.</p>
 </div>
 
-<h4 id="behavior">Behavior</h4>
-<div class="behavior">
+<h4 id="behavior" class="lbl-toggle">Behavior</h4>
+<div class="behavior toggle">
    <p>The current model of OA pain is the <b>destabilization of the medial meniscus (DMM)</b>, which involves cutting the medial meniscal tibial ligament, which causes a slowly progressing remodeling of the OA, performed in 12-week old mice and investigated up to 16 weeks post surgery. Both DMM and sham mice show knee hyperalgesia within a few weeks (acute postoperative pain) that is reversible with morphine. Pain behaviors were assessed with the following devices and involved testing for evoked and spontaneous pain behaviors, weight-bearing deficits, gait changes, anxiety, and issues with balance and proprioception. Note the differences in chronicity for the different behvaiors (some come on quickly and are temporary whereas others build up over time).</p>
  <img src="{{url_for('static',filename='img/malfait/behavior.png')}}">
   <img src="{{url_for('static',filename='img/malfait/behavior2.png')}}" width=100%>
 <p>This pain sensitization behavior is replicated in humans. OA patients have lower pain thresholds and increased temporal summation of pain at the OA joint as well as at sites away from the joint. Interestingly, <i>joint replacement is often (80%) associated with reversal of both sensitization and pain</i>, suggesting that sensory input from the joint drives ongoing sensitization and pain. Pressure pain sensitivity at the knee is the most important risk factor for developing persistent knee pain over a 2-year period.</p>
 </div>
  
-<h4 id="calcium_imaging">Calcium imaging</h4>
-<div class="calcium_imaging">
+<h4 id="calcium_imaging" class="lbl-toggle">Calcium imaging</h4>
+<div class="calcium_imaging toggle">
    <p>To investigate the physiology of this process, Rachel Miller developed an <i>in vivo</i>&nbsp;method to image Ca2+ in the L4 DRG in response to physical stimuli applied to the hind limb of a mouse using <b>genetically-encoded calcium indicators (GECIs)</b>. They found that there were increased numbers of DMM neurons that responded to force applied to the knee joint compraed to sham, suggesting that new neurons were being recruited to respond to mechanical stimuli.</p>
  <img src="{{url_for('static',filename='img/malfait/invivo.png')}}">
  <p>They then used <b>Na<sub>v</sub>1.8, a voltage-gated sodium channel expressed by ~85% of DRG sensory neurons,</b> as a genetic label to find the anatomical distribution of the newly recruited neurons. This method was done by crossing tdTomato with Na<sub>v</sub>1.8-Cre mice. They imaged the nociceptors in the nerve bundle, their cell bodies in the DRG, and even where they were entering the dorsal horn of the spinal cord. They were able to observe a massive remodeling of innervation and sprouting of new nociceptors in the DMM joint and in the bone.</p>
@@ -79,8 +126,8 @@
 <img src="{{url_for('static',filename='img/malfait/ccl2.png')}}">
 </div>
 
-<h4 id="single_cell">Single cell RNA seq</h4>
-<div class="single_cell">
+<h4 id="single_cell" class="lbl-toggle">Single cell RNA seq</h4>
+<div class="single_cell toggle">
    <p>They also used large scale approaches including microarray analyses of the DRG during models of OA pain and single cell RNA seq to start to classify different types of sensory nerves. An example of a big change is that Ntrk1 (receptor for NGF) has been shown to be present in both peptidergic and non-peptidergic neurons.</p>
 <img src="{{url_for('static',filename='img/malfait/microarray.png')}}">
 <img src="{{url_for('static',filename='img/malfait/rnaseq.png')}}">
@@ -90,7 +137,7 @@
 <img src="{{url_for('static',filename='img/malfait/expression.png')}}">
 <p>One such gene of interest is the GPCR <b>MAS Related GPR Family Member D (MRGPRD)</b>, which is a specifically mechanosensitive receptor. They found that there was increased MRGPRD+ channels in the nociceptors 16 weeks after DMM surgery.</p>
 <img src="{{url_for('static',filename='img/malfait/mrgprd.png')}}">
-<p>They are also looking at genes in non-neuronal cells, including probable G-protein coupled receptor 34 (Gpr34), which is only expressed in macrophages and has been implicated in chronic pain associated with nerve injury.
+<p>They are also looking at genes in non-neuronal cells, including probable G-protein coupled receptor 34 (Gpr34), which is only expressed in macrophages and has been implicated in chronic pain associated with nerve injury.</p>
 <img src="{{url_for('static',filename='img/malfait/gpr34.png')}}">
 <p>Comparative transcriptomic profiling of human and mouse DRG shows significant differences between mouse and human DRG. Malfait group looking at transcriptomic differences in sensory neuronal populations between male and females.</p>
 <p>Malfait and her team is starting in a couple months the <b>Chicago Center on Musculoskeletal Pain (C-COMP)</b>. This center will integrate basic, translational and clinical expertise in a multidisciplinary center for promoting musculoskeletal (MSK) pain research.</p>
@@ -115,6 +162,7 @@
 <script>
    $(document).ready(function () {
       $("#behavior, #calcium_imaging, #single_cell, #background").click(function() {
+         this.classList.toggle('down');
          $("." + this.id).slideToggle("", function() {
 
          });

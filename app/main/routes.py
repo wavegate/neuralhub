@@ -172,8 +172,12 @@ def trpc5():
 	return render_template('trpc5.html')
 
 @bp.route("/malfait", methods = ['GET'])
+@login_required
 def malfait():
-	return render_template('malfait.html')
+	if current_user.admin:
+		return render_template('malfait.html')
+	else:
+		return redirect(request.referrer or url_for('index'))
 
 @bp.route("/introtoelectronics", methods = ['GET'])
 def introtoelectronics():
