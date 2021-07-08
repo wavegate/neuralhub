@@ -32,6 +32,7 @@ import time
 import ast
 from flask_socketio import join_room, leave_room, emit
 from molmass import Formula
+import openpyxl
 
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
@@ -66,6 +67,16 @@ def cognition():
 @login_required
 def test1():
 	return render_template('test1.html')
+
+@bp.route("/cluster4", methods = ['GET'])
+def cluster4():
+	rows = []
+	with bp.open_resource('cluster4.xlsx') as f:
+		wb = openpyxl.load_workbook(f)
+		ws = wb.active
+		for row in ws.iter_rows(min_row=1):
+			rows.append(row)
+	return render_template('cluster4.html', rows=rows)
 
 @bp.route("/posts", methods = ['GET'])
 @login_required
@@ -165,11 +176,27 @@ def save_post(id):
 	file = open("post.txt", "w")
 	file.write(post.body)
 	file.close()
-	return send_file("post.txt", as_attachment=True)
+	return send_file("post.txt", as_attachment=hhTrue)
 
 @bp.route("/trpc5", methods = ['GET'])
 def trpc5():
 	return render_template('trpc5.html')
+
+@bp.route("/multiflex", methods = ['GET'])
+def multiflex():
+	return render_template('multiflex.html')
+
+@bp.route("/protocols", methods = ['GET'])
+def protocols():
+	return render_template('protocols.html')
+
+@bp.route("/animals", methods = ['GET'])
+def animals():
+	return render_template('animals.html')
+
+@bp.route("/neuron_isolation", methods = ['GET'])
+def neuron_isolation():
+	return render_template('neuron_isolation.html')
 
 @bp.route("/malfait", methods = ['GET'])
 @login_required

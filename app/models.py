@@ -87,7 +87,6 @@ class Task(db.Model):
 	notes = db.Column(db.Text)
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
-
 ###### MICE #####
 
 class Mouse(db.Model):

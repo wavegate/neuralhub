@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+The Multiflex Catheter
+A Variable Stiffness Endovascular Catheter
+US Provisional Patent No. 62/965,525
+Presenters: Halle Lowe, Vinay Chandrasekaran
+Contributors: C. Hartquist, G. Genin, J. Osbun, M. Zayed, E. Leuthardt, M. Talcott, J. Calderan
+The problem: Accessing the Brain for neurovascular Interventions
+-Transradial and Transfemoral approach
+<img src="{{ url_for('static', filename='img/multiflex/approaches.png') }}">
+The transfemoral approach has an easier, straighter path to the brain, but the transradial approach is preferred by patients due to shorter postoperative recovery time.
+Transradial approach experiences herniation and buckling at the heart. The entire catheter system can herniate into the heart
+The problems with catheters
+-Floppy Intermediate Guide Catheters (kinking, buckling, herniation)
+-Stiff Sheaths (lack of mobility)
+Current approach is Coaxial Catheter Systems but is increased time and expensive
+After inserting Intermediate catheter around heart, they try to insert Sheath but this causes herniation
+So what if we can make a catheter that can change its stiffness?
+<img src="{{ url_for('static', filename='img/multiflex/cad.png') }}">v
+Two things can be modified to change stiffness: the biomaterial or the inertia
+They used a principle like a deck of cards - a deck of cards can be bent, but if you glue the cards together it becomes more stiff
+<img src="{{ url_for('static', filename='img/multiflex/example.png') }}">
+
+
+Haptic Feedback to Aid the Visually Impaired
+Submitted by Bama BioEngineering
+Purpose is to assist blind and visually impaired to safety traverse terrain
+Functional requirements are complete sensing range (width of person, up to head, below to cage range)
+4 ultrasonic sensors, vibration motors, device worn on vest at chest level, rechargeable power bank
+<img src="{{ url_for('static', filename='img/multiflex/cases.png') }}">
+6000 mAh Battery with USB connection
+Sensor array in 3D printed case in front
+Arduino Nano and wiring within front zipper pouch
+<img src="{{ url_for('static', filename='img/multiflex/prototype.png') }}">
+Similar devices: iMerciv Buzzclip, GPS based devices, auditory feedback
+Limitations - elevation changes, different placements
+
+Studying the Variation of Biomechanics during Myelination Using an 
+{% endblock %}
