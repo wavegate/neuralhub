@@ -71,38 +71,61 @@
                 <li><a href="#" id="dropdownMenu3" data-toggle="dropdown">Private <span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
                     <li><a href="{{ url_for('main.tasks') }}">Tasks</a></li>
+                    <li><a href="{{ url_for('mice.index') }}">Mice</a></li>
+                    <li><a href="{{ url_for('main.research', chapter='index') }}">Research</a></li>
+                    <li><a href="{{ url_for('main.cognition') }}">Cognition</a></li>
                   </ul></li>
                 {% else %}
                 <li><a href="{{ url_for('auth.login') }}">Login</a></li>
                 {% endif %}
-                <li><a href="{{ url_for('mice.index') }}">Mice</a></li>
-                <li><a href="{{ url_for('main.posts') }}">Posts</a></li>
-                <li><a href="#" id="dropdownMenu2" data-toggle="dropdown">Resources <span class="caret"></span></a>
+                <li>
+                  <a href="#" id="dropdownMenu1" data-toggle="dropdown">Study <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="{{ url_for('main.learn', subject='anatomy', chapter='index') }}">Anatomy</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='artificial_intelligence', chapter='index') }}">Artificial Intelligence</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='biology', chapter='index') }}">Biology</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='brain_machine_interface', chapter='index') }}">Brain Machine Interfaces</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='data_science', chapter='index') }}">Data Science</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='dev_ops', chapter='index') }}">DevOps</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='electronics', chapter='index') }}">Electronics</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='entrepreneurship', chapter='index') }}">Entrepreneurship</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='ethics', chapter='index') }}">Ethics</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='game_development', chapter='index') }}">Game Development</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='leadership', chapter='index') }}">Leadership</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='materials_testing', chapter='index') }}">Materials Testing</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='mathematics', chapter='index') }}">Mathematics</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='neuroscience', chapter='index') }}">Neuroscience</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='optics', chapter='index') }}">Optics</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='physics', chapter='index') }}">Physics</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='product_development', chapter='index') }}">Product Development</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='robotics', chapter='index') }}">Robotics</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='signal_processing', chapter='index') }}">Signal Processing</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='software', chapter='index') }}">Software</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='tech_ops', chapter='index') }}">TechOps</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='thin_films', chapter='index') }}">Thin Films</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='tissue', chapter='index') }}">Tissue</a></li>
+                    <li><a href="{{ url_for('main.learn', subject='wireless', chapter='index') }}">Wireless</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" id="dropdownMenu4" data-toggle="dropdown">Methods <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                  </ul>
+                </li>
+                <li><a href="#" id="dropdownMenu2" data-toggle="dropdown">Paths to Neuroengineering <span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><a href="{{ url_for('main.moocs') }}">MOOCs</a></li>
-                    <li><a href="{{ url_for('main.companies') }}">Companies</a></li>
-                    <li><a href="{{ url_for('main.programminglanguages') }}">Programming Languages</a></li>
-                    <li><a href="{{ url_for('main.edu') }}">Educational Paths</a></li>
+                    <li><a href="{{ url_for('main.edu') }}">Degrees</a></li>
                     <li><a href="{{ url_for('main.edu') }}">Interviews with Experts</a></li>
                     <li><a href="https://neurotree.org/neurotree/clusters.php" target="_blank">Lineage</a></li>
-                    <li><a href="{{ url_for('main.jack')}}">Jack of All Trades</a></li>
+                    <li><a href="{{ url_for('main.jack')}}">Job Qualifications</a></li>
                   </ul></li>
                 <li>
-                  <a href="#" id="dropdownMenu1" data-toggle="dropdown">Learn <span class="caret"></span></a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="{{ url_for('main.bmi') }}">Brain Machine Interfaces</a></li>
-                    <li><a href="{{ url_for('main.painmodulation') }}">Pain Modulation</a></li>
-                    <li><a href="{{ url_for('main.painmodulation') }}">Testing and Diagnostics</a></li>
-                    <li><a href="{{ url_for('main.painmodulation') }}">Neuroimaging</a></li>
-                    <li><a href="{{ url_for('main.painmodulation') }}">Functional Therapy for Autism</a></li>
-                    <li><a href="{{ url_for('main.multiflex') }}">Multiflex</a></li>
-                    <li><a href="{{ url_for('main.protocols') }}">Protocols</a></li>
-                    <li><a href="{{ url_for('main.animals') }}">Animals</a></li>
-                  </ul>
-
-                </li>
-
-                    <li><a href="{{ url_for('main.cognition') }}">Cognition</a></li>
+                    <li><a href="#" id="dropdownMenu3" data-toggle="dropdown">Current Innovation <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                    <li><a href="{{ url_for('main.companies') }}">Companies</a></li>
+                    <li><a href="{{ url_for('main.edu') }}">Labs</a></li>
+                    <li><a href="{{ url_for('main.edu') }}">Ideas</a></li>
+                  </ul></li>
                </ul>
              </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->

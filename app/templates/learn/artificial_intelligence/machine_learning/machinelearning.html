@@ -34,10 +34,48 @@
 <div class="row">
   
  <h3>Machine Learning</h3>
-<a href="https://www.coursera.org/learn/machine-learning" target="_blank">View on Coursera</a>
+<h4>AI vs ML vs Deep Learning</h4>
+<p><b>Artificial intelligence</b> is a technique which enables machines to mimic human behavior. <b>Machine learning</b> is a subset of AI technique which uses statistical methods to enable machines to improve with experience. <b>Deep learning</b> is a subset of ML which makes the computation of multi-layer neural network feasible. It is a particular kind of machine learning that is inspired by the functionality of our brain cells called neurons which led to the concept of artifical neural networks. Machine learning was introduced to overcome challenges in statistics (how to efficiently train large complex models), computer science/AI (how to train more robust versions of AI systems), and neuroscience (how to design operational models of the brain).</p>
 <h4>Supervised vs Unsupervised Learning</h4>
-<p>Supervised learning (SL) is the machine learning task of learning a function that maps an input to an output based on example input-output pairs. It infers a function from labeled training data consisting of a set of training examples. Supervised learning problems are categorized into "regression" and "classification" problems. In a regression problem, we are trying to predict results witin a continuous output. In a classification problem, we are trying to predict results in a discrete output.</p>
+<p>Supervised learning (SL) is the machine learning task of learning a function that maps an input to an output based on example input-output pairs. It infers a function from <i>labeled training data</i> consisting of a set of training examples. A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples. An optimal scenario will allow for the algorithm to correctly determine the class labels for unseen instances. This requires the learning algorithm to generalize from the training data to unseen situations in a "reasonable" way. This statistical quality of an algorithm is measured through the so-called <b>generalization error.</b> The parallel task in human psychology is often referred to as concept learning.</p>
+<p>To solve a given problem of supervised learning, one has to perform the following steps:</p>
+<ol>
+  <li>Determine the type of training examples. In the case of handwriting analysis, for example, this might be a single handwritten character, an entire handwritten word, an entire sentence of handwriting or perhaps a full paragraph of handwriting.</li>
+  <li>Gather a training set. The training set needs to be representative of the real-world use of the function.</li>
+  <li>Determine the input feature presentation of the laerned function. Typically, the input object is transformed into a <b>feature vector</b>, which contains a number of features that are descriptive of the object. The number of features should not be too large, because of the <b>curse of dimensionality</b>; but should contain enough information to accurately predict the output.</li>
+  <li>Determine the structure of the learned function and corresponding learning algorithm. For example, the engineer may choose to use <b>support-vector machines</b> or <b>decision trees</b>.</li>
+  <li>Complete the design. Run the learning algorithm on the gathered training set. Some supervised learning algorithms require the user to determine certain control parameters. These parameters may be adjusted by optimizing performance on a subset (called a <i>validation</i> set) of the training set, or via <b>cross-validation</b>.</li>
+  <li>Evaluate the accuracy of the learned function. After parameter adjustment and learning, the performance of the resulting function should be measured on a test set that is separate from the training set.</li>
+</ol>
+<h4>Examples of Supervised Learning</h4>
+<ul>
+  <li>Cortana trains based on your voice</li>
+  <li>Weather prediction</li>
+  <li>Biometric identity</li>
+  <li>Prediction of credit worthiness</li>
+  <li>Prediction of patient readmission rates</li>
+  <li>Analyzing products frequently bought together</li>
+</ul>
+<p> Supervised learning problems are categorized into "regression" and "classification" problems. In a regression problem, we are trying to predict results within a continuous output. In a classification problem, we are trying to predict results in a discrete output.</p>
+<h4>Unsupervised Learning</h4>
 <p>Unsupervised learning (UL) is a type of algorithm that learns patterns from untagged data. In contrast to supervised learning (SL) where data is tagged by a human, eg. as a "car" or "fish", UL exhibits self-organization that captures patterns as neuronal predilections or probability densities. Two broad methods in UL are Neural Networks and Probabilistic Methods.</p>
+<h4>Probabilistic methods</h4>
+<p>Two of the main methods used in unsupervised learning are principal component and cluster analysis. Cluster analysis is used in unsupervised learning to group, or segment, datasets with shared attributes in order to extrapolate algorithmic relationships. Cluster analysis is a branch of machine learning that groups the data that has not been labelled, classified, or categorized. Cluster analysis identifies commonalities in the data and reacts based on the presence or absence of such commonalities in each new piece of data.</p>
+<h4>Examples of Unsupervised Learning</h4>
+<ul>
+  <li>Categorizing MRI data as normal or abnormal.</li>
+  <li>Recommend products based on past purchases.</li>
+</ul>
+<h4>Reinforcement learning</h4>
+<p>Reinforcement learning is another one of three basic machine learning algorithms alongside supervised and unsupervised learning. It differs form supervised learning in not needing labelled input/output pairs to be presented, and in not needing sub-optimal actions to be explicitly corrected. Instead, the focus is on finding a balance between exploration (of uncharted territory) and exploitation (of current knowledge).</p>
+<h4>Examples of Reinforcement Learning</h4>
+<ul>
+  <li>Next best offer model for the call center</li>
+  <li>Allocate scarce medical resources to handle different ER cases</li>
+  <li>Reduce excess stock with dynamic pricing</li>
+</ul>
+<h4>Deep Learning</h4>
+<p>Deep learning can only be done with powerful computers. It also tries to create the features itself without features being programmed.</p>
 <h4>Model Representation</h4>
 <p>\((x^{(i)},y^{(i)})\) means the i-th input and output values for a given hypothesis (h).</p>
 <img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58.png?expiry=1621987200000&hmac=hHcMU1ozLA4Jj5ob2Xu6S4RYqzxYJpvCDZ40UawXcwI">

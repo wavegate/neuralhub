@@ -78,6 +78,10 @@ def cluster4():
 			rows.append(row)
 	return render_template('cluster4.html', rows=rows)
 
+@bp.route("/learn/<subject>/<chapter>", methods = ['GET'])
+def learn(subject, chapter):
+	return render_template('learn/{subject}/{chapter}.html'.format(subject=subject, chapter=chapter))
+
 @bp.route("/posts", methods = ['GET'])
 @login_required
 def posts():
@@ -91,6 +95,11 @@ def posts():
 def post(id):
 	post = Post.query.get(id)
 	return render_template('post.html', post=post)
+
+@bp.route("/research/<chapter>")
+@login_required
+def research(chapter):
+	return render_template('research/{chapter}.html'.format(chapter=chapter))
 
 @bp.route("/task/<int:id>", methods = ['GET'])
 @login_required
@@ -184,7 +193,10 @@ def trpc5():
 
 @bp.route("/multiflex", methods = ['GET'])
 def multiflex():
-	return render_template('multiflex.html')
+	if current_user.admin:
+		return render_template('multiflex.html')
+	else:
+		return redirect(request.referrer or url_for('index'))
 
 @bp.route("/protocols", methods = ['GET'])
 def protocols():
