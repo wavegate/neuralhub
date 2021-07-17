@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+	h4 {
+		margin-top:40px;
+		margin-bottom:5px;
+		text-align: center;
+	}
+
+	h5 {
+		margin-top:20px;
+	}
+
+	h6 {
+		margin-top:30px;
+		margin-bottom:10px;
+	}
+
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.caption {
+		text-align:center;
+		font-size: small;
+		margin-bottom:20px;
+	}
+</style>
+<div class="row">
+  
+ <h3>Introduction to Electronics</h3>
+<a href="https://www.coursera.org/learn/electronics" target="_blank">View on Coursera</a>
+<h4 style="margin-top:40px">Review of Circuit Elements</h4>
+<h5>Passive Elements</h5>
+<p>Passive elements are electrical components that do not generate power, but instead dissipate, store, and/or release it.
+<h6>Resistor</h6>
+<p>A resistor is a physical component used in circuits made of two interchangeable leads. The material between the two leads apply resistance and reduces the flow of current. When a voltage is applied across a resistor, current flows through it (<b>Ohm's law</b> for resistors).</p>
+\[V = iR\]
+<div class="caption">Where V is voltage, R is resistance, and i is current.</div>
+<h6>Capacitor</h6>
+<p>A capacitor also has two leads and is used to store and release electric charge. Its ability to store charge is referred to as capacitance, measured in <b>farads (F)</b>. A typical capacitor is two conductive plates separated by an insulator (dielectric). Direct current (DC) cannot pass through the dielectric, but alternating current (AC) does because it causes the capaacitor to repeatedly charge and discharge, storing and releasing energy. <b>'AC coupling'</b> is the use of capacitors to pass alternating current while blocking direct current. An AC current produces a displacement current. The capacitor's opposition to alternating current, called capacitive reactance, is also measured in &#8486;.</p>
+\[Q = CV\] \[i = C \frac{dV}{dt}\]
+<div class="caption">Where Q is charge and C is capacitance.</div>
+<h6>Inductor</h6>
+<p>Inductors, or coils, is typically implemented as one or more windings (loops) of conductive wire. The current through the coil induces a magnetic field that serves as a store of energy. This magnetic field follows the directionality of the 'right-hand rule'. Inductance is measured in <b>henries (H)</b>. According to Lenz's law, changes in the coil's magnetic field generate a counter-electromotive force that restricts the flow of alternating current while allowing direct current to pass.</p>
+<img src="https://www.renesas.com/sites/default/files/inline-images/coil-magnetic-en.jpg"><br>
+<h5>Series and Parallel Connections</h5>
+<h6>Series</h6>
+<p>When a wire splits into two directions, it creates a junction. We represent junctions on schematics with nodes, little dots placed at the intersection of the wires. The absences of a node at a junction means two separate wires are just passing by, not forming any sort of connection. Current flows from a high voltage to a lower voltage in a circuit. Some amount of current will flow through every path it can take to get to the point of lowest voltage (usually called ground). Two components are in series if they share a common node and if the same current flows through them. Inductors add just like resistors do.</p>
+<img style="width:30%" src="https://cdn.sparkfun.com/assets/9/4/a/a/6/51b9f92dce395f5130000000.png">
+\[R_{tot} = R_1 + R_2 + ... + R_{N-1} + R_N\]
+<div class="caption">Total resistance of N resistors in series is their total sum.</div>
+<img src="https://cdn.sparkfun.com/r/600-600/assets/f/9/0/d/b/51ba362ace395f2a5b000000.png" style="width:30%;">
+<h6>Parallel</h6>
+<p>If components share two common nodes, they are in parallel. Where series components all have equal currents running through them, parallel components all have the same voltage drop across them.</p>
+<img style="width:30%" src="https://cdn.sparkfun.com/r/600-600/assets/d/a/4/1/3/51ba2522ce395f0f4e000002.png">
+\[\frac{1}{R_{tot}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} + ... + \frac{1}{R_{N-1}} + \frac{1}{R_{N}}\]
+\[R_{tot} = \frac{R_1 \cdot R_2}{R_1 + R_2}\]
+<div class="caption">Total resistance of N resistors in parallel.</div>
+<img style="width:30%" src="https://cdn.sparkfun.com/r/600-600/assets/0/5/4/0/c/51ba3809ce395f445b000000.png">
+<h5>Connections and Sources</h5>
+<img src="https://cdn.sparkfun.com/r/600-600/assets/6/8/6/d/1/51cdc767ce395f7558000002.png">
+
+<h4>Review of Kirchhoff's Laws</h4>
+<h5>Kirchhoff's Current Law</h5>
+<p>Kirchhoff's Current Law, or KCL, states that the total current or charge entering a junction or node is exactly equal to the charge leaving the node. This is commonly known as Conservation of Charge.</p>
+<h5>Kirchhoff's Second Law</h5>
+<p>Kirchhoff's Voltage Law, or KVL, states that in any closed loop, the total voltage around the loop is equal to the sum of all the voltage drops in the loop, which is also equal to zero. This is known as the Conservation of Energy.</p>
+<h5>Kirchhoff's Circuit Laws</h5>
+<p>The basic procedure for using Kirchhoff's Circuit Laws is as follows:</p>
+<ol>
+	<li>Assume all voltages and resistances are given.</li>
+	<li>Assign a current to each branch of mesh (clockwise or anticlockwise)</li>
+	<li>Label each branch with a branch current (I1, I2, etc.)</li>
+	<li>Find Kirchhoff's first law equations for each node.</li>
+	<li>Find Kirchhoff's second law equations for each of the independent loops of the circuit.</li>
+	<li>Use simultaneous equations as required to find the unknown currents.</li>
+</ol>
+
+<h4>Review of Impedance</h4>
+<h5>Impedances</h5>
+<img src="{{ url_for('static',filename='/img/impedance.png')}}">
+\[Frequency (Hz) = \frac{1}{T} = f\]
+\[Frequency (rad/sec) = \frac{2\pi}{T} = {2\pi}f = \omega\] 
+<p>For a sinusoidal input to a resistor, the current is in-phase with the voltage and this is frequency invariant. The period, T, is how long the wave takes to repeat itself.</p>
+\[Z_R = R\]
+<p>For a capacitor, the current leads the voltage.</p>
+\[Z_C = \frac{1}{j\omega{C}}\]
+\[j = \sqrt{-1}\]
+<p>For an inductor, L, the current lags voltage.</p>
+\[Z_L = j{\omega}L\]
+<p>Impedances act in series and in parallel just like resistors.</p>
+<img src="{{ url_for('static', filename='/img/seriesrc.png') }}">
+\[V_O = \frac{Z_C}{Z_R+Z_C}V_i\]
+\[V_O = \frac{\frac{1}{j{\omega}C}}{R + \frac{1}{j{\omega}C}}V_i\]
+\[V_O = \frac{1}{RCj{\omega} + 1}V_i\]
+<div class="caption">Voltage Divider Law</div>
+<img src="{{ url_for('static', filename='/img/seriesrlc.png') }}">
+<h4>Review of Transfer Functions</h4>
+<img src="{{ url_for('static', filename='/img/transferfunction.png') }}">
+<img src="{{ url_for('static', filename='/img/simplecircuits.png') }}">
+<h4>Review of Frequency Response Plots</h4>
+<p>Magnitude Plot: \(|H(\omega)|\) vs \(\omega\)</p>
+<p>Angle Plot: \({\angle}H(\omega)\) vs \(\omega\)</p>
+<img src="{{ url_for('static', filename='/img/frequencyresponse.png') }}">
+<img src="{{ url_for('static', filename='/img/circuitresponse.png') }}">
+<img src="{{ url_for('static', filename='/img/bode.png') }}">
+<img src="{{ url_for('static', filename='/img/bodefirst.png') }}">
+<img src="{{ url_for('static', filename='/img/bodeoverdamp.png') }}">
+<img src="{{ url_for('static', filename='/img/underdamp.png') }}">
+
+
+
+
+</div>
+
+
+{% endblock %}
