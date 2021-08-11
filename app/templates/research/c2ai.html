@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+}
+h4 {
+font-size: 24px;
+font-weight: 700;
+}
+p {
+font-size: 20px;
+line-height: 1.6;
+}
+.image {
+padding: 10px 0 35px 0;
+font-size: 16px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.references li {
+    scroll-margin-top: 100px;
+}
+</style>
+<div class="row">
+
+<h3>DRG organ culture and electric field stimulation (EFS).</h3>
+<p>Prior studies have used EFS to study the generation of action potentials in dissociated cells and documented a cell-specific dependence of depolarization on pulse duration, frequency and voltage of the applied potential [e.g., Fig. C.8, [<a href="#8">8</a>,<a href="#9">9</a>]). Results show that individual neurons have cell-specific voltage thresholds for activation, and that the amplitude of Ca2+ response depends on the number of action potentials rather than applied voltage [<a href="#62">62</a>,<a href="#8">8</a>]. Organ culture has distinct advantages over harvesting dissociated cells, and EFS can reproduce many of these same behaviors for individual neurons within the intact DRG organ. We isolated intact lumbar DRGs from naive Thy1-GCaMP6s mice for culture (Fig. C.9, Neurobasal A medium supplemented 1% pen/strep, 2% B27, 5% FBS, and 1% Glutamax). DRGs were placed in the center of a recording chamber (RC-26, Warner), secured by a slide anchor and nylon mesh, and perfused with artificial cerebrospinal fluid (aCSF) at a rate of 2 mL/min. Two electrodes connected to a pulse generator (Grass SD9) were inserted at opposite ends of the chamber, and DRGs were stimulated with bipolar square pulses (1ms, 10Hz, 19s rest) at voltage amplitude from 1-100V. GCaMP6S fluorescence was imaged at 488/510 nm with a spinning disk confocal microscope (Nikon Eclipse Ti2).</p>
+<h4>Debugging</h4>
+<p>The problem currently is that we are not getting a consistent GCaMP6S fluorescence response from DRGs to electrical field stimulation.</p>
+
+<div class="references">
+    <h4>References</h4>
+<ol>
+<li id="1">Maher C, Underwood M, and Buchbinder R. Non-specific low back pain. The Lancet, 2017. 389 (10070):736-747. PMID: 27745712. PMCID: Unavailable.</li>
+<li id="2">Schwarzer AC, Aprill CN, and Bogduk N. The prevalence and clinical features of internal disc disruption in patients with chronic low back pain. Spine, 1995. 20(17):1878-1883. PMID: 8560335. PMCID: Unavailable.</li>
+<li id="3">Emery EC, Luiz AP, Sikandar S, Magnusdottir R, Dong X, and Wood JN. In vivo characterization of distinct modality-specific subsets of somatosensory neurons using GCaMP. Sci Adv, 2016. 2(11):e1600990. PMID: 27847865. PMCID: PMC5106201.</li>
+<li id="4">Luiz AP, MacDonald DI, Santana-Varela S, Millet Q, Sikandar S, Wood JN, and Emery EC. Cold sensing by NaV1.8-positive and NaV1.8-negative sensory neurons. Proc Natl Acad Sci U S A, 2019. 116(9):3811- 3816. PMID: 30755524. PMCID: PMC6397562.</li>
+<li id="5">Chen C, Zhang J, Sun L, Zhang Y, Gan WB, Tang P, and Yang G. Long-term imaging of dorsal root ganglia in awake behaving mice. Nat Commun, 2019. 10(1):3087. PMID: 31300648. PMCID: PMC6625980.</li>
+<li id="6">Zheng JH, Walters ET, and Song XJ. Dissociation of dorsal root ganglion neurons induces hyperexcitability that is maintained by increased responsiveness to cAMP and cGMP. J Neurophysiol, 2007. 97(1):15-25. PMID: 17021029. PMCID: Unavailable.</li>
+<li id="7">Leimer EM, Gayoso MG, Jing L, Tang SY, Gupta MC, and Setton LA. Behavioral compensations and neuronal remodeling in a rodent model of chronic intervertebral disc degeneration. Sci Rep, 2019. 9(1):3759. PMID: 30842475. PMCID: PMC6403208.</li>
+<li id="8">Fouillet A, Watson JF, Piekarz AD, Huang X, Li B, Priest B, Nisenbaum E, Sher E, and Ursu D. Characterisation of Nav1.7 functional expression in rat dorsal root ganglia neurons by using an electrical field stimulation assay. Mol Pain, 2017. 13:1744806917745179. PMID: 29166836. PMCID: PMC5731621.</li>
+<li id="9">Virdee JK, Saro G, Fouillet A, Findlay J, Ferreira F, Eversden S, O'Neill MJ, Wolak J, and Ursu D. A high- throughput model for investigating neuronal function and synaptic transmission in cultured neuronal networks. Sci Rep, 2017. 7(1):14498. PMID: 29101377. PMCID: PMC5670206.</li>
+<li id="10">Miller RE, Kim YS, Tran PB, Ishihara S, Dong X, Miller RJ, and Malfait AM. Visualization of peripheral neuron sensitization in a surgical mouse model of osteoarthritis by in vivo calcium imaging. Arthritis Rheumatol, 2018. 70(1):88-97. PMID: 28992367. PMCID: PMC5745281.</li>
+<li id="11">Chisholm KI, Khovanov N, Lopes DM, La Russa F, and McMahon SB. Large scale in vivo recording of sensory neuron activity with GCaMP6. eNeuro, 2018. 5(1). PMID: 29662940. PMCID: PMC5898788.</li>
+<li id="12">Wang F, Belanger E, Cote SL, Desrosiers P, Prescott SA, Cote DC, and De Koninck Y. Sensory afferents use different coding strategies for heat and cold. Cell Rep, 2018. 23(7):2001-2013. PMID: 29768200. PMCID: Unavailable.</li>
+<li id="13">Jarvik JG, Hollingworth W, Martin B, Emerson SS, Gray DT, Overman S, Robinson D, Staiger T, Wessbecher F, and Sullivan SD. Rapid magnetic resonance imaging vs radiographs for patients with low back pain: a randomized controlled trial. JAMA, 2003. 289(21):2810-2818. PMID: 12783911. PMCID: Unavailable.</li>
+<li id="14">Johnson WE, Evans H, Menage J, Eisenstein SM, El Haj A, and Roberts S. Immunohistochemical detection of Schwann cells in innervated and vascularized human intervertebral discs. Spine, 2001. 26(23):2550-2557. PMID: 11725235. PMCID: Unavailable.</li>
+<li id="15">Freemont AJ, Peacock TE, Goupille P, Hoyland JA, O'Brien J, and Jayson MIV. Nerve ingrowth into diseased intervertebral disc in chronic back pain. The Lancet, 1997. 350:178-181. PMID: 925018. PMCID: Unavailable.</li>
+<li id="16">Freemont A, Watkins A, Le Maitre C, Baird P, Jeziorska M, Knight M, Ross E, O'Brien J, and Hoyland J. Nerve growth factor expression and innervation of the painful intervertebral disc. J Pathology, 2002. 197(3):286-292. PMID: 12115873. PMCID: Unavailable.</li>
+<li id="17">Krock E, Rosenzweig DH, Chabot-Dore AJ, Jarzem P, Weber MH, Ouellet JA, Stone LS, and Haglund L. Painful, degenerating intervertebral discs up-regulate neurite sprouting and CGRP through nociceptive factors. J Cell Mol Med, 2014. 18(6):1213-1225. PMID: 24650225. PMCID: PMC4508160.</li>
+<li id="18">Purmessur D, Freemont AJ, and Hoyland JA. Expression and regulation of neurotrophins in the nondegenerate and degenerate human intervertebral disc. Arthritis Res Ther, 2008. 10(4):R99. PMID: 18727839. PMCID: PMC2575613.</li>
+<li id="19">Gronblad M, Virri J, Tolonen J, Seitsalo S, Kaapa E, Kankare J, Myllynen P, and Karaharju EO. A controlled immunohistochemical study of inflammatory cells in disc herniation tissue. Spine, 1994. 19(24):2744-2751. PMID: 7899973. PMCID: Unavailable.</li>
+<li id="20">Nerlich AG, Weiler C, Zipperer J, Narozny M, and Boos N. Immunolocalization of phagocytic cells in normal and degenerated intervertebral discs. Spine, 2002. 27(22):2484-2490. PMID: 12435979. PMCID: Unavailable.</li>
+<li id="21">Freemont AJ, Jexiorska M, Hoyland JA, Rooney P, and Kumar S. Mast cells in the pathogenesis of chronic back pain: a hypothesis. J Pathology, 2002. 197:281-285. PMID: 12115872. PMCID: Unavailable.</li>
+<li id="22">Shamji MF, Setton LA, Jarvis W, So S, Chen J, Jing L, Bullock R, Isaacs RE, Brown C, and Richardson WJ. Proinflammatory cytokine expression profile in degenerated and herniated human intervertebral disc tissues. Arthritis Rheum, 2010. 62(7):1974-1982. PMID: 20222111. PMCID: PMC2917579</li>
+<li id="23">Weiler C, Nerlich AG, Bachmeier BE, and Boos N. Expression and distribution of tumor necrosis factor alpha in human lumbar intervertebral discs: a study in surgical specimen and autopsy controls. Spine, 2005. 30(1):44-53. PMID: 15626980. PMCID: Unavailable.</li>
+<li id="24">Burke JG, Watson RWG, McCormack D, Dowling FE, Walsh MG, and Fitzpatrick JM. Intervertebral discs which cause low back pain secrete high levels of proinflammatory mediators. J Bone Joint Surg, 2002. 84- B(2):196-201. PMID: 11924650. PMCID: Unavailable.</li>
+<li id="25">Kang JD, Georgescu HI, McIntyre-Larkin L, Stefanovic-Racic M, Donaldson WF, and Evans CH. Herniated lumbar intervertebral discs spontaneously product matrix metalloproteinases, nitric oxide, interleukin-6 and prostaglandin E2. Spine, 1996. 21(3):271-277. PMID: 8742201. PMCID: Unavailable.</li>
+<li id="26">Bogduk N, Tynan W, and Wilson AS. The nerve supply to the human lumbar intervertebral discs. J Anatomy, 1981. 132(1):39-56. PMID: 7275791. PMCID: PMC1233394.</li>
+<li id="27">Ohtori S, Takahashi Y, Takahashi K, Yamagata M, Chiba T, Tanaka K, Hirayama J, and Moriya H. Sensory innervation of the dorsal portion of the lumbar intervertebral disc in rats. Spine, 1999. 24(22):2295-2299. PMID: 10586451. PMCID: Unavailable.</li>
+<li id="28">Ohtori S, Inoue G, Miyagi M, and Takahashi K. Pathomechanisms of discogenic low back pain in humans and animal models. Spine J, 2015. 15(6):1347-1355. PMID: 24657737. PMCID: Unavailable.</li>
+<li id="29">Suseki K, Takahashi Y, Takahashi K, Chiba T, Tamagata M, and Moriya H. Sensory nerve fibres from the lumbar intervertebral discs pass through rami communicantes: A possible pathway for discogenic low back pain. J Bone Joint Surgery. 1998. 80-B:737-742. PMID: 9699846. PMCID: Unavailable.</li>
+<li id="30">Aoki Y, Ohtori S, Takahashi K, Ino H, Takahashi Y, Chiba T, and Moriya H. Innervation of the lumbar intervertebral disc by nerve growth factor-dependent neurons related to inflammatory pain. Spine, 2004. 29(10):1077-1081. PMID: 15131432. PMCID: Unavailable.</li>
+<li id="31">Aoki Y, Takahashi Y, Ohtori S, Moriya H, and Takahashi K. Distribution and immunocytochemical characterization of dorsal root ganglion neurons innervating the lumbar intervertebral disc in rats: a review. Life Sciences, 2004. 74(21):2627-2642. PMID: 15041445. PMCID: Unavailable.</li>
+<li id="32">Bear M, Connors B, Paradiso M. (2007). Neuroscience: Vol. 2. Exploring the Brain. Lippincott Williams and Wilkins. ISBN: 0781760038, 9780781760034. PMCID: Unavailable.</li>
+<li id="33">Miyagi M, Ishikawa T, Orita S, Eguchi Y, Kamoda H, Arai G, Suzuki M, Inoue G, Aoki Y, and Toyone T. Disk injury in rats produces persistent increases in pain-related neuropeptides in dorsal root ganglia and spinal cord glia but only transient increases in inflammatory mediators: Pathomechanism of chronic diskogenic low back pain. Spine, 2011. 36(26):2260-2266. PMID: 21228748. PMCID: Unavailable.</li>
+<li id="34">Orita S, Ohtori S, Nagata M, Horii M, Yamashita M, Yamauchi K, Inoue G, Suzuki M, Eguchi Y, Kamoda H, Arai G, Ishikawa T, Miyagi M, Ochiai N, Kishida S, Takaso M, Aoki Y, and Takahashi K. Inhibiting nerve growth factor or its receptors downregulates calcitonin gene-related peptide expression in rat lumbar dorsal root ganglia innervating injured intervertebral discs. J Orthop Res, 2010. 28(12):1614-1620. PMID: 20973063. PMCID: Unavailable.</li>
+<li id="35">Horii M, Orita S, Nagata M, Takaso M, Yamauchi K, Yamashita M, Inoue G, Eguchi Y, Ochiai N, Kishida S, Aoki Y, Ishikawa T, Arai G, Miyagi M, Kamoda H, Kuniyoshi K, Suzuki M, Nakamura J, Toyone T, Takahashi K, and Ohtori S. Direct application of the tumor necrosis factor-alpha inhibitor, etanercept, into a punctured intervertebral disc decreases calcitonin gene-related peptide expression in rat dorsal root ganglion neurons. Spine, 2011. 36(2):E80-85. PMID: 21057386</li>
+<li id="36">Orita S, Eguchi Y, Kamoda H, Arai G, Ishikawa T, Miyagi M, Inoue G, Suzuki M, Toyone T, Aoki Y, Takahashi K, and Ohtori S. Brain-derived neurotrophic factor inhibition at the punctured intervertebral disc downregulates the production of calcitonin gene-related peptide in dorsal root ganglia in rats. Spine, 2011. 36(21):1737-1743. PMID: 21540781</li>
+<li id="37">Orita S, Miyagi M, Kobori S, Gemba T, Ishikawa T, Inoue G, Toyone T, Aoki Y, Eguchi Y, Takahashi K, and Ohtori S. IkappaB kinase beta inhibitor downregulates pain-related neuropeptide production in the sensory neurons innervating injured lumbar intervertebral discs in the dorsal root ganglia of rats. Spine J, 2013. 13(3):284-288. PMID: 23462514</li>
+<li id="38">Sato J, Inage K, Miyagi M, Sakuma Y, Yamauchi K, Koda M, Furuya T, Nakamura J, Suzuki M, Kubota G, Oikawa Y, Sainoh T, Fujimoto K, Shiga Y, Abe K, Kanamoto H, Inoue M, Kinoshita H, Norimoto M, Umimura T, Takahashi K, Ohtori S, and Orita S. Inhibiting vascular endothelial growth factor in injured intervertebral discs attenuates pain-related neuropeptide expression in dorsal root ganglia in rats. Asian Spine J, 2017. 11(4):556-561. PMID: 28874973. PMCID: PMC5573849.</li>
+<li id="39">Sadamasu A, Sakuma Y, Suzuki M, Orita S, Yamauchi K, Inoue G, Aoki Y, Ishikawa T, Miyagi M, Kamoda H, Kubota G, Oikawa Y, Inage K, Sainoh T, Sato J, Nakamura J, Toyone T, Takahashi K, and Ohtori S. Upregulation of NaV1.7 in dorsal root ganglia after intervertebral disc injury in rats. Spine, 2014. 39(7):E421-426. PMID: 24480965. PMCID: Unavailable.</li>
+<li id="40">Vincent K, Mohanty S, Pinelli R, Bonavita R, Pricop P, Albert TJ, and Dahia CL. Aging of mouse intervertebral disc and association with back pain. Bone, 2019. 123:246-259. PMID: 30936040. PMCID: PMC6549718.</li>
+<li id="41">Aoki Y, An HS, Takahashi K, Miyamoto K, Lenz ME, Moriya H, and Masuda K. Axonal growth potential of lumbar dorsal root ganglion neurons in an organ culture system: response of nerve growth factor-sensitive neurons to neuronal injury and an inflammatory cytokine. Spine, 2007. 32(8):857-863. PMID: 17426629. PMCID: Unavailable.</li>
+<li id="42">Stover JD, Farhang N, Berrett KC, Gertz J, Lawrence B, and Bowles RD. CRISPR epigenome editing of AKAP150 in DRG neurons abolishes degenerative IVD-induced neuronal activation. Mol Ther, 2017. 25(9):2014-2027. PMID: 28676344. PMCID: PMC5589089.</li>
+<li id="43">Stover JD, Farhang N, Lawrence B, and Bowles RD. Multiplex epigenome editing of dorsal root ganglion neuron receptors abolishes redundant interleukin-6, tumor necrosis factor alpha, and interleukin-1 beta signaling by the degenerative intervertebral disc. Hum Gene Ther, 2019. Sep; 30(9):1147-1160. PMID: 31056946. PMCID: PMC6761584.</li>
+<li id="44">Allen KD, Griffin TM, Rodriguiz RM, Wetsel WC, Kraus VB, Huebner JL, Boyd LM, and Setton LA. Decreased physical function and increased pain sensitivity in mice deficient for type IX collagen. Arthritis Rheum, 2009. 60(9):2684-2693. PMID: 19714629. PMCID: PMC2760314.</li>
+<li id="45">Shamji MF, Allen KD, So S, Jing L, Adams SB, Jr., Schuh R, Huebner J, Kraus VB, Friedman AH, Setton LA, and Richardson WJ. Gait abnormalities and inflammatory cytokines in an autologous nucleus pulposus model of radiculopathy. Spine, 2009. 34(7):648-654. PMID: 19333095. PMCID: PMC2712587.</li>
+<li id="46">Allen KD, Shamji MF, Mata BA, Gabr MA, Sinclair SM, Schmitt DO, Richardson WJ, and Setton LA. Kinematic and dynamic gait compensations in a rat model of lumbar radiculopathy and the effects of tumor necrosis factor-alpha antagonism. Arthritis Res Ther, 2011. 13(4):R137. PMID: 21871102 PMCID: PMC3239380.</li>
+<li id="47">Kim J-S, Kroin JS, Li X, An HS, Buvanendran A, Yan D, Tuman KJ, Van Wijnen AJ, Chen D, and Im H-J. The rat intervertebral disk degeneration pain model: relationships between biological and structural alterations and pain. Arthritis Res Ther, 2011. 13(5):1-11. PMID: 21996269. PMCID: PMC3308099.</li>
+<li id="48">Lai A, Moon A, Purmessur D, Skovrlj B, Winkelstein BA, Cho SK, Hecht AC, and Iatridis JC. Assessment of functional and behavioral changes sensitive to painful disc degeneration. J Orthop Res, 2015. 33(5):755- 764. PMID: 25731955. PMCID: PMC4406864.</li>
+<li id="49">Miyagi M, Millecamps M, Danco AT, Ohtori S, Takahashi K, and Stone LS. ISSLS Prize winner: Increased innervation and sensory nervous system plasticity in a mouse model of low back pain due to intervertebral disc degeneration. Spine, 2014. 39(17):1345-1354. PMID: 24718079. PMCID: Unavailable.</li>
+<li id="50">Millecamps M, Tajerian M, Naso L, Sage EH, and Stone LS. Lumbar intervertebral disc degeneration associated with axial and radiating low back pain in ageing SPARC-null mice. Pain, 2012. 153(6):1167-1179. PMID: 22414871. PMCID: Unavailable.</li>
+<li id="51">Millecamps M and Stone LS. Delayed onset of persistent discogenic axial and radiating pain after a single- level lumbar intervertebral disc injury in mice. Pain, 2018. 159(9):1843-1855. PMID: 29794612. PMCID: Unavailable.</li>
+<li id="52">Ulrich JA, Liebenberg EC, Thuillier DU, and Lotz JC. ISSLS prize winner: repeated disc injury causes persistent inflammation. Spine, 2007. 32(25):2812-2819. PMID: 18246002. PMCID: Unavailable.</li>
+<li id="53">Lin KH, Wu Q, Leib DJ, and Tang SY. A novel technique for the contrast-enhanced microCT imaging of murine intervertebral discs. J Mech Behav Biomed Mater, 2016. 63:66-74. PMID: 27341292. PMCID: PMC4983496.</li>
+<li id="54">Lin KH and Tang SY. The Quantitative Structural and Compositional Analyses of Degenerating Intervertebral Discs Using Magnetic Resonance Imaging and Contrast-Enhanced Micro-Computed Tomography. Ann Biomed Eng, 2017. 45(11):2626-2634. PMID: 28744842. PMCID: PMC5665707.</li>
+<li id="55">Hou B, Zhang D, Zhao S, Wei M, Yang Z, Wang S, Wang J, Zhang X, Liu B, Fan L, Li Y, Qiu Z, Zhang C, and Jiang T. Scalable and DiI-compatible optical clearance of the mammalian brain. Front Neuroanat, 2015. 9:19. PMID: 25759641. PMCID: PMC4338786.</li>
+<li id="56">Richardson DS and Lichtman JW. Clarifying tissue clearing. Cell, 2015. 162(2):246-257. PMID: 26186186. PMCID: PMC4537058.</li>
+<li id="57">Greenbaum A, Chan KY, Dobreva T, Brown D, Balani DH, Boyce R, Kronenberg HM, McBride HJ, and Gradinaru V. Bone CLARITY: Clearing, imaging, and computational analysis of osteoprogenitors within intact bone marrow. Sci Transl Med, 2017. 9(387). PMID: 28446689. PMCID: Unavailable.</li>
+<li id="58">Berke IM, Miola JP, David MA, Smith MK, and Price C. Seeing through musculoskeletal tissues: improving in situ imaging of bone and the lacunar canalicular system through optical clearing. PLoS One, 2016. 11(3):e0150268. PMID: 26930293. PMCID: PMC4773178.</li>
+<li id="59">Huang D, Li S, Dhaka A, Story GM, and Cao YQ. Expression of the transient receptor potential channels TRPV1, TRPA1 and TRPM8 in mouse trigeminal primary afferent neurons innervating the dura. Mol Pain, 2012. 8:66. PMID: 22971321. PMCID: PMC3489865.</li>
+<li id="60">Walk RE and Tang SY. In vivo contrast‐enhanced microCT for the monitoring of mouse thoracic, lumbar, and coccygeal intervertebral discs. J Orthop Res Spine, 2019. 2(2):e1058. PMID: 31463468. PMCID: PMC6686789.</li>
+<li id="61">Dage JL, Colvin EM, Fouillet A, Langron E, Roell WC, Li J, Mathur SX, Mogg AJ, Schmitt MG, Felder CC, Merchant KM, Isaac J, Broad LM, Sher E, and Ursu D. Pharmacological characterisation of ligand- and voltage-gated ion channels expressed in human iPSC-derived forebrain neurons. Psychopharmacology (Berl), 2014. 231(6):1105-1124. PMID: 24429870. PMCID: Unavailable.</li>
+<li id="62">Werth JL and Thayer SA. Mitochondria buffer physiological calcium loads in cultured rat dorsal root ganglion neurons. J Neurosci, 1994. 14(1):348-356. PMID: 8283242. PMCID: Unavailable.</li>
+<li id="63">Abraham AC, Liu JW, and Tang SY. Longitudinal changes in the structure and inflammatory response of the intervertebral disc due to stab injury in a murine organ culture model. J Orthop Res, 2016. 34(8):1431- 1438. PMID: 27273204. PMCID: PMC5324835</li>
+<li id="64">Liu JW, Lin KH, Weber C, Bhalla S, Kelso S, Wang K, and Tang SY. An in vitro organ culture model of the murine intervertebral disc. J Vis Exp, 2017(122). PMID: 28448052. PMCID: PMC5495460.</li>
+<li id="65">Quinn KP, Dong L, Golder FJ, and Winkelstein BA. Neuronal hyperexcitability in the dorsal horn after painful facet joint injury. Pain, 2010. 151(2):414-421. PMID: 20739124. PMCID: PMC2955815.</li>
+<li id="66">Crosby ND and Winkelstein BA. Spinal astrocytic thrombospondin-4 induced by excitatory neuronal signaling mediates pain after facet capsule injury. Ann Biomed Eng, 2016. 44(11):3215-3224.</li>
+<li id="67">Bumstead JR, Park JJ, Rosen IA, Kraft AW, Wright PW, Reisman MD, Cote DC, and Culver JP. Designing a large field-of-view two-photon microscope using optical invariant analysis. Neurophotonics, 2018. 5(2):025001. PMID: 29487876. PMCID: PMC5818100.</li>
+<li id="68">Farrar MJ, Bernstein IM, Schlafer DH, Cleland TA, Fetcho JR, and Schaffer CB. Chronic in vivo imaging in the mouse spinal cord using an implanted chamber. Nat Methods, 2012. 9(3):297-302. PMID: 22266542 PMCID: PMC3429123.</li>
+<li id="69">Kim YS, Anderson M, Park K, Zheng Q, Agarwal A, Gong C, Saijilafu, Young L, He S, LaVinka PC, Zhou F, Bergles D, Hanani M, Guan Y, Spray DC, and Dong X. Coupled activation of primary sensory neurons contributes to chronic pain. Neuron, 2016. 91(5):1085-1096. PMID: 27568517. PMCID: PMC5017920</li>
+<li id="70">Mostany R and Portera-Cailliau C. A method for 2-photon imaging of blood flow in the neocortex through a cranial window. J Vis Exp, 2008(12). PMID: 19066563. PMCID: PMC2582841.</li>
+<li id="71">Mostany R and Portera-Cailliau C. A craniotomy surgery procedure for chronic brain imaging. J Vis Exp, 2008(12). PMID: 19066562. PMCID: PMC2582844.</li>
+<li id="72">Laffray S, Pages S, Dufour H, De Koninck P, De Koninck Y, and Cote D. Adaptive movement compensation for in vivo imaging of fast cellular dynamics within a moving tissue. Plos One, 2011. 6(5). PMID: 21629702. PMCID: PMC3101223.</li>
+<li id="73">Giovannucci A, Friedrich J, Gunn P, Kalfon J, Brown BL, Koay SA, Taxidis J, Najafi F, Gauthier JL, Zhou P, Khakh BS, Tank DW, Chklovskii DB, and Pnevmatikakis EA. CaImAn: an open source tool for scalable calcium imaging data analysis. Elife, 2019. 8. PMID: 30652683. PMCID: PMC6342523.</li>
+</o id=""l>
+</div>
+
+{% endblock %}

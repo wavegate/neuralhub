@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+}
+h4 {
+font-size: 24px;
+font-weight: 700;
+}
+p {
+font-size: 20px;
+line-height: 1.6;
+}
+.image {
+padding: 10px 0 35px 0;
+font-size: 16px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.references li {
+    scroll-margin-top: 100px;
+}
+</style>
+<div class="row">
+
+<h3>Thy1-GCaMP6s Mice</h3>
+
+<p>All Setton lab mice are currently housed in Whitaker vivarium. We have 12 cages in McDonnell Basement, but those should be sacrificed soon.</p>
+
+<p>Colony management database is on softmouse.net. Username: settonlab, Password: Loriiscool1</p>
+
+<p>We currently have 4 older ~71wk old Thy1-GCaMP6s positive mice in cages 5.6, 5.7, and 2.43.</p>
+
+<p>We also have 10 younger mice (maximum of 26 weeks) that we received from the Culver lab. There are 3 males and 7 females. They are supposedly heterozygous but I'm not sure.</p>
+
+<p>We are currently breeding 3 female mice with C57BL/6J older males, and the other 4 female mice with their male siblings. This is a total of 4 mating cages. The two younger females (15weeks) gave birth 8/11/21, which means they should be weaned on 9/01/21. I will place them back with the male </p>
+
+<p><a href="{{ url_for('static', filename='pdf/breeding_strategies_manual.pdf') }}">Breeding Strategies Manual</a></p>
+
+<p>Lab mice become sexually mature between 5-8 weeks of age and are reproductive for about 7-8 months. Breeders are typically replaced around age of 6 months. Generation time is about 12 weeks in total (3 weeks of gestation, 3-4 weeks suckling, and 5-6 weeks until sexual maturity). Litter sizes range vary from 3 to 12 or more. Most mice are weaned at 21 days of age.</p>
+
+<p>According to vivarium supervisor Matt, we should wait about one month before splitting up mice and trying to pair them with other mice.</p>
+
+<p>We currently use 1 male:2 female breeding. When the females are identified as pregnant, we remove the male mouse and move the females to a large cage, to avoid crowding when the litters are born. This means two females will suckle their litters together. This can only be done if we don't have to distinguish between the two litters.</p>
+
+<p>Can we come up with a way to detect pregnancy? Pregnancy may be verified by palpation on the eleventh day of gestation (day zero is the day that the plug is found).</p>
+
+<p>Most strains produce more progeny per cage if mated as trios because all adult cage mates generally help care for the young. Strains that have small litters or are poor parents may be bred in harems. All members of the harem should be siblings. Pregnant females should be separated and housed individually. Because a male may kill the pups, do not return him to a cage with a female and her pups until she has weaned them.</p>
+
+<p>C57BL/6J mice tend to have more pups with hydrocephaly.</p>
+
+<p>Basic principles for managing small mouse colonies include maintaining a minimum of six breeding pairs representing different generations. Maintain two generations. Try to keep the age range of breeders between 2 and 8 months old. Closely monitor breeding performance. </p>
+
+
+</div>
+{% endblock %}

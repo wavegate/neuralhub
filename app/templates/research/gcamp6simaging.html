@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+}
+h4 {
+font-size: 24px;
+font-weight: 700;
+}
+p {
+font-size: 20px;
+line-height: 1.6;
+}
+.image {
+padding: 10px 0 35px 0;
+font-size: 16px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.references li {
+    scroll-margin-top: 100px;
+}
+</style>
+<div class="row">
+
+<h3>Calcium imaging</h3>
+
+<p>After dissecting out the DRG, it is placed in aCSF.</p>
+
+<p>It is brought over to Nikon Eclipse Ti2 in the Vahey lab (<a href="https://calendar.google.com/calendar/u/0/embed?src=2hr20jhh4iqr4g20dbh6s3lk10@group.calendar.google.com&ctz=America/Chicago">availability</a> and <a href="https://go.oncehub.com/vlabnikon">sign up</a>) To use the microscope, talk to Dr. Vahey, complete the hands-on training (Radhika), and make sure to remove files from the Vahey computer onto your own device.</p>
+
+<p>To debug the electrical field stimulation and calcium imaging, I have ordered Calbryte 520 AM (<a href="https://www.aatbio.com/resources/protocols/protocol-for-loading-calbryte-520-am-into-live-cells">protocol</a>), a new fluorescent calcium indicator, and will test it with the WI26 human fibroblast immortal cell line.</p>
+
+<p>I need to prepare an HHBS (Hank's Buffer with Hepes) buffer. Link to <a href="https://www.aatbio.com/resources/buffer-preparations-and-recipes/hhbs-hanks-buffer-with-hepes">recipe</a>.</p>
+
+<p>I need to prepare 10% Pluronic F-127. To do this, dissolve 1g of Pluronic F-127 in 10ml of distilled water to make a 10% (w/v) stock solution. Heat it for about 30 minutes ranging from 40 to 50 C. Store at room temperature.</p>
+
+<p>Mix 45.83 uL of anhydrous DMSO with 50 ug of Calbryte 520 AM to make a 1 mM stock solution.</p>
+
+<p>Make a 2X working solution in HHBS with 10 uM Calbryte and 0.08% Pluronic F-127 by mixing 32 ul of Calbryte, 26 ul of 10% Pluronic, then adding buffer until volume is 3.2 ml.</p>
+
+<p>Add 100 ul of the working solution to 100ul of culture medium. Incubate coverslips in the dye for about 60 minutes and then let sit for another 15 minutes at room temperature. Then remove the coverslip and put in 200ul of culture medium. Then you can image.</p>
+
+<p>For most cell lines, Calbryte is recommended to be 2 to 5 uM. Well concentration of Pluronic F-127 is 0.04%.</p>
+
+<p>Store the Calbryte 520 AM stock solution in tightly sealed vials at -20, dessicated and protected from light.</p>
+
+<p>For the WI26 cells, I will be passaging them 8/12/21, so I will set up a new 6-well plate. To this plate I will place 6 autoclaved coverslips. I will thaw 804G in the warm water bath, then apply enough to cover each coverslip. I will leave it on for 10 minutes, then remove it. I will then put 2ml? of phenol-red free DMEM + 10% FBS + 1% P/S into each well. And then I will put cells from the passage onto each coverslip.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+}
+h4 {
+font-size: 24px;
+font-weight: 700;
+}
+p {
+font-size: 20px;
+line-height: 1.6;
+}
+.image {
+padding: 10px 0 35px 0;
+font-size: 16px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.references li {
+    scroll-margin-top: 100px;
+}
+</style>
+<div class="row">
+
+<h3>Neuron Isolation</h3>
+
+<p>We are following <a href="https://www.mdpi.com/2227-9059/8/3/49/htm">this protocol</a> for the DRG organ culture and <a href="https://www.jove.com/t/56757/adult-mouse-drg-explant-dissociated-cell-models-to-investigate">this protocol</a> for the DRG neuron isolation.</p>
+<p>Clean and trim off excess fibers and connective tissue attached to DRGs with blade.</p>
+<p>Put all DRGs in 1.5 ml sterile tube with 1.2 ml of F12 media containing 1.25 mg/ml collagenase IV and incubate for 45 min. Replace with fresh media/collagenase and incubate for another 45 min.</p>
+<p>Add 2 ml of F12 media containing 0.025% trypsin and incubate for 30 min.</p>
+<p>Incubate with 2 ml of F12 media containing 33% FBS for 15 min.</p>
+<p>Wash explants 3 times with 2 ml of F12 media and mechanically dissociate. We can use needles of varying sizes.</p>
+<p>Filter the dissociated cells through a 0.22 um filter. Centrifuge the filtered cell lysate at (2,500 x g) for 2 min.</p>
+<p>Remove supernatant and resuspend cell pellet in 500 uL of neurobasal media with B27 supplement, P/S, GlutaMAX, and NGF (5 ug/ml).</p>
+<p>Plate cells onto laminin-coated cover slides (50 ug/ml).</p>
+</div>
+{% endblock %}

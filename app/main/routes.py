@@ -99,7 +99,10 @@ def post(id):
 @bp.route("/research/<chapter>")
 @login_required
 def research(chapter):
-	return render_template('research/{chapter}.html'.format(chapter=chapter))
+	if current_user.admin:
+		return render_template('research/{chapter}.html'.format(chapter=chapter))
+	else:
+		return redirect(request.referrer or url_for('main.index'))
 
 @bp.route("/task/<int:id>", methods = ['GET'])
 @login_required
