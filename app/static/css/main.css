@@ -1,4 +1,4 @@
-.main img {
+.main img, .main video {
 	display: block;
 	margin: 25px auto 25px auto;
 }

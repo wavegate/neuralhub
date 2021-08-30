@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css" />
+<style>
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+}
+h4 {
+font-size: 24px;
+font-weight: 700;
+}
+p, li {
+font-size: 20px;
+line-height: 1.6;
+}
+.image {
+padding: 10px 0 35px 0;
+font-size: 16px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.references li {
+    scroll-margin-top: 100px;
+}
+#list div {
+  width: 500px;
+  margin: 10px
+}
+
+#list ol {
+  color: #ccc;
+  list-style-type: none;
+}
+
+#list ol li {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#list li p {
+  padding-left: 60px;
+  color: #555;
+}
+
+#list span {
+  position: absolute;
+}
+</style>
+<div class="row">
+
+<h3>Aims 1 & 2: Molecular changes in the IVD and DRG after lumbar disc puncture (LDP), pain-related behavior, and ex vivo functional assessment of DRG neurons via electrical field stimulation</h3>
+<div id="calendar"></div>
+<h4>Frank's To-do List</h4>
+<div id="list">
+  <ol>
+    <li><span>1.</span><p>Breed mice.</p></li>
+    <li><span>2.</span><p>Optimize electrical field stimulation protocol.</p></li>
+    <li><span>3.</span><p>Decide on and prepare behavioral tests.</p></li>
+    <li><span>4.</span><p>Discuss surgical approach (eg. survivability).</p></li>
+    <li><span>5.</span><p>Learn to harvest IVD.</p></li>
+  </ol> 
+</div>
+<h4>Transgenic mouse model (Frank)</h4>
+<p>The Thy1-GCaMP6s/GP4.3 mouse model (Jackson Labs) will be used to allow for monitoring of the fluorescent calcium-sensitive molecule, GCaMP6s, in excitatory neurons for Aims 2 and 3. A total of 192 mice will be used in this cohort (12 per group x male/female x sham/LDP x 6/12/36/52 weeks). All mice will be housed in the Clinical Sciences Research Building (CSRB) on the WashU Medical Campus.</p>
+<h4>Surgical model to induce lumbar disc puncture (LDP) (Gupta/Tang)</h4>
+<p>At 8 weeks of age, all mice will undergo a procedure for LDP as performed previously. The procedure will be performed at the Musculoskeletal Research Center (MRC). Mice will be maintained under 1-3% isoflurane anesthesia via nose cone. First, we mark the incision site as ~ ¼” below, ¾” above the iliac wings and wash and prep appropriately. With a #11 blade, a vertebral incision is made over the abdomen vertically. Subcutaneous flaps (using tenotomy scissors) superficial to the abdominal muscle will be made, followed by gentle lifting of the abdominal musculature with forceps. This procedure facilitates closure. The peritoneal cavity is identified and the animal rotated on its right side to allow for left lateral displacement of the viscera, irrigating in saline-moistened sterile gauze. Using the blunt end of a Senn retractor, tissue overlying the retroperitoneum will be dissected under microscopic visualization and the aorta and IVC will be visualized. Gentle scraping of the aspects lateral (left) to this structure will allow for visualization of the vertebral bodies and identification of the L5-L6 IVD. In the LDP group, the most anterior aspect of the L5-6 IVD will be punctured 4x times with a 33G needle to a depth of 0.2mm; in the sham group, no instrument directly touches any IVD. When needed, we deliver 2 ul solution of DiI (2% in 10% DMSO) to the punctured IVD via the 33G needle and close with cyanoacrylate, allowing 5 min for drying before closing. The abdominal muscles will be closed with 3-0 vicryl, then skin with 4-0 nylon suture. Planar X-rays of the whole mouse will be obtained via digital X-ray (Faxitron Multifocus) immediately after surgery to confirm location and degree of injury.</p>
+<h4>Behavioral testing (Frank)</h4>
+<p>All behavioral assessments will be performed in the MRC. Animals will be acclimated to investigator handling over 7 days and then subsequently acclimated to behavioral testing over 4 consecutive days prior to behavioral assessments. Pre-operative baseline behavior assay will be conducted the week leading up to the surgery, and then performed at each experimental timepoint (6/12/36/52 weeks) post-operatively. Behavioral assays will include open field, Rotarod, grip strength, hindpaw mechanical/heat/cold sensitivity. For the Open Field, mice movement will be tracked within a black acrylic arena for 30 minutes during the dark portion of a 12 hour light-dark cycle without the presence of investigators or other personnel and with illumination with red light. Movement will be recorded (Sony Handycam) and analyzed (EthoVision) to determine % time spent traveling. Locomotor ability will be measured with an accelerating Rotarod with a mouse adapter (rod diameter, 3.2 cm). The task will have a speed ramp from 0 to 30 rotations per minute over 60 seconds, followed by an additional 240 seconds at maximal speed. The time each animal remains on the rotating rod before falling is recorded. A decrease in latency to fall is suggestive of decreased motor ability [<a href="#1">1</a>]. The Grip Strength assay involves the mice gripping a metal bar attached to a force meter with their forepaws. The mice are slowly pulled back by the tail. The peak force in grams at the point of release is recorded twice at a 10-minute interval. A decrease in grip force is interpreted as a measure of hypersensitivity to axial stretching. Mechanical sensitivity will be assessed with von Frey filaments on the plantar surface of hind paws ranging from 0.008g to 4g. Filaments will be applied with increasing force to the plantar surface of the hindpaw for 4 seconds or until paw withdrawal. Results will be expressed as 50% threshold to withdraw in grams using up-and-down method. We expect mechanical sensitivity to be normal. Cold sensitivity will be measured using the acetone drop test, where the total duration of acetone-evoked behaviors (flinching, licking, or biting) will be measured in seconds for 1 min after a drop of acetone (25 ul) is applied to the plantar surface of the hindpaw using a blunt needle connected to a 1ml syringe. Increased behavioral response suggests development of cold hypersensitivity. Heat sensitivity will be assessed using the Hargreaves test, where a radiant heat source will be focused on the plantar surface of the hind paw and the time taken to withdraw is recorded [<a href="#2">2</a>].</p>
+<h4>Contrast-enhanced microCT (CEmCT) of the IVD (Tang/Remy)</h4>
+<p>After behavioral testing at each timepoint, structural changes of the IVD will be monitored via CEmCT. Mice will be anesthetized with isoflurane via nose cone (1-3%). Ioversol, a biocompatible, hdyrophilic contrast agent will be delivered to each animal through tail-vein injection at 8 ml/kg of Ioversol (Optiray 350). We will then allow for 30 min of distribution followed by live microCT scanning under isoflurane anesthesia (VivaCT 40, Scanco). We will localize the scans at the L5-L6 IVDs with 10 micrometer resolution (5 kVp, 177 uA, 300 ms integration) and examine voxel attenuation before and after Ioversol injection. Following imaging, animals will be allowed to recover promptly and will be returned to their cages after placement on a heating pad.</p>
+<h4>Sacrifice and tissue harvest (Frank)</h4>
+<p>Finally, at each timepoint, mice will be sacrificed via carbion dioxide inhalation and intact DRGs (bilateral L1-L4) and lumbar IVDs (L5-L6 and two adjacent lumbar levels L3-L4 and L4-L5) will be harvested via a ventral approach involving removal of the vertebral bodies exposing the ventral side of the vertebral canal allowing access to IVDs and DRGs [<a href="#3">3</a>].</p>
+<h4>Electrical field stimulation (Frank)</h4>
+<p>Isolated intact lumbar DRGs will be placed in the center of a recording chamber, secured by a nylon mesh, and perfused with artificial cerebrospinal fluid (aCSF) at 2 ml/min. Two electrodes connected to a pulse generator (Grass SD9) will be inserted at opposite ends of the chamber and DRGs will be stimulated with bipolar square pulses (1ms, 10Hz, 19s rest) at voltage amplitudes from 5-100V. GCaMP66s fluorescence change over time will be imaged at 488/510 nm with a spinning disc confocal microscope (Nikon Eclipse Ti2). A histogram of DRG neuron threshold voltages will be obtained. Dependence of action potential generation upon Nav1.x channels will be assessed using a pan-Nav channel blocker (tetrodotoxin, TTX 50nM). A dose response curve will be generated for varying concentrations of TTX 0.5-100 nm.</p>
+<h4>IVD organ culture and characterization of conditioned media (Tang/Remy)</h4>
+<p>Isolated IVD organs will be cultured for up to 21-days post-sacrifice in 24-well plates, with each well containing 2 ml of 1:1 DMEM:F12 (with 20% FBS and 1% pen-strep). Media will be collected at 48 hours and frozen at -80 C until analyzed via multiplex assay for simultaneous quantification of 13 mouse cytokines.</p>
+<h4>Immunohistochemistry of DRGs and IVDs (Liufang)</h4>
+<p>Subsequent to EFS experiments, DRGs will be immunolabeled for presence of CGRP, PGP9.5, select voltage-gated sodium channels, TRPA1 and TRPV1. The % of neurons and MFI (mean fluorescence intensity) for each protein target will be quantified for each level (L1, L2, L3 & L4) to test for spatial and temporal pattern of neuronal remodeling after LDP. The % of DiI+ neurons positive will be quantified. Subsequent to IVD organ culture, in 4 of the 12 mice in each group, intact IVDs will undergo tissue "clearing" to visualize morphology by SHG, and morphometric measures of collagen orientation will be quantified. In addition, thick (~ 500 um) IVD blocks from remaining 8 of 12 mice per group will be immunolabeled with PGP9.5 to visualize nerve fiber density, tortuosity, connectivity, and overall length of immunolabeled structure.</p>
+
+<div class="references">
+<h4>References</h4>
+<ol>
+<li id="1">Millecamps, M., & Stone, L. S. (2018). Delayed onset of persistent discogenic axial and radiating pain after a single-level lumbar intervertebral disc injury in mice. In Pain (Vol. 159, Issue 9). https://doi.org/10.1097/j.pain.0000000000001284</li>
+<li id="2">Deuis, J. R., Dvorakova, L. S., & Vetter, I. (2017). Methods used to evaluate pain behaviors in rodents. Frontiers in Molecular Neuroscience, 10(September), 1–17. https://doi.org/10.3389/fnmol.2017.00284</li>
+<li id="3">Fornaro, M., Sharthiya, H., Tiwari, V. Adult Mouse DRG Explant and Dissociated Cell Models to Investigate Neuroplasticity and Responses to Environmental Insults Including Viral Infection. <em>J. Vis. Exp.</em> (133), e56757, doi:10.3791/56757 (2018).</li>
+</ol>
+
+<script>
+    new Calendar('#calendar', {
+        mouseOnDay: function(e) {
+            if(e.events.length > 0) {
+                var content = '';
+                
+                for(var i in e.events) {
+                    content += '<div class="event-tooltip-content">'
+                                    + '<div class="event-name" style="color:' + e.events[i].color + '">' + e.events[i].name + '</div>'
+                                    + '<div class="event-location">' + e.events[i].location + '</div>'
+                                + '</div>';
+                }
+            
+                $(e.element).popover({ 
+                    trigger: 'manual',
+                    container: 'body',
+                    html:true,
+                    content: content
+                });
+                
+                $(e.element).popover('show');
+            }
+        },
+        mouseOutDay: function(e) {
+            if(e.events.length > 0) {
+                $(e.element).popover('hide');
+            }
+        },
+        dataSource: [
+            {
+                id: 0,
+                name: 'Today',
+                location: '-',
+                startDate: new Date(),
+                endDate: new Date()
+            },
+            {
+                id: 0,
+                name: 'Mice - Birth',
+                location: 'Whitaker (Frank)',
+                startDate: new Date(2021, 7, 11),
+                endDate: new Date(2021, 7, 11)
+            },
+            {
+                id: 1,
+                name: 'Pre-operative Behavior Acclimation and Testing',
+                location: 'MRC (Frank)',
+                startDate: new Date(2021, 8, 17),
+                endDate: new Date(2021, 9, 4)
+            },
+            {
+                id: 2,
+                name: 'Surgery',
+                location: 'MRC (Gupta/Tang)',
+                startDate: new Date(2021, 9, 5),
+                endDate: new Date(2021, 9, 5)
+            },
+            {
+                id: 3,
+                name: 'Post-operative Behavior (6 weeks)',
+                location: 'MRC (Frank)',
+                startDate: new Date(2021, 10, 17),
+                endDate: new Date(2021, 10, 19)
+            },
+            {
+                id: 4,
+                name: 'CEmCT (6 weeks)',
+                location: 'MRC (Tang/Remy)',
+                startDate: new Date(2021, 10, 22),
+                endDate: new Date(2021, 10, 22)
+            },
+            {
+                id: 5,
+                name: 'Sacrifice and IVD+DRG tissue harvest (6 weeks)',
+                location: 'MRC (Frank)',
+                startDate: new Date(2021, 10, 25),
+                endDate: new Date(2021, 10, 25)
+            },
+            {
+                id: 6,
+                name: 'EFS (6 weeks)',
+                location: 'Whitaker (Frank)',
+                startDate: new Date(2021, 10, 25),
+                endDate: new Date(2021, 10, 25)
+            },
+            {
+                id: 7,
+                name: 'DRG Immunolabeling (6 weeks)',
+                location: 'Whitaker (Liufang)',
+                startDate: new Date(2021, 10, 29),
+                endDate: new Date(2021, 10, 29)
+            },
+            {
+                id: 8,
+                name: 'IVD organ culture (6 weeks)',
+                location: 'MRC (Tang/Remy)',
+                startDate: new Date(2021, 10, 26),
+                endDate: new Date(2021, 11, 3)
+            },
+            {
+                id: 9,
+                name: 'IVD immunohistochemistry (6 weeks)',
+                location: 'Whitaker (Liufang)',
+                startDate: new Date(2021, 11, 3),
+                endDate: new Date(2021, 11, 3)
+            },]
+    });
+</script>
+{% endblock %}

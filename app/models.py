@@ -23,6 +23,7 @@ class User(UserMixin, db.Model):
 	tasks = db.relationship('Task', backref='author', lazy='dynamic')
 	mice = db.relationship('Mouse', backref='owner', lazy='dynamic')
 	cages = db.relationship('Cage', backref='owner', lazy='dynamic')
+	cohorts = db.relationship('Cohort', backref='owner', lazy='dynamic')
 
 	def __repr__(self):
 		return '<User {}>'.format(self.username)
@@ -98,6 +99,7 @@ class Mouse(db.Model):
 	cage = db.Column(db.Integer, db.ForeignKey('cage.id'))
 	cagetag = db.Column(db.String(500))
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+	cohort_id = db.Column(db.Integer, db.ForeignKey('cohort.id'))
 	notes = db.Column(db.Text)
 
 	def age(self):
@@ -111,3 +113,25 @@ class Cage(db.Model):
 	timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 	mouseline = db.Column(db.String(500))
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+class Experiment(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	title = db.Column(db.Text)
+	timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+	cohorts = db.relationship('Cohort', backref='experiment', lazy='dynamic')
+
+class Cohort(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	mice = db.relationship('Mouse', backref='cohort', lazy='dynamic')
+	timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+	experiment_id = db.Column(db.Integer, db.ForeignKey('experiment.id'))
+	tasks = db.relationship('Experiment_Task', backref='cohort', lazy='dynamic')
+
+class Experiment_Task(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	taskname = db.Column(db.String(500))
+	date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+	notes = db.Column(db.Text)
+	cohort_id = db.Column(db.Integer, db.ForeignKey('cohort.id'))
