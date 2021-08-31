@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css" />
+<style>
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+}
+h4 {
+font-size: 24px;
+font-weight: 700;
+}
+p, li {
+font-size: 20px;
+line-height: 1.6;
+}
+.image {
+padding: 10px 0 35px 0;
+font-size: 16px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.references li {
+    scroll-margin-top: 100px;
+}
+#list div {
+  width: 500px;
+  margin: 10px
+}
+
+#list ol {
+  color: #ccc;
+  list-style-type: none;
+}
+
+#list ol li {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#list li p {
+  padding-left: 60px;
+  color: #555;
+}
+
+#list span {
+  position: absolute;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+</style>
+<div class="row">
+
+<h3>Frank's Work Update 9/1/21</h3>
+<h4>Pain in intervertebral disc degeneration</h4>
+<img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC165040/bin/ar629-1.jpg">
+<p>The intervertebral discs lie between the vertebral bodies. They are the main joints of the spinal column, and their major role is mechanical, as they constantly transmit loads from body weight and muscle activity through the spinal column.</p>
+<img src="https://www.physio-pedia.com/images/thumb/2/27/Sinuvertebral_nerve2.png/619px-Sinuvertebral_nerve2.png">
+<p>The healthy adult disc has few blood vessels, but it has some nerves, mainly restricted to the outer lamellae. These nerves are branches of the sinuvertebral nerve or derived from the ventral rami or grey rami communicantes. However, the L5-L6 disc was found to be innervated by the L2 DRG neurons in rats.</p>
+<img src="https://media-us.amboss.com/media/thumbs/big_612789d59b6ae.jpg">
+<p>Classically, the onset of low back pain caused by degenerative disc disease is seen as caused by mechanical disturbance of the nerve by disc protrusion.</p>
+<img src="http://www.promotiongb.com/uploads/1/2/0/2/120248121/herniated-disc.jpg?250" width="50%">
+<p>However, it is now clear that herniation-induced pressure on the nerve root cannot alone be the cause of pain. Over 70% of normal patients without back pain will have disc prolapses. Conversely, many patients with chronic back pain do not show compression of neural structures. These observations led to a re-examination of pain pathways and the distribution of nerve endings.</p>
+<img src="{{ url_for('static',filename='img/drg/nerve_ingrowth.png') }}">
+<p>It was thus found that degenerated discs have increased vascular and neural ingrowth deeper into the annular fibrosis and even the nucleus pulposus.</p>
+<img src="{{ url_for('static',filename='img/drg/mechanism.png') }}">
+<p>It is suggested that this increased neural ingrowth in combination with the production of inflammatory mediators in the degenerated nucleus pulposus lead to discogenic low back pain.</p>
+<h4>Functional assessment of DRG neurons</h4>
+<p>Can we confirm that disc degeneration causes sensitization of DRG sensory neurons?</p>
+<img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6609268/bin/kjpp-23-237-i001.jpg">
+<p>An indirect test for neuronal function is measurement of ion concentrations. The ions associated with the electrochemical event of an action potential include sodium, potassium, and calcium. Out of these, calcium is the best reliable indicator because of its low basal intracellular concentration and large change in concentration between basal and activated states.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Gcamp.jpg/212px-Gcamp.jpg">
+<p>Genetically-encoded calcium indicators (GECIs) have been developed that can reliably report action potentials in neurons. In our study, we will use the transgenic Thy1-GCaMP6s mouse line, which produces a protein in the central and peripheral nerves that fluoresces when bound to calcium.</p>
+<img src="{{ url_for('static',filename='img/drg/puncture.png') }}" width="50%">
+<p>In the Thy1-GCaMP6s mouse, we will induce disc degeneration via lumbar disc puncture to the L5-L6 IVD.</p>
+<img src="{{ url_for('static',filename='img/drg/behavior.png') }}">
+<p>At various timepoints after induction of degeneration (6 weeks, 12 weeks, 36 weeks, and 52 weeks), we will do do several things. First, we will test the mice for behavior possibly related to the degeneration. Behavioral tests we may use include Open Field, Rotarod, Grip Strength, Tail Suspension, and mechanical/hot/cold stimulation to the hindpaw.</p>
+<img src="{{ url_for('static',filename='img/drg/setup.png') }}">
+<p>Then, the mice will be sacrificed and we will isolate the dorsal root ganglion (DRG) organ. The DRG will be placed in a recording chamber, perfused with artificial cerebrospinal fluid, and stimulated using an electric field generated across two platinum electrodes.</p>
+<video width="40%" controls>
+<source src="{{ url_for('static',filename='img/drg/stim.mp4') }}" type="video/mp4">
+</video>
+<img src="{{ url_for('static',filename='img/drg/figurec10_2.png') }}">
+<p>The current problem we are facing is a lack of consistency in the responsiveness of the neurons. Not all DRG samples have a robust response; some only have a few neurons responding and sometimes no neurons respond at all. I have reached out to Ian Berke and Tom McGrath who were working on this experiment, and with some suggestions, am getting closer to getting a consistent response. According to my observations and Ian/Tom's speculations, the likely reasons for lack of consistency are 1) rough handling/dehydration of the sample, 2) error in osmolality or pH or lack of constant perfusion of the bath, and 3) relatively low responsiveness in the Thy1 reporter animal.</p>
+<div class="references">
+<h4>References</h4>
+<ol>
+
+</ol>
+{% endblock %}
