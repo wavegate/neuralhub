@@ -63,7 +63,7 @@ img {
 <img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC165040/bin/ar629-1.jpg">
 <p>The intervertebral discs lie between the vertebral bodies. They are the main joints of the spinal column, and their major role is mechanical, as they constantly transmit loads from body weight and muscle activity through the spinal column.</p>
 <img src="https://www.physio-pedia.com/images/thumb/2/27/Sinuvertebral_nerve2.png/619px-Sinuvertebral_nerve2.png">
-<p>The healthy adult disc has few blood vessels, but it has some nerves, mainly restricted to the outer lamellae. These nerves are branches of the sinuvertebral nerve or derived from the ventral rami or grey rami communicantes. However, the L5-L6 disc was found to be innervated by the L2 DRG neurons in rats.</p>
+<p>The healthy adult disc has few blood vessels, but it has some nerves, mainly restricted to the outer lamellae. These nerves are branches of the sinuvertebral nerve or derived from the ventral rami or grey rami communicantes. However, the IVDs and the nerve roots that innervate them may not be at the same level. For example, the L5-L6 disc was found to be innervated by the L2 DRG neurons in rats.</p>
 <img src="https://media-us.amboss.com/media/thumbs/big_612789d59b6ae.jpg">
 <p>Classically, the onset of low back pain caused by degenerative disc disease is seen as caused by mechanical disturbance of the nerve by disc protrusion.</p>
 <img src="http://www.promotiongb.com/uploads/1/2/0/2/120248121/herniated-disc.jpg?250" width="50%">
@@ -72,14 +72,22 @@ img {
 <p>It was thus found that degenerated discs have increased vascular and neural ingrowth deeper into the annular fibrosis and even the nucleus pulposus.</p>
 <img src="{{ url_for('static',filename='img/drg/mechanism.png') }}">
 <p>It is suggested that this increased neural ingrowth in combination with the production of inflammatory mediators in the degenerated nucleus pulposus lead to discogenic low back pain.</p>
-<h4>Functional assessment of DRG neurons</h4>
+
+
+
+<h4>Studying the pain pathway in an animal model</h4>
 <p>Can we confirm that disc degeneration causes sensitization of DRG sensory neurons?</p>
-<img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6609268/bin/kjpp-23-237-i001.jpg">
-<p>An indirect test for neuronal function is measurement of ion concentrations. The ions associated with the electrochemical event of an action potential include sodium, potassium, and calcium. Out of these, calcium is the best reliable indicator because of its low basal intracellular concentration and large change in concentration between basal and activated states.</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Gcamp.jpg/212px-Gcamp.jpg">
-<p>Genetically-encoded calcium indicators (GECIs) have been developed that can reliably report action potentials in neurons. In our study, we will use the transgenic Thy1-GCaMP6s mouse line, which produces a protein in the central and peripheral nerves that fluoresces when bound to calcium.</p>
 <img src="{{ url_for('static',filename='img/drg/puncture.png') }}" width="50%">
-<p>In the Thy1-GCaMP6s mouse, we will induce disc degeneration via lumbar disc puncture to the L5-L6 IVD.</p>
+<p>In order to study the pain pathway, we need an animal model. We can induce disc degeneration in an animal by puncturing the annulus with a needle.</p>
+<img src="{{ url_for('static',filename='img/drg/retrograde.png') }}">
+<p>Next, we need to figure out which neurons are extending nerve fibers into the degenerated IVD. This can be done by injecting a fluorescent dye into the IVD, where it will be taken up by nerve fibers and will move evenly throughout the entire neuron where it can be detected by imaging or immunohistochemistry.</p>
+<img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6609268/bin/kjpp-23-237-i001.jpg">
+<p>Finally, we need a way to assess the function of the innervating DRG neurons. An indirect test for neuronal function is measurement of ion concentrations. The ions associated with the electrochemical event of an action potential include sodium, potassium, and calcium. Out of these, calcium is the best reliable indicator because of its low basal intracellular concentration and large change in concentration between basal and activated states.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Gcamp.jpg/212px-Gcamp.jpg">
+<p>Genetically-encoded calcium indicators (GECIs) have been developed that can reliably report action potentials in neurons. In our study, we will use the transgenic Thy1-GCaMP6s mouse line, which produces a protein in the central and peripheral nerves that fluoresces when bound to calcium. 
+
+<h4>The experiment</h4>
+<p>In the Thy1-GCaMP6s mouse, we will induce disc degeneration via lumbar disc puncture to the L5-L6 IVD. During the puncture, we will inject DiI, a fluorescent tracer.</p>
 <img src="{{ url_for('static',filename='img/drg/behavior.png') }}">
 <p>At various timepoints after induction of degeneration (6 weeks, 12 weeks, 36 weeks, and 52 weeks), we will do do several things. First, we will test the mice for behavior possibly related to the degeneration. Behavioral tests we may use include Open Field, Rotarod, Grip Strength, Tail Suspension, and mechanical/hot/cold stimulation to the hindpaw.</p>
 <img src="{{ url_for('static',filename='img/drg/setup.png') }}">
@@ -87,8 +95,18 @@ img {
 <video width="40%" controls>
 <source src="{{ url_for('static',filename='img/drg/stim.mp4') }}" type="video/mp4">
 </video>
+<p>The responsiveness of each DRG to electric stimulation will be recorded based on the intensity of the fluorescence. </p>
 <img src="{{ url_for('static',filename='img/drg/figurec10_2.png') }}">
-<p>The current problem we are facing is a lack of consistency in the responsiveness of the neurons. Not all DRG samples have a robust response; some only have a few neurons responding and sometimes no neurons respond at all. I have reached out to Ian Berke and Tom McGrath who were working on this experiment, and with some suggestions, am getting closer to getting a consistent response. According to my observations and Ian/Tom's speculations, the likely reasons for lack of consistency are 1) rough handling/dehydration of the sample, 2) error in osmolality or pH or lack of constant perfusion of the bath, and 3) relatively low responsiveness in the Thy1 reporter animal.</p>
+<p>If disc degeneration does, in fact, sensitize the DRG neurons, and if this sensitization is at the core of how chronic pain develops over time, then we can try to think of new therapies to reverse this process.</p>
+<p>One technical problem we are facing is a lack of consistency in the responsiveness of the neurons. Not all DRG samples have a robust response; some only have a few neurons responding and sometimes no neurons respond at all. I have reached out to Ian Berke and Tom McGrath who were working on this experiment, and with some suggestions, am getting closer to getting a consistent response. According to my observations and Ian/Tom's speculations, the likely reasons for lack of consistency are 1) rough handling/dehydration of the sample, 2) error in osmolality or pH or lack of constant perfusion of the bath, and 3) relatively low responsiveness in the Thy1 reporter animal.</p>
+<h4>Questions</h4>
+<ul>
+  <li>How often does disc degeneration occur in humans, and how closely related is disc degeneration with quality of life?</li>
+  <li>Is puncturing the disc the best way to induce disc degeneration?</li>
+  <li>How can we more accurately assess the behavioral impact of disc degeneration in animal models?</li>
+  <li>What if the changes are downstream from the DRG (eg. in the brain)?</li>
+  <li>Can we test things in the living animal?</li>
+</ul>
 <div class="references">
 <h4>References</h4>
 <ol>
