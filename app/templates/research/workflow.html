@@ -12,6 +12,12 @@ h4 {
 font-size: 24px;
 font-weight: 700;
 }
+h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-style: italic;
+}
 p, li {
 font-size: 20px;
 line-height: 1.6;
@@ -54,6 +60,8 @@ html {
 
 <h3>Aims 1 & 2: Molecular changes in the IVD and DRG after lumbar disc puncture (LDP), pain-related behavior, and ex vivo functional assessment of DRG neurons via electrical field stimulation</h3>
 <div id="calendar"></div>
+<img src="{{ url_for('static',filename='img/drg/cohort.png') }}" width="100%">
+<!--
 <h4>Frank's To-do List</h4>
 <div id="list">
   <ol>
@@ -62,13 +70,23 @@ html {
     <li><span>1.</span><p>Purchase Fluoro-Ruby and cyanoacrylate.</p></li>
     <li><span>4.</span><p>Review surgical approach/learn perioperative procedures.</p></li>
   </ol> 
-</div>
+</div>-->
 <h4>Transgenic mouse model (Frank)</h4>
 <p>The Thy1-GCaMP6s/GP4.3 mouse model (Jackson Labs) will be used to allow for monitoring of the fluorescent calcium-sensitive molecule, GCaMP6s, in excitatory neurons for Aims 2 and 3 [1]. A total of 16 mice will be used in this cohort. Eight of these mice will be GCaMP6s-positive (GCaMP+) and eight will be GCaMP6s-negative (GCaMP-). Within each of these groups, half (4) will undergo sham surgery and half will undergo lumbar disc puncture to induce disc degeneration. All mice will be bred and housed in the Clinical Sciences Research Building (CSRB) on the WashU Medical Campus.</p>
-<h4>Surgical model to induce lumbar disc puncture (LDP) (Gupta/Tang)</h4>
-<p>At 8 weeks of age, mice will undergo either sham surgery or lumbar disc puncture at the Musculoskeletal Research Center (MRC). First, mice will be anesthesized under 1-3% isoflurane via nose cone. Incision sites ¼” below and ¾” above the iliac wings will be marked, washed, and prepped appropriately. A vertebral incision will be made over the abdomen vertically with a #11 scalpel blade. (get another copy of the protocol) Subcutaneous flaps (using tenotomy scissors) superficial to the abdominal muscle will be made, followed by gentle lifting of the abdominal musculature with forceps. This procedure facilitates closure. The peritoneal cavity will be identified and the animal will be rotated onto its right side to allow for left lateral displacement of the viscera, which is then irrigated in saline-moistened sterile gauze. Using the blunt end of a Senn retractor, tissue overlying the retroperitoneum will be dissected under microscopic visualization and the aorta and IVC will be visualized. Gentle scraping of the aspects lateral (left) to this structure will allow for visualization of the vertebral bodies and identification of the lumbar IVDs. In the disc puncture group, the lateral aspect of the IVDs will be punctured 3x times with a 30G needle to a depth of 1mm; in the sham group, the IVD is visualized but is left untouched.</p>
-<h4>Retrograde labeling of IVD</h4>
-<p>During the third puncture, the needle will be inserted to a depth of 1 mm, and a dose of 3 uL of Fluoro-Ruby solution (10% m/v diluted in distilled water, Invitrogen, Catalog No. D1817) will be gradually injected with a Hamilton microsyringe over 1 minute. The needle will then be withdrawn. The hole will then be sealed with cyanoacrylate, which is given 5 minutes to dry. Afterwards, the abdominal muscles will be closed with 3-0 vicryl, then skin with 4-0 nylon suture. ?? Planar X-rays of the whole mouse will be obtained via digital X-ray (Faxitron Multifocus) immediately after surgery to confirm location and degree of injury.</p>
+<h4>Surgical model to induce lumbar disc puncture (LDP) (Gupta/Frank/Remy)</h4>
+<p>At 8 weeks of age, mice will undergo either sham surgery or lumbar disc puncture at the Musculoskeletal Research Center (MRC). The surgery uses a lateral retroperitoneal approach to the mouse lumbosacral spine and is expected to take approximately 15 minutes. First, mice will be placed under 3% isoflurane in an isoflurane chamber to induce anesthesia and then maintained under 1.5% isoflurane via nose cone. The skin overlying the left hindlimb and lumbar spine will be shaved and prepped with ethanol and betadine. A dose of lidocaine (0.03ml for 20g, or 7 mg/kg?) is administered to the same area. The mouse is draped and placed on a heating pad. An approximately 1 cm incision is made overlying the left pelvis. The underlying fat pad and anteiror margin of the thigh is separated and retracted to expose the retroperitoneal space by blunt dissection. The bilateral psoas muscles are visualized and separated apart gently with a cotton-tipped applicator to expose the lumbar IVD, taking extra care to avoid disturbing the intra-abdominal great vessels. In the disc puncture group, the surface of the IVD will be punctured 3x times with a 30G needle (##do we want a specific depth?## to a depth of 1mm); in the sham group, the IVD is exposed but is left untouched.</p>
+<img src="{{ url_for('static',filename='img/drg/surgery1.png') }}">
+<caption><b>Figure 1: Lateral retroperitoneal approach to the mouse lumbosacral spine</b> (A):  The palpatable superficial anatomical landmarks are denoted by 1) the blue dotted line which outlines anterior margin of the thigh and bony prominence of the pelvis, and 2) the red dotted line which outlines the fat pad located between the thigh and abdominal wall.  The black solid line is an approximately 1 cm incision along the pelvis line that reveals the surgical access point adjacent to the anterior thigh. (B and C): The access point to the retroperitoneal space lies between the blue and red dotted lines.  The underlying fat pad and anterior margin of the thigh can be easily separated and retracted to expose the retroperitoneal space by blunt dissection. (D): The pelvis is rotated posteriorly to expose a broad working space by gripping (a) with forceps. The area (c) between (a) and (b) is carefully separated by blunt dissection to expose the psoas muscle: (a) gluteus muscles and left pelvic bone; (b) oblique abdominal muscles; (c) opening to the retroperitoneal space.
+</caption>
+<img src="{{ url_for('static',filename='img/drg/surgery2.png') }}">
+<caption><b>Figure 2: Retroperitoneal dissection to expose the lumbosacral intervertebral disc using microscopic guidance</b>
+(A): The No. 11-scalpel blade indicates the left pelvic bone and forceps grip the gluteus muscles. (B): The pelvis can be rotated posteriorly to increase working space by raising the gluteus muscles and rotating the left pelvic bone. The abdominal wall and peritoneum are retracted anteriorly by a Penfield dissector to expose the psoas muscles. (C): The psoas muscle can be stripped posteriorly-to-anteriorly by scraping out muscles attached to the anterior surface of the pelvis with a Penfield dissector. (D): Superior margin of the pelvic bone indicating the L6 vertebral body. (E): X-ray confirms the position of the pelvis relative to the L5/6 and L6/S1 intervertebral discs.
+
+</caption>
+<h4>Retrograde labeling of IVD and Postoperative Monitoring</h4>
+<p>During the third puncture, the needle will be inserted to a depth of 1 mm, and a dose of 3 uL of Fluoro-Ruby solution (10% m/v diluted in distilled water, Invitrogen, Catalog No. D1817) will be gradually injected with a Hamilton microsyringe over 1 minute. The needle will then be withdrawn. The hole will then be sealed with cyanoacrylate, which is given 5 minutes to dry. Afterwards, the abdominal muscles will be closed with 4-0 vicryl running suture, then skin with 4-0 monofilament interrupted suture.</p>
+<p>After skin closure, a dose of carprofen (5 mg/kg or 0.12ml for 20g mouse) will be administered intraperitoneally. Mice are observed continuously until animal regains use of its ipsilateral hind leg and is able to move around the cage. Mice are thereafter monitored every 6-8 hours for wound healing and mobility. Chewable carprofen tablets are additionally administered as needed (1.25 mg/mouse). Infection, signs of moderate to severe pain or distressed not anticipated by the study plan, mutilation of operative site or other self-mutilation will require veterinary consultation. Neurological or cardiopulmonary disorders not anticipated by the study plan, and non-weight bearing for 72 hours will require euthanasia as a humane endpoint.</p>
+<p>(## might be hard to confirm location with X-ray without a tag left in ##) Planar X-rays of the whole mouse will be obtained via digital X-ray (Faxitron Multifocus) immediately after surgery to confirm location and degree of injury.</p>
 <h4>Behavioral testing (Frank)</h4>
 <p>All behavioral assessments will be performed in the MRC. Animals will be acclimated to investigator handling over 7 days and then subsequently acclimated to behavioral testing over 4 consecutive days prior to behavioral assessments. Pre-operative baseline behavior assay will be conducted the week leading up to the surgery, and then behavioral assessments will be performed at 2 weeks and 4 weeks post-operatively. Each day, mice are left undisturbed in the testing environment for one hour before assays begin.</p>
 <p>Voluntary locomotor activity will be assessed using the Omnitech Electronics Superflex open field system. Mice are placed into the center of a clear, open 16"x16" Plexiglass chamber. The location of the mice are tracked with infrared photosensors for 30 minutes. General locomotor activity (distance traveled, time spent traveling) is acquired using AccuScan Fusion software (Omnitech).</p>
@@ -159,52 +177,59 @@ html {
             },
             {
                 id: 3,
-                name: 'Post-operative Behavior (6 weeks)',
+                name: 'Post-operative Behavior (2 weeks)',
                 location: 'MRC (Frank)',
-                startDate: new Date(2021, 10, 17),
-                endDate: new Date(2021, 10, 19)
+                startDate: new Date(2021, 9, 19),
+                endDate: new Date(2021, 9, 22)
+            },
+            {
+                id: 3,
+                name: 'Post-operative Behavior (4 weeks)',
+                location: 'MRC (Frank)',
+                startDate: new Date(2021, 9, 29),
+                endDate: new Date(2021, 9, 31)
             },
             {
                 id: 4,
-                name: 'CEmCT (6 weeks)',
+                name: 'CEmCT (4 weeks)',
                 location: 'MRC (Tang/Remy)',
-                startDate: new Date(2021, 10, 22),
-                endDate: new Date(2021, 10, 22)
+                startDate: new Date(2021, 10, 8),
+                endDate: new Date(2021, 10, 8)
             },
             {
                 id: 5,
-                name: 'Sacrifice and IVD+DRG tissue harvest (6 weeks)',
-                location: 'MRC (Frank)',
-                startDate: new Date(2021, 10, 25),
-                endDate: new Date(2021, 10, 25)
+                name: 'Sacrifice and IVD+DRG tissue harvest (4 weeks)',
+                location: 'Whitaker (Frank)',
+                startDate: new Date(2021, 10, 8),
+                endDate: new Date(2021, 10, 8)
             },
             {
                 id: 6,
-                name: 'EFS (6 weeks)',
+                name: 'EFS (4 weeks)',
                 location: 'Whitaker (Frank)',
-                startDate: new Date(2021, 10, 25),
-                endDate: new Date(2021, 10, 25)
+                startDate: new Date(2021, 10, 8),
+                endDate: new Date(2021, 10, 8)
             },
             {
                 id: 7,
-                name: 'DRG Immunolabeling (6 weeks)',
+                name: 'DRG Immunolabeling (4 weeks)',
                 location: 'Whitaker (Liufang)',
-                startDate: new Date(2021, 10, 29),
-                endDate: new Date(2021, 10, 29)
+                startDate: new Date(2021, 10, 8),
+                endDate: new Date(2021, 10, 8)
             },
             {
                 id: 8,
-                name: 'IVD organ culture (6 weeks)',
+                name: 'IVD organ culture (4 weeks)',
                 location: 'MRC (Tang/Remy)',
-                startDate: new Date(2021, 10, 26),
-                endDate: new Date(2021, 11, 3)
+                startDate: new Date(2021, 10, 8),
+                endDate: new Date(2021, 10, 12)
             },
             {
                 id: 9,
-                name: 'IVD immunohistochemistry (6 weeks)',
+                name: 'IVD immunohistochemistry (4 weeks)',
                 location: 'Whitaker (Liufang)',
-                startDate: new Date(2021, 11, 3),
-                endDate: new Date(2021, 11, 3)
+                startDate: new Date(2021, 10, 8),
+                endDate: new Date(2021, 10, 8)
             },]
     });
 </script>
