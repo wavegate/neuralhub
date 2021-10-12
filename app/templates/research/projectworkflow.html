@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+</style>
+<h3>Intervertebral Disc Degeneration and Cross-Talk with the Nervous System</h3>
+
+<p>Grant</p>
+<ul>
+	<li><a href="{{ url_for('main.research', chapter='projectsummary') }}">Project Summary/Abstract</a></li>
+	<li><a href="{{ url_for('main.research', chapter='facilities') }}">Facilities</a></li>
+	<li><a href="{{ url_for('main.research', chapter='equipment') }}">Equipment</a></li>
+	<li><a href="{{ url_for('main.research', chapter='aims') }}">Specific Aims</a></li>
+	<li><a href="{{ url_for('main.research', chapter='background') }}">Background & Significance</a></li>
+	<li><a href="{{ url_for('main.research', chapter='innovation') }}">Innovation</a></li>
+	<li><a href="{{ url_for('main.research', chapter='approach') }}">Approach</a></li>
+	<li><a href="{{ url_for('main.research', chapter='vertebrate') }}">Vertebrate Animals</a></li>
+</ul>
+
+<p><a href="{{ url_for('main.research', chapter='colony') }}">Transgenic mouse model / Mouse breeding</a></p>
+<p><a href="{{ url_for('main.research', chapter='surgery') }}">Surgical model of lumbar disc puncture (LDP)</a></p>
+<p><a href="{{ url_for('main.research', chapter='retrograde') }}">Retrograde labeling</a></p>
+<p><a href="{{ url_for('main.research', chapter='behavior') }}">Behavioral testing</a></p>
+<p><a href="{{ url_for('main.research', chapter='EFS') }}">Electrical field stimulation</a></p>
+<p><a href="{{ url_for('main.research', chapter='CT') }}">Contrast-enhanced microCT</a></p>
+<p><a href="{{ url_for('main.research', chapter='culture') }}">IVD organ culture</a></p>
+<p><a href="{{ url_for('main.research', chapter='IHC') }}">Immunohistochemistry of DRGs and IVDs</a></p>
+
+
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script>
+	$(document).ready(function () {
+	    $("#summary").click(function() {
+	         $("." + this.id).slideToggle("", function() {
+
+	         });
+	      });
+    });
+</script>
+{% endblock %}
