@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>12-7-2021: Sample 1 was harvested and placed into potassium-depleted aCSF, then perfused with 40 mM KCl during imaging.</p>
+<img src="{{ url_for('static', filename='img/drg/12-7-2021-0KClto40KCl-sample1.gif') }}">
+<p>12-7-2021: Sample 2 was harvested and placed into potassium-depleted aCSF, then perfused with 40 mM KCl during imaging.</p>
+<img src="{{ url_for('static', filename='img/drg/12-7-2021-0KClto40KCl-sample2.gif') }}">
+<p>12-7-2021: Sample 1 was harvested and placed into calcium-depleted aCSF, then perfused with 40 mM KCl (with calcium) during imaging.</p>
+<img src="{{ url_for('static', filename='img/drg/12-7-2021-NoCato40KCl-sample1.gif') }}">
+<p>12-7-2021: Sample 2 was harvested and placed into calcium-depleted aCSF, then perfused with 40 mM KCl (with calcium) during imaging.</p>
+<img src="{{ url_for('static', filename='img/drg/12-7-2021-NoCato40KCl-sample2.gif') }}">
+
+{% endblock %}
