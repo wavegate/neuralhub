@@ -96,6 +96,10 @@ def post(id):
 	post = Post.query.get(id)
 	return render_template('post.html', post=post)
 
+@bp.route("/math", methods = ['GET'])
+def math():
+	return render_template('math.html')
+
 @bp.route("/research/<chapter>")
 @login_required
 def research(chapter):

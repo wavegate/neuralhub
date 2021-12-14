@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+.behavior {
+    display: none;
+}
+</style>
+Learn math and practice
+
+Automatically generated questions
+
+
+<button id="behavior">Start questions button</button>
+
+x+1=2. FInd x
+
+<div class="behavior">
+	<h2>Questions</h2>
+
+
+</div>
+
+
+Answer
+
+SUbmit answer:
+
+Check answer:
+
+
+
+
+scripts
+start_questions -> generate_questions + generate_answers
+questions = []
+
+answers = []
+if answer[i] != answer[i] update error
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+var questions = [];
+var answers = [];
+
+$(document).ready(function () {
+
+    $("#behavior").click(function() {
+    	generate_questions();
+         for (let i = 0; i < questions.length; i++) {
+         	$("." + this.id).append("<p>" + questions[i] +"</p>");
+         	$("." + this.id).append("<input id=\"input" + i + "\"></input>");
+         	$("." + this.id).append("<button id=\"" + i + "\" class=\"ans\">Check Answer</button>");
+         }
+         $("." + this.id).slideToggle("", function() {
+
+         });
+      });
+    });
+
+	$(document).on("click", ".ans", function() {
+		alert(parseInt(answers[this.id]) == $("#input" + this.id).val());
+	});
+
+	function generate_questions() {
+		for (let i = 0; i < 5; i++) {
+		  var y = getRandomInt(0,10);
+		  answers.push(y);
+		  questions.push("x + 1 = " + (y+1));
+		}
+	} 
+
+	function getRandomInt(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+	}
+</script>
+
+{% endblock %}
