@@ -1,75 +1,80 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
 <style>
-.behavior {
-    display: none;
+
+p, button {
+	font-size: 200%;
+}
+#integer1_remove {
+	display: none;
 }
 </style>
-Learn math and practice
+<h1>algebra</h1>
 
-Automatically generated questions
+<h2>integer exponents</h2>
 
-
-<button id="behavior">Start questions button</button>
-
-x+1=2. FInd x
-
-<div class="behavior">
-	<h2>Questions</h2>
+<p>\(a^n\) means \(a*a\) \(n\) times</p>
+<p>so \(2^4=2*2*2*2\)</p>
+<p>anything (except 0) to the 0 power is 1. 0 to 0 power is undefined</p>
+<p>\(a^{-n}\) means \(\frac{1}{a^n}\)</p>
 
 
+<button id="integer1">Generate questions</button>
+<button id="integer1_remove">Remove questions</button>
+
+<div class="integer1">
 </div>
 
 
-Answer
-
-SUbmit answer:
-
-Check answer:
-
-
-
-
-scripts
-start_questions -> generate_questions + generate_answers
-questions = []
-
-answers = []
-if answer[i] != answer[i] update error
 {% endblock %}
 
 {% block scripts %}
 {{ super() }}
 <script>
-var questions = [];
-var answers = [];
+var integer1_questions = [];
+var integer1_answers = [];
 
 $(document).ready(function () {
 
-    $("#behavior").click(function() {
-    	generate_questions();
-         for (let i = 0; i < questions.length; i++) {
-         	$("." + this.id).append("<p>" + questions[i] +"</p>");
+    $("#integer1").click(function() {
+    	integer1_generate_questions();
+         for (let i = 0; i < integer1_questions.length; i++) {
+         	$("." + this.id).append("<p>" + integer1_questions[i] +"</p>");
          	$("." + this.id).append("<input id=\"input" + i + "\"></input>");
          	$("." + this.id).append("<button id=\"" + i + "\" class=\"ans\">Check Answer</button>");
          }
-         $("." + this.id).slideToggle("", function() {
-
+         $("#" + this.id).slideToggle("", function() {
+         });
+         $("#" + this.id + "_remove").slideToggle("", function() {
          });
       });
     });
 
+	$("#integer1_remove").click(function() {
+         $("#" + this.id).slideToggle("", function() {
+         });
+         $("#integer1").slideToggle("", function() {
+         });
+         $(".integer1").html("");
+     });
+
+
 	$(document).on("click", ".ans", function() {
-		alert(parseInt(answers[this.id]) == $("#input" + this.id).val());
+		alert(parseInt(integer1_answers[this.id]) == $("#input" + this.id).val());
 	});
 
-	function generate_questions() {
+	function integer1_generate_questions() {
 		for (let i = 0; i < 5; i++) {
-		  var y = getRandomInt(0,10);
-		  answers.push(y);
-		  questions.push("x + 1 = " + (y+1));
+			var x = getRandomInt(-5,5);
+		    var y = getRandomInt(-5,5);
+		  integer1_answers.push(Math.pow(x,y));
+		  integer1_questions.push('\\(a^n\\)');
+		  //integer1_questions.push("\\(" + x + "^" + y + "=\\)");
 		}
+		MathJax.Hub.Queue(["Typeset", MathJax.Hub, "render"]);
 	} 
 
 	function getRandomInt(min, max) {
@@ -77,6 +82,11 @@ $(document).ready(function () {
 	  max = Math.floor(max);
 	  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 	}
+
+	function updateMathContent(s) {
+       var math = MathJax.Hub.getAllJax("mathdiv")[0];
+       MathJax.Hub.Queue(["Text", math, s]);
+   }
 </script>
 
 {% endblock %}
