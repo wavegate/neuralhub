@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<style>
+
+p, button {
+	font-size: 100%;
+}
+#integer1_remove {
+	display: none;
+}
+</style>
+<h1>Math</h1>
+<li>So when it comes to math, I think there is the failure in general education of math in which the order of how things are taught are somewhat confusing. As we grow to better understand how the brain develops over our lifetime, perhaps we can better create a structure upon which to build math. The problem with math is that it is the most difficult thing to learn, and when I mean difficult, I mean that the cognitive patterns required through the study of math are the most technically challenging for our brains to process, and naturally challenges the capacity of our mind. For example, the entity "infinity" is not something we can visualize in our brain. The issue is that the foundation of math is rarely taught, and almost never learned, by most people. So a lot of the times, people won't really enjoy learning math because they find it difficult to apply math to real world problems. A common example is when people first learn about probability. When people first hear the words "I flip my coin and it lands on heads AND I flip my coin and it lands on tails," they don't know how to process the word "AND." Because in most of their life, they have understood AND as equivalent to addition. "I have five apples AND I have three apples". So in total I have eight apples. 5 + 3 = 8. But when they start dealing with probability, that word "AND" now is multiplication. "The probability of flipping heads the first time AND the probability of flipping heads the second time", they might think... okay. 50% + 50% = 100%. But then they realize this is wrong, and it's actually 50% * 50% = 25%. So then people get really confused... they have the same word "AND" but it means different things? Math doesn't make any sense!</li>
+<li>A key element to one day becoming a neural engineer is the ability to understand the language of math. A lot of times, you might be trying to figure a problem out, and you can read a bunch of papers, but none of it really makes any sense. Because you can't make the connection. It is like looking at a bunch of disjointed letters or words on a canvas and trying to interpret a sentence or story from it. It is difficult if not impossible.</li>
+<li>I have mainly looked at math education under the Mathematics Subject Classification. The goal of studying math in this case, as well as the study of every other subject, is to solve problems.</li>
+<li>Propositional logic</li>
+<p>Propositional logic, or zeroth order logic, is a language for math. The first set of symbols we need to learn is about propositional logic. A proposition in this case is a statement which can take on two values: true or false. The proposition P is a specific proposition, for example, "I am a human," which can be true or false. If I use a lower case p, then this a generalization of any proposition, which is useful when we talk about propositions in general. The negation of a proposition, eg. "I am NOT a human" is symbolized as ¬P. Now, let's talk about connectives. In English, you have conjunctions, typically things like "and", "or", "but", etc. In math, we call these connections "connectives", and the word "conjunction" has a specific meaning. The word "conjunction" means "and" is translated into the symbol ∧. So if we have two propositions, eg. "I am a human" and "I am fat", then P ∧ Q means "I am a human AND I am fat," indicating that both propositions have the value of true. Now, flip that symbol upside down, and we get a disjunction, which means "or." P ∨ Q in this case will mean "I am a human OR I am fat." However, the English "or" has two meanings. The exclusive "or" means that exactly one of two propositions is true. The inclusive "or" means AT LEAST one of the discussed propositions is true. In math, when we say "or" we're usually referring to the INCLUSIVE "or", which means P ∨ Q holds true if P is true, Q is true, or if P and Q are both true. After disjunction, we have the material conditional, which is written P → Q. This means "if P then Q". The proposition to the left of the arrow is called the antecedent, and the proposition to the right is called the consequent. So in my example, P → Q means "If I am a human, then I am fat." The biconditional, written P ↔ Q, means that the truth value of P and Q are the same. Which means that if both P and Q are true, then P ↔ Q is true, and if both P and Q are false, then P ↔ Q is also true. The opposite of this is the aforementioned exclusive or, written P ⊕ Q, which is only true when P and Q are different.</p>
+<li>First order logic</li>
+<li>In first order logic, or predicate logic, we extend propositional logic slightly. Instead of statements having a truth value, we now divide them into two parts: the subject and the predicate. The predicate is a statement that has a variable which does not have a truth value until that variable is defined. The subject is that variable that needs to be defined. So an example is, "I am x meters tall." This statement does not have a truth value until I define what x is.</li>
+<p>Now, I want to reinforce that these comparisons... propositional logic and first-order logic, are about facts. Propositional logic only discusses facts, facts that can be true or false.. in other words, they can only be 0 or 1. First-order logic adds on this objects and relations. Meaning one fact can be true for multiple objects, and an element can have a relationship to another object. There are other languages used to discuss the world around us, which are probability theory and fuzzy logic, which are studies into uncertainty. In probability, there is a truth value but we look at a chance that truth value is correct. In fuzzy logic, the language we use is uncertain, for example, if you state, "I am tall." It is difficult to assign a truth value to this statement because it depends on what height we consider tall to be, and so fuzzy logic investigates these scenarios.</p>
+<li>Arithmetic and number theory</li>
+<pre>
+	-pre-numerical stage, concept of numbers
+	-natural numbers
+	-integers, rational numbers
+	-real numbers, complex numbers
+	-number theory
+	-measures and units
+	-ratio and proportion, percentages
+	-real life mathematics, practical arithmetic
+</pre>
+<li>Algebra</li>
+<li>So let's discuss algebra real quick. The word itself is about the 'reunion of broken parts'... an Arabic word. It's about the study of symbols. You can divide algebra into elementary algebra and abstract algebra. Elementary algebra is essential for studying any science, whereas abstract algebra is primarily studied by mathematicians. Algebra is concerned with the solving of equations of numbers. Then it extended also into non-numerical objects and abstracted them into groups, rings, and fields, which we will look at later. Algebra is pretty much foundational to all of math.</li>
+<pre>
+	-elementary algebra
+	-equations and inequalities
+	-groups, rings, fields
+	-ordered algebraic structures
+	-linear algebra
+</pre>
+<li>Geometry</li>
+<pre>
+	-informal geometry
+	-area and volume
+	-plane and solid geometry
+	-transformation geometry
+	-plane and spherical trigonometry
+	-analytic geometry, vector algebra
+	-descriptive geometry
+</pre>
+<p>Before the 16th century, mathematics was divided only into arithmetic and geometry.</p>
+<li>Analysis</li>
+<pre>
+	-mappings and functions
+	-sequences and series
+	-differential calculus
+	-integral calculus
+	-functions of several variables
+	-functional equations
+	-complex analysis
+</pre>
+<li>Combinatorics</li>
+<li>Graph theory</li>
+<li>Descriptive statistics</li>
+<li>Probability theory</li>
+<li>Distributions and stochastic processes</li>
+<li>Trigonometry</li>
+<p>Trigonometry, or "measurement of triangles" is the branch of math that studies side lengths and angles of triangles. Became more popular due to the demands of navigation and the need for maps of large areas.</p>
+<img src="{{ url_for('static', filename='img/math/trig.png') }}" width=400>
+<li>Calculus</li>
+<li>Infinitesimal calculus was added as a subfield of math around the 17th century.</li>
+<li>Probability</li>
+<li>Combinatorics: the area of mathematics concerned with counting. Involves enumeration (counting). Can be confusing because we are no longer talking about numbers, but about non-numerical objects, which we count, but convert those objects into numbers.</li>
+<li>Permutations and Combinations</li>
+<p>Permutations and combinations, as taught in middle/high school, are about figuring out how many ways you can select items from a set. I think this is often a confusing thing to learn because it's taught disjointedly from other subjects, and involves fairly fundamental aspects of math that are not taught in elementary math, and requires a different way of thinking. It's not really algebra, but is about combinators, or counting. So fundamentally we have to go back away from the fancy symbols we have been using, and just focus on counting things. In addition, it applies some stuff from probability with independent/dependent events. However, it has very obvious application which makes it interesting to teach. For example, if you technically enter all permutations of characters into a password field, you should be able to hack every online account ever created. However, with a quick understanding of permutations, you realize  that is not likely.</p>
+<p>The first thing we can talk about is permutations with repetitions. How many ways can you order a set of numbers? If your set of numbers is {a, b, c}, then you can arrange them {a, a, a}, {b, b, b}, {c, c, c}, {a, a, b}... and so forth. I think about it this way. If you look at the first "slot", how many options do you have there? You have 3... a, b, or c. Now, if you pick a, then think about how many options you have for the second slot, you have 3 again... a, b, or c. So then for every option for the 1st slot, we have 3 options for the second slot. So in total, we have 3*3=9 options for the first two slots. Then, for each option in the first two slots, we have 3 options for the 3rd slot, so then we have 3*3*3=27 total possibilities. This is the equation for permutations with repetitions: \(n^r\). n here is the total size of the original set we are picking from {a, b, c}. If our initial set was all the letters of the alphabet, n here would be 26. If our initial set was a deck of playing cards without jokers, it would be 52. r here is how many we are putting in order. So if we said, how many ways can you arrange 2 numbers from {a, b, c, d}, then it would be \(n^r=4^2=16\).</p>
+<p>So then let's look at permutations without repetitions. This time, if we pick "a" for our first option, we can't pick it again for our second slot. In the case of choosing 3 out of {a, b, c}, you can arrange them {a, b, c}, {a, c, b}, {b, a, c}, {b, c, a}, {c, a, b}, {c, b, a}. This is kind of the more natural answer to the question, how many ways can you arrange a bunch of items? In total, there are 6 possible ways to arrange these numbers. So let's think about this in terms of slots again. In the first slot, we can choose any option. Then, in the second slot, you have one fewer option, so you now have n-1 options. Then in the third slot, you have n-2 options because you have taken 2 out already, and so forth... So as we go on, we realize the answer to how many options is \(n*(n-1)*(n-2)*...\). This is also termed \(n!\), or n-factorial. But that's not our answer quite yet. Let's say we only want to arrange 2 items from a set of 4. In this case, we are just doing 4 * (4-1). We don't care about the (4-2) and (4-3) because we're stopping after 2. What we notice here is (4-2) and (4-3) can be written as \(2*1 = 2!\). So we take n, subtract r, and that gives us the factorial that we need to remove because we don't care about them. So our ending equation for permutations without repetitions is \(n!/(n-r)!\).</p>
+<p>Now we will discuss combinations without repetition. The difference between combination and permutation is that for combinations, we don't care about the order. So whereas before with permutations, {a, b, c} was different from {c, b, a}, we now consider these to just be one option. So from our list of permutations without repetition, all we need to do is remove the ones which are simply permutations of each unique combination. Good news, though, is that we just did that! The number of ways we can arrange r numbers is just \(r!\). So the equation for combinations without repetitions is just the equation for permutations without repetitions divided by \(r!\), aka \(\frac{n!}{r!(n-r)!}\).</p>
+<p>Finally, we get to combinations with repetitions. In this case, we don't care about the order, but we can repeat getting one number more than once. Imagine this: you are at an ice cream parlor, and there are 4 different ice cream flavors you can choose from... {a, b, c, d}, and you get 3 scoops total for your ice cream cone. Now imagine there is a robot behind ice cream "a", and your job is to tell him whether to scoop up ice cream or move over to the right to the next ice cream flavor. We will imagine "O" means scoop up ice cream, and ">" means to move over to the right. How would we scoop up 3 scoops of "a"? It would just be OOO>>>. The robot would take 3 scoops of "a", and then move over all the way to the right. What if we wanted one scoop of "a" and 2 scoops of "d"? Then it would be O>>>OO. What you'll realize is that for each set of instructions, we will get a different combinations (with repetitions) of ice cream flavors. If OOO>>> means three scoops of "a", there is no other set of instructions we can give that will also give us three scoops of "a". Therefore, all we need to do to find the combinations with repetitions is to find how many ways we can position the "O"s throughout our instructions OOO>>>. But wait! We already know how to do that! There are 6 positions total. And we need to pick 3 of those positions. The order doesn't matter, because they're all "O," but we can't repeat a single position more than once. So this is just combinations without repetitions, and we have that equation above... \(\frac{6!}{3!(6-3)!}\), and that will be our answer. Now, the number of positions we have in total will always be \(n+r-1\), because we are taking r scoops and moving n-1 times to get to the end. And r stays the same. So our end equation for combinations with repetitions is \(\frac{(n+r-1)!}{r!(n+r-1-r)!}=\frac{(n+r-1)!}{r!(n-1)!}\).</p>
+<p>So you can see here that working with combinatorics takes a bit more out of the box thinking, and requires a lot of visualization and imagining multiple iterations of similar things, which makes it inherently difficult. But also makes it super interesting!</p>
+{% endblock %}

@@ -80,33 +80,7 @@
                 <li><a href="{{ url_for('auth.login') }}">Login</a></li>
                 {% endif %}
                 <li>
-                  <a href="#" id="dropdownMenu1" data-toggle="dropdown">Study <span class="caret"></span></a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="{{ url_for('main.learn', subject='anatomy', chapter='index') }}">Anatomy</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='artificial_intelligence', chapter='index') }}">Artificial Intelligence</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='biology', chapter='index') }}">Biology</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='brain_machine_interface', chapter='index') }}">Brain Machine Interfaces</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='data_science', chapter='index') }}">Data Science</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='dev_ops', chapter='index') }}">DevOps</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='electronics', chapter='index') }}">Electronics</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='entrepreneurship', chapter='index') }}">Entrepreneurship</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='ethics', chapter='index') }}">Ethics</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='game_development', chapter='index') }}">Game Development</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='leadership', chapter='index') }}">Leadership</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='materials_testing', chapter='index') }}">Materials Testing</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='mathematics', chapter='index') }}">Mathematics</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='neuroscience', chapter='index') }}">Neuroscience</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='optics', chapter='index') }}">Optics</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='physics', chapter='index') }}">Physics</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='product_development', chapter='index') }}">Product Development</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='robotics', chapter='index') }}">Robotics</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='signal_processing', chapter='index') }}">Signal Processing</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='software', chapter='index') }}">Software</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='tech_ops', chapter='index') }}">TechOps</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='thin_films', chapter='index') }}">Thin Films</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='tissue', chapter='index') }}">Tissue</a></li>
-                    <li><a href="{{ url_for('main.learn', subject='wireless', chapter='index') }}">Wireless</a></li>
-                  </ul>
+                  <a href="{{ url_for('main.study')}}">Study</a>
                 </li>
                 <li>
                   <a href="#" id="dropdownMenu4" data-toggle="dropdown">Methods <span class="caret"></span></a>
@@ -125,7 +99,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
                     <li><a href="{{ url_for('main.companies') }}">Companies</a></li>
                     <li><a href="{{ url_for('main.edu') }}">Labs</a></li>
-                    <li><a href="{{ url_for('main.edu') }}">Ideas</a></li>
+                    <li><a href="{{ url_for('main.ideas') }}">Ideas</a></li>
                   </ul></li>
                </ul>
              </div><!-- /.navbar-collapse -->

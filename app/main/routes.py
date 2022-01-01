@@ -114,6 +114,10 @@ def task(id):
 	task = Task.query.get(id)
 	return render_template('task.html', task=task)
 
+@bp.route("/study", methods = ['GET'])
+def study():
+	return render_template('study.html')
+
 @bp.route("/create_post", methods = ['GET', 'POST'])
 @login_required
 @csrf.exempt
@@ -290,6 +294,10 @@ def moocs():
 def companies():
 	return render_template('companies.html')
 
+@bp.route("/ideas", methods = ['GET'])
+def ideas():
+	return render_template('ideas.html')
+
 @bp.route("/ethics", methods = ['GET'])
 def ethics():
 	return render_template('ethics.html')
@@ -354,7 +362,7 @@ def delete_test(test_id):
 @bp.route('/generate_images')
 def generate_images():
 	sequence = []
-	for i in range(60):
+	for i in range(20):
 		N = np.random.random_integers(1,9)
 		x = np.random.rand(N)
 		y = np.random.rand(N)
