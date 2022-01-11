@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Microelectrode arrays for assessment of neuron hyperexcitability in animal models of spine injury</h2>
+<h3>What is a microelectrode array?</h3>
+<p>A microelectrode array (MEA) is a grid of tightly spaced microscopic electrodes embedded in the bottom of each well in a multi-well MEA plate. Cells, such as neurons, which are electrically active, can be cultured over the electrodes creating a cohesive network. The functional behavior or electrical activity of this network can be recorded. These action potentials are recorded extracellularly and are known as field potentials.</p>
+<img src="{{ url_for('static', filename='img/MEAs/MEA.jpg') }}" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="{{ url_for('static', filename='img/MEAs/12well.png') }}" width=40%>
+<img src="{{ url_for('static', filename='img/MEAs/edge.jpg') }}">
+<h3>How does an MEA work?</h3>
+<p>Electrically active cells such as neurons or cardiomiocytes will produce an extra-cellular field potential that can be recorded. Axion's microelectrode array (MEA) plates have tightly spaced electrodes embedded in the culture surface of each well. Electrically active cells, such as neurons, can be cultured over the electrodes. Over time, as the cultures become established, they form cohesive networks and present an electrophysiological profile. The resulting electrical activity, spontaneous or induced firing of neurons, is captured from each electrode on a microsecond timescale.</p>
+<h3>What can an MEA measure?</h3>
+<p>Action potentials can be recorded and manually sorted into single units based on characteristic waveform shapes.
+<h3>How much does an MEA system cost?</h3>
+<p>To be discovered.</p>
+<img src="{{ url_for('static', filename='img/MEAs/wellsizes.png') }}">
+{% endblock %}

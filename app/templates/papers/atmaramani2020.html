@@ -1,0 +1,35 @@
+
+{% block content %}
+
+<div style="width: 75%; float:left">
+   <embed src="{{ url_for('static', filename='papers/atmaramani2020.pdf')}}#toolbar=0&navpanes=0&scrollbar=0&view=FitH" width=100% height=100% 
+ type="application/pdf">
+</div>
+
+<div style="width: 24%; margin-top: 15px; float:right;">
+  <p>
+Examined assay quality Z’-factor for adult mouse DRG neurons cultured on MEAs</p>
+<p>
+Male mice (4-6 weeks), DRGs collected via hemisection, dissociated with collagenase, DNase, papain, trituration with fire polished pastured pipette, resuspended in DMEM/F-12+glutamax+10%FBS+1%P/S+GDNF</p>
+
+<p>
+10,000 viable neurons were plated on multi-well MEAs (Axion Biosystems) pre-treated with 50 ug/mL poly-D-lysine overnight</p>
+<p>Supplementation with mitotic inhibitors uridine and 5-fluoro-2’-deoxyuridine after non-neuronal populations reaches confluence of ~90%</p>
+<p>12-well plate MEAs using Axion Maestro MEA recording system</p>
+<p>768 available substrate integrated microelectrodes</p>
+<p>12.5 kHz sampling rate recording extracellular voltage</p>
+<p>1-pole Butterworth band pass filter (200-3000 Hz)</p>
+<p>Individual spikes detected using 5.5 σ adaptive threshold method</p>
+<p>Thermal stimulation with stage plate heater (37 C to 42 C)</p>
+<p>Neuronal excitability is an important end point for chronic pain, since maladaptive changes can alter the bioelectrical properties of DRG neurons</p>
+<p>Embryonic DRG neurons exhibit stable baseline activity at DIV 11-14, consisting of at least 50% active microelectrodes per well (16 microelectrodes/well - 48 wells)</p>
+<p>Similar observations have been made for adult DRG neurons, wherein peak activity is observed at DIV9 and stable for at least 21 days, with an active microelectrode yield of 25% per well</p>
+
+<p>A data metric which is readily extractable from recordings is the mean firing rate (MFR), defined as the number of spikes over a specified time period</p>
+<p>The MFR of DRG neurons shows substantial variability when compared to electrical activity recorded from cortical networks and spinal motor neurons</p>
+<p>This lack of normality may reflect the intrinsic variance associated with a heterogeneous cell population</p>
+
+</div>
+
+
+{% endblock %}

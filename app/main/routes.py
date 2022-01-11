@@ -329,6 +329,24 @@ def drg():
 def bmi():
 	return render_template('bmi.html')
 
+@bp.route("/papers", methods = ['GET'])
+def papers():
+	return render_template('papers.html')
+
+@bp.route("/methods", methods = ['GET'])
+def methods():
+	return render_template('methods.html')
+
+@bp.route("/methodlist/<name>", methods = ['GET'])
+def methodlist(name):
+	return render_template('methods/{name}.html'.format(name=name))
+
+@bp.route("/papers/<name>", methods = ['GET'])
+def read(name):
+	return render_template('papers/{name}.html'.format(name=name))
+
+
+
 @bp.route("/bmiserruya", methods = ['GET'])
 def bmiserruya():
 	return render_template('bmiserruya.html')

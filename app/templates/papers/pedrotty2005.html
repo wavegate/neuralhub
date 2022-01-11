@@ -1,0 +1,18 @@
+
+{% block content %}
+
+<div style="width: 75%; float:left">
+   <embed src="{{ url_for('static', filename='papers/pedrotty2004.pdf')}}#toolbar=0&navpanes=0&scrollbar=0&view=FitH" width=100% height=100% 
+ type="application/pdf">
+</div>
+
+<div style="width: 24%; margin-top: 15px; float:right;">
+  <p>pulse width 0.5-250ms, threshold of 4 microA-3milliA, pulse rate of 0.5-10Hz</p>
+  <p>platinum electrodes are square 2.0 x 1.5 x 0.01 cm</p>
+  <p>if my voltage is 1V, and my resistance is 333 kOhm, then my current is 3 microAmps, which is lower than the lower threshold</p>
+  <p>they measured conductivity by measuring total resistance as a function of medium depth and taking slope of the resulting line</p>
+  <p>siemens (S) is unit of electrical conductance. In a DC circuit, it is the reciprocal of the resistance in Ohms. Units are amperes per volt).</p>
+</div>
+
+
+{% endblock %}
