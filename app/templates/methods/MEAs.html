@@ -2,16 +2,40 @@
 
 {% block content %}
 <h2>Microelectrode arrays for assessment of neuron hyperexcitability in animal models of spine injury</h2>
+<img src="{{ url_for('static', filename='img/MEAs/overview.png') }}" width=100%>
 <h3>What is a microelectrode array?</h3>
 <p>A microelectrode array (MEA) is a grid of tightly spaced microscopic electrodes embedded in the bottom of each well in a multi-well MEA plate. Cells, such as neurons, which are electrically active, can be cultured over the electrodes creating a cohesive network. The functional behavior or electrical activity of this network can be recorded. These action potentials are recorded extracellularly and are known as field potentials.</p>
-<img src="{{ url_for('static', filename='img/MEAs/MEA.jpg') }}" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
-<img src="{{ url_for('static', filename='img/MEAs/12well.png') }}" width=40%>
-<img src="{{ url_for('static', filename='img/MEAs/edge.jpg') }}">
+<img src="{{ url_for('static', filename='img/MEAs/wells2.png') }}" width=40%>
+
 <h3>How does an MEA work?</h3>
 <p>Electrically active cells such as neurons or cardiomiocytes will produce an extra-cellular field potential that can be recorded. Axion's microelectrode array (MEA) plates have tightly spaced electrodes embedded in the culture surface of each well. Electrically active cells, such as neurons, can be cultured over the electrodes. Over time, as the cultures become established, they form cohesive networks and present an electrophysiological profile. The resulting electrical activity, spontaneous or induced firing of neurons, is captured from each electrode on a microsecond timescale.</p>
-<h3>What can an MEA measure?</h3>
-<p>Action potentials can be recorded and manually sorted into single units based on characteristic waveform shapes.
-<h3>How much does an MEA system cost?</h3>
-<p>To be discovered.</p>
-<img src="{{ url_for('static', filename='img/MEAs/wellsizes.png') }}">
+<img src="{{ url_for('static', filename='img/MEAs/coupling.png') }}">
+<h3>Can MEAs be used for studying the dorsal root ganglion?</h3>
+<p>
+<p>Several studies have been published utilizing the MEA system in the study of the dorsal root ganglion:</p>
+<ul>
+  <li>Atmaramani et al. 2020 examined assay quality for adult murine DRG neurons cultured on MEAs.
+  <li>Black et al. 2018 developed a protocol for culturing adult murine DRG neurons for use with MEAs, displaying spontaneous activity from 9-21 days in vitro.</li> 
+  <li>Yang et al. 2016 studied spontaneous activity and response to thermal stimuli of a newly identified Nav1.7 mutation in DRGs isolated from 4-6 week old rats.</li>
+  </li>
+  <img src="{{ url_for('static', filename='img/MEAs/atma.png') }}" width=100%>
+</ul>
+<h3>What are the advantages of using MEAs?</h3>
+<ul>
+  <li>MEAs are noninvasive, do not require dyes/reporters, and can be probed in the same plate they were cultured in.</li>
+  <li>MEAs directly measure action potentials, as opposed to indirect measurements such as calcium imaging, or incomplete measurements of function such as gene and protein expression.</li>
+  <li>Each MEA electrode is capable of recording and stimulating.</li>
+  <li>MEAs allow for recording from multiple electrodes, with multiple wells, allowing for high throughput assays.</li>
+  <li>MEA plates have thin transparent bottoms that can allow for concurrent cell visualization / fluorescent imaging.</li>
+  <li>You don't have to be an electrophysiologist to use the Axion MEA system. You just culture your neurons in a MEA plate, load it into the system, and record neural data.</li>
+  <img src="{{ url_for('static', filename='img/MEAs/steps.jpg') }}" width=40%>
+</ul>
+<h3>What disadvantages are there to using MEAs?</h3>
+<ul>
+<li>MEAs are less suited for recording and stimulating single cells.</li>
+<li>MEAs require sufficient culture density and viability for longer-term recordings.</li>
+<li>MEA electrodes need to be in close contact with the cells.</li>
+</ul>
+<h3>What other tissues can be studied using MEAs?</h3>
+<p>Since MEAs are just tiny electrodes on cell culture plates, they are mainly used for studying electrogenic tissue (neurons, cardiomyocytes, and muscle cells).</p>
 {% endblock %}
