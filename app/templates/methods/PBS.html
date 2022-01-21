@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<pre>
+PBS (137 mM NaCl, 10 mM Na2HPO4, 2.7 mM KCl, 2 mM KH2PO4)
+sodium chloride
+sodium phosphate dibasic
+potassium chloride
+potassium phosphate monobasic
+
+137 mM * 0.001 M/mM * 1 mol/L/M * 58.44 g/mol * 1 L = 8.00628 g sodium chloride
+10 mM * 0.001 M/mM * 1 mol/L/M * 141.96 g/mol * 1 L = 1.4196 g sodium phosphate dibasic
+2.7 mM * 0.001 M/mM * 1 mol/L/M * 74.55 g/mol * 1 L = 0.2013 g potassium chloride
+2 mM * 0.001 M/mM * 1 mol/L/M * 136.086 g/mol * 1 L = 0.2722 g potassium phosphate monobasic
+</pre>
+
+{% endblock %}
