@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Adult mouse sensory  neurons on microelectrode arrays exhibit increased spontaneous and stimulus-evoked activity in the presence of interleukin-6</h1>
+<p>Bryan J. Black, Rahul Atmaramani, Rajeshwari kumaraju, Sarah Plagens, Mario Romero-Ortega, Gregory Dussor, Theodore J. Price, Zachary T. Campbell, and Joseph J. Pancrazio</p>
+<p>Department of Bioengineering, School of Behavioral and Brain Sciences, Department of Biological Sciences, The University of Texas at Dallas, Richardson, Texas</p>
+<p>J Neurophysiol. 2018.</p>
+<div class="row">
+ <img src="{{url_for('static',filename='img/black2018/Bryan-Black.png')}}" style="float:left;margin-left:200px">
+ <img src="{{url_for('static',filename='img/black2018/joseph-pancrazio.jpg')}}" style="float:right;margin-right:200px">
+</div>
+<h3>Overview</h3>
+<ul>
+  <li>The dorsal root ganglia (DRG) are collections of first-order sensory neurons involved in the perception of innocuous and noxious stimuli.</li>
+<img src="{{url_for('static',filename='img/black2018/pain.jpg')}}" width=70%>
+  <li>To date, in vitro data regarding primary sensory neuron excitability and sensitization have been principally derived from single-cell patch-clamp recordings. However, patch-clamp methods are invasive and can only assess one neuron at a time, making studying populations of neurons complicated and time-intensive.</li>
+  <img src="{{url_for('static',filename='img/black2018/patch.png')}}" width=50%>
+  <li>Substrate-integrated microelectrode arrays (MEAs) allows for label-free electrophysiological measurements from large populations of cells.</li>
+   <img src="{{url_for('static',filename='img/black2018/mea.jpg')}}" width=50%>
+   <li>Black et al. reports a detailed study of spontaneous and evoked activity using adult murine DRG neurons cultured on substrate-integrated MEAs.</li>
+ </ul>
+ <h3>Methods</h3>
+ <h4>Primary DRG extraction and culture</h4>
+ <ol>
+  <li>Dissect DRGs from 4- to 6-wk-old male Institute for Cancer Research (CD-1) mice into ice-cold HBSS.</li>
+  <li>Transfer DRG to dissociation (collagenase and DNase) solution and incubate.</li>
+  <li>Add trypsin and incubate.</li>
+  <li>Triturate with fire-polished glass pipette until solution is homogeneous.</li>
+  <li>Pass solution through 70-micrometer nylon filter.</li>
+  <li>Triple volume with DMEM/F-12 + 10% fetal bovine serum (FBS) to quench trypsinization.</li>
+  <li>Centrifuge and resuspend pellet in complete medium (DMEM/F-12 + GlutaMAX, 10% FBS, 10% penicillin-streptomycin, and GDNF).</li>
+  <li>5-10 microliters of medium containing ~10,000 cells are seeded at the center of each MEA device.</li>
+  <li>Incubate for 30 min to let cells adhere, and then flood each cell with 600 microliters of complete medium.</li>
+  <li>After nonneuronal cells reach 90% confluence (DIV 5-7), supplement media with mitotic inhibitors uridine and 5-fluoro-2'-deoxyuridine.</li>
+</ol>
+<h4>Multiwell microelectrode array plate preparation</h4>
+<ol>
+  <li>The day before dissection, coat the center of each well with polyethyleneimine.</li>
+  <li>The following morning, rinse plates with sterile double-deionized water and allow to dry.</li>
+  <li>Add 10 microliters of laminin to the center of each well and incubate for 2 hours. Remove laminin immediately before cell seeding.</li>
+  <img src="{{url_for('static',filename='img/black2018/48.png')}}">
+</ol>
+<h4>Extracellular recording</h4>
+<ol>
+  <li>Extracellular voltage recordings were acquired for 30 min from each multiwell plate every alternate day, beginning on day in vitro (DIV) 3, using 12-well MEA plates (768 total electrodes) and the Axion Maestro multiwell plate recording system (Axion BioSystems).</li>
+  <li>Continuous data were acquired simultaneously at 12.5 kHz per electrode and filtered using a 1-pole Butterworth band-pass filter (200-3,000 Hz).</li>
+  <li>Individual spikes were detected by filtering continuous data crossing a 5.5-σ adaptive threshold.</li>
+  <li>Unless otherwise stated, an active electrode was defined by >5 spikes per baseline recording session constituting a characteristic waveform (single unit).</li>
+  <li>Additional analysis (e.g., mean firing rate, synchrony index) was carried out using NeuroExplorer software (Nex Technologies) in combination with Axion's AxIS Metric program.</li>
+    <img src="{{url_for('static',filename='img/black2018/metric.png')}}" width=100%>
+<h4>Electrical stimulation</h4>
+<ol>
+  <li>Electrical stimulation and recording was performed using Axion's Stimulation Studio in combination with software solutions provided by AxIS 2.3.</li>
+  <li>7-8 active electrodes in each well were selected and stimulated with a 100-Hz cathodic-leading biphasic square pulse train (x10 stimuli) with an amplitude of 1.2 V and a pulse duration of 750 microsec/phase.</li>
+</ol>
+<h3>Results</h3>
+<h4>Spontaneous activity</h4>
+<ul>
+  <li>After a single DIV, action potentials could be readily recorded with excellent signal-to-noise ratios and manually sorted into single units based on characteristic waveform shapes.</li>
+  <div class="row">
+  <img src="{{url_for('static',filename='img/black2018/fig1.png')}}" style="float:left;margin-left:-100px">
+  <img src="{{url_for('static',filename='img/black2018/fig2.png')}}" style="float:right;margin-right:-100px">
+  </div>
+  <li>Individual recording sites on microelectrode arrays in contact with neural tissue, both in vivo and in vitro, often detect >1 unit or distinct bioelectrical signal source. To determine whether our analysis of individual recording channels would reflect single cells (single units), waveforms were sorted in 12 representative wells on DIV 15. Only 29 out of 384 active channels exhibited >1 unit (7.6%), indicating that under our culture conditions the recordings from individual microelectrode sites likely correspond to a single bioelectric source. Therefore, all additional analyses were carried out with the assumption that channel recordings represented single cells.</li>
+  <img src="{{url_for('static',filename='img/black2018/fig3.png')}}" style="margin-left:-60px">
+</ul>
+<h4>Electrical field stimulation</h4>
+<ul>
+  <li>Single biphasic pulses were found to be ineffective at eliciting activity within the range of amplitude/duration parameters available through the Axion Maestro system.</li>
+  <li>Observed differential responsiveness (both activation and inhibition) in response to pulse trains of 10 cathodic-leading biphasic square pulses (1.2 V, 750-microsec phase duration) at or above 100 Hz.</li>
+  <li>54.8% exhibited activation only (evoked activity), 11.9% exhibited inhibition only (reduced activity compared with baseline), and 16.7% exhibited activation followed by inhibition.</li>
+</ul>
+<div class="row">
+  <img src="{{url_for('static',filename='img/black2018/fig4.png')}}" style="float:left;margin-left:-25px">
+<img src="{{url_for('static',filename='img/black2018/fig5.png')}}" style="float:right;margin-right:-25px">
+</div>
+<h4>Capsaicin and temperature responsiveness</h4>
+<ul>
+<li>27, 36.6, and 39.1% of electrodes were found to be responsive to 10, 100, and 1,000 nM capsaicin, respectively. These values are on the lower end of previously reported values of capsaicin responsiveness in vitro, but may be attributable to differences in cell culture (embryonic vs. adult, lumbar only vs. lumbar and cervical DRG, calcium imaging vs. patch-clamp vs. MEA).</li>
+<li>38.9% of channels were responsive at 42 degrees C induced via the stage plate heater of the recording system.</li>
+</ul>
+<img src="{{url_for('static',filename='img/black2018/fig6.png')}}">
+<h4>IL-4 Incubation</h4>
+<ul>
+  <li>Median firing rates significantly increased from 0.02 to 0.15 Hz over the 3 h of IL-6 exposure. After 48-h incubation, IL-6 treated cultures still exhibited both increased spontaneous firing rates and increased interspike interval (ISI) coefficient of variation (CV).
+  </li>
+</ul>
+<div class="row">
+  <img src="{{url_for('static',filename='img/black2018/fig7.png')}}" style="float:left;margin-left:-25px">
+<img src="{{url_for('static',filename='img/black2018/fig8.png')}}" style="float:right;margin-right:-25px">
+</div>
+<h3>Discussion</h3>
+<ul>
+  <li>First detailed characterization of spontaneous and stimulus-evoked recordings from adult mouse DRG neurons in vitro using a multiwell MEA platform for <21 days.</li>
+  <li>The model here does not preclude the study of other inflammatory mediators known to alter excitability in vivo or in vitro nor does it preclude the use of other tissue soruces, including primary DRG from previously injured animals. DRG extracted from animals subjected to chronic constriction, thoracic spinal injury, and chemotherapy-induced neuropathy have been shown to retain their hyperexcitable phenotype in vitro.</li>
+  <li>Previous studies have reported little to no spontaneous activity from adult murine DRG neurons cultivated from un-injured animals for MEA or patch-clamp recordings. However, this group developed their adult DRG protocols to allow for proliferation of nonneuronal support cells, including satellite glial and Schwann cells, that may promote increased intrinsic activity and functional connections.</li>
+  <li>Their observations of morphological culture development and icnreasing active electrode yield suggest that they are interfacing with a combination of somata and axons.</li>
+  <li>Adult mouse DRG on MEAs may serve as a potential model for peripheral analgesic and mechanistic lead discovery.</li>
+</ul>
+
+{% endblock %}
