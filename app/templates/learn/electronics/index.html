@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Electronics</h2>
+<h3>Mesh Current Solution Method</h3>
+<img src="{{url_for('static',filename='img/electronics/1.png')}}">
+<p>So the mesh current solution method is basically applying Kirchoff's Voltage Law in a slightly different way. You can imagine the circuit as a cookie cutter. In the example above, if you use this design as a cookie cutter, you will cut up a cookie in 3 square chunks, each of which we define as a mesh. Now we define a current running clockwise around each mesh, and add up the voltage drops in that current.</p>
+$$0=V_1+i_a*R_1+(i_a-i_b)*R_2 = -40+i_a*2+(i_a-i_b)*8$$
+$$40=2i_a+8i_a-8i_b=10i_a-8i_b$$
+<p>Notice that the voltage drop across R2 uses the summation of \(i_a\) and \(i_b\), but \(i_b\) is running in the opposite direction so it is negative. Also note that our sign convention for positive voltage drop is from positive to negative, so the negative to positive voltage source V1 is negative.</p>
+$$0=(i_b-i_a)*R_2+i_b*R_3+(i_b-i_c)*R_5$$
+$$0=8i_b-8i_a+6i_b+6i_b-6i_c=-8i_a+20i_b-6i_c$$
+$$0=(i_c-i_b)*R_5+i_c*R_4+20$$
+$$-20=6i_c-6i_b+4i_c=-6i_b+10i_c$$
+<p>So, in summary, the mesh equations are:</p>
+$$\text{Mesh a: }40=10i_a-8i_b$$
+$$\text{Mesh b: }0=-8i_a+20i_b-6i_c$$
+$$\text{Mesh c: }-20=-6i_b+10i_c$$
+<p>Which means, to solve this, just need to do some matrix algebra:</p>
+$$\begin{bmatrix}10 & -8 & 0 & | & 40 \\ -8 & 20 & -6 & | & 0 \\ 0 & -6 & 10 & | & -20\end{bmatrix}$$
+<p>This will give us \(i_a=5.6\), \(i_b=2\), and \(i_c=-0.8\). Once you have these currents, you can solve for everything else.</p>
+{% endblock %}
