@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 114 101.3" style="enable-background:new 0 0 114 101.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#231F20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#231F20;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{font-family:'MyriadPro-Regular';}
+	.st3{font-size:6.48px;}
+</style>
+<g id="XMLID_75_">
+	<path id="XMLID_133_" class="st0" d="M26.1,59.5c4.9,0.1,9,4.1,9,9c0,5-4.1,9.2-9.1,9.1c-4.9,0-9.1-4.1-9.1-9.1
+		C16.9,63.6,21.1,59.5,26.1,59.5z"/>
+	<path id="XMLID_132_" class="st1" d="M24.2,64.3c1.2,0,2.4,0,3.6,0"/>
+	<path id="XMLID_131_" class="st1" d="M24.2,73.7c1.2,0,2.4,0,3.6,0"/>
+	<path id="XMLID_130_" class="st1" d="M26,62.5c0,1.2,0,2.4,0,3.6"/>
+	<path id="XMLID_134_" class="st0" d="M26,13.5v13c0,0.6,0,1.1,0,1.7c0,0.5,0,1.1,0,1.6c1.6,0.5,3.2,1.1,4.8,1.6
+		c-3.2,1.1-6.5,2.2-9.7,3.2c3.3,1.1,6.5,2.2,9.8,3.3c-3.2,1.1-6.4,2.1-9.7,3.2c3.2,1.1,6.5,2.2,9.7,3.2c-3.3,1.1-6.5,2.2-9.8,3.3
+		c1.6,0.5,3.2,1.1,4.8,1.6c0,1.1,0,2.1,0,3.2l0.1,2.3c0,1.6,0,3.2,0,4.8"/>
+	<path id="XMLID_136_" class="st0" d="M26,13.5h25c0.5,0,1.1,0,1.6,0c0.5,0,1.1,0,1.6,0c0.5-1.6,1.1-3.2,1.6-4.8
+		c1.1,3.3,2.2,6.5,3.2,9.7c1.1-3.3,2.2-6.5,3.3-9.8c1.1,3.2,2.1,6.4,3.2,9.7c1.1-3.2,2.2-6.5,3.2-9.7c1.1,3.3,2.2,6.5,3.3,9.8
+		c0.5-1.6,1.1-3.2,1.6-4.8c1.1,0,2.2,0,3.2,0l20.8-0.1l0.1,28.3c0,1.1,0,2.1,0,3.2c1.6,0.5,3.2,1.1,4.8,1.6
+		c-3.3,1.1-6.5,2.2-9.8,3.3c3.2,1.1,6.5,2.2,9.7,3.2c-3.2,1.1-6.4,2.2-9.7,3.2c3.3,1.1,6.5,2.2,9.8,3.3c-3.2,1.1-6.5,2.2-9.7,3.3
+		c1.6,0.5,3.2,1.1,4.8,1.6c0,0.5,0,1.1,0,1.6c0,0.6,0,1.1,0,1.7v28.5H26V82.1c0-1.4,0-2.8,0-4.3"/>
+</g>
+<text id="XMLID_64_" transform="matrix(1 0 0 1 1.9996 70.0423)" class="st2 st3">72 V</text>
+<text id="XMLID_84_" transform="matrix(1 0 0 1 3.4751 40.4166)" class="st2 st3">2.4 Ω</text>
+<text transform="matrix(1 0 0 1 107.2243 57.1331)" class="st2 st3">V</text>
+<text transform="matrix(0.583 0 0 0.583 110.84 59.2908)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 107.2242 57.1333)" class="st2 st3">V</text>
+<text transform="matrix(0.583 0 0 0.583 110.84 59.291)" class="st2 st3">1</text>
+<text id="XMLID_38_" transform="matrix(1 0 0 1 80.7894 57.1331)" class="st2 st3">8 Ω</text>
+<text id="XMLID_37_" transform="matrix(1 0 0 1 55.5394 5.9039)" class="st2 st3">1.6 Ω</text>
+</svg>

@@ -2,9 +2,28 @@
 
 {% block content %}
 <h2>Electronics</h2>
-<h3>Mesh Current Solution Method</h3>
+<h3>Engineering Circuit Analysis</h3>
+<h4>Resistors in Series and Parallel</h4>
+<p>Resistors in series can be summed to form their total resistance.</p>
+<p>Resistors in parallel follow the following equation:</p>
+$$1/R_\text{total}=1/R_1+1/R_2+1/R_3...$$
+<h4>Kirchhoff's Current Law</h4>
+<p>Kirchhoff's current law states that the current going into a node is equal to the current going out of a node.</p>
+<h4>Kirchhoff's Voltage Law</h4>
+<p>Kirchhoff's voltage law states that the voltage drops around any loop in a circuit is equal to 0.</p>
+<h4>Voltage Divider</h4>
+<p>A voltage divider is simply splitting up a voltage source across more than one resistor.</p>
+<img src="{{url_for('static',filename='img/electronics/voltage_divider.svg')}}" style="width: 30%">
+<p>We know that the total resistance across two resistors is just the sum. So we can find the current going through both resistors.</p>
+$$i=V_1/(R_1+R_2)$$
+<p>Which means the voltage drop across any single resistor is:</p>
+$$V=V_1/(R_1+R_2)*R_1$$
+<p>Basically, the voltage drop across any resistor in series is proportional to the size of that resistor. You can imagine that this can allow you to divide any single voltage sorce into separate voltage drops using differently sized resistors.</p>
+<h4>Node Voltage Method</h4>
+<p>For node voltage, you choose a reference node, and then look at any essential nodes. An essential node is a node with three or more components. You then do KCL on each essential node.</p>
+<h4>Mesh Current Method</h3>
 <img src="{{url_for('static',filename='img/electronics/1.png')}}">
-<p>So the mesh current solution method is basically applying Kirchoff's Voltage Law in a slightly different way. You can imagine the circuit as a cookie cutter. In the example above, if you use this design as a cookie cutter, you will cut up a cookie in 3 square chunks, each of which we define as a mesh. Now we define a current running clockwise around each mesh, and add up the voltage drops in that current.</p>
+<p>So the mesh current solution method is basically Kirchhoff's Voltage Law but for each "mesh" or cookie in the circuit. You can imagine the circuit as a cookie cutter. In the example above, if you use this design as a cookie cutter, you will cut up a cookie in 3 square chunks, each of which we define as a mesh. Now we define a current running clockwise around each mesh, and add up the voltage drops in that current, then set the sum of those voltage drops to 0 due to Kirchhoff's voltage law.</p>
 $$0=V_1+i_a*R_1+(i_a-i_b)*R_2 = -40+i_a*2+(i_a-i_b)*8$$
 $$40=2i_a+8i_a-8i_b=10i_a-8i_b$$
 <p>Notice that the voltage drop across R2 uses the summation of \(i_a\) and \(i_b\), but \(i_b\) is running in the opposite direction so it is negative. Also note that our sign convention for positive voltage drop is from positive to negative, so the negative to positive voltage source V1 is negative.</p>
@@ -19,4 +38,63 @@ $$\text{Mesh c: }-20=-6i_b+10i_c$$
 <p>Which means, to solve this, just need to do some matrix algebra:</p>
 $$\begin{bmatrix}10 & -8 & 0 & | & 40 \\ -8 & 20 & -6 & | & 0 \\ 0 & -6 & 10 & | & -20\end{bmatrix}$$
 <p>This will give us \(i_a=5.6\), \(i_b=2\), and \(i_c=-0.8\). Once you have these currents, you can solve for everything else.</p>
+<h4>Source Transformations</h3>
+<p>The first source transformation (basically equivalent circuit pieces) is the ability to convert a voltage source and its resistance in series to a current source and its resistance in parallel. These are essentially the same thing. This means that no matter what load you place at the ends, you'll get the same current running through the load and the same voltage drop across the load. You can confirm this by testing a short circuit (just a wire) and an open circuit (no load).</p>
+<img src="{{url_for('static',filename='img/electronics/3.png')}}">
+<p>In this case, the value of the new current source can be calculated with Ohm's law: i = V/R.</p>
+<p>Also note that if there is a voltage source in parallel with a resistor, you can ignore that resistor. The voltage source will always produce enough current to pass through the load, and the voltage drop across the load will be the same. In the same way, if you have a current source in series with a resistor, you can ignore that resistor. The current source will always produce enough current to negate that resistor.</p>
+<p>So, applying this along with simplifying resistors in series and parallel, we can simplify a long circuit into a shorter one.</p>
+<img src="{{url_for('static',filename='img/electronics/5.svg')}}" width=80%>
+<p>So let's simplify the circuit above. The question asks for V1, so let's not combine that resistor just yet. We can transform the two left voltage sources into current sources.</p>
+<img src="{{url_for('static',filename='img/electronics/6.svg')}}" width=80%>
+<p>Then, we can combine the resistors in parallel, and combine the current sources in parallel. Then transform back into a voltage source.</p>
+<img src="{{url_for('static',filename='img/electronics/7.svg')}}" width=80%>
+<p>Finally, we can calculate the current running through the circuit, and then we can multiply that current by the resistance across V1 to get the voltage drop across V1. Answer found!</p>
+<h4>Thevenin Equivalent Circuits</h4>
+<p>A Thevenin equivalent circuit is basically doing a "source" transformation for an entire circuit, converting power sources, resistors, inductors, and capacitors into one "black box" element. The only factors that can be taken out of this equivalent circut are the Thevenin equivalent Voltage (VTH) and the Thevenin equivalent resistance (RTH). These values are found using the Kirchhoff laws, mesh current, or node voltage methods to solving circuits.</p>
+<img src="{{url_for('static',filename='img/electronics/thevenin.svg')}}" width=60%>
+<p>The Thevenin equivalent voltage is the open circuit voltage across a and b, meaning the voltage drop between the two terminals when there is no circuit in between them. The Thevenin equivalent resistance can be calculated from the current running through a short circuit, or just a wire, between a and b.</p>
+<img src="{{url_for('static',filename='img/electronics/thevenin_2.svg')}}">
+<p>So let's find the Thevenin equivalents for the circuit above. The first thing we can do is find the Thevenin equivalent voltage VTH. We can find this by using mesh currents while the circuit between a and b is open, aka what is the voltage drop across a and b.</p>
+<img src="{{url_for('static',filename='img/electronics/thevenin_3.svg')}}">
+<p>Remember that with the mesh current method, we are solving for the currents running through each mesh. Since the only source of current in i1 is a current source, we already know the current!</p>
+$$\text{Mesh 1}: i_1=3$$
+$$\text{Mesh 2}: 0=150*(i_2-i_1)+10*i_2+40*(i_2-i_3)$$
+$$0=150i_2-150i_1+10i_2+40i_2-40i_3$$
+$$-150i_1+200i_2-40i_3=0$$
+$$\text{Mesh 3}: 0=-300+40*(i_3-i_2)+8*i_3$$
+$$0=-300+40i_3-40i_2+8i_3$$
+$$-40i_2+48i_3=300$$
+$$
+  \left[\begin{array}{rrr|r}
+    1 & 0 & 0 & 3 \\
+    -150 & 200 & -40 & 0 \\
+    0 & -40 & 48 & 300
+  \end{array}\right]
+$$
+<p>Solving this system of equations gives us \(i_1=3\), \(i_2=4.2\), \(i_3=9.75\).</p>
+<p>Now, we know that the voltage drop from a to b is the same as the voltage drop across the 10 ohm and 8 ohm resistors.</p>
+$$V_{\text{TH}}=10*i_2+8*i_3=10*4.2+8*9.75=120$$
+<p>To find the Thevenin equivalent resistance, we can do this two ways. One, we can find the current going through a wire between a and b. To do that, we could create a new mesh bordering a and b and use the mesh current method.</p>
+<p>Another way is to remove all power sources from the circuit by turning voltage sources into short circuits and all current sources into open circuits, and then finding the equivalent resistance through the circuit.</p>
+<img src="{{url_for('static',filename='img/electronics/thevenin_4.svg')}}">
+<p>Although they are drawn perpendicular, the 40 ohm resistor and the 8 ohm resistor are actually in parallel (you can imagine rotating the 8 ohm resistor sideways), so their equivalent resistance becomes 320/48 = 6.66. Then you just have 6.66 in series with 10 ohm resistor, which totals 16.66, which is in parallel with 150 ohm resistor, giving the equivalent resistance between a and b to be 15 ohms. So in the end, our solution is given:</p>
+<img src="{{url_for('static',filename='img/electronics/thevenin_5.svg')}}" style="width: 80%">
+<h4>Norton Equivalent Circuits</h4>
+<p>Norton equivalent circuit is just a Thevenin equivalent circuit that has undergone a source transformation to a current source + parallel resistor. Let's find the Norton equivalent circuit for the circuit shown below:</p>
+<img src="{{url_for('static',filename='img/electronics/norton_1.svg')}}">
+<p>You'll notice that there is a wire connecting two circuits. This is a grounding wire. There is no actual current running through that wire. However, it makes sure that the "bottom" voltage of each circuit remains the same so that there is no huge potential difference between one circuit to the other. You can think of the analogy of a bunch of separate lakes. Each circuit is a lake of water floating in the sky. We don't want one lake to start accidentally floating down into another lake, so we make all the lakes stay at the same sea level. This prevents things like arcing (water flowing from one lake to another).</p>
+<p>Anyways, let's write the mesh current equations. Note that in the second equation, we know that i2 is simply -20i.</p>
+$$\text{Mesh 1: }0=-5+2000*i+3v$$
+$$\text{Mesh 2: }i_2=-20i$$
+<p>Finally, we notice that \(v=-20i*25=-500i\). So we can go back to Mesh 1.</p>
+$$0=-5+2000i-1500i=-5+500i$$
+$$i=0.01$$
+<p>So now we know that our voltage v is \(v=-20*0.01*25=-5\). You will notice that is the voltage drop between a and b in an open circuit, which means v is also the Thevenin equivalent voltage. So \(V_\text{TH}=-5\).</p>
+<p>So now we have to find the Thevenin equivalent resistance. Because of the dependent sources, we can't use the "remove all the sources and find the equivalent resistance" method. So we need to short circuit between a and b and find the current running through, and use that and Ohm's law to find the resistance.</p>
+<img src="{{url_for('static',filename='img/electronics/norton_2.svg')}}">
+<p>What you will find is that we can remove a couple of parts of our circuit once we do this. Now that we have short circuited a and b, there is no longer a current running through the 25 ohm resistor. So we can actually just remove that part of the circuit completely. Then, because there is no more volage drop across that resistor (it's a short circuit!), our value of v is 0, and so the 3v voltage source also becomes 0, so we can simply remove that source and replace it with a wire.</p>
+<img src="{{url_for('static',filename='img/electronics/norton_3.svg')}}">
+<p>So our circuit now looks like the above. Notice that i is no longer the same as before because we added a short circuit to the system. But it should be pretty easy to see that \(i=5/2000=0.0025\), which means that the current running through a and b is \(-20*0.0025=-0.05\). Now that we have the current, we use Ohm's law, and get our resistance to be \(-5/-0.05=100\). So we conclude that our \(V_\text{TH}=-5\) and \(R_\text{TH}=-100\). Which means our Norton equivalents are \(i_\text{N}=-0.05\) and \(R_\text{N}=-100\) (in the drawing I can switch these to positive by flipping the current source upside down to travel from b to a).</p>
+<img src="{{url_for('static',filename='img/electronics/norton_4.svg')}}"  style="width: 100%">
 {% endblock %}
