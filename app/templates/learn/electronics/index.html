@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<style>
+  img {
+    width: 50%;
+  }
+</style>
 <h2>Electronics</h2>
 <h3>Engineering Circuit Analysis</h3>
 <h4>Resistors in Series and Parallel</h4>
@@ -80,6 +86,7 @@ $$V_{\text{TH}}=10*i_2+8*i_3=10*4.2+8*9.75=120$$
 <img src="{{url_for('static',filename='img/electronics/thevenin_4.svg')}}">
 <p>Although they are drawn perpendicular, the 40 ohm resistor and the 8 ohm resistor are actually in parallel (you can imagine rotating the 8 ohm resistor sideways), so their equivalent resistance becomes 320/48 = 6.66. Then you just have 6.66 in series with 10 ohm resistor, which totals 16.66, which is in parallel with 150 ohm resistor, giving the equivalent resistance between a and b to be 15 ohms. So in the end, our solution is given:</p>
 <img src="{{url_for('static',filename='img/electronics/thevenin_5.svg')}}" style="width: 80%">
+<p>Now, what if your circuit has dependent voltage/current sources? In this case, you can't just collapse all the resistors together to find the equivalent resistance. In this case, you attach a test source to a->b, much like as if you were testing the resistance using an ohmmeter (which runs a current through the circuit and calculates the resistance using Ohm's law).</p>
 <h4>Norton Equivalent Circuits</h4>
 <p>Norton equivalent circuit is just a Thevenin equivalent circuit that has undergone a source transformation to a current source + parallel resistor. Let's find the Norton equivalent circuit for the circuit shown below:</p>
 <img src="{{url_for('static',filename='img/electronics/norton_1.svg')}}">
@@ -97,4 +104,21 @@ $$i=0.01$$
 <img src="{{url_for('static',filename='img/electronics/norton_3.svg')}}">
 <p>So our circuit now looks like the above. Notice that i is no longer the same as before because we added a short circuit to the system. But it should be pretty easy to see that \(i=5/2000=0.0025\), which means that the current running through a and b is \(-20*0.0025=-0.05\). Now that we have the current, we use Ohm's law, and get our resistance to be \(-5/-0.05=100\). So we conclude that our \(V_\text{TH}=-5\) and \(R_\text{TH}=-100\). Which means our Norton equivalents are \(i_\text{N}=-0.05\) and \(R_\text{N}=-100\) (in the drawing I can switch these to positive by flipping the current source upside down to travel from b to a).</p>
 <img src="{{url_for('static',filename='img/electronics/norton_4.svg')}}"  style="width: 100%">
+<h4>Maximum Power Transfer</h4>
+<p>So if you have any circuit, and you want to add a load to that circuit, what resistance should your load be to give you the maximum power delivered from your circuit? For example, say you want to add a light bulb to your circuit. Should you make your light bulb high or low resistance? What people have found is that the maximum power is delivered to a load when the resistance of the load is equal to the Thevenin resistance of the circuit. If you think about it, if your load has 0 resistance, then there is 0 power delivered because \(P=iv=i^2R=0\). On the other hand, if your load has infinite resistance, then power again is 0 because then your current is 0. So the maximum power is somewhere in the middle, and it just happens to be when load is equal to the Thevenin equivalent resistance of the circuit. </p>
+<p>So what's the maximum power delivered in terms of our Thevenin equivalent voltage? That's pretty easy to figure out, since our entire circuit is just our Thevenin equivalent voltage, our Thevenin equivalent resistor, and our load resistor which is equal to the Thevenin equivalent resistor. So to find power, which is current times voltage...</p>
+$$i=\frac{V_\text{TH}}{2R_\text{TH}}$$
+$$P=i^2R=\frac{V_\text{TH}^2}{4R_\text{TH}}$$
+<img src="{{url_for('static',filename='img/electronics/power.svg')}}" style="width: 50%">
+<p>Let's take a look at the above circuit. Our goal here is to find the load resistance R such that we maximize the power delivered to that load. We know that to find this value, we just need to find the Thevenin equivalent resistance of our circuit. To do this, we short circuit any voltage sources and open circuit any current sources (of which we have none). Then, we apply a test current to the circuit, resulting in the circuit below:</p>
+<img src="{{url_for('static',filename='img/electronics/power_2.svg')}}" style="width: 50%">
+<p>Now, you can use mesh current method to find the currents going through each resistor. Then, you know that the voltage drop across the test current is the same as the voltage drop going across the other two 4 ohm resistors in its mesh, which gives you the answer of 3 V. This means we need 3 V to send a 1 A current through the Thevenin equivalent resistor, meaning VTH is 3 Ohms, which is equal to the load R which maximizes the power delivered. If you want to then find the power, you would then need to set the load resistor to 3 Ohms and then find the current running through with mesh currents and use P=i^2R.</p>
+<h4>Superposition in Circuits</h4>
+<p>Superposition in circuits is useful for breaking down a circuit into parts. It is not so important to know how to do it if you have high computing power that can solve large matrices, but is more important if you have to do things by hand. What superposition means basically is that the voltage drop across each component in the circuit is the sum of the voltage drops due to each single power source. For example, say you have 5 voltage sources in your circuit. If you find the voltage across your component from each of those voltage sources, and then add them together, that will be the total voltage drop from all 5 voltage sources. It's kinda like the concept of summative potentials in neurons. You get all these action potentials going into the neuron via its dendrites, and at the axon hillock things get summed together to produce one big signal. In this case, each one of these action potentials is coming from a different voltage source in your circuit. This property of being able to sum all of these separate voltages is the property of a linear system, one in which you can add inputs together.</p>
+<p>As an aside, a circuit symbol with an arrow through it just means the component is variable.</p>
+<h4>Inductors</h4>
+<p>Inductors are circuit components that store energy in the form of a concentrated magnetic field. Any current through a wire produces a magnetic field. By coiling the current, it concentrates the magnetic field. This is what an inductor is. It is a coiled piece of wire. The units of an inductor is the Henry, and inductors are labelled with the letter L. Understanding what exactly is going on with the magnetic field is an area of physics.</p>
+<img src="{{url_for('static',filename='img/electronics/inductor.svg')}}" style="width: 10%">
+<p>The voltage across an inductor is its inductance times the derivative of the current with respect to time, aka how fast the current changes through the inductor.</p>
+$$V=L\frac{di}{dt}$$
 {% endblock %}
