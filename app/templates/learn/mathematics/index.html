@@ -57,12 +57,84 @@ p, button {
 <pre>
 	-mappings and functions
 	-sequences and series
-	-differential calculus - differential and integral calculus is important for understanding the derivation of the Nernst equation, which describes the membrane potential
+	-differential calculus - differential and integral calculus is important for understanding the derivation of the Nernst equation, which describes the membrane potential, need derivatives for everything (calculating inductors)
 	-integral calculus
 	-functions of several variables
 	-functional equations
 	-complex analysis
 </pre>
+<h2>Calculus</h2>
+<h3>Derivatives</h3>
+<h4>Definition of the derivative</h4>
+<p>The derivative of \(f(x)\) with respect to x is the function \(f'(x)\) and is defined as:</p>
+$$f'(x)=\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$$
+<p>h is the change in x. The top part of the fraction is the change in y, while the bottom of the fraction is the change in x. So the equation is just the slope. The slope of what? The slope in f(x) as the h, or change in x, approaches 0. Therefore, it is the instantaneous slope at point x.</p>
+<p>Given \(y=f(x)\):</p>
+$$f'(x)=y'=\frac{df}{dx}=\frac{dy}{dx}$$
+<h4>Properties of the derivative</h4>
+<p>The derivative of the sum of two functions is the sum of the individual derivatives of the separate functions.</p>
+$$(f(x)+g(x))'=f'(x)+g'(x)$$
+<p>You can factor a multiplicative constant out of a derivative.</p>
+$$(cf(x))'=cf'(x)$$
+<p>The derivative of a constant is 0.</p>
+$$\frac{d}{dx}(c)=0$$
+<p>The power rule: if x has an numerical exponent, its derivative brings it down to the left and the new exponent is 1 less: if \(f(x)=x^n\) then \(f'(x)=nx^{n-1}\).</p>
+<p>Product rule: if two functions are differentiable, then:</p>
+$$(fg)'=f'g+fg'$$
+<p>Quotient rule: if two functions are differentiable, then:</p>
+$$(\frac{f}{g})'=\frac{f'g-fg'}{g^2}$$
+<p>The six trig derivatives:</p>
+$$\frac{d}{dx}(\sin(x))=\cos(x)$$
+$$\frac{d}{dx}(\cos(x))=-\sin(x)$$
+$$\frac{d}{dx}(\tan(x))=\sec^2(x)$$
+$$\frac{d}{dx}(\cot(x))=-\csc^2(x)$$
+$$\frac{d}{dx}(\sec(x))=\sec(x)\tan(x)$$
+$$\frac{d}{dx}(\csc(x))=-\csc(x)\cot(x)$$
+<p>The derivatives of exponential and logarithmic functions are as follows:</p>
+$$\frac{d}{dx}(e^x)=e^x$$
+$$\frac{d}{dx}(a^x)=a^x\ln{a}$$
+$$\frac{d}{dx}(\ln{x})=\frac{1}{x}$$
+$$\frac{d}{dx}(\log_a{x})=\frac{1}{x\ln{a}}$$
+<p>The derivatives of the inverse trig functions:</p>
+$$\frac{d}{dx}(\sin^{-1}(x))=\frac{1}{\sqrt{1-x^2}}$$
+$$\frac{d}{dx}(\cos^{-1}(x))=-\frac{1}{\sqrt{1-x^2}}$$
+$$\frac{d}{dx}(\tan^{-1}(x))=\frac{1}{1+x^2}$$
+$$\frac{d}{dx}(\cot^{-1}(x))=-\frac{1}{1+x^2}$$
+$$\frac{d}{dx}(\sec^{-1}(x))=\frac{1}{|x|\sqrt{1-x^2}}$$
+$$\frac{d}{dx}(\csc^{-1}(x))=-\frac{1}{|x|\sqrt{1-x^2}}$$
+<p>The analog to the trig functions are the hyperbolic functions:</p>
+$$\sinh{x}=\frac{e^x-e^{-x}}{2}$$
+$$\cosh{x}=\frac{e^x+e^{-x}}{2}$$
+<p>The derivatives to the hyperbolic functions are as follows:</p>
+$$\frac{d}{dx}(\sinh{x})=\cosh{x}$$
+$$\frac{d}{dx}(\cosh{x})=\sinh{x}$$
+$$\frac{d}{dx}(\tanh{x})=\sech^2{x}$$
+$$\frac{d}{dx}(\coth{x})=-\csch^2{x}$$
+$$\frac{d}{dx}(\sech{x})=-\sech{x}\tanh{x}$$
+$$\frac{d}{dx}(\csch{x})=-\csch{x}\coth{x}$$
+<h4>Chain rule</h4>
+<p>If we have two functions and they are both differentiable, then the derivative of the composite of the two \((f\circ g)(x)\):</p>
+$$f'(g(x))g'(x)$$
+<p>Similarly, if we have \(y=f(u)\) and \(u=g(x)\), then the derivative of y is:</p>
+$$\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}$$
+<p>So, for example, if you have the function \(R(z)=\sqrt{5z-8}\):</p>
+$$f(z)=\sqrt{z}$$
+$$g(z)=5z-8$$
+$$R'(z)=f'(g(z))g'(z)$$
+$$=f'(5z-8)g'(z)$$
+$$=(5)*(1/2)(5z-8)^{-1/2}$$
+<h4>Implicit differentiation</h4>
+<p>So what if you want to find the derivative of a function that is not in the form \(y=f(x)\)?</p>
+$$xy=xy(x)=1$$
+$$\frac{d}{dx}(xy(x))=\frac{d}{dx}(1)$$
+<p>Use the product rule:</p>
+$$(1)y(x)+x\frac{d}{dx}(y(x))=0$$
+$$y+xy'=0$$
+<p>(Note that the y(x) were converted to y... they are the same. This is not multiplication but just a reminder that y is  function of x.)</p>
+$$y'=-y/x$$
+<p>Go back to the start and recognize we can solve for y.</p>
+$$y=1/x$$
+$$y'=-1/x^2$$
 <li>Combinatorics</li>
 <li>Graph theory</li>
 <li>Descriptive statistics</li>

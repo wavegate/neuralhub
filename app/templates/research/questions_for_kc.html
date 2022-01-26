@@ -1,21 +1,153 @@
-1. Conceptual
-	a. Our goal - measurement of neuronal hyperexcitability in dorsal root ganglion neurons in animal models of injury
-1. MEA2100-Systems specifics
-	a. Plates - 60 electrodes?, availability, cost, cleaning
-	b. Stimulation generation - difficulties with pacing?
-	c. Headstage, interface board, PC+software, temperature controller, perfusion setup - any additional parts we need to obtain?
-	d. Technical support - can we get multichannel systems to come in to train?
-	e. What complications did you experience when trying to use it?
-	f. What information do you have about the Axion system? Are there other MEA systems at WashU? Groups building their own?
-2. Paper questions
-	a. What was the character of activity in the cultured neurons?
-	b. PDA NPs may have induced depolarization?
-	c. 14 days in vitro, formation of complete network?
+MEA2100 System Manual: https://www.multichannelsystems.com/sites/multichannelsystems.com/files/documents/manuals/MCS_MEA2100-System_Manual.pdf
+MEA2100 Installation Guide: https://www.multichannelsystems.com/sites/multichannelsystems.com/files/documents/manuals/MEA2100-System_InstallationGuide.pdf
+MEA2100 Brochure: https://www.multichannelsystems.com/sites/multichannelsystems.com/files/documents/brochures/MEA2100-System_Brochure.pdf
+MEA Neuronal Cell Culture: https://www.multichannelsystems.com/sites/multichannelsystems.com/files/documents/applications/MEA-Application%20Note_Neuronal%20Cell%20Culture.pdf
+60MEA200/10iR-Ti-gr: https://www.multichannelsystems.com/products/60mea20010ir-ti-gr
 
-Note: The choice of plating density is up to the investigator. The higher the density, the sooner activity will be
-observed (as soon as 2-3 days in vitro), but the more often the culture will need to be fed. 5000 cells/mm2 is very
-dense, and would require feeding about every 2 days, while 1000–3000 may only require feeding weekly or every
-5 days. The best time for recording depends on the application: Many studies may be aimed at the development of
-the cultures, and therefore require recording as soon as possible. For other applications, it may be better to keep
-the cells longer in culture before starting the experiment. Cells are still developing, but the culture is more stable
-after about one month in culture. The culture can be used for several months or years.
+1. Conceptual
+MED64, WashU core axion, Miller lab studying astrocytes?, Nate Heubsch calcium imaging ipsc, Miwei Hu, girl graduated last august
+	a. In what capacity did you work with the MEA2100 system? What led you to working with the system?
+	b. Did you have prior experience with MEAs or similar devices?
+	c. What was your general impression of its effectiveness in producing robust data?
+	d. What were the main limitations of the system for you?
+	e. Explain our purpose: measurement of neuronal hyperexcitability in dorsal root ganglion neurons in animal models of injury, our main concerns being whether changes in sensory neurons caused by surgical models would persist in vitro after several days in culture, and whether it is statistically viable to attempt this method (difficult question to answer)
+2. Technical/logistical
+	a. How did you learn to use it? Did you receive training from people or did you figure it out via manuals/papers? Are there other people at WashU that know how to use it? Were you ever in contact with technical support from the company?
+	b. Plates - 60MEA200/10iRTi-gr (https://www.multichannelsystems.com/products/60mea20010ir-ti-gr), other options, cost, cleaning
+	c. Stimulation generation: Dr. Silva mentions "coupling the pacing electrodes can be a bit tricky, so we used an external stimulus or let the cells pace on their own." Is this referring to trying to pace cardiomyocytes with the stimulating microelectrodes? What is this "external stimulus?"
+		-Is it possible to stimulate from any electrode? Can we stimulate all of the electrodes at the same time? Are there limitations to overstimulating/damaging the electrodes/cells?
+							(From the manual) Warning: Anodic (positive) pulses can lead to a formation of titanium oxide on the MEA
+							electrodes. When using MEA electrodes of TiN material, use only negative voltages pulses
+							or biphasic current pulses applying the negative phase first. Always regard the safe-charge
+							injection limits. Otherwise, electrodes can be irreversibly damaged by electrolysis.
+	d. Headstage, interface board, PC+software, temperature controller, perfusion setup - any additional parts we need to obtain?
+	e. Software: MC_Rack, MC_Data, Clampfit; Is there LTP Director or other software?
+	f. Can the MEA be used with microscopes? Just the MEA or the whole system for co-stimulation and imaging?
+	g. Advice for what NOT to do? Perfusion (Teflon membranes MEA-MEM?), recording length, maintaining sterility, maintaining pH, etc.
+3. Biological
+	a. The paper states formation of complete networks from rat hippocampus was achieved at day 14. Do you know how a "complete network" was defined?
+	b. If you did work with neurons, how would you characterize their activity? Was the reduction in their activity expected? Why?
+							Note: The choice of plating density is up to the investigator. The higher the density, the sooner activity will be
+							observed (as soon as 2-3 days in vitro), but the more often the culture will need to be fed. 5000 cells/mm2 is very
+							dense, and would require feeding about every 2 days, while 1000–3000 may only require feeding weekly or every
+							5 days. The best time for recording depends on the application: Many studies may be aimed at the development of
+							the cultures, and therefore require recording as soon as possible. For other applications, it may be better to keep
+							the cells longer in culture before starting the experiment. Cells are still developing, but the culture is more stable
+							after about one month in culture. The culture can be used for several months or years.
+	c. Your cardiomyocyte protocol indicates ~90k cardiomyocytes per MEA. Did you feel that this is fairly strict in order to get a stable beating rate?
+	d. We're interested in possibly using MEAs for cells related to the spine in general. Do you imagine the stimulating capabilities may be useful for testing other, non-electrogenic cell types?
+4. Axion: What information do you have about the Axion system? Are there other MEA systems at WashU? Groups building their own?
+
+iPSC-CM MEA Protocol
+
+02/18/2019
+
+KC
+
+MEA systems:
+
+MEA probe: 60MEA200/10iRTi-gr (10 um radius with 200 um between electrodes)
+
+Recording system: MEA2100
+
+Software: Recording: MC_Rack, Data converting: MC_Data tool, Data analysis: Clampfit
+
+MEA Preparation
+
+1. 1% Terg-A-Zyme treatment overnight @ room temperature
+
+2. Wash the MEA probe thoroughly by MQ water
+
+3. Spray 75% EtOH and let the probe air dry
+
+4. Plasma cleaning* for 2 minutes
+
+5. Autoclave @ 121C/20min
+
+*Harrick Plasma cleaner protocol
+
+○ Close the door
+
+○ Turn the valve clockwise all the way to the end (point 5:30 position)
+
+○ Turn on the PUMP
+
+○ Watch the digital gauge go down to ~700 (or wait 2 min)
+
+○ Turn on the POWER, wait for 5 second
+
+○ Turn the plasma level switch to HIGH
+
+○ Watch into the window and the pink/purple plasma should appear 20 sec later
+
+○ Maintain the plasma for 2 minutes
+
+○ Turn off the plasma switch, turn off the POWER, turn off the POWER
+
+○ Turn the valve counter-clockwise back to the 12am position
+
+Cells
+
+iPS-derived cardiomyocyte
+
+MEA Coating and Cell Loading Protocol
+
+1. Prepare humid dish: add 7 ml of autoclaved water in 10cm dish
+
+2. MEA coating: 50 ug/ml of Fibronectin in DPBS(+ion)
+
+3. Pipet 2-4 ul droplet to cover recording area
+
+4. Incubate at 37C for at least one hour in humid dish.
+
+5. Passaging iCM as usual and determine the cells concentration (~90k per MEA loading)
+
+6. Seeding: pipet 90k/3ul droplet on recording area (30k/ul)
+
+7. Incubate in the humid dish @ 37C/1hr
+
+8. Feeding: 500 ul of culture medium
+
+MEA Recording Protocol
+
+1. MEA recording
+
+a. Replace 500 ul fresh recording media 30 minutes before recording
+
+b. Turn on the TC2.0, set the temperature to 37C
+
+c. Take the MEA probes out from humid dish and dry the pin contacting area
+
+d. Place the probe on MEA2100 system, the reference electrode #15 (the big black line) should be on the left.
+
+e. Wait for the cells to reach stable activities before recording (around 3 minutes).
+
+2. Recording protocol
+
+a. Open the MC_Rack software
+
+b. Load a template recording protocol or set up the condition needed
+
+c. Set up the conditions:
+
+i. Recording frequency: > 10K Hz
+
+ii. File storage path
+
+iii. Filter: low pass / high pass
+
+iv. Longterm window
+
+3. Drug testing protocol
+
+a. Design the drug concentration to be test
+
+b. Prepare stock solution for each concentration that are 10 fold higher than desired concentration (so that the desired concentration are added to the medium at 1/10 of the total volume to reduce the volume effect)
+
+c. Pipet 50 ul out from MEA probe
+
+d. Add 50 ul of 10x of desired drug, mix well
+
+e. Wait for the cells to reach stable field potential
+
+f. Record for 1 minutes (or continuously record and analyze the last minute)
