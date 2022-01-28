@@ -117,8 +117,108 @@ $$P=i^2R=\frac{V_\text{TH}^2}{4R_\text{TH}}$$
 <p>Superposition in circuits is useful for breaking down a circuit into parts. It is not so important to know how to do it if you have high computing power that can solve large matrices, but is more important if you have to do things by hand. What superposition means basically is that the voltage drop across each component in the circuit is the sum of the voltage drops due to each single power source. For example, say you have 5 voltage sources in your circuit. If you find the voltage across your component from each of those voltage sources, and then add them together, that will be the total voltage drop from all 5 voltage sources. It's kinda like the concept of summative potentials in neurons. You get all these action potentials going into the neuron via its dendrites, and at the axon hillock things get summed together to produce one big signal. In this case, each one of these action potentials is coming from a different voltage source in your circuit. This property of being able to sum all of these separate voltages is the property of a linear system, one in which you can add inputs together.</p>
 <p>As an aside, a circuit symbol with an arrow through it just means the component is variable.</p>
 <h4>Inductors</h4>
-<p>Inductors are circuit components that store energy in the form of a concentrated magnetic field. Any current through a wire produces a magnetic field. By coiling the current, it concentrates the magnetic field. This is what an inductor is. It is a coiled piece of wire. The units of an inductor is the Henry, and inductors are labelled with the letter L. Understanding what exactly is going on with the magnetic field is an area of physics.</p>
+<p>Inductors are circuit components that store energy in the form of a concentrated magnetic field. Any current through a wire produces a magnetic field. By coiling the current, it concentrates the magnetic field. This is what an inductor is. It is a coiled piece of wire. The units of an inductor is the Henry (kg*m2)/(s2A2), and inductors are labelled with the letter L. Understanding what exactly is going on with the magnetic field is an area of physics.</p>
 <img src="{{url_for('static',filename='img/electronics/inductor.svg')}}" style="width: 10%">
 <p>The voltage across an inductor is its inductance times the derivative of the current with respect to time, aka how fast the current changes through the inductor.</p>
 $$V=L\frac{di}{dt}$$
+<img src="{{url_for('static',filename='img/electronics/inductors.svg')}}" style="width: 20%">
+<p>So let's do some calculations for this simple circuit with just a current source and an inductor. For the sake of the exercise, let's set the current \(i=10te^{-5t}\).</p>
+<p>The first question is to sketch the current. We'll cheat here and just graph it with a calculator.</p>
+<img src="{{url_for('static',filename='img/electronics/inductors1.png')}}">
+<p>The second question is when is the current at its maximum?</p>
+<p>So, to defined the maximum of a function, you can set the derivative (slope) to zero. If the derivative is confusing to you, review some properties of derivatives in calculus under mathematics.</p>
+$$i=(10t)(e^{-5t})$$
+<p>We can split the function into two and use the product rule of derivatives.</p>
+$$\frac{di}{dt}=(10t)(e^{-5t})(-5)+(e^{-5t})(10)=0$$
+$$\frac{di}{dt}=-50t(e^{-5t})+10(e^{-5t})$$
+$$-50t+10=0$$
+$$t=0.2$$
+<p>So the maximum current is at 0.2 seconds.</p>
+<p>The next question is what is the equation for the voltage across the inductor?</p>
+$$V=L\frac{di}{dt}$$
+<p>Since we know both that \(L=0.1\) and the derivative of i with respect to t, the answer is simply:</p>
+$$V(t)=0.1*-50t(e^{-5t})+10(e^{-5t})$$
+$$V(t)=-5te^{-5t}+e^{-5t}$$
+<img src="{{url_for('static',filename='img/electronics/inductors2.png')}}">
+<p>So now we have plotted the voltage above. Compare it to the plot of the current, and recognize that the voltage is proportional to the rate of change of the current through the inductor.</p>
+<p>What if we want to do this backwards? What if we know the graph of the voltage, but want to find the current? In that case, we have to integrate the voltage over time.</p>
+$$V=L\frac{di}{dt}$$
+$$Vdt=Ldi$$
+$$\int{Vdt}=\int{Ldi}$$
+$$i(t)=\frac{1}{L}\int_0^t{V(t)dt}+i(0)$$
+<img src="{{url_for('static',filename='img/electronics/inductors3.svg')}}" style="width: 20%">
+<p>Alright, so now we've flipped the question backwards and let's solve for current from a given voltage function. Let's say \(V=20te^{-10t}\).</p>
+$$i(t)=\frac{1}{L}\int_0^t{V(t)dt}+i(0)$$
+$$i(t)=\frac{1}{0.1}\int_0^t{20te^{-10t}dt}$$
+$$i(t)=200\int_0^t{te^{-10t}dt}$$
+<p>This utilizes integration from calculus so make sure to review that to know how to solve this equation. We use integration by parts here. Let's set \(u=t\) and \(dv=e^{-10t}dt\).</p>
+$$du=dt$$
+$$v=\int{e^{-10t}dt}$$
+$$v=\frac{1}{-10}e^{-10t}$$
+$$uv-\int{vdu}$$
+$$t(\frac{1}{-10}e^{-10t})-\int{\frac{1}{-10}e^{-10t}du}$$
+$$\frac{t}{10}e^{-10t}\bigl|_0^t-\frac{1}{100}e^{-10t}\bigl|_0^t$$
+$$[(-\frac{t}{10}e^{-10t})-(0)]-[(\frac{1}{100}e^{-10t})-(\frac{1}{100})]$$
+<p>Finally, put the 200 back from the beginning:</p>
+$$i(t)=2-20te^{-10t}-2e^{-10t}$$
+<h4>Power and Energy in an Inductor</h4>
+<p>Let's review the difference between energy and power. Power is the flow of energy. If you pull a rubber band apart, you have stored energy in that system. The process of pulling it apart is applying power. Since \(P=iv\), it's pretty easy to see that \(P=Li\frac{di}{dt}\).</p> 
+<p>Since we also know how to write i in terms of V for inductors:</p>
+$$P=V[\frac{1}{L}\int_0^t{V(t)dt}+i(0)]$$
+<p>So how much energy is stored in an inductor?</p>
+<p>Remember that power is the flow of energy, or the rate energy is added over time. So the total energy is the integral of power.</p>
+$$w=\int{pdt}$$
+$$w=\int{Li\frac{di}{dt}*dt}$$
+$$w=\int{Lidi}$$
+$$w=\frac{1}{2}Li^2$$
+<p>What you can infer from this is that the energy stored in an inductor depends on the current flowing through it. Which means, even if the current is not changing, there is a certain amount of current stored. This is in contrast to the power, or the voltage, which depends on the rate of change of the current.</p>
+<h4>Current through a capacitor</h4>
+<p>Capacitors store energy in an electric field, whereas inductors store energy in a magnetic field. You can think of capacitors as parallel plates. Imagine having two square sheets of metal placed right next to each other, parallel. In between exists a dielectric, aka an insulator, through which no current can flow. When you add a current (hole current meaning it's positive) to one plate, a positive charge builds up. This positive charge spreads throughout the plate and creates an electric field, causing negative charge to build up on the other plate. So while no electrons actually flow through the dielectric, from the outside, it looks like positive current is flowing into one plate and positive current is flowing out the other (because negative charge is flowing into it). This electric field between these two plates is what stores energy.</p>
+<img src="{{url_for('static',filename='img/electronics/capacitor.svg')}}" style="width: 40%">
+<p>The units of capacitance is the Farad, but 1 Farad is huge (you won't ever see a real capacitor with 1 Farad capacitance), so usually you'll be using things like microFarads. The current through a capacitor:</p>
+$$i=C\frac{dv}{dt}$$
+<p>You can see that this is fairly similar to the equation for voltage for the inductor. It's kind of like they swapped around. You can think of it such that the buildup of charge is what generates the electric field and the voltage drop across the capacitor. The only way for there to be an increase in that voltage difference (a positive dv/dt) is if more positive charge is going to the positive plate, which means there must be a positive current going to that plate.</p>
+<p>If you think about an inductor, if the current is constant and you've reached steady state, then the inductor pretty much acts as a short circuit or a piece of wire. For a capacitor, if you keep adding current and you've reached steady state, then eventually the plates are saturated, and no more current can pass through, thereby turning it into an open circuit.</p>
+<p>So let's see if we can figure out the voltage from the current.</p>
+$$i=C\frac{dv}{dt}$$
+$$\frac{i}{C}dt=dv$$
+$$v(t)=\frac{1}{C}\int_0^t{i(t)dt}+v_0$$
+<p>This equation should make sense, since as your current builds up, the voltage across the capacitor builds up.</p>
+<p>So then the power in the capacitor is \(P=iv=Cv\frac{dv}{dt}).</p>
+$$P=iv=i[\frac{1}{C}\int_0^t{i(t)dt}+v_0]$$
+<p>We can also get the energy in the capacitor. Since power is energy over time, \(P=\frac{dw}{dt}\).</p>
+$$P=Cv\frac{dv}{dt}=\frac{dw}{dt}$$
+$$w=C*\frac{1}{2}v^2$$
+<p>So you see this all makes sense. For an inductor, the energy is stored in a magnetic field, which depends on the current. For a capacitor, the energy stored depends on the electric field, which depends on the voltage.</p>
+<h4>Parallel and series for inductors and capacitors</h4>
+<p>Inductances work pretty much exactly like resistors when it comes to how they behave in series or in parallel. Think about a bunch of inductors in series. It's basically a bunch of coils of wire next to each other. If you pretend the wire between them is super small, it's almost as if you just have one huge coil of wire. So it makes sense for the total inductance to just be the sum of the individuals. Capacitors are opposite of resistors (so, for capacitors in series, you have to add the inverses). If you think about a bunch of capacitors in parallel, it's almost as if you have just one giant parallel plate capacitor, so it makes sense to just add the capacitances up in that case.</p>
+<img src="{{url_for('static',filename='img/electronics/inductor_parallel.svg')}}">
+<p>Alright. Let's do some calculations for an example problem. Let's say at the start of the circuit, \(i_1=-2\) and \(i_2=4\). And let's say voltage changes over time, such that \(v(t)=-40e^{-5t}\).</p>
+<p>The first question is: what is the equivalent inductance? Just like in resistors, all we have to do to find an equivalent inductance in parallel is product over sum: \(L_\text{eq}=\frac{5*20}{5+25}=4\).</p>
+<p>The next question: what is the initial current through the equivalent inductor? For this, all we have to do is add the two currents up: \(-2+4=2\). So the current when \(t=0\) is 2 amps.</p>
+<p>Okay, so now let's find the current at a time other than at 0. Note that we are given the function for the voltage. We know that for an inductor, \(v=L\frac{di}{dt}\). The voltage at any timepoint is how fast the current is changing at that timepoint. So if you want to find the total current passing at a certain time, you have to integrate the voltage from time 0 to time t (adding up an infinite amount of infinitely small chunks of current). Basically, you're finding the area under the function of voltage from 0 to t.</p>
+$$di=\frac{1}{L}vdt$$
+$$i(t)=\frac{1}{L}\int_0^t{v(t)dt}+i(0)$$
+<p>We know the initial current (2), the function for v, and the equivalent inductance L (4).</p>
+$$i(t)=\frac{1}{4}\int_0^t{-40e^{-5t}dt}+2$$
+$$i(t)=-10\int_0^t{e^{-5t}dt}+2$$
+$$i(t)=-10*\frac{1}{-5}e^{-5t}\rvert_0^t+2$$
+$$i(t)=2[e^{-5t}-e^0]+2$$
+$$i(t)=2e^{-5t}$$
+<h4>Step and Natural Response</h4>
+<p>There is transient state and steady state of a circuit. The transient state is when the circuit is changing through the first fraction of time. The steady state is what happens after things have stopped changing, maybe a second or a minute after the circuit has started. The natural response of a circuit is what happens when the circuit discharges in the absence of any power sources. The step response is what happens when we initially hook up some power source and send some current to our circuit, aka the charging process.</p>
+<h4>Natural Response of an RL Circuit</h4>
+<img src="{{url_for('static',filename='img/electronics/RL_natural.svg')}}">
+<p>An RL circuit is a circuit with resistors and inductors. Let's take a look at the circuit above. On the left, you have a Norton equivalent circuit with a current source and its resistance. That source will provide us with our initial steady state parameters. On the right side of the circuit you see a simple inductor and resistor in parallel. At the top, you see a switch, which is closed at t=0 but which opens once we start the timer. So what this means is that when t is less than 0 (before we flip the switch), current is running through the circuit. Remember when current goes through an inductor, it stores energy in a magnetic field. But with a constant current, there is no voltage drop across the inductor, and it acts simply as a short circuit. So at a time before 0, all the current goes through the inductor. Now, after you flip the switch, the right side (RL circuit) becomes disconnected from the left side (power source). So then the energy stored as a magnetic field in the inductor will convert into current and dissipate (natural response).</p>
+<p>So let's do KVL on the RL circuit.</p>
+$$L\frac{di}{dt}+iR=0$$
+$$L\frac{di}{dt}=-iR$$
+$$\frac{1}{i}di=-\frac{R}{L}dt$$
+$$\int_{i(0)}^{i(t)}\frac{1}{i}di=-\int_0^t\frac{R}{L}dt$$
+$$\ln{i(t)}-\ln{i(0)}=-\frac{Rt}{L}$$
+$$\ln{\frac{i(t)}{i(0)}}=-\frac{Rt}{L}$$
+$$e^{\ln{\frac{i(t)}{i(0)}}}=e^{-\frac{Rt}{L}}$$
+$$\frac{i(t)}{i(0)}=e^{-\frac{Rt}{L}}$$
+$$i(t)=i(0)e^{-\frac{Rt}{L}}$$
+<p>This result is the exponential decay, or the natural response, or a RL circuit. You can see that the rate of decay depends on R and L. The higher the resistance in the circuit, the faster the current goes to 0. The higher the inductance, the longer it takes for the current to get to 0 (which makes sense conceptually).</p>
 {% endblock %}

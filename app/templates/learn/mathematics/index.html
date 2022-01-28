@@ -135,6 +135,42 @@ $$y'=-y/x$$
 <p>Go back to the start and recognize we can solve for y.</p>
 $$y=1/x$$
 $$y'=-1/x^2$$
+<h4>Differentials</h4>
+<p>Given a function \(y=f(x)\) we call \(dy\) and \(dx\) differentials, and the relationship between them is given by \(dy=df=f'(x)dx\).
+<h4>Indefinite Integrals</h4>
+<p>Now that we've gone through derivatives, let's now do it backwards. The question is... what function did we differentiate to get \(f(x)\)?</p>
+<p>Let's say our function is \(f(x)=x^4+3x-9\).</p>
+<p>If you think about how a derivative works, in order to get \(x^4\), we need to take the derivative of \(x^5\). But if we take the derivative of that, we will get \(5x^4\). So the antiderivative of \(x^4\) should actually be \(\frac{1}{5}x^5\).</p>
+<p>So if you extend this for the rest of the terms, the antiderivative is \((1/5)x^5+(3/2)x^2-9x\). And then you think we would be done. But remember that the derivative of any constant is 0, so we still need to add on the antiderivative of 0 (a constant c), making our final antiderivative:</p>
+$$(1/5)x^5+(3/2)x^2-9x+c$$
+<p>If \(F(x)\) is any anti-derivative of \(f(x)\) then the most general anti-derivative of \(f(x)\) is called an indefinite integral and is denoted:</p>
+$$\int{f(x)dx}=F(x)+c$$
+<p>Now you might wonder about this dx (the differential) added after the function. You can think of dx as the end of the integral, where the integral (S-like) symbol is the left parentheses and the dx is the right parentheses.</p>
+<p>The dx also defines what variable we are integrating with respect to. For example, \(\int{2tdx}=2tx+c\), NOT \(x^2+c\).</p>
+<h4>Properties of the Indefinite Integral</h4>
+<p>We can factor multiplicative constants out of indefinite integrals, just like in derivatives.</p>
+<p>The integral of a sum of two functions is the sum of their individual integrals (just like derivatives).</p>
+<h4>Computing Indefinite Integrals</h4>
+<p>Let's start wit the integral of a power of x, which we've kind of worked through already.</p>
+$$\int{x^ndx}=\frac{x^{n+1}}{n+1}+c, n\neq-1$$
+<p>Then there's a simple one, which is just a constant, but seems to be trip people up pretty frequently.</p>
+$$\int{kdx}=kx+c$$
+<p>Then we can take a look at trig functions.</p>
+$$\int{\sin{x}dx}=-\cos{x}+c$$
+$$\int{\cos{x}dx}=\sin{x}+c$$
+$$\int{\sec^2{x}dx}=\tan{x}+c$$
+$$\int{\sec{x}\tan{x}dx}=\sec{x}+c$$
+$$\int{\csc^2{x}dx}=-\cot{x}+c$$
+$$\int{\csc{x}\cot{x}dx}=-\csc{x}+c$$
+<p>Now let's go through exponential and logarithmic functions.</p>
+$$\int{e^xdx}=e^x+c$$
+$$\int{a^xdx}=\frac{a^x}{\ln{a}}+c$$
+$$\int{\frac{1}{x}dx}=\ln{|x|}+c$$
+<h4>Substitution Rule for Indefinite Integrals</h4>
+$$\int{f(g(x))g'(x)dx}=\int{f(u)du}, \text{where } u=g(x)$$
+<h4>Definition of the Definite Integral</h4>
+<p>Given a function \(f(x)\) that is continuous on the interval \([a,b]\), we divide the interval into \(n\) subintervals of equal width \(\Delta{x}\), and from each interval choose a point, \(x_i^*\). Then the definite integral of \(f(x)\) from \(a\) to \(b\) is:</p>
+$$\int_a^b{f(x)dx}=\lim_{n\to\infty}\sum_{i=1}^n{f(x_i^*)\Delta{x}}$$
 <li>Combinatorics</li>
 <li>Graph theory</li>
 <li>Descriptive statistics</li>
