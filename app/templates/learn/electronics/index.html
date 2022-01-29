@@ -6,7 +6,11 @@
   img {
     width: 50%;
   }
+  .size {
+    font-size: 150%;
+  }
 </style>
+<div class="size">
 <h2>Electronics</h2>
 <h3>Engineering Circuit Analysis</h3>
 <h4>Resistors in Series and Parallel</h4>
@@ -25,9 +29,12 @@ $$i=V_1/(R_1+R_2)$$
 <p>Which means the voltage drop across any single resistor is:</p>
 $$V=V_1/(R_1+R_2)*R_1$$
 <p>Basically, the voltage drop across any resistor in series is proportional to the size of that resistor. You can imagine that this can allow you to divide any single voltage sorce into separate voltage drops using differently sized resistors.</p>
+<h4>Current Divider</h4>
+<p>If you have current splitting into two paths, the current going through path 1 is equal to the input current times the proportion of the resistance of path 2 to the resistance of the 2 paths combined.</p>
+$$i_1=i_\text{tot}(\frac{R_2}{R_1+R_2})$$
 <h4>Node Voltage Method</h4>
 <p>For node voltage, you choose a reference node, and then look at any essential nodes. An essential node is a node with three or more components. You then do KCL on each essential node.</p>
-<h4>Mesh Current Method</h3>
+<h4>Mesh Current Method</h4>
 <img src="{{url_for('static',filename='img/electronics/1.png')}}">
 <p>So the mesh current solution method is basically Kirchhoff's Voltage Law but for each "mesh" or cookie in the circuit. You can imagine the circuit as a cookie cutter. In the example above, if you use this design as a cookie cutter, you will cut up a cookie in 3 square chunks, each of which we define as a mesh. Now we define a current running clockwise around each mesh, and add up the voltage drops in that current, then set the sum of those voltage drops to 0 due to Kirchhoff's voltage law.</p>
 $$0=V_1+i_a*R_1+(i_a-i_b)*R_2 = -40+i_a*2+(i_a-i_b)*8$$
@@ -44,7 +51,7 @@ $$\text{Mesh c: }-20=-6i_b+10i_c$$
 <p>Which means, to solve this, just need to do some matrix algebra:</p>
 $$\begin{bmatrix}10 & -8 & 0 & | & 40 \\ -8 & 20 & -6 & | & 0 \\ 0 & -6 & 10 & | & -20\end{bmatrix}$$
 <p>This will give us \(i_a=5.6\), \(i_b=2\), and \(i_c=-0.8\). Once you have these currents, you can solve for everything else.</p>
-<h4>Source Transformations</h3>
+<h4>Source Transformations</h4>
 <p>The first source transformation (basically equivalent circuit pieces) is the ability to convert a voltage source and its resistance in series to a current source and its resistance in parallel. These are essentially the same thing. This means that no matter what load you place at the ends, you'll get the same current running through the load and the same voltage drop across the load. You can confirm this by testing a short circuit (just a wire) and an open circuit (no load).</p>
 <img src="{{url_for('static',filename='img/electronics/3.png')}}">
 <p>In this case, the value of the new current source can be calculated with Ohm's law: i = V/R.</p>
@@ -192,7 +199,7 @@ $$w=C*\frac{1}{2}v^2$$
 <p>So you see this all makes sense. For an inductor, the energy is stored in a magnetic field, which depends on the current. For a capacitor, the energy stored depends on the electric field, which depends on the voltage.</p>
 <h4>Parallel and series for inductors and capacitors</h4>
 <p>Inductances work pretty much exactly like resistors when it comes to how they behave in series or in parallel. Think about a bunch of inductors in series. It's basically a bunch of coils of wire next to each other. If you pretend the wire between them is super small, it's almost as if you just have one huge coil of wire. So it makes sense for the total inductance to just be the sum of the individuals. Capacitors are opposite of resistors (so, for capacitors in series, you have to add the inverses). If you think about a bunch of capacitors in parallel, it's almost as if you have just one giant parallel plate capacitor, so it makes sense to just add the capacitances up in that case.</p>
-<img src="{{url_for('static',filename='img/electronics/inductor_parallel.svg')}}">
+<img src="{{url_for('static',filename='img/electronics/inductor_parallel.svg')}}" style="width:30%">
 <p>Alright. Let's do some calculations for an example problem. Let's say at the start of the circuit, \(i_1=-2\) and \(i_2=4\). And let's say voltage changes over time, such that \(v(t)=-40e^{-5t}\).</p>
 <p>The first question is: what is the equivalent inductance? Just like in resistors, all we have to do to find an equivalent inductance in parallel is product over sum: \(L_\text{eq}=\frac{5*20}{5+25}=4\).</p>
 <p>The next question: what is the initial current through the equivalent inductor? For this, all we have to do is add the two currents up: \(-2+4=2\). So the current when \(t=0\) is 2 amps.</p>
@@ -221,4 +228,44 @@ $$e^{\ln{\frac{i(t)}{i(0)}}}=e^{-\frac{Rt}{L}}$$
 $$\frac{i(t)}{i(0)}=e^{-\frac{Rt}{L}}$$
 $$i(t)=i(0)e^{-\frac{Rt}{L}}$$
 <p>This result is the exponential decay, or the natural response, or a RL circuit. You can see that the rate of decay depends on R and L. The higher the resistance in the circuit, the faster the current goes to 0. The higher the inductance, the longer it takes for the current to get to 0 (which makes sense conceptually).</p>
+<p>The value \(\tau=L/R\) such that \(i(t)=i(0)e^{-\frac{t}{\tau}}\). Which means that at \(1\tau\) seconds, the current is \(i(0)/e=0.37I_0\) (we rewrite the initial current with a capital letter for consistency sake). By the time you reach 5 time constants, the value of the current is \(0.007I_0\), which means the current has gone to less than 1% of its initial state. We can define this with fuzzy logic as "a long time." So the purpose of having a time constant is just having that "rule of thumb" that 5 time constants is "long enough time" for the transient state to end.</p>
+<img src="{{url_for('static',filename='img/electronics/RL_problem1.svg')}}">
+<p>Let's put some of these to an example. The first question for the above circuit is to find \(i_L(t)\). When t is 0, the switch is flipped open, thereby cutting off the current source from the left. Then, at that point, the energy stored in the inductor will drive a current through the resistors until there is no more energy. The 10ohm and 40ohm resistors are in parallel, and so we can simplify that into a 8 ohm resistor. And the 2 ohm resistor will be in series with the 8 ohm resistor, making the equivalent resistance of the right side a total of 10 ohms. So then we use KVL and integrate again to find:</p>
+$$i_L(t)=I_0e^{-5t}$$
+<p>Recognize that the initial current \(I_0\) is simply 20 amps, because when the circuit is closed, all of the current is traveling through the inductor (because every other path has resistance!).</p>
+$$i_L(t)=20e^{-5t}$$
+<p>Next part of the question is to find \(i_1(t)\). Since the current splits between the 10 and 40 ohm resistors, this is a current divider, so the resulting current through the 40 ohm resistor is just \(-20e^{-5t}*(10/50)=-4e^{-5t}\). Note we add a negative sign since that current is backwards from the one drawn in the figure.</p>
+<p>Next part is to find \(v_1(t)\). Again, pretty straight forward. Ohm's law. \(-160e^{-5t}\).</p>
+<p>The last part is to find the % of total energy stored in 2 H inductor that is dissipated in the 10 ohm resistor. The total energy stored in the inductor is \(w=\frac{1}{2}Li^2\), which we derived previously by setting \(P=i*L\frac{di}{dt}\) and integrating both sides. So the energy stored in the inductor of this question is \(1/2*2*20^2=400\) Joules. Then, for the energy dissipated by the resistor, we can integrate power again just for that resistor. We know that the voltage across the 10 ohm resistor is the same as that for the 40 ohm resistor. So we can use:</p>
+$$P=V^2/R$$
+$$P=(-160e^{-5t})^2/10=2560e^{-10t}$$
+<p>Then, we integrate with respect to time.</p>
+$$\int_0^\infty{Pdt}=w=2560\int_0^\infty{e^{-10t}dt}$$
+<p>Again, we integrate by parts. Say we set \(u(t)=-10t\). Then the equation becomes \(e^u\). Integral of an exponential is just the exponential. But we have to divide by derivative of u due to chain rule. So the indefinite integral is \(-\frac{1}{10}e^{-10t}\). And so the definite integral from 0 to infinity would be \(-\frac{1}{10}[e^{-\infty}-e^0]=-\frac{1}{10}\). And don't forget the 2560 in front, so the total energy dissipated by the 10 ohm resistor is -256 watts. Finally, \(256/400=64%\). So the total energy dissipated by the 10 ohm resistor is 64%. Pretty cool, right?</p>
+<h4>Natural Response of a RC Circuit</h4>
+<p>So we can do this same natural response, transient to steady state thing with capacitors, keeping in mind that capacitors store energy in an electric field rather than a magnetic field. So whereas we used KVL for the RL circuit, let's use KCL for the RC circuit. Except in this case, we can imagine the node being just between a capacitor and a resistor. Basically, the current going through the capacitor has to be equal to the current going through the resistor. In addition, the voltage drop across the capacitor has to be equal to the voltage drop across the resistor.</p>
+$$C\frac{dV}{dt}=-\frac{V}{R}$$
+$$\frac{1}{V}dV=-\frac{1}{RC}dt$$
+$$\int_{V(0)}^{V(t)}{\frac{1}{V}dV}=-\int_0^t{\frac{1}{RC}dt}$$
+$$\ln{V(t)}-\ln{V(0)}=-\frac{t}{RC}$$
+$$e^{\ln{\frac{V(t)}{V(0)}}}=e^{-\frac{t}{RC}}$$
+$$V(t)=V_0e^{-\frac{t}{RC}}$$
+<p>The time constant for RC circuits is RC, so that, again, by 5 time constants, the voltage becomes <1% and negligible.</p>
+<img src="{{url_for('static',filename='img/electronics/capacitor_problem.svg')}}">
+<p>Alright, let's do a natural response problem for an RC circuit. Our first question is what is the voltage across the capacitor as soon as the switch opens? So v(0). If you think about it, when the switch is closed, the capacitor has enough time to completely saturate its plate with charge. So voltage should be maximum at t=0. It also means that no more current is going into the capacitor. Which means all the current is going through the 20k ohm resistor. The 20k ohm resistor is in series with the 10k ohm resistor, so the total resistance is 30k on that leg. So there is a current divider for the 15 mA current between a 60k ohm resistor and a 30k ohm resistor. The current going through the 30k ohm resistor is 15 mA * (60k/(30k+60k)), which is the equation using a current divider (resistance of the other leg over the sum of both legs). \(0.015*(2/3)=0.01\). So the current going through the 20k ohm resistor is 0.01 A. From there, Ohm's law, we can calculate the voltage drop across the 20k ohm resistor. \(20000*0.01=200\). The voltage drop across the capacitor is the same as across the resistor since they're parallel. So \(V(0)=200\) volts.</p>
+<p>Second part is to find the time constant of the RC circuit. Pretty easy. Remember it's just \(\tau=RC=20\times10^3*0.5\times10^{-6}=1\times10^{-2}\).</p>
+<p>Next, we want to find \(v(t)\) after we flip the switch open. So we just derived this equation from using KCL and integrating, so it's just \(V(t)=200e^{-\frac{t}{0.01}}=200e^{-100t}\).</p>
+<p>Next, we want to find the initial energy stored in the capacitor. We previously derived this by integrating power over time. So \(w=C*\frac{1}{2}*200^2=20000*0.5\times10^{-6}=0.01\) joules.</p>
+<p>Finally, let's calculate how long it takes to dissipate 75% of the initially stored energy. We know total energy stored by the capacitor, so 75% of that is 0.01*0.75=0.0075. How do you find energy dissipated by the resistor? Have to integrate power over time.</p>
+$$\int_0^x{Pdt}=0.0075$$
+$$\int_0^x{\frac{V^2}{R}dt}=0.0075$$
+$$\int_0^x{\frac{40000e^{-200t}}{20000}dt}=0.0075$$
+$$\int_0^x{2e^{-200t}dt}=0.0075$$
+$$-\frac{1}{100}[e^{-200x}-e^{0}]=0.0075$$
+$$e^{-200x}=0.25$$
+$$-200x=\ln{0.25}$$
+$$x=0.00693$$
+<p>So it takes less than 1 millisecond to dissipate 75% of the stored energy in this capacitor.</p>
+<h4>Step Response of RL Circuits</h4>
+</div>
 {% endblock %}

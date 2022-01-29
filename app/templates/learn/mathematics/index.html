@@ -171,6 +171,35 @@ $$\int{f(g(x))g'(x)dx}=\int{f(u)du}, \text{where } u=g(x)$$
 <h4>Definition of the Definite Integral</h4>
 <p>Given a function \(f(x)\) that is continuous on the interval \([a,b]\), we divide the interval into \(n\) subintervals of equal width \(\Delta{x}\), and from each interval choose a point, \(x_i^*\). Then the definite integral of \(f(x)\) from \(a\) to \(b\) is:</p>
 $$\int_a^b{f(x)dx}=\lim_{n\to\infty}\sum_{i=1}^n{f(x_i^*)\Delta{x}}$$
+<p>Imagine you graph a function and you want to find the area under the curve from x=a to x=b. "a" is called the lower limit and "b" is the upper limit and from a to b is the interval of integration. How would you find that area? What you could do is take an approximate area by getting the height at each point of the curve, and then multiplying the height by some width, to get a rectangle, and add all of those rectangles together. To get a more and more accurate approximation, you can keep making these rectangles smaller and smaller until you have an infinite number of infinitely narrow rectangles. This is what the definition of the definite integral does.</p>
+<h4>Properties of the Definite Integral</h4>
+<ol>
+	<li>You can switch the limits on the integral as long as you add on a minus sign.</li>
+	<li>If the limits are the same, the integral is zero.</li>
+	<li>You can factor out any constant.</li>
+	<li>You can break up sums of integrals.</li>
+	<li>You can add up break up an integral into parts.</li>
+	$$\int_a^b{f(x)dx}=\int_a^c{f(x)dx}+\int_c^b{f(x)dx}$$
+	<li>As long as the function and limits are the same, the actual variable of integration doesn't really matter.</li>
+</ol>
+<h4>Net Change Theorem</h4>
+<p>We have already discussed one interpretation of the integral: the area under the curve of a function. Another interpretation is the net change in the quantity of the function. For example, imagine your x axis is time and your y axis is speed (distance over time). Then the integral gives you the total distance travelled over that period of time. Another example is inductors in circuits. The voltage is dependent on the inductance and change in current. So if you integrate the change in current over time, you get the total current. Which means, since the voltage depends on the change in current, you can also get the total current from integrating the voltage. On the other hand, for a capacitor, the voltage builds up on the parallel plates due to injection of charge, which would be the total current sent to the capacitor. So you can find the voltage as an integration of the current over time.</p>
+<h4>Fundamental Theorem of Calculus, Part 1</h4>
+<p>If \(f(x)\) is continuous on \([a,b]\), then \(g(x)=\int_a^x{f(t)dt}\) is continuous on \([a,b]\) and it is differentiable on \((a,b)\) and that \(g'(x)=f(x)\).</p>
+<p>In essence, the fundamental theorem of calculus connects derivatives and integrals. Let's say you want to look at some property... let's say distance, denoted by "y". This could be volume, energy... whatever. Let's say I get in a car and I start driving forward. I know I need to travel 100 miles north and dig at a location to find a treasure chest, but I don't have a GPS to tell me exactly where I am. All I have in the car is the meter which tells me how fast I'm moving. This meter is essentially telling me the derivative of distance with respect to time, or dy/dt. In order to find the distance where I am at any point, I need to integrate this derivative, aka my speed, from my starting timepoint "a" (in this case 0) to whatever time "x", and that will give me the total distance y I have traveled from time a to x.</p>
+<p>Let's look at an example.</p>
+$$\frac{d}{dx}\int_{x^2}^1{\frac{t^4+1}{t^2+1}dt}$$
+<p>Let's start from what we know. Say that we know the speed of our car is equal to \(f(t)=\frac{t^4+1}{t^2+1}\). When we integrate from \(x^2\) to 1, we're saying, from timepoint \(x^2\) all the way to timepoint 1, what is the total distance I have traveled? Then, with the differentiation, we're asking, how fast is our total distance changing as a function of x?</p>
+<p>So the first thing we can do is simplify things a bit. Instead of thinking about things backwards, going from \(x^2\) to 1, let's just swap the limits around, and ask, if we start at 1 second, and go to x^2 seconds, how far have I traveled? So we add a negative sign to the integral.</p>
+$$-\frac{d}{dx}\int_1^{x^2}{\frac{t^4+1}{t^2+1}dt}$$
+<p>Next, this pesky x^2 is pretty annoying. How can we change this to just x? We can use the chain rule of differentiation, which basically means we'll replace x^2 with x, and then multiply the derivative of x^2 in afterwards. As a reminder, the chain rule is as follows:</p>
+$$\frac{d}{dx}(g(u))=\frac{d}{du}(g(u))\frac{du}{dx}\;\text{where }u=f(x)$$
+<p>Again, the chain rule simply means... if you have a function inside another function, you can derive the outside function and then multiply it by the derivative of the inside function. So for our question, if we set \(u=x^2\)...</p>
+$$-\frac{d}{du}\int_1^{u}{\frac{t^4+1}{t^2+1}dt}\frac{du}{dt}$$
+<p>Now, we can use the Fundamental Theorem of Calculus, and derive the integral.</p>
+$$-\frac{u^4+1}{u^2+1}(2x)$$
+$$-2x\frac{x^8+1}{x^4+1}$$
+<p>So what really have we done here? What we've done is pretty simple. We found the speed at which we're traveling at a specific timepoint. But you might ask, didn't we already know the speed at any timepoint? Yes, we did, which is why this problem doesn't make for a great application example. But imagine that you want to know what speed you're traveling in seconds, but your clock runs in units of seconds^2. We had to convert those units into seconds first. And that's kind of what we've done. (Unfinished, will need to think about more.)</p>
 <li>Combinatorics</li>
 <li>Graph theory</li>
 <li>Descriptive statistics</li>
