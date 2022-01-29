@@ -44,7 +44,7 @@ def index():
 def get_post_javascript_data():
 	test_name = request.form['test_name']
 	accuracy = request.form['accuracy']
-	score = accuracy
+	score = request.form['score']
 	rt = request.form['rt']
 	#print(jsdata, file=sys.stderr)
 	#with open('somefile.txt', 'a') as the_file:
@@ -380,7 +380,7 @@ def delete_test(test_id):
 @bp.route('/generate_images')
 def generate_images():
 	sequence = []
-	for i in range(20):
+	for i in range(5):
 		N = np.random.random_integers(1,9)
 		x = np.random.rand(N)
 		y = np.random.rand(N)
@@ -392,7 +392,6 @@ def generate_images():
 
 		plt.scatter(x, y, s=area, c=colors)
 		plt.axis([0, 1, 0, 1])
-		plt.axis('scaled')
 
 		plt.axis('off')
 		loc = 'img/subitizing/{}.png'.format(np.random.random_integers(10000000,90000000))

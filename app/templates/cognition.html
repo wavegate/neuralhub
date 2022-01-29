@@ -17,7 +17,7 @@
 						<table id="program_table" class="table table-responsive" data-toggle="table" data-pagination="true">
 							<thead class="text-primary">
 								<th data-sortable="true" data-field="1">Test Name</th>
-								<th data-sortable="true" data-field="2">Accuracy</th>
+								<th data-sortable="true" data-field="2">Score</th>
 								<th data-sortable="true" data-field="3">Average Reaction Time</th>
 								<th data-field=""></th>
 							</thead>
@@ -28,7 +28,7 @@
 										{{ test.testname }}
 									</td>
 									<td>
-										{{ test.score }}%
+										{{ test.score }}
 									</td>
 									<td>
 										{{ test.reaction_time }} ms
@@ -89,7 +89,7 @@
 				<div class="center" style="text-align:center;margin-bottom:25px;">
 									<a href="{{url_for('main.subitizing')}}" class="btn btn-primary btn-lg">Start test</a>
 								</div>
-				<p>Subitizing is the rapid, accurate, and confident judgments of numbers performed for small numbers of items. Time taken: 1 minute</p>
+				<p>Subitizing is the rapid, accurate, and confident judgments of numbers performed for small numbers of items. Your score is the average number of objects displayed for trials you got correct. Time taken: 1 minute</p>
 								<a href="{{ url_for('static', filename='papers/subitizing_kaufman_1949.pdf') }}">Paper</a>
 			</div>
 			<div class="test" name="nback">
@@ -97,7 +97,7 @@
 				<div class="center" style="text-align:center;margin-bottom:25px;">
 									<a href="{{url_for('main.nback')}}" class="btn btn-primary btn-lg">Start test</a>
 								</div>
-				<p>The n-back task is a continuous performance task that is commonly used to measure working memory. 2-back, as in this test, means two turns back. Time taken: 1 minute</p>
+				<p>The n-back task is a continuous performance task that is commonly used to measure working memory. 2-back, as in this test, means two turns back. Your score is your accuracy. Time taken: 1 minute</p>
 								<a href="{{ url_for('static', filename='papers/carlson1998.pdf') }}">Paper</a>
 			</div>
 			<div class="test" name="phone">
