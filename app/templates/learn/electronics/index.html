@@ -12,6 +12,8 @@
 </style>
 <div class="size">
 <h2>Electronics</h2>
+<h4>Matter</h4>
+<p>In practical electronics, we use a statistically averaged continuous quantity, or continuum , rather than a discrete quantity of electrons.</p>
 <h3>Engineering Circuit Analysis</h3>
 <h4>Resistors in Series and Parallel</h4>
 <p>Resistors in series can be summed to form their total resistance.</p>
@@ -254,7 +256,7 @@ $$V(t)=V_0e^{-\frac{t}{RC}}$$
 <img src="{{url_for('static',filename='img/electronics/capacitor_problem.svg')}}">
 <p>Alright, let's do a natural response problem for an RC circuit. Our first question is what is the voltage across the capacitor as soon as the switch opens? So v(0). If you think about it, when the switch is closed, the capacitor has enough time to completely saturate its plate with charge. So voltage should be maximum at t=0. It also means that no more current is going into the capacitor. Which means all the current is going through the 20k ohm resistor. The 20k ohm resistor is in series with the 10k ohm resistor, so the total resistance is 30k on that leg. So there is a current divider for the 15 mA current between a 60k ohm resistor and a 30k ohm resistor. The current going through the 30k ohm resistor is 15 mA * (60k/(30k+60k)), which is the equation using a current divider (resistance of the other leg over the sum of both legs). \(0.015*(2/3)=0.01\). So the current going through the 20k ohm resistor is 0.01 A. From there, Ohm's law, we can calculate the voltage drop across the 20k ohm resistor. \(20000*0.01=200\). The voltage drop across the capacitor is the same as across the resistor since they're parallel. So \(V(0)=200\) volts.</p>
 <p>Second part is to find the time constant of the RC circuit. Pretty easy. Remember it's just \(\tau=RC=20\times10^3*0.5\times10^{-6}=1\times10^{-2}\).</p>
-<p>Next, we want to find \(v(t)\) after we flip the switch open. So we just derived this equation from using KCL and integrating, so it's just \(V(t)=200e^{-\frac{t}{0.01}}=200nice gif! i think that's alole^{-100t}\).</p>
+<p>Next, we want to find \(v(t)\) after we flip the switch open. So we just derived this equation from using KCL and integrating, so it's just \(V(t)=200e^{-\frac{t}{0.01}}=200e^{-100t}\).</p>
 <p>Next, we want to find the initial energy stored in the capacitor. We previously derived this by integrating power over time. So \(w=C*\frac{1}{2}*200^2=20000*0.5\times10^{-6}=0.01\) joules.</p>
 <p>Finally, let's calculate how long it takes to dissipate 75% of the initially stored energy. We know total energy stored by the capacitor, so 75% of that is 0.01*0.75=0.0075. How do you find energy dissipated by the resistor? Have to integrate power over time.</p>
 $$\int_0^x{Pdt}=0.0075$$
