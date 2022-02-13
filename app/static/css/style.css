@@ -6,6 +6,10 @@
  * License: Released for free under the Creative Commons Attribution 3.0 license (probootstrap.com/license)
  */
 
+.authors {
+  font-size: 120%;
+}
+
 #spnSelectedGroup {
   overflow: hidden;
   text-overflow: ellipsis;

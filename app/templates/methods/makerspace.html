@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>WUSTL Makerspace + Machine Shop Training</h1>
+<h4>Rikon Bandsaw Training</h4>
+<p>Do not cut metal with the bandsaw.</p>
+<img src="{{url_for('static',filename='img/makerspace/bandsaw.png')}}" style="">
+<ol>
+	<li>Rotate and slide the fence to your desired position.</li>
+	<li>Lower the blade guide to 1/4 inch above the part.</li>
+	<img src="{{url_for('static',filename='img/makerspace/bandsaw2.png')}}" style="">
+	<li>Power on Energizer on SafetySpot (blue=idle, green=active, red/flashing=error). MANUALLY (not on SafetySpot) shut off by pressing the button.</li>
+	<li>Energize the Bandsaw in SafeSpot on the equipment's page.</li>
+	<li>Turn on Digital Interface.</li>
+	<li>Set speed (for most wood we recommend 'woods->rip/cross-cut' aka press F1 3 times).</li>
+	<li>Using both hands, push item through blae to cut it.</li>
+	<li>Clean up leftover debris with shop-vac.</li>
+</ol>
+<h4>Cordless Drill/Driver Training</h4>
+<p>Only use on wood and plastic. If unsure if material is okay, ask staff.</p>
+<p>Woods:</p>
+<ul>
+	<li>Plywood</li>
+	<li>Particleboard</li>
+	<li>Medium density fiberboard (MDF)</li>
+	<li>Low density fiberboard (i.e. Masonite)</li>
+	<li>Hardwoods (Maple, Oak)</li>
+	<li>Softwoods (Pine, Basswood, Balsa, Birch)</li>
+</ul>
+<p>Plastics:</p>
+<ul>
+	<li>Poly-Vinyl Chloride (PVC)</li>
+	<li>Acetal (i.e. Delrin)</li>
+	<li>Polycarbonate (i.e. Lexan)</li>
+	<li>Acrylic</li>
+	<li>Nylon (3D printed parts)</li>
+	<li>PVA (3D printed parts</li>
+</ul>
+
+{% endblock %}
