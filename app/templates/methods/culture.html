@@ -1,13 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<h4>Materials</h4>
+<ul>
+	<p>From Sigma-Aldrich (St. Louis, MO):</p>
+	<li><a href="https://www.sigmaaldrich.com/US/en/product/mm/cc095m" target="_blank">Laminin</a></li>
+	<li><a href="https://www.sigmaaldrich.com/US/en/product/aldrich/408700" target="_blank">Polyethyleneimine</a></li>
+	<li>Hank’s balanced salt solution (HBSS)</li>
+	<li>Collagenase</li>
+	<li>Trypsin</li>
+	<li>Glial-derived neurotrophic factor (GDNF)</li>
+	<li>Uridine</li>
+	<li>5-fluoro-2-deoxyuridine</li>
+	<p>From Thermo Fisher Scientific (Waltham, MA):</p>
+	<li>Fetal bovine serum (FBS)</li>
+	<li>Dulbecco’s modified Eagle’s medium-nutrient mixture F-12 (DMEM/F-12)</li>
+	<li>GlutaMAX</li>
+	<li>DNase</li>
+</ul>
 <h4>Prepare MEAs</h4>
 <ol>
 	<li>Coat the center of each well with PEI (0.1%).</li>
+	<p>Concentration of supplied PEI is 50 wt.% in H2O. So need to dilute by 500. The goal volume is 100 ul per well. So for 6 wells total we will need 600 ul. So let's make 10ml total. So should be 20 ul PEI in 10 ml H2O. Add 100ul to the center of each well.</p>
 	<li>Incubate at 37°C and 10% CO2 overnight.</li>
 	<li>The following morning, rinse three times with sterile double de-ionized water and allow to dry.</li>
-	<li>Add 10 microliters laminin (20 ug/ml) to center of each well adn incubate at 37°C for 2 h. Remove laminin immediately before cell seeding.</li>
+	<li>Add 10 microliters laminin (20 ug/ml) to center of each well and incubate at 37°C for 2 h. Remove laminin immediately before cell seeding.</li>
+	<p>Concentration provided is 1.7 mg/ml. Should be thawed and kept at 4-8 degrees C. 1.7/x=0.02. So dilute by 85. If we want 1ml total, add 12 ul.</p>
 </ol>
 <h4>Primary DRG extraction and culture</h4>
 <ol>
@@ -27,20 +45,7 @@
 	<li>Replace media after the first 24 h and every alternate day afterwards.</li>
 	<li>After nonneuronal cells reach 90% confluence (DIV 5-7), supplement media with mitotic inhibitors uridine (17.5 ug/ml) and 5-fluoro-2'-deoxyuridine (7.5 ug/ml).</li>
 </ol>
-
-Create 40ml Washing medium
-40ml HBSS
-0.132 ml 300X stock gentamycin
-0.4ml 100x stock kanamycin
-
-Create dissociation solution (2mg collagenase dissolved in 1ml HBSS)
-0.1mg DNase x (17500 units)/1mg x (1 ul)/(338.5 units) = 5.17 ul DNase per 0.1 mg
-0.1 mg/ml DNase add to dissociation soliution
-Create 2X dissociation solution - 4mg/ml collagenase and 0.2mg/ml DNase
-To make 6ml dissociation solution, dissolve 24mg collagenase IV in 6ml HBSS
-Then dissolve 5.17 * 2 * 6 = 62.04 ul DNase
-Filter-sterilize
-
+To make 
 Make complete cell medium - DMEM/F12 + GlutaMAX + 10% FBS + 1% PS + 5 ng/ml GDNF
 10 ug total
 5 ng/ml GDNF
