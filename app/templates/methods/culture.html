@@ -2,8 +2,8 @@
 
 {% block content %}
 <h4>Materials</h4>
+<p>From Sigma-Aldrich (St. Louis, MO):</p>
 <ul>
-	<p>From Sigma-Aldrich (St. Louis, MO):</p>
 	<li><a href="https://www.sigmaaldrich.com/US/en/product/mm/cc095m" target="_blank">Laminin</a></li>
 	<li><a href="https://www.sigmaaldrich.com/US/en/product/aldrich/408700" target="_blank">Polyethyleneimine</a></li>
 	<li>Hank’s balanced salt solution (HBSS)</li>
@@ -12,7 +12,9 @@
 	<li>Glial-derived neurotrophic factor (GDNF)</li>
 	<li>Uridine</li>
 	<li>5-fluoro-2-deoxyuridine</li>
+</ul>
 	<p>From Thermo Fisher Scientific (Waltham, MA):</p>
+<ul>
 	<li>Fetal bovine serum (FBS)</li>
 	<li>Dulbecco’s modified Eagle’s medium-nutrient mixture F-12 (DMEM/F-12)</li>
 	<li>GlutaMAX</li>
@@ -21,52 +23,30 @@
 <h4>Prepare MEAs</h4>
 <ol>
 	<li>Coat the center of each well with PEI (0.1%).</li>
-	<p>Concentration of supplied PEI is 50 wt.% in H2O. So need to dilute by 500. The goal volume is 100 ul per well. So for 6 wells total we will need 600 ul. So let's make 10ml total. So should be 20 ul PEI in 10 ml H2O. Add 100ul to the center of each well.</p>
+	<p class="minutiae">Concentration of supplied PEI is 50 wt.% in H2O. So need to dilute by 500. The goal volume is 100 ul per well. So for 6 wells total we will need 600 ul. So let's make 10ml total. So should be 20 ul PEI in 10 ml H2O. Add 100ul to the center of each well.</p>
 	<li>Incubate at 37°C and 10% CO2 overnight.</li>
 	<li>The following morning, rinse three times with sterile double de-ionized water and allow to dry.</li>
 	<li>Add 10 microliters laminin (20 ug/ml) to center of each well and incubate at 37°C for 2 h. Remove laminin immediately before cell seeding.</li>
-	<p>Concentration provided is 1.7 mg/ml. Should be thawed and kept at 4-8 degrees C. 1.7/x=0.02. So dilute by 85. If we want 1ml total, add 12 ul.</p>
+	<p class="minutiae">Concentration provided is 1.7 mg/ml. Should be thawed and kept at 4-8 degrees C. 1.7/x=0.02. So dilute by 85. If we want 1ml total, add 12 ul.</p>
 </ol>
 <h4>Primary DRG extraction and culture</h4>
 <ol>
 	<li>Isolate DRGs and place in ice-cold HBSS.</li>
 	<li>Transfer to hood, and wash with washing medium (40ml HBSS + 0.132 ml 300x stock gentamycin + 0.4ml 100x stock kanamycin).</li>
 	<li>Transfer to dissociation solution, consisting of collagenase (2 mg/ml) and DNase (0.1 mg/ml) and incubate for 40 min at 37°C.</li>
-	<li>2x dissociation solution: 4 mg/ml collagenase and 0.2mg/ml DNase. To make 6ml dissociation solution, dissolve 24mg collagenase IV in 6ml HBSS, filter-sterilize, and then add 62ul DNase. The DNase I is supplied by Thermo Fisher in a 20,000 Unit vial with a concentration varying form 50-375 U/ul. The specific activity of DNase I is typically in the range of 10,000-25,000 units/mg. Therefore:</li>
+	<p class="minutiae">-1/12/22 Created 2x collagenase solution (4mg/ml) in HBSS; 2x dissociation solution: 4 mg/ml collagenase and 0.2mg/ml DNase. To make 6ml dissociation solution, dissolve 24mg collagenase IV in 6ml HBSS, filter-sterilize, and then add 62ul DNase. The DNase I is supplied by Thermo Fisher in a 20,000 Unit vial with a concentration varying form 50-375 U/ul. The specific activity of DNase I is typically in the range of 10,000-25,000 units/mg. Therefore:</p>
 	$$0.1\text{mg DNase I}*\frac{17,500\text{ units}}{1 \text{ mg}}*\frac{1\text{ ul}}{338.5\text{ units}} = 5.17\text{ ul DNase I}$$
-	<p>Since we're making 6ml of a 2x solution, we need to multiply this by 12.</p>
+	<p class="minutiae">Since we're making 6ml of a 2x solution, we need to multiply this by 12.</p>
 	$$5.17\text{ ul DNase I}*2*6=62.04\text{ ul DNase}$$
 	<li>After 40 min, add trypsin (0.025%) and incubate for an additional 5 min at 37°C.</li>
 	<li>Triturate with fire-polished glass Pasteur pipette until solution appears homogeneous.</li>
 	<li>Pass solution through 70-um nylon filter, and triple the volume with DMEM/F12 + 10% FBS to quench trypsinization.</li>
 	<li>Centrifuge cells (10 min at 600g) and resuspend in fresh complete medium (DMEM/F-12 + GlutaMAX, 10% FBS, 1% P/S, 5 ng/ml GDNF).</li>
+	<p class="minutiae">To make 20ml of complete cell medium, we need 20ml DMEM/F12 + 200 ul of GlutaMAX 100X + 2 ml FBS + 200 ul P/S + 100ng. GDNF should be diluted in 0.1% BSA. We have 7.5% BSA in DPBS, so dilute by factor of 75 to make a total of 1ml = 14 ul BSA with 986 ul of DPBS, making 1 ml of 0.1% BSA. The GDNF (total 10ug) was aliquoted into 10 parts, each one with 1ug in 100ul of 0.1% BSA, making concentration 10ug/1ml. So each 1ml of complete medium should have 5 ng, or 1/200 of 100ul. Meaning every 2 ml of media should have 1 ul of GDNF solution.</p> 
 	<li>Seed 5-10 ul containing an estimated 10,000 cells at the center of each MEA device.</li>
 	<li>Incubate plates at 37°C, 10% CO2, and 95% humidity.</li>
 	<li>Replace media after the first 24 h and every alternate day afterwards.</li>
 	<li>After nonneuronal cells reach 90% confluence (DIV 5-7), supplement media with mitotic inhibitors uridine (17.5 ug/ml) and 5-fluoro-2'-deoxyuridine (7.5 ug/ml).</li>
 </ol>
-To make 
-Make complete cell medium - DMEM/F12 + GlutaMAX + 10% FBS + 1% PS + 5 ng/ml GDNF
-10 ug total
-5 ng/ml GDNF
-20ml of complete medium
-20ml DMEM/F12 + 200ul of GlutaMAX 100X + 2ml FBS + 200ul PS + 100 ng = 
-split 10ug into 10 parts, each one has 1ug in 100ul of 0.1% BSA
-100 ng aliquots
-dissolve 10ug into 1ml of 0.1% BSA
-divide that 1ml into 10 100ul aliquots and store at -20
-each time we nee to make 20ml complete cell media, we need 10ul from one aliquot
-we have 7.5% BSA in DPBS, dilute by factor of 75, total of 1ml = 14 ul BSA with 986 ul of DPBS = 1 ml of 0.1% BSA
-1/12/22 Created stock collagenase solution (4mg/ml) in HBSS
-Isolate DRGs into ice-cold HBSS
-Add DRGs to dissociation solution
-Incubate for 40 min
-Add 50 ul 0.5% trypsin and incubate for 5 min
-Triturate with fire-polished glass pasteur pipette until homogeneous
-Pass solution through 70 um filter
-Triple volume with DMEM/F-12 + 10% FBS
-Centrifuge 10 min at 600g
-Resuspend pellet in fresh complete medium
-</pre>
 
 {% endblock %}
