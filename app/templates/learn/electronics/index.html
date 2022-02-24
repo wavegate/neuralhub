@@ -12,13 +12,15 @@
 </style>
 <div class="size">
 <h2>Electronics</h2>
-<h4>Matter</h4>
-<p>In practical electronics, we use a statistically averaged continuous quantity, or continuum , rather than a discrete quantity of electrons.</p>
 <h3>Engineering Circuit Analysis</h3>
+<h4>Ohm's Law</h4>
+$$V=iR$$
 <h4>Resistors in Series and Parallel</h4>
 <p>Resistors in series can be summed to form their total resistance.</p>
 <p>Resistors in parallel follow the following equation:</p>
-$$1/R_\text{total}=1/R_1+1/R_2+1/R_3...$$
+$$\frac{1}{R_\text{total}}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}...$$
+<p>If you only have two resistors in parallel, you can cheat and use the heuristic "product over sum":</p>
+$$R_\text{total}=\frac{R_1*R_2}{R_1+R_2}$$
 <h4>Kirchhoff's Current Law</h4>
 <p>Kirchhoff's current law states that the current going into a node is equal to the current going out of a node.</p>
 <h4>Kirchhoff's Voltage Law</h4>
@@ -26,13 +28,13 @@ $$1/R_\text{total}=1/R_1+1/R_2+1/R_3...$$
 <h4>Voltage Divider</h4>
 <p>A voltage divider is simply splitting up a voltage source across more than one resistor.</p>
 <img src="{{url_for('static',filename='img/electronics/voltage_divider.svg')}}" style="width: 30%">
-<p>We know that the total resistance across two resistors is just the sum. So we can find the current going through both resistors.</p>
-$$i=V_1/(R_1+R_2)$$
-<p>Which means the voltage drop across any single resistor is:</p>
-$$V=V_1/(R_1+R_2)*R_1$$
+<p>We know that the total resistance across two resistors is the sum. So we can find the current going through both resistors.</p>
+$$i=\frac{V_1}{R_1+R_2}$$
+<p>Which means the voltage drop across any single resistor (say across resistor 1) is:</p>
+$$V=\frac{V_1}{R_1+R_2}*R_1=V_1(\frac{R_1}{R_1+R_2})$$
 <p>Basically, the voltage drop across any resistor in series is proportional to the size of that resistor. You can imagine that this can allow you to divide any single voltage sorce into separate voltage drops using differently sized resistors.</p>
 <h4>Current Divider</h4>
-<p>If you have current splitting into two paths, the current going through path 1 is equal to the input current times the proportion of the resistance of path 2 to the resistance of the 2 paths combined.</p>
+<p>If you have current splitting into two paths, the current going through path 1 is equal to the input current times the proportion of the resistance of path 2 to the resistance of the 2 paths combined. It's just like the voltage divider except you use the resistance of the other path (the higher the resistance of the other path, the higher your current through your path).</p>
 $$i_1=i_\text{tot}(\frac{R_2}{R_1+R_2})$$
 <h4>Node Voltage Method</h4>
 <p>For node voltage, you choose a reference node, and then look at any essential nodes. An essential node is a node with three or more components. You then do KCL on each essential node.</p>
@@ -64,7 +66,7 @@ $$\begin{bmatrix}10 & -8 & 0 & | & 40 \\ -8 & 20 & -6 & | & 0 \\ 0 & -6 & 10 & |
 <img src="{{url_for('static',filename='img/electronics/6.svg')}}" width=80%>
 <p>Then, we can combine the resistors in parallel, and combine the current sources in parallel. Then transform back into a voltage source.</p>
 <img src="{{url_for('static',filename='img/electronics/7.svg')}}" width=80%>
-<p>Finally, we can calculate the current running through the circuit, and then we can multiply that current by the resistance across V1 to get the voltage drop across V1. Answer found!</p>
+<p>Now you can just find the voltage of V1 via a voltage divider. Answer found!</p>
 <h4>Thevenin Equivalent Circuits</h4>
 <p>A Thevenin equivalent circuit is basically doing a "source" transformation for an entire circuit, converting power sources, resistors, inductors, and capacitors into one "black box" element. The only factors that can be taken out of this equivalent circut are the Thevenin equivalent Voltage (VTH) and the Thevenin equivalent resistance (RTH). These values are found using the Kirchhoff laws, mesh current, or node voltage methods to solving circuits.</p>
 <img src="{{url_for('static',filename='img/electronics/thevenin.svg')}}" width=60%>
@@ -109,7 +111,7 @@ $$i=0.01$$
 <p>So now we know that our voltage v is \(v=-20*0.01*25=-5\). You will notice that is the voltage drop between a and b in an open circuit, which means v is also the Thevenin equivalent voltage. So \(V_\text{TH}=-5\).</p>
 <p>So now we have to find the Thevenin equivalent resistance. Because of the dependent sources, we can't use the "remove all the sources and find the equivalent resistance" method. So we need to short circuit between a and b and find the current running through, and use that and Ohm's law to find the resistance.</p>
 <img src="{{url_for('static',filename='img/electronics/norton_2.svg')}}">
-<p>What you will find is that we can remove a couple of parts of our circuit once we do this. Now that we have short circuited a and b, there is no longer a current running through the 25 ohm resistor. So we can actually just remove that part of the circuit completely. Then, because there is no more volage drop across that resistor (it's a short circuit!), our value of v is 0, and so the 3v voltage source also becomes 0, so we can simply remove that source and replace it with a wire.</p>
+<p>What you will find is that we can remove a couple of parts of our circuit once we do this. Now that we have short circuited a and b, there is no longer a current running through the 25 ohm resistor. So we can actually just remove that part of the circuit completely. Then, because there is no more voltage drop across that resistor (it's a short circuit!), our value of v is 0, and so the 3v voltage source also becomes 0, so we can simply remove that source and replace it with a wire.</p>
 <img src="{{url_for('static',filename='img/electronics/norton_3.svg')}}">
 <p>So our circuit now looks like the above. Notice that i is no longer the same as before because we added a short circuit to the system. But it should be pretty easy to see that \(i=5/2000=0.0025\), which means that the current running through a and b is \(-20*0.0025=-0.05\). Now that we have the current, we use Ohm's law, and get our resistance to be \(-5/-0.05=100\). So we conclude that our \(V_\text{TH}=-5\) and \(R_\text{TH}=-100\). Which means our Norton equivalents are \(i_\text{N}=-0.05\) and \(R_\text{N}=-100\) (in the drawing I can switch these to positive by flipping the current source upside down to travel from b to a).</p>
 <img src="{{url_for('static',filename='img/electronics/norton_4.svg')}}"  style="width: 100%">

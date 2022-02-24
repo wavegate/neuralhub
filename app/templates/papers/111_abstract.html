@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Targeted Ablation of Knee-Innervating Nociceptors Reduces Cartilage Degeneration in Chronic Experimental Osteoarthritis</h2>
+<p>Lai Wang, Shingo Ishihara, Alia M. Obeidat, Jun Li, Richard J. Miller, Rachel E. Miller, Anne-Marie Malfait</p>
+<p>Rush University Medical Center, Northwestern University, Chicago, IL, USA</p>
+<img src="https://www.researchgate.net/profile/Rebecca-Lewis-18/publication/258336705/figure/fig1/AS:297603800551433@1447965683603/nnervation-of-a-typical-articular-joint-Most-tissues-of-the-joint-receive-afferent_W640.jpg">
+<p>What happens if we kill off the neurons sending pain signals from the knee? First, we need to have a way to identify these neurons. We can identify them using NaV1.8, a voltage-gated sodium channel expressed in nociceptive (pain sensing) neurons. So we label each of the neurons that express NaV1.8 with Cre, as well as with GCaMP (green fluorescent protein) or tdTomato (red fluorescent protein). Then, we need a way to target those neurons specifically. We can use a viral gene delivery system to target peripheral neurons that express Cre (AAV.PHP.S containing pAAV-EF1a-mCherry-flex-dtA). We will attach a toxin (diphtheria toxin) to this virus so that when it gets to the cell body, it stops protein synthesis and kills the cell.</p>
+<p>So did we kill off the neurons? Yes. We've killed off about 23.8%-38.5% of NaV1.8-expressing neurons after injection with the diptheria toxin virus. Now how does this affect pain? They injected Pam3CSK4, a Toll-like receptor 2 ligand, which induces pain reponse (hyperalgesia) within 24 hours in knee joint. The withdrawal threshold (amount of force applied to knee/hindpaw was decreased after injecting Pam3CSK4 in the control group but not the AAV-dtA. This means injection of the toxin 3 weeks earlier prevented the heightened pain response! Can we recreate this finding in a surgically induced model of osteoarthritis? BUT there was some change in cartilage degeneration with our model at 17 weeks after surgery. No differences on knee innervation was identified by looking at tdTomato signals.</p>
+
+<img src="{{url_for('static',filename='img/abstracts/111.png')}}" style="float:left;margin-left:-160px">
+
+<h2>Ca2+ signaling mediated by CaV1.2 voltage-gated Ca2+ channel regulates tendon formation</h2>
+<p>Brandon Dexter, Antonion Korcari1, 2, Scott A. Rodeo, Mark R. Buckley, Alayna E. Loiselle, Geoffrey S. Pitt, Chike Cao</p>
+<p>Center for Musculoskeletal Research, Department of Biomedical Engineering, University of Rochester Medical Center, Rochester, NY; Sports Medicine
+and Shoulder Service, Hospital for Special Surgery, New York, NY; Cardiovascular Research Institute, Weill Cornell Medicine, New York, NY</p>
+<p>CaV1.2, a L(long-lasting)-type voltage-gated calcium channel has been shown to regulate bone formation and homeostasis in non-excitable osteoblast precursors. They hypothesized that CaV1.2 is important in tendon formation as well. They first took CaV1.2 lacZ reporter mice and stained for X-gal, allowing for visualization of lacZ expression. This showed that endogenous CaV1.2 is expressed during mouse tendon development but was not present in adulthood. They then took ScxCre (Scx is a marker for tendon/ligament cell lineage) mice and crossed it with a gain-of-function mutant CaV1.2 knocked into a Rosa26 locus with an upstream floxed stop codon. This forces cells marked by Scx (tendon cells) to also express CaV1.2. This caused the mice to have increased tendon mass, cross section area and number of cells, but reduced cellular density (there are more cells total and they're bigger). It also caused the Achilles tendons to have smaller but more dense collagen fibrils. Finally, mechanical properties (CSA, peak load and stiffness) of mutant tendons were the same as control tendons.</p>
+<img src="{{url_for('static',filename='img/abstracts/191_1.png')}}">
+<img src="{{url_for('static',filename='img/abstracts/191_2.png')}}">
+<img src="{{url_for('static',filename='img/abstracts/191_3.png')}}">
+
+<h2>Effect of repeated injections of intra-articular nerve growth factor in the naive murine knee joint</h2>
+<p>Alia Obeidat, Shingo Ishihara, Lai Wang, Rachel Miller, Anne-Marie Malfait</p>
+<p>Department of Internal Medicine, Division of Rheumatology, Rush University Medical Center, Chicago, IL</p>
+<p>NGF was injected intra-articularly into right knee joint of 12-week-old male mice twice a week for 4 weeks in wild type of NaV1.8-tdTomato mice. Knee swelling was measured and knee hyperalgesia was assessed. L3-L5 DRG were collected and pooled for bulk RNA seq. Knees were collected for histopathology.</p>
+<p>Knee hyperalgesia was found at 2 and 4 weeks. Knees swelled in a dose dependent manner. Bulk RNAseq showed upregulated immune cell infiltration and inflammation. Knees injected with NGF showed signs of synovitis (3A) and osteophyte like structures (blue arrow), but no cartilage destruction. Neurona lremodeling was present in the medial compartment of the knees with more innervation in the medial synovium.</p> 
+<p>Knees of mice injected with NGF showed signs of inflammation including knee swelling and synovitis, in addition to neuronal sprouting in the medial synovium.</p>
+
+<img src="{{url_for('static',filename='img/abstracts/199.png')}}" style="float:left;margin-left:-160px">
+Stephanie Willerth
+3D bioprinting personalized neural tissue models
+Neural tissue engineering for Alzheimer's, parkinson's, MS, glioblastoma, SCI, TBI, PNI
+Over 90% neurological drugs enter clinical trials fail
+Animal models serve the current gold standard but are costly, labor intensive, and lack predictive capacity
+Human tissues are limited
+Engineering neural tissue from human induced pluripotent stem cells (hiPSCs)
+Takahashi and Yamanaka discovered they could reprogram adult cells to behave like embronic stem cells that could become any cell type in 2006
+Neurons, oligodendrocytes, astrocytes
+Retinoic acid promotes stem cells to differentiate into neural lineages
+Purmorphamine induces motor neuron differentiation (patterns the ventral neural tube by encouraging neuronal differentiation specifically into motor neurons)
+Guggulsterone induces differentiation into dopaminergic neurons
+Culture stem cells, hand-seed into gels, shake by hand, a lot of manual labor
+Constantly have to change cell culture media, very hard to translate to high throughput
+Organoids often experience variability from culture to culture
+3D bioprinting uses factors, stem cells, biomaterials, added with media, nutrients, growth factors to form 3D tissue culture
+Considerations: method of printing, choice of cell types, choice of materials to make bioink, tissue structure, incorporation of growth adn differentiation factors into the tissue
+Microfluidic 3D biopriting technology
+4 Channels (4 materials/cell types)
+Fibrin based bioink - how she started off
+Microspheres to deliver retinoic acid, guggulsterone, purmorphamine to promote neuronal differentiation of hiPSCs
+Microspheres as bioink additives
+Characterization of bioink
+RX1 technology can precisely place multiple types of microspheres inside our bioprinted tissues
+Microspheres were distributd evenly throughout the constructs
+Different cell types? Differentiation is modulated by different concentrations, as well as specifically printing different cell types
+Seeing mature neural tissues because of seeing myelin, oligodendrocytes, etc.
+Microsphere-containing bioinks promote development of functional neural tissues
+Future work - collabrating with Alzheimer's clinic
+Reprogramming hMSCs into neural-like tissues, except in 3D
+Bioprinting human U87 glioblastoma cells into rings
+Direct reprogramming of glioblastoma cells into neurons using small molecules
+Co-culture of glioblastoma cells in presence of healthy astrocytes
+Identified a novel compoudn thatw as toxic to glioblastoma and could shrink tumor sphenoids
+
+{% endblock %}
