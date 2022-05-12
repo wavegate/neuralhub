@@ -101,6 +101,9 @@ https://zbmath.org/classification/
 	example, if you state, "I am tall." It is difficult to assign a truth value to this statement because it depends
 	on
 	what height we consider tall to be, and so fuzzy logic investigates these scenarios.</p>
+<p>The converse of a categorical or implicational statement is the result of reversing its two constituent statements.
+	For the implication P->Q, the converse is Q->P. The truth of the converse is generally independent from that of the
+	original statement.</p>
 <li>Proof theory and constructive mathematics</li>
 <p>Let's talk about writing proofs for a sec. I'm no mathematician so this is what I garner from a quick google search
 	of how to write proofs by Eugenia Cheng. This is because I was dealing with a linear algebra textbook which
@@ -138,7 +141,27 @@ https://zbmath.org/classification/
 	the situation reminds you of any situations you've ever seen before. I like these tips because they are pretty much
 	how I think people should deal with any problem in life logically. Note where you're starting off from, and where
 	you want to go, then work both ways and see if you can connect the dots!</p>
+<p>One method for proofs, which may be familiar for those who work in programming as well, is proof by induction. In the
+	base step we verify that the statement is true for some first instance, and then in the inductive step we establish
+	an implication, that if the statement is true for all prior cases then it follows for the present case also. These
+	two steps prove together that the statement for all the steps because the base step is true and everything that
+	follows is also true.</p>
+<p>To prove by mutual set inclusion is to prove that the solution set of a system equals something. This is by proving
+	that any solution to the system is in the set, and anything in the set is a solution of the system. It's easy to
+	confuse these two statements so try to visualize it in your head.</p>
 <p>She then goes into some examples of styles for typical proof cases but I'll probably learn those along the way.</p>
+<h4>Equivalence relations</h4>
+<p>An equivalence relation is a binary relation that is reflexive, symmetric and transitive. Reflexive means that it is
+	equivalent to itself, symmetrical is a to b if and only if b to a, and transivity is if a to b and b to c then a to
+	c.</p>
+<h4>Commutative, associative</h4>
+<p>Commutative means you can write the same thing forwards and backwards (\(a+b=b+a\)), associative means you can group
+	things in
+	different combinations (\((a+b)+c=a+(b+c)\)).</p>
+<h4> Union, Intersection, and Complement</h4>
+<p>The union of two sets contains all elements contained in both sets, and is denoted \(A\cup B\). The intersection of
+	two sets contains only the elements that are in both sets, and is denoted \(A \cap B\). The complement of a
+	set A contains everything that is not in the set A, denoted \(A'\).</p>
 <li>Arithmetic and number theory</li>
 <pre>
 	-pre-numerical stage, concept of numbers
@@ -205,13 +228,183 @@ https://zbmath.org/classification/
 	system
 	has infinite solutions.</p>
 <h4>Describing the solution set</h4>
-<p>It's best to describe the solution set if there are many solutions in terms of free variables, which are variables
+<p>It's best to describe the solution set if there are many solutions in terms of free variables, which are
+	variables
 	that are not leading in an echelon form linear system. You should rephrase the solution set in terms of these
-	variables to make it easier to understand. These variables that we use to describe a family of solutions are called
-	parameters. Free variables and parameters aren't always the same because we can choose not to use a free variable as
+	variables to make it easier to understand. These variables that we use to describe a family of solutions are
+	called
+	parameters. Free variables and parameters aren't always the same because we can choose not to use a free
+	variable as
 	a parameter.</p>
-
+<h4>Matrices</h4>
+<p>An \(m\times n\) matrix is a rectangular array of numbers with m rows and n columns. Each number in the matrix is
+	an
+	entry. Matrices are usually denoted with an upper case roman letter. A matrix with 2 rows and 3 columns would be
+	said to be a "two-by-three" matrix, with number of rows always stated first. Matrix entries are named with the
+	corresponding lower-case letter, then with subscripts of m,n. Writing linear systems in matrix form just makes
+	things easier so you don't have to write all the variables and signs. Adding a vertical bar separates
+	coefficients
+	on the left side and constants on the right. With the bar, a matrix becomes an augmented matrix.</p>
+<p>You can also write the solution sets in matrix form by turning the x, y, z, w (etc) into column vectors and
+	adding
+	those vectors together (it's hard to visualize so have to look up at least until I can add it in mathjax). A
+	column
+	vector or a vector is a matrix with a single column. You can also have a row vector. The entries of a vector are
+	sometimes called components. A column or row vector whose components are all zeros is a zero vector. Vectors are
+	usually represented with an arrow above a lower-case letter. Vectors can be summed together (must have the same
+	number of entries) or scaled by a real number. All linear systems will, with Gauss's method, end up with the
+	same
+	free variables.</p>
+<p>The transpose of a matrix is the matrix whose columns are the rows of the original matrix.</p>
+<h4>General = Particular + Homogeneous</h4>
+<p>The solution description has two parts, the particular solution (for example (1,2,3)) and the unrestricted linear
+	combination of vectors for the free variables after Gaussian reduction. A linear equation is homogeneous if it
+	has a
+	constant of zero (all of the variables*coefficients add up to zero). A homogeneous system must always be
+	consistent
+	because there is always the zero vector as a solution.</p>
+<p>We say that the set of vectors is generated by or spanned by the set if the vector can be a linear combination of
+	the
+	vectors in the set.</p>
+<p>We call the matrix of the coefficients of a system nonsingular if it is a square matrix with a unique solution
+	(no
+	free variables) in a homogeneous system (setting all the constants to 0), which means there are the same number
+	of
+	echelon form equations as there are variables. A nonsingular coefficient matrix indicates the system only has
+	one
+	unique solution. A coefficient matrix is singular (singular in this case meaning different from expected) if its
+	homogeneous system has zero or infinite solutions. What this means to me is that you can "solve" a linear system
+	if
+	you have as many VALID equations AFTER Gaussian reduction as unknowns. The idea that you can solve a system as
+	long
+	as you have as many equations as unknowns is often not true.</p>
+<h4>Dot product</h4>
+<p>The dot product, or inner product, or scalar product, of two n-component real vectors is the linear combination
+	of
+	their components.</p>
+<h4>Linear Geometry</h4>
+<p>The solution set of a linear system with \(n\) unknowns is a linear surface in \(\mathbb{R}^n\). Specifically, it
+	is
+	a k-dimensional linear surface, where k is the number of free variables in echelon form version of the system.
+	For
+	instance, if there is just a single equation, then the solution set is an n-1-dimensional hyperplane. The
+	solution
+	set of the homogenous linear system is a linear surface passing through the origin. We can view the general
+	solution
+	set of any linear system as being the solution set of its associated homogeneous system offset from the origin
+	by a
+	vector, aka the particular solution.</p>
+<p>A vector in its canonical position starts from the origin.</p>
+<p>The length of a vector is the square root of the sum of the squares of its components. You can normalize a vector
+	by
+	reducing it to a vector with a magnitude of one. Then, take for example a two-dimensional plane. Put the two
+	vectors
+	in canonical position, and then take the plane formed by the origin and the endpoints. Consider a triangle
+	formed by
+	the origin and the endpoints of the two vectors. Applying the Law of Cosines, and taking into account that the
+	length of a vector is the square root of the sum of its squares, we can get the angle between the two vectors to
+	be:
+	$$\theta=\cos^{-1}(\frac{u_1v_1+u_2v_2+u_3v_3}{|\vec{u}||\vec{v}|})$$</p>
+<p>Even in higher-dimensional spaces, lines are straight and planes are flat. For any two points in a linear
+	surface,
+	the line segment between them is contained in that surface. If the linear surface was not flat, then that would
+	allow for shortcuts where the shortest path between two vectors would not be the line between them. Linear
+	surfaces
+	therefore have no bends.</p>
+<p>The angle between two nonzero vectors is:</p>
+$$\theta=\cos^{-1}(\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|})$$
+<p>Vectors are orthogonal (aka perpendicular) if and only if their dot product is zero. They are parallel if and
+	only if
+	their dot product equals the product of their lengths.</p>
+<h4>Cauchy-Schwarz Inequality</h4>
+<p>Cauchy-Schwarz inequality states that \(|\vec{u}\cdot\vec{v}|\leq|\vec{u}||\vec{v}|\) with equality if and only
+	if one vector is a scalar multiple of the other. What this says is that if you take the dot product of two
+	vectors,
+	it
+	will be less than or equal to the product of the length of the vectors. This allows for the prior equation for
+	the
+	angle between two vectors to be always possible.</p>
+<h4>Gauss-Jordan Reduction</h4>
+<p>The Gauss-Jordan Reduction is just an extension of Gauss's Method which making all of the leading entries into
+	1's
+	and then uses the leading entries to eliminate all other entries in each column by combining upwards. Using one
+	entry to clear out the rest of a column is called pivoting on that entry. The resulting matrix is in reduced
+	echelon
+	form, in which each leading entry is a 1 and is the only nonzero entry in its column. The only advantage of
+	reduced
+	echelon form to normal echelon form is you can read out the description of the solution set from the matrix. Any two
+	matrices that are interreducible by elementary row operations are row equivalent. Any matrix can only be reduced
+	down to one reduced echelon form: there are not multiple variants.</p>
+<p>It is not the set of parameters that is unique, it is the set of fre variables that is unique.</p>
+<p>"The idea here is that one way to understand a mathematical situation is
+	by being able to classify the cases that can happen. This is a theme in this book and we have seen this several
+	times already. We classified solution sets of linear systems into the no-elements, one-element, and infinitely-many
+	elements cases. We also classified linear systems with the same number of equations as unknowns into the nonsingular
+	and singular cases."</p>
 <li>You need matrix algebra to help solve systems of equations encountered in electrical circuit analysis.</li>
+<h4>SageMath</h4>
+<p>Sage is a math software you can use on Windows subsystem for linux (WSL) to help solve math problems.</p>
+<h4>Input-Output analysis</h4>
+<p>Mathematical models can get complicated/confusing very fast. Sensitivity analysis is seeing how sensitive the
+	predictions of our model are to the accuracy of the assumptions. A single model does not suit every case and
+	assuring that the assumptions underlying a model are reasonable for a particular prediction requires the judgments
+	of experts.</p>
+<h4>Vector space</h4>
+<p>A vector space is a set of vectors for which all vectors within the space and scalars satisfy that the set is closed
+	under vector addition, vector addition is commutative, associative, there is a zero vector, each vector has an
+	additive inverse which sums to 0, scalar multiplication distributes over scalar addition and vector addition, scalar
+	multiplication associates, and multiplication by the scalar 1 gives the identity operation. Particularly important
+	are the closure conditions, which specify that addition and scalar multiplication operations are always defined for
+	every pair of vectors and every scalar and vector, and the result of the operation is a member of the set.</p>
+<p>A one-element vector space is a trivial space.</p>
+<img src="{{ url_for('static', filename='img/math/vector.png') }}">
+<h4>Subspaces and Spanning Sets</h4>
+<p>For any vector space, a subspace is a subset that is itself a vector space, under the inherited operations. Any
+	subspace that is not the entire space itself is a proper substance. A subset is a subspace if and only if it is
+	closed under linear combinations. The span (or linear closure) of a nonempty subset S of a vector space is the set
+	of all linear combinations of vectors from S. The span is also a subspace of the vector space.</p>
+<h4>Span</h4>
+<p>The span, or linear closure, or linear span, or linear hull, of a set is the smallest linear subspace that contains
+	the set. It is the set of linear combinations of elements of S. The span of a set is a vector space, so you can use
+	the phrases: set S spans vector space V; S generates V; V is spanned by S; V is generated by S; S is a spanning set
+	of V; S is a generating set of V.</p>
+<h4>Linear Independence</h4>
+<p>In any vector space, a set of vectors is linearly independent if none of its elements is a linear combination of
+	the
+	others from the set. Otherwise the set is linearly dependent. A spanning set is minimal if and only if it is
+	linearly independent. Subset preserves independence and superset preserves dependence.</p>
+<p>Sets are collections with two properties: (i) order does not matter, and (ii) duplicates collapse. A collection
+	where
+	order does not matter and duplicates don't collapse is a multiset. So technically if we have a duplicate vector
+	in
+	our set it's not technically a set.</p>
+<p>A set S is linearly independent if and only if for any vector v in S, its removal shrinks the span
+	\([S-\{v\}]\not\subset[S]\) (not a subset of). In a vector space, any finite set has a linearly independent
+	subset
+	with the same span. Any set with the zero vector is linearly dependent.</p>
+<h4>Linear combinations</h4>
+<p>A linear combination is an expression constructed from a set of terms by multiplying each term by a constant and
+	adding the results. So linear combinations are constructed from sets.</p>
+<h4>Real coordinate space</h4>
+<p>Real coordinate space of dimension n, denoted \(\mathbb{R}^n\), is the set of the n-tuples of real numbers, that is
+	the set of all sequences of n real numbers. It is a real vector space, and its elements are called coordinate
+	vectors. \(\mathbb{R}^n\) has an element \((x_1, x_2, ..., x_n)\).</p>
+<h4>Minimal/maximal sets</h4>
+<p>A minimal spanning set is one with the lowest number of vectors that spans the space. A maximal spanning set is the
+	one with the highest number of vectors, and therefore IS the space. A minimal spanning set is linearly independent.
+	A linearly independent set that is maximal spans the entire space.</p>
+<h4>Basis</h4>
+<p>A basis for a vector space is a sequence of vectors that is linearly independent and that spans the space. Because a
+	basis is a sequence, order matters and it is denoted with angle brackets \(\langle \vec{\beta}_1, \vec{\beta}_2,
+	...\rangle\). For any \(\mathbb{R}^n\), the standard or natural basis is the vectors that have 1 in their respective
+	components and 0 in everything else. For example, R2 natural basis is (1,0) and (0,1). The trivial space has only
+	one basis, that is the empty one. We have seen bases before, by finding the solution set by parametrizing certain
+	free variables. The vectors in the solution set is the basis and the solutions spanned by the basis is the solution
+	set and the vector space of solutions.</p>
+<p>You can represent any vector in the vector space using the basis by using a column vector of the coefficients of a
+	linaer combination of the basis vectors. This requires the basis to be in sequence.</p>
+$$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pmatrix}_B$$
+
 <li>Geometry</li>
 <pre>
 	-informal geometry
@@ -469,6 +662,14 @@ $$y'=-1/x^2$$
 	<p>Trigonometry, or "measurement of triangles" is the branch of math that studies side lengths and angles of
 		triangles. Became more popular due to the demands of navigation and the need for maps of large areas.</p>
 	<img src="{{ url_for('static', filename='img/math/trig.png') }}" width=400>
+	<h4>Law of cosines</h4>
+	<p>The law of cosines, or cosine formula, or al-Kashi's theorem, relates the lengths of the sides of a triangle
+		to
+		the cosine of one of its angles. It states that, given a triangle with an angle between two side lengths a
+		and
+		b, then \(c^2=a^2+b^2-2ab\cos{\theta}\). This is a generalization of the Pythagorean theorem, and reduces to
+		the
+		Pythagorean them if the angle is a right angle.</p>
 	<li>Calculus</li>
 	<li>Infinitesimal calculus was added as a subfield of math around the 17th century.</li>
 	<li>Probability</li>
