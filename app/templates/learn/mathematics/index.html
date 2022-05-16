@@ -162,6 +162,7 @@ https://zbmath.org/classification/
 <p>The union of two sets contains all elements contained in both sets, and is denoted \(A\cup B\). The intersection of
 	two sets contains only the elements that are in both sets, and is denoted \(A \cap B\). The complement of a
 	set A contains everything that is not in the set A, denoted \(A'\).</p>
+<p>Two sets are disjoint if they have no elements in common.</p>
 <li>Arithmetic and number theory</li>
 <pre>
 	-pre-numerical stage, concept of numbers
@@ -402,9 +403,21 @@ $$\theta=\cos^{-1}(\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|})$$
 	free variables. The vectors in the solution set is the basis and the solutions spanned by the basis is the solution
 	set and the vector space of solutions.</p>
 <p>You can represent any vector in the vector space using the basis by using a column vector of the coefficients of a
-	linaer combination of the basis vectors. This requires the basis to be in sequence.</p>
+	linear combination of the basis vectors. This requires the basis to be in sequence.</p>
 $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pmatrix}_B$$
-
+<h4>Dimension</h4>
+<p>A vector space is finite-dimensional if it has a basis with only finitely many vectors. The Exchange Lemma states
+	that
+	if you have a basis, then you make a linear combination of the vectors in the basis and switch that vector with one
+	its constituents, then that new sequence with the vector is also a basis of the same space. In any
+	finite-dimensional vector space, all bases have the same number of elements. The dimension of a vector space is the
+	number of vectors in any of its bases. No linearly independent set can have a size greater than the dimension of the
+	enclosing space. Basically, if you have a basis which is the size of the space, then this basis spans that space.
+	You can have linearly independent sets within that basis that do not span the space, but you can turn those sets
+	into a basis to eventually span the space.</p>
+<h4>Vector spaces</h4>
+<p>The row space of a matrix is the span of the set of its rows. The row rank is the dimension of this space, the number
+	of linearly independent rows.</p>
 <li>Geometry</li>
 <pre>
 	-informal geometry
