@@ -12,6 +12,11 @@
 	#integer1_remove {
 		display: none;
 	}
+
+	iframe {
+		display: block;
+		margin: 0 auto;
+	}
 </style>
 
 https://zbmath.org/classification/
@@ -163,6 +168,50 @@ https://zbmath.org/classification/
 	two sets contains only the elements that are in both sets, and is denoted \(A \cap B\). The complement of a
 	set A contains everything that is not in the set A, denoted \(A'\).</p>
 <p>Two sets are disjoint if they have no elements in common.</p>
+<h4>Domain, codomain, range</h4>
+<p>In its simplest form the domain is all the values that go into a function, and the range is all the values that come
+	out. A function relates an input to an output. A function is defined by sets (relates each element of a set with
+	exactly one element of another set). What can go into a function is called the domain. What may possibly come out of
+	a function is called the codomain. What actually comes out of a function is called the range. For example, if the
+	function is f(x) = 2x+1, the domain is what x can be, the codomain is what 2x+1 can be, and the range (or image) is
+	what f(x) can be. We define the domain and the codomain, and these along with the function determine the range. For
+	example, if we set the codomain to be all real numbers, then square root is not a function, but if we define it to
+	be non-negative real numbers, square root IS a function.</p>
+<p>\(f:\mathbb{N}\rightarrow \mathbb{N}\) means the function f has the domain N (natural numbers) and a codomain of N as
+	well.</p>
+<p>\(f:x\mapsto x^2\) means the function f takes in x and returns x^2.</p>
+<p>\(f:x= x^2\) means the function f takes in x and returns x^2 (maps to).</p>
+<h4>Injective, surjective and bijective</h4>
+<img src="https://www.mathsisfun.com/sets/images/function-mapping.svg">
+<h4>Common number sets</h4>
+<p>\(\mathbb{N}\) is the set of natural numbers, which are whole numbers from 0 or 1 upwards.</p>
+<p>\(\mathbb{Z}\) is the set
+	of integers, which are the negative whole numbers, zero, and positive whole numbers.</p>
+<p> \(\mathbb{Q}\) is the set of
+	rational numbers, which are numbers you can make by dividing one integer by any integer except zero. Its symbol is Q
+	because it stands for "quotient" since R is used for real numbers. pi, e, square roots, golden ratio are NOT
+	rational because their digits go on forever without repeating and they can't be written as a fraction.</p>
+<p> \(\mathbb{A}\) is the set of algebraic numbers,
+	numbers that are solutions to polynomial equations with rational coefficients.</p>
+<p>\(\mathbb{R}\) is the set of real
+	numbers, which are any value on the number line. Real numbers can be positive, negative, or zero, rational or
+	irrational, algebraic or transcendental, and can have infinite digits.</p>
+<p>\(\mathbb{I}\) is the set of imaginary numbers,
+	that when squared give a negative result.</p>
+<p>\(\mathbb{C}\) is the set of complex numbers, combination of a real and an
+	imaginary number in the form a + bi, where a and b are real and i is imaginary.</p>
+<p>A function is never one-to-many, tested by the vertical line test, but can be many-to-one. Injective is a function in
+	which many-to-one is not okay, but you can have values that are not pointed at. Injective is also called one-to-one,
+	and can be tested with horizontal line test.
+	Surjective is every "B" has at least one matching "A", but doesn't have to be one-to-one. Surjective is also known
+	as "onto." Bijective means both one-to-one and onto, or injective and surjective together. Bijective is also known
+	as "correspondence." Bijective functions have an inverse.</p>
+<h4>Surds</h4>
+<p>When a number is a root and irrational, it is a surd. Not all roots are surd if they can be simplified to a rational
+	number. \(\sqrt{2}\) is a surd, \(\sqrt{4}=2\) is not.</p>
+<h4>Quantifiers</h4>
+<p>The "for all" prefix is the universal quantifier, symbolized \(\forall\).</p>
+<p>The "there exists" quantifier is symbolized \(\exists\).</p>
 <li>Arithmetic and number theory</li>
 <pre>
 	-pre-numerical stage, concept of numbers
@@ -282,7 +331,8 @@ https://zbmath.org/classification/
 <h4>Dot product</h4>
 <p>The dot product, or inner product, or scalar product, of two n-component real vectors is the linear combination
 	of
-	their components.</p>
+	their components. The dot product is commutative and distributive over vector addition, and associative over scalar
+	multiplication.</p>
 <h4>Linear Geometry</h4>
 <p>The solution set of a linear system with \(n\) unknowns is a linear surface in \(\mathbb{R}^n\). Specifically, it
 	is
@@ -361,7 +411,7 @@ $$\theta=\cos^{-1}(\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|})$$
 <img src="{{ url_for('static', filename='img/math/vector.png') }}">
 <h4>Subspaces and Spanning Sets</h4>
 <p>For any vector space, a subspace is a subset that is itself a vector space, under the inherited operations. Any
-	subspace that is not the entire space itself is a proper substance. A subset is a subspace if and only if it is
+	subspace that is not the entire space itself is a proper subspace. A subset is a subspace if and only if it is
 	closed under linear combinations. The span (or linear closure) of a nonempty subset S of a vector space is the set
 	of all linear combinations of vectors from S. The span is also a subspace of the vector space.</p>
 <h4>Span</h4>
@@ -417,8 +467,451 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	into a basis to eventually span the space.</p>
 <h4>Vector spaces</h4>
 <p>The row space of a matrix is the span of the set of its rows. The row rank is the dimension of this space, the number
-	of linearly independent rows.</p>
+	of linearly independent rows. If two matrices are related by a row operation, then their row spaces are equal.
+	Gaussian reduction works by eliminating linear dependences among rows, leaving the span unchanged, until no
+	nontrivial linear relationships remain among the nonzero rows. In short, Gauss's method produces a basis for the row
+	space. The column space of a matrix is the span of the set of its columns. The column rank is the dimension of the
+	column space, the number of linearly independent columns.</p>
+<p>The tranpose of a matrix is the result of interchanging its rows and columns. To find the basis for the column space,
+	transpose the matrix, reduce by Gauss's method, and then transpose back.</p>
+<p>For any matrix, the row rank and column rank are equal. The rank of a matrix is its row rank or column rank. If a
+	linear system has at least one particular solution for the set of solutions, the number of parameters equals
+	\(n-r\),
+	the number of variables minus the rank of the matrix of coefficients.</p>
+<img src="{{ url_for('static', filename='img/math/rank.png') }}">
+<h4>Head canon summary</h4>
+<p>After reading the first couple of chapters of Linear Algebra book, my head started getting confused and I needed to
+	review. This is how I ended up visualizing all these different parts in my head. Imagine a piece of paper as the
+	whole vector space, cut up into a bunch of squares. There's a line across the middle (x-axis location) indicating
+	zero. Grab a bunch of these squares/spots on the vector space, and you have a set, which is a collection of vectors.
+	If you extend each square/vector vertically up and down infinitely, that will represent linear closure of the
+	vector. Each vector will span a subspace (the line up and down) of the whole vector space. If you have a set of
+	vectors, then the set will span all those areas up and down. If you have more than one vector vertially aligned with
+	each other, then they are linearly dependent, meaning you can make up one vector from the other. A basis of a vector
+	space is if you take one vector/square from each x-coordinate, so that the span of the set of vectors you chose
+	makes up the whole vector space. The natural basis is if you take each square from the x-axis. Gauss's method
+	basically takes a set of vectors, finds the vectors that are vertically aligned with others, and removes them and
+	boils them down to just one square per subspace (vertical span).</p>
+<img src="{{ url_for('static', filename='img/math/headcanon.png') }}">
+<img src="{{ url_for('static', filename='img/math/headcanon2.png') }}">
+<h4>Fields</h4>
+<p>A field is a set on which addition, subtraction, multiplication, and division are defined and behave as the
+	corresponding operations on rational and real numbers do. A field is a fundamental algebraic structure. The best
+	known fields are the field of rational numbers, the field of real numbers and the field of complex numbers. The
+	classic definition, referred as the field axioms, are:</p>
+<ul>
+	<li>Associativity of addition and multiplication: \(a+(b+c)=(a+b)+c\) and \(a\cdot(b\cdot c)=(a\cdot b)\cdot c\)
+	</li>
+	<li>Commutativity of addition and multiplication: \(a+b=b+a\) and \(a\cdot b = b \cdot a\)</li>
+	<li>Additive and multiplicative identity: there exist two different elements 0 and 1 in F such that \(a+0=a\)
+		and \(a+(-a)=0\)</li>
+	<li>Additive inverses: for every a in F, there exists an element in F, denoted -a, called the additive inverse
+		of a such that \(a+ (-a) = 0\)</li>
+	<li>Multiplicative inverses: for every \(a\neq 0\) in F, there exists an element in F, denoted by \(a^{-1}\),
+		called the multiplicative inverse of a such that \(a\cdot a^{-1}=1\)</li>
+	<li>Distributivity of multiplication over addition, such that \(a\cdot (b+c)=(a\cdot b)+(a\cdot c)\)</li>
+</ul>
+<p>An example of a field is the ste of rational numbers with its usual addition and multiplication operations. An
+	example of an algebraic structure that is not a field is the ingers, because it fails the condition that there
+	is no multiplicative inverse. (5 is an integer but 1/5 is not.)</p>
+<h4>Dimensional analysis and Buckingham's theorem</h4>
+<p>In order to standardize across different unit systems, we should add units to all numerical values. To fix an
+	equation that we have already, we can add a dimensional constant to any constants that we use to convert between
+	units. Those equations that use dimensional constants (all values have units attached) are considered complete.
+	The dimensional formula of some variable is its units, for example velocity is length over time. If all of the
+	terms that we add or subtract in our equation have the same dimensional formula, then our equation is
+	dimensionally homogeneous. If a term has no dimensions then it is dimensionless.</p>
+<p>So we know that you can construct a dimensionally homogeneous expression by either multiplying dimensionless
+	quantities or by adding dimensionless terms. If we assign any dimensionless product to be \(\prod_1, \prod_2,
+	...\), then there has to be some function f (either adding or subtracting the products) that results in 0.</p>
+<p>Buckingham's theorem is a formalization of Rayleigh's method of dimensional analysis. Loosely, it states that
+	if
+	there is a physically meaningful equation involving a certain number n of physical variables, then the
+	original
+	equation can be rewritten in terms of a set of p=n-k dimensionless parameters constructed from the original
+	variables. Buckingham's theorem states that any complete relationship among quantities with dimensional
+	formulas
+	can be
+	algebraically manipulated into a form where there is some function f such that \(f(\prod_1,...,\prod_n)=0\)
+	for
+	a complete set \({\prod_1,...,\prod_n}\) of dimensionless products.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aOeHiK85xCc" title="YouTube video player"
+	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+	allowfullscreen></iframe>
+<h4>Isomorphism</h4>
+<p>An isomorphism between two vector spaces V and W is a map V -> W such that 1) it is a correspondence (one-to-one
+	and onto) and 2) preserves structure (if you add two vectors or scale a vector you'll get the corresponding
+	vector in the map). To show that something is onto, you must show that any member of one
+	domain is the image of some member of the other. In essence, each vector in vector space 1 must map onto a
+	vector in vector space 2. If this is possible, then the two vector spaces are isomorphs. Isomorphs have the same
+	number of dimensions.</p>
+<img
+	src="https://shared.ontariotechu.ca/shared/department/student-life/student-learning-centre/nool/images/math/one-to-one-functions.JPG">
+<img
+	src="https://shared.ontariotechu.ca/shared/department/student-life/student-learning-centre/nool/images/math/onto-functions.JPG">
+<p>An automorphism is an isomorphism of a space with itself. A dilation map that multiplies all vectors by a nonzero
+	scalar s is an automorphism. Another automorphism is a rotation or turning map. A third type of automoprhism is
+	one that flips or reflects all vectors over a line through the origin.</p>
+<p>The rotation of a vector counterclockwise by \(\theta\) is \(\begin{pmatrix}\cos{\theta} && -\sin{\theta} \\
+	\sin{\theta} && \cos{\theta}\end{pmatrix}\).</p>
+<h4>Homomorphism</h4>
+<p>A function between vector spaces that preserves addition and scalar multiplication is a homomorphism or linear
+	map. Unlike isomorphisms, homomorphisms do not need to be onto or one-to-one. Therefore, under a homomorphism,
+	the
+	image of any subspace of the domain is also a subspace of the codomain. The image of the entire space, the range
+	of
+	the homomorphism, is a subspace of the codomain. The range space of a homomorphism is denoted h(V), and the
+	dimension of the range space is the map's rank. In generalizing from isomorphisms to homomorphisms by dropping
+	the
+	one-to-one condition, we lose the property that, intuitively, the domain is "the same" as the range. We retain
+	that
+	a homomorphism describes how the domain is "analogous to" or "like" the range. We think of \(\mathbb{R}^3\) as
+	like
+	\(\mathbb{R}^2\) except that vectors have an extra component. We think of the vector with components x, y, and z
+	as
+	like the vector with components x and y. Defining the projection map makes precise which members of the domain
+	we
+	are thinking of as related to which members of the codomain. The idea that a homomorphism between two spaces
+	expresses how the domain's vectors fall into classes that act like the range's vectors is a good way to view
+	homomorphisms.</p>
+<p>The null space or kernel of a linear map \(h:V\rightarrow W\) is the inverse image of \(\vec{0}_W\). The
+	dimension of
+	the
+	null space is the map's nullity. A linear map's rank plus its nullity equals the dimension of its domain.</p>
+<img src="{{ url_for('static', filename='img/math/nullity.png') }}">
+<p>So the range space is all the values that the map can create, so it can create (a, 0, b, 0), where a and b can be
+	anything. The inverse of (0, 0, 0, 0) would mean that x and y have to be 0, but z can be anything since z is not
+	accounted for in the image, so the null space is (0, 0, z). The dimension of (a 0 b 0) is how many vectors are
+	in a
+	basis (for example (1 0 0 0) and (0 0 1 0) is one basis), so the dimension of the range space (aka the rank of
+	the
+	linear map) is 2. The dimension of (0 0 z) is 1, and so the nullity is 1. 2 + 1 = 3, which is the dimension of
+	the
+	domain (x y z) has a natural basis (1 0 0), (0 1 0), (0 0 1).</p>
+<p>For a homomorphism to exist, the dimension of the range must be less than or equal to the dimension of the
+	domain.
+	Under a homomorphism, independence may be lost. In contrast, dependence stays. Under a linear map, the image of
+	a
+	linearly dependent set is linearly dependent.</p>
+<img src="{{ url_for('static', filename='img/math/nullity2.png') }}">
+<h4>Matrix representation of linear maps</h4>
+<img src="{{ url_for('static', filename='img/math/matrix_representation.png') }}">
+<img src="{{ url_for('static', filename='img/math/matrix_representation_example.png') }}">
+<p>To give a matrix representing a map, first fix some bases. Then, for each vector in the domain's basis, find its
+	image under the map. Then find the representation of each image with respect to the codomain's basis. Finally,
+	adjoin these representations to give the representing matrix.</p>
+<p>The matrix-vector product of a mxn matrix and a nx1 vector is if you add up each term in each row in the matrix
+	with
+	the values in the vector, each of these sums makes up the new matrix-vector product. Briefly, application of a
+	linear map is represented by the matrix-vector product of the map's representative and the vector's
+	representative.
+	A good way to view matrix-vector product is that it is formed from the dot products of the rows of the matrix
+	with
+	the column vector.
+</p>
+<img src="{{ url_for('static', filename='img/math/matrix_product.png') }}">
+<p>The application of a linear map is represented by the matrix-vector product of the map's representative and the
+	vector's representative.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RAGuqGDpauY" title="YouTube video player"
+	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+	allowfullscreen></iframe>
+<h4>Matrices as Linear Maps</h4>
+<p>Any matrix also defines a map. The dimension of the map's domain is the number of columns in the matrix and the
+	dimension of the codomain is the number of rows. Any matrix represents a homomorphism between vector spaces of
+	appropriate dimensions, with respect to any pair of bases. The rank of a matrix equals the rank of any map that
+	it
+	represents. A linear map is onto if the rank of its matrix representation equals the number of its rows, and a
+	linear map is one-to-one if and only if the rank of its matrix representation equals the number of its columns.
+	A
+	linear map that is one-to-one and onto is nonsingular, otherwise it is singular. That is, a linear map is
+	nonsingular if and only if it is an isomorphism. A nonsingular linear map is represented by a square matrix. A
+	square matrix represents nonsingular maps if and only if it is a nonsingular matrix. Thus, a matrix represents
+	isomorphisms if and only if it is square and nonsingular. By fixing spaces and bases we get a correspondence
+	between
+	maps and matrices.</p>
+<h4>Matrix Operations</h4>
+<p>The scalar multiple of a matrix is the result of entry-by-entry scalar multiplication. The sum of two same-sized
+	matrices is their entry-by-entry sum. Any map scaled by 0 is the zero homomorphism and for any matrix
+	multiplication
+	by 0 is the matrix with all entries zero. A zero matrix has all entries 0, written as \(Z_{n\times m}\) or just
+	0.
+	The matrix-multiplicative product is shown below:
+</p>
+<img src="{{ url_for('static', filename='img/math/matrix_multiplicative.png') }}">
+<p>The number of columns in the first matrix must equal the number of rows in the second. The i, j entry of the
+	matrix
+	product is the dot product of row i of the left matrix with column j of the right one. The composition of linear
+	maps
+	is represented by the matrix product of the representatives. Matrix products are associative and distributes
+	over
+	matrix addition. The matrix with all zeros except for 1s from the top left to bottom right is the identity
+	matrix,
+	such that IH=H. A matrix with all 0s except for a 1 in the i,j entry is an i,j unit matrix (or matrix unit). The
+	main diagonal (or principal diagonal or simply diagonal) of a square matrix goes form the upper left to the
+	lower
+	right. A diagonal matrix is square and has 0's off the main diagonal. A permutation matrix is square and is all
+	0s
+	except for a single 1 in each row and column. The elementary reduction matrices (or just elementary matrices)
+	result
+	from applying a single Gaussian operation to an identity matrix.</p>
+<p>If the elementary reduction matrix comes first, then it acts on the rows; if it's second, then it acts on the
+	columns.</p>
+<h4>Inverses</h4>
+<p>A matrix G is a left inverse matrix of the matrix H if GH is the identity matrix. It is a right inverse if HG is
+	the
+	identity. A matrix H with a two-sided inverse is an invertible matrix. That two-sided inverse is denoted
+	\(H^{-1}\).
+	A matrix is invertible if and only if it is nonsingular. A product of invertible matrices is invertible. A
+	matrix H
+	is invertible if and only if it can be written as the product of elementary reduction matrices. We can compute
+	the
+	inverse by applying to the identity matrix the same row steps, in the same order, that Gauss-Jordan reduce H.
+</p>
+<img src="{{ url_for('static', filename='img/math/2by2_inverse.png') }}">
+<h4>Change of Basis</h4>
+<p>The change of basis matrix for bases B, D within V is the presentation of the identity map id: V -> V with
+	respect to those bases. A better name would be 'change of representation matrix' but the above name is
+	standard. If left-multiplication by a matrix changes the representation of the vecotr from one basis to
+	another, then M is the change of basis matrix. A matrix changes bases if and only if it is nonsingular. A matrix
+	is
+	nonsingular if and only if it represents the identity map with respect to some pair of bases.</p>
+<h4>Changing Map Representations</h4>
+<p>To convert from the matrix H representing a map h with respect to B, D, to the matrix \(\hat{H}\) representing it
+	wit
+	hrespect to \(\hat{B}\), \(\hat{D}\) use this formula.</p>
+\[\hat{H}=\text{Rep}_{D,\hat{D}}(\text{id})\cdot H \cdot \text{Rep}_{\hat{B},B}(\text{id})\]
+<p>Naturally we usually prefer representations that are easier to understand. We say that a map or matrix has been
+	diagonalized when we find a basis B such that the representation is diagonal with respect to B, B, that is, with
+	respect to the same starting basis as ending basis. Same-sized matrices H and \(\hat{H}\) are matrix equivalent
+	if
+	there are nonsingular matrices P and Q such that \(\hat{H}=PHQ\). Matrix equivalent matrices represent the same
+	map,
+	with respect to appropriate pairs of bases. Matrix equivalence is an equivalence relation. If matrices are row
+	equivalent then they are also matrix equivalent, but the converse is not always true. Any mxn matrix of rank k
+	is
+	matrix equivalent to the mxn matrix that is all zeros except that the first k diagonal entries are ones. This is
+	a
+	block partial-identity form. Matrix equivalence classes are characterized by rank: two same-sized matrices are
+	matrix equivalent if and only if they have the same rank.</p>
+<h4>Projection</h4>
+<p>The orthogonal projection of a vector v onto the line spanned by a nonzero vector s is:</p>
+\[\text{proj}_{[\vec{s}]}(\vec{v})=\frac{\vec{v}\cdot \vec{s}}{\vec{s}\cdot \vec{s}}\vec{s}\]
+<h4>Gram-Schmidt Orthogonalization</h4>
+<p>Vectors are mutually orthogonal when any two are orthogonal. If the vectors in a set are mutually orthogonal and
+	nonzero than that set is linearly indepdent. If the vectors in a size k subset of a k dimensional space are
+	mutually
+	orthogonal and nonzero than that set is a basis for the space. The converse does not necessarily hold. However,
+	we
+	can get the partial converse that for every subspace there is at least one basis consisting of mutually
+	orthogonal
+	vectors. An orthogonal basis for a vector space is a basis of mutually orthogonal vectors.</p>
+<img src="{{ url_for('static', filename='img/math/orthogonalization.png') }}">
+<p>In addition, we can arrange each vector have length one by dividing each by its own length (normalizing the
+	lengths),
+	producing an orthonormal basis.
+</p>
+<h4>Projection onto a subspace</h4>
+<p>For any direct sum \(V=M\oplus N\) and any \(\vec{v}\in V\), the projection of \(\vec{v}\) onto \(M\) along \(N\)
+	is \[\text{proj}_{M,N}(\vec{v})=\vec{m}\] where \(\vec{v}=\vec{m}+\vec{n}\) with \(\vec{m}\in M, \vec{n}\in N\).
+</p>
+<p>The
+	orthogonal complement of a subspace \(M\) of \(\mathbb{R}^n\) is \[M^\perp = \{\vec{v}\in
+	\mathbb{R}^n|\vec{v}\text{ is perpendicular to all vectors in M}\}\] (read "M perp"). The orthogonal projection
+	\(\text{proj}_M(\vec{v})\) of a vector is its projection onto \(M\) along \(M^\perp\).</p>
+<h4>Direct sum</h4>
+<p>The direct sum is an operation in abstract algebra. The direct sum \(\mathbb{R}\oplus\mathbb{R}\) is the
+	Cartesian
+	plane \(\mathbb{R}^2\).</p>
+<h4>Abelian group</h4>
+<p>An abelian group, also called a commutative group, is a group in which the result of applying the group operation
+	of
+	two group elements does not depend on the order in which they are written. That is, the group operation is
+	commutative.</p>
+<h4>Line of Best Fit</h4>
+<p>Scientists are often presented with a system that has no solution but they must find an answer anyway. For
+	example,
+	let's say you flip a coin and try to find the probability of it being heads. You flip the coin 30 times and you
+	get
+	16 heads, 60 times and you get 34 heads, and 90 times and get 51 heads. The solution to this system to find the
+	probability doesn't work. That is, the vector of data that we collected is not in the subspace where ideally it
+	would be. However, we can create an orthogonal projection of the data vector into the line subspace that gives
+	us a
+	best guess, the vector in the subspace closest to the data vector. This will give us a line of best fit.
+	Minimizing
+	the distance between the given vector and the vector used as the right-hand side minimizes the total of these
+	vertical legnths and so we say that the line comes from fitting by least-squares.</p>
+<h4>Geometry of Linear Maps</h4>
+<p>You can think of any linear transformation is as a composition of dilations (scaling components by a number),
+	reflections (swapping components), skews (scaling a component relative to another component), and projections
+	(partial identity matrix). A linear transformation is one that maintains even spaces and lines. We can think of
+	calculus as studying the local effect of a map. For example, representation of the rotation by (2pi/3)
+	counterclockwise is shown below:</p>
+<img src="{{ url_for('static', filename='img/math/rotation.png') }}" width="60%">
+<h4>Markov chains</h4>
+<p>Say you have a game where you win a dollar if you get heads on a coin flip and you lose a dollar on tails. You
+	start
+	with $3 and you stop playing if you reach $0 or $5. What is the chance the game takes at least five flips? You
+	can
+	define each dollar amount you can have as a state \(s_0, s_1,...,s_5\). A player in state \(s3\) has a 0.5
+	chance to
+	go to s2 or s4. Once you hit the boundary (s0 or s5), the state no longer changes (this is called an absorbing
+	state). If you know what the probability of someone being in a certain state, say s1, after n flips (\(p_1(n)\)
+	then
+	you can say that the probability of the person being at any state is denoted as \(\begin{pmatrix}0.5 && 0 && 0.5
+	&&
+	0 && 0 && 0\end{pmatrix}\). Adjoin all
+	these
+	vectors together and you get the following:</p>
+<img src="{{ url_for('static', filename='img/math/markov1.png') }}">
+<p>Now if you assume the player starts with three dollars, you set the probability vector at n=0 to be
+	\(\begin{pmatrix}0 && 0 && 0 &&
+	1 && 0 && 0\end{pmatrix}\), and you can calculate step by step the probability of reaching any state after a
+	certain
+	number of steps. Each vector of p (such as the initial one we just listed) is a probability vector and the
+	matrix
+	shown above is the transition matrix. Markov chain models are notable in that they are historyless such that the
+	next state depends only on the current state.</p>
+<h4>Orthonormal Matrices</h4>
+<p>Euclid considered two figures to be thes ame if they have the same size and shape, stating that they are
+	congruent by
+	imagining that if we picked the plane up, slid it over and rotated it, but didn't warp or stretch it, and then
+	put
+	it back down, we could superimpose the first figure on the second. In modern terminology, picking the plane up
+	means
+	considering a map from the plane to itself. Accordingly, we consider a map to be distance-preserving or a rigid
+	motion or an isometry if all points remain equidistant from each other. We also define a plane figure to be a
+	set of
+	points in the plane and that two figures are congruent if there is a distance-preserving map from the plane to
+	itself that carries on eifugre onto the other.</p>
+<p>Not all distance-preserving maps are linear (if it shifts it away from the origin). However, a map t that is
+	distance-preserving and sends the zero vector to itself is linear. Thus, any distance-preserving
+	\(f:\mathbb{R}^2
+	\rightarrow \mathbb{R}^2\) can be written \(f(\vec{v})=t(\vec{v})+\vec{v}_0\) for some constant vector
+	\(\vec{v}_0\)
+	and a linear map \(t\) that is distance-preserving. In addition, not every linear map is distance-preserving
+	(for
+	example, scaling by 2 does not preserve distance).</p>
+<p>Matrices for which when the columns are written as vectors then they are of length one and are mutually
+	orthogonal
+	are called orthonormal or orthogonal matrices.</p>
+<p>A distance-preserving map is direct if it preserves orientations and opposite if it reverses orientation. Another
+	idea, besides congruence of figures, is that figures are similar if they are congruent after a change of scale.
+	We
+	have that figures are similar if there is an orthonormal matrix \(T\) such that the points \(\vec{q}\) on one
+	are
+	derived from the points \(\vec{p}\) by \(\vec{q}=(kT)\vec{v}+\vec{p}_0\) for some nonzero real number \(k\) and
+	a
+	constant vector \(\vec{p}_0\).</p>
+<h4>Determinants</h4>
+<p>If a 1x1 matrix has a value that is not 0, then it is nonsingular. A 2x2 matrix is
+	nonsingular if \(ad-bc\neq 0\). A 3x3 matrix is nonsingular if \(aei+bfg+cdh+hfa-idb-gec \neq 0\). These
+	formulas
+	define a determinant function \(\text{det}_{n\times n}:\mathcal{M}_{n\times n} \rightarrow \mathbb{R}\) such
+	that
+	the
+	matrix is nonsingular if and only if the determinant is not 0.</p>
+<p>The determinant can be determined by Gauss reduction and multiplying the values on the diagonal (product down its
+	diagonal). If there is an
+	addition of a scalar multiple of a row, the determinant stays the same. If there is a row swap, the determinant
+	switches signs (switches to negative or back). If there is a scalar multiple of a row, the determinant scales
+	with
+	that scalar. An identity matrix has a determinant of 1. A matrix with two identical rows has a determinant of
+	zero.
+	A matrix with a zero row has a determinant of zero. For each n, if there is an nxn determinant function then it
+	is
+	unique.</p>
+<h4>Determinants as Size Functions</h4>
+<p>The box formed by two vectors is a box or parallelepiped. The determinant of a transformation matrix is how much
+	area
+	is covered by
+	the
+	basis vectors (in the parallelepiped) after transforming by that matrix
+	relative to the starting area. Scaling one of the vectors leads to a scaling of this area, whereas addition of a
+	multiple of one vector onto another doesn't change the area. Swapping vectors changes the sign of the
+	determinant,
+	reflecting the orientation or sense of the box. The volume of a box is the absolute value of the determinant of
+	a
+	matrix with those vectors as columns. The determinant of a product is the product of the determinants
+	\(|TS|=|T|\cdot |S|\). If a matrix is invertible then the determinat of its inverse is the inverse of its
+	determinant \(|T^{-1}|=1/|T|\).</p>
+<img src="{{ url_for('static', filename='img/math/parallel.png') }}">
+<img src="{{ url_for('static', filename='img/math/parallel2.png') }}">
+<h4>Projective Geometry</h4>
+<p>If we look at three random points from a distance and describe it in a painting, we are projecting a collection of
+	three-dimensional points onto a common two dimensional image. This is a central projection from a single point (from
+	our eyes). The operation of central projection preserves some geometric properties, for instance lines project to
+	lines. But it fails to preserve some others, such as equal length segments in 3D space can project to segments of
+	unequal length. The study of these effects is projective geometry.</p>
+<p>If we look at parallel lines vanishing into the
+	horizon as a painter might paint lines, we call these points vanishing points, where the source has parallel lines
+	that never intersect but the image does.</p>
+<p>The first case of central projection is projection done by a movie projector. We can think of each source point as
+	being pushed from the domain plane S outward to the image plane I. The second case of projection is that of the
+	artist pulling the source back to a canvas. A third example is if a pinhole shines an image of a solar eclipse onto
+	a paper. In each of these situations, the source (S), point (P), and image (I) are positioned differently.</p>
+<img src="{{ url_for('static', filename='img/math/projector.png') }}">
+<img src="{{ url_for('static', filename='img/math/projector2.png') }}">
+<img src="{{ url_for('static', filename='img/math/projector3.png') }}">
+<p>We can describe each by saying that each is a central projection by P of S to I. If we position P such that it is
+	parallel to the planes S and I, we can create an environment where we can get all three cases visualized similarly.
+	In the first image, P acts as a movie projector pushing points out from S to I. In the second image, P acts as a
+	painter, pulling the image from S onto I. And in the third, P acts as a pinhole, where the source projects an image
+	through P onto I.
+</p>
+<img src="{{ url_for('static', filename='img/math/projector4.png') }}">
+<p>Next, consider another model using a hemispheric dome where the projector P is at the origin and any source can be
+	behind or in front of the
+	projector, or behind the image. For any nonzero vector, let the associated point v in the projective plane be the
+	set of nonzero vectors lying on the same line through the origin as the vector v. To describe a projective point we
+	can give any representative member of the line. Each of these is a homogeneous coordinate vector for the point
+	\(\ell\).
+</p>
+<img src="{{ url_for('static', filename='img/math/projector5.png') }}">
+<p>Finally, reduce this model further by considering a sphere centered at the origin. Any line through the origin
+	intersects the sphere in two spots, said to be antipodal. In this case, any point in the projective plane can be
+	drawn as a pair of antipodal spots o nthe sphere. They are not two different points but a pair of spots that
+	together make one projective point.</p>
+<p>Just as we did with each projective point, we can describe a projective line with a triple of reals. The reason this
+	description as a triple is convenient is that in the projective plane a point v and a line L are incident if and
+	only if a dot product of their representatives is zero.</p>
+<h4>Projective plane</h4>
+<p>A projective plane is a geometric structure that extends the concept of aplane. In an ordinary Euclidean plane, two
+	lines intersect in a single point, but there are some pairs of lines (parallel lines) that do not intersect. A
+	projective plane can be thought of as an ordinary plane equipped with additional "points at infinity" where parallel
+	lines intersect. A projective plane consists of a set of lines, a set of points, and a relation between points adn
+	lies called incidence having the properties such that 1) given any two distinct points, there is exactly one line
+	incident with both of them, 2) given any two distinct lines, there is exactly one point incident with both of them,
+	and 3) there are four points such that no line is incident with more than two of them.</p>
+<h4>Polynomial Factoring and Complex Numbers</h4>
+<p>A polynomial has the form \(p(x)=c_n x^n + ... + c_1x + c0\) with leading coefficient \(c_n \neq 0\). The degree of
+	this polynomial is \(n\). If \(n=0\) then \(p\) is a constant polynomial \(p(x)=c_0\). Constant polynomials that are
+	not the zero polynomial have degree zero. The zero polynomial has the degree \(-\infty\).</p>
+<h4>Division Theorem for Polynomials</h4>
+<p>Let \(p(x)\) be a polynomial. If \(d(x)\) is a non-zero polynomial then there are quotient and remainder polynomials
+	\(q(x)\) and \(r(x)\) such that \[p(x)=d(x) \cdot q(x)+r(x)\] where the degree of \(r(x)\) is strictly less than the
+	degree of \(d(x)\).</p>
+<p>The remainder when \(p(x)\) is divided by \(x-\lambda\) is the constant polynomial \(r(x)=p(\lambda)\). If
+	\(\lambda\) is a root of the polynomia \(p(x)\) then \(x-\lambda\) divides \(p(x)\) evenly, that is, \(x-\lambda\)
+	is a factor of \(p(x)\).</p>
+<p>A repeated root of a polynomial is a number \(\lambda\) such that the polynomial is evenly divisible by
+	\((x-\lambda)^n\) for some power larger than one. The largest such power is called the multiplicity of \(\lambda\).
+</p>
+<p>For second degree polynomials we have the quadratic formula. If the discriminant \(b^2-4ac\) is negative then the
+	polynomial has no real number roots. A polynomia lthat cannot be factored into two lower-degree polynomials with
+	real number coefficients is said to be irreducible over the reals.</p>
+\[\lambda=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\]
+<p>Any constant or linear polynomial is irreducible over the reals. A quadratic polynomial is irreducible over the reals
+	if and only if its discriminant is negative. No cubic or higher-degree polynomial is irredubiel over the reals. Any
+	polynomial with real coefficients factors into a product of linear and irreducible quadratic polynomials with real
+	coefficients. That factorization is unique; any two factorizations have the same factors raised to the same powers.
+</p>
+<h4>Fundamental Theorem of Algebra</h4>
+<p>Polynomials with complex coefficients factor into linear polynomials with complex coefficients. The factorization is
+	unique.</p>
+<h4>Similarity</h4>
+<p>The matrices \(T\) and \(S\) are similar if there is a nonsingular \(P\) such that \(T=PSP^{-1}\).</p>
 <li>Geometry</li>
+<p>3D rotations are not commutative.</p>
 <pre>
 	-informal geometry
 	-area and volume
@@ -444,7 +937,8 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <h4>Definition of the derivative</h4>
 <p>The derivative of \(f(x)\) with respect to x is the function \(f'(x)\) and is defined as:</p>
 $$f'(x)=\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$$
-<p>h is the change in x. The top part of the fraction is the change in y, while the bottom of the fraction is the
+<p>h is the change in x. The top part of the fraction is the change in y, while the bottom of the fraction is
+	the
 	change
 	in x. So the equation is just the slope. The slope of what? The slope in f(x) as the h, or change in x,
 	approaches
@@ -452,14 +946,16 @@ $$f'(x)=\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$$
 <p>Given \(y=f(x)\):</p>
 $$f'(x)=y'=\frac{df}{dx}=\frac{dy}{dx}$$
 <h4>Properties of the derivative</h4>
-<p>The derivative of the sum of two functions is the sum of the individual derivatives of the separate functions.
+<p>The derivative of the sum of two functions is the sum of the individual derivatives of the separate
+	functions.
 </p>
 $$(f(x)+g(x))'=f'(x)+g'(x)$$
 <p>You can factor a multiplicative constant out of a derivative.</p>
 $$(cf(x))'=cf'(x)$$
 <p>The derivative of a constant is 0.</p>
 $$\frac{d}{dx}(c)=0$$
-<p>The power rule: if x has an numerical exponent, its derivative brings it down to the left and the new exponent is
+<p>The power rule: if x has an numerical exponent, its derivative brings it down to the left and the new
+	exponent is
 	1
 	less: if \(f(x)=x^n\) then \(f'(x)=nx^{n-1}\).</p>
 <p>Product rule: if two functions are differentiable, then:</p>
@@ -515,7 +1011,8 @@ $$\frac{d}{dx}(xy(x))=\frac{d}{dx}(1)$$
 <p>Use the product rule:</p>
 $$(1)y(x)+x\frac{d}{dx}(y(x))=0$$
 $$y+xy'=0$$
-<p>(Note that the y(x) were converted to y... they are the same. This is not multiplication but just a reminder that
+<p>(Note that the y(x) were converted to y... they are the same. This is not multiplication but just a reminder
+	that
 	y
 	is function of x.)</p>
 $$y'=-y/x$$
@@ -523,11 +1020,13 @@ $$y'=-y/x$$
 $$y=1/x$$
 $$y'=-1/x^2$$
 <h4>Differentials</h4>
-<p>Given a function \(y=f(x)\) we call \(dy\) and \(dx\) differentials, and the relationship between them is given
+<p>Given a function \(y=f(x)\) we call \(dy\) and \(dx\) differentials, and the relationship between them is
+	given
 	by
 	\(dy=df=f'(x)dx\).
 	<h4>Indefinite Integrals</h4>
-	<p>Now that we've gone through derivatives, let's now do it backwards. The question is... what function did we
+	<p>Now that we've gone through derivatives, let's now do it backwards. The question is... what function did
+		we
 		differentiate to get \(f(x)\)?</p>
 	<p>Let's say our function is \(f(x)=x^4+3x-9\).</p>
 	<p>If you think about how a derivative works, in order to get \(x^4\), we need to take the derivative of
@@ -535,28 +1034,35 @@ $$y'=-1/x^2$$
 		But if we take the derivative of that, we will get \(5x^4\). So the antiderivative of \(x^4\) should
 		actually be
 		\(\frac{1}{5}x^5\).</p>
-	<p>So if you extend this for the rest of the terms, the antiderivative is \((1/5)x^5+(3/2)x^2-9x\). And then you
-		think we would be done. But remember that the derivative of any constant is 0, so we still need to add on
+	<p>So if you extend this for the rest of the terms, the antiderivative is \((1/5)x^5+(3/2)x^2-9x\). And then
+		you
+		think we would be done. But remember that the derivative of any constant is 0, so we still need to add
+		on
 		the
 		antiderivative of 0 (a constant c), making our final antiderivative:</p>
 	$$(1/5)x^5+(3/2)x^2-9x+c$$
-	<p>If \(F(x)\) is any anti-derivative of \(f(x)\) then the most general anti-derivative of \(f(x)\) is called an
+	<p>If \(F(x)\) is any anti-derivative of \(f(x)\) then the most general anti-derivative of \(f(x)\) is
+		called an
 		indefinite integral and is denoted:</p>
 	$$\int{f(x)dx}=F(x)+c$$
-	<p>Now you might wonder about this dx (the differential) added after the function. You can think of dx as the
+	<p>Now you might wonder about this dx (the differential) added after the function. You can think of dx as
+		the
 		end of
 		the integral, where the integral (S-like) symbol is the left parentheses and the dx is the right
 		parentheses.
 	</p>
-	<p>The dx also defines what variable we are integrating with respect to. For example, \(\int{2tdx}=2tx+c\), NOT
+	<p>The dx also defines what variable we are integrating with respect to. For example, \(\int{2tdx}=2tx+c\),
+		NOT
 		\(x^2+c\).</p>
 	<h4>Properties of the Indefinite Integral</h4>
 	<p>We can factor multiplicative constants out of indefinite integrals, just like in derivatives.</p>
-	<p>The integral of a sum of two functions is the sum of their individual integrals (just like derivatives).</p>
+	<p>The integral of a sum of two functions is the sum of their individual integrals (just like derivatives).
+	</p>
 	<h4>Computing Indefinite Integrals</h4>
 	<p>Let's start wit the integral of a power of x, which we've kind of worked through already.</p>
 	$$\int{x^ndx}=\frac{x^{n+1}}{n+1}+c, n\neq-1$$
-	<p>Then there's a simple one, which is just a constant, but seems to be trip people up pretty frequently.</p>
+	<p>Then there's a simple one, which is just a constant, but seems to be trip people up pretty frequently.
+	</p>
 	$$\int{kdx}=kx+c$$
 	<p>Then we can take a look at trig functions.</p>
 	$$\int{\sin{x}dx}=-\cos{x}+c$$
@@ -577,15 +1083,20 @@ $$y'=-1/x^2$$
 		definite
 		integral of \(f(x)\) from \(a\) to \(b\) is:</p>
 	$$\int_a^b{f(x)dx}=\lim_{n\to\infty}\sum_{i=1}^n{f(x_i^*)\Delta{x}}$$
-	<p>Imagine you graph a function and you want to find the area under the curve from x=a to x=b. "a" is called the
-		lower limit and "b" is the upper limit and from a to b is the interval of integration. How would you find
+	<p>Imagine you graph a function and you want to find the area under the curve from x=a to x=b. "a" is called
+		the
+		lower limit and "b" is the upper limit and from a to b is the interval of integration. How would you
+		find
 		that
-		area? What you could do is take an approximate area by getting the height at each point of the curve, and
+		area? What you could do is take an approximate area by getting the height at each point of the curve,
+		and
 		then
-		multiplying the height by some width, to get a rectangle, and add all of those rectangles together. To get a
+		multiplying the height by some width, to get a rectangle, and add all of those rectangles together. To
+		get a
 		more and more accurate approximation, you can keep making these rectangles smaller and smaller until you
 		have an
-		infinite number of infinitely narrow rectangles. This is what the definition of the definite integral does.
+		infinite number of infinitely narrow rectangles. This is what the definition of the definite integral
+		does.
 	</p>
 	<h4>Properties of the Definite Integral</h4>
 	<ol>
@@ -600,8 +1111,10 @@ $$y'=-1/x^2$$
 		</li>
 	</ol>
 	<h4>Net Change Theorem</h4>
-	<p>We have already discussed one interpretation of the integral: the area under the curve of a function. Another
-		interpretation is the net change in the quantity of the function. For example, imagine your x axis is time
+	<p>We have already discussed one interpretation of the integral: the area under the curve of a function.
+		Another
+		interpretation is the net change in the quantity of the function. For example, imagine your x axis is
+		time
 		and
 		your y axis is speed (distance over time). Then the integral gives you the total distance travelled over
 		that
@@ -611,43 +1124,55 @@ $$y'=-1/x^2$$
 		since
 		the voltage depends on the change in current, you can also get the total current from integrating the
 		voltage.
-		On the other hand, for a capacitor, the voltage builds up on the parallel plates due to injection of charge,
-		which would be the total current sent to the capacitor. So you can find the voltage as an integration of the
+		On the other hand, for a capacitor, the voltage builds up on the parallel plates due to injection of
+		charge,
+		which would be the total current sent to the capacitor. So you can find the voltage as an integration of
+		the
 		current over time.</p>
 	<h4>Fundamental Theorem of Calculus, Part 1</h4>
-	<p>If \(f(x)\) is continuous on \([a,b]\), then \(g(x)=\int_a^x{f(t)dt}\) is continuous on \([a,b]\) and it is
+	<p>If \(f(x)\) is continuous on \([a,b]\), then \(g(x)=\int_a^x{f(t)dt}\) is continuous on \([a,b]\) and it
+		is
 		differentiable on \((a,b)\) and that \(g'(x)=f(x)\).</p>
 	<p>In essence, the fundamental theorem of calculus connects derivatives and integrals. Let's say you want to
 		look at
-		some property... let's say distance, denoted by "y". This could be volume, energy... whatever. Let's say I
+		some property... let's say distance, denoted by "y". This could be volume, energy... whatever. Let's say
+		I
 		get
-		in a car and I start driving forward. I know I need to travel 100 miles north and dig at a location to find
+		in a car and I start driving forward. I know I need to travel 100 miles north and dig at a location to
+		find
 		a
 		treasure chest, but I don't have a GPS to tell me exactly where I am. All I have in the car is the meter
 		which
-		tells me how fast I'm moving. This meter is essentially telling me the derivative of distance with respect
+		tells me how fast I'm moving. This meter is essentially telling me the derivative of distance with
+		respect
 		to
-		time, or dy/dt. In order to find the distance where I am at any point, I need to integrate this derivative,
+		time, or dy/dt. In order to find the distance where I am at any point, I need to integrate this
+		derivative,
 		aka
-		my speed, from my starting timepoint "a" (in this case 0) to whatever time "x", and that will give me the
+		my speed, from my starting timepoint "a" (in this case 0) to whatever time "x", and that will give me
+		the
 		total
 		distance y I have traveled from time a to x.</p>
 	<p>Let's look at an example.</p>
 	$$\frac{d}{dx}\int_{x^2}^1{\frac{t^4+1}{t^2+1}dt}$$
 	<p>Let's start from what we know. Say that we know the speed of our car is equal to
 		\(f(t)=\frac{t^4+1}{t^2+1}\).
-		When we integrate from \(x^2\) to 1, we're saying, from timepoint \(x^2\) all the way to timepoint 1, what
+		When we integrate from \(x^2\) to 1, we're saying, from timepoint \(x^2\) all the way to timepoint 1,
+		what
 		is
 		the total distance I have traveled? Then, with the differentiation, we're asking, how fast is our total
 		distance
 		changing as a function of x?</p>
-	<p>So the first thing we can do is simplify things a bit. Instead of thinking about things backwards, going from
-		\(x^2\) to 1, let's just swap the limits around, and ask, if we start at 1 second, and go to x^2 seconds,
+	<p>So the first thing we can do is simplify things a bit. Instead of thinking about things backwards, going
+		from
+		\(x^2\) to 1, let's just swap the limits around, and ask, if we start at 1 second, and go to x^2
+		seconds,
 		how
 		far have I traveled? So we add a negative sign to the integral.</p>
 	$$-\frac{d}{dx}\int_1^{x^2}{\frac{t^4+1}{t^2+1}dt}$$
 	<p>Next, this pesky x^2 is pretty annoying. How can we change this to just x? We can use the chain rule of
-		differentiation, which basically means we'll replace x^2 with x, and then multiply the derivative of x^2 in
+		differentiation, which basically means we'll replace x^2 with x, and then multiply the derivative of x^2
+		in
 		afterwards. As a reminder, the chain rule is as follows:</p>
 	$$\frac{d}{dx}(g(u))=\frac{d}{du}(g(u))\frac{du}{dx}\;\text{where }u=f(x)$$
 	<p>Again, the chain rule simply means... if you have a function inside another function, you can derive the
@@ -660,10 +1185,13 @@ $$y'=-1/x^2$$
 	$$-2x\frac{x^8+1}{x^4+1}$$
 	<p>So what really have we done here? What we've done is pretty simple. We found the speed at which we're
 		traveling
-		at a specific timepoint. But you might ask, didn't we already know the speed at any timepoint? Yes, we did,
-		which is why this problem doesn't make for a great application example. But imagine that you want to know
+		at a specific timepoint. But you might ask, didn't we already know the speed at any timepoint? Yes, we
+		did,
+		which is why this problem doesn't make for a great application example. But imagine that you want to
+		know
 		what
-		speed you're traveling in seconds, but your clock runs in units of seconds^2. We had to convert those units
+		speed you're traveling in seconds, but your clock runs in units of seconds^2. We had to convert those
+		units
 		into
 		seconds first. And that's kind of what we've done. (Unfinished, will need to think about more.)</p>
 	<li>Combinatorics</li>
@@ -673,31 +1201,64 @@ $$y'=-1/x^2$$
 	<li>Distributions and stochastic processes</li>
 	<li>Trigonometry</li>
 	<p>Trigonometry, or "measurement of triangles" is the branch of math that studies side lengths and angles of
-		triangles. Became more popular due to the demands of navigation and the need for maps of large areas.</p>
+		triangles. Became more popular due to the demands of navigation and the need for maps of large areas.
+	</p>
 	<img src="{{ url_for('static', filename='img/math/trig.png') }}" width=400>
 	<h4>Law of cosines</h4>
-	<p>The law of cosines, or cosine formula, or al-Kashi's theorem, relates the lengths of the sides of a triangle
+	<p>The law of cosines, or cosine formula, or al-Kashi's theorem, relates the lengths of the sides of a
+		triangle
 		to
-		the cosine of one of its angles. It states that, given a triangle with an angle between two side lengths a
+		the cosine of one of its angles. It states that, given a triangle with an angle between two side lengths
+		a
 		and
-		b, then \(c^2=a^2+b^2-2ab\cos{\theta}\). This is a generalization of the Pythagorean theorem, and reduces to
+		b, then \(c^2=a^2+b^2-2ab\cos{\theta}\). This is a generalization of the Pythagorean theorem, and
+		reduces to
 		the
 		Pythagorean them if the angle is a right angle.</p>
 	<li>Calculus</li>
 	<li>Infinitesimal calculus was added as a subfield of math around the 17th century.</li>
 	<li>Probability</li>
+	<h4>Sets</h4>
+	<p>A set A is a collection of mathematical/everyday elements. e.g. \(A={1,2,5,a}\). The size of \(A=|A|\) is the
+		number of elements in the set.</p>
+	<p>\(A\cup B=\{x|x\in A \text{ or }x\in B\}\). The union of two sets is all x which is in either sets or is in both.
+	</p>
+	<p>\(A\cap B=\{x|x\in A \text{ and } x\in B\}\). The intersection of two sets is all x which is in both sets.</p>
+	<p>\(A^C=\{x\in U|x \not\in A\}\). The complement of A is the set that is not in A and is in some universal set U.
+	</p>
+	<p>\(A-B=\{x|x\in A \text{ and } x \not\in B\}\). This is the difference in the two sets.</p>
+	<h4>Laws of set operations</h4>
+	<p>\(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\)</p>
+	<p>\(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\)</p>
+	<p>These are seen as distributive laws.</p>
+	<h4>Counting</h4>
+	<h4>Probability and odds</h4>
+	<h4>Random variables</h4>
+	<h4>Probability distributions</h4>
+	<h4>Mean</h4>
+	<h4>Variance</h4>
+	<h4>Binomial</h4>
+	<h4>Poisson</h4>
+	<h4>Normal distributions</h4>
+	<h4>Central limit theorem</h4>
 	<li>Combinatorics: the area of mathematics concerned with counting. Involves enumeration (counting). Can be
-		confusing because we are no longer talking about numbers, but about non-numerical objects, which we count,
+		confusing because we are no longer talking about numbers, but about non-numerical objects, which we
+		count,
 		but
 		convert those objects into numbers.</li>
 	<li>Permutations and Combinations</li>
-	<p>Permutations and combinations, as taught in middle/high school, are about figuring out how many ways you can
-		select items from a set. I think this is often a confusing thing to learn because it's taught disjointedly
+	<p>Permutations and combinations, as taught in middle/high school, are about figuring out how many ways you
+		can
+		select items from a set. I think this is often a confusing thing to learn because it's taught
+		disjointedly
 		from
-		other subjects, and involves fairly fundamental aspects of math that are not taught in elementary math, and
+		other subjects, and involves fairly fundamental aspects of math that are not taught in elementary math,
+		and
 		requires a different way of thinking. It's not really algebra, but is about combinators, or counting. So
-		fundamentally we have to go back away from the fancy symbols we have been using, and just focus on counting
-		things. In addition, it applies some stuff from probability with independent/dependent events. However, it
+		fundamentally we have to go back away from the fancy symbols we have been using, and just focus on
+		counting
+		things. In addition, it applies some stuff from probability with independent/dependent events. However,
+		it
 		has
 		very obvious application which makes it interesting to teach. For example, if you technically enter all
 		permutations of characters into a password field, you should be able to hack every online account ever
@@ -705,77 +1266,101 @@ $$y'=-1/x^2$$
 		However, with a quick understanding of permutations, you realize that is not likely.</p>
 	<p>The first thing we can talk about is permutations with repetitions. How many ways can you order a set of
 		numbers?
-		If your set of numbers is {a, b, c}, then you can arrange them {a, a, a}, {b, b, b}, {c, c, c}, {a, a, b}...
+		If your set of numbers is {a, b, c}, then you can arrange them {a, a, a}, {b, b, b}, {c, c, c}, {a, a,
+		b}...
 		and
-		so forth. I think about it this way. If you look at the first "slot", how many options do you have there?
+		so forth. I think about it this way. If you look at the first "slot", how many options do you have
+		there?
 		You
-		have 3... a, b, or c. Now, if you pick a, then think about how many options you have for the second slot,
+		have 3... a, b, or c. Now, if you pick a, then think about how many options you have for the second
+		slot,
 		you
 		have 3 again... a, b, or c. So then for every option for the 1st slot, we have 3 options for the second
 		slot. So
-		in total, we have 3*3=9 options for the first two slots. Then, for each option in the first two slots, we
+		in total, we have 3*3=9 options for the first two slots. Then, for each option in the first two slots,
+		we
 		have 3
 		options for the 3rd slot, so then we have 3*3*3=27 total possibilities. This is the equation for
 		permutations
-		with repetitions: \(n^r\). n here is the total size of the original set we are picking from {a, b, c}. If
+		with repetitions: \(n^r\). n here is the total size of the original set we are picking from {a, b, c}.
+		If
 		our
 		initial set was all the letters of the alphabet, n here would be 26. If our initial set was a deck of
 		playing
-		cards without jokers, it would be 52. r here is how many we are putting in order. So if we said, how many
+		cards without jokers, it would be 52. r here is how many we are putting in order. So if we said, how
+		many
 		ways
 		can you arrange 2 numbers from {a, b, c, d}, then it would be \(n^r=4^2=16\).</p>
-	<p>So then let's look at permutations without repetitions. This time, if we pick "a" for our first option, we
+	<p>So then let's look at permutations without repetitions. This time, if we pick "a" for our first option,
+		we
 		can't
-		pick it again for our second slot. In the case of choosing 3 out of {a, b, c}, you can arrange them {a, b,
+		pick it again for our second slot. In the case of choosing 3 out of {a, b, c}, you can arrange them {a,
+		b,
 		c},
 		{a, c, b}, {b, a, c}, {b, c, a}, {c, a, b}, {c, b, a}. This is kind of the more natural answer to the
 		question,
 		how many ways can you arrange a bunch of items? In total, there are 6 possible ways to arrange these
 		numbers. So
-		let's think about this in terms of slots again. In the first slot, we can choose any option. Then, in the
+		let's think about this in terms of slots again. In the first slot, we can choose any option. Then, in
+		the
 		second
-		slot, you have one fewer option, so you now have n-1 options. Then in the third slot, you have n-2 options
+		slot, you have one fewer option, so you now have n-1 options. Then in the third slot, you have n-2
+		options
 		because you have taken 2 out already, and so forth... So as we go on, we realize the answer to how many
 		options
-		is \(n*(n-1)*(n-2)*...\). This is also termed \(n!\), or n-factorial. But that's not our answer quite yet.
+		is \(n*(n-1)*(n-2)*...\). This is also termed \(n!\), or n-factorial. But that's not our answer quite
+		yet.
 		Let's
 		say we only want to arrange 2 items from a set of 4. In this case, we are just doing 4 * (4-1). We don't
 		care
 		about the (4-2) and (4-3) because we're stopping after 2. What we notice here is (4-2) and (4-3) can be
 		written
-		as \(2*1 = 2!\). So we take n, subtract r, and that gives us the factorial that we need to remove because we
+		as \(2*1 = 2!\). So we take n, subtract r, and that gives us the factorial that we need to remove
+		because we
 		don't care about them. So our ending equation for permutations without repetitions is \(n!/(n-r)!\).</p>
-	<p>Now we will discuss combinations without repetition. The difference between combination and permutation is
+	<p>Now we will discuss combinations without repetition. The difference between combination and permutation
+		is
 		that
 		for combinations, we don't care about the order. So whereas before with permutations, {a, b, c} was
 		different
 		from {c, b, a}, we now consider these to just be one option. So from our list of permutations without
-		repetition, all we need to do is remove the ones which are simply permutations of each unique combination.
+		repetition, all we need to do is remove the ones which are simply permutations of each unique
+		combination.
 		Good
-		news, though, is that we just did that! The number of ways we can arrange r numbers is just \(r!\). So the
+		news, though, is that we just did that! The number of ways we can arrange r numbers is just \(r!\). So
+		the
 		equation for combinations without repetitions is just the equation for permutations without repetitions
 		divided
 		by \(r!\), aka \(\frac{n!}{r!(n-r)!}\).</p>
 	<p>Finally, we get to combinations with repetitions. In this case, we don't care about the order, but we can
 		repeat
-		getting one number more than once. Imagine this: you are at an ice cream parlor, and there are 4 different
+		getting one number more than once. Imagine this: you are at an ice cream parlor, and there are 4
+		different
 		ice
-		cream flavors you can choose from... {a, b, c, d}, and you get 3 scoops total for your ice cream cone. Now
-		imagine there is a robot behind ice cream "a", and your job is to tell him whether to scoop up ice cream or
+		cream flavors you can choose from... {a, b, c, d}, and you get 3 scoops total for your ice cream cone.
+		Now
+		imagine there is a robot behind ice cream "a", and your job is to tell him whether to scoop up ice cream
+		or
 		move
-		over to the right to the next ice cream flavor. We will imagine "O" means scoop up ice cream, and ">" means
+		over to the right to the next ice cream flavor. We will imagine "O" means scoop up ice cream, and ">"
+		means
 		to
-		move over to the right. How would we scoop up 3 scoops of "a"? It would just be OOO>>>. The robot would take
+		move over to the right. How would we scoop up 3 scoops of "a"? It would just be OOO>>>. The robot would
+		take
 		3
-		scoops of "a", and then move over all the way to the right. What if we wanted one scoop of "a" and 2 scoops
+		scoops of "a", and then move over all the way to the right. What if we wanted one scoop of "a" and 2
+		scoops
 		of
 		"d"? Then it would be O>>>OO. What you'll realize is that for each set of instructions, we will get a
 		different
-		combinations (with repetitions) of ice cream flavors. If OOO>>> means three scoops of "a", there is no other
+		combinations (with repetitions) of ice cream flavors. If OOO>>> means three scoops of "a", there is no
+		other
 		set
-		of instructions we can give that will also give us three scoops of "a". Therefore, all we need to do to find
+		of instructions we can give that will also give us three scoops of "a". Therefore, all we need to do to
+		find
 		the
-		combinations with repetitions is to find how many ways we can position the "O"s throughout our instructions
+		combinations with repetitions is to find how many ways we can position the "O"s throughout our
+		instructions
 		OOO>>>. But wait! We already know how to do that! There are 6 positions total. And we need to pick 3 of
 		those
 		positions. The order doesn't matter, because they're all "O," but we can't repeat a single position more
@@ -783,45 +1368,57 @@ $$y'=-1/x^2$$
 		once. So this is just combinations without repetitions, and we have that equation above...
 		\(\frac{6!}{3!(6-3)!}\), and that will be our answer. Now, the number of positions we have in total will
 		always
-		be \(n+r-1\), because we are taking r scoops and moving n-1 times to get to the end. And r stays the same.
+		be \(n+r-1\), because we are taking r scoops and moving n-1 times to get to the end. And r stays the
+		same.
 		So
 		our end equation for combinations with repetitions is
 		\(\frac{(n+r-1)!}{r!(n+r-1-r)!}=\frac{(n+r-1)!}{r!(n-1)!}\).</p>
-	<p>So you can see here that working with combinatorics takes a bit more out of the box thinking, and requires a
+	<p>So you can see here that working with combinatorics takes a bit more out of the box thinking, and
+		requires a
 		lot
-		of visualization and imagining multiple iterations of similar things, which makes it inherently difficult.
+		of visualization and imagining multiple iterations of similar things, which makes it inherently
+		difficult.
 		But
 		also makes it super interesting!</p>
 
 	<h4>Student's t-test</h4>
 	<p>William Sealy Gosset was working at Guiness brewery and developed a test to determine the difference for
 		things,
-		say, barley growth. He wanted to publish the test but the company was nervous that he would reveal secrets,
+		say, barley growth. He wanted to publish the test but the company was nervous that he would reveal
+		secrets,
 		so
 		he published under the pseudonym "Student."</p>
 	<p>Imagine you have two fields of barley. If you sample one field, you can get the height of each piece of
 		barley
-		and you can make a distribution of the heights. Do the same for the other. We could compare the means of the
+		and you can make a distribution of the heights. Do the same for the other. We could compare the means of
+		the
 		two
-		distributions, but that only tells us so much. The means could be super far apart, but the variability of
+		distributions, but that only tells us so much. The means could be super far apart, but the variability
+		of
 		each
-		sample could be so big that there isn't actually a real difference between the two fields. So we create the
+		sample could be so big that there isn't actually a real difference between the two fields. So we create
+		the
 		t-value, which is a ratio of signal to noise.</p>
 	$$\frac{\text{signal}}{\text{noise}}=\frac{\text{difference between group means}}{\text{variability of
 	groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}$$
 	<p>Once you get the t-value, you can use a t-table to find the value of t that gives you p=0.05 (inferential
 		statistic) for the specific degree of freedom \(df=n_1+n_2-2\).</p>
-	<p>The aforementioned example is an independent (unpaired) t-test. But you can also do a paired t-test if, for
-		example, you're sampling the same population twice, so that each datapoint has a corresponding datapoint in
+	<p>The aforementioned example is an independent (unpaired) t-test. But you can also do a paired t-test if,
+		for
+		example, you're sampling the same population twice, so that each datapoint has a corresponding datapoint
+		in
 		the
 		other sample. A two-tailed t-test splits the 0.05 into both tails making each side 0.025.</p>
-	<p>Assumptions require normal distribution, similar variance in the two samples, and there should be the same
+	<p>Assumptions require normal distribution, similar variance in the two samples, and there should be the
+		same
 		number
 		of datapoints in each sample, and there should be 20-30 samples.</p>
 	<h4>ANOVA</h4>
-	<p>ANOVA can be used for measurements of more than two groups. The general linear model framework is \(data =
+	<p>ANOVA can be used for measurements of more than two groups. The general linear model framework is \(data
+		=
 		model
-		+ error\). ANOVA means ANalysis Of Variance. Sums of squares total (SST) is the number of datapoints times
+		+ error\). ANOVA means ANalysis Of Variance. Sums of squares total (SST) is the number of datapoints
+		times
 		the
 		variance. \(Variance = \frac{SST}{N}\)
 		{% endblock %}
