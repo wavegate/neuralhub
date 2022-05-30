@@ -263,7 +263,6 @@ https://zbmath.org/classification/
 	-linear algebra
 </pre>
 <h2>Linear Algebra</h2>
-
 <p>Information provided from <a href="https://joshua.smcvt.edu/linearalgebra/" target="_blank">Jim Hefferson's Linear
 		Algebra book</a> and <a
 		href="https://www.youtube.com/watch?v=kjBOesZCoqc&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&ab_channel=3Blue1Brown"
@@ -1132,6 +1131,14 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	-complex analysis
 </pre>
 <h2>Calculus</h2>
+<h4>Limits</h4>
+<p>Sometimes we can't work something out directly, but we can see what it should be as we get closer and closer. For
+	example, \(\frac{x^2-1}{x-1}\) cannot be evaluated at \(x=1\). However, if we plug in 0.99999, we'll find that it
+	gives us 1.99999, and so we say that the limit of the term as x approaches 1 is 2.</p>
+\[\lim_{x \to 1}\frac{x^2-1}{x-1}=2\]
+<h4>Infinity</h4>
+<p>Infinity is impossible to reach but we can work out the value of functions that have infinity in them. We can't say
+	\(\frac{1}{\infty}\) is 0, but we can say that the limit of \(\frac{1}{x}\) as x approaches infinity is 0.</p>
 <h3>Derivatives</h3>
 <h4>Definition of the derivative</h4>
 <p>The derivative of \(f(x)\) with respect to x is the function \(f'(x)\) and is defined as:</p>
@@ -1142,6 +1149,8 @@ $$f'(x)=\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$$
 	in x. So the equation is just the slope. The slope of what? The slope in f(x) as the h, or change in x,
 	approaches
 	0. Therefore, it is the instantaneous slope at point x.</p>
+<p>If the limit is different from the left vs the right, then the ordinary limit does not exist. However, there can be a
+	left-hand limit and a right-hand limit.</p>
 <p>Given \(y=f(x)\):</p>
 $$f'(x)=y'=\frac{df}{dx}=\frac{dy}{dx}$$
 <h4>Properties of the derivative</h4>
@@ -1393,6 +1402,12 @@ $$-2x\frac{x^8+1}{x^4+1}$$
 	units
 	into
 	seconds first. And that's kind of what we've done. (Unfinished, will need to think about more.)</p>
+<h2>Differential equations</h2>
+<h4>Differential equations</h4>
+<p>A differential equation is an equation with a function and one or more of its derivatives. Ordinary Differential
+	Equations (ODEs) have a single independent variable, whereas partial differential equations (PDEs) have two or more
+	indepedent variables. The Order is the highest derivative. The degree is the exponent of the highest derivative.
+	When the variable has no exponent or other function put on it, it is linear.</p>
 <li>Combinatorics</li>
 <li>Graph theory</li>
 <li>Descriptive statistics</li>
@@ -1470,22 +1485,10 @@ J}A_j\right\vert\]
 	}a\in A\}\).
 	The image of the function is all the elements of b that comes from A transformed by the function. Define
 	\(f^{-1}(b)=\{a\in A | f(a)=b\}\). The inverse is the element in A that goes to b.</p>
-<h4>Counting</h4>
-<h4>Probability and odds</h4>
-<h4>Random variables</h4>
-<h4>Probability distributions</h4>
-<h4>Mean</h4>
-<h4>Variance</h4>
-<h4>Binomial</h4>
-<h4>Poisson</h4>
-<h4>Normal distributions</h4>
-<h4>Central limit theorem</h4>
-<li>Combinatorics: the area of mathematics concerned with counting. Involves enumeration (counting). Can be
-	confusing because we are no longer talking about numbers, but about non-numerical objects, which we
-	count,
-	but
-	convert those objects into numbers.</li>
-<li>Permutations and Combinations</li>
+<h4>Permutations and combinations</h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ohsRp6kZ6-0" title="YouTube video player"
+	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+	allowfullscreen></iframe>
 <p>Permutations and combinations, as taught in middle/high school, are about figuring out how many ways you
 	can
 	select items from a set. I think this is often a confusing thing to learn because it's taught
@@ -1556,7 +1559,8 @@ J}A_j\right\vert\]
 	written
 	as \(2*1 = 2!\). So we take n, subtract r, and that gives us the factorial that we need to remove
 	because we
-	don't care about them. So our ending equation for permutations without repetitions is \(n!/(n-r)!\).</p>
+	don't care about them. So our ending equation for permutations without repetitions is \(n!/(n-r)!\). This is also
+	known as nPr (n permute r).</p>
 <p>Now we will discuss combinations without repetition. The difference between combination and permutation
 	is
 	that
@@ -1570,7 +1574,9 @@ J}A_j\right\vert\]
 	the
 	equation for combinations without repetitions is just the equation for permutations without repetitions
 	divided
-	by \(r!\), aka \(\frac{n!}{r!(n-r)!}\).</p>
+	by \(r!\), aka \(\frac{n!}{r!(n-r)!}\). This is also called a binomial coefficient \(\binom{n}{r}\) or nCr (n choose
+	r). Note that this can also be described as finding how many subsets of size r you can get from a set of n elements.
+</p>
 <p>Finally, we get to combinations with repetitions. In this case, we don't care about the order, but we can
 	repeat
 	getting one number more than once. Imagine this: you are at an ice cream parlor, and there are 4
@@ -1619,7 +1625,108 @@ J}A_j\right\vert\]
 	difficult.
 	But
 	also makes it super interesting!</p>
-
+<h4>Probability and odds</h4>
+<p>The probability is the number of ways to reach a certain outcome \(O\) out of all possibilities. The probability is
+	\(0\leq
+	p \leq 1\).</p>
+<p>Negation rule states that if the probability of O is p, then the probability of not O is \(1-p\).</p>
+<p>Multiplication rule states that if \(O_1,O_2\) are independent outcomes (knowing one doesn't influence the other),
+	then \(P(O_1 \text{ and }O_2)=P(O_1)\times P(O_2)\).</p>
+<p>Addition rule states that if the outcome O can occur in two or
+	more distinct possible ways, then the probability of O is the sum of the individual probabilities.</p>
+<p>For example, if you roll a die five times, what is the probability you land exactly two 3s? A couple ways to think
+	about this. You can rewrite the question as, what is the chance I get 3s on the 1st and 4th roll? Then it's
+	\((\frac{1}{6})(\frac{5}{6})^2(\frac{1}{6})(\frac{5}{6})=(\frac{1}{6})^2(\frac{5}{6})^3\). Then, you have to repeat
+	this for, what is the chance I get 3s on the 1st and 2nd roll, 2nd and 3rd roll, 2nd and 4th roll and so forth...
+	All the ways I can choose 2 to get (3s) from 5 rolls is \(5\choose 2\). So the answer is
+	\((\frac{1}{6})^2(\frac{5}{6})^3{5 \choose 2}\). This form of probability is called Bernoulli probability.</p>
+<p>Another way to think about this, is you have \(6^3\) total
+	possibilities on what you can roll. Then you have \(5 \choose 2\) ways you can roll 3 exactly twice, and for each of
+	those ways, the rest of the numbers can be any number 1,2,4,5,6 that's not 3, so 5 possibilities for each extra
+	digit (in this case there are 3 extra digits) for each time you roll 3 exactly twice. So the outcomes you're looking
+	for over total possibilities is \({5 \choose 2}\cdot 5^3/6^3\) gives the same answer. </p>
+<h4>Bernoulli distribution</h4>
+<p>The Bernoulli distribution, named after Swiss mathematician Jacob Bernoulli, is the discrete probability distribution
+	of a random variable which takes the value 1 with probability p and the value 0 with probability \(q=1-p\). Less
+	formally, it can be thought of as a model for the set of possible outcomes of a single experiment that asks a yes-no
+	question. The Bernoulli distribution is the special case of the binomial distribution where a single trial is
+	conducted.</p>
+<p>What's the probability of getting at least one pair from a 5 card hand (out of 52 cards)? A good way to think about
+	this is to find the negation of getting at least one pair, which is to get all unique numbers. Think about drawing
+	the cards. For the first one, it doesn't matter what you get, so you're at 1. For the next card, you can get 48/51
+	cards (avoiding the other 3 that are the same as the first card). Then, for the third card, it has to be different
+	from both your first and second cards, so your probability there is 44/50. And so forth, leading to the answer being
+	\(1-(1\times\frac{48}{51}\times \frac{44}{50}\times \frac{40}{49} \times \frac{36}{48})\simeq 0.4929\)</p>
+<h4>Odds</h4>
+<p>Odds are slightly different in that there's a monetary aspect. If the probability of an event is p, then the odds
+	(against) are \(1-p:p\). For example, if you're betting on a roll of the dice landing on a 3, then a bookkeeper
+	might say the odds are 5:1 (5 times it WON'T land on 3 versus 1 times it will). So he might offer you $50 if it
+	doesn't land on 3, and you offer $10 if it does. (Of course, in actual scenarios the bookkeeper wouldn't offer such
+	equitable odds).</p>
+<h4>Probability spaces</h4>
+<p>A sample space is the set of possible outcomes to an experiment.</p>
+<p>A probability measure \(P\) on a sample space \(S\) is a rule that assigns to each outcome \(s\in S\) a probability
+	\(P(s) \geq 0\) satisfying \[\sum_{s\in S}P(s)=1\].</p>
+<p>A probability space is a sample space \(S\) with a particular probability measure \(P\): \((S,P)\).</p>
+<h4>Events</h4>
+<p>An event \(E\) is a subset of a sample space \(S\) (aka \(E\subseteq S\)). If \((S,P)\) is a probability space, then
+	the
+	probability of the event \(E\) is \[P(E)=\sum_{s\in E}P(s)\]</p>
+<p>If \(E\subseteq S\) is an event, the complement to the event \(E\) is \(E^C=\{s\in S | s \not\in E\}\), and so
+	\(P(E^C)=1-P(E)\).</p>
+<p>You can apply inclusion/exclusion to probabilities: \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\).</p>
+<h4>Indepedent events</h4>
+<p>\(A\) and \(B\) are independent events if knowing one gives no information about the probability of the other. If
+	\(A,B\subseteq(S,P)\) are two events then \(A,B \text{ are indepenent}\iff p(A\cap B)=p(A)p(B)\). Conceptually, if
+	we know we're A, it doesn't tell us anything about the probability that we're B, so the probability of B in A is
+	just the same as the probability in S, so we just take the chance we're in A (\(p(A))\) and multiply it by the
+	general population's probability of being in B (\(P(B)\)).</p>
+<p>If \(A,B\) are independent events from a probability space \((S,P)\) then i) \(A,B^C\) are independent, as are
+	\(A^C,B\), and ii) \(A^C, B^C\) are also indepedent.</p>
+<p>We can extend this to more than two subsets. So if \(A, B, C\subseteq S\) and they are all mutually independent, then
+	they are independent to each other, and the intersection is the multiple of all their individual probabilities:
+	\(p(A\cap B \cap B)=P(A)P(B)P(C)\).</p>
+<h4>Conditional probabilities</h4>
+<p>If \(A,B\) are events from a probability space \((S,P)\), then the conditional probability of \(A\) given \(B\) is
+	\[P(A|B)=\frac{P(A\cap B)}{P(B)}\]</p>
+<h4>Total probability rule</h4>
+<p>Suppose \(\{A_1, A_2, ..., A_n\}\) is a partition of \(S\), and \(B\) is an event in \(S\). Then
+	\[P(B)=\sum_{i=1}^nP(B|A_i)P(A_i)\]. In other words, the total probability of B is the probability of B in each
+	element in the partition.</p>
+<h4>Bayes' rule</h4>
+<p>Recall \(P(A|B)\) is not symmetric ie. \(P(A|B) \neq P(B|A)\). If \(\{A_1,A_2,...,A_n\}\) is a partition of \(S\),
+	and \(B\subseteq S\) is an event, then for any \(j\),
+	\[p(A_j|B)=\frac{P(B|A_j)P(A_j)}{P(B)}\]\[=\frac{P(B|A_j)P(A_j)}{\sum_{i=1}^nP(B|A_i)P(A_i)}\]</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pd4tHt2Hi3s" title="YouTube video player"
+	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+	allowfullscreen></iframe>
+<h4>Random variables, probability distribution, mean, variance</h4>
+<p>A random variable \(X\) is a function on a probability space \((S,P)\) i.e. \(X:S\rightarrow \mathbb{R}\). To every
+	random variable \(X\) on a probability space \(S,P\), there are 3 important numbers: the mean \(\mu\), variance
+	\(\sigma^2\), and standard deviation \(\sigma\). These are also associated to a probability distribution connected
+	to \(X\). To think about the probability distribution, looking at the figure below, it's the plotting of all the
+	results of \(X(s)\) onto a number line.</p>
+<img src="{{ url_for('static', filename='img/math/prob_dist.svg') }}">
+<p>Suppose \(X:S\rightarrow \mathbb{Q}\) takes on values \(x_1, x_2, ..., x_k\). For each value \(x_i\), we can define
+	\(X^{-1}(x_i)\subseteq S\) (all the events that lead to \(x_i\)). To each such event, we know it has a certain
+	probability. Therefore, we can define \(p_i\equiv P(X^{-1}(x_i))\). So for each value \(x_i\) of \(X\), there is a
+	probability \(p_i\).</p>
+<p>The expected value/mean \(E(X)=\mu\) is: \[E(X)=\sum_i x_ip_i\]</p>
+<p>You can also think of the expected value or mean as the place where the probability distribution is balanced, also
+	can see as the center of mass. The variance measures how spread out from this center the values are. The differences
+	are squared to make the values easier to work with (and removes any negatives).
+	\(\text{Var}(X)=\sigma^2\) measures how spread out from \(\mu=E(X)\) the values are
+	\[\text{Var}(X)=\sum_i(x_i-\mu)^2p_i\]\[=E(X^2)-\mu^2\]</p>
+<p>The standard deviation \(\sigma\) is the square root of the variance.</p>
+<h4>Binomial</h4>
+<h4>Poisson</h4>
+<h4>Normal distributions</h4>
+<h4>Central limit theorem</h4>
+<li>Combinatorics: the area of mathematics concerned with counting. Involves enumeration (counting). Can be
+	confusing because we are no longer talking about numbers, but about non-numerical objects, which we
+	count,
+	but
+	convert those objects into numbers.</li>
 <h4>Student's t-test</h4>
 <p>William Sealy Gosset was working at Guiness brewery and developed a test to determine the difference for
 	things,
