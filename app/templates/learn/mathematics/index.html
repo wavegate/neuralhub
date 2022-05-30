@@ -237,7 +237,18 @@ https://zbmath.org/classification/
 <pre>
 	-elementary algebra
 </pre>
-
+<h4>Binomial theorem</h4>
+<p>The binomial theorem, or binomial expansion, describes the algebraic expansion of powers of a binomial. According to
+	the theorem, it is possible to expand the polynomial \((x+y)^n\) into a sum involving terms of the form \(ax^by^c\),
+	where the exponents \(b\) and \(c\) are nonnegative integers \(b+c=n\), and the coefficient \(a\) of each term is a
+	specific positive integer depending on \(n\) and \(b\). The coefficient \(a\) is known as the binomial coefficient
+	\(n \choose b\) or \(n \choose c\) (the two have the same value). These coefficients for varying \(n\) and \(b\) can
+	be arranged to form Pascal's triangle.</p>
+\[(x+y)^n={n\choose 0}x^ny^0+{n\choose 1}x^{n-1}y^1+{n\choose 2}x^{n-2}y^2+\ldots+{n\choose {n-1}}x^1y^{n-1}+{n\choose
+n}x^0y^n+\]
+<p>In Pascal's triangle, the value of \(n \choose b\) is the \(b\)th value in the \(n\)th row.</p>
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a8beb14cd64d7451f9f9e4f965713d3e7e62cbb"
+	alt="pascals triangle">
 <h4>Factoring Cubic Polynomials</h4>
 <p>A cubic polynomial is of the form \(p(x)=a_3x^3+a_2x^2+a_1x+a_0\). The fundamental theorem of algebra guarantees that
 	if \(a_0, a_1, a_2, a_3\) are all real numbers, then we can factor the polynomial into the form
@@ -255,8 +266,6 @@ https://zbmath.org/classification/
 	a factor of our polynomial. Do long division and we can now simplify \(p(x)=(x-2)(x^2+7x+12)\). We can simplify the
 	binomial further to get a final factor.</p>
 <pre>
-	<p>The first method 
-	<p>The fundamental theorem of algebra guarantees that if 
 	-equations and inequalities
 	-groups, rings, fields
 	-ordered algebraic structures
@@ -1124,6 +1133,60 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <pre>
 	-mappings and functions
 	-sequences and series
+</pre>
+<h3>Sequences and summations</h3>
+<h4>Sequences</h4>
+<p>A sequence is a function from a subset of the set of integers to a set \(S\). We use the notation \(a_n\) to
+	denote
+	the image of the integer \(n\) and call this a term of the sequence. For example, \(a_n=n^2\) gives the elements
+	\(1,4,9,16,26,...\).</p>
+<h4>Arithmetic progression</h4>
+<p>An arithmetic progression is a sequence of the form \(a, a+d, a+2d, ...,a+nd\) where \(a\) is the intiial term
+	and \(d\) is common difference, such that both belong to \(\mathcal{R}\). For example, \(s_n=-1+4n\) gives the
+	members
+	\(-1,3,7,11,...\).</p>
+<h4>Geometric progression</h4>
+<p>A geometric progression is a sequence of the form \(a, ar, ar^2, ...,ar^k\) where \(a\) is the initial term and \(r\)
+	is the common ratio, both of which belong to \(\mathcal{R}\). For example, \(a_n=(\frac{1}{2})^n\) gives the members
+	\(1, \frac{1}{2},\frac{1}{4},\frac{1}{8},...\).</p>
+<h4>Recursively defined sequences</h4>
+<p>A sequence can be defined recursively by stating the n-th term in terms of previous elements of the sequence and the
+	initial elements of the sequence. An example is the Fibonacci sequence, where \(a_0=0,a_1=1\) and
+	\(a_n=a_{n-1}+a_{n-2}\).</p>
+<h4>Summations</h4>
+<p>A summation has a variable \(j\) referred to as the index of summation, a lower limit \(m\) and an upper limit \(n\).
+	\[\sum_{j=m}^na_j=a_m+a_{m+1}+...+a_n\].</p>
+<p>You can factor a constant out of a sum. \[\sum ca_k=c\sum a_k\]</p>
+<p>The sum of a sum is the sum of the sums.\[\sum(a_k+b_k)=\sum a_k \sum b_k\]</p>
+<h4>Arithmetic series</h4>
+<p>The sum of the terms of the arithmetic progression is called an arithmetic series.</p>
+\[S=\sum_{j=1}^n(a+jd)=na+d\sum_{j=1}^nj=na+d\frac{n(n+1)}{2}\]
+<p>The crux in the proof is being able to see that:\[\sum_{j=1}^nj=1+2+3+4+...+(n-2)+(n-1)+n\] Combine the first and
+	last terms, then second and second-to last terms, and you will get the sum to be \(\frac{n}{2}(n+1)\).</p>
+<p>If your series does not start from 1, you can just find the series from 1 to m and from 1 to n and then find the
+	difference.</p>
+<h4>Geometric series</h4>
+<p>The sum of the terms of a geometric progression is called a geometric series.
+	\[S=\sum_{j=0}^n(ar^j)=a\sum_{j=0}^nr^j=a\frac{r^{n+1}-1}{r-1}\]To prove this, multiply the series by r, and then
+	subtract \(rS-S\).</p>
+<h4>Infininte geometric series</h4>
+<p>Infinite geometric series can be computed in the closed form for
+	\(x&#60;1\).
+	\[\sum_{n=0}^\infty x^n =\lim_{k\to\infty}\sum_{n=0}^k x^n
+	=\lim_{k\to\infty}\frac{x^{k+1}-1}{x-1}=-\frac{1}{x-1}=\frac{1}{1-x}\]
+</p>
+<h4>Power series</h4>
+<p>A power series is an infinite series in the form, where \(a_n\) represents the coefficient of the terms and \(c\) is
+	a constant: \[\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+...\]They are present in mathematical analysis,
+	where they arise as Taylor series of infinitely differentiable functions, combinatorics as generating functions, and
+	in electronic engineering under the name of Z-transform.</p>
+<h4>Taylor series</h4>
+<p>The Taylor series of a function is an infinite sum of terms that are expressed in terms of the function's derivatives
+	at a single point. For most common functions, the function and the sum of its Taylor series are equal near this
+	point.</p>
+<p>\[\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\]where \(f^{(n)}(a)\) denotes the nth derivative of f evaluated at
+	the point a. When \(a=0\), the series is also called a Maclaurin series.</p>
+<pre>
 	-differential calculus - differential and integral calculus is important for understanding the derivation of the Nernst equation, which describes the membrane potential, need derivatives for everything (calculating inductors)
 	-integral calculus
 	-functions of several variables
@@ -1133,11 +1196,13 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <h2>Calculus</h2>
 <h4>Limits</h4>
 <p>Sometimes we can't work something out directly, but we can see what it should be as we get closer and closer. For
-	example, \(\frac{x^2-1}{x-1}\) cannot be evaluated at \(x=1\). However, if we plug in 0.99999, we'll find that it
+	example, \(\frac{x^2-1}{x-1}\) cannot be evaluated at \(x=1\). However, if we plug in 0.99999, we'll find that
+	it
 	gives us 1.99999, and so we say that the limit of the term as x approaches 1 is 2.</p>
 \[\lim_{x \to 1}\frac{x^2-1}{x-1}=2\]
 <h4>Infinity</h4>
-<p>Infinity is impossible to reach but we can work out the value of functions that have infinity in them. We can't say
+<p>Infinity is impossible to reach but we can work out the value of functions that have infinity in them. We can't
+	say
 	\(\frac{1}{\infty}\) is 0, but we can say that the limit of \(\frac{1}{x}\) as x approaches infinity is 0.</p>
 <h3>Derivatives</h3>
 <h4>Definition of the derivative</h4>
@@ -1149,7 +1214,8 @@ $$f'(x)=\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$$
 	in x. So the equation is just the slope. The slope of what? The slope in f(x) as the h, or change in x,
 	approaches
 	0. Therefore, it is the instantaneous slope at point x.</p>
-<p>If the limit is different from the left vs the right, then the ordinary limit does not exist. However, there can be a
+<p>If the limit is different from the left vs the right, then the ordinary limit does not exist. However, there can
+	be a
 	left-hand limit and a right-hand limit.</p>
 <p>Given \(y=f(x)\):</p>
 $$f'(x)=y'=\frac{df}{dx}=\frac{dy}{dx}$$
@@ -1405,7 +1471,8 @@ $$-2x\frac{x^8+1}{x^4+1}$$
 <h2>Differential equations</h2>
 <h4>Differential equations</h4>
 <p>A differential equation is an equation with a function and one or more of its derivatives. Ordinary Differential
-	Equations (ODEs) have a single independent variable, whereas partial differential equations (PDEs) have two or more
+	Equations (ODEs) have a single independent variable, whereas partial differential equations (PDEs) have two or
+	more
 	indepedent variables. The Order is the highest derivative. The degree is the exponent of the highest derivative.
 	When the variable has no exponent or other function put on it, it is linear.</p>
 <li>Combinatorics</li>
@@ -1559,7 +1626,8 @@ J}A_j\right\vert\]
 	written
 	as \(2*1 = 2!\). So we take n, subtract r, and that gives us the factorial that we need to remove
 	because we
-	don't care about them. So our ending equation for permutations without repetitions is \(n!/(n-r)!\). This is also
+	don't care about them. So our ending equation for permutations without repetitions is \(n!/(n-r)!\). This is
+	also
 	known as nPr (n permute r).</p>
 <p>Now we will discuss combinations without repetition. The difference between combination and permutation
 	is
@@ -1574,8 +1642,10 @@ J}A_j\right\vert\]
 	the
 	equation for combinations without repetitions is just the equation for permutations without repetitions
 	divided
-	by \(r!\), aka \(\frac{n!}{r!(n-r)!}\). This is also called a binomial coefficient \(\binom{n}{r}\) or nCr (n choose
-	r). Note that this can also be described as finding how many subsets of size r you can get from a set of n elements.
+	by \(r!\), aka \(\frac{n!}{r!(n-r)!}\). This is also called a binomial coefficient \(\binom{n}{r}\) or nCr (n
+	choose
+	r). Note that this can also be described as finding how many subsets of size r you can get from a set of n
+	elements.
 </p>
 <p>Finally, we get to combinations with repetitions. In this case, we don't care about the order, but we can
 	repeat
@@ -1626,50 +1696,67 @@ J}A_j\right\vert\]
 	But
 	also makes it super interesting!</p>
 <h4>Probability and odds</h4>
-<p>The probability is the number of ways to reach a certain outcome \(O\) out of all possibilities. The probability is
+<p>The probability is the number of ways to reach a certain outcome \(O\) out of all possibilities. The probability
+	is
 	\(0\leq
 	p \leq 1\).</p>
 <p>Negation rule states that if the probability of O is p, then the probability of not O is \(1-p\).</p>
-<p>Multiplication rule states that if \(O_1,O_2\) are independent outcomes (knowing one doesn't influence the other),
+<p>Multiplication rule states that if \(O_1,O_2\) are independent outcomes (knowing one doesn't influence the
+	other),
 	then \(P(O_1 \text{ and }O_2)=P(O_1)\times P(O_2)\).</p>
 <p>Addition rule states that if the outcome O can occur in two or
 	more distinct possible ways, then the probability of O is the sum of the individual probabilities.</p>
-<p>For example, if you roll a die five times, what is the probability you land exactly two 3s? A couple ways to think
+<p>For example, if you roll a die five times, what is the probability you land exactly two 3s? A couple ways to
+	think
 	about this. You can rewrite the question as, what is the chance I get 3s on the 1st and 4th roll? Then it's
-	\((\frac{1}{6})(\frac{5}{6})^2(\frac{1}{6})(\frac{5}{6})=(\frac{1}{6})^2(\frac{5}{6})^3\). Then, you have to repeat
-	this for, what is the chance I get 3s on the 1st and 2nd roll, 2nd and 3rd roll, 2nd and 4th roll and so forth...
+	\((\frac{1}{6})(\frac{5}{6})^2(\frac{1}{6})(\frac{5}{6})=(\frac{1}{6})^2(\frac{5}{6})^3\). Then, you have to
+	repeat
+	this for, what is the chance I get 3s on the 1st and 2nd roll, 2nd and 3rd roll, 2nd and 4th roll and so
+	forth...
 	All the ways I can choose 2 to get (3s) from 5 rolls is \(5\choose 2\). So the answer is
 	\((\frac{1}{6})^2(\frac{5}{6})^3{5 \choose 2}\). This form of probability is called Bernoulli probability.</p>
 <p>Another way to think about this, is you have \(6^3\) total
-	possibilities on what you can roll. Then you have \(5 \choose 2\) ways you can roll 3 exactly twice, and for each of
+	possibilities on what you can roll. Then you have \(5 \choose 2\) ways you can roll 3 exactly twice, and for
+	each of
 	those ways, the rest of the numbers can be any number 1,2,4,5,6 that's not 3, so 5 possibilities for each extra
-	digit (in this case there are 3 extra digits) for each time you roll 3 exactly twice. So the outcomes you're looking
+	digit (in this case there are 3 extra digits) for each time you roll 3 exactly twice. So the outcomes you're
+	looking
 	for over total possibilities is \({5 \choose 2}\cdot 5^3/6^3\) gives the same answer. </p>
 <h4>Bernoulli distribution</h4>
-<p>The Bernoulli distribution, named after Swiss mathematician Jacob Bernoulli, is the discrete probability distribution
+<p>The Bernoulli distribution, named after Swiss mathematician Jacob Bernoulli, is the discrete probability
+	distribution
 	of a random variable which takes the value 1 with probability p and the value 0 with probability \(q=1-p\). Less
-	formally, it can be thought of as a model for the set of possible outcomes of a single experiment that asks a yes-no
+	formally, it can be thought of as a model for the set of possible outcomes of a single experiment that asks a
+	yes-no
 	question. The Bernoulli distribution is the special case of the binomial distribution where a single trial is
 	conducted.</p>
-<p>What's the probability of getting at least one pair from a 5 card hand (out of 52 cards)? A good way to think about
-	this is to find the negation of getting at least one pair, which is to get all unique numbers. Think about drawing
-	the cards. For the first one, it doesn't matter what you get, so you're at 1. For the next card, you can get 48/51
-	cards (avoiding the other 3 that are the same as the first card). Then, for the third card, it has to be different
-	from both your first and second cards, so your probability there is 44/50. And so forth, leading to the answer being
+<p>What's the probability of getting at least one pair from a 5 card hand (out of 52 cards)? A good way to think
+	about
+	this is to find the negation of getting at least one pair, which is to get all unique numbers. Think about
+	drawing
+	the cards. For the first one, it doesn't matter what you get, so you're at 1. For the next card, you can get
+	48/51
+	cards (avoiding the other 3 that are the same as the first card). Then, for the third card, it has to be
+	different
+	from both your first and second cards, so your probability there is 44/50. And so forth, leading to the answer
+	being
 	\(1-(1\times\frac{48}{51}\times \frac{44}{50}\times \frac{40}{49} \times \frac{36}{48})\simeq 0.4929\)</p>
 <h4>Odds</h4>
 <p>Odds are slightly different in that there's a monetary aspect. If the probability of an event is p, then the odds
 	(against) are \(1-p:p\). For example, if you're betting on a roll of the dice landing on a 3, then a bookkeeper
 	might say the odds are 5:1 (5 times it WON'T land on 3 versus 1 times it will). So he might offer you $50 if it
-	doesn't land on 3, and you offer $10 if it does. (Of course, in actual scenarios the bookkeeper wouldn't offer such
+	doesn't land on 3, and you offer $10 if it does. (Of course, in actual scenarios the bookkeeper wouldn't offer
+	such
 	equitable odds).</p>
 <h4>Probability spaces</h4>
 <p>A sample space is the set of possible outcomes to an experiment.</p>
-<p>A probability measure \(P\) on a sample space \(S\) is a rule that assigns to each outcome \(s\in S\) a probability
+<p>A probability measure \(P\) on a sample space \(S\) is a rule that assigns to each outcome \(s\in S\) a
+	probability
 	\(P(s) \geq 0\) satisfying \[\sum_{s\in S}P(s)=1\].</p>
 <p>A probability space is a sample space \(S\) with a particular probability measure \(P\): \((S,P)\).</p>
 <h4>Events</h4>
-<p>An event \(E\) is a subset of a sample space \(S\) (aka \(E\subseteq S\)). If \((S,P)\) is a probability space, then
+<p>An event \(E\) is a subset of a sample space \(S\) (aka \(E\subseteq S\)). If \((S,P)\) is a probability space,
+	then
 	the
 	probability of the event \(E\) is \[P(E)=\sum_{s\in E}P(s)\]</p>
 <p>If \(E\subseteq S\) is an event, the complement to the event \(E\) is \(E^C=\{s\in S | s \not\in E\}\), and so
@@ -1677,51 +1764,158 @@ J}A_j\right\vert\]
 <p>You can apply inclusion/exclusion to probabilities: \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\).</p>
 <h4>Indepedent events</h4>
 <p>\(A\) and \(B\) are independent events if knowing one gives no information about the probability of the other. If
-	\(A,B\subseteq(S,P)\) are two events then \(A,B \text{ are indepenent}\iff p(A\cap B)=p(A)p(B)\). Conceptually, if
+	\(A,B\subseteq(S,P)\) are two events then \(A,B \text{ are indepenent}\iff P(A\cap B)=P(A)p(B)\). Conceptually,
+	if
 	we know we're A, it doesn't tell us anything about the probability that we're B, so the probability of B in A is
-	just the same as the probability in S, so we just take the chance we're in A (\(p(A))\) and multiply it by the
+	just the same as the probability in S, so we just take the chance we're in A (\(P(A)\)) and multiply it by the
 	general population's probability of being in B (\(P(B)\)).</p>
 <p>If \(A,B\) are independent events from a probability space \((S,P)\) then i) \(A,B^C\) are independent, as are
 	\(A^C,B\), and ii) \(A^C, B^C\) are also indepedent.</p>
-<p>We can extend this to more than two subsets. So if \(A, B, C\subseteq S\) and they are all mutually independent, then
+<p>We can extend this to more than two subsets. So if \(A, B, C\subseteq S\) and they are all mutually independent,
+	then
 	they are independent to each other, and the intersection is the multiple of all their individual probabilities:
 	\(p(A\cap B \cap B)=P(A)P(B)P(C)\).</p>
 <h4>Conditional probabilities</h4>
-<p>If \(A,B\) are events from a probability space \((S,P)\), then the conditional probability of \(A\) given \(B\) is
+<p>If \(A,B\) are events from a probability space \((S,P)\), then the conditional probability of \(A\) given \(B\)
+	is
 	\[P(A|B)=\frac{P(A\cap B)}{P(B)}\]</p>
 <h4>Total probability rule</h4>
 <p>Suppose \(\{A_1, A_2, ..., A_n\}\) is a partition of \(S\), and \(B\) is an event in \(S\). Then
 	\[P(B)=\sum_{i=1}^nP(B|A_i)P(A_i)\]. In other words, the total probability of B is the probability of B in each
 	element in the partition.</p>
 <h4>Bayes' rule</h4>
-<p>Recall \(P(A|B)\) is not symmetric ie. \(P(A|B) \neq P(B|A)\). If \(\{A_1,A_2,...,A_n\}\) is a partition of \(S\),
+<p>Recall \(P(A|B)\) is not symmetric ie. \(P(A|B) \neq P(B|A)\). If \(\{A_1,A_2,...,A_n\}\) is a partition of
+	\(S\),
 	and \(B\subseteq S\) is an event, then for any \(j\),
 	\[p(A_j|B)=\frac{P(B|A_j)P(A_j)}{P(B)}\]\[=\frac{P(B|A_j)P(A_j)}{\sum_{i=1}^nP(B|A_i)P(A_i)}\]</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pd4tHt2Hi3s" title="YouTube video player"
 	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 	allowfullscreen></iframe>
 <h4>Random variables, probability distribution, mean, variance</h4>
-<p>A random variable \(X\) is a function on a probability space \((S,P)\) i.e. \(X:S\rightarrow \mathbb{R}\). To every
+<p>A random variable \(X\) is a function on a probability space \((S,P)\) i.e. \(X:S\rightarrow \mathbb{R}\). To
+	every
 	random variable \(X\) on a probability space \(S,P\), there are 3 important numbers: the mean \(\mu\), variance
-	\(\sigma^2\), and standard deviation \(\sigma\). These are also associated to a probability distribution connected
+	\(\sigma^2\), and standard deviation \(\sigma\). These are also associated to a probability distribution
+	connected
 	to \(X\). To think about the probability distribution, looking at the figure below, it's the plotting of all the
 	results of \(X(s)\) onto a number line.</p>
 <img src="{{ url_for('static', filename='img/math/prob_dist.svg') }}">
-<p>Suppose \(X:S\rightarrow \mathbb{Q}\) takes on values \(x_1, x_2, ..., x_k\). For each value \(x_i\), we can define
+<p>Suppose \(X:S\rightarrow \mathbb{Q}\) takes on values \(x_1, x_2, ..., x_k\). For each value \(x_i\), we can
+	define
 	\(X^{-1}(x_i)\subseteq S\) (all the events that lead to \(x_i\)). To each such event, we know it has a certain
-	probability. Therefore, we can define \(p_i\equiv P(X^{-1}(x_i))\). So for each value \(x_i\) of \(X\), there is a
+	probability. Therefore, we can define \(p_i\equiv P(X^{-1}(x_i))\). So for each value \(x_i\) of \(X\), there is
+	a
 	probability \(p_i\).</p>
 <p>The expected value/mean \(E(X)=\mu\) is: \[E(X)=\sum_i x_ip_i\]</p>
-<p>You can also think of the expected value or mean as the place where the probability distribution is balanced, also
-	can see as the center of mass. The variance measures how spread out from this center the values are. The differences
+<p>You can also think of the expected value or mean as the place where the probability distribution is balanced,
+	also
+	can see as the center of mass. The variance measures how spread out from this center the values are. The
+	differences
 	are squared to make the values easier to work with (and removes any negatives).
 	\(\text{Var}(X)=\sigma^2\) measures how spread out from \(\mu=E(X)\) the values are
-	\[\text{Var}(X)=\sum_i(x_i-\mu)^2p_i\]\[=E(X^2)-\mu^2\]</p>
+	\[\text{Var}(X)=\sum_i(x_i-\mu)^2p_i=\sum_i(x_i^2p_i-\mu^2)\]\[=E(X^2)-\mu^2\]</p>
 <p>The standard deviation \(\sigma\) is the square root of the variance.</p>
-<h4>Binomial</h4>
+<h4>Binomial distribution</h4>
+<p>Say you have the question, if we toss a coin \(n\) times, what is the probably of getting
+	\(k\)
+	heads? The total possibilities is \(n^2\) and the total ways we can get \(k\) heads is \(n \choose k\), so the
+	probability is \({n\choose k}/2^n\). When you have such a function, we state that this defines a binomial
+	distribution: values \(x_i=0,1,2,...,n\) with probabilities \[p_k=P(k)=\frac{n \choose k}{2^n}, k=0,1,...,n\]
+</p>
+<p>Using a 50% heads, 50% tails example, creating probabilities for getting \(k\) heads after flipping a coin \(n\)
+	times gives the following \(B(10,0.5)\) binomial distribution.</p>
+<img src="{{ url_for('static', filename='img/math/binom10.png') }}">
+<p>However, binomial distributions also apply if the probabily of yes and no is not 50-50. In that case, we describe
+	the
+	binomial distribution as \(B(n,p)\) where (notice if we plug in 1/2 for p here we get the same thing as above):
+	\[p_k={n \choose
+	k}p^k(1-p)^{n-k}\]</p>
+<p>Here's the binomial distribution for \(B(10,0.2)\):</p>
+<img src="{{ url_for('static', filename='img/math/binom10_2.png') }}">
+<p>For a binomial distribution, the mean and variance can be found: \[\mu=np\]\[\sigma^2=np(1-p)=npq\]</p>
+<h4>Probability generating functions</h4>
+<p>Suppose our probability distribution has positive integer values \(x_k=k,k=0,1,2,3,...\). Our probability generating
+	function is as follows:\[g(t)\equiv p_0+p_1t+p_2t^2+\ldots\]Note here that \(g(1)=1\), since that's just the sum of
+	all the probabilities which must add up to 1. We can find the mean and variance with the
+	following:\[\mu=g'(1)\]\[\sigma^2=g''(1)+g'(1)-g'(1)^2\]</p>
+<p>For the proof of the mean, notice:\[g'(1)=p_1+2p_2+3p_3+\ldots=\sum_{k=0}^\infty x_kp_k=\mu\]</p>
+<p>For the proof of the variance, you'll need to understand the product rule for derivatives, and
+	notice (some steps are left out):\[g'(1)+g''(1)-g'(1)^2=(tg')'(1)-\mu^2=\sum_{k=0}^\infty k^2p_k-\mu^2=\sigma^2\]
+</p>
+<p>This probability generating function now allows us to calculate the mean and variance for any binomial distribution
+	\(B(n,p)\). Recall that the probability for any positive integer \(p_k={n\choose k}p^kq^{n-k}\). This gives the
+	generating function: \[{n \choose 0}q^n+{n\choose 1}pq^{n-1}t+{n\choose 2}p^2q^{n-2}t^2+\ldots+{n\choose
+	n}p^nt^n\]\[=(pt+q)^n\]Note the use of binomial theorem here.</p>
+<p>Now we can find the mean after application of chain rule (the vertical bar means evaluated
+	at):\[\mu=g'(1)=\left. n(pt+q)^{n-1}p\right|_{t=1}=np\]</p>
+\[\sigma^2=np(1-p)\]
+<p>An example of the use of the binomial distribution is, say you usually win 60% of your tennis matches. You hire a new
+	coach and you win 12 out of 15 of your next matches. Is the coach helping or not? The probability of winning 12 or
+	more matches out of 15 if your usual probability is 60% is the probability of you winning 12 + probability of you
+	winning 13, and so on. \[p_{12}+p_{13}+p_{14}+p_{15}=\sum_{k=12}^15{15\choose k}(0.6)^k(0.4)^{15-k}\approx 0.091\]
+</p>
+<h4>Geometric distributions</h4>
+<p>Now suppose we toss a p-biased coin continually until we get a head. We define our random variable \(X(s)=k\) if the
+	first head appears in the \(k\)th position. So an element in the sample space might be \(s=\text{TTTHHTH}\ldots\)
+	and so \(X(s)=4\). The probability \(p_k=q^{k-1}p\) because everything before k must be tails (which means it has a
+	probabilty of q). This gives a generating function (note the use of infinite geometric
+	series):\[g(t)=pt+pqt^2+pq^2t^3+pq^3t^4+\ldots=pt(1+qt+q^2t^2+\ldots)=\frac{pt}{1-qt}\]</p>
+<p>This gives:\[\mu=\frac{1}{p}\]\[\sigma^2=\frac{q}{p^2}\]</p>
+<p>This is a pretty normal thing to think about if you play video games for loot drops. If the chance to get a drop is,
+	say, one out of
+	500, then on average, you need to kill the monster 500 times to get the drop.</p>
+<h4>Continuous probability distributions</h4>
+<p>The previous distributions dealt with random variables that take on discrete values (eg. number of heads or tails or
+	number of flips). But many random variables do not take on an integer, and so for these continuous distributions, we
+	will need to switch over from sums to integrals. We define the probability of the random variable to take on any
+	continuous value to be determined by the probability density function or probability distribution function \(p(x)\),
+	and the integration of all of these
+	values is \(\int_{-\infty}^\infty p(x)dx=1\) and the probability for the random variable to take on any value in an
+	interval a to b to be \(p(x\in[a,b])=\int_a^bp(x)dx\).</p>
+<p>Therefore, the expected value or mean of a continuous distribution is a integral instead of summation of each random
+	variable and its probability:\[E(X)=\mu=\int_{-\infty}^\infty xp(x)dx\]This is also how you would calculate the
+	center of mass of a rod, where the rod balances, with density instead of probability.</p>
+\[\text{Var}(X)=\sigma^2=\int_{-\infty}^\infty (x-\mu)^2p(x)dx\]
+<h4>Uniform distribution</h4>
+<p>A uniform distribution has that the probability of the random variable taking on a value is constant between two
+	values. The value must be \(\frac{1}{b-a}\) because the total area under the curve must be equal to 1. Thus, the
+	probability of the random variable taking on a value between \(c\) and \(d\) if \(p(x\in[c,d])=a&#60;c&#60;d&#60;b\)
+	is
+	\(\frac{d-c}{b-a}\).</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Uniform_Distribution_PDF_SVG.svg/1200px-Uniform_Distribution_PDF_SVG.svg.png"
+	width="30%">
+<h4>Transformation formulas</h4>
+<p>We can transform a random variable \(X\) into say \(Y=aX+b\). In this case, note that the variance doesn't change if
+	we add a constant.
+	\[E(X+b)=E(X)+b\]\[E(aX)=aE(X)\]\[\text{Var}(X+b)=\text{Var}(X)\]\[\text{Var}(aX)=a^2\text{Var}(X)\]
+	\[\text{SD}(X+b)=\text{SD}(X)\]\[\text{SD}(aX)=a\text{SD}(X)\]</p>
 <h4>Poisson</h4>
 <h4>Normal distributions</h4>
+<p>The normal distribution has the probability density function with a special label \(\phi\) instead of \(p\):
+	\[\phi(x)=\frac{1}{\sqrt{2\pi}}e^{-x^2/2}\]</p>
+<p>The mean \(\mu=0\) and the variance and standard deviation are both \(\sigma^2=1=\sigma\).</p>
+<img src="https://miro.medium.com/max/1200/1*IdGgdrY_n_9_YfkaCh-dag.png" alt="normal_distribution" width="70%">
+<p>This is usually considered the standard normal \(N(0,1)\) with 0 as the mean and the variance as 1.</p>
+\[P(z\in[a,b])=\int_a^b\phi(x)dx\]
+\[P(z\in[-\frac{2}{3},\frac{2}{3}])=0.5\]
+\[P(z\in[-1,1])=0.683\]
+\[P(z\in[-2,2])=0.956\]
+\[P(z\in[-3,3])=0.997\]
+\[P(z\in[-1.96,1.96])=0.950\]
+<p>You can have a more general normal distribution where the mean is not at 0, so \(N(\mu,\sigma^2)\), with the
+	probability density function (shifting by the mean and dilating by a factor of
+	\(sigma\):\[p(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\mu)^2/(2\sigma^2)}\]</p>
+<p>Note that this probability density function does not use \(\phi\) or \(z\). So if we take the random variable
+	representing \(N(\mu,\sigma^2)\) and translate it such that the new random variable \(z=\frac{x-\mu}{\sigma}\), then
+	this is now the standard normal \(N(0,1\).</p>
+<h4>Cumulative distribution function</h4>
+<p>If \(p(x)\) is any probability distribution (discrete or continuous), then the cumulative distribution function is
+	the integral from negative infinity to x:\[F(x)\equiv \int_{-\infty}^xp(t)dt\]</p>
+<p>The standard normal distribution has a cumulative distribution function which has been tabulated.</p>
 <h4>Central limit theorem</h4>
+<p>If we sample any distribution \(n\) times and take an average, then as \(n\to \infty\) the sampling distribution of
+	averages approaches a
+	normal distribution.</p>
 <li>Combinatorics: the area of mathematics concerned with counting. Involves enumeration (counting). Can be
 	confusing because we are no longer talking about numbers, but about non-numerical objects, which we
 	count,
