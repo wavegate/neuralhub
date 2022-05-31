@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% block title %}Math - {% endblock %}
 {% block content %}
 
 
@@ -17,8 +17,139 @@
 		display: block;
 		margin: 0 auto;
 	}
+
+	.sidebar {
+		position: fixed;
+		margin-left: -375px;
+		border-left: 8px solid #c8dce3;
+		background-color: #fff;
+		overflow-y: scroll;
+	}
+
+	.sidebar {
+		width: 350px;
+		height: 90vh;
+	}
+
+	.core {
+		padding: 7px;
+		width: 100%;
+		background-color: beige;
+		font-size: larger;
+		margin-top: 15px;
+		margin-bottom: 10px;
+	}
+
+	.core:first-child {
+		margin-top: 0px;
+	}
+
+	.topic {
+		padding-left: 15px;
+	}
+
+	.topic a {
+		color: #333333;
+	}
+
+	.topic a:hover {
+		text-decoration: underline;
+	}
+
+	a.anchor {
+		display: block;
+		position: relative;
+		top: -150px;
+		visibility: hidden;
+	}
+
+	.sidebar::-webkit-scrollbar {
+		width: 8px;
+		/* width of the entire scrollbar */
+	}
+
+	.sidebar::-webkit-scrollbar-track {
+		background: beige;
+		/* color of the tracking area */
+	}
+
+	.sidebar::-webkit-scrollbar-thumb {
+		background-color: #c8dce3;
+		/* color of the scroll thumb */
+		/* roundness of the scroll thumb */
+		border: 3px solid #c8dce3;
+		/* creates padding around scroll thumb */
+	}
 </style>
 
+<div class="sidebar">
+	<div class="core">Foundations of mathematics</div>
+	<div class="topic"><a href="#logic">Logic</a></div>
+	<div class="topic"><a href="#language">Language of mathematics</a></div>
+	<div class="topic"><a href="#reasoning">Reasoning and proving</a></div>
+	<div class="topic"><a href="#sets">Sets, relations, set theory</a></div>
+	<div class="core">Arithmetic and number theory</div>
+	<div class="topic"><a href="#concept">Pre-numerical stage, concept of numbers</a></div>
+	<div class="topic"><a href="#natural">Natural numbers</a></div>
+	<div class="topic"><a href="#integer">Integers, rational numbers</a></div>
+	<div class="topic"><a href="#real">Real numbers, complex numbers</a></div>
+	<div class="topic"><a href="#number">Number theory</a></div>
+	<div class="topic"><a href="#measure">Measures and units</a></div>
+	<div class="topic"><a href="#ratio">Ratio and proportion, percentages</a></div>
+	<div class="topic"><a href="#practical">Real-life mathematics, practical arithmetic</a></div>
+	<div class="core">Geometry</div>
+	<div class="topic"><a href="#informal_geometry">Informal geometry</a></div>
+	<div class="topic"><a href="#area">Area and volume</a></div>
+	<div class="topic"><a href="#plane_geometry">Plane and solid geometry</a></div>
+	<div class="topic"><a href="#transformation">Transformation geometry</a></div>
+	<div class="topic"><a href="#trigonometry">Plane and spherical trigonometry</a></div>
+	<div class="topic"><a href="#analytic_geometry">Analytic geometry, vector algebra</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Descriptive geometry</a></div>
+	<div class="core">Algebra</div>
+	<div class="topic"><a href="#elementary">Elementary algebra</a></div>
+	<div class="topic"><a href="#equation">Equations and inequalities</a></div>
+	<div class="topic"><a href="#group">Groups, rings, fields</a></div>
+	<div class="topic"><a href="#ordered">Ordered algebraic structures</a></div>
+	<div class="topic"><a href="#linear">Linear algebra</a></div>
+	<div class="core">Analysis</div>
+	<div class="topic"><a href="#mapping">Mappings and functions</a></div>
+	<div class="topic"><a href="#sequences">Sequences and series</a></div>
+	<div class="topic"><a href="#differential">Differential calculus</a></div>
+	<div class="topic"><a href="#integral">Integral calculus</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Functions of several variables</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Functional equations</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Complex analysis</a></div>
+	<div class="core">Combinatorics, graph theory, probability theory, and statistics</div>
+	<div class="topic"><a href="#combinatorics">Combinatorics</a></div>
+	<div class="topic"><a href="#graph">Graph theory</a></div>
+	<div class="topic"><a href="#descriptive">Descriptive statistics</a></div>
+	<div class="topic"><a href="#probability">Probability theory</a></div>
+	<div class="topic"><a href="#distribution">Distributions and stochastic processes</a></div>
+	<div class="topic"><a href="#statistics">Foundations and methodology of statistics</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Applied statistics</a></div>
+	<div class="core">Mathematical modeling and applications of mathematics</div>
+	<div class="topic"><a href="#modeling">Modeling and interdisciplinarity</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Financial and insurance mathematics</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Operations research, economics</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Physics, astronomy, technology, engineering</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Biology, chemistry, medicine</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Behavioral and social sciences</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Arts, music, language, architecture</a></div>
+	<div class="core">Numerical mathematics</div>
+	<div class="topic"><a href="#rounding">Rounding, estimation, theory of errors</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Numerical algebra</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Numerical analysis</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Interpolation and approximation</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Mathematical programming</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Discrete mathematics</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Mathematical software, computer programs</a></div>
+	<div class="core">Computer science</div>
+	<div class="topic"><a href="#descriptive_geometry">Theoretical computer science</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Systems, databases</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Programming languages</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Programming techniques</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Artificial intelligence</a></div>
+</div>
 https://zbmath.org/classification/
 <h1>Math</h1>
 <li>So when it comes to math, I think there is the failure in general education of math in which the order of how
@@ -56,6 +187,8 @@ https://zbmath.org/classification/
 <li>I have mainly looked at math education under the Mathematics Subject Classification. The goal of studying math
 	in
 	this case, as well as the study of every other subject, is to solve problems.</li>
+<a class="anchor" id="logic"></a>
+<h2>Logic</h2>
 <li>Propositional logic</li>
 <p>Propositional logic, or zeroth order logic, is a language for math. The first set of symbols we need to learn is
 	about propositional logic. A proposition in this case is a statement which can take on two values: true or
@@ -106,78 +239,117 @@ https://zbmath.org/classification/
 	example, if you state, "I am tall." It is difficult to assign a truth value to this statement because it depends
 	on
 	what height we consider tall to be, and so fuzzy logic investigates these scenarios.</p>
-<p>The converse of a categorical or implicational statement is the result of reversing its two constituent statements.
-	For the implication P->Q, the converse is Q->P. The truth of the converse is generally independent from that of the
+<p>The converse of a categorical or implicational statement is the result of reversing its two constituent
+	statements.
+	For the implication P->Q, the converse is Q->P. The truth of the converse is generally independent from that of
+	the
 	original statement.</p>
+<a class="anchor" id="reasoning"></a>
 <li>Proof theory and constructive mathematics</li>
-<p>Let's talk about writing proofs for a sec. I'm no mathematician so this is what I garner from a quick google search
+<p>Let's talk about writing proofs for a sec. I'm no mathematician so this is what I garner from a quick google
+	search
 	of how to write proofs by Eugenia Cheng. This is because I was dealing with a linear algebra textbook which
-	encourages the use of proofs from the start, and I haven't used proofs since 7th grade geometry class. All I really
-	remember about proofs was... well, not much. That you start with some assumptions, and then some little dots that
+	encourages the use of proofs from the start, and I haven't used proofs since 7th grade geometry class. All I
+	really
+	remember about proofs was... well, not much. That you start with some assumptions, and then some little dots
+	that
 	mean therefore or something like that.</p>
-<p>A proof is a series of statements, each of which follows logically from what has gone before. It starts with things
-	we are assuming to be true and ends with what we are trying to prove. The beginning discusses what we are assuming
-	to be true, including definitions of what we're talking about. The middle has statements following logically from
-	what came before, adn the end is what we're trying to prove. We are given the beginning and the end, but we have to
+<p>A proof is a series of statements, each of which follows logically from what has gone before. It starts with
+	things
+	we are assuming to be true and ends with what we are trying to prove. The beginning discusses what we are
+	assuming
+	to be true, including definitions of what we're talking about. The middle has statements following logically
+	from
+	what came before, adn the end is what we're trying to prove. We are given the beginning and the end, but we have
+	to
 	fill out the middle. The difficulty in writing a proof is that the order in which we write it is usually not the
 	order in which we thought it up, and we often think up of a proof backwards. So the first mistake to avoid is
 	writing the proof in the order in which you thought of it.</p>
 <p>Some examples of things we try to prove are \(x=y\), \(x\implies y\) (x implies y), \(x\iff y\) (x is true if and
 	only if y is true), x is purple, \(\forall x\space p(x)\) is true (all animals of a certain kind x behave in a
 	certain way
-	p(x)), \(\exists x\) (there exists x) such that p(x) is true. Or "suppose that a, b, c, and d are true. Then e is
+	p(x)), \(\exists x\) (there exists x) such that p(x) is true. Or "suppose that a, b, c, and d are true. Then e
+	is
 	true."</p>
 <p>For the general shape of a proof, the beginning will discuss axioms, definitions, and state the given. The middle
-	will have a series of equations alongside the axioms, definitions, and givens that are used to be able to make those
+	will have a series of equations alongside the axioms, definitions, and givens that are used to be able to make
+	those
 	equations valid. Then, at the end you restate what you were trying to prove. The three dots in the shape of a
 	triangle means "therefore", and Q.E.D. means "quod erat demonstrandum" or "which was to be demonstrated" and is
 	placed at the end of proofs to indicate the proof is complete.</p>
 <p>It's important to remember that you want to end with what you're trying to prove, and not start with it and go
-	backwards. This is an easier mistake to make than first meets the eye. It's also important to not jump over too many
-	steps without explaining what you're doing. Of course, you don't want to use logic that is just not correct (I'll
-	try to figure out false logic later). Two classic forms of incorrect logic is negating a statement incorrectly and
+	backwards. This is an easier mistake to make than first meets the eye. It's also important to not jump over too
+	many
+	steps without explaining what you're doing. Of course, you don't want to use logic that is just not correct
+	(I'll
+	try to figure out false logic later). Two classic forms of incorrect logic is negating a statement incorrectly
+	and
 	proving the converse of something instead of the thing itself. Negation is taught alongside
 	propositional/first-order logic. If in doubt, justify more than less.</p>
-<p>She gives some tips on how to write a proof practically. She mentions that writing a proof is hard and is more like
-	being a poet, and a lot of the time you just need to sit down and stare at what you're trying to prove for a long
-	time. But she suggests some tips. Write out the beginning very carefully in mathematical language. Write out the end
-	very carefully in mathematical language. Then try and manipulate both the beginning and the end to try and make them
-	look like one another. Take big leaps to see what happens, then make big leaps into smaller leaps afterwards. See if
-	the situation reminds you of any situations you've ever seen before. I like these tips because they are pretty much
-	how I think people should deal with any problem in life logically. Note where you're starting off from, and where
+<p>She gives some tips on how to write a proof practically. She mentions that writing a proof is hard and is more
+	like
+	being a poet, and a lot of the time you just need to sit down and stare at what you're trying to prove for a
+	long
+	time. But she suggests some tips. Write out the beginning very carefully in mathematical language. Write out the
+	end
+	very carefully in mathematical language. Then try and manipulate both the beginning and the end to try and make
+	them
+	look like one another. Take big leaps to see what happens, then make big leaps into smaller leaps afterwards.
+	See if
+	the situation reminds you of any situations you've ever seen before. I like these tips because they are pretty
+	much
+	how I think people should deal with any problem in life logically. Note where you're starting off from, and
+	where
 	you want to go, then work both ways and see if you can connect the dots!</p>
-<p>One method for proofs, which may be familiar for those who work in programming as well, is proof by induction. In the
-	base step we verify that the statement is true for some first instance, and then in the inductive step we establish
-	an implication, that if the statement is true for all prior cases then it follows for the present case also. These
+<p>One method for proofs, which may be familiar for those who work in programming as well, is proof by induction. In
+	the
+	base step we verify that the statement is true for some first instance, and then in the inductive step we
+	establish
+	an implication, that if the statement is true for all prior cases then it follows for the present case also.
+	These
 	two steps prove together that the statement for all the steps because the base step is true and everything that
 	follows is also true.</p>
-<p>To prove by mutual set inclusion is to prove that the solution set of a system equals something. This is by proving
+<p>To prove by mutual set inclusion is to prove that the solution set of a system equals something. This is by
+	proving
 	that any solution to the system is in the set, and anything in the set is a solution of the system. It's easy to
 	confuse these two statements so try to visualize it in your head.</p>
-<p>She then goes into some examples of styles for typical proof cases but I'll probably learn those along the way.</p>
+<p>She then goes into some examples of styles for typical proof cases but I'll probably learn those along the way.
+</p>
+<a class="anchor" id="sets"></a>
 <h4>Equivalence relations</h4>
-<p>An equivalence relation is a binary relation that is reflexive, symmetric and transitive. Reflexive means that it is
-	equivalent to itself, symmetrical is a to b if and only if b to a, and transivity is if a to b and b to c then a to
+<p>An equivalence relation is a binary relation that is reflexive, symmetric and transitive. Reflexive means that it
+	is
+	equivalent to itself, symmetrical is a to b if and only if b to a, and transivity is if a to b and b to c then a
+	to
 	c.</p>
 <h4>Commutative, associative</h4>
-<p>Commutative means you can write the same thing forwards and backwards (\(a+b=b+a\)), associative means you can group
+<p>Commutative means you can write the same thing forwards and backwards (\(a+b=b+a\)), associative means you can
+	group
 	things in
 	different combinations (\((a+b)+c=a+(b+c)\)).</p>
 <h4> Union, Intersection, and Complement</h4>
-<p>The union of two sets contains all elements contained in both sets, and is denoted \(A\cup B\). The intersection of
+<p>The union of two sets contains all elements contained in both sets, and is denoted \(A\cup B\). The intersection
+	of
 	two sets contains only the elements that are in both sets, and is denoted \(A \cap B\). The complement of a
 	set A contains everything that is not in the set A, denoted \(A'\).</p>
 <p>Two sets are disjoint if they have no elements in common.</p>
 <h4>Domain, codomain, range</h4>
-<p>In its simplest form the domain is all the values that go into a function, and the range is all the values that come
+<p>In its simplest form the domain is all the values that go into a function, and the range is all the values that
+	come
 	out. A function relates an input to an output. A function is defined by sets (relates each element of a set with
-	exactly one element of another set). What can go into a function is called the domain. What may possibly come out of
-	a function is called the codomain. What actually comes out of a function is called the range. For example, if the
-	function is f(x) = 2x+1, the domain is what x can be, the codomain is what 2x+1 can be, and the range (or image) is
-	what f(x) can be. We define the domain and the codomain, and these along with the function determine the range. For
-	example, if we set the codomain to be all real numbers, then square root is not a function, but if we define it to
+	exactly one element of another set). What can go into a function is called the domain. What may possibly come
+	out of
+	a function is called the codomain. What actually comes out of a function is called the range. For example, if
+	the
+	function is f(x) = 2x+1, the domain is what x can be, the codomain is what 2x+1 can be, and the range (or image)
+	is
+	what f(x) can be. We define the domain and the codomain, and these along with the function determine the range.
+	For
+	example, if we set the codomain to be all real numbers, then square root is not a function, but if we define it
+	to
 	be non-negative real numbers, square root IS a function.</p>
-<p>\(f:\mathbb{N}\rightarrow \mathbb{N}\) means the function f has the domain N (natural numbers) and a codomain of N as
+<p>\(f:\mathbb{N}\rightarrow \mathbb{N}\) means the function f has the domain N (natural numbers) and a codomain of
+	N as
 	well.</p>
 <p>\(f:x\mapsto x^2\) means the function f takes in x and returns x^2.</p>
 <p>\(f:x= x^2\) means the function f takes in x and returns x^2 (maps to).</p>
@@ -188,7 +360,8 @@ https://zbmath.org/classification/
 <p>\(\mathbb{Z}\) is the set
 	of integers, which are the negative whole numbers, zero, and positive whole numbers.</p>
 <p> \(\mathbb{Q}\) is the set of
-	rational numbers, which are numbers you can make by dividing one integer by any integer except zero. Its symbol is Q
+	rational numbers, which are numbers you can make by dividing one integer by any integer except zero. Its symbol
+	is Q
 	because it stands for "quotient" since R is used for real numbers. pi, e, square roots, golden ratio are NOT
 	rational because their digits go on forever without repeating and they can't be written as a fraction.</p>
 <p> \(\mathbb{A}\) is the set of algebraic numbers,
@@ -200,18 +373,24 @@ https://zbmath.org/classification/
 	that when squared give a negative result.</p>
 <p>\(\mathbb{C}\) is the set of complex numbers, combination of a real and an
 	imaginary number in the form a + bi, where a and b are real and i is imaginary.</p>
-<p>A function is never one-to-many, tested by the vertical line test, but can be many-to-one. Injective is a function in
-	which many-to-one is not okay, but you can have values that are not pointed at. Injective is also called one-to-one,
+<p>A function is never one-to-many, tested by the vertical line test, but can be many-to-one. Injective is a
+	function in
+	which many-to-one is not okay, but you can have values that are not pointed at. Injective is also called
+	one-to-one,
 	and can be tested with horizontal line test.
-	Surjective is every "B" has at least one matching "A", but doesn't have to be one-to-one. Surjective is also known
-	as "onto." Bijective means both one-to-one and onto, or injective and surjective together. Bijective is also known
+	Surjective is every "B" has at least one matching "A", but doesn't have to be one-to-one. Surjective is also
+	known
+	as "onto." Bijective means both one-to-one and onto, or injective and surjective together. Bijective is also
+	known
 	as "correspondence." Bijective functions have an inverse.</p>
 <h4>Surds</h4>
-<p>When a number is a root and irrational, it is a surd. Not all roots are surd if they can be simplified to a rational
+<p>When a number is a root and irrational, it is a surd. Not all roots are surd if they can be simplified to a
+	rational
 	number. \(\sqrt{2}\) is a surd, \(\sqrt{4}=2\) is not.</p>
 <h4>Quantifiers</h4>
 <p>The "for all" prefix is the universal quantifier, symbolized \(\forall\).</p>
 <p>The "there exists" quantifier is symbolized \(\exists\).</p>
+<a class="anchor" id="logic"></a>
 <li>Arithmetic and number theory</li>
 <pre>
 	-pre-numerical stage, concept of numbers
@@ -223,6 +402,10 @@ https://zbmath.org/classification/
 	-ratio and proportion, percentages
 	-real life mathematics, practical arithmetic
 </pre>
+<a class="anchor" id="informal_geometry"></a>
+<li>Geometry</li>
+<p>3D rotations are not commutative.</p>
+<p>Before the 16th century, mathematics was divided only into arithmetic and geometry.</p>
 <li>Algebra</li>
 <li>So let's discuss algebra real quick. The word itself is about the 'reunion of broken parts'... an Arabic word.
 	It's
@@ -237,42 +420,70 @@ https://zbmath.org/classification/
 <pre>
 	-elementary algebra
 </pre>
+<a class="anchor" id="trigonometry"></a>
+<li>Trigonometry</li>
+<p>Trigonometry, or "measurement of triangles" is the branch of math that studies side lengths and angles of
+	triangles. Became more popular due to the demands of navigation and the need for maps of large areas.
+</p>
+<img src="{{ url_for('static', filename='img/math/trig.png') }}" width=400>
+<a class="anchor" id="elementary"></a>
 <h4>Binomial theorem</h4>
-<p>The binomial theorem, or binomial expansion, describes the algebraic expansion of powers of a binomial. According to
-	the theorem, it is possible to expand the polynomial \((x+y)^n\) into a sum involving terms of the form \(ax^by^c\),
-	where the exponents \(b\) and \(c\) are nonnegative integers \(b+c=n\), and the coefficient \(a\) of each term is a
-	specific positive integer depending on \(n\) and \(b\). The coefficient \(a\) is known as the binomial coefficient
-	\(n \choose b\) or \(n \choose c\) (the two have the same value). These coefficients for varying \(n\) and \(b\) can
+<p>The binomial theorem, or binomial expansion, describes the algebraic expansion of powers of a binomial. According
+	to
+	the theorem, it is possible to expand the polynomial \((x+y)^n\) into a sum involving terms of the form
+	\(ax^by^c\),
+	where the exponents \(b\) and \(c\) are nonnegative integers \(b+c=n\), and the coefficient \(a\) of each term
+	is a
+	specific positive integer depending on \(n\) and \(b\). The coefficient \(a\) is known as the binomial
+	coefficient
+	\(n \choose b\) or \(n \choose c\) (the two have the same value). These coefficients for varying \(n\) and \(b\)
+	can
 	be arranged to form Pascal's triangle.</p>
-\[(x+y)^n={n\choose 0}x^ny^0+{n\choose 1}x^{n-1}y^1+{n\choose 2}x^{n-2}y^2+\ldots+{n\choose {n-1}}x^1y^{n-1}+{n\choose
+\[(x+y)^n={n\choose 0}x^ny^0+{n\choose 1}x^{n-1}y^1+{n\choose 2}x^{n-2}y^2+\ldots+{n\choose
+{n-1}}x^1y^{n-1}+{n\choose
 n}x^0y^n+\]
 <p>In Pascal's triangle, the value of \(n \choose b\) is the \(b\)th value in the \(n\)th row.</p>
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a8beb14cd64d7451f9f9e4f965713d3e7e62cbb"
 	alt="pascals triangle">
 <h4>Factoring Cubic Polynomials</h4>
-<p>A cubic polynomial is of the form \(p(x)=a_3x^3+a_2x^2+a_1x+a_0\). The fundamental theorem of algebra guarantees that
+<p>A cubic polynomial is of the form \(p(x)=a_3x^3+a_2x^2+a_1x+a_0\). The fundamental theorem of algebra guarantees
+	that
 	if \(a_0, a_1, a_2, a_3\) are all real numbers, then we can factor the polynomial into the form
-	\(p(x)=a_3(x-b_1)(x^2+b_2 c + b_3)\). In other words, we can always factor the cubic polynomial into the product of
+	\(p(x)=a_3(x-b_1)(x^2+b_2 c + b_3)\). In other words, we can always factor the cubic polynomial into the product
+	of
 	a first degree polynomial and a second degree polynomial.</p>
 <p>The first method is factoring by grouping but only works in some cases. Consider the polynomial
-	\(p(x)=x^3-4x^2+3x-12\). Group the first two terms and the last two terms together: \(p(x)=(x^3-4x^2)+(3x-12)\) and
+	\(p(x)=x^3-4x^2+3x-12\). Group the first two terms and the last two terms together: \(p(x)=(x^3-4x^2)+(3x-12)\)
+	and
 	then pull out the common factors: \(p(x)=x^2(x-4)+3(x-4)\). Notice that we now have common factors and can now
 	factor out: \(p(x)=(x-4)(x^2+3)\).</p>
 <p>Otherwise, we can use the rational root theorem if all the coefficients are rational numbers. The rational root
-	theorem states that the possible roots of a polynomial are the factors of the last term divided by the factors of
-	the first term. Take for example the polynomial \(p(x)=x^3+5x^2-2x-24\). The possible roots are the roots are the
-	factors of 24 over the factors of 1. Therefore, the possible roots are \(\pm 1,2,3,4,6,8,12,24\). We plug each of
-	these numbers into \(p(x)\) until we find a root. This results in finding that 2 is such a root, meaning \(x-2\) is
-	a factor of our polynomial. Do long division and we can now simplify \(p(x)=(x-2)(x^2+7x+12)\). We can simplify the
+	theorem states that the possible roots of a polynomial are the factors of the last term divided by the factors
+	of
+	the first term. Take for example the polynomial \(p(x)=x^3+5x^2-2x-24\). The possible roots are the roots are
+	the
+	factors of 24 over the factors of 1. Therefore, the possible roots are \(\pm 1,2,3,4,6,8,12,24\). We plug each
+	of
+	these numbers into \(p(x)\) until we find a root. This results in finding that 2 is such a root, meaning \(x-2\)
+	is
+	a factor of our polynomial. Do long division and we can now simplify \(p(x)=(x-2)(x^2+7x+12)\). We can simplify
+	the
 	binomial further to get a final factor.</p>
-<pre>
-	-equations and inequalities
-	-groups, rings, fields
-	-ordered algebraic structures
-	-linear algebra
-</pre>
+<h4>Law of cosines</h4>
+<p>The law of cosines, or cosine formula, or al-Kashi's theorem, relates the lengths of the sides of a
+	triangle
+	to
+	the cosine of one of its angles. It states that, given a triangle with an angle between two side lengths
+	a
+	and
+	b, then \(c^2=a^2+b^2-2ab\cos{\theta}\). This is a generalization of the Pythagorean theorem, and
+	reduces to
+	the
+	Pythagorean them if the angle is a right angle.</p>
+<a class="anchor" id="linear"></a>
 <h2>Linear Algebra</h2>
-<p>Information provided from <a href="https://joshua.smcvt.edu/linearalgebra/" target="_blank">Jim Hefferson's Linear
+<p>Information provided from <a href="https://joshua.smcvt.edu/linearalgebra/" target="_blank">Jim Hefferson's
+		Linear
 		Algebra book</a> and <a
 		href="https://www.youtube.com/watch?v=kjBOesZCoqc&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&ab_channel=3Blue1Brown"
 		target="_blank">3Brown1Blue's playlist on Essence of Linear Algebra</a>.</p>
@@ -1117,23 +1328,13 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	space)
 	is \(\mathscr{R}_\infty(t)=\mathscr{R}(t^n)\). The generalized null space (or closure of the null space) is
 	\(\mathscr{N}_\infty(t)=\mathscr{N}(t^n)\).</p>
-<li>Geometry</li>
-<p>3D rotations are not commutative.</p>
-<pre>
-	-informal geometry
-	-area and volume
-	-plane and solid geometry
-	-transformation geometry
-	-plane and spherical trigonometry
-	-analytic geometry, vector algebra
-	-descriptive geometry
-</pre>
-<p>Before the 16th century, mathematics was divided only into arithmetic and geometry.</p>
+<a class="anchor" id="mapping"></a>
 <li>Analysis</li>
 <pre>
 	-mappings and functions
 	-sequences and series
 </pre>
+<a class="anchor" id="sequences"></a>
 <h3>Sequences and summations</h3>
 <h4>Sequences</h4>
 <p>A sequence is a function from a subset of the set of integers to a set \(S\). We use the notation \(a_n\) to
@@ -1146,15 +1347,19 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	members
 	\(-1,3,7,11,...\).</p>
 <h4>Geometric progression</h4>
-<p>A geometric progression is a sequence of the form \(a, ar, ar^2, ...,ar^k\) where \(a\) is the initial term and \(r\)
-	is the common ratio, both of which belong to \(\mathcal{R}\). For example, \(a_n=(\frac{1}{2})^n\) gives the members
+<p>A geometric progression is a sequence of the form \(a, ar, ar^2, ...,ar^k\) where \(a\) is the initial term and
+	\(r\)
+	is the common ratio, both of which belong to \(\mathcal{R}\). For example, \(a_n=(\frac{1}{2})^n\) gives the
+	members
 	\(1, \frac{1}{2},\frac{1}{4},\frac{1}{8},...\).</p>
 <h4>Recursively defined sequences</h4>
-<p>A sequence can be defined recursively by stating the n-th term in terms of previous elements of the sequence and the
+<p>A sequence can be defined recursively by stating the n-th term in terms of previous elements of the sequence and
+	the
 	initial elements of the sequence. An example is the Fibonacci sequence, where \(a_0=0,a_1=1\) and
 	\(a_n=a_{n-1}+a_{n-2}\).</p>
 <h4>Summations</h4>
-<p>A summation has a variable \(j\) referred to as the index of summation, a lower limit \(m\) and an upper limit \(n\).
+<p>A summation has a variable \(j\) referred to as the index of summation, a lower limit \(m\) and an upper limit
+	\(n\).
 	\[\sum_{j=m}^na_j=a_m+a_{m+1}+...+a_n\].</p>
 <p>You can factor a constant out of a sum. \[\sum ca_k=c\sum a_k\]</p>
 <p>The sum of a sum is the sum of the sums.\[\sum(a_k+b_k)=\sum a_k \sum b_k\]</p>
@@ -1167,24 +1372,30 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	difference.</p>
 <h4>Geometric series</h4>
 <p>The sum of the terms of a geometric progression is called a geometric series.
-	\[S=\sum_{j=0}^n(ar^j)=a\sum_{j=0}^nr^j=a\frac{r^{n+1}-1}{r-1}\]To prove this, multiply the series by r, and then
+	\[S=\sum_{j=0}^n(ar^j)=a\sum_{j=0}^nr^j=a\frac{r^{n+1}-1}{r-1}\]To prove this, multiply the series by r, and
+	then
 	subtract \(rS-S\).</p>
-<h4>Infininte geometric series</h4>
+<h4>Infinite geometric series</h4>
 <p>Infinite geometric series can be computed in the closed form for
 	\(x&#60;1\).
 	\[\sum_{n=0}^\infty x^n =\lim_{k\to\infty}\sum_{n=0}^k x^n
 	=\lim_{k\to\infty}\frac{x^{k+1}-1}{x-1}=-\frac{1}{x-1}=\frac{1}{1-x}\]
 </p>
 <h4>Power series</h4>
-<p>A power series is an infinite series in the form, where \(a_n\) represents the coefficient of the terms and \(c\) is
-	a constant: \[\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+...\]They are present in mathematical analysis,
-	where they arise as Taylor series of infinitely differentiable functions, combinatorics as generating functions, and
+<p>A power series is an infinite series in the form, where \(a_n\) represents the coefficient of the terms and \(c\)
+	is
+	a constant: \[\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+...\]They are present in mathematical
+	analysis,
+	where they arise as Taylor series of infinitely differentiable functions, combinatorics as generating functions,
+	and
 	in electronic engineering under the name of Z-transform.</p>
 <h4>Taylor series</h4>
-<p>The Taylor series of a function is an infinite sum of terms that are expressed in terms of the function's derivatives
+<p>The Taylor series of a function is an infinite sum of terms that are expressed in terms of the function's
+	derivatives
 	at a single point. For most common functions, the function and the sum of its Taylor series are equal near this
 	point.</p>
-<p>\[\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\]where \(f^{(n)}(a)\) denotes the nth derivative of f evaluated at
+<p>\[\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\]where \(f^{(n)}(a)\) denotes the nth derivative of f evaluated
+	at
 	the point a. When \(a=0\), the series is also called a Maclaurin series.</p>
 <pre>
 	-differential calculus - differential and integral calculus is important for understanding the derivation of the Nernst equation, which describes the membrane potential, need derivatives for everything (calculating inductors)
@@ -1193,6 +1404,7 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	-functional equations
 	-complex analysis
 </pre>
+<a class="anchor" id="differential"></a>
 <h2>Calculus</h2>
 <h4>Limits</h4>
 <p>Sometimes we can't work something out directly, but we can see what it should be as we get closer and closer. For
@@ -1298,6 +1510,13 @@ $$y'=-1/x^2$$
 	given
 	by
 	\(dy=df=f'(x)dx\).</p>
+<h4>Differential equations</h4>
+<p>A differential equation is an equation with a function and one or more of its derivatives. Ordinary Differential
+	Equations (ODEs) have a single independent variable, whereas partial differential equations (PDEs) have two or
+	more
+	indepedent variables. The Order is the highest derivative. The degree is the exponent of the highest derivative.
+	When the variable has no exponent or other function put on it, it is linear.</p>
+<a class="anchor" id="integral"></a>
 <h4>Indefinite Integrals</h4>
 <p>Now that we've gone through derivatives, let's now do it backwards. The question is... what function did
 	we
@@ -1468,34 +1687,13 @@ $$-2x\frac{x^8+1}{x^4+1}$$
 	units
 	into
 	seconds first. And that's kind of what we've done. (Unfinished, will need to think about more.)</p>
-<h2>Differential equations</h2>
-<h4>Differential equations</h4>
-<p>A differential equation is an equation with a function and one or more of its derivatives. Ordinary Differential
-	Equations (ODEs) have a single independent variable, whereas partial differential equations (PDEs) have two or
-	more
-	indepedent variables. The Order is the highest derivative. The degree is the exponent of the highest derivative.
-	When the variable has no exponent or other function put on it, it is linear.</p>
+<a class="anchor" id="combinatorics"></a>
 <li>Combinatorics</li>
 <li>Graph theory</li>
 <li>Descriptive statistics</li>
 <li>Probability theory</li>
 <li>Distributions and stochastic processes</li>
-<li>Trigonometry</li>
-<p>Trigonometry, or "measurement of triangles" is the branch of math that studies side lengths and angles of
-	triangles. Became more popular due to the demands of navigation and the need for maps of large areas.
-</p>
-<img src="{{ url_for('static', filename='img/math/trig.png') }}" width=400>
-<h4>Law of cosines</h4>
-<p>The law of cosines, or cosine formula, or al-Kashi's theorem, relates the lengths of the sides of a
-	triangle
-	to
-	the cosine of one of its angles. It states that, given a triangle with an angle between two side lengths
-	a
-	and
-	b, then \(c^2=a^2+b^2-2ab\cos{\theta}\). This is a generalization of the Pythagorean theorem, and
-	reduces to
-	the
-	Pythagorean them if the angle is a right angle.</p>
+
 <li>Calculus</li>
 <li>Infinitesimal calculus was added as a subfield of math around the 17th century.</li>
 <li>Probability</li>
@@ -1695,6 +1893,7 @@ J}A_j\right\vert\]
 	difficult.
 	But
 	also makes it super interesting!</p>
+<a class="anchor" id="probability"></a>
 <h4>Probability and odds</h4>
 <p>The probability is the number of ways to reach a certain outcome \(O\) out of all possibilities. The probability
 	is
@@ -1834,58 +2033,77 @@ J}A_j\right\vert\]
 <img src="{{ url_for('static', filename='img/math/binom10_2.png') }}">
 <p>For a binomial distribution, the mean and variance can be found: \[\mu=np\]\[\sigma^2=np(1-p)=npq\]</p>
 <h4>Probability generating functions</h4>
-<p>Suppose our probability distribution has positive integer values \(x_k=k,k=0,1,2,3,...\). Our probability generating
-	function is as follows:\[g(t)\equiv p_0+p_1t+p_2t^2+\ldots\]Note here that \(g(1)=1\), since that's just the sum of
+<p>Suppose our probability distribution has positive integer values \(x_k=k,k=0,1,2,3,...\). Our probability
+	generating
+	function is as follows:\[g(t)\equiv p_0+p_1t+p_2t^2+\ldots\]Note here that \(g(1)=1\), since that's just the sum
+	of
 	all the probabilities which must add up to 1. We can find the mean and variance with the
 	following:\[\mu=g'(1)\]\[\sigma^2=g''(1)+g'(1)-g'(1)^2\]</p>
 <p>For the proof of the mean, notice:\[g'(1)=p_1+2p_2+3p_3+\ldots=\sum_{k=0}^\infty x_kp_k=\mu\]</p>
 <p>For the proof of the variance, you'll need to understand the product rule for derivatives, and
-	notice (some steps are left out):\[g'(1)+g''(1)-g'(1)^2=(tg')'(1)-\mu^2=\sum_{k=0}^\infty k^2p_k-\mu^2=\sigma^2\]
+	notice (some steps are left out):\[g'(1)+g''(1)-g'(1)^2=(tg')'(1)-\mu^2=\sum_{k=0}^\infty
+	k^2p_k-\mu^2=\sigma^2\]
 </p>
-<p>This probability generating function now allows us to calculate the mean and variance for any binomial distribution
+<p>This probability generating function now allows us to calculate the mean and variance for any binomial
+	distribution
 	\(B(n,p)\). Recall that the probability for any positive integer \(p_k={n\choose k}p^kq^{n-k}\). This gives the
 	generating function: \[{n \choose 0}q^n+{n\choose 1}pq^{n-1}t+{n\choose 2}p^2q^{n-2}t^2+\ldots+{n\choose
 	n}p^nt^n\]\[=(pt+q)^n\]Note the use of binomial theorem here.</p>
 <p>Now we can find the mean after application of chain rule (the vertical bar means evaluated
 	at):\[\mu=g'(1)=\left. n(pt+q)^{n-1}p\right|_{t=1}=np\]</p>
 \[\sigma^2=np(1-p)\]
-<p>An example of the use of the binomial distribution is, say you usually win 60% of your tennis matches. You hire a new
-	coach and you win 12 out of 15 of your next matches. Is the coach helping or not? The probability of winning 12 or
-	more matches out of 15 if your usual probability is 60% is the probability of you winning 12 + probability of you
-	winning 13, and so on. \[p_{12}+p_{13}+p_{14}+p_{15}=\sum_{k=12}^15{15\choose k}(0.6)^k(0.4)^{15-k}\approx 0.091\]
+<p>An example of the use of the binomial distribution is, say you usually win 60% of your tennis matches. You hire a
+	new
+	coach and you win 12 out of 15 of your next matches. Is the coach helping or not? The probability of winning 12
+	or
+	more matches out of 15 if your usual probability is 60% is the probability of you winning 12 + probability of
+	you
+	winning 13, and so on. \[p_{12}+p_{13}+p_{14}+p_{15}=\sum_{k=12}^15{15\choose k}(0.6)^k(0.4)^{15-k}\approx
+	0.091\]
 </p>
 <h4>Geometric distributions</h4>
-<p>Now suppose we toss a p-biased coin continually until we get a head. We define our random variable \(X(s)=k\) if the
-	first head appears in the \(k\)th position. So an element in the sample space might be \(s=\text{TTTHHTH}\ldots\)
-	and so \(X(s)=4\). The probability \(p_k=q^{k-1}p\) because everything before k must be tails (which means it has a
+<p>Now suppose we toss a p-biased coin continually until we get a head. We define our random variable \(X(s)=k\) if
+	the
+	first head appears in the \(k\)th position. So an element in the sample space might be
+	\(s=\text{TTTHHTH}\ldots\)
+	and so \(X(s)=4\). The probability \(p_k=q^{k-1}p\) because everything before k must be tails (which means it
+	has a
 	probabilty of q). This gives a generating function (note the use of infinite geometric
 	series):\[g(t)=pt+pqt^2+pq^2t^3+pq^3t^4+\ldots=pt(1+qt+q^2t^2+\ldots)=\frac{pt}{1-qt}\]</p>
 <p>This gives:\[\mu=\frac{1}{p}\]\[\sigma^2=\frac{q}{p^2}\]</p>
-<p>This is a pretty normal thing to think about if you play video games for loot drops. If the chance to get a drop is,
+<p>This is a pretty normal thing to think about if you play video games for loot drops. If the chance to get a drop
+	is,
 	say, one out of
 	500, then on average, you need to kill the monster 500 times to get the drop.</p>
 <h4>Continuous probability distributions</h4>
-<p>The previous distributions dealt with random variables that take on discrete values (eg. number of heads or tails or
-	number of flips). But many random variables do not take on an integer, and so for these continuous distributions, we
+<p>The previous distributions dealt with random variables that take on discrete values (eg. number of heads or tails
+	or
+	number of flips). But many random variables do not take on an integer, and so for these continuous
+	distributions, we
 	will need to switch over from sums to integrals. We define the probability of the random variable to take on any
-	continuous value to be determined by the probability density function or probability distribution function \(p(x)\),
+	continuous value to be determined by the probability density function or probability distribution function
+	\(p(x)\),
 	and the integration of all of these
-	values is \(\int_{-\infty}^\infty p(x)dx=1\) and the probability for the random variable to take on any value in an
+	values is \(\int_{-\infty}^\infty p(x)dx=1\) and the probability for the random variable to take on any value in
+	an
 	interval a to b to be \(p(x\in[a,b])=\int_a^bp(x)dx\).</p>
-<p>Therefore, the expected value or mean of a continuous distribution is a integral instead of summation of each random
+<p>Therefore, the expected value or mean of a continuous distribution is a integral instead of summation of each
+	random
 	variable and its probability:\[E(X)=\mu=\int_{-\infty}^\infty xp(x)dx\]This is also how you would calculate the
 	center of mass of a rod, where the rod balances, with density instead of probability.</p>
 \[\text{Var}(X)=\sigma^2=\int_{-\infty}^\infty (x-\mu)^2p(x)dx\]
 <h4>Uniform distribution</h4>
 <p>A uniform distribution has that the probability of the random variable taking on a value is constant between two
 	values. The value must be \(\frac{1}{b-a}\) because the total area under the curve must be equal to 1. Thus, the
-	probability of the random variable taking on a value between \(c\) and \(d\) if \(p(x\in[c,d])=a&#60;c&#60;d&#60;b\)
+	probability of the random variable taking on a value between \(c\) and \(d\) if
+	\(p(x\in[c,d])=a&#60;c&#60;d&#60;b\)
 	is
 	\(\frac{d-c}{b-a}\).</p>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Uniform_Distribution_PDF_SVG.svg/1200px-Uniform_Distribution_PDF_SVG.svg.png"
 	width="30%">
 <h4>Transformation formulas</h4>
-<p>We can transform a random variable \(X\) into say \(Y=aX+b\). In this case, note that the variance doesn't change if
+<p>We can transform a random variable \(X\) into say \(Y=aX+b\). In this case, note that the variance doesn't change
+	if
 	we add a constant.
 	\[E(X+b)=E(X)+b\]\[E(aX)=aE(X)\]\[\text{Var}(X+b)=\text{Var}(X)\]\[\text{Var}(aX)=a^2\text{Var}(X)\]
 	\[\text{SD}(X+b)=\text{SD}(X)\]\[\text{SD}(aX)=a\text{SD}(X)\]</p>
@@ -1906,14 +2124,17 @@ J}A_j\right\vert\]
 	probability density function (shifting by the mean and dilating by a factor of
 	\(sigma\):\[p(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\mu)^2/(2\sigma^2)}\]</p>
 <p>Note that this probability density function does not use \(\phi\) or \(z\). So if we take the random variable
-	representing \(N(\mu,\sigma^2)\) and translate it such that the new random variable \(z=\frac{x-\mu}{\sigma}\), then
+	representing \(N(\mu,\sigma^2)\) and translate it such that the new random variable \(z=\frac{x-\mu}{\sigma}\),
+	then
 	this is now the standard normal \(N(0,1\).</p>
 <h4>Cumulative distribution function</h4>
-<p>If \(p(x)\) is any probability distribution (discrete or continuous), then the cumulative distribution function is
+<p>If \(p(x)\) is any probability distribution (discrete or continuous), then the cumulative distribution function
+	is
 	the integral from negative infinity to x:\[F(x)\equiv \int_{-\infty}^xp(t)dt\]</p>
 <p>The standard normal distribution has a cumulative distribution function which has been tabulated.</p>
 <h4>Central limit theorem</h4>
-<p>If we sample any distribution \(n\) times and take an average, then as \(n\to \infty\) the sampling distribution of
+<p>If we sample any distribution \(n\) times and take an average, then as \(n\to \infty\) the sampling distribution
+	of
 	averages approaches a
 	normal distribution.</p>
 <li>Combinatorics: the area of mathematics concerned with counting. Involves enumeration (counting). Can be
