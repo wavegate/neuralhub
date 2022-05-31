@@ -1,0 +1,978 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<style>
+    p,
+    button {
+        font-size: 100%;
+    }
+
+    #integer1_remove {
+        display: none;
+    }
+
+    iframe {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        position: fixed;
+        margin-left: -375px;
+        border-left: 8px solid #c8dce3;
+        background-color: #fff;
+        overflow-y: scroll;
+    }
+
+    .sidebar {
+        width: 350px;
+        height: 85vh;
+    }
+
+    .core {
+        padding: 7px;
+        width: 100%;
+        background-color: beige;
+        font-size: larger;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .core:first-child {
+        margin-top: 0px;
+    }
+
+    .topic {
+        padding-left: 15px;
+    }
+
+    .topic a {
+        color: #333333;
+    }
+
+    .topic a:hover {
+        text-decoration: underline;
+    }
+
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -150px;
+        visibility: hidden;
+    }
+
+    .sidebar::-webkit-scrollbar {
+        width: 8px;
+        /* width of the entire scrollbar */
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        background: beige;
+        /* color of the tracking area */
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background-color: #c8dce3;
+        /* color of the scroll thumb */
+        /* roundness of the scroll thumb */
+        border: 3px solid #c8dce3;
+        /* creates padding around scroll thumb */
+    }
+</style>
+
+<div class="sidebar">
+    <div class="core">Electromagnetism</div>
+    <div class="topic"><a href="#sets">Electricity</a></div>
+    <div class="topic"><a href="#sets">Magnetism</a></div>
+    <div class="topic"><a href="#sets">Electromagnetic spectrum</a></div>
+    <div class="topic"><a href="#sets">Electrostatics</a></div>
+    <div class="topic"><a href="#sets">Magnetostatics</a></div>
+    <div class="topic"><a href="#sets">Electrodynamics</a></div>
+    <div class="topic"><a href="#sets">Electrical circuits</a></div>
+    <div class="core">Physical laws</div>
+    <div class="topic"><a href="#sets">Ampere's law</a></div>
+    <div class="topic"><a href="#sets">Coulomb's law</a></div>
+    <div class="topic"><a href="#sets">Faraday's law</a></div>
+    <div class="topic"><a href="#sets">Gauss's law</a></div>
+    <div class="topic"><a href="#sets">Kirchoff's circuit laws</a></div>
+    <div class="topic"><a href="#sets">Maxwell's equations</a></div>
+    <div class="topic"><a href="#sets">Ohm's law</a></div>
+    <div class="core">Control engineering</div>
+    <div class="topic"><a href="#sets">Control theory</a></div>
+    <div class="topic"><a href="#sets">System properties</a></div>
+    <div class="topic"><a href="#sets">System modeling and analysis</a></div>
+    <div class="topic"><a href="#sets">Controllers</a></div>
+    <div class="topic"><a href="#sets">Control applications</a></div>
+    <div class="core">Electronics</div>
+    <div class="topic"><a href="#sets">Circuit laws</a></div>
+    <div class="topic"><a href="#sets">Electrical elements/discretes</a></div>
+    <div class="topic"><a href="#sets">Electronic design automation</a></div>
+    <div class="core">Signal processing</div>
+    <div class="topic"><a href="#sets">Analog signal processing</a></div>
+    <div class="topic"><a href="#sets">Quantization</a></div>
+    <div class="topic"><a href="#sets">Sampling</a></div>
+    <div class="topic"><a href="#sets">Audio signal processing</a></div>
+    <div class="topic"><a href="#sets">Digital image processing</a></div>
+    <div class="topic"><a href="#sets">Data compression</a></div>
+    <div class="topic"><a href="#sets">Filtering</a></div>
+    <div class="topic"><a href="#sets">Transforms</a></div>
+    <div class="core">Telecommunication</div>
+    <div class="topic"><a href="#sets">Telephone</a></div>
+    <div class="topic"><a href="#sets">Wireless network</a></div>
+    <div class="topic"><a href="#sets">Optical fiber</a></div>
+    <div class="topic"><a href="#sets">Information theory</a></div>
+    <div class="topic"><a href="#sets">Satellite</a></div>
+    <div class="core">Information technology</div>
+    <div class="topic"><a href="#sets">MOSFET</a></div>
+    <div class="topic"><a href="#sets">Integrated circuit</a></div>
+    <div class="topic"><a href="#sets">Computer memory</a></div>
+    <div class="topic"><a href="#sets">Microprocessor</a></div>
+</div>
+https://en.wikipedia.org/wiki/Outline_of_electrical_engineering
+
+<pre>
+Electromagnetism
+Electromagnetism
+
+Electricity
+Magnetism
+Electromagnetic spectrum
+Optical spectrum
+Electrostatics
+Electric charge
+Coulomb's law
+Electric field
+Gauss's law
+Electric potential
+Magnetostatics
+Electric current
+Ampère's law
+Magnetic field
+Magnetic moment
+Electrodynamics
+Lorentz force law
+Electromotive force
+Electromagnetic induction
+Faraday-Lenz law
+Displacement current
+Maxwell's equations
+Electromagnetic field
+Electromagnetic radiation
+Electrical circuits
+Antenna
+Electrical resistance
+Capacitance
+Inductance
+Impedance
+Resonant cavity
+Transmission line
+Waveguide
+Physical laws
+Physical laws
+
+Ampère's law
+Coulomb's law
+Faraday's law of induction/Faraday-Lenz law
+Gauss's law
+Kirchhoff's circuit laws
+Current law
+Voltage law
+Maxwell's equations
+Gauss's law
+Faraday's law of induction
+Ampère's law
+Ohm's law
+Control engineering
+Control engineering
+
+Control theory
+Adaptive control
+Control theory
+Digital control
+Nonlinear control
+Optimal control
+Intelligent control
+Neural networks
+Fuzzy control
+Model predictive control
+System properties:
+Exponential stability
+Marginal stability
+BIBO stability
+Lyapunov stability (i.e., asymptotic stability)
+Input-to-state (ISS) stability
+Controllability
+Observability
+Negative feedback
+Positive feedback
+System modeling and analysis:
+System identification
+State observer
+First principles modeling
+Least squares
+Kalman filter
+Root locus
+Extended Kalman filter
+Signal-flow graph
+State space representation
+Artificial neural networks
+Controllers:
+Closed-loop controller
+PID controller
+Programmable logic controller
+Embedded controller
+Field oriented controller
+Direct torque controller
+Digital signal controller
+Pulse-width modulation controller
+Control applications:
+Industrial Control Systems
+Process Control
+Distributed Control System
+Mechatronics
+Motion control
+Supervisory control (SCADA)
+Electronics
+Electronics
+
+Electrical network/Circuit
+Circuit laws
+Kirchhoff's circuit laws
+Current law
+Voltage law
+Y-delta transform
+Ohm's law
+Electrical element/Discretes
+Passive elements:
+Capacitor
+Inductor
+Resistor
+Hall effect sensor
+Active elements:
+Microcontroller
+Operational amplifier
+Semiconductors:
+Diode
+Zener diode
+Light-emitting diode
+PIN diode
+Schottky diode
+Avalanche diode
+Laser diode
+DIAC
+Thyristor
+Transistor
+Bipolar transistor (BJT)
+Field effect transistor (FET)
+Darlington transistor
+IGBT
+TRIAC
+Mosfet
+Electronic design automation
+Power engineering
+Power engineering
+
+Generation
+Electrical generator
+Renewable electricity
+Hydropower
+Transmission
+Electricity pylon
+Transformer
+Transmission line
+Distribution
+Processes:
+Alternating current
+Direct current
+Single-phase electric power
+Two-phase electric power
+Three-phase power
+Power electronics / Electro-mechanical
+Inverter
+Static VAR compensator
+Variable-frequency drive
+Ward Leonard control
+Electric vehicles
+Electric vehicles
+
+Electric motor
+Hybrid electric vehicle
+Plug-in hybrid
+Rechargeable battery
+Vehicle-to-grid
+Smart Grid
+Signal processing
+Signal processing
+
+Analog signal processing
+Digital signal processing
+Quantization
+Sampling
+Analog-to-digital converter, Digital-to-analog converter
+Continuous signal, Discrete signal
+Downsampling
+Nyquist frequency
+Nyquist–Shannon sampling theorem
+Oversampling
+Sample and hold
+Sampling frequency
+Undersampling
+Upsampling
+Audio signal processing
+Audio noise reduction
+Speech processing
+Equalization (audio)
+Digital image processing
+Geometric transformation
+Color correction
+Computer vision
+Image noise reduction
+Edge detection
+Image editing
+Segmentation
+Data compression
+Lossless data compression
+Lossy data compression
+Filtering
+Analog filter
+Audio filter
+Digital filter
+Finite impulse response
+Infinite impulse response
+Electronic filter
+Analogue filter
+Filter (signal processing)
+Band-pass filter
+Band-stop filter
+Butterworth filter
+Chebyshev filter
+High-pass filter
+Kalman filter
+Low-pass filter
+Notch filter
+Sallen Key filter
+Wiener filter
+Transforms
+Advanced Z-transform
+Bilinear transform
+Continuous Fourier transform
+Discrete cosine transform
+Discrete Fourier transform, Fast Fourier transform (FFT)
+Discrete sine transform
+Fourier transform
+Hilbert transform
+Laplace transform, Two-sided Laplace transform
+Z-transform
+Instrumentation
+Actuator
+Electric motor
+Oscilloscope
+Telecommunication
+Telecommunication
+
+Telephone
+Pulse-code modulation (PCM)
+Main distribution frame (MDF)
+Carrier system
+Mobile phone
+Wireless network
+Optical fiber
+Modulation
+Carrier wave
+Communication channel
+Information theory
+Error correction and detection
+Digital television
+Digital audio broadcasting
+Satellite radio
+Satellite
+
+</pre>
+
+<style>
+    img {
+        width: 50%;
+    }
+
+    .size {
+        font-size: 150%;
+    }
+</style>
+<div class="size">
+    <h2>Electronics</h2>
+    <h3>Engineering Circuit Analysis</h3>
+    <h4>Ohm's Law</h4>
+    $$V=iR$$
+    <h4>Resistors in Series and Parallel</h4>
+    <p>Resistors in series can be summed to form their total resistance.</p>
+    <p>Resistors in parallel follow the following equation:</p>
+    $$\frac{1}{R_\text{total}}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}...$$
+    <p>If you only have two resistors in parallel, you can cheat and use the heuristic "product over sum":</p>
+    $$R_\text{total}=\frac{R_1*R_2}{R_1+R_2}$$
+    <h4>Kirchhoff's Current Law</h4>
+    <p>Kirchhoff's current law states that the current going into a node is equal to the current going out of a node.
+    </p>
+    <h4>Kirchhoff's Voltage Law</h4>
+    <p>Kirchhoff's voltage law states that the voltage drops around any loop in a circuit is equal to 0.</p>
+    <h4>Voltage Divider</h4>
+    <p>A voltage divider is simply splitting up a voltage source across more than one resistor.</p>
+    <img src="{{url_for('static',filename='img/electronics/voltage_divider.svg')}}" style="width: 30%">
+    <p>We know that the total resistance across two resistors is the sum. So we can find the current going through both
+        resistors.</p>
+    $$i=\frac{V_1}{R_1+R_2}$$
+    <p>Which means the voltage drop across any single resistor (say across resistor 1) is:</p>
+    $$V=\frac{V_1}{R_1+R_2}*R_1=V_1(\frac{R_1}{R_1+R_2})$$
+    <p>Basically, the voltage drop across any resistor in series is proportional to the size of that resistor. You can
+        imagine that this can allow you to divide any single voltage sorce into separate voltage drops using differently
+        sized resistors.</p>
+    <h4>Current Divider</h4>
+    <p>If you have current splitting into two paths, the current going through path 1 is equal to the input current
+        times
+        the proportion of the resistance of path 2 to the resistance of the 2 paths combined. It's just like the voltage
+        divider except you use the resistance of the other path (the higher the resistance of the other path, the higher
+        your current through your path).</p>
+    $$i_1=i_\text{tot}(\frac{R_2}{R_1+R_2})$$
+    <h4>Node Voltage Method</h4>
+    <p>For node voltage, you choose a reference node, and then look at any essential nodes. An essential node is a node
+        with three or more components. You then do KCL on each essential node.</p>
+    <h4>Mesh Current Method</h4>
+    <img src="{{url_for('static',filename='img/electronics/1.png')}}">
+    <p>So the mesh current solution method is basically Kirchhoff's Voltage Law but for each "mesh" or cookie in the
+        circuit. You can imagine the circuit as a cookie cutter. In the example above, if you use this design as a
+        cookie
+        cutter, you will cut up a cookie in 3 square chunks, each of which we define as a mesh. Now we define a current
+        running clockwise around each mesh, and add up the voltage drops in that current, then set the sum of those
+        voltage
+        drops to 0 due to Kirchhoff's voltage law.</p>
+    $$0=V_1+i_a*R_1+(i_a-i_b)*R_2 = -40+i_a*2+(i_a-i_b)*8$$
+    $$40=2i_a+8i_a-8i_b=10i_a-8i_b$$
+    <p>Notice that the voltage drop across R2 uses the summation of \(i_a\) and \(i_b\), but \(i_b\) is running in the
+        opposite direction so it is negative. Also note that our sign convention for positive voltage drop is from
+        positive
+        to negative, so the negative to positive voltage source V1 is negative.</p>
+    $$0=(i_b-i_a)*R_2+i_b*R_3+(i_b-i_c)*R_5$$
+    $$0=8i_b-8i_a+6i_b+6i_b-6i_c=-8i_a+20i_b-6i_c$$
+    $$0=(i_c-i_b)*R_5+i_c*R_4+20$$
+    $$-20=6i_c-6i_b+4i_c=-6i_b+10i_c$$
+    <p>So, in summary, the mesh equations are:</p>
+    $$\text{Mesh a: }40=10i_a-8i_b$$
+    $$\text{Mesh b: }0=-8i_a+20i_b-6i_c$$
+    $$\text{Mesh c: }-20=-6i_b+10i_c$$
+    <p>Which means, to solve this, just need to do some matrix algebra:</p>
+    $$\begin{bmatrix}10 & -8 & 0 & | & 40 \\ -8 & 20 & -6 & | & 0 \\ 0 & -6 & 10 & | & -20\end{bmatrix}$$
+    <p>This will give us \(i_a=5.6\), \(i_b=2\), and \(i_c=-0.8\). Once you have these currents, you can solve for
+        everything else.</p>
+    <h4>Source Transformations</h4>
+    <p>The first source transformation (basically equivalent circuit pieces) is the ability to convert a voltage source
+        and its resistance in series to a current source and its resistance in parallel. These are essentially the same
+        thing. This means that no matter what load you place at the ends, you'll get the same current running through
+        the
+        load and the same voltage drop across the load. You can confirm this by testing a short circuit (just a wire)
+        and an
+        open circuit (no load).</p>
+    <img src="{{url_for('static',filename='img/electronics/3.png')}}">
+    <p>In this case, the value of the new current source can be calculated with Ohm's law: i = V/R.</p>
+    <p>Also note that if there is a voltage source in parallel with a resistor, you can ignore that resistor. The
+        voltage
+        source will always produce enough current to pass through the load, and the voltage drop across the load will be
+        the
+        same. In the same way, if you have a current source in series with a resistor, you can ignore that resistor. The
+        current source will always produce enough current to negate that resistor.</p>
+    <p>So, applying this along with simplifying resistors in series and parallel, we can simplify a long circuit into a
+        shorter one.</p>
+    <img src="{{url_for('static',filename='img/electronics/5.svg')}}" width=80%>
+    <p>So let's simplify the circuit above. The question asks for V1, so let's not combine that resistor just yet. We
+        can
+        transform the two left voltage sources into current sources.</p>
+    <img src="{{url_for('static',filename='img/electronics/6.svg')}}" width=80%>
+    <p>Then, we can combine the resistors in parallel, and combine the current sources in parallel. Then transform back
+        into a voltage source.</p>
+    <img src="{{url_for('static',filename='img/electronics/7.svg')}}" width=80%>
+    <p>Now you can just find the voltage of V1 via a voltage divider. Answer found!</p>
+    <h4>Thevenin Equivalent Circuits</h4>
+    <p>A Thevenin equivalent circuit is basically doing a "source" transformation for an entire circuit, converting
+        power
+        sources, resistors, inductors, and capacitors into one "black box" element. The only factors that can be taken
+        out
+        of this equivalent circut are the Thevenin equivalent Voltage (VTH) and the Thevenin equivalent resistance
+        (RTH).
+        These values are found using the Kirchhoff laws, mesh current, or node voltage methods to solving circuits.</p>
+    <img src="{{url_for('static',filename='img/electronics/thevenin.svg')}}" width=60%>
+    <p>The Thevenin equivalent voltage is the open circuit voltage across a and b, meaning the voltage drop between the
+        two terminals when there is no circuit in between them. The Thevenin equivalent resistance can be calculated
+        from
+        the current running through a short circuit, or just a wire, between a and b.</p>
+    <img src="{{url_for('static',filename='img/electronics/thevenin_2.svg')}}">
+    <p>So let's find the Thevenin equivalents for the circuit above. The first thing we can do is find the Thevenin
+        equivalent voltage VTH. We can find this by using mesh currents while the circuit between a and b is open, aka
+        what
+        is the voltage drop across a and b.</p>
+    <img src="{{url_for('static',filename='img/electronics/thevenin_3.svg')}}">
+    <p>Remember that with the mesh current method, we are solving for the currents running through each mesh. Since the
+        only source of current in i1 is a current source, we already know the current!</p>
+    $$\text{Mesh 1}: i_1=3$$
+    $$\text{Mesh 2}: 0=150*(i_2-i_1)+10*i_2+40*(i_2-i_3)$$
+    $$0=150i_2-150i_1+10i_2+40i_2-40i_3$$
+    $$-150i_1+200i_2-40i_3=0$$
+    $$\text{Mesh 3}: 0=-300+40*(i_3-i_2)+8*i_3$$
+    $$0=-300+40i_3-40i_2+8i_3$$
+    $$-40i_2+48i_3=300$$
+    $$
+    \left[\begin{array}{rrr|r}
+    1 & 0 & 0 & 3 \\
+    -150 & 200 & -40 & 0 \\
+    0 & -40 & 48 & 300
+    \end{array}\right]
+    $$
+    <p>Solving this system of equations gives us \(i_1=3\), \(i_2=4.2\), \(i_3=9.75\).</p>
+    <p>Now, we know that the voltage drop from a to b is the same as the voltage drop across the 10 ohm and 8 ohm
+        resistors.</p>
+    $$V_{\text{TH}}=10*i_2+8*i_3=10*4.2+8*9.75=120$$
+    <p>To find the Thevenin equivalent resistance, we can do this two ways. One, we can find the current going through a
+        wire between a and b. To do that, we could create a new mesh bordering a and b and use the mesh current method.
+    </p>
+    <p>Another way is to remove all power sources from the circuit by turning voltage sources into short circuits and
+        all
+        current sources into open circuits, and then finding the equivalent resistance through the circuit.</p>
+    <img src="{{url_for('static',filename='img/electronics/thevenin_4.svg')}}">
+    <p>Although they are drawn perpendicular, the 40 ohm resistor and the 8 ohm resistor are actually in parallel (you
+        can
+        imagine rotating the 8 ohm resistor sideways), so their equivalent resistance becomes 320/48 = 6.66. Then you
+        just
+        have 6.66 in series with 10 ohm resistor, which totals 16.66, which is in parallel with 150 ohm resistor, giving
+        the
+        equivalent resistance between a and b to be 15 ohms. So in the end, our solution is given:</p>
+    <img src="{{url_for('static',filename='img/electronics/thevenin_5.svg')}}" style="width: 80%">
+    <p>Now, what if your circuit has dependent voltage/current sources? In this case, you can't just collapse all the
+        resistors together to find the equivalent resistance. In this case, you attach a test source to a->b, much like
+        as
+        if you were testing the resistance using an ohmmeter (which runs a current through the circuit and calculates
+        the
+        resistance using Ohm's law).</p>
+    <h4>Norton Equivalent Circuits</h4>
+    <p>Norton equivalent circuit is just a Thevenin equivalent circuit that has undergone a source transformation to a
+        current source + parallel resistor. Let's find the Norton equivalent circuit for the circuit shown below:</p>
+    <img src="{{url_for('static',filename='img/electronics/norton_1.svg')}}">
+    <p>You'll notice that there is a wire connecting two circuits. This is a grounding wire. There is no actual current
+        running through that wire. However, it makes sure that the "bottom" voltage of each circuit remains the same so
+        that
+        there is no huge potential difference between one circuit to the other. You can think of the analogy of a bunch
+        of
+        separate lakes. Each circuit is a lake of water floating in the sky. We don't want one lake to start
+        accidentally
+        floating down into another lake, so we make all the lakes stay at the same sea level. This prevents things like
+        arcing (water flowing from one lake to another).</p>
+    <p>Anyways, let's write the mesh current equations. Note that in the second equation, we know that i2 is simply
+        -20i.
+    </p>
+    $$\text{Mesh 1: }0=-5+2000*i+3v$$
+    $$\text{Mesh 2: }i_2=-20i$$
+    <p>Finally, we notice that \(v=-20i*25=-500i\). So we can go back to Mesh 1.</p>
+    $$0=-5+2000i-1500i=-5+500i$$
+    $$i=0.01$$
+    <p>So now we know that our voltage v is \(v=-20*0.01*25=-5\). You will notice that is the voltage drop between a and
+        b
+        in an open circuit, which means v is also the Thevenin equivalent voltage. So \(V_\text{TH}=-5\).</p>
+    <p>So now we have to find the Thevenin equivalent resistance. Because of the dependent sources, we can't use the
+        "remove all the sources and find the equivalent resistance" method. So we need to short circuit between a and b
+        and
+        find the current running through, and use that and Ohm's law to find the resistance.</p>
+    <img src="{{url_for('static',filename='img/electronics/norton_2.svg')}}">
+    <p>What you will find is that we can remove a couple of parts of our circuit once we do this. Now that we have short
+        circuited a and b, there is no longer a current running through the 25 ohm resistor. So we can actually just
+        remove
+        that part of the circuit completely. Then, because there is no more voltage drop across that resistor (it's a
+        short
+        circuit!), our value of v is 0, and so the 3v voltage source also becomes 0, so we can simply remove that source
+        and
+        replace it with a wire.</p>
+    <img src="{{url_for('static',filename='img/electronics/norton_3.svg')}}">
+    <p>So our circuit now looks like the above. Notice that i is no longer the same as before because we added a short
+        circuit to the system. But it should be pretty easy to see that \(i=5/2000=0.0025\), which means that the
+        current
+        running through a and b is \(-20*0.0025=-0.05\). Now that we have the current, we use Ohm's law, and get our
+        resistance to be \(-5/-0.05=100\). So we conclude that our \(V_\text{TH}=-5\) and \(R_\text{TH}=-100\). Which
+        means
+        our Norton equivalents are \(i_\text{N}=-0.05\) and \(R_\text{N}=-100\) (in the drawing I can switch these to
+        positive by flipping the current source upside down to travel from b to a).</p>
+    <img src="{{url_for('static',filename='img/electronics/norton_4.svg')}}" style="width: 100%">
+    <h4>Maximum Power Transfer</h4>
+    <p>So if you have any circuit, and you want to add a load to that circuit, what resistance should your load be to
+        give
+        you the maximum power delivered from your circuit? For example, say you want to add a light bulb to your
+        circuit.
+        Should you make your light bulb high or low resistance? What people have found is that the maximum power is
+        delivered to a load when the resistance of the load is equal to the Thevenin resistance of the circuit. If you
+        think
+        about it, if your load has 0 resistance, then there is 0 power delivered because \(P=iv=i^2R=0\). On the other
+        hand,
+        if your load has infinite resistance, then power again is 0 because then your current is 0. So the maximum power
+        is
+        somewhere in the middle, and it just happens to be when load is equal to the Thevenin equivalent resistance of
+        the
+        circuit. </p>
+    <p>So what's the maximum power delivered in terms of our Thevenin equivalent voltage? That's pretty easy to figure
+        out, since our entire circuit is just our Thevenin equivalent voltage, our Thevenin equivalent resistor, and our
+        load resistor which is equal to the Thevenin equivalent resistor. So to find power, which is current times
+        voltage...</p>
+    $$i=\frac{V_\text{TH}}{2R_\text{TH}}$$
+    $$P=i^2R=\frac{V_\text{TH}^2}{4R_\text{TH}}$$
+    <img src="{{url_for('static',filename='img/electronics/power.svg')}}" style="width: 50%">
+    <p>Let's take a look at the above circuit. Our goal here is to find the load resistance R such that we maximize the
+        power delivered to that load. We know that to find this value, we just need to find the Thevenin equivalent
+        resistance of our circuit. To do this, we short circuit any voltage sources and open circuit any current sources
+        (of
+        which we have none). Then, we apply a test current to the circuit, resulting in the circuit below:</p>
+    <img src="{{url_for('static',filename='img/electronics/power_2.svg')}}" style="width: 50%">
+    <p>Now, you can use mesh current method to find the currents going through each resistor. Then, you know that the
+        voltage drop across the test current is the same as the voltage drop going across the other two 4 ohm resistors
+        in
+        its mesh, which gives you the answer of 3 V. This means we need 3 V to send a 1 A current through the Thevenin
+        equivalent resistor, meaning VTH is 3 Ohms, which is equal to the load R which maximizes the power delivered. If
+        you
+        want to then find the power, you would then need to set the load resistor to 3 Ohms and then find the current
+        running through with mesh currents and use P=i^2R.</p>
+    <h4>Superposition in Circuits</h4>
+    <p>Superposition in circuits is useful for breaking down a circuit into parts. It is not so important to know how to
+        do it if you have high computing power that can solve large matrices, but is more important if you have to do
+        things
+        by hand. What superposition means basically is that the voltage drop across each component in the circuit is the
+        sum
+        of the voltage drops due to each single power source. For example, say you have 5 voltage sources in your
+        circuit.
+        If you find the voltage across your component from each of those voltage sources, and then add them together,
+        that
+        will be the total voltage drop from all 5 voltage sources. It's kinda like the concept of summative potentials
+        in
+        neurons. You get all these action potentials going into the neuron via its dendrites, and at the axon hillock
+        things
+        get summed together to produce one big signal. In this case, each one of these action potentials is coming from
+        a
+        different voltage source in your circuit. This property of being able to sum all of these separate voltages is
+        the
+        property of a linear system, one in which you can add inputs together.</p>
+    <p>As an aside, a circuit symbol with an arrow through it just means the component is variable.</p>
+    <h4>Inductors</h4>
+    <p>Inductors are circuit components that store energy in the form of a concentrated magnetic field. Any current
+        through a wire produces a magnetic field. By coiling the current, it concentrates the magnetic field. This is
+        what
+        an inductor is. It is a coiled piece of wire. The units of an inductor is the Henry (kg*m2)/(s2A2), and
+        inductors
+        are labelled with the letter L. Understanding what exactly is going on with the magnetic field is an area of
+        physics.</p>
+    <img src="{{url_for('static',filename='img/electronics/inductor.svg')}}" style="width: 10%">
+    <p>The voltage across an inductor is its inductance times the derivative of the current with respect to time, aka
+        how
+        fast the current changes through the inductor.</p>
+    $$V=L\frac{di}{dt}$$
+    <img src="{{url_for('static',filename='img/electronics/inductors.svg')}}" style="width: 20%">
+    <p>So let's do some calculations for this simple circuit with just a current source and an inductor. For the sake of
+        the exercise, let's set the current \(i=10te^{-5t}\).</p>
+    <p>The first question is to sketch the current. We'll cheat here and just graph it with a calculator.</p>
+    <img src="{{url_for('static',filename='img/electronics/inductors1.png')}}">
+    <p>The second question is when is the current at its maximum?</p>
+    <p>So, to defined the maximum of a function, you can set the derivative (slope) to zero. If the derivative is
+        confusing to you, review some properties of derivatives in calculus under mathematics.</p>
+    $$i=(10t)(e^{-5t})$$
+    <p>We can split the function into two and use the product rule of derivatives.</p>
+    $$\frac{di}{dt}=(10t)(e^{-5t})(-5)+(e^{-5t})(10)=0$$
+    $$\frac{di}{dt}=-50t(e^{-5t})+10(e^{-5t})$$
+    $$-50t+10=0$$
+    $$t=0.2$$
+    <p>So the maximum current is at 0.2 seconds.</p>
+    <p>The next question is what is the equation for the voltage across the inductor?</p>
+    $$V=L\frac{di}{dt}$$
+    <p>Since we know both that \(L=0.1\) and the derivative of i with respect to t, the answer is simply:</p>
+    $$V(t)=0.1*-50t(e^{-5t})+10(e^{-5t})$$
+    $$V(t)=-5te^{-5t}+e^{-5t}$$
+    <img src="{{url_for('static',filename='img/electronics/inductors2.png')}}">
+    <p>So now we have plotted the voltage above. Compare it to the plot of the current, and recognize that the voltage
+        is
+        proportional to the rate of change of the current through the inductor.</p>
+    <p>What if we want to do this backwards? What if we know the graph of the voltage, but want to find the current? In
+        that case, we have to integrate the voltage over time.</p>
+    $$V=L\frac{di}{dt}$$
+    $$Vdt=Ldi$$
+    $$\int{Vdt}=\int{Ldi}$$
+    $$i(t)=\frac{1}{L}\int_0^t{V(t)dt}+i(0)$$
+    <img src="{{url_for('static',filename='img/electronics/inductors3.svg')}}" style="width: 20%">
+    <p>Alright, so now we've flipped the question backwards and let's solve for current from a given voltage function.
+        Let's say \(V=20te^{-10t}\).</p>
+    $$i(t)=\frac{1}{L}\int_0^t{V(t)dt}+i(0)$$
+    $$i(t)=\frac{1}{0.1}\int_0^t{20te^{-10t}dt}$$
+    $$i(t)=200\int_0^t{te^{-10t}dt}$$
+    <p>This utilizes integration from calculus so make sure to review that to know how to solve this equation. We use
+        integration by parts here. Let's set \(u=t\) and \(dv=e^{-10t}dt\).</p>
+    $$du=dt$$
+    $$v=\int{e^{-10t}dt}$$
+    $$v=\frac{1}{-10}e^{-10t}$$
+    $$uv-\int{vdu}$$
+    $$t(\frac{1}{-10}e^{-10t})-\int{\frac{1}{-10}e^{-10t}du}$$
+    $$\frac{t}{10}e^{-10t}\bigl|_0^t-\frac{1}{100}e^{-10t}\bigl|_0^t$$
+    $$[(-\frac{t}{10}e^{-10t})-(0)]-[(\frac{1}{100}e^{-10t})-(\frac{1}{100})]$$
+    <p>Finally, put the 200 back from the beginning:</p>
+    $$i(t)=2-20te^{-10t}-2e^{-10t}$$
+    <h4>Power and Energy in an Inductor</h4>
+    <p>Let's review the difference between energy and power. Power is the flow of energy. If you pull a rubber band
+        apart,
+        you have stored energy in that system. The process of pulling it apart is applying power. Since \(P=iv\), it's
+        pretty easy to see that \(P=Li\frac{di}{dt}\).</p>
+    <p>Since we also know how to write i in terms of V for inductors:</p>
+    $$P=V[\frac{1}{L}\int_0^t{V(t)dt}+i(0)]$$
+    <p>So how much energy is stored in an inductor?</p>
+    <p>Remember that power is the flow of energy, or the rate energy is added over time. So the total energy is the
+        integral of power.</p>
+    $$w=\int{pdt}$$
+    $$w=\int{Li\frac{di}{dt}*dt}$$
+    $$w=\int{Lidi}$$
+    $$w=\frac{1}{2}Li^2$$
+    <p>What you can infer from this is that the energy stored in an inductor depends on the current flowing through it.
+        Which means, even if the current is not changing, there is a certain amount of current stored. This is in
+        contrast
+        to the power, or the voltage, which depends on the rate of change of the current.</p>
+    <h4>Current through a capacitor</h4>
+    <p>Capacitors store energy in an electric field, whereas inductors store energy in a magnetic field. You can think
+        of
+        capacitors as parallel plates. Imagine having two square sheets of metal placed right next to each other,
+        parallel.
+        In between exists a dielectric, aka an insulator, through which no current can flow. When you add a current
+        (hole
+        current meaning it's positive) to one plate, a positive charge builds up. This positive charge spreads
+        throughout
+        the plate and creates an electric field, causing negative charge to build up on the other plate. So while no
+        electrons actually flow through the dielectric, from the outside, it looks like positive current is flowing into
+        one
+        plate and positive current is flowing out the other (because negative charge is flowing into it). This electric
+        field between these two plates is what stores energy.</p>
+    <img src="{{url_for('static',filename='img/electronics/capacitor.svg')}}" style="width: 40%">
+    <p>The units of capacitance is the Farad, but 1 Farad is huge (you won't ever see a real capacitor with 1 Farad
+        capacitance), so usually you'll be using things like microFarads. The current through a capacitor:</p>
+    $$i=C\frac{dv}{dt}$$
+    <p>You can see that this is fairly similar to the equation for voltage for the inductor. It's kind of like they
+        swapped around. You can think of it such that the buildup of charge is what generates the electric field and the
+        voltage drop across the capacitor. The only way for there to be an increase in that voltage difference (a
+        positive
+        dv/dt) is if more positive charge is going to the positive plate, which means there must be a positive current
+        going
+        to that plate.</p>
+    <p>If you think about an inductor, if the current is constant and you've reached steady state, then the inductor
+        pretty much acts as a short circuit or a piece of wire. For a capacitor, if you keep adding current and you've
+        reached steady state, then eventually the plates are saturated, and no more current can pass through, thereby
+        turning it into an open circuit.</p>
+    <p>So let's see if we can figure out the voltage from the current.</p>
+    $$i=C\frac{dv}{dt}$$
+    $$\frac{i}{C}dt=dv$$
+    $$v(t)=\frac{1}{C}\int_0^t{i(t)dt}+v_0$$
+    <p>This equation should make sense, since as your current builds up, the voltage across the capacitor builds up.</p>
+    <p>So then the power in the capacitor is \(P=iv=Cv\frac{dv}{dt}\).</p>
+    $$P=iv=i[\frac{1}{C}\int_0^t{i(t)dt}+v_0]$$
+    <p>We can also get the energy in the capacitor. Since power is energy over time, \(P=\frac{dw}{dt}\).</p>
+    $$P=Cv\frac{dv}{dt}=\frac{dw}{dt}$$
+    $$w=C*\frac{1}{2}v^2$$
+    <p>So you see this all makes sense. For an inductor, the energy is stored in a magnetic field, which depends on the
+        current. For a capacitor, the energy stored depends on the electric field, which depends on the voltage.</p>
+    <h4>Parallel and series for inductors and capacitors</h4>
+    <p>Inductances work pretty much exactly like resistors when it comes to how they behave in series or in parallel.
+        Think about a bunch of inductors in series. It's basically a bunch of coils of wire next to each other. If you
+        pretend the wire between them is super small, it's almost as if you just have one huge coil of wire. So it makes
+        sense for the total inductance to just be the sum of the individuals. Capacitors are opposite of resistors (so,
+        for
+        capacitors in series, you have to add the inverses). If you think about a bunch of capacitors in parallel, it's
+        almost as if you have just one giant parallel plate capacitor, so it makes sense to just add the capacitances up
+        in
+        that case.</p>
+    <img src="{{url_for('static',filename='img/electronics/inductor_parallel.svg')}}" style="width:30%">
+    <p>Alright. Let's do some calculations for an example problem. Let's say at the start of the circuit, \(i_1=-2\) and
+        \(i_2=4\). And let's say voltage changes over time, such that \(v(t)=-40e^{-5t}\).</p>
+    <p>The first question is: what is the equivalent inductance? Just like in resistors, all we have to do to find an
+        equivalent inductance in parallel is product over sum: \(L_\text{eq}=\frac{5*20}{5+25}=4\).</p>
+    <p>The next question: what is the initial current through the equivalent inductor? For this, all we have to do is
+        add
+        the two currents up: \(-2+4=2\). So the current when \(t=0\) is 2 amps.</p>
+    <p>Okay, so now let's find the current at a time other than at 0. Note that we are given the function for the
+        voltage.
+        We know that for an inductor, \(v=L\frac{di}{dt}\). The voltage at any timepoint is how fast the current is
+        changing
+        at that timepoint. So if you want to find the total current passing at a certain time, you have to integrate the
+        voltage from time 0 to time t (adding up an infinite amount of infinitely small chunks of current). Basically,
+        you're finding the area under the function of voltage from 0 to t.</p>
+    $$di=\frac{1}{L}vdt$$
+    $$i(t)=\frac{1}{L}\int_0^t{v(t)dt}+i(0)$$
+    <p>We know the initial current (2), the function for v, and the equivalent inductance L (4).</p>
+    $$i(t)=\frac{1}{4}\int_0^t{-40e^{-5t}dt}+2$$
+    $$i(t)=-10\int_0^t{e^{-5t}dt}+2$$
+    $$i(t)=-10*\frac{1}{-5}e^{-5t}\rvert_0^t+2$$
+    $$i(t)=2[e^{-5t}-e^0]+2$$
+    $$i(t)=2e^{-5t}$$
+    <h4>Step and Natural Response</h4>
+    <p>There is transient state and steady state of a circuit. The transient state is when the circuit is changing
+        through
+        the first fraction of time. The steady state is what happens after things have stopped changing, maybe a second
+        or a
+        minute after the circuit has started. The natural response of a circuit is what happens when the circuit
+        discharges
+        in the absence of any power sources. The step response is what happens when we initially hook up some power
+        source
+        and send some current to our circuit, aka the charging process.</p>
+    <h4>Natural Response of an RL Circuit</h4>
+    <img src="{{url_for('static',filename='img/electronics/RL_natural.svg')}}">
+    <p>An RL circuit is a circuit with resistors and inductors. Let's take a look at the circuit above. On the left, you
+        have a Norton equivalent circuit with a current source and its resistance. That source will provide us with our
+        initial steady state parameters. On the right side of the circuit you see a simple inductor and resistor in
+        parallel. At the top, you see a switch, which is closed at t=0 but which opens once we start the timer. So what
+        this
+        means is that when t is less than 0 (before we flip the switch), current is running through the circuit.
+        Remember
+        when current goes through an inductor, it stores energy in a magnetic field. But with a constant current, there
+        is
+        no voltage drop across the inductor, and it acts simply as a short circuit. So at a time before 0, all the
+        current
+        goes through the inductor. Now, after you flip the switch, the right side (RL circuit) becomes disconnected from
+        the
+        left side (power source). So then the energy stored as a magnetic field in the inductor will convert into
+        current
+        and dissipate (natural response).</p>
+    <p>So let's do KVL on the RL circuit.</p>
+    $$L\frac{di}{dt}+iR=0$$
+    $$L\frac{di}{dt}=-iR$$
+    $$\frac{1}{i}di=-\frac{R}{L}dt$$
+    $$\int_{i(0)}^{i(t)}\frac{1}{i}di=-\int_0^t\frac{R}{L}dt$$
+    $$\ln{i(t)}-\ln{i(0)}=-\frac{Rt}{L}$$
+    $$\ln{\frac{i(t)}{i(0)}}=-\frac{Rt}{L}$$
+    $$e^{\ln{\frac{i(t)}{i(0)}}}=e^{-\frac{Rt}{L}}$$
+    $$\frac{i(t)}{i(0)}=e^{-\frac{Rt}{L}}$$
+    $$i(t)=i(0)e^{-\frac{Rt}{L}}$$
+    <p>This result is the exponential decay, or the natural response, or a RL circuit. You can see that the rate of
+        decay
+        depends on R and L. The higher the resistance in the circuit, the faster the current goes to 0. The higher the
+        inductance, the longer it takes for the current to get to 0 (which makes sense conceptually).</p>
+    <p>The value \(\tau=L/R\) such that \(i(t)=i(0)e^{-\frac{t}{\tau}}\). Which means that at \(1\tau\) seconds, the
+        current is \(i(0)/e=0.37I_0\) (we rewrite the initial current with a capital letter for consistency sake). By
+        the
+        time you reach 5 time constants, the value of the current is \(0.007I_0\), which means the current has gone to
+        less
+        than 1% of its initial state. We can define this with fuzzy logic as "a long time." So the purpose of having a
+        time
+        constant is just having that "rule of thumb" that 5 time constants is "long enough time" for the transient state
+        to
+        end.</p>
+    <img src="{{url_for('static',filename='img/electronics/RL_problem1.svg')}}">
+    <p>Let's put some of these to an example. The first question for the above circuit is to find \(i_L(t)\). When t is
+        0,
+        the switch is flipped open, thereby cutting off the current source from the left. Then, at that point, the
+        energy
+        stored in the inductor will drive a current through the resistors until there is no more energy. The 10ohm and
+        40ohm
+        resistors are in parallel, and so we can simplify that into a 8 ohm resistor. And the 2 ohm resistor will be in
+        series with the 8 ohm resistor, making the equivalent resistance of the right side a total of 10 ohms. So then
+        we
+        use KVL and integrate again to find:</p>
+    $$i_L(t)=I_0e^{-5t}$$
+    <p>Recognize that the initial current \(I_0\) is simply 20 amps, because when the circuit is closed, all of the
+        current is traveling through the inductor (because every other path has resistance!).</p>
+    $$i_L(t)=20e^{-5t}$$
+    <p>Next part of the question is to find \(i_1(t)\). Since the current splits between the 10 and 40 ohm resistors,
+        this
+        is a current divider, so the resulting current through the 40 ohm resistor is just
+        \(-20e^{-5t}*(10/50)=-4e^{-5t}\).
+        Note we add a negative sign since that current is backwards from the one drawn in the figure.</p>
+    <p>Next part is to find \(v_1(t)\). Again, pretty straight forward. Ohm's law. \(-160e^{-5t}\).</p>
+    <p>The last part is to find the % of total energy stored in 2 H inductor that is dissipated in the 10 ohm resistor.
+        The total energy stored in the inductor is \(w=\frac{1}{2}Li^2\), which we derived previously by setting
+        \(P=i*L\frac{di}{dt}\) and integrating both sides. So the energy stored in the inductor of this question is
+        \(1/2*2*20^2=400\) Joules. Then, for the energy dissipated by the resistor, we can integrate power again just
+        for
+        that resistor. We know that the voltage across the 10 ohm resistor is the same as that for the 40 ohm resistor.
+        So
+        we can use:</p>
+    $$P=V^2/R$$
+    $$P=(-160e^{-5t})^2/10=2560e^{-10t}$$
+    <p>Then, we integrate with respect to time.</p>
+    $$\int_0^\infty{Pdt}=w=2560\int_0^\infty{e^{-10t}dt}$$
+    <p>Again, we integrate by parts. Say we set \(u(t)=-10t\). Then the equation becomes \(e^u\). Integral of an
+        exponential is just the exponential. But we have to divide by derivative of u due to chain rule. So the
+        indefinite
+        integral is \(-\frac{1}{10}e^{-10t}\). And so the definite integral from 0 to infinity would be
+        \(-\frac{1}{10}[e^{-\infty}-e^0]=-\frac{1}{10}\). And don't forget the 2560 in front, so the total energy
+        dissipated
+        by the 10 ohm resistor is -256 watts. Finally, \(256/400=64%\). So the total energy dissipated by the 10 ohm
+        resistor is 64%. Pretty cool, right?</p>
+    <h4>Natural Response of a RC Circuit</h4>
+    <p>So we can do this same natural response, transient to steady state thing with capacitors, keeping in mind that
+        capacitors store energy in an electric field rather than a magnetic field. So whereas we used KVL for the RL
+        circuit, let's use KCL for the RC circuit. Except in this case, we can imagine the node being just between a
+        capacitor and a resistor. Basically, the current going through the capacitor has to be equal to the current
+        going
+        through the resistor. In addition, the voltage drop across the capacitor has to be equal to the voltage drop
+        across
+        the resistor.</p>
+    $$C\frac{dV}{dt}=-\frac{V}{R}$$
+    $$\frac{1}{V}dV=-\frac{1}{RC}dt$$
+    $$\int_{V(0)}^{V(t)}{\frac{1}{V}dV}=-\int_0^t{\frac{1}{RC}dt}$$
+    $$\ln{V(t)}-\ln{V(0)}=-\frac{t}{RC}$$
+    $$e^{\ln{\frac{V(t)}{V(0)}}}=e^{-\frac{t}{RC}}$$
+    $$V(t)=V_0e^{-\frac{t}{RC}}$$
+    <p>The time constant for RC circuits is RC, so that, again, by 5 time constants, the voltage becomes <1% and
+            negligible.</p> <img src="{{url_for('static',filename='img/electronics/capacitor_problem.svg')}}">
+            <p>Alright, let's do a natural response problem for an RC circuit. Our first question is what is the voltage
+                across the capacitor as soon as the switch opens? So v(0). If you think about it, when the switch is
+                closed, the
+                capacitor has enough time to completely saturate its plate with charge. So voltage should be maximum at
+                t=0. It
+                also means that no more current is going into the capacitor. Which means all the current is going
+                through the
+                20k ohm resistor. The 20k ohm resistor is in series with the 10k ohm resistor, so the total resistance
+                is 30k on
+                that leg. So there is a current divider for the 15 mA current between a 60k ohm resistor and a 30k ohm
+                resistor.
+                The current going through the 30k ohm resistor is 15 mA * (60k/(30k+60k)), which is the equation using a
+                current
+                divider (resistance of the other leg over the sum of both legs). \(0.015*(2/3)=0.01\). So the current
+                going
+                through the 20k ohm resistor is 0.01 A. From there, Ohm's law, we can calculate the voltage drop across
+                the 20k
+                ohm resistor. \(20000*0.01=200\). The voltage drop across the capacitor is the same as across the
+                resistor since
+                they're parallel. So \(V(0)=200\) volts.</p>
+            <p>Second part is to find the time constant of the RC circuit. Pretty easy. Remember it's just
+                \(\tau=RC=20\times10^3*0.5\times10^{-6}=1\times10^{-2}\).</p>
+            <p>Next, we want to find \(v(t)\) after we flip the switch open. So we just derived this equation from using
+                KCL
+                and integrating, so it's just \(V(t)=200e^{-\frac{t}{0.01}}=200e^{-100t}\).</p>
+            <p>Next, we want to find the initial energy stored in the capacitor. We previously derived this by
+                integrating
+                power over time. So \(w=C*\frac{1}{2}*200^2=20000*0.5\times10^{-6}=0.01\) joules.</p>
+            <p>Finally, let's calculate how long it takes to dissipate 75% of the initially stored energy. We know total
+                energy stored by the capacitor, so 75% of that is 0.01*0.75=0.0075. How do you find energy dissipated by
+                the
+                resistor? Have to integrate power over time.</p>
+            $$\int_0^x{Pdt}=0.0075$$
+            $$\int_0^x{\frac{V^2}{R}dt}=0.0075$$
+            $$\int_0^x{\frac{40000e^{-200t}}{20000}dt}=0.0075$$
+            $$\int_0^x{2e^{-200t}dt}=0.0075$$
+            $$-\frac{1}{100}[e^{-200x}-e^{0}]=0.0075$$
+            $$e^{-200x}=0.25$$
+            $$-200x=\ln{0.25}$$
+            $$x=0.00693$$
+            <p>So it takes less than 1 millisecond to dissipate 75% of the stored energy in this capacitor.</p>
+            <h4>Step Response of RL Circuits</h4>
+            <p>The step response is the opposite of the natural response. It's what charges the inductor/capacitor.
+                Deriving
+                the step response is similar to the natural response, so we will go straight to the equations (write KVL
+                equations and solve differential equations). For an RL circuit:</p>
+            $$i(t)=\frac{V_s}{R}+(I_0-\frac{V_2}{R})e^{-t/\tau}$$
+            <p>And, if the initial current is 0, which is what it usually is:</p>
+            $$i(t)=\frac{V_s}{R}-\frac{V_2}{R}e^{-t/\tau}$$
+            <p>You can see that at time 0, the current is 0, and at time infinity, the current is equal to V/R, as if
+                the
+                inductor isn't even there.</p>
+            <p>Recall that \(V=L\frac{di}{dt}\) for inductors.</p>
+            $$V(t)=L[0+(I_0-\frac{V_s}{R})e^{\frac{-Rt}{L}}(-\frac{R}{L})]$$
+            $$V(t)=(V_s-RI_0)e^{\frac{-t}{\tau}}$$
+            <p>Which means, if the initial current is 0:</p>
+            $$V(t)=V_se^{-\frac{t}{\tau}}$$
+</div>
+
+{% endblock %}

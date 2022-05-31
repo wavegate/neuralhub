@@ -12,7 +12,103 @@
 	#integer1_remove {
 		display: none;
 	}
+
+	iframe {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.sidebar {
+		position: fixed;
+		margin-left: -375px;
+		border-left: 8px solid #c8dce3;
+		background-color: #fff;
+		overflow-y: scroll;
+	}
+
+	.sidebar {
+		width: 350px;
+		height: 85vh;
+	}
+
+	.core {
+		padding: 7px;
+		width: 100%;
+		background-color: beige;
+		font-size: larger;
+		margin-top: 15px;
+		margin-bottom: 10px;
+	}
+
+	.core:first-child {
+		margin-top: 0px;
+	}
+
+	.topic {
+		padding-left: 15px;
+	}
+
+	.topic a {
+		color: #333333;
+	}
+
+	.topic a:hover {
+		text-decoration: underline;
+	}
+
+	a.anchor {
+		display: block;
+		position: relative;
+		top: -150px;
+		visibility: hidden;
+	}
+
+	.sidebar::-webkit-scrollbar {
+		width: 8px;
+		/* width of the entire scrollbar */
+	}
+
+	.sidebar::-webkit-scrollbar-track {
+		background: beige;
+		/* color of the tracking area */
+	}
+
+	.sidebar::-webkit-scrollbar-thumb {
+		background-color: #c8dce3;
+		/* color of the scroll thumb */
+		/* roundness of the scroll thumb */
+		border: 3px solid #c8dce3;
+		/* creates padding around scroll thumb */
+	}
 </style>
+
+<div class="sidebar">
+	<div class="core">Neurophysiology</div>
+	<div class="topic"><a href="#descriptive_geometry">Brain mapping</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Electrophysiology</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Extracellular recording</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Intracellular recording</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Brain stimulation</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Electroencephalography</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Neuroendocrinology</a></div>
+	<div class="core">Neuroanatomy</div>
+	<div class="core">Neuropharmacology</div>
+	<div class="core">Behavioral neuroscience</div>
+	<div class="core">Developmental neuroscience</div>
+	<div class="core">Cognitive neuroscience</div>
+	<div class="core">Systems neuroscience</div>
+	<div class="core">Molecular neuroscience</div>
+	<div class="core">Computational neuroscience</div>
+	<div class="topic"><a href="#descriptive_geometry">Convolution</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Correlation</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Linear systems</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Game theory</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Signal detection theory</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Probability theory</a></div>
+	<div class="topic"><a href="#descriptive_geometry">Information theory</a></div>
+	<div class="core">Neurophilosophy</div>
+	<div class="core">Neuropsychology</div>
+</div>
 <h1>Neuroscience</h1>
 <h4>Light sensation/visual physiology</h4>
 <p>Let's begin by describing the anatomy of the human eye. If you look at the human eye from the front, you can see

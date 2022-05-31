@@ -2,10 +2,142 @@
 
 {% block content %}
 <style>
-  .size {
-    font-size: 130%;
+  p,
+  button {
+    font-size: 100%;
+  }
+
+  #integer1_remove {
+    display: none;
+  }
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    position: fixed;
+    margin-left: -375px;
+    border-left: 8px solid #c8dce3;
+    background-color: #fff;
+    overflow-y: scroll;
+  }
+
+  .sidebar {
+    width: 350px;
+    height: 85vh;
+  }
+
+  .core {
+    padding: 7px;
+    width: 100%;
+    background-color: beige;
+    font-size: larger;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .core:first-child {
+    margin-top: 0px;
+  }
+
+  .topic {
+    padding-left: 15px;
+  }
+
+  .topic a {
+    color: #333333;
+  }
+
+  .topic a:hover {
+    text-decoration: underline;
+  }
+
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 8px;
+    /* width of the entire scrollbar */
+  }
+
+  .sidebar::-webkit-scrollbar-track {
+    background: beige;
+    /* color of the tracking area */
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #c8dce3;
+    /* color of the scroll thumb */
+    /* roundness of the scroll thumb */
+    border: 3px solid #c8dce3;
+    /* creates padding around scroll thumb */
   }
 </style>
+
+<div class="sidebar">
+  <div class="core">Chemical basis of life</div>
+  <div class="topic"><a href="#logic">Atoms and molecules</a></div>
+  <div class="topic"><a href="#language">Water</a></div>
+  <div class="topic"><a href="#reasoning">Organic compounds</a></div>
+  <div class="topic"><a href="#sets">Macromolecules</a></div>
+  <div class="core">Cells</div>
+  <div class="topic"><a href="#concept">Cell structure</a></div>
+  <div class="topic"><a href="#natural">Metabolism</a></div>
+  <div class="topic"><a href="#integer">Cellular respiration</a></div>
+  <div class="topic"><a href="#real">Photosynthesis</a></div>
+  <div class="topic"><a href="#number">Cell cycle</a></div>
+  <div class="core">Genetics</div>
+  <div class="topic"><a href="#concept">Inheritance</a></div>
+  <div class="topic"><a href="#natural">DNA</a></div>
+  <div class="topic"><a href="#integer">Gene expression</a></div>
+  <div class="topic"><a href="#real">Gene regulation</a></div>
+  <div class="topic"><a href="#number">Genomes</a></div>
+  <div class="topic"><a href="#number">Genes, development, and evolution</a></div>
+  <div class="core">Evolution</div>
+  <div class="topic"><a href="#concept">Evolutionary processes</a></div>
+  <div class="topic"><a href="#natural">Speciation</a></div>
+  <div class="topic"><a href="#integer">Phylogeny</a></div>
+  <div class="topic"><a href="#real">History of life</a></div>
+  <div class="core">Diversity</div>
+  <div class="topic"><a href="#concept">Bacteria and Archaea</a></div>
+  <div class="topic"><a href="#natural">Protists</a></div>
+  <div class="topic"><a href="#integer">Plant diversity</a></div>
+  <div class="topic"><a href="#real">Fungi</a></div>
+  <div class="topic"><a href="#number">Animal diversity</a></div>
+  <div class="topic"><a href="#number">Viruses</a></div>
+  <div class="core">Ecology</div>
+  <div class="topic"><a href="#concept">Ecosystems</a></div>
+  <div class="topic"><a href="#natural">Populations</a></div>
+  <div class="topic"><a href="#integer">Communities</a></div>
+  <div class="topic"><a href="#real">Biosphere</a></div>
+  <div class="topic"><a href="#number">Conservation</a></div>
+  <div class="core">Plant form and function</div>
+  <div class="topic"><a href="#concept">Plant body</a></div>
+  <div class="topic"><a href="#natural">Plant nutrition and transport</a></div>
+  <div class="topic"><a href="#integer">Plant development</a></div>
+  <div class="topic"><a href="#real">Plant reproduction</a></div>
+  <div class="topic"><a href="#number">Plant responses</a></div>
+  <div class="core">Animal form and function</div>
+  <div class="topic"><a href="#concept">Water and salt balance</a></div>
+  <div class="topic"><a href="#natural">Nutrition and digestion</a></div>
+  <div class="topic"><a href="#integer">Breathing</a></div>
+  <div class="topic"><a href="#real">Circulation</a></div>
+  <div class="topic"><a href="#number">Muscle and movement</a></div>
+  <div class="topic"><a href="#number">Nervous system</a></div>
+  <div class="topic"><a href="#concept">Integumentary system</a></div>
+  <div class="topic"><a href="#natural">Hormonal control</a></div>
+  <div class="topic"><a href="#integer">Animal reproduction</a></div>
+  <div class="topic"><a href="#real">Animal development</a></div>
+  <div class="topic"><a href="#number">Immune system</a></div>
+  <div class="topic"><a href="#number">Animal behavior</a></div>
+  <div class="core">Biotechnology</div>
+</div>
 <div class="size">
 
   Currently taking notes on biology on Overleaf.

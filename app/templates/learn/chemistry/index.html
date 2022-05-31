@@ -2,6 +2,110 @@
 
 {% block content %}
 
+<style>
+    p,
+    button {
+        font-size: 100%;
+    }
+
+    #integer1_remove {
+        display: none;
+    }
+
+    iframe {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        position: fixed;
+        margin-left: -375px;
+        border-left: 8px solid #c8dce3;
+        background-color: #fff;
+        overflow-y: scroll;
+    }
+
+    .sidebar {
+        width: 350px;
+        height: 85vh;
+    }
+
+    .core {
+        padding: 7px;
+        width: 100%;
+        background-color: beige;
+        font-size: larger;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .core:first-child {
+        margin-top: 0px;
+    }
+
+    .topic {
+        padding-left: 15px;
+    }
+
+    .topic a {
+        color: #333333;
+    }
+
+    .topic a:hover {
+        text-decoration: underline;
+    }
+
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -150px;
+        visibility: hidden;
+    }
+
+    .sidebar::-webkit-scrollbar {
+        width: 8px;
+        /* width of the entire scrollbar */
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        background: beige;
+        /* color of the tracking area */
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background-color: #c8dce3;
+        /* color of the scroll thumb */
+        /* roundness of the scroll thumb */
+        border: 3px solid #c8dce3;
+        /* creates padding around scroll thumb */
+    }
+</style>
+
+<div class="sidebar">
+    <div class="core">Physical chemistry</div>
+    <div class="topic"><a href="#logic">Chemical kinetics</a></div>
+    <div class="topic"><a href="#language">Chemical physics</a></div>
+    <div class="topic"><a href="#reasoning">Electrochemistry</a></div>
+    <div class="topic"><a href="#sets">Photochemistry</a></div>
+    <div class="topic"><a href="#sets">Thermochemistry</a></div>
+    <div class="topic"><a href="#sets">Solid-state chemistry</a></div>
+    <div class="topic"><a href="#sets">Spectroscopy</a></div>
+    <div class="topic"><a href="#sets">Surface science</a></div>
+    <div class="core">Organic chemistry</div>
+    <div class="topic"><a href="#concept">Biochemistry</a></div>
+    <div class="topic"><a href="#natural">Biophysical chemistry</a></div>
+    <div class="topic"><a href="#integer">Medicinal chemistry</a></div>
+    <div class="topic"><a href="#real">Polymer chemistry</a></div>
+    <div class="topic"><a href="#number">Number theory</a></div>
+    <div class="topic"><a href="#measure">Measures and units</a></div>
+    <div class="topic"><a href="#ratio">Ratio and proportion, percentages</a></div>
+    <div class="topic"><a href="#practical">Real-life mathematics, practical arithmetic</a></div>
+    <div class="core">Inorganic chemistry</div>
+    <div class="topic"><a href="#informal_geometry">Materials chemistry</a></div>
+    <div class="core">Nuclear chemistry</div>
+    <div class="core">Analytical chemistry</div>
+</div>
+
 Currently taking notes on chemistry on Overleaf.
 https://www.overleaf.com/read/dbkycghkpmhn
 
