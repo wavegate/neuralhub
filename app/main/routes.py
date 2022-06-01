@@ -118,6 +118,10 @@ def task(id):
 def study():
 	return render_template('study.html')
 
+@bp.route("/topics", methods = ['GET'])
+def topics():
+	return render_template('topics.html')
+
 @bp.route("/create_post", methods = ['GET', 'POST'])
 @login_required
 @csrf.exempt

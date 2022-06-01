@@ -4,6 +4,14 @@
 
 
 <style>
+	.first {
+		font-size: 24px;
+	}
+
+	.second {
+		font-size: 20px;
+	}
+
 	p,
 	button {
 		font-size: 100%;
@@ -150,7 +158,7 @@
 	<div class="topic"><a href="#descriptive_geometry">Programming techniques</a></div>
 	<div class="topic"><a href="#descriptive_geometry">Artificial intelligence</a></div>
 </div>
-https://zbmath.org/classification/
+<!--https://zbmath.org/classification/
 <h1>Math</h1>
 <li>So when it comes to math, I think there is the failure in general education of math in which the order of how
 	things
@@ -188,8 +196,9 @@ https://zbmath.org/classification/
 	in
 	this case, as well as the study of every other subject, is to solve problems.</li>
 <a class="anchor" id="logic"></a>
-<h2>Logic</h2>
-<li>Propositional logic</li>
+<h2>Logic</h2>-->
+<div class="first">Logic</div><a class="anchor" id="logic"></a>
+<div class="second">Propositional logic</div>
 <p>Propositional logic, or zeroth order logic, is a language for math. The first set of symbols we need to learn is
 	about propositional logic. A proposition in this case is a statement which can take on two values: true or
 	false.
@@ -219,7 +228,21 @@ https://zbmath.org/classification/
 	both P and Q are false, then P ↔ Q is also true. The opposite of this is the aforementioned exclusive or,
 	written P
 	⊕ Q, which is only true when P and Q are different.</p>
-<li>First order logic</li>
+<div class="second">Propositional variables</div>
+<div class="second">Logical connectives</div>
+<div class="second">Truth tables</div>
+<div class="second">Implication</div>
+<div class="second">Biconditional</div>
+<div class="second">True and false</div>
+<div class="second">Operator precedence</div>
+<div class="second">Negations</div>
+<div class="second">Logical equivalence</div>
+<div class="second">De Morgan's laws</div>
+<div class="second">Negating implications</div>
+<div class="second">Proof by contrapositive</div>
+<div class="second">Proof by contradiction</div>
+<div class="second">Tautology</div>
+<div class="second">First order logic</div>
 <li>In first order logic, or predicate logic, we extend propositional logic slightly. Instead of statements having a
 	truth value, we now divide them into two parts: the subject and the predicate. The predicate is a statement that
 	has
@@ -244,8 +267,59 @@ https://zbmath.org/classification/
 	For the implication P->Q, the converse is Q->P. The truth of the converse is generally independent from that of
 	the
 	original statement.</p>
-<a class="anchor" id="reasoning"></a>
-<li>Proof theory and constructive mathematics</li>
+<div class="second">Second order logic</div>
+predicates, functions, quantifiers
+domain of discourse
+predicates, arity
+equality
+<div class="second">Functions</div>
+<div class="second">Quantifiers</div>
+<h4>Quantifiers</h4>
+<p>The "for all" prefix is the universal quantifier, symbolized \(\forall\).</p>
+<p>The "there exists" quantifier is symbolized \(\exists\).</p>
+universal, existential quantifier
+operator precedence
+combining quantifiers
+<div class="second">Quantifying over sets</div>
+<div class="second">Set theory</div>
+union, intersection
+<div class="second">Relations</div>
+symmetric, antisymmetric, transitive
+<div class="second">Negating quantifiers</div>
+<div class="second">Negating second-order statements</div>
+<div class="second">Analyzing relations</div>
+<div class="second">Uniqueness</div>
+uniqueness quantifier
+<div class="second">SAT solving</div>
+<div class="second">Satisfiability</div>
+satisfiable, satisfying assignment, tautological, satisfiable, unsatisfiable
+boolean satisfiability problem (SAT)
+<div class="second">SAT solving</div>
+truth table algorithm
+<div class="second">Clause-based algorithms</div>
+<div class="second">Literals and clauses</div>
+literal, clause
+<div class="second">Conjunctive normal form</div>
+conjunctive normal form (CNF)
+<div class="second">A simple backtracking algorithm</div>
+<div class="second">Adding heuristics</div>
+heuristic, algorithm
+<div class="second">Pure literal elimination</div>
+pure
+<div class="second">Unit propagation</div>
+<div class="second">DPLL algorithm</div>
+<div class="second">Negation normal form</div>
+<div class="second">Equivalence and equisatisfiability</div>
+<div class="first">Language of mathematics</div><a class="anchor" id="language"></a>
+<div class="second">Common mathematical symbols</div>
++, -, x, division, = sign
+<div class="second">Variables</div>
+subscript
+<div class="second">Greek alphabet</div>
+<div class="second">More symbols</div>
+superscript, degree symbol, brackets, percentage, square root, 'x bar', recurring decimal sign (dot over digit)
+
+<div class="first">Reasoning and proving</div><a class="anchor" id="reasoning"></a>
 <p>Let's talk about writing proofs for a sec. I'm no mathematician so this is what I garner from a quick google
 	search
 	of how to write proofs by Eugenia Cheng. This is because I was dealing with a linear algebra textbook which
@@ -315,13 +389,60 @@ https://zbmath.org/classification/
 	confuse these two statements so try to visualize it in your head.</p>
 <p>She then goes into some examples of styles for typical proof cases but I'll probably learn those along the way.
 </p>
-<a class="anchor" id="sets"></a>
-<h4>Equivalence relations</h4>
-<p>An equivalence relation is a binary relation that is reflexive, symmetric and transitive. Reflexive means that it
-	is
-	equivalent to itself, symmetrical is a to b if and only if b to a, and transivity is if a to b and b to c then a
-	to
-	c.</p>
+<div class="first">Sets, relations, set theory</div><a class="anchor" id="sets"></a>
+<h4>Sets</h4>
+<p>A set A is a collection of mathematical/everyday elements. e.g. \(A={1,2,5,a}\). The size or cardinality of
+	\(A=|A|\) is the
+	number of elements in the set.</p>
+<p>\(A\cup B=\{x|x\in A \text{ or }x\in B\}\). The union of two sets is all x which is in either sets or is in
+	both.
+</p>
+<p>\(A\cap B=\{x|x\in A \text{ and } x\in B\}\). The intersection of two sets is all x which is in both sets.
+</p>
+<p>\(A^C=\{x\in U|x \not\in A\}\). The complement of A is the set that is not in A and is in some universal set
+	U.
+</p>
+<p>\(A\setminus B=\{x|x\in A \text{ and } x \not\in B\}\). This is the difference in the two sets.</p>
+<p>A subset is such that: \(C\subseteq
+	B\)
+	means \(x\in C \rightarrow
+	x\in B\) (if x is in C then x is in B).</p>
+<h4>Laws of set operations</h4>
+<p>\(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\)</p>
+<p>\(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\)</p>
+<p>These are seen as distributive laws.</p>
+<h4>Inclusion/exclusion</h4>
+<p>\(|A\cup B|=|A|+|B|-|A\cap B|\). The total number of elements in A and B is the sum of each minus the ones
+	that
+	are in both.</p>
+<p>\(|A\cup B \cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|A\cap C|+|A\cap B \cap C|\). The total number of elements
+	in
+	A, B, and C are the sum of the elements of each, minus the ones that are in both, plus the ones that are in
+	all
+	three.</p>
+<p>The natural question to this is how do you continue finding the cardinality of the union of more and more
+	sets.
+	This is the inclusion-exclusion principle within combinatorics. To find the cardinality of the union of n
+	sets,
+	include the cardinalities of the sets, then exclude the cardinalities of the pairwise intersections, then
+	include the cardinalities of the triple-wise intersections, and exclude the cardinalities or the
+	quadruple-wise
+	intersections, and so on, until the cardinality of the n-tuple-wise intersection is included (if n is odd)
+	or
+	excluded (if n is even).</p>
+\[\left\vert\bigcup_{i=1}^n A_i\right\vert=\sum_{\emptyset\neq J\subseteq
+\{1,...,n\}}(-1)^{|J|+1}\left\vert\bigcap_{j\in
+J}A_j\right\vert\]
+<h4>Partition of a set</h4>
+<p>A partition of a set A is a set of subsets \(\{A_1, A_2, ...,A_k\}\) such that the \(A_i\) are all disjoint
+	(the
+	intersection between any two sets is empty or \(\phi\), aka they do not overlap) and that fill up A.
+</p>
+<h4>Functions</h4>
+<p>Suppose A and B are sets and f: A->B is a function. Define \(\text{im}(f)=\{b\in B|b=f(a)\text{ for some
+	}a\in A\}\).
+	The image of the function is all the elements of b that comes from A transformed by the function. Define
+	\(f^{-1}(b)=\{a\in A | f(a)=b\}\). The inverse is the element in A that goes to b.</p>
 <h4>Commutative, associative</h4>
 <p>Commutative means you can write the same thing forwards and backwards (\(a+b=b+a\)), associative means you can
 	group
@@ -387,26 +508,53 @@ https://zbmath.org/classification/
 <p>When a number is a root and irrational, it is a surd. Not all roots are surd if they can be simplified to a
 	rational
 	number. \(\sqrt{2}\) is a surd, \(\sqrt{4}=2\) is not.</p>
-<h4>Quantifiers</h4>
-<p>The "for all" prefix is the universal quantifier, symbolized \(\forall\).</p>
-<p>The "there exists" quantifier is symbolized \(\exists\).</p>
-<a class="anchor" id="logic"></a>
-<li>Arithmetic and number theory</li>
-<pre>
-	-pre-numerical stage, concept of numbers
-	-natural numbers
-	-integers, rational numbers
-	-real numbers, complex numbers
-	-number theory
-	-measures and units
-	-ratio and proportion, percentages
-	-real life mathematics, practical arithmetic
-</pre>
-<a class="anchor" id="informal_geometry"></a>
-<li>Geometry</li>
+<div class="second">Equivalence relations</div>
+<p>An equivalence relation is a binary relation that is reflexive, symmetric and transitive. Reflexive means that it
+	is
+	equivalent to itself, symmetrical is a to b if and only if b to a, and transivity is if a to b and b to c then a
+	to
+	c.</p>
+<div class="first">Pre-numerical stage, concept of numbers</div><a class="anchor" id="concept"></a>
+<div class="second">Classification</div>
+<div class="second">Counting</div>
+<div class="second">Synchrony</div>
+<div class="second">One-to-one correspondence</div>
+<div class="second">Counting systematically</div>
+<div class="second">Subitizing</div>
+<div class="second">Conservation of numbers</div>
+<div class="second">Number value or cardinality</div>
+<div class="second">Zero and numbers beyond 10</div>
+<div class="first">Natural numbers</div><a class="anchor" id="natural"></a>
+<div class="first">Integers, rational numbers</div><a class="anchor" id="integer"></a>
+<div class="first">Real numbers, complex numbers</div><a class="anchor" id="real"></a>
+<div class="first">Number theory</div><a class="anchor" id="number"></a>
+<div class="first">Measures and units</div><a class="anchor" id="measure"></a>
+<div class="first">Ratio and proportion, percentages</div><a class="anchor" id="ratio"></a>
+<div class="first">Real-life mathematics, practical arithmetic</div><a class="anchor" id="practical"></a>
+<div class="first">Informal geometry</div><a class="anchor" id="informal"></a>
 <p>3D rotations are not commutative.</p>
-<p>Before the 16th century, mathematics was divided only into arithmetic and geometry.</p>
-<li>Algebra</li>
+<div class="first">Area and volume</div><a class="anchor" id="area"></a>
+<div class="first">Plane and solid geometry</div><a class="anchor" id="plane"></a>
+<div class="first">Transformation geometry</div><a class="anchor" id="transformation"></a>
+<div class="first">Plane and spherical trigonometry</div><a class="anchor" id="trigonometry"></a>
+<p>Trigonometry, or "measurement of triangles" is the branch of math that studies side lengths and angles of
+	triangles. Became more popular due to the demands of navigation and the need for maps of large areas.
+</p>
+<img src="{{ url_for('static', filename='img/math/trig.png') }}" width=400>
+<h4>Law of cosines</h4>
+<p>The law of cosines, or cosine formula, or al-Kashi's theorem, relates the lengths of the sides of a
+	triangle
+	to
+	the cosine of one of its angles. It states that, given a triangle with an angle between two side lengths
+	a
+	and
+	b, then \(c^2=a^2+b^2-2ab\cos{\theta}\). This is a generalization of the Pythagorean theorem, and
+	reduces to
+	the
+	Pythagorean them if the angle is a right angle.</p>
+<div class="first">Analytic geometry, vector algebra</div><a class="anchor" id="analytic_geometry"></a>
+<div class="first">Descriptive geometry</div><a class="anchor" id="descriptive"></a>
+<div class="first">Elementary algebra</div><a class="anchor" id="elementary"></a>
 <li>So let's discuss algebra real quick. The word itself is about the 'reunion of broken parts'... an Arabic word.
 	It's
 	about the study of symbols. You can divide algebra into elementary algebra and abstract algebra. Elementary
@@ -417,16 +565,10 @@ https://zbmath.org/classification/
 	abstracted
 	them into groups, rings, and fields, which we will look at later. Algebra is pretty much foundational to all of
 	math.</li>
-<pre>
-	-elementary algebra
-</pre>
-<a class="anchor" id="trigonometry"></a>
-<li>Trigonometry</li>
-<p>Trigonometry, or "measurement of triangles" is the branch of math that studies side lengths and angles of
-	triangles. Became more popular due to the demands of navigation and the need for maps of large areas.
-</p>
-<img src="{{ url_for('static', filename='img/math/trig.png') }}" width=400>
-<a class="anchor" id="elementary"></a>
+<h4>Fundamental Theorem of Algebra</h4>
+<p>Polynomials with complex coefficients factor into linear polynomials with complex coefficients. The factorization
+	is
+	unique.</p>
 <h4>Binomial theorem</h4>
 <p>The binomial theorem, or binomial expansion, describes the algebraic expansion of powers of a binomial. According
 	to
@@ -469,19 +611,10 @@ n}x^0y^n+\]
 	a factor of our polynomial. Do long division and we can now simplify \(p(x)=(x-2)(x^2+7x+12)\). We can simplify
 	the
 	binomial further to get a final factor.</p>
-<h4>Law of cosines</h4>
-<p>The law of cosines, or cosine formula, or al-Kashi's theorem, relates the lengths of the sides of a
-	triangle
-	to
-	the cosine of one of its angles. It states that, given a triangle with an angle between two side lengths
-	a
-	and
-	b, then \(c^2=a^2+b^2-2ab\cos{\theta}\). This is a generalization of the Pythagorean theorem, and
-	reduces to
-	the
-	Pythagorean them if the angle is a right angle.</p>
-<a class="anchor" id="linear"></a>
-<h2>Linear Algebra</h2>
+<div class="first">Equations and inequalities</div><a class="anchor" id="equation"></a>
+<div class="first">Groups, rings, fields</div><a class="anchor" id="group"></a>
+<div class="first">Ordered algebraic structures</div><a class="anchor" id="ordered"></a>
+<div class="first">Linear algebra</div><a class="anchor" id="linear"></a>
 <p>Information provided from <a href="https://joshua.smcvt.edu/linearalgebra/" target="_blank">Jim Hefferson's
 		Linear
 		Algebra book</a> and <a
@@ -1216,10 +1349,6 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	coefficients. That factorization is unique; any two factorizations have the same factors raised to the same
 	powers.
 </p>
-<h4>Fundamental Theorem of Algebra</h4>
-<p>Polynomials with complex coefficients factor into linear polynomials with complex coefficients. The factorization
-	is
-	unique.</p>
 <h4>Similarity</h4>
 <p>We considered matrices to be matrix equivalent if you can convert the matrix to the other with nonsingular
 	matrices.
@@ -1328,14 +1457,8 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	space)
 	is \(\mathscr{R}_\infty(t)=\mathscr{R}(t^n)\). The generalized null space (or closure of the null space) is
 	\(\mathscr{N}_\infty(t)=\mathscr{N}(t^n)\).</p>
-<a class="anchor" id="mapping"></a>
-<li>Analysis</li>
-<pre>
-	-mappings and functions
-	-sequences and series
-</pre>
-<a class="anchor" id="sequences"></a>
-<h3>Sequences and summations</h3>
+<div class="first">Mappings and functions</div><a class="anchor" id="mapping"></a>
+<div class="first">Sequences and series</div><a class="anchor" id="sequence"></a>
 <h4>Sequences</h4>
 <p>A sequence is a function from a subset of the set of integers to a set \(S\). We use the notation \(a_n\) to
 	denote
@@ -1397,15 +1520,7 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <p>\[\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\]where \(f^{(n)}(a)\) denotes the nth derivative of f evaluated
 	at
 	the point a. When \(a=0\), the series is also called a Maclaurin series.</p>
-<pre>
-	-differential calculus - differential and integral calculus is important for understanding the derivation of the Nernst equation, which describes the membrane potential, need derivatives for everything (calculating inductors)
-	-integral calculus
-	-functions of several variables
-	-functional equations
-	-complex analysis
-</pre>
-<a class="anchor" id="differential"></a>
-<h2>Calculus</h2>
+<div class="first">Differential calculus</div><a class="anchor" id="differential"></a>
 <h4>Limits</h4>
 <p>Sometimes we can't work something out directly, but we can see what it should be as we get closer and closer. For
 	example, \(\frac{x^2-1}{x-1}\) cannot be evaluated at \(x=1\). However, if we plug in 0.99999, we'll find that
@@ -1516,7 +1631,8 @@ $$y'=-1/x^2$$
 	more
 	indepedent variables. The Order is the highest derivative. The degree is the exponent of the highest derivative.
 	When the variable has no exponent or other function put on it, it is linear.</p>
-<a class="anchor" id="integral"></a>
+<div class="first">Integral calculus</div><a class="anchor" id="integral"></a>
+
 <h4>Indefinite Integrals</h4>
 <p>Now that we've gone through derivatives, let's now do it backwards. The question is... what function did
 	we
@@ -1687,69 +1803,10 @@ $$-2x\frac{x^8+1}{x^4+1}$$
 	units
 	into
 	seconds first. And that's kind of what we've done. (Unfinished, will need to think about more.)</p>
-<a class="anchor" id="combinatorics"></a>
-<li>Combinatorics</li>
-<li>Graph theory</li>
-<li>Descriptive statistics</li>
-<li>Probability theory</li>
-<li>Distributions and stochastic processes</li>
-
-<li>Calculus</li>
-<li>Infinitesimal calculus was added as a subfield of math around the 17th century.</li>
-<li>Probability</li>
-<h4>Sets</h4>
-<p>A set A is a collection of mathematical/everyday elements. e.g. \(A={1,2,5,a}\). The size or cardinality of
-	\(A=|A|\) is the
-	number of elements in the set.</p>
-<p>\(A\cup B=\{x|x\in A \text{ or }x\in B\}\). The union of two sets is all x which is in either sets or is in
-	both.
-</p>
-<p>\(A\cap B=\{x|x\in A \text{ and } x\in B\}\). The intersection of two sets is all x which is in both sets.
-</p>
-<p>\(A^C=\{x\in U|x \not\in A\}\). The complement of A is the set that is not in A and is in some universal set
-	U.
-</p>
-<p>\(A\setminus B=\{x|x\in A \text{ and } x \not\in B\}\). This is the difference in the two sets.</p>
-<p>A subset is such that: \(C\subseteq
-	B\)
-	means \(x\in C \rightarrow
-	x\in B\) (if x is in C then x is in B).</p>
-<h4>Laws of set operations</h4>
-<p>\(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\)</p>
-<p>\(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\)</p>
-<p>These are seen as distributive laws.</p>
-<h4>Inclusion/exclusion</h4>
-<p>\(|A\cup B|=|A|+|B|-|A\cap B|\). The total number of elements in A and B is the sum of each minus the ones
-	that
-	are in both.</p>
-<p>\(|A\cup B \cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|A\cap C|+|A\cap B \cap C|\). The total number of elements
-	in
-	A, B, and C are the sum of the elements of each, minus the ones that are in both, plus the ones that are in
-	all
-	three.</p>
-<p>The natural question to this is how do you continue finding the cardinality of the union of more and more
-	sets.
-	This is the inclusion-exclusion principle within combinatorics. To find the cardinality of the union of n
-	sets,
-	include the cardinalities of the sets, then exclude the cardinalities of the pairwise intersections, then
-	include the cardinalities of the triple-wise intersections, and exclude the cardinalities or the
-	quadruple-wise
-	intersections, and so on, until the cardinality of the n-tuple-wise intersection is included (if n is odd)
-	or
-	excluded (if n is even).</p>
-\[\left\vert\bigcup_{i=1}^n A_i\right\vert=\sum_{\emptyset\neq J\subseteq
-\{1,...,n\}}(-1)^{|J|+1}\left\vert\bigcap_{j\in
-J}A_j\right\vert\]
-<h4>Partition of a set</h4>
-<p>A partition of a set A is a set of subsets \(\{A_1, A_2, ...,A_k\}\) such that the \(A_i\) are all disjoint
-	(the
-	intersection between any two sets is empty or \(\phi\), aka they do not overlap) and that fill up A.
-</p>
-<h4>Functions</h4>
-<p>Suppose A and B are sets and f: A->B is a function. Define \(\text{im}(f)=\{b\in B|b=f(a)\text{ for some
-	}a\in A\}\).
-	The image of the function is all the elements of b that comes from A transformed by the function. Define
-	\(f^{-1}(b)=\{a\in A | f(a)=b\}\). The inverse is the element in A that goes to b.</p>
+<div class="first">Functions of several variables</div><a class="anchor" id="function"></a>
+<div class="first">Functional equations</div><a class="anchor" id="functional"></a>
+<div class="first">Complex analysis</div><a class="anchor" id="complex"></a>
+<div class="first">Combinatorics</div><a class="anchor" id="combinatorics"></a>
 <h4>Permutations and combinations</h4>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ohsRp6kZ6-0" title="YouTube video player"
 	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1893,7 +1950,50 @@ J}A_j\right\vert\]
 	difficult.
 	But
 	also makes it super interesting!</p>
-<a class="anchor" id="probability"></a>
+<div class="first">Graph theory</div><a class="anchor" id="graph"></a>
+<div class="first">Descriptive statistics</div><a class="anchor" id="descriptive"></a>
+<h4>Student's t-test</h4>
+<p>William Sealy Gosset was working at Guiness brewery and developed a test to determine the difference for
+	things,
+	say, barley growth. He wanted to publish the test but the company was nervous that he would reveal
+	secrets,
+	so
+	he published under the pseudonym "Student."</p>
+<p>Imagine you have two fields of barley. If you sample one field, you can get the height of each piece of
+	barley
+	and you can make a distribution of the heights. Do the same for the other. We could compare the means of
+	the
+	two
+	distributions, but that only tells us so much. The means could be super far apart, but the variability
+	of
+	each
+	sample could be so big that there isn't actually a real difference between the two fields. So we create
+	the
+	t-value, which is a ratio of signal to noise.</p>
+$$\frac{\text{signal}}{\text{noise}}=\frac{\text{difference between group means}}{\text{variability of
+groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}$$
+<p>Once you get the t-value, you can use a t-table to find the value of t that gives you p=0.05 (inferential
+	statistic) for the specific degree of freedom \(df=n_1+n_2-2\).</p>
+<p>The aforementioned example is an independent (unpaired) t-test. But you can also do a paired t-test if,
+	for
+	example, you're sampling the same population twice, so that each datapoint has a corresponding datapoint
+	in
+	the
+	other sample. A two-tailed t-test splits the 0.05 into both tails making each side 0.025.</p>
+<p>Assumptions require normal distribution, similar variance in the two samples, and there should be the
+	same
+	number
+	of datapoints in each sample, and there should be 20-30 samples.</p>
+<h4>ANOVA</h4>
+<p>ANOVA can be used for measurements of more than two groups. The general linear model framework is \(data
+	=
+	model
+	+ error\). ANOVA means ANalysis Of Variance. Sums of squares total (SST) is the number of datapoints
+	times
+	the
+	variance. \(Variance = \frac{SST}{N}\)</p>
+<div class="first">Probability theory</div><a class="anchor" id="probability"></a>
+
 <h4>Probability and odds</h4>
 <p>The probability is the number of ways to reach a certain outcome \(O\) out of all possibilities. The probability
 	is
@@ -1990,6 +2090,7 @@ J}A_j\right\vert\]
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pd4tHt2Hi3s" title="YouTube video player"
 	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 	allowfullscreen></iframe>
+<div class="first">Distributions and stochastic processes</div><a class="anchor" id="distribution"></a>
 <h4>Random variables, probability distribution, mean, variance</h4>
 <p>A random variable \(X\) is a function on a probability space \((S,P)\) i.e. \(X:S\rightarrow \mathbb{R}\). To
 	every
@@ -2137,49 +2238,11 @@ J}A_j\right\vert\]
 	of
 	averages approaches a
 	normal distribution.</p>
-<li>Combinatorics: the area of mathematics concerned with counting. Involves enumeration (counting). Can be
-	confusing because we are no longer talking about numbers, but about non-numerical objects, which we
-	count,
-	but
-	convert those objects into numbers.</li>
-<h4>Student's t-test</h4>
-<p>William Sealy Gosset was working at Guiness brewery and developed a test to determine the difference for
-	things,
-	say, barley growth. He wanted to publish the test but the company was nervous that he would reveal
-	secrets,
-	so
-	he published under the pseudonym "Student."</p>
-<p>Imagine you have two fields of barley. If you sample one field, you can get the height of each piece of
-	barley
-	and you can make a distribution of the heights. Do the same for the other. We could compare the means of
-	the
-	two
-	distributions, but that only tells us so much. The means could be super far apart, but the variability
-	of
-	each
-	sample could be so big that there isn't actually a real difference between the two fields. So we create
-	the
-	t-value, which is a ratio of signal to noise.</p>
-$$\frac{\text{signal}}{\text{noise}}=\frac{\text{difference between group means}}{\text{variability of
-groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}$$
-<p>Once you get the t-value, you can use a t-table to find the value of t that gives you p=0.05 (inferential
-	statistic) for the specific degree of freedom \(df=n_1+n_2-2\).</p>
-<p>The aforementioned example is an independent (unpaired) t-test. But you can also do a paired t-test if,
-	for
-	example, you're sampling the same population twice, so that each datapoint has a corresponding datapoint
-	in
-	the
-	other sample. A two-tailed t-test splits the 0.05 into both tails making each side 0.025.</p>
-<p>Assumptions require normal distribution, similar variance in the two samples, and there should be the
-	same
-	number
-	of datapoints in each sample, and there should be 20-30 samples.</p>
-<h4>ANOVA</h4>
-<p>ANOVA can be used for measurements of more than two groups. The general linear model framework is \(data
-	=
-	model
-	+ error\). ANOVA means ANalysis Of Variance. Sums of squares total (SST) is the number of datapoints
-	times
-	the
-	variance. \(Variance = \frac{SST}{N}\)
-	{% endblock %}
+<div class="first">Foundations and methodology of statistics</div><a class="anchor" id="statistics"></a>
+<div class="first">Applied statistics</div><a class="anchor" id="applied"></a>
+<div class="first">Natural</div><a class="anchor" id="natural"></a>
+<div class="first">Natural</div><a class="anchor" id="natural"></a>
+<div class="first">Natural</div><a class="anchor" id="natural"></a>
+<div class="first">Natural</div><a class="anchor" id="natural"></a>
+<div class="first">Natural</div><a class="anchor" id="natural"></a>
+{% endblock %}

@@ -211,6 +211,14 @@
 			</div>
 		</div>
 	</a>
+	<a href="{{ url_for('main.learn', subject='psychology', chapter='index') }}">
+		<div class="case-study study1 overlay2"
+			style="background-image: url('https://neuralhuborg.s3.amazonaws.com/img/gorilla.jpg')">
+			<div class="text">
+				<h3>Psychology</h3>
+			</div>
+		</div>
+	</a>
 	<a href="{{ url_for('main.learn', subject='neuroscience', chapter='index') }}">
 		<div class="case-study study1 overlay2"
 			style="background-image: url({{ url_for('static', filename='img/mart.jpg')}})">
@@ -232,6 +240,14 @@
 			style="background-image: url({{ url_for('static', filename='img/mechanics.jpg')}})">
 			<div class="text">
 				<h3>Mechanical engineering</h3>
+			</div>
+		</div>
+	</a>
+	<a href="{{ url_for('main.learn', subject='biomedical_engineering', chapter='index') }}">
+		<div class="case-study study1 overlay2"
+			style="background-image: url('https://neuralhuborg.s3.amazonaws.com/img/hand.jpg')">
+			<div class="text">
+				<h3>Biomedical engineering</h3>
 			</div>
 		</div>
 	</a>

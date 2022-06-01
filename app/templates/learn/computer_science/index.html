@@ -5,7 +5,268 @@
   .size {
     font-size: 130%;
   }
+
+  p,
+  button {
+    font-size: 100%;
+  }
+
+  #integer1_remove {
+    display: none;
+  }
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    position: fixed;
+    margin-left: -375px;
+    border-left: 8px solid #c8dce3;
+    background-color: #fff;
+    overflow-y: scroll;
+  }
+
+  .sidebar {
+    width: 350px;
+    height: 85vh;
+  }
+
+  .core {
+    padding: 7px;
+    width: 100%;
+    background-color: beige;
+    font-size: larger;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .core:first-child {
+    margin-top: 0px;
+  }
+
+  .topic {
+    padding-left: 15px;
+  }
+
+  .topic a {
+    color: #333333;
+  }
+
+  .topic a:hover {
+    text-decoration: underline;
+  }
+
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 8px;
+    /* width of the entire scrollbar */
+  }
+
+  .sidebar::-webkit-scrollbar-track {
+    background: beige;
+    /* color of the tracking area */
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #c8dce3;
+    /* color of the scroll thumb */
+    /* roundness of the scroll thumb */
+    border: 3px solid #c8dce3;
+    /* creates padding around scroll thumb */
+  }
 </style>
+
+<div class="sidebar">
+  <div class="core">Algorithms and complexity</div>
+  <div class="topic"><a href="#sets">Basic analysis</a></div>
+  <div class="topic"><a href="#sets">Algorithmic strategies</a></div>
+  <div class="topic"><a href="#sets">Fundamental data structures and algorithms</a></div>
+  <div class="topic"><a href="#sets">Basic automata, computability and complexity</a></div>
+  <div class="topic"><a href="#sets">Advanced computational complexity</a></div>
+  <div class="topic"><a href="#sets">Advanced automata theory and computability</a></div>
+  <div class="topic"><a href="#sets">Advanced data structures, algorithms, and analysis</a></div>
+  <div class="core">Architecture and organization</div>
+  <div class="topic"><a href="#sets">Digital logic and digital systems</a></div>
+  <div class="topic"><a href="#sets">Machine level representation of data</a></div>
+  <div class="topic"><a href="#sets">Assembly level machine organization</a></div>
+  <div class="topic"><a href="#sets">Memory system organization and architecture</a></div>
+  <div class="topic"><a href="#sets">Interfacing and communication</a></div>
+  <div class="topic"><a href="#sets">Functional organization</a></div>
+  <div class="topic"><a href="#sets">Multiprocessing and alternative architectures</a></div>
+  <div class="topic"><a href="#sets">Performance enhancements</a></div>
+  <div class="core">Computational science</div>
+  <div class="topic"><a href="#sets">Introduction to modeling and simulation</a></div>
+  <div class="topic"><a href="#sets">Modeling and simulation</a></div>
+  <div class="topic"><a href="#sets">Processing</a></div>
+  <div class="topic"><a href="#sets">Interactive visualization</a></div>
+  <div class="topic"><a href="#sets">Data, information, and knowledge</a></div>
+  <div class="topic"><a href="#sets">Numerical analysis</a></div>
+  <div class="core">Discrete structures</div>
+  <div class="topic"><a href="#sets">Sets, relations, and functions</a></div>
+  <div class="topic"><a href="#sets">Basic logic</a></div>
+  <div class="topic"><a href="#sets">Proof techniques</a></div>
+  <div class="topic"><a href="#sets">Basics of counting</a></div>
+  <div class="topic"><a href="#sets">Graphs and trees</a></div>
+  <div class="topic"><a href="#sets">Discrete probability</a></div>
+  <div class="core">Graphics and visualization</div>
+  <div class="topic"><a href="#sets">Fundamental concepts</a></div>
+  <div class="topic"><a href="#sets">Basic rendering</a></div>
+  <div class="topic"><a href="#sets">Geometric modeling</a></div>
+  <div class="topic"><a href="#sets">Advanced rendering</a></div>
+  <div class="topic"><a href="#sets">Computer animation</a></div>
+  <div class="topic"><a href="#sets">Visualization</a></div>
+  <div class="core">Human-computer interaction</div>
+  <div class="topic"><a href="#sets">Foundations</a></div>
+  <div class="topic"><a href="#sets">Designing interaction</a></div>
+  <div class="topic"><a href="#sets">Programming interactive systems</a></div>
+  <div class="topic"><a href="#sets">User-centered design & testing</a></div>
+  <div class="topic"><a href="#sets">New interactive technologies</a></div>
+  <div class="topic"><a href="#sets">Collaboration & communication</a></div>
+  <div class="topic"><a href="#sets">Statistical methods for HCI</a></div>
+  <div class="topic"><a href="#sets">Human factors & security</a></div>
+  <div class="topic"><a href="#sets">Design-oriented HCI</a></div>
+  <div class="topic"><a href="#sets">Mixed, augmented and virtual reality</a></div>
+  <div class="core">Information assurance and security</div>
+  <div class="topic"><a href="#sets">Foundational concepts in security</a></div>
+  <div class="topic"><a href="#sets">Principles of secure design</a></div>
+  <div class="topic"><a href="#sets">Defensive programming</a></div>
+  <div class="topic"><a href="#sets">Threats and attacks</a></div>
+  <div class="topic"><a href="#sets">Network security</a></div>
+  <div class="topic"><a href="#sets">Cryptography</a></div>
+  <div class="topic"><a href="#sets">Web security</a></div>
+  <div class="topic"><a href="#sets">Platform security</a></div>
+  <div class="topic"><a href="#sets">Security policy and governance</a></div>
+  <div class="topic"><a href="#sets">Digital forensics</a></div>
+  <div class="topic"><a href="#sets">Secure software engineering</a></div>
+  <div class="core">Information management</div>
+  <div class="topic"><a href="#sets">Information management concepts</a></div>
+  <div class="topic"><a href="#sets">Database systems</a></div>
+  <div class="topic"><a href="#sets">Data modeling</a></div>
+  <div class="topic"><a href="#sets">Indexing</a></div>
+  <div class="topic"><a href="#sets">Relational databases</a></div>
+  <div class="topic"><a href="#sets">Query languages</a></div>
+  <div class="topic"><a href="#sets">Transaction processing</a></div>
+  <div class="topic"><a href="#sets">Distributed databases</a></div>
+  <div class="topic"><a href="#sets">Physical database design</a></div>
+  <div class="topic"><a href="#sets">Data mining</a></div>
+  <div class="topic"><a href="#sets">Information storage and retrieval</a></div>
+  <div class="topic"><a href="#sets">Multimedia systems</a></div>
+  <div class="core">Intelligent systems</div>
+  <div class="topic"><a href="#sets">Fundamental issues</a></div>
+  <div class="topic"><a href="#sets">Basic search strategies</a></div>
+  <div class="topic"><a href="#sets">Basic knowledge representation and reasoning</a></div>
+  <div class="topic"><a href="#sets">Basic machine learning</a></div>
+  <div class="topic"><a href="#sets">Advanced search</a></div>
+  <div class="topic"><a href="#sets">Advanced representation and reasoning</a></div>
+  <div class="topic"><a href="#sets">Reasoning under uncertainty</a></div>
+  <div class="topic"><a href="#sets">Agents</a></div>
+  <div class="topic"><a href="#sets">Natural language processing</a></div>
+  <div class="topic"><a href="#sets">Advanced machine learning</a></div>
+  <div class="topic"><a href="#sets">Robotics</a></div>
+  <div class="topic"><a href="#sets">Perception and computer vision</a></div>
+  <div class="core">Networking and communication</div>
+  <div class="topic"><a href="#sets">Introduction</a></div>
+  <div class="topic"><a href="#sets">Networked applications</a></div>
+  <div class="topic"><a href="#sets">Reliable data delivery</a></div>
+  <div class="topic"><a href="#sets">Routing and forwarding</a></div>
+  <div class="topic"><a href="#sets">Local area networks</a></div>
+  <div class="topic"><a href="#sets">Resource allocation</a></div>
+  <div class="topic"><a href="#sets">Mobility</a></div>
+  <div class="topic"><a href="#sets">Social networking</a></div>
+  <div class="core">Operating systems</div>
+  <div class="topic"><a href="#sets">Overview of operating systems</a></div>
+  <div class="topic"><a href="#sets">Operating system principles</a></div>
+  <div class="topic"><a href="#sets">Concurrency</a></div>
+  <div class="topic"><a href="#sets">Scheduling and dispatch</a></div>
+  <div class="topic"><a href="#sets">Memory management</a></div>
+  <div class="topic"><a href="#sets">Security and protection</a></div>
+  <div class="topic"><a href="#sets">Virtual machines</a></div>
+  <div class="topic"><a href="#sets">Device management</a></div>
+  <div class="topic"><a href="#sets">File systems</a></div>
+  <div class="topic"><a href="#sets">Real time and embedded systems</a></div>
+  <div class="topic"><a href="#sets">Fault tolerance</a></div>
+  <div class="topic"><a href="#sets">System performance evaluation</a></div>
+  <div class="core">Platform-based development</div>
+  <div class="topic"><a href="#sets">Introduction</a></div>
+  <div class="topic"><a href="#sets">Web platforms</a></div>
+  <div class="topic"><a href="#sets">Mobile platforms</a></div>
+  <div class="topic"><a href="#sets">Industrial platforms</a></div>
+  <div class="topic"><a href="#sets">Game platforms</a></div>
+  <div class="core">Parallel and distributed computing</div>
+  <div class="topic"><a href="#sets">Parallelism fundamentals</a></div>
+  <div class="topic"><a href="#sets">Parallel decomposition</a></div>
+  <div class="topic"><a href="#sets">Communciation and coordination</a></div>
+  <div class="topic"><a href="#sets">Parallel algorithm, analysis, and programming</a></div>
+  <div class="topic"><a href="#sets">Parallel architecture</a></div>
+  <div class="topic"><a href="#sets">Parallel performance</a></div>
+  <div class="topic"><a href="#sets">Distributed systems</a></div>
+  <div class="topic"><a href="#sets">Cloud computing</a></div>
+  <div class="topic"><a href="#sets">Formal models and semantics</a></div>
+  <div class="core">Programming languages</div>
+  <div class="topic"><a href="#sets">Object-oriented programming</a></div>
+  <div class="topic"><a href="#sets">Functional programming</a></div>
+  <div class="topic"><a href="#sets">Event-driven and reactive programming</a></div>
+  <div class="topic"><a href="#sets">Basic type systems</a></div>
+  <div class="topic"><a href="#sets">Program representation</a></div>
+  <div class="topic"><a href="#sets">Language translation and execution</a></div>
+  <div class="topic"><a href="#sets">Syntax analysis</a></div>
+  <div class="topic"><a href="#sets">Compiler semantic analysis</a></div>
+  <div class="topic"><a href="#sets">Code generation</a></div>
+  <div class="topic"><a href="#sets">Runtime systems</a></div>
+  <div class="topic"><a href="#sets">Static analysis</a></div>
+  <div class="topic"><a href="#sets">Advanced programming constructs</a></div>
+  <div class="topic"><a href="#sets">Concurrency and parallelism</a></div>
+  <div class="topic"><a href="#sets">Type systems</a></div>
+  <div class="topic"><a href="#sets">Formal semantics</a></div>
+  <div class="topic"><a href="#sets">Language pragmatics</a></div>
+  <div class="topic"><a href="#sets">Logic programming</a></div>
+  <div class="core">Software developmental fundamentals</div>
+  <div class="topic"><a href="#sets">Algorithms and design</a></div>
+  <div class="topic"><a href="#sets">Fundamental programming concepts</a></div>
+  <div class="topic"><a href="#sets">Fundamental data structures</a></div>
+  <div class="topic"><a href="#sets">Development methods</a></div>
+  <div class="core">Software engineering</div>
+  <div class="topic"><a href="#sets">Software processes</a></div>
+  <div class="topic"><a href="#sets">Software project management</a></div>
+  <div class="topic"><a href="#sets">Tools and environments</a></div>
+  <div class="topic"><a href="#sets">Requirements engineering</a></div>
+  <div class="topic"><a href="#sets">Software design</a></div>
+  <div class="topic"><a href="#sets">Software construction</a></div>
+  <div class="topic"><a href="#sets">Software verification and validation</a></div>
+  <div class="topic"><a href="#sets">Software evolution</a></div>
+  <div class="topic"><a href="#sets">Software reliability</a></div>
+  <div class="topic"><a href="#sets">Formal methods</a></div>
+  <div class="core">Systems fundamentals</div>
+  <div class="topic"><a href="#sets">Computational paradigms</a></div>
+  <div class="topic"><a href="#sets">Cross-layer communications</a></div>
+  <div class="topic"><a href="#sets">State and state machines</a></div>
+  <div class="topic"><a href="#sets">Parallelism</a></div>
+  <div class="topic"><a href="#sets">Evaluation</a></div>
+  <div class="topic"><a href="#sets">Resource allocation and scheduling</a></div>
+  <div class="topic"><a href="#sets">Proximity</a></div>
+  <div class="topic"><a href="#sets">Virtualization and isolation</a></div>
+  <div class="topic"><a href="#sets">Reliability through redundancy</a></div>
+  <div class="topic"><a href="#sets">Quantitative evaluation</a></div>
+  <div class="core">Social issues and professional practice</div>
+  <div class="topic"><a href="#sets">Social context</a></div>
+  <div class="topic"><a href="#sets">Analytical tools</a></div>
+  <div class="topic"><a href="#sets">Professional ethics</a></div>
+  <div class="topic"><a href="#sets">Intellectual property</a></div>
+  <div class="topic"><a href="#sets">Privacy and civil liberties</a></div>
+  <div class="topic"><a href="#sets">Professional communication</a></div>
+  <div class="topic"><a href="#sets">Sustainability</a></div>
+  <div class="topic"><a href="#sets">History</a></div>
+  <div class="topic"><a href="#sets">Economies of computing</a></div>
+  <div class="topic"><a href="#sets">Security policies, laws and computer crimes</a></div>
+</div>
 
 <h4>Kernel</h4>
 <p>The kernel is a computer progrma at the core of a computer's operating system that generally has complete control
