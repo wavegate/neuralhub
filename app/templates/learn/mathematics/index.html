@@ -6,10 +6,14 @@
 <style>
 	.first {
 		font-size: 24px;
+		line-height: 30px;
+		margin: 30px 0 15px;
 	}
 
 	.second {
 		font-size: 20px;
+		line-height: 30px;
+		margin: 30px 0 15px;
 	}
 
 	p,
@@ -199,6 +203,12 @@
 <h2>Logic</h2>-->
 <div class="first">Logic</div><a class="anchor" id="logic"></a>
 <div class="second">Propositional logic</div>
+<h4>Axioms</h4>
+<p>An axiom refers to both "logical axioms," which are statements taken to be true within the system of logic they
+	define and are often shown in symbolic form, as well as non-logical axioms, which are actually substantive
+	assertions about the elements of the domain of a specific mathematical theory. When used in the latter sense,
+	"axiom", "postulate", and "assumption" may be used interchangeably.</p>
+<div class="second">Common mathematical symbols</div>
 <p>Propositional logic, or zeroth order logic, is a language for math. The first set of symbols we need to learn is
 	about propositional logic. A proposition in this case is a statement which can take on two values: true or
 	false.
@@ -311,7 +321,6 @@ pure
 <div class="second">Negation normal form</div>
 <div class="second">Equivalence and equisatisfiability</div>
 <div class="first">Language of mathematics</div><a class="anchor" id="language"></a>
-<div class="second">Common mathematical symbols</div>
 +, -, x, division, = sign
 <div class="second">Variables</div>
 subscript
@@ -525,9 +534,35 @@ J}A_j\right\vert\]
 <div class="second">Number value or cardinality</div>
 <div class="second">Zero and numbers beyond 10</div>
 <div class="first">Natural numbers</div><a class="anchor" id="natural"></a>
+<p>The elements of the set of natural numbers:\[\mathbb{N}=\{1,2,3,4,5,...\}\]are the numbers we use for counting. They
+	come equipped with an ordering and also come equipped with the:</p>
+<p>Well-ordered axiom: Every set of natural numbers except the empty set has a smallest element.</p>
+<h4>Principle of induction</h4>
+<p>If \(S\) is a subset of \(\mathbb{N}\), such that (i) \(1\in S\) and (ii) whenever \(n\in S\), the next number after
+	\(n\) is also an element of \(S\), then \(S\) is equal to \(\mathbb{N}\), the set of all natural numbers.</p>
+<h4>Making definitions by induction</h4>
+<p>A function \(f\) whose domain is \(\mathbb{N}\) may be defined in two steps: (i) define \(f(1)\) and (ii) define
+	each \(f(n+1)\), possibly using a previous definition of \(f(n)\). The domain of the function \(f\) is then a subset
+	of \(\mathbb{N}\) that contains \(1\) by (i), and whenever \(n\) is in the domain, then \(n+1\) is also in the
+	domain by (ii). Therefore the domain of \(f\) is \(\mathbb{N}\), by the principle of induction.</p>
+<h4>Primes</h4>
+<p>A natural number \(p\) (other than 1) is prime if the only numbers that divide \(p\) are 1 and \(p\) itself. The
+	primes are the building blocks of the natural numbers much like the elements are the building block of the
+	molecules. The factorization of a number into a product of primes is unique. If you are given a very large computer,
+	there is no known algorithm for factoring it quickly as a product of primes.</p>
+<h4>Fundamental theorem of arithmetic</h4>
+<p>Every natural number except 1 factors as a product of prime numbers.</p>
+<h4>Euclid</h4>
+<p>There are infinitely many prime numbers.</p>
 <div class="first">Integers, rational numbers</div><a class="anchor" id="integer"></a>
+<p>The elements of the set of integers: \[\mathbb{Z}=\{...,-5,-4,-3,-2,-1,0,1,2,3,4,5,...\}\]consist of three types of
+	numbers: (i) the natural numbers, the negative integers, and the number \(0\).</p>
 <div class="first">Real numbers, complex numbers</div><a class="anchor" id="real"></a>
+<p>The real numbers: \[\mathbb{R}=\{\text{numbers on the number-line\}\]require some real analysis for a "proper"
+	definition.</p>
 <div class="first">Number theory</div><a class="anchor" id="number"></a>
+<p>Number theory, or arithmetic, is a branch of pure mathematics devoted primarily to the study of the integers and
+	integer-valued functions.</p>
 <div class="first">Measures and units</div><a class="anchor" id="measure"></a>
 <div class="first">Ratio and proportion, percentages</div><a class="anchor" id="ratio"></a>
 <div class="first">Real-life mathematics, practical arithmetic</div><a class="anchor" id="practical"></a>
@@ -537,6 +572,14 @@ J}A_j\right\vert\]
 <div class="first">Plane and solid geometry</div><a class="anchor" id="plane"></a>
 <div class="first">Transformation geometry</div><a class="anchor" id="transformation"></a>
 <div class="first">Plane and spherical trigonometry</div><a class="anchor" id="trigonometry"></a>
+<h4>Polar coordinates</h4>
+<p>For problems involving directions from a fixed origin (or pole) \(O\), it is often convenient to a specify a point
+	\(P\) by its polar coordinates \((r,\theta)\), where \(r\) is the distance \(OP\) and \(\theta\) is the angle that
+	the direction of \(r\) makes with a given initial line. Given the Cartesian equation for a curve, the polar equatoin
+	for the same curve can be obtained by substituting \(r\cos \theta\) and \(r\sin \theta\) for \(x\) and \(y\),
+	respectively.</p>
+<h4>Law of sines</h4>
+\[\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}\]
 <p>Trigonometry, or "measurement of triangles" is the branch of math that studies side lengths and angles of
 	triangles. Became more popular due to the demands of navigation and the need for maps of large areas.
 </p>
@@ -555,6 +598,59 @@ J}A_j\right\vert\]
 <div class="first">Analytic geometry, vector algebra</div><a class="anchor" id="analytic_geometry"></a>
 <div class="first">Descriptive geometry</div><a class="anchor" id="descriptive"></a>
 <div class="first">Elementary algebra</div><a class="anchor" id="elementary"></a>
+<h4>Parabolas</h4>
+<p>The graphs of quadratic functions are parabolas. All parabolas are vaguely "U" shaped and will have a highest or
+	lowest point called the vertex. Parabolas may open up or down and will always have a single y-intercept but may or
+	may not have x-intercepts. Every parabola has an axis of symmetry. In order to sketch a parabola, find the vertex,
+	then find the y-intercept, then solve \(f(x)=0\) to find the x-intercepts (if they exist). Find another point on the
+	other side of the vertex, and sketch the graph.</p>
+<p>The first form of the parabola is \[f(x)=a(x-h)^2+k\]where \(a\) tells us if the parabola opens up (if positive) or
+	down (if negative), and the vertex is the point \((h,k)\).</p>
+<p>Most parabolas, however, are in the form:\[f(x)=ax^2+bx+c\]where \(a\) again tells us whether the parabola opens
+	upwards or downwards, and the vertex is in the form \((-\frac{b}{2a},f(-\frac{b}{2a}))\), and we're given the
+	y-intercept for free as \((0,c)\).</p>
+<p>You can convert from the quadratic form to the first form by completing the square.</p>
+\[f(x)=ax^2+bx+c\]\[=a(x^2+\frac{b}{a}x+\frac{c}{a})\]\[=a(x^2+\frac{b}{a}x+(\frac{b}{2a})^2-(\frac{b}{2a})^2+\frac{c}{a})\]\[=a(x+\frac{b}{2a})^2-\frac{b^2}{4a}+c\]
+<h4>Ellipses</h4>
+<p>The standard form of an ellipse is:\[\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\]where the right side MUST be \(1\)
+	and the point \((h,k)\) is the center of the ellipse.</p>
+<p>To sketch the ellipse, you can obtain the right most point at \((h+a,k)\), the left most point at \((h-a,k)\), the
+	top most point at \((h,k+b)\), and the bottom most point at \((h,k-b)\).</p>
+<p>Note that circles are a special case of an ellipse where \(a=b\) and so the equation of a circle
+	is:\[(x-h)^2+(y-k)^2=a^2\]with a radius \(a\).</p>
+<h4>Hyperbolas</h4>
+<p>Hyperbolas look like two vaguely parabola shaped piees that open either up and down or right and left. Alongside them
+	are two lines called asymptotes that guide where the hyperbolas travel. The point where the two asymptotes cross is
+	called the center of the hyperbola. The standard form of the hyperbola
+	is:\[\frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1\]where the center is \((h,k)\), the hyperbola opens left and right,
+	the vertices are at \((h+a,k)\) and \((h-a,k)\), the slopes of the asymptotes are \(\pm\frac{b}{a}\) and the
+	equations of the asymptotes are \(y=k\pm \frac{b}{a}(x-h)\). The standard form for the hyperbola that opens up and
+	down is the same except swap x and y in the equation and then the vertices are \((h,k+b)\) and \((h,k-b)\).</p>
+<h4>Properties of logarithms</h4>
+\[\log_b 1=0\]
+\[\log_b b=1\]
+\[\log_b b^x=x\]
+\[\log_b b^{f(x)}=f(x)\]
+\[b^{\log_b x}=x\]
+\[b^{\log_b f(x)}=f(x)\]
+\[\log_b(xy)=\log_b x+\log_b y\]
+\[\log_b(\frac{x}{y})=\log_b x-\log_b y\]
+\[\log_b(x^y)=y\log_b x\]
+\[\text{If }\log_b(x)=\log_b y, \text{ then }x=y\]
+exponent properties, rational exponents, negative exponnets, radicals, polynomials, factoring, rational expressions,
+complex numbers
+solving equations and inequalities - linear equations, quadratic equations, completing the square, quadratic
+formula,
+applications of linear and quadratic equations, reducible to quadratic form, equations with radicals, linear
+inequalities, polynomial & rational inequalities, absolute vlaue equations & inequalities
+graphing and functions - graphing lines, circles, and picewise functions, function definition, function notation,
+function composition, inverse functions
+common graphs - parabolas, ellipses, hyperbolas, absolute value, square root, constant function, rational functions,
+shift, reflections, symmetry
+polynomial functions - dividing polynomials, zeroes/roots of polynomials, finding zeroes of polynomials, graphing
+polynomials, partial fractions
+exponential functions, logarithm functions, solving exponential functions, solving logarithm functions, applications
+systems of equations, substitution method, elimination method, augmented matrix, nonlinear systems
 <li>So let's discuss algebra real quick. The word itself is about the 'reunion of broken parts'... an Arabic word.
 	It's
 	about the study of symbols. You can divide algebra into elementary algebra and abstract algebra. Elementary

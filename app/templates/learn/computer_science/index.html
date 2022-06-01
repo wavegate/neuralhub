@@ -2,6 +2,18 @@
 
 {% block content %}
 <style>
+  .first {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 30px 0 15px;
+  }
+
+  .second {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 30px 0 15px;
+  }
+
   .size {
     font-size: 130%;
   }
@@ -85,6 +97,18 @@
 </style>
 
 <div class="sidebar">
+  <div class="core">Software developmental fundamentals</div>
+  <div class="topic"><a href="#algorithm_design">Algorithms and design</a></div>
+  <div class="topic"><a href="#fundamental_programming">Fundamental programming concepts</a></div>
+  <div class="topic"><a href="#fundamental_data">Fundamental data structures</a></div>
+  <div class="topic"><a href="#development_methods">Development methods</a></div>
+  <div class="core">Discrete structures</div>
+  <div class="topic"><a href="#sets">Sets, relations, and functions</a></div>
+  <div class="topic"><a href="#sets">Basic logic</a></div>
+  <div class="topic"><a href="#sets">Proof techniques</a></div>
+  <div class="topic"><a href="#sets">Basics of counting</a></div>
+  <div class="topic"><a href="#sets">Graphs and trees</a></div>
+  <div class="topic"><a href="#sets">Discrete probability</a></div>
   <div class="core">Algorithms and complexity</div>
   <div class="topic"><a href="#sets">Basic analysis</a></div>
   <div class="topic"><a href="#sets">Algorithmic strategies</a></div>
@@ -93,6 +117,28 @@
   <div class="topic"><a href="#sets">Advanced computational complexity</a></div>
   <div class="topic"><a href="#sets">Advanced automata theory and computability</a></div>
   <div class="topic"><a href="#sets">Advanced data structures, algorithms, and analysis</a></div>
+  <div class="core">Software engineering</div>
+  <div class="topic"><a href="#sets">Software processes</a></div>
+  <div class="topic"><a href="#sets">Software project management</a></div>
+  <div class="topic"><a href="#sets">Tools and environments</a></div>
+  <div class="topic"><a href="#sets">Requirements engineering</a></div>
+  <div class="topic"><a href="#sets">Software design</a></div>
+  <div class="topic"><a href="#sets">Software construction</a></div>
+  <div class="topic"><a href="#sets">Software verification and validation</a></div>
+  <div class="topic"><a href="#sets">Software evolution</a></div>
+  <div class="topic"><a href="#sets">Software reliability</a></div>
+  <div class="topic"><a href="#sets">Formal methods</a></div>
+  <div class="core">Systems fundamentals</div>
+  <div class="topic"><a href="#sets">Computational paradigms</a></div>
+  <div class="topic"><a href="#sets">Cross-layer communications</a></div>
+  <div class="topic"><a href="#sets">State and state machines</a></div>
+  <div class="topic"><a href="#sets">Parallelism</a></div>
+  <div class="topic"><a href="#sets">Evaluation</a></div>
+  <div class="topic"><a href="#sets">Resource allocation and scheduling</a></div>
+  <div class="topic"><a href="#sets">Proximity</a></div>
+  <div class="topic"><a href="#sets">Virtualization and isolation</a></div>
+  <div class="topic"><a href="#sets">Reliability through redundancy</a></div>
+  <div class="topic"><a href="#sets">Quantitative evaluation</a></div>
   <div class="core">Architecture and organization</div>
   <div class="topic"><a href="#sets">Digital logic and digital systems</a></div>
   <div class="topic"><a href="#sets">Machine level representation of data</a></div>
@@ -109,13 +155,6 @@
   <div class="topic"><a href="#sets">Interactive visualization</a></div>
   <div class="topic"><a href="#sets">Data, information, and knowledge</a></div>
   <div class="topic"><a href="#sets">Numerical analysis</a></div>
-  <div class="core">Discrete structures</div>
-  <div class="topic"><a href="#sets">Sets, relations, and functions</a></div>
-  <div class="topic"><a href="#sets">Basic logic</a></div>
-  <div class="topic"><a href="#sets">Proof techniques</a></div>
-  <div class="topic"><a href="#sets">Basics of counting</a></div>
-  <div class="topic"><a href="#sets">Graphs and trees</a></div>
-  <div class="topic"><a href="#sets">Discrete probability</a></div>
   <div class="core">Graphics and visualization</div>
   <div class="topic"><a href="#sets">Fundamental concepts</a></div>
   <div class="topic"><a href="#sets">Basic rendering</a></div>
@@ -182,7 +221,7 @@
   <div class="topic"><a href="#sets">Mobility</a></div>
   <div class="topic"><a href="#sets">Social networking</a></div>
   <div class="core">Operating systems</div>
-  <div class="topic"><a href="#sets">Overview of operating systems</a></div>
+  <div class="topic"><a href="#overview_operating">Overview of operating systems</a></div>
   <div class="topic"><a href="#sets">Operating system principles</a></div>
   <div class="topic"><a href="#sets">Concurrency</a></div>
   <div class="topic"><a href="#sets">Scheduling and dispatch</a></div>
@@ -228,33 +267,6 @@
   <div class="topic"><a href="#sets">Formal semantics</a></div>
   <div class="topic"><a href="#sets">Language pragmatics</a></div>
   <div class="topic"><a href="#sets">Logic programming</a></div>
-  <div class="core">Software developmental fundamentals</div>
-  <div class="topic"><a href="#sets">Algorithms and design</a></div>
-  <div class="topic"><a href="#sets">Fundamental programming concepts</a></div>
-  <div class="topic"><a href="#sets">Fundamental data structures</a></div>
-  <div class="topic"><a href="#sets">Development methods</a></div>
-  <div class="core">Software engineering</div>
-  <div class="topic"><a href="#sets">Software processes</a></div>
-  <div class="topic"><a href="#sets">Software project management</a></div>
-  <div class="topic"><a href="#sets">Tools and environments</a></div>
-  <div class="topic"><a href="#sets">Requirements engineering</a></div>
-  <div class="topic"><a href="#sets">Software design</a></div>
-  <div class="topic"><a href="#sets">Software construction</a></div>
-  <div class="topic"><a href="#sets">Software verification and validation</a></div>
-  <div class="topic"><a href="#sets">Software evolution</a></div>
-  <div class="topic"><a href="#sets">Software reliability</a></div>
-  <div class="topic"><a href="#sets">Formal methods</a></div>
-  <div class="core">Systems fundamentals</div>
-  <div class="topic"><a href="#sets">Computational paradigms</a></div>
-  <div class="topic"><a href="#sets">Cross-layer communications</a></div>
-  <div class="topic"><a href="#sets">State and state machines</a></div>
-  <div class="topic"><a href="#sets">Parallelism</a></div>
-  <div class="topic"><a href="#sets">Evaluation</a></div>
-  <div class="topic"><a href="#sets">Resource allocation and scheduling</a></div>
-  <div class="topic"><a href="#sets">Proximity</a></div>
-  <div class="topic"><a href="#sets">Virtualization and isolation</a></div>
-  <div class="topic"><a href="#sets">Reliability through redundancy</a></div>
-  <div class="topic"><a href="#sets">Quantitative evaluation</a></div>
   <div class="core">Social issues and professional practice</div>
   <div class="topic"><a href="#sets">Social context</a></div>
   <div class="topic"><a href="#sets">Analytical tools</a></div>
@@ -267,9 +279,9 @@
   <div class="topic"><a href="#sets">Economies of computing</a></div>
   <div class="topic"><a href="#sets">Security policies, laws and computer crimes</a></div>
 </div>
-
+<div class="first">Overview of operating systems</div><a class="anchor" id="overview_operating"></a>
 <h4>Kernel</h4>
-<p>The kernel is a computer progrma at the core of a computer's operating system that generally has complete control
+<p>The kernel is a computer program at the core of a computer's operating system that generally has complete control
   over everything in the system. It is the portion of the operating system that is always resident in memory, and
   facilitates interactions between hardware and software components. It controls all hardware resources (e.g. I/O,
   memory, cryptography) via device drivers, arbitrates conflicts between processes concerning such resources, and
@@ -298,9 +310,176 @@
   that exposes the computer's operating system to a user or program. In Linux systems, the shell presented in a terminal
   is a command line interpreter. A command line interface is a user interface which processes commands to a computer
   program and outputs the results.</p>
+
+<div class="first">Introduction</div><a class="anchor" id="platform"></a>
+<h4>Overview of platforms (e.g., Web, Mobile, Game, Industrial)</h4>
+<h4>Programming via platform-specific APIs</h4>
+<h4>Overview of Platform Languages (e.g., Objective C, HTML5)</h4>
+<h4>Programming under platform constraints</h4>
+<div class="first">Web platforms</div><a class="anchor" id="web"></a>
+<h4>Web programming languages (e.g., HTML5, JavaScript, PHP, CSS)</h4>
+<h4>Web platform constraints</h4>
+<h4>Software as a Service (SaaS)</h4>
+<h4>Web standards</h4>
+Design and implement a simple web application
+Describe the constraints that the web puts on developers
+Compare and contrast web programming with general purpose programming
+Describe the differences between Software-as-a-Service and traditional software products
+Discuss how web standards impact software development
+Review an existing web application against a current web standard
+<div class="first">Mobile platforms</div><a class="anchor" id="mobile"></a>
+<div class="first">Industrial platforms</div><a class="anchor" id="industrial"></a>
+<div class="first">Game platforms</div><a class="anchor" id="game"></a>
+<div class="first">Object-oriented programming</div><a class="anchor" id="platform"></a>
+<h4>Object-oriented design</h4>
+Decomposition into objects carrying state and having behavior, class-hierarchy design for modeling
+<h4>Definition of classes: fields, methods, and constructors</h4>
+<h4>Subclasses, inheritance, and method overriding</h4>
+<h4>Dynamic dispatch: definition of method-call</h4>
+<div class="first">Functional programming</div><a class="anchor" id="platform"></a>
+<h4>Effect-free programming</h4>
+Function calls have no side effects, facilitating compositional reasoning
+Variables are immutable, preventing unexpected changes to program data by other code
+Data can be freely aliased or copied without introducing unintended effects from mutation
+<h4>Processing structured data (e.g., trees) via functions with cases for each data variant</h4>
+Associated language constructs such as discriminated unions and pattern-matching over them
+Functions defined over compound data in terms of functions applied to the constituent pieces
+<h4>First-class functions (taking, returning, and storing functions)</h4>
+<div class="first">Event-driven and reactive programming</div><a class="anchor" id="platform"></a>
+<h4>Events and event handlers</h4>
+<h4>Canonical uses such as GUIs, mobile devices, robots, servers</h4>
+<h4>Using a reactive framework</h4>
+Defining event handlers/listeners
+Main event loop not under event-handler-writer's control
+<h4>Externally-generated events and program-generated events</h4>
+<h4>Separation of model, view, and controller</h4>
+<div class="first">Basic type systems</div><a class="anchor" id="platform"></a>
+<h4>A type as a set of values together with a set of operations</h4>
+Primitive types (e.g., numbers, Booleans)
+Compound types built from other types (e.g., records, unions, arrays, lists, functions, references)
+<h4>Association of types to variables, arguments, results, and fields</h4>
+<h4>Type safety and errors caused by using values inconsistently given their intended types</h4>
+<h4>Goals and limitations of static typing</h4>
+Eliminating some classes of errors without running the program
+Undecidability means static analysis must conservatively approximate program behavior
+<div class="first">Program representation</div><a class="anchor" id="platform"></a>
+<div class="first">Language translation and execution</div><a class="anchor" id="platform"></a>
+<div class="first">Syntax analysis</div><a class="anchor" id="platform"></a>
+<div class="first">Compiler semantic analysis</div><a class="anchor" id="platform"></a>
+<div class="first">Code generation</div><a class="anchor" id="platform"></a>
+<div class="first">Runtime systems</div><a class="anchor" id="platform"></a>
+<div class="first">Static analysis</div><a class="anchor" id="platform"></a>
+<div class="first">Advanced programming constructs</div><a class="anchor" id="platform"></a>
+<div class="first">Concurrency and parallelism</div><a class="anchor" id="platform"></a>
+<div class="first">Type systems</div><a class="anchor" id="platform"></a>
+<div class="first">Formal semantics</div><a class="anchor" id="platform"></a>
+<div class="first">Language pragmatics</div><a class="anchor" id="platform"></a>
+<div class="first">Logic programming</div><a class="anchor" id="platform"></a>
+<div class="first">Algorithms and design</div><a class="anchor" id="algorithm_design"></a>
+<h4>The concept and properties of algorithms</h4>
+Informal comparison of alogirthm efficiency (e.g., operation counts)
+<h4>The role of algorithms in the problem-solving process</h4>
+<h4>Problem-solving strategies</h4>
+Iterative and recursive mathematical functions
+Iterative and recursive traversal of data structures
+Divide-and-conquer strategies
+<h4>Fundamental design concepts and principles</h4>
+Abstraction, program decomposition, encapsulation and information binding, separation of behavior and implementation
+<div class="first">Fundamental programming concepts</div><a class="anchor" id="fundamental_programming"></a>
+<h4>Basic syntax and semantics of a higher-level language</h4>
+<h4>Variables and primitive data types (e.g., numbers, characters, Booleans)</h4>
+<h4>Expressions and assignments</h4>
+<h4>Simple I/O including file I/O</h4>
+<h4>Conditional and iterative control structures</h4>
+<h4>Functions and parameter passing</h4>
+<h4>The concept of recursion</h4>
+<div class="first">Fundamental data structures</div><a class="anchor" id="fundamental_data"></a>
+<h4>Arrays</h4>
+<h4>Records/structs (heterogeneous aggregates)</h4>
+<h4>Strings and string processing</h4>
+<h4>Abstract data types and their implementation</h4>
+Stacks, queues, priorty queues, sets, maps
+<h4>References and aliasing</h4>
+<h4>Linked lists</h4>
+<h4>Strategies for choosing the appropriate data structure</h4>
+<div class="first">Development methods</div><a class="anchor" id="development_methods"></a>
+<h4>Program comprehension</h4>
+<h4>Program correctness</h4>
+Types of errors (syntax, logic, run-time), the concept of a specification, defensive programming (e.g., secure coding,
+exception handling), code reviews, testing fundamentals and test-case generation, the role and the use of contracts,
+including pre- and post-conditions, unit testing
+<h4>Simple refactoring</h4>
+<h4>Modern programming environments</h4>
+Code search, programming using library components and their APIs
+<h4>Debugging strategies</h4>
+<h4>Documentation and program style</h4>
+<div class="first">Software processes</div><a class="anchor" id="platform"></a>
+<h4>Systems level considerations, i.e., the interaction of software with its intended environment (cross-reference
+  IAS/Secure Software Engineering)</h4>
+<h4>Introduction to software process models (e.g., waterfall, incremental, agile)</h4>
+Activities within software lifecycles
+<h4>Programming in the large vs. individual programming</h4>
+<div class="first">Software project management</div><a class="anchor" id="platform"></a>
+<h4>Team participation</h4>
+Team processes including responsibilities for tasks, meeting structure, and work schedule
+Roles and responsibilities in a software team
+Team conflict resolution
+Risks associated with virtual teams (communication, perception, structure)
+<h4>Effort estimation (at the personal level)</h4>
+<h4>Risk (cross reference IAS/Secure Software Engineering)</h4>
+The role of risk in the lifecycle
+Risk categories including security, safety, market, financial, technology, people, quality, structure and process
+<div class="first">Tools and environments</div><a class="anchor" id="platform"></a>
+<h4>Software configuration management and version control</h4>
+<h4>Release management</h4>
+<h4>Requirements analysis and design modeling tools</h4>
+<h4>Testing tools including static and dynamic analysis tools</h4>
+<h4>Programming environments that automate parts of program construction processes (e.g., automated builds)</h4>
+Continuous integration
+<h4>Tool integration concepts and mechanisms</h4>
+<div class="first">Requirements engineering</div><a class="anchor" id="platform"></a>
+<h4>Describing functional requirements using, for example, use cases or user stories</h4>
+<h4>Properties of requirements including consistency, validity, completeness, and feasibility</h4>
+<div class="first">Software design</div><a class="anchor" id="platform"></a>
+<h4>System design principles</h4>
+Levels of abstraction (architectural design and detailed design), separation of concerns, information hiding, coupling
+and cohesion, re-use of standard structures
+<h4>Design paradigms</h4>
+Structured design (top-down functional decomposition), object-oriented analysis and design, event driven design,
+component-level design, data-structured centered, aspect oriented, function oriented, service oriented
+<h4>Structural and behavioral models of software designs</h4>
+<h4>Design patterns</h4>
+<div class="first">Software construction</div><a class="anchor" id="platform"></a>
+<h4>Coding practices</h4>
+techniques, idioms/patterns, mechanisms for building quality programs (cross-reference IAS/Defensive Programming;
+SDF/Development Methods)
+Defensive coding practices
+Secure coding practices
+Using exception handling mechanisms to make programs more robust, fault-tolerant
+<h4>Coding standards</h4>
+<h4>Integration strategies</h4>
+<h4>Development context: "green field" vs. existing code base</h4>
+Change impact analysis, change actualization
+<div class="first">Software verification and validation</div><a class="anchor" id="platform"></a>
+<h4>Verification and validation concepts</h4>
+<h4>Inspections, reviews, audits</h4>
+<h4>Testing types, including human computer interface, usability, reliability, security, conformance to specification
+  (cross-reference IAS/Secure Software Engineering)</h4>
+<h4>Testing fundamentals (cross-reference SDF/Development Methods)</h4>
+Unit, integration, validation, and system testing
+Test plan creation and test case generation
+Black-box and white-box testing techniques
+Regression testing and test automation
+<h4>Defect tracking</h4>
+<h4>Limitations of testing in particular domains, such as parallel or safety-critical systems</h4>
+<div class="first">Software evolution</div><a class="anchor" id="platform"></a>
+<div class="first">Software reliability</div><a class="anchor" id="platform"></a>
+<div class="first">Formal methods</div><a class="anchor" id="platform"></a>
+
 <div class="size">
   https://www.acm.org/binaries/content/assets/education/cs2013_web_final.pdf
-  <p>The top core competencies from computer science for general application include software development fundamentals,
+  <p>The top core competencies from computer science for general application include software development
+    fundamentals,
     discrete structures, algorithms and complexity, and systems fundamentals.</p>
   <h1>Computer Science</h1>
   <h2>Algorithms and Complexity (AL)</h2>
@@ -363,14 +542,19 @@
   <h3>Multiprocessing and Alternative Architectures</h3>
   <h3>Performance Enhancements</h3>
   <h2>Computational Science (CN)</h2>
-  <p>Computational science is a field of applied computer science, that is, the application of computer science to solve
+  <p>Computational science is a field of applied computer science, that is, the application of computer science to
+    solve
     problems across a range of disciplines. It combines computer simulation, scientific visualization, mathematical
     modeling, computer programming and data structures, networking, database design, symbolic computation, and high
     performance computing with various disciplines. The needs of scientists and engineers for computation have long
-    driven research and innovation in computing. Computational neuroscience is a subfield of computational science.</p>
-  <p>A goal in neural engineering is to abstract the concept of the brain. But the brain trying to model itself is a bit
-    meta. Some say that dreams are essential models of various situations our subconscious is trying to prepare us for.
-    In order to understand the brain, we should understand various modeling and simulation techniques used in computer
+    driven research and innovation in computing. Computational neuroscience is a subfield of computational science.
+  </p>
+  <p>A goal in neural engineering is to abstract the concept of the brain. But the brain trying to model itself is a
+    bit
+    meta. Some say that dreams are essential models of various situations our subconscious is trying to prepare us
+    for.
+    In order to understand the brain, we should understand various modeling and simulation techniques used in
+    computer
     science.</p>
   <h3>Introduction to Modeling and Simulation</h3>
   Models as abstractions of situations
@@ -461,7 +645,8 @@
   • Proof by contradiction
   • Induction over natural numbers
   <h4>Principle of Mathematical Induction</h4>
-  <p>For each natural number \(n \in \mathbb{N}\), suppose that \(P(n)\) denotes a proposition which is either true or
+  <p>For each natural number \(n \in \mathbb{N}\), suppose that \(P(n)\) denotes a proposition which is either true
+    or
     false. Let \(A={n \in \mathbb{N}:P(n)}\) is true. Suppose the following conditions hold: a) \(1 \in A\) and
     b) for each \(k \in \mathbb{N}\), if \(k \in A\)
     , then \(k+1 \in A\). Then \(A=\mathbb{N}\).</p>
@@ -1041,17 +1226,25 @@
 
 
   <h4>Principal Component Analysis</h4>
-  <p>PCA is a dimensionality-reduction method used to reduce the dimensionality of large data sets, by transforming a
-    large set of variables into a smaller one that still contains most of the information in the large set. The goal is
+  <p>PCA is a dimensionality-reduction method used to reduce the dimensionality of large data sets, by transforming
+    a
+    large set of variables into a smaller one that still contains most of the information in the large set. The goal
+    is
     to keep as much accuracy as possible while allowing for simplicity.</p>
-  <p>The first step of PCA is standardization, which standardizes the range of continuous initial variables so that each
-    one contributes equally to the analysis. If this is not performed, differences in the larger ranges will dominate
+  <p>The first step of PCA is standardization, which standardizes the range of continuous initial variables so that
+    each
+    one contributes equally to the analysis. If this is not performed, differences in the larger ranges will
+    dominate
     over those with small ranges. This can be done mathematically by finding the z-score:</p>
   $$z=\frac{\text{value}-\text{mean}}{\text{standard deviation}}$$
-  <p>The next step is covariance matrix computation. This aims to understand how the variables of the input data set are
-    varying from the mean with respect to each other, to see if there is any relationship between them. The covariance
-    matrix is a \(p\times p\) symmetric matrix (where p is the number of dimensions) that has as entries the covariances
-    associated with all possible pairs of the initial variables. For example, a data set with 3 dimensions (say x, y,
+  <p>The next step is covariance matrix computation. This aims to understand how the variables of the input data set
+    are
+    varying from the mean with respect to each other, to see if there is any relationship between them. The
+    covariance
+    matrix is a \(p\times p\) symmetric matrix (where p is the number of dimensions) that has as entries the
+    covariances
+    associated with all possible pairs of the initial variables. For example, a data set with 3 dimensions (say x,
+    y,
     and z) would have a covariance matrix in this form:</p>
   $$ \left[
   \begin{array}{c}
@@ -1065,32 +1258,43 @@
     entries of the covariance matrix are symmetric with respect to the main diagonal.</p>
   <p>The next step is to compute the eigenvectors and eigenvalues of the covariance matrix to identify the principal
     components. Principal components are new variables that are constructed as linear combinations or mixtures of
-    initial variables, but done in a way such that most of the information is compressed into the first components. So,
-    10-dimensional data still gives you 10 principal components, but tries to put the maximum possible information into
+    initial variables, but done in a way such that most of the information is compressed into the first components.
+    So,
+    10-dimensional data still gives you 10 principal components, but tries to put the maximum possible information
+    into
     the first component, then the maximum remaining information in the second, and so on. Thus, you can discard
     components with low information and consider remaining components as your new variables. Geometrically speaking,
     principal components represent the directions of the data that explain a maximal amount of variance. Simply put,
     think of principal components as new axes that provide the best angle to see and evaluate the data, so that
-    differences between observations are better visible. They are lines that maximize the variance (average of squared
+    differences between observations are better visible. They are lines that maximize the variance (average of
+    squared
     distances from the projected points to the origin).</p>
   <img src="{{url_for('static',filename='img/computer_science/PCA.gif')}}" style="width: 70%" alt="Builtin.com">
-  <p>Now let's go back to eigenvectors and eigenvalues. Every eigenvector has an eigenvalue, and their number is equal
-    to the number of dimensions of the data. For example, for a 3-dimensional data set, there are 3 variables and thus 3
-    eigenvectors with 3 corresponding eigenvalues. The eigenvectors of the Covariance matrix are the directions of the
+  <p>Now let's go back to eigenvectors and eigenvalues. Every eigenvector has an eigenvalue, and their number is
+    equal
+    to the number of dimensions of the data. For example, for a 3-dimensional data set, there are 3 variables and
+    thus 3
+    eigenvectors with 3 corresponding eigenvalues. The eigenvectors of the Covariance matrix are the directions of
+    the
     axes where there is the most variance and that we call Principal Components. And eigenvalues are simply the
-    coefficients attached to eigenvactors, which give the amount of variance carried in each Principal Component.</p>
+    coefficients attached to eigenvactors, which give the amount of variance carried in each Principal Component.
+  </p>
   <p>Next, we create the feature vector. After we have ranked the principal components in order of significance, we
-    choose which components we wish to discard, and form the remaining ones a matrix of vectors that we call the feature
-    vector. This makes it the first step in dimensionality reduction, because we have removed principal components.</p>
+    choose which components we wish to discard, and form the remaining ones a matrix of vectors that we call the
+    feature
+    vector. This makes it the first step in dimensionality reduction, because we have removed principal components.
+  </p>
   <p>Finally, we recast the data along the principal components axes. We use the feature vector to reorient the data
     from the original axes to the one represented by the principal components. This can be done by multiplying the
     transpose of the original data set by the transpose of the feature vector.</p>
   <h4>k-means clustering</h4>
-  <p>k-means clustering is a method of vector quantization, originally from signal processing, that aims to partitian n
+  <p>k-means clustering is a method of vector quantization, originally from signal processing, that aims to
+    partitian n
     observations into k clusters in whcih each observation belongs to the cluster with the nearest mean.</p>
   <h4>Uniform Manifold Approximation and Projection for Dimension Reduction</h4>
   <p>UMAP (Uniform Manifold Approximation and Projection) is a novel manifold learning technique for dimension
-    reduction. UMAP is constructed from a theoretical framework based in Riemannian geometry and algebraic topology. The
+    reduction. UMAP is constructed from a theoretical framework based in Riemannian geometry and algebraic topology.
+    The
     result is a practical scalable algorithm that applies to real world data. The UMAP algorithm is competitive with
     t-SNE for visualization quality, and arguably preserves more of the global structure with superior run time
     performance. Furthermore, UMAP has no computational restrictions on embedding dimension, making it viable as a
@@ -1098,16 +1302,19 @@
 
   <h3>MongoDB-Express-Angular-NodeJS (MEAN) Stack</h3>
   <h4>Angular</h4>
-  <p>Angular is a client-side (browser) framework which allows you to build Single-Page-Applications (SPA). It creates
+  <p>Angular is a client-side (browser) framework which allows you to build Single-Page-Applications (SPA). It
+    creates
     "mobile app"-like websites because there is no refreshing of the page.</p>
   <h4>NodeJS</h4>
   <p>NodeJS is a server-side library. It listens to requests and sends responses.</p>
   <h4>Express</h4>
   <p>Express is a Node framework which simplifies writing server-side code and logic.</p>
   <h4>mongoDB</h4>
-  <p>mongoDB is a noSQL database which stores "documents" in collections" instead of "records" in "tables" as in SQL. It
+  <p>mongoDB is a noSQL database which stores "documents" in collections" instead of "records" in "tables" as in
+    SQL. It
     stores application data (users, products, etc.). It is more flexible in terms of structure compared to SQL.</p>
-  <p>First you need to download and install NodeJS. Then install the Angular CLI. Then create a new Angular project (ng
+  <p>First you need to download and install NodeJS. Then install the Angular CLI. Then create a new Angular project
+    (ng
     new). 'ng serve' will serve the project.</p>
   <p>Each component needs logic (ts file) and template (html file).</p>
 </div>
