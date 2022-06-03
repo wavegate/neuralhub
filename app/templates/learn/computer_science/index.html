@@ -1,17 +1,26 @@
 {% extends 'base.html' %}
 
+{% block title %}Computer science - {% endblock %}
+
 {% block content %}
 <style>
   .first {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 30px;
     margin: 30px 0 15px;
+    color: #333333;
   }
 
   .second {
     font-size: 20px;
-    line-height: 30px;
-    margin: 30px 0 15px;
+    margin: 20px 0 10px;
+    text-decoration: underline;
+    color: #333333;
+  }
+
+  .third {
+    font-size: 100%;
+    color: #333333;
+    font-weight: 600;
   }
 
   .size {
@@ -118,16 +127,23 @@
   <div class="topic"><a href="#sets">Advanced automata theory and computability</a></div>
   <div class="topic"><a href="#sets">Advanced data structures, algorithms, and analysis</a></div>
   <div class="core">Software engineering</div>
-  <div class="topic"><a href="#sets">Software processes</a></div>
-  <div class="topic"><a href="#sets">Software project management</a></div>
-  <div class="topic"><a href="#sets">Tools and environments</a></div>
-  <div class="topic"><a href="#sets">Requirements engineering</a></div>
-  <div class="topic"><a href="#sets">Software design</a></div>
-  <div class="topic"><a href="#sets">Software construction</a></div>
-  <div class="topic"><a href="#sets">Software verification and validation</a></div>
-  <div class="topic"><a href="#sets">Software evolution</a></div>
-  <div class="topic"><a href="#sets">Software reliability</a></div>
-  <div class="topic"><a href="#sets">Formal methods</a></div>
+  <div class="topic"><a href="#software_requirements">Software requirements</a></div>
+  <div class="topic"><a href="#software_design">Software design</a></div>
+  <div class="topic"><a href="#software_construction">Software construction</a></div>
+  <div class="topic"><a href="#software_testing">Software testing</a></div>
+  <div class="topic"><a href="#software_maintenance">Software maintenance</a></div>
+  <div class="topic"><a href="#software_configuration_management">Software configuration management</a></div>
+  <div class="topic"><a href="#software_engineering management">Software engineering management</a></div>
+  <div class="topic"><a href="#software engineering process">Software engnieering process</a></div>
+  <div class="topic"><a href="#software_engineering_models_and_methods">Software engineering models and methods</a>
+  </div>
+  <div class="topic"><a href="#software_quality">Software quality</a></div>
+  <div class="topic"><a href="#software_engineering_professional_practie">Software engineering professional practice</a>
+  </div>
+  <div class="topic"><a href="#software_engineering_economics">Software engineering economics</a></div>
+  <div class="topic"><a href="#computing_foundations">Computing foundations</a></div>
+  <div class="topic"><a href="#mathematical_foundations">Mathematical foundations</a></div>
+  <div class="topic"><a href="#engineering_foundations">Engineering foundations</a></div>
   <div class="core">Systems fundamentals</div>
   <div class="topic"><a href="#sets">Computational paradigms</a></div>
   <div class="topic"><a href="#sets">Cross-layer communications</a></div>
@@ -279,14 +295,500 @@
   <div class="topic"><a href="#sets">Economies of computing</a></div>
   <div class="topic"><a href="#sets">Security policies, laws and computer crimes</a></div>
 </div>
+SWEBOK v3
+<div class="first">Software requirements</div><a class="anchor" id="software_requirements"></a>
+<div class="second">Software requirements fundamentals</div>
+<p>Software engineering is the application of a systematic, disciplined, quantifiable approach to the development,
+  operation, and maintenance of software; that is, the application of engineering to software.</p>
+<div class="third">Defintion of a software requirement</div>
+<p>At its most basic, a software requirement is a property that must be exhibited by something in order to solve some
+  problem in the real world. An essential property of all software requirements it that they be verifiable as an
+  individual feature as a functional requirement or at the system level as a nonfunctional requirement. Requirements
+  have other attributes, such as priority ratings to enable tradeoffs in face of finite resources and a status value to
+  enable project progress to be monitored. Software projects are critically vulnerable when the requirements-related
+  activities are poorly performed. Software
+  requirements express the needs and constraints placed on a software product that contribute to the solution of some
+  real-world problem. The term "requirements engineering" denotes the systematic handling of requirements.</p>
+<p>The waterfall model is a breakdown of project activities into linear sequential phases, where each phase depends on
+  the deliverables of the previous one. It tends to be among the less iterative and flexible approaches.</p>
+<div class="third">Product and process requirements</div>
+<p>A product requirement is a need or constraint on the software to be developed. A process requirement is essentially a
+  constraint on the developt of the software.</p>
+<div class="third">Functional and nonfunctional requirements</div>
+<p>Functional requirements describe the functions that the software is to execute, also known as capabilities or
+  features. A functional requirement can also be described as one for which a finite set of test steps can be written to
+  validate its behavior. Nonfunctional requirements are ones that act to constrain the solution, also known as
+  constraints or quality requirements. Examples of nonfunctional requirements are performance requirements,
+  maintainability requirements, safety, reliability, security, interoperability, etc.</p>
+<div class="third">Emergent properties</div>
+<p>Emergent properties are requirements that cannot be addressed by a single component but that depend on how all the
+  software components interoperate. Emergent properties are crucially dependent on system architecture.</p>
+<div class="third">Quantifiable requirements</div>
+<p>Software requirements should be stated as clearly and as unambiguously as possible, and, where appropriate,
+  quantitatively. This is particularly important for nonfunctional requirements.</p>
+<div class="third">System requirements and software requirements</div>
+<p>A "system" means an interacting combination of elements to accomplish a defined objective, including hardware,
+  software, firmware, people, information, techniques, facilities, services, and other support elements. System
+  requirements are the requirements for the system as a whole. Software requirements are derived from system
+  requirements. User requirements are the requirements of the system's customers or end users.</p>
+<div class="second">Requirements process</div>
+<div class="third">Process models</div>
+<p>The requirements process is not a discrete front-end activity of the software life cycle, but rather a process
+  initiated at the beginning of a project that continues to be refined throughout the life cycle. Software requirements
+  are configuration items and are managed using the same software configuratoin management practices as other products
+  of the softawre life cycle processes. Requirements need to be adapted to the organizations and project context.</p>
+<div class="third">Process actors</div>
+<p>The requirements process is fundamentally interdisciplinary, and the requirements specialist needs to mediate between
+  the domain of the stakeholder and that of software engineering. THe stakeholders will vary across projects, but will
+  always include users/operators and customers. Examples of software stakeholders include users (those who use the
+  software), customers (those who have commissioned the software), market analysts (marketing people who establish what
+  the market needs are and who act as proxy customers), regulators (regulatory authorities such as for applications in
+  banking and public transport), and software engineers (constraints can have major impact on project cost or delivery
+  if they fit poorly with the skillset of the engineers). It is the job of the softawre engineer to negotiate tradeoffs
+  acceptable to principal stakeholders within budgetary, technical, regulatory, and other constraints. A prerequisite
+  for this is that all the stakeholders be identified, the nature of their "stake" analyzed, and their requirements
+  elicited.</p>
+<div class="third">Process support and management</div>
+<div class="third">Process quality and improvement</div>
+<div class="second">Requirements elictation</div>
+<p>Requirements elictation, or requirements capture, or requirements discovery, or requirements acquisition is concerned
+  with the origins of software requirements and how the software engineer can
+  collect them. One of the fundamental principles of a good requirements elictation process is that of effective
+  communication between various stakeholders, continuing through the entire Software Development Life Cycle (SDLC)
+  process with different stakeholders at different points in time. A critical element of requirements elictation is
+  informing the project scope, which involves providing a description of the software being specified and its purpose
+  and prioritizing the deliverables to ensure the customer's most important business needs are satisfied first.</p>
+<div class="third">Requirements sources</div>
+<p>Goals: the term goal or business concern or critical success factor refers to the overall, high-level objectives of
+  the software. Goals provide the motivation for the software but are often vaguely formulated. A feasibility study is a
+  relatively low-cost way of assessing value and cost of goals.</p>
+<p>Domain knowledge: the software engineer needs to acquire or have available knowledge about the application domain.
+  Domain knowledge provides the background against which all elicited requirements knowledge must be set in ordre to
+  understand it.</p>
+<p>Stakeholders: the software engineer needs to identify, represent, and manage the "viewpoints" of many different types
+  of stakeholders.</p>
+<p>Business rules: there are statements that define or constrain some aspect of the structure or the behavior of the
+  business itself.</p>
+<p>The operational environment: requirements will be derived fro mthe environment in which the software will be executed
+  (eg. real-time software or performance constraints in a business environment).</p>
+<p>The organizational environment: software is often required to support a business process. In general, new software
+  should not force unplanned change on the business process.</p>
+<div class="third">Elictation techniques</div>
+<p>Software engineer must be sensitized to the fact that users may have difficulty describing their tasks, may leave
+  important information unstated, or may be unwilling or unable to cooperate. Elicitation is not a passive activity. A
+  number of techniques exist:</p>
+<p>Inteviews: interviewing stakeholders is a traditional means of eliciting requirements.</p>
+<p>Scenarios: scenarios provide context. The most common type of secnario is the use case description.</p>
+<p>Prototypes: helps clarify ambiguous requirements. Act similar to scenarios. There is a wide range of prototyping
+  techniques, from paper mockups of screen designs to beta-test versions of software products. Low fidelity prototypes
+  are often preferred to avoid stakeholder "anchoring" on minor, incidental characteristics of a higher quality
+  prorotype.</p>
+<p>Facilitated meetings: acheive a summative effect, whereby a group of people can bring more insight into their
+  software requirements than by working individually. Allow conflicting requirements surface early.</p>
+<p>Observation: observational techniques such as ethnography (study of cultures) can be expensive but also instructive.
+</p>
+<p>User stories: commonly used in adaptive methods and refers to short, high-level descriptions of required
+  functionality expressed in customer terms.</p>
+<div class="second">Requirements analysis</div>
+<div class="third">Requirements classification</div>
+<p>Is the requirement function or nonfunctional? Is the requirement derived from one or more high-level requirements or
+  an emergent property, or is being imposed directly on the software by a stakeholder or some other source? Is the
+  requirement on the product or the process? What's the priority of the requirement? What's the scope of the requirement
+  (extent to which a requirmeent affects the software and its components)? What's the volatility/stability of the
+  requirement?</p>
+<div class="third">Conceptual modeling</div>
+<p>Models aid in understanding the situation in which the problem occurs, as well as helps depict a solution. Many
+  modeling notations are part of the United Modeling Language (UML). The factors that influence the choice of modeling
+  notation includes 1) the nature of the problem, 2) the expertise of the softawre engineer, 3) the process
+  requirements.</p>
+<div class="third">Architectural design and requirements allocation</div>
+<p>Architectural design is the point at which the requirements process overlaps with software or systems design.</p>
+<div class="third">Requirements negotation</div>
+<p>Another term commonly used for this is conflict resolution. In most cases it is unwise for the software engineer to
+  make a unilateral decision. It is often important for contractual reasons that such decisions be traeable back to the
+  customer. Requirements prioritization is necessary, not only as a means to filter important requirements, but also in
+  order to resolve conflicts and plan for staged deliveries, which means making complex decisions that require detailed
+  domain knowledge and good estimation skills. In practice, software engineers perform requirement prioritization
+  frequently without knowing about all the requirements.</p>
+<div class="third">Formal analysis</div>
+<p>Formal analysis has made an impact on some application domains, especially high-integrity systems. The formal
+  expression of requirements requires a language with formally defined semantics. Formal analysis allows requirements to
+  be expressed precisely and unambiguously, and allow them to be reasoned over, permitting desired properties of the
+  specified software to be proven. Formal reasoning requires tool support, which fall into theorem provers or model
+  checkers. In neither case can proof be full yautomated, and the level of competence in formal reasoning in order to
+  use the tools restricts the wider application of formal analysis. It is generally counterproductive to apply
+  formalization until the business goals and user requirements have come into sharp focus. Once the requirements have
+  been stabilized and have been elaborated to specify concrete properties of the software, it may be beneficial to
+  formalize at least the critical requirements.</p>
+<div class="second">Requirements specification</div>
+<p>The term specification refers to the assignment of numerical values or limits to a product's design goals. In
+  software engineering, this typically refers to the production of a document that can be systematically reviewed,
+  evaluated, and approved. For complex systems, this may include system definition, system requirements, and software
+  requirements.</p>
+<div class="third">System definition document</div>
+<p>Also known as the user requirements document or concept of operations document, the system definition document
+  records the system requirements. It defines the high-level system requirements from the domain perspective. Its
+  readership includes representatives of the system users/customers (eg. marketing for market-driven software). The
+  document lists the system requirements along with background information about the overall objectives for the system,
+  its target environment, and a statement of the constraints, assumptions, and nonfunctional requirements. It may
+  include conceptual models designed to illustrate the system context, usage scenarios, and the principal domain
+  entities, as well as workflows.</p>
+<div class="third">System requirements specification</div>
+<p>System requirements specification is a systems engineering activity and falls outside the scope of software
+  engineering.</p>
+<div class="third">Software requirements specification</div>
+<p>Software requirements specification establishes the basis for agreement between customers and contractors or
+  suppliers on what the software product is to do as well as what it is not expected to do. Software requirements
+  specification permits a rigorous assessment of requirements before design can begin and reduces later redesign. It
+  also provides a realistic basis for estimating product costs, risks, and schedules. Software requirements are often
+  written in natural language, but may be supplemented by formal or semiformal descriptions. The general rule is that
+  notations should be used that allow the requirements to be described as precisely as possible.</p>
+<p>Quality indicators for individual software requirements specification statements include imperatives, directives,
+  weak phrases, options, and continuances. Indicators for the entire software requirements specification document
+  include size, readability, specification, depth, and text structure.</p>
+<div class="second">Requirements validation</div>
+<p>The requirements documents may be subject to validation and vertification procedures. This ensures that the software
+  engineer has understood the requirements and veritifes that a requirements document conforms to company standards and
+  that it is understandable, consistent, and complete.</p>
+<p>Formal notations offer the important advantage of these properties to be proven (in a restricted sense, at least).
+  Different stakeholders should review the documents. Requirements documents are subject to the same configuration
+  management practices as the other dleiverables of the software life cycle processes. Requirements validation is
+  concerned with the process of examining the requirements document to ensure that it defines the right software.</p>
+<div class="third">Requirements reviews</div>
+<p>Perhaps the most common means of validation is by inspection or reviews of the requirements documents. A group of
+  reviewers is assigned a brief to look for errors, mistaken assumptions, lack of clarity, and deviation from standard
+  practice.</p>
+<div class="third">Prototyping</div>
+<p>Prototyping is commonly a means for validating the software engineer's interpretation of the software requirements,
+  as well as for eliciting new requirements. The advantage of prototypes is they can make it easier to interpret the
+  software engineer's assumptions and give useful feedback on why they are wrong. Disadvantages to prototyping include
+  distraction of users' attention from core underlying functionaly towards quality or cosmetic problems. For this
+  reason, some advocate prototypes that avoid software, such as flip-chart-based mockups. Prototypes may be costly to
+  develop, but can avoid the wastage of resources caused by trying to satisfy erroneous requirements.</p>
+<div class="third">Model validation</div>
+<p>It is typically necessary to validate the quality of the models developed during analysis.</p>
+<div class="third">Acceptance tests</div>
+<p>An essential property of a software requirement is that it should be possible to validate that the finished product
+  satisfies it. Requirements that cannot be validated are really just "wishes." An important task is therefore planning
+  how to verify each requirement. In most cases, designing acceptance tests does this for how end-users typically
+  conduct business using the system. Identifying and designing acceptance tests may be difficult for nonfunctional
+  requirements. To be validated, they must first be analyzed and decomposed to the point where they can be expressed
+  quantitatively.</p>
+<div class="second">Practical considerations</div>
+<p>The requirements process spans the whole software life cycle. Change management and the maintenance of the
+  requirements in a state that accurately mirrors the software to be built, or that has been built, are key to the
+  success of the software engineering process. Not every organization has a culture of documenting and managing
+  requirements (common in dynamic start-up companies). Most often, however, as these companies expand, as their customer
+  base grows, they discover they need to recover the requirements that motivated product features in order to assess the
+  impact of proposed changes. Requirements documentation and change management are key.</p>
+<div class="third">Iterative nature of the requirements process</div>
+<p>There is general pressure in the softare industry for ever shorter development cycles, which is particularly
+  pronounced in highly competitive, market-driven sectors. Most projects are constrained in some way by their
+  environment, and many are upgrades to, or revisions of, existing software where the architecture is given. In
+  practice, therefore, it is almost always impractical to implement the requirements process as a linear, deterministic
+  process in which software requirements are elicited from the stakeholders, baselined, allocated, and handed over to
+  the software development team. It is certainly a myth that the requirements for large software projects are ever
+  perfectly understood or perfectly specified.</p>
+<p>For software products that develop iteratively, a project team may baseline only those requirements needed for the
+  current iteration. The requirements specialist can continue to develop requirements for future iterations, while
+  developers proceed with design and construction of the current iteration. This approach provides customers with
+  business value quickly while minimizing the cost of rework. Perhaps the most crucial point in understanding software
+  requirements is that a significant proportion of the requirements WILL change. This can be due to errors in the
+  analysis or change in the environment, eg. customer's operating or business environment, regulatory processes imposed
+  by authorities, or market into which software must sell. Change has to be managed by ensuring that proposed changes go
+  thorugh a defined review and approval process and by applying careful requirements tracing, impact analysis, and
+  software configuration management.</p>
+<div class="third">Change management</div>
+<div class="third">Requirements attributes</div>
+<p>Requirements should consist not only of a specification of what is required, but also of ancillary information, which
+  helps manage and interpret the requirements. Requirements attributes must be defined, recorded, and updated as the
+  software under development or maintenance evolves. This should include the various classification dimensions of the
+  requirement and the verification method or relevant acceptance test plan section It may also include additional
+  information, such as a summary rationale for each requirement, the source of each requirement, and a change history.
+  The most important requirements attribute is an identifier that allows the requirements to be uniquely and
+  unambiguously identifeid.</p>
+<div class="third">Requirements tracing</div>
+<p>Requirements tracing is concerned with recovering the source of requirements and predicting the effects of
+  requirements. Tracing is fundamental to performing impact analysis when requirements change. A requirement should be
+  traceable backward to the reuqirements and stakeholders that motivated it. Conversely, a requirement should be
+  traceable forward into the reuqirements and design entities that satisfy it (eg. on the code modules tha timplement it
+  or the test cases related to that code or even the given section on the user manual which describes the actual
+  functionality).</p>
+<p>The requirements tracing for a typical project will form a complex directed acyclic graph (DAG). Maintaining an
+  up-to-date graph or traceability matrix is an activity that must be considered during the whole life cycle of a
+  product.</p>
+<div class="third">Measuring requirements</div>
+<p>Functionalize size measurement (FSM) is a technique for evaluating the size of a body of functional requirements.</p>
+<div class="second">Software requirements tools</div>
+<p>Tools for dealing with software requirements fall into tools for modeling and tools for managing requirements.
+  Requirements management tools usually support documentation, tracing, and change management. Many organizations have
+  invested in requirements management tools, although many more manage their requirements in more ad hoc and generally
+  less satisfactory ways (eg. using spreadsheets).</p>
+<div class="first">Software design</div><a class="anchor" id="software_design"></a>
+<p>Design is defined as both "the process of defining the architecture, components, interfaces, and other
+  characteristics of a system or component" and "the result of that process." Viewed as a process, software design is
+  the software engineering life cycle activity in which software requirements are analyzed in order to produce a
+  description of the software's internal structure that will serve as the basis for its construction. A software design
+  describes the software architecture-that is, how the softawre is decomposed and organized into components-and the
+  interfaces between those components. It also describes the components at a level of detail that enables their
+  construction.</p>
+<div class="second">Software design fundamentals</div>
+<div class="third">General design concepts</div>
+<p>Design can be viewed as a form of problem solving. The concept of a wicked problem-a problem with no definitive
+  solution- is interesting in understanding the limits of design. Goals, constraints, alternatives, representations, and
+  solutions are of interest in understanding design in its general sense.</p>
+<div class="third">Context of software design</div>
+<div class="third">Software design process</div>
+<p>Software design is generally a two step process: architectural design (high-level or top-level design) that describes
+  how software is organized into components, and detailed design that describes the desired behavior of these
+  components. The output of these two processes is a set of models and artifacts that record the major decisions that
+  have been taken, along with an explanation of the rationale for each nontrivial decision.</p>
+<div class="third">Software design principles</div>
+<p>A principle is a comprehensive and fundamental law, doctrine, or assumption. Software design principles include
+  abstraction; coupling and cohesion; decomposition and modularization; encapsulation/information hiding; separation of
+  interface and implementation; sufficiency, completeness, and primitiveness; and separation of concerns.</p>
+<p>Abstraction is a view of an object that focuses on the information relevant to a particular purpose and ignores the
+  remainder of the information. Two key abstraction mechanisms are parametrization and specification. Parametrization
+  abstracts from the details of data representations by representing the data as named parameters. Abstraction by
+  specification leads to procedural abstraction, data abstraction, and control (iteration) abstraction.</p>
+<p>Coupling is defined as a measure of the interdependence among modules in a computer program and cohesion is the
+  measure of the strength of association of the elements within a module.</p>
+<p>Decomposing and modularizing means that large software is divided into a number of smaller named components having
+  well-defined interfaces that describe component interactions. Usually the goal is to place different functionalities
+  and responsibilities in different components.</p>
+<p>Encapsulation and information hiding is grouping and packaging the internal details of an abstraction and making
+  those details inaccessible to external entities.
+</p>
+<p>The separation of interface and implementation defines a component by specifying a public interface (known to
+  clients) that is separate from the details of how the
+  component is realized.</p>
+<p>Sufficiency and completeness ensures that a software component captures all the important characteristics of an
+  abstraction and nothing more.
+  Primitiveness means the design should be based on patterns that are easy to implement.</p>
+<p>A concern is an "area of interest with respect to a software design." A design concern is an area of design that is
+  relevant to one or more of its stakeholders. Separating concerns by views allows stakeholders to focus on a few things
+  at a time and offers a means of managing complexity.</p>
+<div class="second">Key issues in software design</div>
+<p>Key issues include performance, security, reliability, usability, and how to decompose, organize, and package
+  software components. Non-key issues that deal with some aspect of software's behavior that is not in the application
+  domain but which addresses some of the supporting domains, are sometimes referred to as aspects.</p>
+<div class="third">Concurrency</div>
+<p>Design for concurrency is concerned with decomposing software into processes, tasks, and threads and dealing with
+  related issues of efficiency, atomicity, synchronization, and scheduling.</p>
+<div class="third">Control and handling of events</div>
+<p>This is concerned with how to organize data and control flow and how to handle reactive and temporal events through
+  various mechanisms such as implicit invocation and call-backs.</p>
+<div class="third">Data persistence</div>
+<p>Handles long-lived data.</p>
+<div class="third">Distribution of components</div>
+<p>This design issue is concerned with how to distribute the software across the hardware, how the components
+  communicate, and how middleware can be used to deal with heterogeneous software.</p>
+<div class="third">Error and exception handling and fault tolerance</div>
+<p>How to prevent, tolerate, and process errors and deal with exceptional conditions.</p>
+<div class="third">Interaction and presentation</div>
+<p>Concerned with how to structure and organize interactions with users as well as the presentation of information (eg.
+  separation of presentation and business logic using Model-View-Controller approach). Note that this does not specify
+  user interface details, which is the task of user interface design.</p>
+<div class="third">Security</div>
+<p>How to prevent unauthorized disclosure, creation, change, deletion, or denial of access to information and other
+  resources. Also concerned with how to tolerate security-related attacks or violations by limiting damage, continuing
+  service, speeding repair and recovery, and failing and recovering securely. Access control is a fundamental concept of
+  security, and one should also ensure the proper use of cryptology.</p>
+<div class="second">Software structure and architecture</div>
+<p>A software architecture is "the set of structures needed to reason about the system, which comprise software
+  elements, relations among them, and properties of both." These design concepts can be used to design families of
+  programs (ie. product lines). These are attempts to describe and thus reuse, design knowledge.</p>
+<div class="third">Architectural structures and viewpoints</div>
+<p>A view represents a partial aspect of a software architecture athat shows specific properties of a software system.
+  Views pertain to distinct issues associated with software design. For example, the logical view (satisfying the
+  functional requirements) vs. the process view (concurrency issues) vs. the physical view (distribution issues) vs. the
+  development view (how the design is broken down into implementation units with explicit representatio nof the
+  dependencies among the units).</p>
+<div class="third">Architectural styles</div>
+<p>An architectural style is a specialization of element and relation types, together with a set of constraints on how
+  they can be used, or a provision of the software's high-level organization. Examples are general structures,
+  distributed systems, interactive systems, and adaptable systems.</p>
+<div class="third">Design patterns</div>
+<p>A pattern is a common solution to a common problem in a given context, and design patterns are used to describe
+  details at a lower level than architectural styles. These lower level design patterns include creational patterns (eg.
+  builder, factory, prototype, singleton), structural patterns (eg. adapter, bridge, composite, decorator, facade,
+  fly-weight, proxy), and behavioral patterns (eg. interpreter, iterator, mediator, memento, observer, state, strategy,
+  template, visitor).</p>
+<div class="third">Architecture design decisions</div>
+<p>Architectural deisgn is a creative process. It is useful to think of the architectural design process from a
+  decision-making perspective than from an activity perspective.</p>
+<div class="third">Families of programs and frameworks</div>
+<p>Software product lines can identify commonalities among members and design reusable and customizable components to
+  account for variability among family membersn. In object-oriented (OO) programming, a key related notion is that of a
+  framework: a partially completed software system that can be extended by appropriately instantiating specific
+  extensions, such as plug-ins.</p>
+<div class="second">User interface design</div>
+<div class="third">General user interface design principles</div>
+<p>User interface design should ensure that interaction between the human and the machine provides for effective
+  operation and control of the machine. The user interface should be designed to match the skills, experience, and
+  expectations of its anticipated users. This includes learnability (easy to learn), user familiarity (should use terms
+  and concepts drawn from the experiences of people who will use the software), consistency (comparable operations are
+  activated in the same way), minimal surprise, recoverability (allow users to recover from errors), user guidance (give
+  meaningful feedback when errors occur and provide context-related help), and user diversity (allow for diverse types
+  of users, eg. blind, poor eyesight, deaf, colorblind, etc.).</p>
+<div class="third">User interface design issues</div>
+<p>How should the user interact with the software? How should information from the software be presented to the user?
+</p>
+<div class="third">The design of user interaction modalities</div>
+<p>User interaction styles can be classified into the following primary styles: question-answer (user issues a question
+  to the software, and the software returns the answer), direct manipulation (users interact with objects on the
+  computer screen), menu selection (user selects a command from a menu list of commands), form fill-in (user fills in
+  forms), command language (user issues a command and related parameters), and natural language (user issues a command
+  in natural language which is parsed and translated into software commands).</p>
+<div class="third">The deisgn of information presentation</div>
+<p>Information presentation may be textual or graphical in nature. A good design keeps the information presentation
+  separate from the information itself. The MVC approach is an efective way to keep information presentation separated
+  from information being presented. Response time and feedback are also part of design of information presentation.
+  Response time is generally measured from the point at which a user executes a certain control action until the
+  software responds with a response. An indication of progress is desirable while the software is preparing the
+  response. Feedback can be provided by restating the user's input while processing is being completed. Abstract
+  visualizatoins can be used when large amounts of information are to be presented.</p>
+<p>Designers can use color to enhance an interface: limit the number of colors used, use color change to show change of
+  software status, use color-coding to support the user's task, use color-coding in a thoughtful and consistent way, use
+  colors to facilitate access for people with color blindness/deficiency, don't depend on color alone to convey
+  important information.</p>
+<div class="third">User interface design process</div>
+<p>The design process usually involves 1) user analysis (designer analyzes users' tasks and how users interact with
+  other people, 2) software prototyping, and 3) interface evaluation.</p>
+<div class="third">Localization and internationalization</div>
+<p>User interface design often needs to consider internationalization and localization, which are means of adapting
+  softawre to the different languages, regional differences, and the technical requirements of a target market.
+  Internationalization is the process of designing a software application so that it can be adapted to various languages
+  and regions without major engineering changes. Localization is the process of adapting internationalized software for
+  a specific region or language by adding locale-specific components and translating the text. Localization and
+  internationalization should consider factors such as symbols, numbers, currency, time, and measurement units.</p>
+<div class="third">Metaphors and conceptual models</div>
+<p>An example of a metaphor is an icon of a trash ca nas a metaphor for the operation delete. Metaphors present
+  potential problems with respect to internationalization since not all metaphors are meaningful across cultures.</p>
+<div class="second">Software design quality analysis and evaluation</div>
+<div class="third">Quality attributes</div>
+<p>There is a distinction between qualities discernable at runtmie (performance, security, availability, functionality,
+  usability) and those that are not (modifiability, portability, reusability, testability), and those related to
+  architecture's intrinsic qualities (eg. conceptual integrity, correctness, completeness).</p>
+<div class="third">Quality analysis and evaluation techniques</div>
+<p>Software design reviews are informal and formalized techniques to determine the quality of design artifacts. Static
+  analysis are formal or semiformal static (nonexecutable) analysis that can be used to evaluate a design (eg.
+  fault-tree analysis or automated cross-checking). Design vulnerability analysis can be performed if security is a
+  concern. Formal design analysis uses mathematical models that allow designers to predicate the behavior and validate
+  the performance of software instead of having to rely entirely on testing. Simulation and prototyping can help analyze
+  quality.</p>
+<div class="third">Measures</div>
+<p>Measures can be classified as function-based (structured) which are obtained by analyzing functional decomposition,
+  generally represented using a structure chart aka hierarchical diagram, and object-oriented design measures which are
+  usually represented as a class diagram.</p>
+<div class="second">Software design notations</div>
+<div class="third">Structural descriptions (static view)</div>
+<p>Mostly but not always graphical notations that describe and represent the structural aspects of a software
+  design-that is, they are used to describe the major components and how they are interconnected: architecture
+  description languages (ADLs) are textual, often formal, languages used to describe software architecture in terms of
+  components and connectors, class and object diagrams are used to represent a set of classes and objects and their
+  interrelationships, component diagrams represent a set of components (physical and replaceable parts of a system that
+  conform to and provide the realization of a set of interfaces) and their interrelationships, class responsibility
+  collaborator cards (CRCs) denote names, responsibilities, and collaborators of components, deployment diagrams
+  represent a set of physical nodes and their relationships, entity-relationship diagrams (ERDs) represent conceptual
+  models of data stored in information repositories, interface description languages (IDLs) are programming-like
+  languages used to define interfaces of software components, and structure charts are used to describe the calling
+  structure of programs.</p>
+<div class="third">Behavioral descriptions (dynamic view)</div>
+<p>Activity diagrams are used to show control flow from activity to activity. Communication diagrams show interactions
+  that occur among a grou pof objects (emphasis on objects, their links, and the messages they exchange on those links).
+  Data flow diagrams (DFDs) show data flow among elements and can be used for security analysis as they offer
+  identification of possible paths for attack and disclosure of confidential information. Decision tables and diagrams
+  represent complex combinations of conditions and ctions. Flowcharts represent the flow of control and the associated
+  actions to be performed. Sequence diagrams show interactions among a group of objects, with emphasis on the time
+  ordering of messages passed between objects. State transition and state chart diagrams show control flow from state to
+  state and how the behavior of a component changes based on its current state in a state machine. Formal specification
+  languages are textual languages that use basic notions from mathematics (eg. logic, set, sequence) to rigorously and
+  abstractly define software component interfaces and behavior, often in terms of pre- and postconditions. Pseudo code
+  and program design languages (PDLs) are structured programming-like languages used to describe the behavior of a
+  procedure or method.</p>
+<div class="second">Software design strategies and methods</div>
+<div class="third">Genreal strategies</div>
+<p>Divide-and-conquer and stepwise refinement strategies, top-down vs. bottom-up strategies, and strategies making use
+  of heuristics, use of patterns and pattern languages, and use of an iterative and incremental approach.</p>
+<div class="third">Function-oriented (structured) design</div>
+<p>One of the classical methods of software design, where decomposition centers on identifying the major software
+  functions and then elaborating and refining them in a hierarchical top-down manner.</p>
+<div class="third">Object-oriented design</div>
+<p>Noun = object; verb = method; adjective = attribute, where inheritance and polymorphism play a key role. This has
+  evolved since to a field of component-based design, where metainformation can be defined and accessed.</p>
+<div class="third">Data structure-centered design</div>
+<p>Starts from data structures a program manipulates rather than from the function it performs. The software engineer
+  first describes the input and output data structures and then develops the program's control structure based on these
+  data structure diagrams.</p>
+<div class="third">Component-based design (CBD)</div>
+<p>A software component is an independent unit, having well-defined interfaces and dependencies that can be composed and
+  deployed independently. Component-based design addresses issues related to providing, developing, and itnegrating such
+  componnets in order to improve reuse. Components with a certain degree of trustworthiness should not depend on less
+  trustworthy components.</p>
+<div class="third">Other methods</div>
+<p>Iterative and adaptive methods implement software increments and reduce emphasis on rigorous software requirement and
+  design. Aspect-oriented design constructs software using aspects to implement the crosscutting concerns and extensions
+  that are identified during the software requirement process. Service-oriented architecture builds distributed software
+  using web services executed on distributed computers.</p>
+<div class="second">Software design tools</div>
+<p>Software design tools help translate requirements model into a design representation, provide support for
+  representing functional components and their interfaces, implement heuristics refinement and partitioning, and provide
+  guidleines for quality assessment.</p>
+
+<div class="first">Software construction</div><a class="anchor" id="software_construction"></a>
+<div class="second">Software construction fundamentals</div>
+<div class="third">Minimizing complexity</div>
+<div class="third">Anticipating change</div>
+<div class="third">Constructing for verification</div>
+<div class="third">Reuse</div>
+<div class="third">Standards in construction</div>
+<div class="second">Managing construction</div>
+<div class="third">Construction in life cycle models</div>
+<div class="third">Construction planning</div>
+<div class="third">Construction measurement</div>
+<div class="second">Practical considerations</div>
+<div class="third">Construction design</div>
+<div class="third">Construction languages</div>
+<div class="third">Coding</div>
+<div class="third">Construction testing</div>
+<div class="third">Construction for reuse</div>
+<div class="third">Construction quality</div>
+<div class="third">Integration</div>
+<div class="second">Construction technologies</div>
+<div class="third">API design and use</div>
+<div class="third">Object-oriented runtime issues</div>
+<div class="third">Parameterization and generics</div>
+<div class="third">Assertions, design by contract, and defensive programming</div>
+<div class="third">Error handling, exception handling, and fault tolerance</div>
+<div class="third">Executable models</div>
+<div class="third">State-based and table-driven construction techniques</div>
+<div class="third">Runtime configuration and internationalization</div>
+<div class="third">Grammar-based input processing</div>
+<div class="third">Concurrency primitives</div>
+<div class="third">Middleware</div>
+<div class="third">Construction methods for distributed software</div>
+<div class="third">Constructive heterogeneous systems</div>
+<div class="third">Performance analysis and tuning</div>
+<div class="third">Platform standards</div>
+<div class="third">Test-first programming</div>
+<div class="second">Software construction tools</div>
+<div class="third">Development environments</div>
+<div class="third">GUI builders</div>
+<div class="third">Unit testing tools</div>
+<div class="third">Profiling, performance analysis, and slicing tools</div>
+
+
 <div class="first">Overview of operating systems</div><a class="anchor" id="overview_operating"></a>
 <h4>Kernel</h4>
 <p>The kernel is a computer program at the core of a computer's operating system that generally has complete control
   over everything in the system. It is the portion of the operating system that is always resident in memory, and
   facilitates interactions between hardware and software components. It controls all hardware resources (e.g. I/O,
   memory, cryptography) via device drivers, arbitrates conflicts between processes concerning such resources, and
-  optimizes the utilization of common resources e.g. CPU & cache usage, file systems, and network sockets. It is one of
-  the first programs loaded on startup (after the bootloader). It connects the application software to the hardware of a
+  optimizes the utilization of common resources e.g. CPU & cache usage, file systems, and network sockets. It is one
+  of
+  the first programs loaded on startup (after the bootloader). It connects the application software to the hardware of
+  a
   computer.</p>
 <h4>Operating system</h4>
 <p>An operating system is system software that manages computer hardware, software resources, and provides common
@@ -296,8 +798,10 @@
   correspondence between the instructions in the language and the architecture's machine code instructions. It usually
   has
   one statement per machine instruction. Assembly code is converted into executable machine code by a utility program
-  reffered to as an assembler. The term originally meant "a program that assembles another program consisting of several
-  sections into a single program." The conversion process is referred to as assembly, as in assembling the source code.
+  reffered to as an assembler. The term originally meant "a program that assembles another program consisting of
+  several
+  sections into a single program." The conversion process is referred to as assembly, as in assembling the source
+  code.
 </p>
 <h4>Linux</h4>
 <p>Linux is a family of free and open-source operating systems based on the Linux kernel, examples include Debian,
@@ -306,8 +810,10 @@
   interface, while most personal computers rely on graphical interfaces. Linux filesystems also have a different
   structure than those found on Windows or MacOS.</p>
 <h4>Terminal</h4>
-<p>A terminal is an input and output environment that presents a text-only window running a shell. A shell is a program
-  that exposes the computer's operating system to a user or program. In Linux systems, the shell presented in a terminal
+<p>A terminal is an input and output environment that presents a text-only window running a shell. A shell is a
+  program
+  that exposes the computer's operating system to a user or program. In Linux systems, the shell presented in a
+  terminal
   is a command line interpreter. A command line interface is a user interface which processes commands to a computer
   program and outputs the results.</p>
 
