@@ -309,8 +309,6 @@ SWEBOK v3
   activities are poorly performed. Software
   requirements express the needs and constraints placed on a software product that contribute to the solution of some
   real-world problem. The term "requirements engineering" denotes the systematic handling of requirements.</p>
-<p>The waterfall model is a breakdown of project activities into linear sequential phases, where each phase depends on
-  the deliverables of the previous one. It tends to be among the less iterative and flexible approaches.</p>
 <div class="third">Product and process requirements</div>
 <p>A product requirement is a need or constraint on the software to be developed. A process requirement is essentially a
   constraint on the developt of the software.</p>
@@ -737,57 +735,510 @@ SWEBOK v3
   guidleines for quality assessment.</p>
 
 <div class="first">Software construction</div><a class="anchor" id="software_construction"></a>
+<p>The term software construction refers to the detailed creation of working software through a combination of coding,
+  verification, unit testing, integration testing, and debugging.</p>
 <div class="second">Software construction fundamentals</div>
 <div class="third">Minimizing complexity</div>
+<p>Minimizing complexity is motivated by the fact that people are limited in their ability to hold complex structures
+  and information in their working memory over long periods of time. Reduced complexity is achieved through emphasizing
+  code creation that is simple and readable rather than clever. It is accomplished through use of standards, modular
+  design, etc.</p>
 <div class="third">Anticipating change</div>
+<p>Anticipating change helps software engineers build extensible softawre, which means they can enhance a software
+  product without disrupting the underlying structure.</p>
 <div class="third">Constructing for verification</div>
+<p>Constructing for verification means building software in such a way that faults can be readily found by the software
+  engineers writing the software as well as by the testers and users during independent testing and operational
+  activities. Specific techniques include following coding standards to support code reviews and unit testing,
+  organizing code to support automated testing, and restricting the use of complex or hard-to-understand language
+  structures.</p>
 <div class="third">Reuse</div>
+<p>Reuse refers to using existing assets in solving different problems. These typically include libraries, modules,
+  components, source code, and commercial off-the-shelf (COTS) assets. "Construction for reuse" means to create reusable
+  software assets, and "construction with reuse" means to reuse software assets in the construction of a new solution.
+</p>
 <div class="third">Standards in construction</div>
+<p>Standards that directly affect construction issues include communication methods (eg. standards for document formats
+  and contents), programming languages, coding standards (eg. standards for namign conventions, layouts, and
+  indentation), platforms (eg. interface standards for operating system calls), and tools (eg. diagrammatic standards
+  for notations like UML). Standards can be external or internal.</p>
 <div class="second">Managing construction</div>
 <div class="third">Construction in life cycle models</div>
+<p>Waterfall and staged-delivery life cycle models treat construction as an activity that occurs only after significant
+  prerequisite work has been completed, and emphasize the activities that precede construction (requirements and
+  design). The main emphasis in these models may be coding.</p>
+<p>Evolutionary prototyping and agile development are more iterative, and tend to treat construction as an activity that
+  occurs concurrently with other software development activities. These approaches usually mix design, coding, and
+  testing activities as all part of construction.</p>
+<p>In general, software construction is mostly coding and debugging, but it also involves construction planning,
+  detailed design, unit testing, integration testing, etc.</p>
 <div class="third">Construction planning</div>
+<p>The choice of construction method affects the extent to which construction prerequisites are performed, the order in
+  which they are performed, and the degree to which they should be completed before construction work begins.
+  Constructoin planning also defines the order in whcih the components are created and integrated, the integration
+  strategy (eg. phased or incremental integration), the software quality management processes, the allocation of task
+  assignments to specific software engineers, etc.</p>
 <div class="third">Construction measurement</div>
+<p>Construction activities and artifacts can be measured, eg. code developed, code modified, code reused, code
+  destroyed, code complexity, code inspection statistics, fault-fix and fault-find rates, effort, and scheduling. These
+  can be useful for managing construction.</p>
 <div class="second">Practical considerations</div>
 <div class="third">Construction design</div>
+<p>Just as construction workers building a physical structure must make small-scale modifications to account for
+  unanticipated gaps in the builder's plans, software construction workers must make modifications on a smaller or
+  larger scale to flesh out details of software design during construction.</p>
 <div class="third">Construction languages</div>
+<p>Construction languages include all forms of communication by which a human can specify an executable problem solution
+  to a problem. The simplest type of construction language is a configuration language, in which software engineers
+  choose from a limited set of predefined options to create new or custom software installations. The text-based
+  configuration files used in both the Windows and Unix operating systems are examples of this.</p>
+<p>Toolkit languages are used to build applications out of elements in toolkits. Scripting languages are commonly used
+  kinds of application programming languages, also called batch files or macros. Programming languages are the most
+  flexible type of construction languages. They also contain the least amount of information about specific application
+  areas and development processes, and so require the most training and skill to use effectively. The choice of
+  programming language can have a large effect on the likelihood of vulnerabilities being introduced during coding.</p>
+<p>There are three general kinds of notation used for programing languages. Linguistic notations (eg. C/C++, Java) use
+  textual strings to represent complex software constructions and have a sentence-like syntax. Formal notations (eg.
+  Event-B) rely less on intuitive, everyday meanings of words and text strings and more on definitions backed up by
+  precise, unambiguous and formal (or mathematical) definitions. Formal construction are at the base of most forms of
+  system programming notations, where accuracy, time behavior, and testability are more miportant than ease of mapping
+  into natural language. Visual notations (eg. Matlab) rely on direct visual interpretation and placement of visual
+  entities that represent the underlying software. Visual construction is limited by the difficulty of making "complex"
+  statements using only the arrangement of icons on a display.</p>
 <div class="third">Coding</div>
+<p>Consider techniques for creating understandable source code (naming conventions, source code layout), use of classes,
+  enumerated types, variables, named constants, use of control structures, handling of error conditions, prevention of
+  code-level security breaches, resource usage via use of exclusion mechanisms and discipline in accessing serially
+  reusable resources, source code organization, code documentation, and code tuning.</p>
 <div class="third">Construction testing</div>
+<p>Construction involves two forms of testing, often performed by the software engineers who wrote the code: unit
+  testing and integration testing. The purpose is to reduce the gap between the time when faults are inserted and the
+  time when those faults are detected. Test cases may be written before or after code is written.</p>
 <div class="third">Construction for reuse</div>
+<p>Construction for reuse creates software that has the potential to be reused in the future, usually based on
+  variability analysis and design. To aovid the problem of code clones, it is desired to encapsulate reusable code
+  fragments into well-structured libraries or components. The tasks related to reuse include variability implementation
+  with mechanisms such as parameterization, conditional compilation, design patterns, etc., variability encapsulation to
+  make the software assets easy to configure and customize, testing the variability provided by the reusable software
+  assets, and description and publication of reusable software assets.</p>
+<div class="third">Construction with reuse</div>
+<p>Construction with reuse means to create new software with the reuse of existing software assets. The most popular
+  method of reuse is to reuse code from the libraries provided by the language, platform, tools being used, or an
+  organization repository. Tasks for construction with reuse include selection of reusable units, databases, test
+  procedures, or test data, evaluation of code or test reusability, integration of reusable software assets into current
+  software, and reporting of reuse information on new code, test procedures, or test data.</p>
 <div class="third">Construction quality</div>
+<p>The primary technique use for construction quality include unit testing and integration testing, test-first
+  development, use of assertions and defensive programming, debugging, inspections, technical reviews, and static
+  analysis. Programmers should know good practices and common vulnerabilities-for example, from widely recognized lists
+  about common vulnerabilities. Automated static analysis of code for security weaknesses is available for several
+  common programming languages.</p>
 <div class="third">Integration</div>
+<p>Concerns related to construction integration include planning the sequence in which components will be integrated,
+  identifying what hardware is needed, creating scaffolding to support interim versions of the software, determining the
+  degree of testing and quality work performed on components before they are integrated, and determining points in the
+  project at which interim versions of the software are tested.</p>
+<p>Programs can be integrated by either phased or incremental approach. Phased integration, also called "big bang"
+  integration, delays integration until all parts are complete. Incremental integration involves writing and testing a
+  program in small pieces and then combining the pieces one at a time. Stubs, drivers, and mock objects are usually
+  needed to enable incremental integration.</p>
 <div class="second">Construction technologies</div>
 <div class="third">API design and use</div>
+<p>An application programming interface (API) is the set of signatures that are exported and available to the users of a
+  library or a framework to write their applications. Besides signatures, an API should always include statements about
+  the program's effects and/or behaviors (i.e., its semantics). API design should try to make the API easy to learn and
+  memorize, lead to readable code, be hard to misuse, be easy to extend, be complete, and maintain backward
+  compatibility.</p>
 <div class="third">Object-oriented runtime issues</div>
+<p>Object-oriented languages support runtime mechanisms that increase flexibility and adaptability of object-oriented
+  programs. Polymorphism is the ability of a language to support general operations without knowing until runtime what
+  kind of concrete objects the software will include. Because the program does not know the exact type of objects in
+  advance, the exact behavior is determined at runtime (called dynamic binding). Reflection is the ability of a program
+  to observe and modify its own structure and behavior at runtime, allowing inspection of classes, interfaces, fields,
+  and methods at runtime without knowing their names at compile time.</p>
 <div class="third">Parameterization and generics</div>
+<p>Parametrized types, also known as generics (Ada, Eiffel) and templates (C++), enable the definition of a type or
+  class without specifying all the other types it uses. The unspecified types are supplied as parameters at the point of
+  use. Parameterized types provide a third way (in addition to class inheritance and object composition) to compose
+  behaviors in object-oriented software.</p>
 <div class="third">Assertions, design by contract, and defensive programming</div>
+<p>An assertion is an executable predicate that's placed in a program (usually a routine or macro) that allows runtime
+  checks of the program. Assertions are normally compiled into the code at development time and are later compiled out
+  of code so they don't degrade the performance. Design by contract is a development approach in which preconditions and
+  postconditions are included for each routine. A contract provides a precise specification of the semantics of a
+  routine. Defensive programming means to protect a routine from being broken by invalid inputs. Common ways are to
+  check the values of all the input parameters and deciding how to handle bad inputs.</p>
 <div class="third">Error handling, exception handling, and fault tolerance</div>
+<p>Errors can be handled with assertions, returning a neutral value, substituting the next piece of valid data, logging
+  a warning message, returning an error code, or shutting down. Exceptions detect and process errors or exceptional
+  events. The basic structure of an exception is that a routine uses throws a detected exception and an exception
+  handling block will catch the exception in a try-catch block. The try-catch block may process the erroneous condition
+  or it may return control to the calling routine. Exception handling should be carefully designed following common
+  principles such as including in the exception message all information that led to the exception, avoiding empty catch
+  blocks, knowing the exceptions the library code throws, perhaps building a centralized exception reporter, and
+  standardizing the program's use of exceptions. Fault tolerance is a collection of techniques that increase software
+  reliability by detecting errors and recovering from them if possible or containing their effects if recovery is not
+  possible. The most common fault tolerance strategies include backing up and retrying, using auxiliary code, using
+  voting algorithms, and replacing an erroneous value with a phony value that will have a benign effect.</p>
 <div class="third">Executable models</div>
+<p>Executable models abstract away the details of specific programming languages and decisions about the organization of
+  the software. A specification built in an executable modeling language like xUML (executable UML) can be deployed in
+  various software environmnets without change. An executable-model compiler (transformer) can turn an executable model
+  into an implementation using a set of decisions about the target hardware and sofware environment. Executable models
+  are one foundation supporting the Model-Driven Architecture (DMA) initiative of the Object Management Group (OMG). An
+  executable model is a way to completely specify a Platform Indepdent Model (PIM), which is a model of a solution to a
+  problem that does not rely on any implementation technologies. The Platform Specific Model (PSM) weaves together the
+  PIM and the platform on which it relies.</p>
 <div class="third">State-based and table-driven construction techniques</div>
+<p>State-based programming, or automata-based programming, is a programming technology using finite state machines to
+  describe program behaviors. The main idea is to construct computer programs the same way the automation of
+  technological processes is done. Combined with object-oriented programming, state-based programming forms a new
+  composite approach called state-based, object-oriented programming. A table-driven method is a schema that uses tables
+  to look up information rather than using logic statements such as if and case.</p>
 <div class="third">Runtime configuration and internationalization</div>
+<p>Runtime configuration is a technique that binds variable values and program settings when the program is running,
+  usually by updating and reading configuration files in a just-in-time model. Internationalization is the technical
+  activity of preparing a program, usually an interactive one, to support multiple locales. The corresponding activity,
+  localization, is the activity of modifying a program to support a specific local language.</p>
 <div class="third">Grammar-based input processing</div>
+<p>Grammar-based input processing involves syntax analysis, or parsing, of the input token stream, and involves creation
+  of a data structure (called a parse tree or syntax tree) representing the input data.</p>
 <div class="third">Concurrency primitives</div>
+<p>A synchronization primitive is a programming abstraction provided by a programming language or the operating system
+  that facilitates concurrency and synchronization. Well-known concurrency primitives include semaphores, monitors, and
+  mutexes. A semaphore is a protected variable or abstract data type that provides a simple but useful abstraction for
+  controlling access to a common resource by multiple processes or threads in a concurrent programming environment. A
+  monitor is an abstract data type that presents a set of programmer-defined operations that are executed with mutual
+  exclusion. A mutex (mutual exclusion) is a synchronization primitive that grants exclusive access to a shared resource
+  by only one process or thread at a time.</p>
 <div class="third">Middleware</div>
+<p>Middleware is a broad classification for software that provides services above the operating system layer yet below
+  the application program layer. Middleware can provide runtime containers for software components to provide message
+  passing, persistence, and a transparent location across a network. Middleware can be viewed as a connector between the
+  components that use the middleware. Modern message-oriented middleware usually provides an Enterprise Service Bus
+  (ESB), which supports service-oriented interaction and communication between multiple software applications.</p>
 <div class="third">Construction methods for distributed software</div>
+<p>A distributed system is a collection of physically separate, possibly heterogeneous computer systems that are
+  networked to provide the users with access to the various resources that the system maintains. Construction of
+  distributed software is distinguished by issues such as paralliems, communication, and fault tolerance. Distributed
+  programming typically falls into client-server, 3-tier architecture, n-tier architecture, distributed objects, loose
+  coupling, or tight coupling.</p>
 <div class="third">Constructive heterogeneous systems</div>
+<p>Heterogeneous systems consist of a variety of specialized computational units of different types, such as Digital
+  Signal Processors (DSPs), microcontrollers, and peripheral processors. These computational units are independently
+  controlled and communicate with one another. Embedded systems are typically heterogeneous systems. Software
+  development and virtual hardware development proceed concurrently through stepwise decomposition. The hardware part is
+  usually simulated in field programmable gate arrays (FPGAs) or application-specific integrated circuits (ASICs). The
+  software part is translated into a low-level programming language.</p>
 <div class="third">Performance analysis and tuning</div>
+<p>Code efficiency, determined by architecture, detailed design decisions, and data-structure and algorithm selection,
+  influences an execution speed and size. Performance analysis is the investigation of a program's behavior using
+  information gathered as the program's executes, with the goal of identifying possible hot spots in the program to be
+  improved. Code tuning, which improves performance at the code level, is the practice of modifying correct code in ways
+  to make it run more efficiently.</p>
 <div class="third">Platform standards</div>
+<p>Platform standards are a set of standard services and APIs that compatible platform implementations must implement.
+  Examples are Java 2 Platform Enterprise Edition (J2EE) and POSIX standard for operating systems (Portable Operating
+  System Interface), which reppresents a set of standards implemented primarily for UNIX-based operating systems.</p>
 <div class="third">Test-first programming</div>
+<p>Test-first programming, also known as test-driven development (TDD), is a popular development style in which test
+  cases are written prior to writing any code.</p>
 <div class="second">Software construction tools</div>
 <div class="third">Development environments</div>
+<p>A development environment, or integrated development environment (IDE), provides comprehensive facilities to
+  programmers for software construction by integrating a set of development tools. In addition to basic code editing
+  functions, modern IDEs often offer other features like compilation and error detection from within the editor,
+  itnegration with source code control, build/test/debugging tools, compressed or outline views of programs, automated
+  code transforms, and support for refactoring.</p>
 <div class="third">GUI builders</div>
+<p>A Graphical User Interface (GUI) builder is a software development tool that enables the developer to create and
+  maintain GUIs in a What You See Is What You Get (WYSIWYG) mode. A GUI builder usually includes a visual editor for the
+  developer to design forms and windows and manage the layout of the widgets by dragging, dropping, and parameter
+  setting.</p>
 <div class="third">Unit testing tools</div>
+<p>Unit testing verifies the functioning of software modules in isolation from other software elements that are
+  separately testable and is often automated.</p>
 <div class="third">Profiling, performance analysis, and slicing tools</div>
+<p>The most common performance analysis tools are profiling tools. An execution profiling tool monitors the code while
+  it runs and records how many times each statement is executed or how much time the program spends on each statement or
+  execution path. Program slicing involves computation of the set of program statements (the program slice) that may
+  affect the values of specified variables at some point of interest, referred to as a slicing criterion.</p>
+
+<div class="first">Software testing</div><a class="anchor" id="software_testing"></a>
+<p>Software testing consists of the dynamic verification that a program provides expected behaviors on a finite set of
+  test cases, suitably selected from the usually infinite execution domain. Dynamic means that testing always implies
+  executing the program on selected inputs (as opposed to static techniques which do not execute code). Finite is
+  because exhaustive testing could take forever to execute. Selected is because selection of which test technique and
+  which test cases can be difficult. Expected
+  means the tests should have some expected outcome.</p>
+<p>Software testing is, or should be pervasive throughout the entire development and maintenance life cycle. Software
+  failures experienced after delivery are addressed by corrective maintenance.</p>
+<p>The test target and test objective together determine how the test set is identified, both with regard to its
+  consistency (how much testing is enough, aka test adequacy criteria) and to its composition (which test cases should
+  be selected, aka selection criteria).</p>
+<div class="second">Software testing fundamentals</div>
+<div class="third">Testing-related terminology</div>
+<p>Many terms are used in software engineering to describe a malfunction: notably fault, failure, and error. It is
+  essential to clearly distinguish between the cause of a malfunction (fault) and an undesired effect in the system's
+  delivered services (failure). There may be faults in the software that never manifest as a failure. It is the faults
+  that can and must be removed. The more generic term defect can be used to refer to either a fault or a failure, when
+  the distinction is not important. To avoid ambiguity, one could refer to failure-causing inputs instead of faults,
+  since faults can't be proved to cause a failure.</p>
+<div class="third">Key issues</div>
+<p>Key issues in testing include having a test selection/test adequacy criterion that can determine whether a set of
+  test cases is sufficient, determining testing effectiveness by analyzing a set of program executions, and testing for
+  defect discovery by trying to find a test that causes the system to fail. The oracle problem (an agent that decides
+  whether a program behaved correctly in a given test). Testing theory warns against ascribing an unjustified field of
+  confidence to a series of successful tests. Most results of testing theory are negative, in that they state what
+  testing can never achieve as opposed to what is actually achieved. The Dijkstra aphorism is that program testing can
+  show bugs but never show their absence. The problem of infeasible paths are control flow paths that cannot be
+  exercised by any input data, and pose a significant problem in path-based testing. Testability means either the ease
+  with which a given test coverage criterion can be satisfied or the likelihood, measured statistically, that a set of
+  test cases will expose a failure if the software is faulty.</p>
+<div class="third">Relationship of testing to other activities</div>
+<p>Testing is related to but different from, for example, static software quality management techniques, correctness
+  proofs and formal verification, debugging, and program construction.</p>
+<div class="second">Test levels</div>
+<p>Software testing is usually performed at different levels throughout the development and maintenance processes.
+  Levels can be distinguished based on the object of testing, called the target, or on the purpose, called the
+  objective.</p>
+<div class="third">The target of the test</div>
+<p>The target of the test can vary: a single module, a group of modules, or an entire system. Three test stages can be
+  distinguished: unit, integration, and system.</p>
+<p>Unit testing verifies the functioning in isolation of software elements that are separately testable. Typically, unit
+  testing occurs with access to the code being tested and with the support of debugging tools. The programmers who wrote
+  the code typically, but not always, conduct unit testing.</p>
+<p>Integration testing is the process of verifying the interactions among software components. Classic integration test
+  strategies, such as top-down and bottom-up, are often used with hierarchically structured software. Modern, systematic
+  integration strategies are typically architecture-driven, involving incrementally integrating components based on
+  identified functional threads. Integration testing is often an ongoing activity during which software engineers
+  abstract away lower-level perspectives and concentrate on the perspectives of the level at which they are integrating.
+</p>
+<p>System testing is concerned with testing the behavior of an entire system, usually for the nonfunctional system
+  requirements such as speed, security, accuracy, and reliability. External interfaces to other applications, utilities,
+  hardware devices, or operating environments are usually evaluated at this level.</p>
+<div class="third">Objectives of testing</div>
+<p>Stating the objectives of testing in precise, quantitative terms supports measurement and control of the test
+  process. Test cases can be designed to check that the functional specifications are correctly implemented, referred to
+  in the literature as conformance testing, correctness testing, or functional testing. Nonfunctional properties can be
+  tested as well. Important objects include reliability, security vulnerabilities, usability, and software acceptance.
+</p>
+<p>Acceptance or qualification testing determines whether a system satisfies its acceptance criteria, usually by
+  checking desired system behaviors against the customer's requirements.</p>
+<p>Installation testing can be viewed as system testing conducted in the operational environment of hardware
+  configurations and other operational constraints.</p>
+<p>Before software is released, it is sometimes given to a small, selected group of potential users for alpha testing
+  and to a larger set of representative useres for beta testing.</p>
+<p>Testing improves reliability by identifying and correcting faults. Statistical measures of reliability can be
+  derived by randomly generating test cases according to the operational profile of the software, an approach called
+  operational testing.</p>
+<p>Regression testing is the selective retesting of a system or component to verify that modifications have not caused
+  unintended effects and that the system or component still complies with its specified requirements.</p>
+<p>Performance testing verifies that the software meets the specified performance requirements and assess performance
+  characteristics such as capacity and response time.</p>
+<p>Security testing is focused on the verification that software is protected from external attacks. Usually, security
+  testing also includes verification against misuse and abuse of the software or system (negative testing).</p>
+<p>Stress testing exercises software at maximum design load with the goal of determining behavioral limits and to test
+  defense mechanisms in critical systems.</p>
+<p>Back-to-back testing is testing in which two or more variants of a program are executed with the same inputs, the
+  outputs are compared, and errors are analyzed in case of discrepancies.</p>
+<p>Recovery testing verifies software restart capabilties after a system crash or other disaster.</p>
+<p>Interface testing verifies whether the components interface to provide the correct exchange of data and control
+  information. A specific objective of interface testing is to simulate the use of APIs by end-user applications.</p>
+<p>Configuration testing verifies software under different configurations.</p>
+<p>Usability and human computer-interaction testing evaluates how easy it is for end useres to learn and to use
+  software.</p>
+<div class="second">Test techniques</div>
+<p>One of the aims of testing is to detect failures and to break a program. Testing techniques can be classified based
+  on how tests are generated. Sometimes these techniques are classified as white-box or glass-box if the tests are
+  based on how the software has been designed or coded, or black-box if the test cases rely only on input/output
+  behavior.</p>
+<div class="third">Based on the software engineer's intuition and experience</div>
+<p>Ad hoc testing uses tests derived relying on the software engnieer's skill, intuion, and experience with similar
+  programs. This is perhaps the most widely practiced techniques, and are useful for identifying test cases not
+  easily generated by more formal techniques.</p>
+<p>Exploratory testing is simultaneous learning, test design, and test execution. The tests are not defined in
+  advance but are dynamically designed, executed, and modified.</p>
+<div class="third">Input domain-based techniques</div>
+<p>Equivalence parititioning involves partitioning the input domain into a collectio nof subsets (or equivalent
+  classes). A representative set of tests is taken from each equivalency class.</p>
+<p>Pairwise testing involves test cases derived by combining interesting values for every pair of a set of input
+  variables. Pairwise testing belongs to combinatorial testing. Techniques that includes higher-level combinations than
+  pairs are referred to as t-wise, whereby every possible combination of t input variables is considered.</p>
+<p>Boundary-value analysis includes test cases chosen on or near the boundaries of the input domain of variables, with
+  the underlying rationale that many faults tend to concentrate near the extreme values of inputs. An extension of this
+  technique is robustness testing, wherein test cases are also chosen outside the input domain to test robustness in
+  processing unexpected or erroneous inputs.</p>
+<p>Random testing have tests generated purely at random (not to be confused with statistical testing from operational
+  profile). Fuzz testing or fuzzing is a special form of random testing aimed at breaking the software, most often used
+  for security testing.</p>
+<div class="third">Code-based techniques</div>
+<p>Control flow-based coverage criteria are aimed at covering all the statements, blocks of statements, or specified
+  combinations of statements in a program. The strongest of the control flow-based criteria is path testing, which aims
+  to execute all entry-to-exit control paths in a program's control flow graph. Since exhaustive path testing is
+  generally not feasible because of loops, other less stringent criteria focus on coverage of paths that limit loop
+  iterations such as statement coverage, branch coverage, and condition/decision testing. The adequacy of such tests is
+  measured in percentages.</p>
+<p>Data flow-based testing has a control flow graph annotated with information about how the program varialbes are
+  defined, used, and killed (undefined). The strongest criterion, all defition-use paths, requires that for each
+  variable every control flow path segment to a use of that definition is executed. Weaker strategies such as
+  all-definitions and all-uses are employed to reduce the number of paths required.</p>
+<p>The control structure of a program can be graphically represented using a flow graph, a directed graph where the
+  nodes and arcs correspond to program elements.</p>
+<div class="third">Fault-based techniques</div>
+<p>Fault-based techniques specifically aim to reveal categories of likely or predefined faults. To better focus the test
+  case generation, a fault model can be introduced that classifies different types of faults.</p>
+<p>Error guessing involves test cases designed by software engnieers who try to anticipate the most plausible faults in
+  a given program.</p>
+<p>A mutant is a slightly modified version of the program under test, differing by a small syntactic change. Every test
+  case has the original program and all generated mutants. If a test case is successful in identifying the difference
+  between the program and a mutant, the latter is said to be killed. Mutation testing was originally conceived as a
+  technique to evaluate test sets, and is a testing criterion in itself. The underlying assumption of mutation testing,
+  the coupling effect, is that by looking for simple syntactic faults, more complex but real faults will be found.</p>
+<div class="third">Usage-based techniques</div>
+<p>Reliability evaluation, or operational testing, the tests reproduce the operational environment of the software, or
+  the software's operational profile, as closely as possible. To do this, inputs are assigned probabilities, or
+  profiles, according to their frequency of occurrence in actual operation.</p>
+<p>Specialized heuristics, called usability inspection methods, are applied for the systematic observation of system
+  usage under controlled conditions in order to determine how well people can use teh system and its interfaces.
+  Usability heuristics include cognitive walkthroughs, claims analysis, field observations, thinking aloud, and even
+  approaches such as user questionnaires and interviews.</p>
+<div class="third">Model-based testing techniques</div>
+<p>A model in this context is an abstract (formal) representation of the software under test or of its software
+  requirements. Model-based testing is used to validate requirements, check their consistency, and generate test cases
+  focused on the behavioral aspects of the software.</p>
+<p>Decision tables represent logical relationships between conditions and actions. Test cases are systematically derived
+  by considering every possible combination of conditions and their corresponding resultant actions. A related technique
+  is cause-effect graphing.</p>
+<p>A program can be modeled as a finite state machine.</p>
+<p>Stating the specifications in a formal language permits automatic derivation of functional test cases and provides an
+  oracle for checking test results. Testing and test control notation version 3 (TTCN3) is a language for writing test
+  cases, particularly suitable for testing complex communication protocols.</p>
+<p>Workflow models specify a sequence of activities performed by humans and/or software applications, usually
+  represented through graphical notations. Each sequence of actions constitutes one workflow (ie. scenario).</p>
+<div class="third">Techniques based on the nature of the application</div>
+<p>Additional techniques for test derivation depends on nature of software (eg. object-oriented, component-based,
+  web-based, concurrent, protocol-based, real-time systems, safety-critical systems, service-oriented, open-source,
+  embedded).</p>
+<div class="third">Selecting and combining techniques</div>
+<p>Model-based and code-based test techniques are often contrasted as functional vs. structural testing. These should be
+  seen as complements. In addition, test cases can be selected in a deterministic way or randomly drawn from some
+  distribution of inputs, such as is done in reliability testing.</p>
+<div class="second">Test-related measures</div>
+<p>A clear distinction should be made between test-related measures that provide an evaluation of a program under test,
+  based on the observed test ouputs, and the measures that evaluate the thoroughness of the test set. For example,
+  achieving high branch coverage improves chances of finding failures but is not a testing objective.</p>
+<div class="third">Evaluation of the program under test</div>
+<p>Measures based on software size (eg. source lines of code, functional size, or frequency with which modules call one
+  another) is one measure. It is important to know which types of faults may be found in the software under test. A
+  program under test can be evaluated by counting discovered faults as the ratio between the number of faults found and
+  the size of the program. A statistical estimate of software reliability, which can be obtained by observing
+  reliability achieved, can evaluate a software product and decide whether or not testing can be stopped. Reliability
+  growth models provide a prediction of reliability based on failures. These models are divided into failure-count and
+  time-between-failure models.</p>
+<div class="third">Evaluation of the tests performed</div>
+<p>Coverage or thoroughness measures evaluate the thoroughness of executed tests, dynamically measuring the ratio
+  between covered elements and the total number.</p>
+<p>In fault seeding, some faults are artificially introduced into a program before testing. Testing effectiveness can be
+  evaluated, in theory, by how well they discover these artificial faults. In practice, statisticians question the
+  distribution and representativeness of seeded faults.</p>
+<p>The ratio of killed mutants to the total number of generated mutants measures the effectiveness of an executed test
+  set in mutation testing.</p>
+<p>It is important to be precise as to the property against which the techniques are being assessed.</p>
+<div class="second">Test process</div>
+<p>Testing concepts, strategies, techniques, and measures need to be integrated into a defined and controlled process.
+  The test process supports testing activities and provides guidance to testers and testing teams.</p>
+<div class="third">Pratical considerations</div>
+<p>Successful testing requires a collaborative attitude towards testing and quality assurance activities. The mindset of
+  individual code ownership among programmers may need to be overcome in order to foster a favorable reception towards
+  failure discovery and correction.</p>
+<p>The testing phases can be guided by various aims such as risk-based or scenario-based.</p>
+<p>Test activities conducted at different levels must be organized.</p>
+<p>Documentation is an integral part of the formalization of the test process. Test documents may include the test plan,
+  test design specification, test procedure specification, test case specification, test log, and test incident report.
+  The software under test is documented as the test item. Test documentation should be under the control of software
+  configuration management.</p>
+<p>Test-driven development (TDD) originated as one of the core extreme programming (XP) practices and consists of
+  writing unit tests prior to writing the code to be tested. In this way, test cases are a surrogate for software
+  requirements.</p>
+<p>The testing team can be composed of internal members, external members, or both.</p>
+<p>Measures related to resources spent on testing are used by managers to control and improve the testing process.</p>
+<p>Thoroughness measures and considerations about costs and risks of possible remaining failures, help to determine when
+  a test stage can be determinated.</p>
+<p>The means used to test each part of the software should be reused systematically. A repository of test materials
+  should be under control of software configuration management.</p>
+<div class="third">Test activities</div>
+<p>Test activities must be planned, including coordination of personnel, availability of test facilities and equipment,
+  creation and maintenance of all test-related documentation, and planning for possible undesirable outcomes.</p>
+<p>Generation
+  of test cases is based on the level of testing to be performed and the particular testing techniques. Test cases
+  should be under the control of software configuration management and include the expected results for each test.</p>
+<p>The
+  environment used for testing should be compatible with other adopted software engineering tools. Executoin of tests
+  should embody a basic principle of scientific experimentation: everything during testing should be performed and
+  documented clearly enough that another person could replicate the results.</p>
+<p>The results of testing should be evaluated
+  to determine whether the testing has been successful. Testing activities can be entered into a testing log to identify
+  when a test was conducted, who performed the test, what software configuratoin was used, and other relevant
+  identificatio ninformation. Defects can be tracked and analyzed to determine when they were introduced into the
+  software, why they were created (eg. poorly defined requirements, incorrect variable declaration, memory leak,
+  programming syntax error), and when they could have been first observed in the software.</p>
+<div class="second">Software testing tools</div>
+<div class="third">Testing tool support</div>
+<p>Testing requires many labor-intensive tasks, running numerous program executions, and handling a great amount of
+  information. Appropriate tools can make this less error-prone. Tool selection depends on diverse evidence, suc has
+  development choices, evaluation objectives, execution facilities, and so on.</p>
+<div class="third">Categories of tools</div>
+<p>Test harnesses (drivers, stubs) provide a controlled environment in which tests can be launched and test ouputs can
+  be logged. In order to execute parts of a program, dirvers and stubs are provided to simulate calling and are called
+  modules, respectively. Test generators provide assistance in the generation test cases. Capture/replay tools replay
+  previously executed tests. Oracle/file comparators/assertion checking tools assist in deciding whether a test outcome
+  is successful or not. Coverage analyzers assess which and how many entities of the program flow graph have been
+  exercised amongst all those required by the selected test coverage criterion. The analysis can be done thanks to
+  program instrumenters that insert recording probes into the code. Tracers record the history of a program's execution
+  paths. Regression testing tools support the reexecution of a test suite after a section of software has been modified.
+  Reliability evaluation tools support test results analysis and graphical visualization.</p>
+
+
+<div class="first">Software maintenance</div><a class="anchor" id="software_maintenance"></a>
+<div class="second">Software maintenance fundamentals</div>
+<div class="third">Definitions and terminology</div>
+<div class="third">Nature of maintenance</div>
+<div class="third">Need for maintenance</div>
+<div class="third">Majority of maintenance costs</div>
+<div class="third">Evolution of software</div>
+<div class="third">Categories of maintenance</div>
+<div class="second">Key issues in software maintenance</div>
+<div class="third">Technical issues</div>
+<div class="third">Management issues</div>
+<div class="third">Maintenance cost estimation</div>
+<div class="third">Software maintenance measurement</div>
+<div class="second">Maintenance process</div>
+<div class="third">Maintenance processes</div>
+<div class="third">Maintenance activities</div>
+<div class="second">Techniques for maintenance</div>
+<div class="third">Program comprehension</div>
+<div class="third">Reengineering</div>
+<div class="third">Reverse engineering</div>
+<div class="third">Migration</div>
+<div class="third">Retirement</div>
+<div class="second">Software maintenance tools</div>
+
+
 
 
 <div class="first">Overview of operating systems</div><a class="anchor" id="overview_operating"></a>
 <h4>Kernel</h4>
-<p>The kernel is a computer program at the core of a computer's operating system that generally has complete control
+<p>The kernel is a computer program at the core of a computer's operating system that generally has complete
+  control
   over everything in the system. It is the portion of the operating system that is always resident in memory, and
   facilitates interactions between hardware and software components. It controls all hardware resources (e.g. I/O,
   memory, cryptography) via device drivers, arbitrates conflicts between processes concerning such resources, and
-  optimizes the utilization of common resources e.g. CPU & cache usage, file systems, and network sockets. It is one
+  optimizes the utilization of common resources e.g. CPU & cache usage, file systems, and network sockets. It is
+  one
   of
-  the first programs loaded on startup (after the bootloader). It connects the application software to the hardware of
+  the first programs loaded on startup (after the bootloader). It connects the application software to the
+  hardware of
   a
   computer.</p>
 <h4>Operating system</h4>
@@ -795,9 +1246,11 @@ SWEBOK v3
   services for computer programs.</p>
 <h4>Assembly language</h4>
 <p>Assembly language, or assembler language, is any low-level programming language in which there is a very strong
-  correspondence between the instructions in the language and the architecture's machine code instructions. It usually
+  correspondence between the instructions in the language and the architecture's machine code instructions. It
+  usually
   has
-  one statement per machine instruction. Assembly code is converted into executable machine code by a utility program
+  one statement per machine instruction. Assembly code is converted into executable machine code by a utility
+  program
   reffered to as an assembler. The term originally meant "a program that assembles another program consisting of
   several
   sections into a single program." The conversion process is referred to as assembly, as in assembling the source
@@ -805,7 +1258,8 @@ SWEBOK v3
 </p>
 <h4>Linux</h4>
 <p>Linux is a family of free and open-source operating systems based on the Linux kernel, examples include Debian,
-  Ubuntu, Fedora, CentOS, Gentoo, Arch Linux, and many others. 90% of all cloud infrastructure and 74% of the world's
+  Ubuntu, Fedora, CentOS, Gentoo, Arch Linux, and many others. 90% of all cloud infrastructure and 74% of the
+  world's
   smartphones are powered by Linux. Linux-based operating systems depend heavily on working with the command line
   interface, while most personal computers rely on graphical interfaces. Linux filesystems also have a different
   structure than those found on Windows or MacOS.</p>
@@ -814,7 +1268,8 @@ SWEBOK v3
   program
   that exposes the computer's operating system to a user or program. In Linux systems, the shell presented in a
   terminal
-  is a command line interpreter. A command line interface is a user interface which processes commands to a computer
+  is a command line interpreter. A command line interface is a user interface which processes commands to a
+  computer
   program and outputs the results.</p>
 
 <div class="first">Introduction</div><a class="anchor" id="platform"></a>
@@ -890,7 +1345,8 @@ Iterative and recursive mathematical functions
 Iterative and recursive traversal of data structures
 Divide-and-conquer strategies
 <h4>Fundamental design concepts and principles</h4>
-Abstraction, program decomposition, encapsulation and information binding, separation of behavior and implementation
+Abstraction, program decomposition, encapsulation and information binding, separation of behavior and
+implementation
 <div class="first">Fundamental programming concepts</div><a class="anchor" id="fundamental_programming"></a>
 <h4>Basic syntax and semantics of a higher-level language</h4>
 <h4>Variables and primitive data types (e.g., numbers, characters, Booleans)</h4>
@@ -911,8 +1367,10 @@ Stacks, queues, priorty queues, sets, maps
 <div class="first">Development methods</div><a class="anchor" id="development_methods"></a>
 <h4>Program comprehension</h4>
 <h4>Program correctness</h4>
-Types of errors (syntax, logic, run-time), the concept of a specification, defensive programming (e.g., secure coding,
-exception handling), code reviews, testing fundamentals and test-case generation, the role and the use of contracts,
+Types of errors (syntax, logic, run-time), the concept of a specification, defensive programming (e.g., secure
+coding,
+exception handling), code reviews, testing fundamentals and test-case generation, the role and the use of
+contracts,
 including pre- and post-conditions, unit testing
 <h4>Simple refactoring</h4>
 <h4>Modern programming environments</h4>
@@ -948,7 +1406,8 @@ Continuous integration
 <h4>Properties of requirements including consistency, validity, completeness, and feasibility</h4>
 <div class="first">Software design</div><a class="anchor" id="platform"></a>
 <h4>System design principles</h4>
-Levels of abstraction (architectural design and detailed design), separation of concerns, information hiding, coupling
+Levels of abstraction (architectural design and detailed design), separation of concerns, information hiding,
+coupling
 and cohesion, re-use of standard structures
 <h4>Design paradigms</h4>
 Structured design (top-down functional decomposition), object-oriented analysis and design, event driven design,
@@ -969,7 +1428,8 @@ Change impact analysis, change actualization
 <div class="first">Software verification and validation</div><a class="anchor" id="platform"></a>
 <h4>Verification and validation concepts</h4>
 <h4>Inspections, reviews, audits</h4>
-<h4>Testing types, including human computer interface, usability, reliability, security, conformance to specification
+<h4>Testing types, including human computer interface, usability, reliability, security, conformance to
+  specification
   (cross-reference IAS/Secure Software Engineering)</h4>
 <h4>Testing fundamentals (cross-reference SDF/Development Methods)</h4>
 Unit, integration, validation, and system testing
@@ -1050,12 +1510,17 @@ Regression testing and test automation
   <h2>Computational Science (CN)</h2>
   <p>Computational science is a field of applied computer science, that is, the application of computer science to
     solve
-    problems across a range of disciplines. It combines computer simulation, scientific visualization, mathematical
-    modeling, computer programming and data structures, networking, database design, symbolic computation, and high
-    performance computing with various disciplines. The needs of scientists and engineers for computation have long
-    driven research and innovation in computing. Computational neuroscience is a subfield of computational science.
+    problems across a range of disciplines. It combines computer simulation, scientific visualization,
+    mathematical
+    modeling, computer programming and data structures, networking, database design, symbolic computation, and
+    high
+    performance computing with various disciplines. The needs of scientists and engineers for computation have
+    long
+    driven research and innovation in computing. Computational neuroscience is a subfield of computational
+    science.
   </p>
-  <p>A goal in neural engineering is to abstract the concept of the brain. But the brain trying to model itself is a
+  <p>A goal in neural engineering is to abstract the concept of the brain. But the brain trying to model itself is
+    a
     bit
     meta. Some say that dreams are essential models of various situations our subconscious is trying to prepare us
     for.
@@ -1151,7 +1616,8 @@ Regression testing and test automation
   • Proof by contradiction
   • Induction over natural numbers
   <h4>Principle of Mathematical Induction</h4>
-  <p>For each natural number \(n \in \mathbb{N}\), suppose that \(P(n)\) denotes a proposition which is either true
+  <p>For each natural number \(n \in \mathbb{N}\), suppose that \(P(n)\) denotes a proposition which is either
+    true
     or
     false. Let \(A={n \in \mathbb{N}:P(n)}\) is true. Suppose the following conditions hold: a) \(1 \in A\) and
     b) for each \(k \in \mathbb{N}\), if \(k \in A\)
@@ -1708,7 +2174,8 @@ Regression testing and test automation
   IAS/Fundamental Concepts/social issues)
   • Impact of social media on individualism, collectivism and culture
   Growth and control of the Internet (cross-reference NC/Introduction/organization of the Internet)
-  • Often referred to as the digital divide, differences in access to digital technology resources and its resulting
+  • Often referred to as the digital divide, differences in access to digital technology resources and its
+  resulting
   ramifications for gender, class, ethnicity, geography, and/or underdeveloped countries.
   • Accessibility issues, including legal requirements
   • Context-aware computing (cross-reference HCI/Design for non-mouse interfaces/ ubiquitous and contextaware)
@@ -1732,18 +2199,22 @@ Regression testing and test automation
 
 
   <h4>Principal Component Analysis</h4>
-  <p>PCA is a dimensionality-reduction method used to reduce the dimensionality of large data sets, by transforming
+  <p>PCA is a dimensionality-reduction method used to reduce the dimensionality of large data sets, by
+    transforming
     a
-    large set of variables into a smaller one that still contains most of the information in the large set. The goal
+    large set of variables into a smaller one that still contains most of the information in the large set. The
+    goal
     is
     to keep as much accuracy as possible while allowing for simplicity.</p>
-  <p>The first step of PCA is standardization, which standardizes the range of continuous initial variables so that
+  <p>The first step of PCA is standardization, which standardizes the range of continuous initial variables so
+    that
     each
     one contributes equally to the analysis. If this is not performed, differences in the larger ranges will
     dominate
     over those with small ranges. This can be done mathematically by finding the z-score:</p>
   $$z=\frac{\text{value}-\text{mean}}{\text{standard deviation}}$$
-  <p>The next step is covariance matrix computation. This aims to understand how the variables of the input data set
+  <p>The next step is covariance matrix computation. This aims to understand how the variables of the input data
+    set
     are
     varying from the mean with respect to each other, to see if there is any relationship between them. The
     covariance
@@ -1759,18 +2230,23 @@ Regression testing and test automation
   Cov(z,x)&Cov(z,y)&Cov(z,z)
   \end{array}
   \right] $$
-  <p>Since the covariance of a variable with itself is its variance, the mani diagonal (top left to bottom right) is
+  <p>Since the covariance of a variable with itself is its variance, the mani diagonal (top left to bottom right)
+    is
     just the variances of each initial variable. And since the covariance is commutative (Cov(a,b,)=Cov(b,a)), the
     entries of the covariance matrix are symmetric with respect to the main diagonal.</p>
-  <p>The next step is to compute the eigenvectors and eigenvalues of the covariance matrix to identify the principal
+  <p>The next step is to compute the eigenvectors and eigenvalues of the covariance matrix to identify the
+    principal
     components. Principal components are new variables that are constructed as linear combinations or mixtures of
-    initial variables, but done in a way such that most of the information is compressed into the first components.
+    initial variables, but done in a way such that most of the information is compressed into the first
+    components.
     So,
     10-dimensional data still gives you 10 principal components, but tries to put the maximum possible information
     into
     the first component, then the maximum remaining information in the second, and so on. Thus, you can discard
-    components with low information and consider remaining components as your new variables. Geometrically speaking,
-    principal components represent the directions of the data that explain a maximal amount of variance. Simply put,
+    components with low information and consider remaining components as your new variables. Geometrically
+    speaking,
+    principal components represent the directions of the data that explain a maximal amount of variance. Simply
+    put,
     think of principal components as new axes that provide the best angle to see and evaluate the data, so that
     differences between observations are better visible. They are lines that maximize the variance (average of
     squared
@@ -1785,12 +2261,15 @@ Regression testing and test automation
     axes where there is the most variance and that we call Principal Components. And eigenvalues are simply the
     coefficients attached to eigenvactors, which give the amount of variance carried in each Principal Component.
   </p>
-  <p>Next, we create the feature vector. After we have ranked the principal components in order of significance, we
+  <p>Next, we create the feature vector. After we have ranked the principal components in order of significance,
+    we
     choose which components we wish to discard, and form the remaining ones a matrix of vectors that we call the
     feature
-    vector. This makes it the first step in dimensionality reduction, because we have removed principal components.
+    vector. This makes it the first step in dimensionality reduction, because we have removed principal
+    components.
   </p>
-  <p>Finally, we recast the data along the principal components axes. We use the feature vector to reorient the data
+  <p>Finally, we recast the data along the principal components axes. We use the feature vector to reorient the
+    data
     from the original axes to the one represented by the principal components. This can be done by multiplying the
     transpose of the original data set by the transpose of the feature vector.</p>
   <h4>k-means clustering</h4>
@@ -1799,9 +2278,11 @@ Regression testing and test automation
     observations into k clusters in whcih each observation belongs to the cluster with the nearest mean.</p>
   <h4>Uniform Manifold Approximation and Projection for Dimension Reduction</h4>
   <p>UMAP (Uniform Manifold Approximation and Projection) is a novel manifold learning technique for dimension
-    reduction. UMAP is constructed from a theoretical framework based in Riemannian geometry and algebraic topology.
+    reduction. UMAP is constructed from a theoretical framework based in Riemannian geometry and algebraic
+    topology.
     The
-    result is a practical scalable algorithm that applies to real world data. The UMAP algorithm is competitive with
+    result is a practical scalable algorithm that applies to real world data. The UMAP algorithm is competitive
+    with
     t-SNE for visualization quality, and arguably preserves more of the global structure with superior run time
     performance. Furthermore, UMAP has no computational restrictions on embedding dimension, making it viable as a
     general purpose dimension reduction technique for machine learning.</p>
@@ -1818,8 +2299,10 @@ Regression testing and test automation
   <h4>mongoDB</h4>
   <p>mongoDB is a noSQL database which stores "documents" in collections" instead of "records" in "tables" as in
     SQL. It
-    stores application data (users, products, etc.). It is more flexible in terms of structure compared to SQL.</p>
-  <p>First you need to download and install NodeJS. Then install the Angular CLI. Then create a new Angular project
+    stores application data (users, products, etc.). It is more flexible in terms of structure compared to SQL.
+  </p>
+  <p>First you need to download and install NodeJS. Then install the Angular CLI. Then create a new Angular
+    project
     (ng
     new). 'ng serve' will serve the project.</p>
   <p>Each component needs logic (ts file) and template (html file).</p>
