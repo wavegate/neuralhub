@@ -133,12 +133,13 @@
   <div class="topic"><a href="#software_testing">Software testing</a></div>
   <div class="topic"><a href="#software_maintenance">Software maintenance</a></div>
   <div class="topic"><a href="#software_configuration_management">Software configuration management</a></div>
-  <div class="topic"><a href="#software_engineering management">Software engineering management</a></div>
-  <div class="topic"><a href="#software engineering process">Software engnieering process</a></div>
+  <div class="topic"><a href="#software_engineering_management">Software engineering management</a></div>
+  <div class="topic"><a href="#software_engineering_process">Software engineering process</a></div>
   <div class="topic"><a href="#software_engineering_models_and_methods">Software engineering models and methods</a>
   </div>
   <div class="topic"><a href="#software_quality">Software quality</a></div>
-  <div class="topic"><a href="#software_engineering_professional_practie">Software engineering professional practice</a>
+  <div class="topic"><a href="#software_engineering_professional_practice">Software engineering professional
+      practice</a>
   </div>
   <div class="topic"><a href="#software_engineering_economics">Software engineering economics</a></div>
   <div class="topic"><a href="#computing_foundations">Computing foundations</a></div>
@@ -300,7 +301,7 @@ SWEBOK v3
 <div class="second">Software requirements fundamentals</div>
 <p>Software engineering is the application of a systematic, disciplined, quantifiable approach to the development,
   operation, and maintenance of software; that is, the application of engineering to software.</p>
-<div class="third">Defintion of a software requirement</div>
+<div class="third">Definition of a software requirement</div>
 <p>At its most basic, a software requirement is a property that must be exhibited by something in order to solve some
   problem in the real world. An essential property of all software requirements it that they be verifiable as an
   individual feature as a functional requirement or at the system level as a nonfunctional requirement. Requirements
@@ -1201,29 +1202,495 @@ SWEBOK v3
 
 
 <div class="first">Software maintenance</div><a class="anchor" id="software_maintenance"></a>
+<p>Historically, software development has been more important than maintenance, but this is changing as organizations
+  strive to get more out of their software by making it operate as long as possible as well as the development of the
+  open source paradigm making people maintain software developed by others. Software maintenance is defined as the
+  totality of activities required to provide cost-effective support to software. Software maintenance involves
+  both pre-delivery and post-delivery aspects.</p>
 <div class="second">Software maintenance fundamentals</div>
 <div class="third">Definitions and terminology</div>
+<p>The objective of software maintenance is to modify existing software while preserving its integrity.</p>
 <div class="third">Nature of maintenance</div>
+<p>Software maintenance sustains the software product throughout its life cycle. A maintainer is an organization that
+  performs maintenance activities, and sometimes refers to the individuals who perform those activities, contrasting
+  them with developers.</p>
 <div class="third">Need for maintenance</div>
+<p>Maintenance must be performed to correct faults, improve design, implement enhancements, interface with other
+  software, adapt programs so that different hardware, software, sytsem features, and telecommunications facilities can
+  be used, migrate legacy software, and retire software. Five key characteristics of maintainer's activites are
+  maintaining control over the software's day-to-day functions, maintaining control over software modification,
+  perfecting existing functions, identifying security threats and fixing security vulnerabilities, and preventing
+  software performance from degrading to unacceptable levels.</p>
 <div class="third">Majority of maintenance costs</div>
+<p>Maintenance of software costs a lot but there is a misconception that most of the costs are from corrections.</p>
 <div class="third">Evolution of software</div>
+<p>One of the eight "Laws of Evolution" is that maintenance is evolutionary development and that maintenance decisions
+  are aided by understand what happens to software over time. Software will grow more complex unless some action is
+  taken to reduce this complexity.</p>
 <div class="third">Categories of maintenance</div>
+<p>Corrective maintenance is reactive modifications or repairs of a software product peformed after delivery to correct
+  discovered problems. Included in ths category is emergency maintenance, which is an unscheduled modification performed
+  to temporarily keep a software product operational pending corrective maintenance.</p>
+<p>Adaptive maintenance is modification of a software product performed after delivery to keep a software product usable
+  in a changed or changing environment.</p>
+<p>Perfective maintenance is modification of a software product after delivery to provide enhancements for users,
+  improvement of program documentation, and recoding to improve software performance, maintainability, or other software
+  attributes.</p>
+<p>Preventive maintenance is modification after delivery to detect and correct latent faults before they become
+  operational faults.</p>
+<p>Adaptive and perfective maintenance are classified as maintenance enhancements. Preventive and perfective are
+  proactive, while corrective and adaptive are reactive. Preventive and corrective are correction.</p>
 <div class="second">Key issues in software maintenance</div>
 <div class="third">Technical issues</div>
+<p>Limited understanding refers to how quickly a software engineer can understand where to make a change or conrrection
+  in software that he did not develop. The topic of software comprehension is of great interest to software engineers.
+  Comprehension is more difficult in text-oriented representation (eg. in source code).</p>
+<p>Regression testing (selective retesting of software or a component to verify that modifications have not caused
+  unintended effects) is an important testing concept in maintenance. Coordinating tests when different members of the
+  maintenance team are working on different problems at the same time remains a challenge. When software performs
+  critical functions, it may be difficult to bring it offline to test. Tests cannot be executed in the most meaning
+  place-the production system.</p>
+<p>Impact analysis describes how to conduct, cost-effectively, a complete analysis of the impact of a change in existing
+  software. It identifies all systems and software products affected by a software change request and develops an
+  estimate of the resources needed to accomplish the change. The change request, sometimes called a modification request
+  (MR) or problem report (PR), must first be analyzed and translated into software terms. Impact analysis is performed
+  after a change request enters the software configuration management process.</p>
+<p>The severity of a problem is often used to decide how and when it will be fixed.</p>
+<p>Maintainability is the capability of the software product to be modified, including corrections, improvements, and
+  adaptations of the software to changes in environment as well as changes in requirements and functional
+  specifications. Developers are prone to disregard maintainer's requirements which can result in lack of software
+  documentation and test environments, which leads to difficulties in program comprehension and subsequent impact
+  analysis.</p>
 <div class="third">Management issues</div>
+<p>Organizational objectives help to look at the return on investment of software maintenance activities. Extending the
+  life of software can have less clarity in terms of the return on investment, so the view at the senior management
+  level is often that of a major activity consuming significant resources with no clear quantifiable benefit for the
+  organization.</p>
+<p>Staffing refers to how to attract and keep software maintenance staff. Maintenance is not viewed as glamorous work.
+  Software maintenance personnel are frequently viewed as "second-class citizens," and morale therefore suffers.</p>
+<p>The software life cycle process is a set of activities, methods, practices, and transformations that people use to
+  develop and maintain software and its associated products. At the process level, software maintenance is similar to
+  software development.</p>
+<p>Organizational aspects describe how to identify which organization and/or functil will be responsible for the
+  maintenance of software. The team that developed the software is not necessarily the team that maintains it. Having a
+  permanent maintenance team allows for specialization, creates communication channels, promotes an egoless, collegiate
+  atmosphere, reduces dependency on individuals, and allows for periodic audit checks.</p>
+<p>Outsourcing and offshoring software maintenance has become a major industry. Organizations are outsourcing entire
+  portfolios of software, including software maintenance More often, the outsourcing option is selected for less
+  mission-critical software. Outsourcing requires a significant initial investment and the setup of a maintenance
+  process that will require automation.</p>
 <div class="third">Maintenance cost estimation</div>
+<p>The two most popular approaches to estimating resources for software maintenance are the use of parametric models and
+  the use of experience.</p>
+<p>Parametric cost modeling (mathematical models) uses historical data from past maintenance to use and calibrate
+  mathematical models, and cost drier attributes affect the estimates.</p>
+<p>Experience, in the form of expert judgment, is often used to estimate maintenance effort. Clearly, the best approach
+  to maintenance estimation is to combine historical data and experience.</p>
 <div class="third">Software maintenance measurement</div>
+<p>Measurable entities related to maintenance include process, resource, and product.</p>
+<p>Measures for subcharacteristics of maintainability include analyzability, the measures of the maintainer's effort or
+  resources expended in trying to diagnose deficiencies or causes of failure, changeability, the measures of the
+  maintainer's effort associated with implementing a specified modification, stability, measures of the unexpected
+  behavior of software, testability, measures of effort in trying to test the modified software, size, complexity,
+  understandability, and maintainability.</p>
 <div class="second">Maintenance process</div>
 <div class="third">Maintenance processes</div>
+<p>Software maintenance activities iclude process implementation, problem and modification analysis, modification
+  implementation, maintenance review/acceptance, migration, and software retirement. Ohter maintenance process models
+  include quick fix, spiral, Osborne's, iterative enhancement, and reuse-oriented.</p>
 <div class="third">Maintenance activities</div>
+<p>Maintenance activities are similar to those of software development: performing analysis, design, coding, testing,
+  and documentation, tracking requirements, and updating documentation.</p>
+<p>Unique activities include program understanding, transition (transfer software progressively from developer to
+  maintainer), modification request acceptance/rejection, maintenance help desk, impact analysis, and maintenance
+  service-level agreements (SLAs) and maintenance licenses and contracts that describe services and quality objectives.
+</p>
+<p>Supporting activities include documentation, software configuration management, verification and validation, problem
+  resolution, software quality assurance, reviews, audits, training maintainers and users.</p>
+<p>Planning activities are associated with business planning (organizational level), maintenance planning (transition
+  level), release/version planning (software level), and individual software change request planning (request level). At
+  the individual request level, planning is carried out during impact analysis. At the release/version planning level,
+  maintainer collects the dates of availability of individual requests, agrees with users on content of
+  releases/versions, identifies potential conflicts and develops alternatives, assesses risks, and informs all
+  staeholders.</p>
+<p>Maintenance phase usually lasts for many years. Making estimates of resouces is a key element of maintenance
+  planning. A concept document should be developed followed by a maintenance plan. The document should address the scope
+  of software maintenance, adaptation of the software maintenanc eprocess, identification of the osftware maintenance
+  organization, and estimate of software maintenance costs. The software maintenance plan should specify how users will
+  request software modifications or report problems.</p>
+<p>Software configuration management procedures should provide for the verification, validation, and audit of each step
+  required to identify, authorize, implement and release the software product. Modifications to software must be
+  controlled by using an approved software configuration management (SCM) process.</p>
+<p>Maintainers should have a software quality program.</p>
 <div class="second">Techniques for maintenance</div>
 <div class="third">Program comprehension</div>
+<p>Code browsers are key tools for program comprehension and are used to organize and present source code. Clear and
+  concise documentation can also aid in program comprehension.</p>
 <div class="third">Reengineering</div>
+<P>Reengineering is the examination and alteration of software to reconstitute it in a new form, including the
+  subsequent implementation of the new form. It is often undertaken to replace aging legacy software. Refactoring is a
+  reengineering technique that aims at reorganizing a program without changing its behavior.</p>
 <div class="third">Reverse engineering</div>
+<p>Reverse engineering is the process of analyzing software to identify the software's components and their
+  inter-relationships and to create representations of the software in another form or at higher levels of abstraction.
+  Reverse engineering does not change the software or result in new software, but produces call graphs and control flow
+  graphs. Types include redocumentation, design recovery, and data reverse engineering, where logical schemas are
+  recovered from physical databases.</p>
 <div class="third">Migration</div>
+<p>The maintainer needs to determine the actions needed to migrate software to run in different environments in a
+  migration plan that covers migration requirements, migration tools, conversion of product and data, execution,
+  verification, and support. Migrating software can also entail notification of intent (a statement of why the old
+  environment is no longer supported), parallel operations (make available old and new environments so the user
+  experiences a smooth transition), notification of completion, postoperation review, and data archival.</p>
 <div class="third">Retirement</div>
+<p>Retirement involves a retirement plan, which covers retirement requirements, impact, replacement, schedule, and
+  effort.</p>
 <div class="second">Software maintenance tools</div>
+<p>Tools for program comprehension include program slicers (selecting parts of a program affected by a change), static
+  analyzers (general viewing and summaries of a program content), dynamic analyzers (allow maintainers to trace the
+  execution path of a program), data flow analyzers (track all possible data flows), cross-referencers (generate indices
+  of program components), and dependency analyzers (understand relationships between components of a program).</p>
 
+<div class="first">Software configuration management</div><a class="anchor" id="software_configuration_management"></a>
+<div class="second">Management of the SCM process</div>
+<div class="third">Organizational context for SCM</div>
+<div class="third">Constraints and guidance for the SCM process</div>
+<div class="third">Planning for SCM</div>
+<div class="third">SCM plan</div>
+<div class="third">Surveillance of software configuration management</div>
+<div class="second">Software configuration identification</div>
+<div class="third">Identifying items to be controlled</div>
+<div class="third">Software library</div>
+<div class="second">Software configuration control</div>
+<div class="third">Requesting, evaluating, and approving software changes</div>
+<div class="third">Implementing software changes</div>
+<div class="third">Deviations and waivers</div>
+<div class="second">Software configuration status accounting</div>
+<div class="third">Software configuration status information</div>
+<div class="third">Software configuration status reporting</div>
+<div class="second">Software configuration auditing</div>
+<div class="third">Software functional configuration audit</div>
+<div class="third">Software physical configuration audit</div>
+<div class="third">In-process audits of a software baseline</div>
+<div class="second">Software release management and delivery</div>
+<div class="third">Software building</div>
+<div class="third">Software release management</div>
+
+<div class="first">Software engineering management</div><a class="anchor" id="software_engineering_management"></a>
+<div class="second">Initiation and scope definition</div>
+<div class="third">Determination and negotation of requirements</div>
+<div class="third">Feasibility analysis</div>
+<div class="third">Process for the review and revision of requirements</div>
+<div class="second">Software project planning</div>
+<div class="third">Process planning</div>
+<div class="third">Determine deliverables</div>
+<div class="third">Effort, schedule, and cost estimation</div>
+<div class="third">Resource allocation</div>
+<div class="third">Risk management</div>
+<div class="third">Quality management</div>
+<div class="third">Plan management</div>
+<div class="second">Software project enactment</div>
+<div class="third">Implementation of plans</div>
+<div class="third">Software acquisition and supplier contract management</div>
+<div class="third">Implementation of measurement process</div>
+<div class="third">Monitor process</div>
+<div class="third">Control process</div>
+<div class="third">Reporting</div>
+<div class="second">Review and evaluation</div>
+<div class="third">Determining satisfaction of requirements</div>
+<div class="third">Reviewing and evaluating performance</div>
+<div class="second">Closure</div>
+<div class="third">Determining closure</div>
+<div class="third">Closure activities</div>
+<div class="second">Software engineering measurement</div>
+<div class="third">Establish and sustain measurement commitment</div>
+<div class="third">Plan the measurement process</div>
+<div class="third">Perform the measurement process</div>
+<div class="third">Evaluate measurement</div>
+<div class="second">Software engineering management tools</div>
+
+<div class="first">Software engineering process</div><a class="anchor" id="software_engineering_process"></a>
+<div class="second">Software process definition</div>
+<div class="third">Software process management</div>
+<div class="third">Software process infrastructure</div>
+<div class="second">Software life cycles</div>
+<div class="third">Categories of software processes</div>
+<div class="third">Software life cycle models</div>
+<div class="third">Software process adaptation</div>
+<div class="third">Practical considerations</div>
+<div class="second">Software process assessment and improvement</div>
+<div class="third">Software process assessment models</div>
+<div class="third">Software process assessment methods</div>
+<div class="third">Software process improvement models</div>
+<div class="third">Continuous and staged software process ratings</div>
+<div class="second">Software measurement</div>
+<div class="third">Software process and product measurement</div>
+<div class="third">Quality of measurement results</div>
+<div class="third">Software information models</div>
+<div class="third">Software process measurement techniques</div>
+<div class="second">Software engineering process tools</div>
+
+<div class="first">Software engineering models and methods</div><a class="anchor"
+  id="software_engineering_models_and_methods"></a>
+<div class="second">Modeling</div>
+<div class="third">Modeling principles</div>
+<div class="third">Properties and expression of models</div>
+<div class="third">Syntax, semantics, and pragmatics</div>
+<div class="third">Preconditions, postconditions, and invariants</div>
+<div class="second">Types of models</div>
+<div class="third">Information modeling</div>
+<div class="third">Behavioral modeling</div>
+<div class="third">Structure modeling</div>
+<div class="second">Analysis of models</div>
+<div class="third">Analyzing for completeness</div>
+<div class="third">Analyzing for consistency</div>
+<div class="third">Analyzing for correctness</div>
+<div class="third">Traceability</div>
+<div class="third">Interaction analysis</div>
+<div class="second">Software engineering methods</div>
+<div class="third">Heuristic methods</div>
+<div class="third">Formal methods</div>
+<div class="third">Prototyping methods</div>
+<div class="third">Agile methods</div>
+
+<div class="first">Software quality</div><a class="anchor" id="software_quality"></a>
+<div class="second">Software quality fundamentals</div>
+<div class="third">Software engineering culture and ethics</div>
+<div class="third">Value and costs of quality</div>
+<div class="third">Models and quality characteristics</div>
+<div class="third">Software quality improvement</div>
+<div class="third">Software safety</div>
+<div class="second">Software quality management processes</div>
+<div class="third">Software quality assurance</div>
+<div class="third">Verification & validation</div>
+<div class="third">Reviews and audits</div>
+<div class="second">Practical considerations</div>
+<div class="third">Software quality requirements</div>
+<div class="third">Defect characterization</div>
+<div class="third">Software quality management techniques</div>
+<div class="third">Software quality measurement</div>
+<div class="second">Software quality tools</div>
+
+<div class="first">Software engineering professional practice</div><a class="anchor"
+  id="software_engineering_professional_practice"></a>
+<div class="second">Professionalism</div>
+<div class="third">Accreditation, certification, and licensing</div>
+<div class="third">Codes of ethics and professional conduct</div>
+<div class="third">Nature and role of professional societies</div>
+<div class="third">Nature and role of software engineering standards</div>
+<div class="third">Economic impact of software</div>
+<div class="third">Employment contracts</div>
+<div class="third">Legal issues</div>
+<div class="third">Documentation</div>
+<div class="third">Tradeoff analysis</div>
+<div class="second">Group dynamics and psychology</div>
+<div class="third">Dynamics of working in teams/groups</div>
+<div class="third">Individual cognition</div>
+<div class="third">Dealing with problem complexity</div>
+<div class="third">Interacting with stakeholders</div>
+<div class="third">Dealing with uncertainty and ambiguity</div>
+<div class="third">Dealing with multicultural environments</div>
+<div class="second">Communication skills</div>
+<div class="third">Reading, undestanding, and summarizing</div>
+<div class="third">Writing</div>
+<div class="third">Team and group communication</div>
+<div class="third">Presentation skills</div>
+
+<div class="first">Software engineering economics</div><a class="anchor" id="software_engineering_economics"></a>
+<div class="second">Software engineering economics fundamentals</div>
+<div class="third">Finance</div>
+<div class="third">Accounting</div>
+<div class="third">Controlling</div>
+<div class="third">Cash flow</div>
+<div class="third">Decision-making process</div>
+<div class="third">Valuation</div>
+<div class="third">Inflation</div>
+<div class="third">Depreciation</div>
+<div class="third">Taxation</div>
+<div class="third">Time-value of money</div>
+<div class="third">Efficiency</div>
+<div class="third">Effectiveness</div>
+<div class="third">Productivity</div>
+<div class="second">Life cycle economics</div>
+<div class="third">Product</div>
+<div class="third">Project</div>
+<div class="third">Program</div>
+<div class="third">Portfolio</div>
+<div class="third">Product life cycle</div>
+<div class="third">Project life cycle</div>
+<div class="third">Proposals</div>
+<div class="third">Investment decisions</div>
+<div class="third">Planning horizon</div>
+<div class="third">Price and pricing</div>
+<div class="third">Cost and costing</div>
+<div class="third">Performance measurement</div>
+<div class="third">Earned value management</div>
+<div class="third">Termination decisions</div>
+<div class="third">Replacement and retirement decisions</div>
+<div class="second">Risk and uncertainty</div>
+<div class="third">Goals, estimates, and plans</div>
+<div class="third">Estimation techniques</div>
+<div class="third">Addressing uncertainty</div>
+<div class="third">Prioritization</div>
+<div class="third">Decisions under risk</div>
+<div class="third">Decisions under uncertainty</div>
+<div class="second">Economic analysis methods</div>
+<div class="third">For-profit decision analysis</div>
+<div class="third">Minimum acceptable rate of return</div>
+<div class="third">Return on investment</div>
+<div class="third">Return on capital employed</div>
+<div class="third">Cost-benefit analysis</div>
+<div class="third">Cost-effectiveness analysis</div>
+<div class="third">Break-even analysis</div>
+<div class="third">Business case</div>
+<div class="third">Multiple attribute evaluation</div>
+<div class="third">Optimization analysis</div>
+<div class="second">Practical considerations</div>
+<div class="third">The "good enough" principle</div>
+<div class="third">Friction-free economy</div>
+<div class="third">Ecosystems</div>
+<div class="third">Offshoring and outsourcing</div>
+
+<div class="first">Computing foundations</div><a class="anchor" id="computing_foundations"></a>
+<div class="second">Problem solving techniques</div>
+<div class="third">Definition of problem solving</div>
+<div class="third">Formulating the real problem</div>
+<div class="third">Analyze the problem</div>
+<div class="third">Design a solution search strategy</div>
+<div class="third">Problem solving using programs</div>
+<div class="second">Abstraction</div>
+<div class="third">Levels of abstraction</div>
+<div class="third">Encapsulation</div>
+<div class="third">Hierarchy</div>
+<div class="third">Alternate abstractions</div>
+<div class="second">Programming fundamentals</div>
+<div class="third">The programming process</div>
+<div class="third">Programming paradigms</div>
+<div class="second">Programming language basics</div>
+<div class="third">Programming language overview</div>
+<div class="third">Syntax and semantics of programming languages</div>
+<div class="third">Low-level programming languages</div>
+<div class="third">High-level programming languages</div>
+<div class="third">Declarative vs. imperative programming languages</div>
+<div class="second">Debugging tools and techniques</div>
+<div class="third">Types of errors</div>
+<div class="third">Debugging techniques</div>
+<div class="third">Debugging tools</div>
+<div class="second">Data structure and representation</div>
+<div class="third">Data structure overview</div>
+<div class="third">Types of data structure</div>
+<div class="third">Operations on data structures</div>
+<div class="second">Algorithms and complexity</div>
+<div class="third">Overview of algorithms</div>
+<div class="third">Attributes of algorithms</div>
+<div class="third">Algorithmic analysis</div>
+<div class="third">Algorithmic design strategies</div>
+<div class="third">Algorithmic analysis strategies</div>
+<div class="second">Basic concept of a system</div>
+<div class="third">Emergent system properties</div>
+<div class="third">Systems engineering</div>
+<div class="third">Overview of a computer system</div>
+<div class="second">Computer organization</div>
+<div class="third">Computer organization overview</div>
+<div class="third">Digital systems</div>
+<div class="third">Digital logic</div>
+<div class="third">Computer expression of data</div>
+<div class="third">The central processing unit (CPU)</div>
+<div class="third">Memory system organization</div>
+<div class="third">Input and output (I/O)</div>
+<div class="second">Compiler basics</div>
+<div class="third">Compiler/interpreter overview</div>
+<div class="third">Interpretation and compilation</div>
+<div class="third">The compilation process</div>
+<div class="second">Operating system basics</div>
+<div class="third">Operating systems overview</div>
+<div class="third">Tasks of an operating system</div>
+<div class="third">Operating system abstractions</div>
+<div class="third">Operating systems classification</div>
+<div class="second">Database basics and data management</div>
+<div class="third">Entity and schema</div>
+<div class="third">Database management systems (DBMS)</div>
+<div class="third">Database query language</div>
+<div class="third">Tasks of DBMS packages</div>
+<div class="third">Data management</div>
+<div class="third">Data mining</div>
+<div class="second">Network communication basics</div>
+<div class="third">Types of network</div>
+<div class="third">Basic network components</div>
+<div class="third">Networking protocols and standards</div>
+<div class="third">The Internet</div>
+<div class="third">Internet of things</div>
+<div class="third">Virtual private network (VPN)</div>
+<div class="second">Parallel and distributed computing</div>
+<div class="third">Parallel and distributed computing overview</div>
+<div class="third">Difference between parallel and distributed computing</div>
+<div class="third">Parallel and distributed computing models</div>
+<div class="third">Main issues in distributed computing</div>
+<div class="second">Basic user human factors</div>
+<div class="third">Input and output</div>
+<div class="third">Error messages</div>
+<div class="third">Software robustness</div>
+<div class="second">Basic developer human factors</div>
+<div class="third">Structure</div>
+<div class="third">Comments</div>
+<div class="second">Secure software development and maintenance</div>
+<div class="third">Software requirements security</div>
+<div class="third">Software design security</div>
+<div class="third">Software construction security</div>
+<div class="third">Software testing security</div>
+<div class="third">Build security into software engineering process</div>
+<div class="third">Software security guidelines</div>
+
+<div class="first">Mathematical foundations</div><a class="anchor" id="mathematical_foundations"></a>
+<div class="second">Sets, relations, functions</div>
+<div class="third">Set operations</div>
+<div class="third">Properties of set</div>
+<div class="third">Relation and function</div>
+<div class="second">Basic logic</div>
+<div class="third">Propositional logic</div>
+<div class="third">Predicate logic</div>
+<div class="second">Proof techniques</div>
+<div class="third">Methods of proving theorems</div>
+<div class="second">Basics of counting</div>
+<div class="second">Graphs and trees</div>
+<div class="third">Graphs</div>
+<div class="third">Trees</div>
+<div class="second">Discrete probability</div>
+<div class="second">Finite state machines</div>
+<div class="second">Grammars</div>
+<div class="third">Language recognition</div>
+<div class="second">Numerical precision, accuracy, and errors</div>
+<div class="second">Number theory</div>
+<div class="third">Divisibility</div>
+<div class="third">Prime number, GCD</div>
+<div class="second">Algebraic structures</div>
+<div class="third">Group</div>
+<div class="third">Rings</div>
+
+<div class="first">Engineering foundations</div><a class="anchor" id="engineering_foundations"></a>
+<div class="second">Empirical methods and experimental techniques</div>
+<div class="third">Designed experiment</div>
+<div class="third">Observational study</div>
+<div class="third">Retrospective study</div>
+<div class="second">Statistical analysis</div>
+<div class="third">Unit of analysis (sampling units), population, and sample</div>
+<div class="third">Concepts of correlation and regression</div>
+<div class="second">Measurement</div>
+<div class="third">Levels (scales) of measurement</div>
+<div class="third">Direct and derived measures</div>
+<div class="third">Reliability and validity</div>
+<div class="third">Assessing reliability</div>
+<div class="second">Engineering design</div>
+<div class="third">Engineering design in engineering education</div>
+<div class="third">Design as a problem solving activity</div>
+<div class="third">Steps involved in engineering design</div>
+<div class="second">Modeling, simulation, and prototyping</div>
+<div class="third">Modeling</div>
+<div class="third">Simulation</div>
+<div class="third">Prototyping</div>
+<div class="second">Standards</div>
+<div class="second">Root cause analysis</div>
+<div class="third">Techniques for conducting root cause analysis</div>
 
 
 
