@@ -1876,20 +1876,103 @@ SWEBOK v3
   changed, or how the return value has been affected. Invariants are a set of conditions within the operational
   environment taht persist before and after the exectuion of a function or method.</p>
 <div class="second">Types of models</div>
+<p>Use of diagrams along with modeling language constructs brings about three broad model types: information models,
+  behavioral models, and structure models.</p>
 <div class="third">Information modeling</div>
+<p>Information modeling provides a central focus on data and information. It is an abstract representation that
+  identifies and defines a set of concepts, properties, relations, and constraints on data entities. The semantic or
+  conceptual information model is often used to provide some formalism and context to the software being modeled as
+  viewed from the problem perspective, without concern for how this model is actually mapped to the implementation of
+  the software.</p>
 <div class="third">Behavioral modeling</div>
+<p>Behavioral models identify and define the functions of the software benig modeled, taking on three basic forms: state
+  machines (software as a collection of defined states, events, and transitions), control-flow models (depicts how a
+  sequence of events causes processes to be activated or deactivated), and data-flow models (a sequence of steps where
+  data moves through processes toward data stores or data sinks).</p>
 <div class="third">Structure modeling</div>
+<p>Structure models illustrates physical or logical composition of software, defining a boundary between software being
+  implemented and the environment in which it is to operate. Some common constructs are composition, decomposition,
+  generalization, and specialization of entities; identification of relevant relations and cardinality between entities;
+  and the definition of process or functional interfaces.</p>
 <div class="second">Analysis of models</div>
+<p>Analysis of models is needed to ensure that they are complete, consistent, and correct enough to serve their intended
+  purpose for stakeholders.</p>
 <div class="third">Analyzing for completeness</div>
+<p>Completeness is the degree to which all of the specified requirements have been implemented and verified. Models may
+  be checked for completeness using techniques such as structural analysis and state-space reachability analysis, which
+  ensures all paths are reached by some set of correct inputs. Models may also be checked for completeness manually by
+  using inspections or other review techniques.</p>
 <div class="third">Analyzing for consistency</div>
+<p>Consistency is the degree to which models contain no conflicting requirements, assertions, constraints, functions, or
+  component descriptoins. This is accomplished using an automated analysis function or manual inspection.</p>
 <div class="third">Analyzing for correctness</div>
+<p>Correctness is the degree to which a model satisfies its software requirements and software design specifications, is
+  free of defects, and ultimately meets the stakeholders' needs. Analysis involves verifying syntactic correctness of
+  the model (that is, correct use of modeling language grammar and constructs) and verifying semantic correctness
+  (correctly using modeling language to represent the meaning of that which is being modeled).</p>
 <div class="third">Traceability</div>
+<p>As work products are related through various dependency relationships, there is a need to map and control
+  traceability relationships to demonstrate requirements consistency.</p>
 <div class="third">Interaction analysis</div>
+<p>Interaction analysis focuses on communications or control flow relations between entites used to accomplish a
+  specific task or function, examining dynamic behavior of the interactions between different portions of the software
+  model, including other software layers.</p>
 <div class="second">Software engineering methods</div>
 <div class="third">Heuristic methods</div>
+<p>Heuristic methods are experience-based. Structured analysis and design methods involves a software model that is
+  developed primarily from a functional or behavioral viewpoint, starting form a high-level view of software and then
+  progressively decomposing the model components through increasingly detailed designs. The detailed design eventually
+  converges to specifications of the software that must be coded, built, tested, and verified.</p>
+<p>Data modeling methods is constructed form the viewpoint of data or information used, using data tables and
+  relationships.</p>
+<p>Object-oriented analysis and design methods use models that represent collections of objects that encapsulate data
+  and relationships and interact with other objects through methods.</p>
 <div class="third">Formal methods</div>
+<p>Formal methods are software engineering methods used to specify, develop, and verify the software through application
+  of a rigorous mathematically based notation and language.</p>
+<p>Specification languages provide the mathematical basis for a formal method, and are formal, higher level computer
+  languages (not a classic 3rd Generation Language 3GL programming language) and are not directly executable languages
+  but comprised of a notation and syntax, semantics, and a set of allowed relations.</p>
+<p>Program refinement is the process of creating a lower level (or more detailed) specification using a series of
+  transformations. Specifications may be refined, adding details until the model can be formulated in a 3GL programming
+  language or in an executable portion of the chosen specification language.</p>
+<p>Model checking is a formal verification method, usually performing a state-space exploration or reachability analysis
+  to demonstrate that the software design has the model properties of interest. An example of model checking is an
+  analysis that verifies the correct program behavior under all possible interleaving of event and message arrivals.</p>
+<p>Logical inference is a method of designing software that involves specifying preconditions and postconditoins around
+  each block of the design and developing the proof that those conditions must hold under all inputs using mathematical
+  logic.</p>
 <div class="third">Prototyping methods</div>
+<p>Software prototyping is an activity that generally creates incomplete or minimally functional versions of a software
+  application, usually for trying out specific new features, soliciting feedback on software requirements or user
+  interfaces, further exploring software requirements, software design or implementation options, and/or gaining other
+  useful insight into software.</p>
+<p>Prototyping style discusses that prototypes can be developed as throwaway code or paper products, as an evolution of
+  a working design, or as an executable specification.</p>
+<p>The target of the prototype activity is the specific product being served by the prototyping effort. Examples include
+  a requirements specification, an architectural design element or component, an algorithm, or a human-machine user
+  interface.</p>
+<p>A prototype may be evaluated or tested against actual implemented software or against a target set of requirements.
+</p>
 <div class="third">Agile methods</div>
+<p>Agile methods were born in the 1990s from the need to reduce apparently large overhead associated with heavyweight,
+  plan-based methods in large-scale software-development projects. Agile methods are considered lightweight
+  characterized by short, iterative development cycles, self-organizing teams, simpler designs, code refactoring,
+  test-driven development, frequent customer involvement, and emphasis on creating a demonstrable working product with
+  each development cycle.</p>
+<p>RAD is a rapid software development method used primarily in data-intensive ,business-systems application
+  development.</p>
+<p>XP uses stories or scenarios for requirements, develops tests first, has direct customer involvement on the team
+  (typically defining acceptance tests), uses pair programming, and provides for continuous code refactoring and
+  integration. Stories are decomposed into tasks, prioritized, estimated, developed, and tested.</p>
+<p>Scrum is more project management-friendly. The scrum master manages activites within the project increment; each
+  increment is called a sprint and lasts no more than 30 days. A Product Backlog Item (PBI) list is developed from tasks
+  that are identified, defined, prioritized, and estimated. Daily scrum meetings ensure work is managed to plan.</p>
+<p>FDD is a model-driven, short, iterative software development approach using five phases: 1) develop a product model
+  to scope the breadth of the domain, 2) create the list of needs or features, 3) build the feature development plan, 4)
+  develop designs for iteration-specific features, 5) code, test, and then integrate the features. Code ownership is
+  assigned to individuals rather than the team. FDD emphasizes an overall architectural approach which promotes building
+  the feature correctly the first time rather than emphasiznig continual refactoring.</p>
 
 <div class="first">Software quality</div><a class="anchor" id="software_quality"></a>
 <div class="second">Software quality fundamentals</div>
