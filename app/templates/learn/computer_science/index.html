@@ -1975,102 +1975,553 @@ SWEBOK v3
   the feature correctly the first time rather than emphasiznig continual refactoring.</p>
 
 <div class="first">Software quality</div><a class="anchor" id="software_quality"></a>
+<p>Software quality may refer to desirable characteristics of software products and to what extend a particular product
+  possesses those characteristics, and to processes, tools, and techniques used to achieve those characteristics. More
+  recently, software quality is defined as the capability of software product to satisfy stated and implied needs under
+  specified conditions. Definitions mostly embrace the premise of conformance to requirements, but do not refer to types
+  of requirements. There is an ambiguity between software quality and software quality requirements, which are actually
+  attributes of functional requirements. Stakeholders could value price, lead time, and software quality.</p>
 <div class="second">Software quality fundamentals</div>
+<p>A software engineer should understand quality concepts, characteristics, values, and their application to the
+  software under development or maintenance. The important concept is that software requirements define the required
+  quality attributes of the software.</p>
 <div class="third">Software engineering culture and ethics</div>
+<p>A healthy software engineering culture understands the tradeoffs among cost, schedule, and quality. A strong ethic
+  assumes that engineers accurately report information, conditions, and outcomes related to quality.</p>
 <div class="third">Value and costs of quality</div>
+<p>Cost of software quality (CoSQ) is a set of measurements derived from the economic assessment of software quality
+  development and maintenance processes. The premise underlying the CoSQ is that the level of quality in a software
+  product can be inferred from the cost of activities related to dealing with the consequences of poor quality. There
+  are four cost of quality categories: prevention, apraisal, internal failure, and external failure. Prevention costs
+  include investments in software process improvement efforts, quality infrastructure, quality tools, training, audits,
+  and management reviews. Appraisal costs arise from project activities that find defects, categorized into cost of
+  reviews and cost of testing. Costs of internal failures are those incurred to fix defects before delivery, and
+  external failure costs respond to software problems discovered after delivery.</p>
 <div class="third">Models and quality characteristics</div>
+<p>It is not possible to completely distinguish process quality from product quality. Determining whether a process has
+  the capability to consistently produce products of desired quality is not simple.</p>
+<p>The software engineer, first of all, must determine the real purpose of software, incorporating stakeholder
+  requirements. All software development processes (eliciting requirements, designing, constructing, building, checking,
+  improving quality) are deisgned with these quality requirements in mind. The term work-product means any artifact that
+  is the outcome of a process used to create a final software product. While some treatments of quality are described in
+  terms of final software and system performance, sound engineering practice requires that intermediate work-products
+  are relevant to quality to be evaluated throughout the software engineering process.</p>
 <div class="third">Software quality improvement</div>
+<p>The quality of software products can be improved through preventative processes or an iterative process of continual
+  improvement, whcih requires management control, coordination, and feedback from many concurrent processes: 1) software
+  life cycle processes, 2) the process of fault/defect detection, removal, and prevention, and 3) the quality
+  improvement process.</p>
+<p>Approaches such as the Deming improvement cycle of Plan-Do-Check-Act (PDCA), evolutionary delivery, kaizen, and
+  quality function deployment (QFD) offer techniques to specify quality objectives and determine whether they are met.
+  The Software Engineering Institute's IDEAL is another method.</p>
+<p>Management sponsorship supports process and product evaluations and the resulting findings. Then an improvement
+  program is developed.</p>
 <div class="third">Software safety</div>
+<p>Safety-critical systems are those in which a system failure could harm human life, other living things, physical
+  structures, or the environment. Examples include software in mass transit systems, chemical manufacturing plants, and
+  medical devices. Industry standards such as DO-178C, have been developed to reduce the risk of injecting faults into
+  the software and thus improve software reliability. Direct safety-critical software is one that is embedded in a
+  safety-critical system, such as the flight control computer of an aircraft. Indirect are those that are used to
+  develop safety-critical software.</p>
+<p>Three complementary techniques for reducing the risk of failure are avoidance, detection and removal, and damage
+  limitation. Increasing level of risk means more quality assurance and control techniques. Another technique is
+  building assurance cases, a reasoned, auditable artifact created to support the contention that its claims are
+  satisfied.</p>
 <div class="second">Software quality management processes</div>
+<p>Software quality management (SQM) is the collection of all processes that ensure that software products, services,
+  and life cycle process implementations meet organizational software quality objectives and achieve stakeholder
+  satisfaction. SQM defines processes, process owners, requirements for the processes, measurements of the processes and
+  their outputs, and feedback channels throughout the whole software life cycle.</p>
+<p>SQM comprises four subcategories. Software quality planning includes determining which quality standards are to be
+  used, defining specific quality goals, and estimating effort and schedule of software quality activities. Software
+  quality assurance (SQA) assess adequacy of software processes to provide evidence that establishes confidence that the
+  software processes are appropriate for and produce software of suitable quality for their intended purposes. Software
+  quality control (SQC) examines specific project artifacts to determine whether they comply with standards established
+  for the project. Software process improvement (SPI), or software corrective and preventive action, seek to improve
+  process effectiveness, efficiency, and other characteristics with the ultimate goal of improving software quality.</p>
 <div class="third">Software quality assurance</div>
+<p>Software quality assurance is not testing, but a set of activities that define and assess the adequacy of software
+  processes to provide evidence that establishes confidence that the software processes are appropriate and produce
+  software products of suitable quality for their intended purposes. A key attribute of SQA is the objectivity of the
+  SQA function with respect to the project, and may be organizationally independent from technical, managerial, and
+  financial pressures form the project. SQA has two aspects: product assurance and process assurance.</p>
+<p>The software quality plan defines thea ctivities and tasks employed to ensure that software developed satisfies the
+  project's requirements and is commensurate with project risks. The SQAP first ensures that quality targets are clearly
+  defined and understood.</p>
+<p>The SQA plan identifies documents, standards, practices, and conventions that are checked and monitored, measures,
+  statistical techniques, procedures for problem reporting and corrective action, resources such as tools, techniques,
+  and methodologies, security for physical media, training, and SQA reporting and documentation.</p>
 <div class="third">Verification & validation</div>
+<p>The purpose of verification & validation (V&V) is to help the development organization build quality into the system
+  during the life cycle. Verification is an attempt to ensure that the product is built correctly. Validation is an
+  attempt to ensure that the right product is built. Both processes begin early in the development or maintenance phase,
+  and provide an examination of key product features in relation to both the product's immediate predecessor and the
+  specifications to be met.</p>
 <div class="third">Reviews and audits</div>
+<p>Reviews and audit processes are broadly defined as static, meaning that no software programs or models are executed,
+  examination of software engineering artifacts with respect to standards that have been established. Product assurance
+  and process assurance audits are typically conducted by SQA personnel independent of development teams. Product
+  assurance audits make certain that processes conform to contracts. Product assurance audits make certain that products
+  comply with contracts. Management reviews evaluate actual project results and are conducted by organization or project
+  management. Technical reviews examine work-products and are conducted by engineering staff.</p>
+<p>Management reviews monitor progress, determine status of plans and schedules, and evaluate effectiveness of
+  management processes, tools, and techniques. The main parameters are project cost, schedule, scope, and quality.
+  Management reviews evaluate decisions about corrective actions, changes in the allocation of resources, or changes to
+  the scope of the project. Inputs may include audit reports, progress reports, V&V reports, and plans of many types.
+</p>
+<p>Technical reviews evaluate a software product to determine its suitability for its intended use and identify
+  discrepancies from specifications and standards. Most importantly, the level of formality distinguish different types
+  of technical reviews. Inspections are the most formal, walkthroughs less, and pair reviews or desk checks are the
+  least formal. A technical review might require mandatory inputs such as statement of objectives, specific software
+  product, specific project management plan, issues list associated with the product, and technical review procedure.
+  Technical reviews of source code may include a wide variety of concerns such as analysis of algorithms, utilization of
+  critical computer resources, adherence to coding standards, structure and organization of code for testability, and
+  safety-critical concerns.</p>
+<p>Inspections are differentiated from other technical reviews by rules (defined set of criteria), sampling (checks
+  subsets of documents), peer (not management review), led (impartial moderator leads inspection meetings), and meeting
+  (includes meetings). Inspections always involve the author of the product, as well as an inspection leader, a
+  recorder, a reader, and a few checkers (inspectors). Inspections are usually done on a small section of the product at
+  a time.</p>
+<p>Walkthroughs are distinguished from inspections in that the author presents the work-product to the other
+  participants.</p>
+<p>An important point of audits is that they can occur on almost any product at any stage of the development or
+  maintenance process.</p>
 <div class="second">Practical considerations</div>
 <div class="third">Software quality requirements</div>
+<p>Factors that influence software quality requirements include the domain of the system, whetehr the system functions
+  are critical, the physical environment, system and software functional (what it does) and quality (how well it does
+  it) requirements, commercial (external) or standard (internal) components used, specific software engineering
+  standards, methods and tools used, budget, staff, organization, intended users and use, and integrity level of the
+  system.</p>
+<p>In cases where system failure may have extremely severe consequences, overall dependability is the main quality
+  requirement over and above basic functionality. This is the case if system failures affect a large number of people,
+  if users often reject systems that are unreliable, unsafe, or insecure, if system failure costs are enormous, and if
+  undependable systems may cause information loss.</p>
+<p>Defining integrity levels is a method of risk management. Software integrity levels are a range of vlaues that
+  represent software complexity, criticality, risk, safety level, security level, desired performance, reliability, or
+  other project-unique characteristics that define the importance of software to the user and acquirer.</p>
 <div class="third">Defect characterization</div>
+<p>Software quality evaluation techniques find defects, faults, and failures. Problems may need to be organized into
+  taxonomies. The word defect is often overloaded to refer to different types of anomalies. A computational error is
+  the difference between a computed, observed, or measured value and the true value. An error is a human action that
+  produces an incorrect result. A defect is an imperfection or deficiency in a work product, caused by a person
+  committing an error. A fault is a defect in source code, aka bug. A failure is an event in which the system does not
+  perform a required function.</p>
+<p>Three widely used software quality measurements are defect density (number of defects per unit size of documents),
+  fault density (number of faults per 1K lines of code), and failure intensity (failures per use-hour or per test-hour).
+  Reliability models are built from failure data and can be used to estmiate probability of future failures.</p>
+<p>Actions that may result from finding defects is removal of defects and attempts to eliminate the cause of defects,
+  such as with root cause analysis (RCA), which includes analyzing and summarizing the findings to find root causes.</p>
 <div class="third">Software quality management techniques</div>
+<p>Software control techniques use static and dynamic techniques. Static techniques do not execute code. Formal methods
+  are static techniques mostly used in verification of crucial parts of critical systems. Dynamic techniques are
+  generally testing techniques, but also may inclue simulation and model analysis. Code reading is a static technique
+  but experienced engineers may execute the code as they read through it.</p>
+<p>Testing that fall under V&V include evaluation and tests of tools to be used on the project, and conformance tests of
+  components and commercial off-the-shelf (COTS) products to be used. Sometimes a third party that is independent and
+  accredited by some body of authority tests a product for conformance.</p>
 <div class="third">Software quality measurement</div>
+<p>Software quality measurements support decision-making, such as when to stop testing and release a product.
+  Mathematical and graphical techniques can aid in interpretation of software quality measurement data, such as
+  descriptive statistics based (Pareto analysis, run charts, scatter plots, normal distribution), statistical tests
+  (binomial test, chi-squared test), trend analysis (control charts), and prediction (reliability models). Descriptive
+  statistics-based techniques often provide a snapshot of the more troublesome areas of the software product. Results
+  from trend analysis may indciate that a schedule is being met. Predictive techniques assist in estimating efforts and
+  predicting failures. From measurement methods, defect profiles can be developed and used to guide future SQM
+  processes.</p>
 <div class="second">Software quality tools</div>
+<p>Software quality tools include static and dynamic analysis tools. Static analysis tools include those that facilitate
+  and partially automate reviews and inspections of documents and code and allow users to enter defects found for later
+  removal. Some tools help organizations perform software safety hazard analysis, such as automated support for failure
+  mode and effects analysis (FMEA) and fault tree analysis (FTA). Other tools analyze data captured from software
+  engineering environments and test environments.</p>
 
 <div class="first">Software engineering professional practice</div><a class="anchor"
   id="software_engineering_professional_practice"></a>
 <div class="second">Professionalism</div>
+<p>Software engineers must possess knowledge, skills, and attitudes to practice in a professional, responsible, and
+  ethical manner. The term "professional practice" refers to a way of conducting services so as to achieve certain
+  standards or criteria in both the process of performing a service and the end product resulting from the service.</p>
 <div class="third">Accreditation, certification, and licensing</div>
+<p>Accreditation is a process to certify the competency, authority, or credibility of an organization. In many
+  countries, the basic means by which engineers acquire knowledge is through completion of an accredited course of
+  study, sometimes by a government organization such as in China, France, Germany, Israel, Italy, and Russia. In the
+  United States, engineering accreditation is performed by an organization known as ABET. An organization known as CSAB
+  serving as a participating body of ABET is the lead society within ABET for the accreditation of degree programs in
+  software engineering.</p>
+<p>Certification refers to the confirmation of a person's particular characteristics. A common type of certification is
+  professional certification, usually obtained by passing an examination. The IEEE CS has enacted two certification
+  programs (CSDA and CSDP) designed to confirm a software engineer's knowledge of standard software engineering
+  practices. Currently certification is completely voluntary, and in fact, most software engineers are not certified
+  under any program.</p>
+<p>Licensing is the action of giving a person authorization to perform certain kinds of activities and to take
+  responsibility for resultant engineering products. Government authorities or statutory bodies usually issue licenses.
+</p>
 <div class="third">Codes of ethics and professional conduct</div>
+<p>Codes of ethics and professional conduct present guidance in the face of comflicting imperatives. Violations may be
+  acts of commission, such as concealing inadequate work, disclosing confidential information, or falsifying
+  information, or through omission. Violations may result in penalties and possible expulsion from professional status.
+  Since standards and codes of ethics and professional conduct change over time, each individual must study to stay
+  current in their professional practice.
+</p>
 <div class="third">Nature and role of professional societies</div>
+<p>Professional societies are comprised of a mix of practitioners and academics and serve to define, advance, and
+  regulate their professions.</p>
 <div class="third">Nature and role of software engineering standards</div>
+<p>By establishing a consensual body of knowledge and experience, software engineering standards establish a basis upon
+  which further guidelines may be developed.</p>
 <div class="third">Economic impact of software</div>
+<p>At an individual level, an engineer's continuing employment may depend on their ability and willingness to interpret
+  and execute tasks in meeting customers' or employers' needs and expectations. At the business level, software properly
+  applied to a problem can eliminate months of work and translate to elevated profits or more effective organizations.
+  At the societal level, software failure can lead to accidents, interruptions, and loss of service.</p>
 <div class="third">Employment contracts</div>
+<p>Software engineering work may be solicited as company-to-customer supplier, engineer-to-customer consultancy, direct
+  hire, or even volunteering.</p>
+<p>A common concern in software engineering contracts is confidentiality. Employers derive commercial advantage from
+  intellectual property. Software engineers are often required to sign non-disclosure (NDA) or intellectual property
+  (IP) agreements as a precondition to work. Another concern is IP ownership. Rights to software engineering assets may
+  reside with the employer or customer, either under explicit contract terms or relevant laws.</p>
 <div class="third">Legal issues</div>
+<p>Legal issues include matters related to standards, trademarks, patents, copyrights, trade secrets, professional
+  liability, legal requirements, trade compliance, and cybercrime. Legal issues are jurisdictionally based.</p>
+<p>Software engineering standards establish guidelines for generally accepted practices and minimum requirements for
+  products and services provided by a software engineer.</p>
+<p>A trademark relates to any word, name, symbol or device used in business transactions, used to indicate the source or
+  origin of goods. The World Intellectual Property Organization (WIPO) is the authority that frames the rules and
+  regulations on trademarks.</p>
+<p>Patents protect an inventor's right to manufacture and sell an idea, consisting of a set of exclusive rights granted
+  by a sovereign government to an individual, group of individuals, or organization for a limited period of time. Note
+  that if inventions are made during the course of a software engineering contract, ownership may belong to the employer
+  or customer or be jointly held rather than belong to the software engineer. In many countries, software code is not
+  patentable, though software algorithms may be.</p>
+<p>Most governments in the world give exclusive rights of an original work to its creator, usually for a limited time,
+  enacted as a copyright. Copyrights are long-term and renewable.</p>
+<p>In many countries, an intellectual asset such as a formula, algorithm, process, design, method, pattern, instrument,
+  or compilation of information may be considered a "trade secret" if they are not generally known and may provide a
+  business some economic advantage and provides legal protection if stolen. However, another party can still derive or
+  discover the same asset legally.</p>
+<p>Engineers may be held to account for failing to fully and conscientiously follow recommended practice, known as
+  negligence. The engineer may also be held to warrant that the product is both suitable and safe for use. Privity is
+  the idea that one could only sue the person selling the product, but is no longer a defense against liability actions.
+  A defense against such an allegation is to show that standards and generally accepted practices were followed in the
+  development of the product.</p>
+<p>Software engineers must be aware of legal requirements for registration and licensing (examination, education,
+  experience, training requirements), contractual agreements, noncontractual legalities, basic information on
+  international legal framework as accessed from the World Trade Organization (WTO).</p>
+<p>All software professionals must be aware of legal restrictions on import, export, or reexport of goods, services, and
+  technology in the jurisdictions inwhich they work.</p>
+<p>Cybercrime refers to any crime that involves a computer, computer software, computer networks, or embedded software
+  controlling a system. This category of crime includes fraud, unauthorized access, spam, obscene or offensive content,
+  threats, harassment, theft of sensitive personal data or trade secrets, and use of one computer to damage or
+  infiltrate other networked computers and automated system controls. Forms of unauthorized access include hacking,
+  eavesdropping, and using computer systems in aw ay that is concealed form their owners.</p>
 <div class="third">Documentation</div>
+<p>Providing clear, thorough, and accurate documentation is the responsibility of each software engineer. Software
+  engineers should document relevant facts, significant risks and tradeoffs, and warnings of undesirable or dangerous
+  consequences from use or misuse of the software. Software engineers should avoid certifying or approving unacceptable
+  products, disclosing confidential information, or falsifying facts or data. For the development organization,
+  engineers should provide documentation for software requirements specifications, software design documents, details on
+  the software engineering tools used, software test specifications and results, and details on the adopted software
+  engineering methods, as well as problems encountered during the development process. For external stakeholders,
+  engineers should document information needed to determine if the software is likely to meet the customer's and users'
+  needs, description of the safe, and unsafe, use of the software, description of protection of sensitive information
+  created by or stored using the software, and clear identification of warnings and critical procedures.</p>
 <div class="third">Tradeoff analysis</div>
+<p>A software engineer's analysis of alternative problem solutions is tradeoff analysis. The first step is to establish
+  design goals and setting the relative importance of those goals. Design goals may include minmization of monetary cost
+  and maximization of reliability, peformance, or some other criteria on a wide range of dimensions. Any conflict of
+  interest must be disclosed up front.</p>
 <div class="second">Group dynamics and psychology</div>
 <div class="third">Dynamics of working in teams/groups</div>
+<p>Performing teams demonstrate consistent quality of work and progress towards goals and are cooperative, honest, and
+  have a focused atmosphere. Individual and team goals are aligned. Team members facilitate this atmosphere by being
+  intellectually honest, making use of group thinking, admitting ignorance, and acknowledging mistakes. They communicate
+  clearly and directly to each other. Peer reviews are constructive and nonpersonal.</p>
 <div class="third">Individual cognition</div>
+<p>In software engineering, notably due to the highly abstract nature of software itself, individual cognition plays a
+  very prominent role in problem solving. An individual's ability to decompose a problem and creatively develop a
+  solution can be inhibited by a need for more knowledge, subconscious assumptions, volume of data, fear of failure,
+  culture, lack of ability to express the problem, perceived working atmosphere, and the emotional status of the
+  individual.</p>
+<p>There is a set of basic methods engineers use to facilitate problem solving. Breaking down problems and soving them
+  one piece at a time reduces cognitive overload. Taking advantage of professional curiosity and pursuing continuous
+  professional development through training and study adds skills and knowledge to the software engineer's portfolio.
+  Reading, networking, and experimenting with new tools, techniques, and methods are all valid means of professional
+  development.</p>
 <div class="third">Dealing with problem complexity</div>
+<p>Many, if not most, software engineering problems are too complex and difficult to address as a whole or to be tackled
+  by individual software engineers. The usual means is to adopt teamwork and problem decomposition. Some specific
+  teamwork examples are pair programming and code review.</p>
 <div class="third">Interacting with stakeholders</div>
+<p>Stakeholders should provide support, information, and feedback at all stages of the software life cycle process. It
+  is vital to maintain open and productive communication with stakeholders.</p>
 <div class="third">Dealing with uncertainty and ambiguity</div>
+<p>The software engineer must attack and reduce any lac kof clarity that is an obstacle to performing work. Often,
+  uncertainty is simply a reflection of lack of knowledge. In this case, investigation through recourse to formal
+  sources such as textbooks and professional journals, interviews with stakeholders, or consultation with teammates and
+  peers can overcome it. When uncertainty cannot be overcome easily, software engineers may choose to regard it as a
+  project risk. In this case, work estimates or pricing is adjusted to mitigate the anticipated cost of addressing it.
+</p>
 <div class="third">Dealing with multicultural environments</div>
+<p>Multicultural environments are common in software engineering due to geographical separation and outsourcing.
+  Tolerance and understanding can be facilitated by support of leadership and management, with frequent communication,
+  face-to-face meetings, and communicating in native language.</p>
 <div class="second">Communication skills</div>
+<p>The software engineer's own career success is affected by the ability to consistently provide oral and written
+  communication effective and on time.</p>
 <div class="third">Reading, undestanding, and summarizing</div>
+<p>Software engineres are able to read and understand technical material, including reference books, manuals, research
+  papers, and program source code. A software engineer sifts through accumulated information, filtering out pieces that
+  will be most helpful. Customers may ask a software engineer to summarize information for them, simplifying or
+  explaining it so they can make the final choice between competing solutions.</p>
 <div class="third">Writing</div>
+<p>Written products include source code, software project plans, software requirement documents, software test plans,
+  user manuals, technical reports and evaluations, justifications, diagrams and charts, and so forth.</p>
 <div class="third">Team and group communication</div>
+<p>The number of communication paths grows quadratically with the addition of each team member, and team members are
+  unlikely to communicate with anyone perceive dto be removed form them by more tha ntwo degrees. Software documentation
+  is sometimes a substitute for direct interaction. Email is useful but not always enough, especially if used too much.
+  Increasingly, organizations are using enterprise collaboration tools to share information.</p>
 <div class="third">Presentation skills</div>
+<p>The software engineer's ability to convey concepts effectively in a presentation influences product acceptance,
+  management, and support.</p>
 
 <div class="first">Software engineering economics</div><a class="anchor" id="software_engineering_economics"></a>
+<p>Software engineering economics is about making decisions related to software engineering in a business context.
+  Economics is the study of value, costs, resources, and their relationship in a given context or situation. Software
+  engineering economics is concerned with aligning software technical decisions with the business goals of the
+  organization, which translate sinto sustainably staying in business.</p>
+<p>Economic analysis and decision-making are important engineering considerations because engineers are capable of
+  evaluating decisions both technically and from a business perspective. Many engineering proposals and decisions, such
+  as make versus buy, have deep intrinsic economic impacts that should be considered explicitly.</p>
 <div class="second">Software engineering economics fundamentals</div>
 <div class="third">Finance</div>
+<p>Finance is the branch of economics concerned with issues such as allocation, management, acquisition, and investment
+  of resources. Finance is an element of every organization, including software engineering organizations. The field of
+  finance deals with time, money, risk, and how they are interrelated.</p>
+<p>To ensure sustainability, an organization must identify organization goals, time horizons, risk factors, tax
+  considerations, and financial constraints, identiy and implement the appropriate business strategy, and measure
+  financial performance such as cash flow and ROI, and take corrective actions in case of deviation from objectives and
+  strategy.</p>
 <div class="third">Accounting</div>
+<p>Accounting is part of finance, and allows people whose money is being used to run an organization to know the results
+  of their investment and figure out if they are getting the profit they were expecting, referring to tangible return on
+  investment (ROI) or a business's sustainability (for nonprofits). The primary goal of accounting is to measure the
+  organization's actual financial performance and to communicate that information to stakeholders such as shareholders,
+  financial auditors, and investors. Communication is generally in the form of financial statements that show in money
+  terms the economic resources to be controlled.</p>
 <div class="third">Controlling</div>
+<p>Controlling is an element of finance and accounting, and involves measuring and correcting the performance of finance
+  and accounting. Controlling cost is a special branch used to detect variances of actual costs from planned costs.</p>
 <div class="third">Cash flow</div>
+<p>Cash flow is the movement of money into or out of a business, project, or financial product over a given period. The
+  term cash flow stream refers to set of cash flow instances over time caused by carrying out some given proposal. A
+  cash flow diagram is a picture of a cash flow stream.</p>
 <div class="third">Decision-making process</div>
+<p>A COTS object-request broker product might cost a few thousand dollars, but a homegrown services could easily cost
+  several hundred thousand tmies that amount. If the candidate solutions all solve the problem from a technical
+  perspective, then selection should be based on commercial factors such as optimizing total cost of ownership (TCO) or
+  maximizing short-term return on investment (ROI). In preparing decisions, it is recommended to turn any given set of
+  proposals, along with their various interrelationships, into a set of mutually exclusive alternatives.</p>
 <div class="third">Valuation</div>
+<p>The decision-making process is about maximizing value. A financial basis for value-based comparison is comparing two
+  or more cash flows. Several bases of comparison are available including present worth, future worth, annual
+  equivalent, internal rate of return, and payback period. Comparing cash flows only makes sense when they are expressed
+  in the same time frame.</p>
 <div class="third">Inflation</div>
+<p>Inflation describes long-term trends in prices, when same things cost more than they did before. The present time
+  value needs to be adjusted for inflation rates and for exchange rate fluctuations.</p>
 <div class="third">Depreciation</div>
+<p>Depreciation involves spreading the cost of a tangible asset across a numbe rof time periods and is used to determine
+  how investments in capitalized assets are charged against income over several years. It is an important part of
+  determing after-tax cash flow, which is critical for accurately addressing profit and taxes. The depreciation expense
+  for each time period is the capitalized cost of developing the software divided across the number of periods in which
+  the software will be sold.</p>
 <div class="third">Taxation</div>
+<p>Companies have to pay income taxes. A proposal with a high pretax profit won't look nearly as poriftable in posttax
+  terms. Not accounting for taxation can lead to unrealistically high expectations about profit.</p>
 <div class="third">Time-value of money</div>
+<p>The value of money changes over time. This is a concept around since the earliest human history and is known as
+  time-value. Costs, values, and risk should be normalized to net present value.</p>
 <div class="third">Efficiency</div>
+<p>Economic efficiency is the ratio of resources actually consumed to resources expected to be consumed. Efficiency
+  means "doing things right." Factors influencing efficiency include product complexity, quality requirements, time
+  pressure, process capability, team distribution, interrupts, feature churn, tools, and programming language.</p>
 <div class="third">Effectiveness</div>
+<p>Effectiveness is about having impact. It is the relationship between achieved objectives to defined objects. It means
+  "doing the right things." Effectiveness looks only at whether defined objectives are reached and not how they are
+  reached.</p>
 <div class="third">Productivity</div>
+<p>Productivity is the ratio of output over input. Output is value delivered and input is all the resources spent to
+  generate the output.</p>
 <div class="second">Life cycle economics</div>
 <div class="third">Product</div>
+<p>A product is an economic good or output that is created in a process that transforms product factors or inputs to an
+  output. When sold, a product is a deliverable that creates both a value and an experience for its users. A product can
+  be a combination of systems, solutions, materials, and services delivered internally or externally, as-is or as a
+  component for another product.</p>
 <div class="third">Project</div>
+<p>A project is a temporary endeavor undertaken to create a unique product, service, or result. Different project types
+  are distinguished (product development, outsourced services, software maintenance, service creation, etc.).</p>
 <div class="third">Program</div>
+<p>A program is a group of related projects, subprograms, and program activites managed in a coordinated way to obtain
+  benefits not available from managing them individually. Programs are often used to identify and manage different
+  deliveries to a single customer or market over a time horizon of several years.</p>
 <div class="third">Portfolio</div>
+<p>Portfolios are projects, programs, subportfolios, and operations managed by a group to achieve strategic objectives.
+</p>
 <div class="third">Product life cycle</div>
+<p>A software product life cycle (SPLC) includes all the activities needed to define, build, operate, maintain, and
+  retire a software product or service and its variants. The SPLC activities of operate, maintain, and retire typically
+  occur in a much longer time frame and consume more total effort and resources.</p>
 <div class="third">Project life cycle</div>
+<p>Project life cycle activites typically involve five process groups: initiating, planning, executing, monitoring and
+  controlling, and closing. The software project life cycle and software product life cycle are interrelated. An SPLC
+  may contain several SDLCs.</p>
 <div class="third">Proposals</div>
+<p>Proposals are the start of a business decision and relate to reaching a business objective. A proposal is a single,
+  separate option that is being considered, like carrying out a particular project or not. The whole purpose of business
+  decision-making is to figure out which proposals should be carried out and which shouldn't.</p>
 <div class="third">Investment decisions</div>
+<p>Investors, either inside (finance, board), or outside (banks) make investment decisions to spend money and resources
+  on achieving a target objective.</p>
 <div class="third">Planning horizon</div>
+<p>Frozen assets are when an organization chooses to invest in a particular proposal and money gets tied up in that
+  proposal. Operating and maintenance costs of that proposal tend to start low but increase over time. The total cost of
+  the proposal is the sum of operating and maintenance costs. Early on, frozen asset costs dominate; later, operating
+  and maintenance costs dominate. When the sum of the costs is minimized, it is the minimum cost lifetime. The planning
+  horizon, sometimes known as the study period, is the consistent time frame over which proposals are considered.</p>
 <div class="third">Price and pricing</div>
+<p>A price is what is paid in exchange for a good or service. The four Ps of the marketing mix is price, product,
+  promotion, and place. Price is the only revenue-generating element among the four Ps and the rest are costs. Pricing
+  is an element of finance and marketing, and is the process of determining what a company will receive in exchange for
+  its products.</p>
 <div class="third">Cost and costing</div>
+<p>A cost is the value of money that has been used up to produce something. A cost is an alternative that is given up as
+  a result of a decision. A sunk cost is the expenses before a certain time, which can cause emotional hurdles in
+  looking forward. From a traditional economics point of view, sunk costs should not be considered in decision making.
+  Opportunity cost is the cost of an alternative that must be forgone in order to pursue another alternative. Costing is
+  part of finance and is the process to determine the cost based on expenses and on the target cost to be competitive
+  and successful in a market. The planning and controlling of these costs is cost management. Total cost of ownership
+  (TCO) is the total cost for acquiring, activating, and keeping a product running, grouped as direct and indirect
+  costs. TCO is an accounting method crucicial in making sound economic decisions.</p>
 <div class="third">Performance measurement</div>
+<p>Performance measurement is the process whereby an organization establishes and measures the parameters used to
+  determine whether programs, investments, and acquisitions are achieving the desired results.</p>
 <div class="third">Earned value management</div>
+<p>Earned value management (EVM) is a project management technique for measuring progress based on created value. At a
+  given moment, the results achieved to date in a project are compared with the projected budget and the planned
+  schedule progress for that date. A key principle in EVM is tracking cost and schedule variances via comparison of
+  planned versus actual schedule and budget versus actual cost.</p>
 <div class="third">Termination decisions</div>
+<p>Termination mneans to end a project or pdocut, and can be preplanned or can come spontaneously. Sunk costs should not
+  be considered in such decision making because they have been spent and will not reappear as value.</p>
 <div class="third">Replacement and retirement decisions</div>
+<p>A replacement decision is made when an organization already has a particular asset and they are considering replacing
+  it with something else, such as supporting a legacy software product or redeveloping it from the ground up.
+  Replacement decisions are similar except also consider sunk cost and salvage value. Retirement decisions are about
+  getting out of an activity altogether. These can be influenced by lock-in factors such as technology dependency and
+  high exit costs.</p>
 <div class="second">Risk and uncertainty</div>
 <div class="third">Goals, estimates, and plans</div>
+<p>Goals in software engineering economics are mostly business goals, which relates business needs to investign
+  resources. An estimate is a well-founded evaluation of resources and time that will be needed to achieve stated goals,
+  and are typically internally generated and not necessariy visible externally. A plan describes the activities and
+  milestones necessary to reach the goals of a project.</p>
 <div class="third">Estimation techniques</div>
+<p>Estimations consist of five families of techniques: expert judgment, analogy, estimation by parts, parametric methds,
+  and statistical methods. Convergence among estimates produced by different techniques suggests accuracy.</p>
 <div class="third">Addressing uncertainty</div>
+<p>Estimates are inherently uncertain. Techniques for addressing uncertainty include considering ranges of estimates,
+  analyzing sensitivity to changes of assumptions, and delaying final decisions.</p>
 <div class="third">Prioritization</div>
+<p>Prioritization involves ranking alternatives based on common criteria to deliver the best possible value.</p>
 <div class="third">Decisions under risk</div>
+<p>Decisions under risk techniques are used when the decision maker can assign probabilities to the different possible
+  outcomes. Specific techniques include expected value decision making, expctation variance and decision making, Monte
+  Carlo analysis, decision trees, and expected value of perfect information.</p>
 <div class="third">Decisions under uncertainty</div>
+<p>Decisions under uncertainty techniques are used when the decision maker cannot assign probabilities to the different
+  possible outcomes because the needed information is not available. Specific techniques inclue the Laplace rule,
+  Maximin rule, Maximax rule, Hurwicz rule, and Minimax Regret rule.</p>
 <div class="second">Economic analysis methods</div>
 <div class="third">For-profit decision analysis</div>
+<p> For-profit decision analysis depends on ROI or Return on Capital Employed (ROCE). For-profit decision techniques
+  don't apply for government and nonprofit organizations. In these cases, organizations have different goals.</p>
 <div class="third">Minimum acceptable rate of return</div>
+<p>The minimum acceptable rate of return (MARR) is the lowest internal rate of return the organization would consider to
+  be a good investment. The MARR is a statement that an organization is confident it can achieve at least that rate of
+  return.</p>
 <div class="third">Return on investment</div>
+<p>Return on investment (ROI) is a measure of profitability of a company or business unit, defined as the ratio of money
+  gained or lost on an investment relative to the amount of money invested.</p>
 <div class="third">Return on capital employed</div>
+<p>The return on capital employed (ROCE) is a measure of the profitability of a company or business unit, defined as the
+  ratio of a gross profit before taxes and interest (EBIT) to the total assets minus current liabilities. It describes
+  the return on the used capital.</p>
 <div class="third">Cost-benefit analysis</div>
+<p>Cost-benefit analysis evalutes individual proposals. Any proposal with a benefit-cost ratio of less than 1 can
+  usually be rejected without further analysis.</p>
 <div class="third">Cost-effectiveness analysis</div>
+<p>Cost-effectiveness analysis is similar to cost-benefit analysis. There are two versions: fixed-cost version that
+  maximizes the benefit given some upper bound on cost, and fixed-effectiveness version minimizes cost needed to achieve
+  a fixed goal.</p>
 <div class="third">Break-even analysis</div>
+<p>Break-even analysis identifes the point where the costs of developing a product and the revenue to be generated are
+  equal. Given estimated costs and revenues of two or more proposals, break-even analysis helps in choosing among them.
+</p>
 <div class="third">Business case</div>
+<p>The business case is the consolidated information summarizing and explaining a business proposal from different
+  perspectives for a decision maker, often used to assess the potential value of a product, and can be used as a basis
+  in the investment decision-making process.</p>
 <div class="third">Multiple attribute evaluation</div>
+<p>The alternative to making decisions based on money is to make decisions based on other attributes that factor in
+  nonfinancial criteria. One family of multiple attribute decision techniques is compensatory, which collaps all
+  attributes into a single figure of merit. This family is called compensatory, or single-dimensioned, because a lower
+  score in one attribute can compensate for a higher score in another. Compensatory techniques include nondimensional
+  scaling, additive weighting, and analytic hierarchy process. The other family is noncompensatory, or fully
+  dimensioned, which does not allow tradeoffs, and each attribute is treated as a separate entity. The noncompensatory
+  techniques include dominance, satisficing, and lexicogrpahy.</p>
 <div class="third">Optimization analysis</div>
+<p>Optimization analysis studies a cost function over a range of values to find the point where overall performance is
+  best. Software's classic space-time tradeoff is an example of optimization. An algorithm that runs faster will often
+  use more memory. Optimization balances a faster runtime against the cost of additional memory. Real options analysis
+  can be used to quantify the value of project choices, including the value of delaying a decision. Such options are
+  difficult to compute with precision.</p>
 <div class="second">Practical considerations</div>
 <div class="third">The "good enough" principle</div>
+<p>Often software engineering projects and products are not precise about the targets. Software requirements are stated,
+  but the marginal value of adding a bit more functionality cannot be measured. The result could be late or too-high
+  cost. The "good enough" principle relates marginal value to marginal cost and provides guidance to determine criteria
+  when a deliverable is "good enough" to be delivered.</p>
+<p>The RACE principle (reduce accidents and control essence) is a popular rule towards good enough software. Accidents
+  imply unnecessary overheads such as gold-plating and rework due to late defect removal or too many requirements
+  changes. Essence is what customers pay for. Insufficient quality or insufficient quantity is not good enough. Agile
+  methods are one example of trying to reduce gold plating and delayed rework.</p>
 <div class="third">Friction-free economy</div>
+<p>Economic friction is everything that keeps markets from having perfect competition. It involves distance, cost of
+  delivery, restrictive regulations, and/or imperfect information. In high-friction markets, customers don't have many
+  suppliers from which to choose. It's hard for new competitors to start business and compete. Friction-free markets are
+  the reverse. New competitors emerge and customers are quick to respond, and the marketplace is unpredictable.
+  Theoretically, software and IT are friction-free. New companies can easily create products and often do so at a much
+  lower cost than established companies, since they need not consider any legacies. Marketing and sales can be done via
+  Internet and social networks, and basically free distribution mechanisms can enable a ramp up to a globla business.
+  Competition among software app developers is inhibited when apps must be sold through an app store and comply with a
+  store's rules.</p>
 <div class="third">Ecosystems</div>
+<p>An ecosystem is an environment consisting of all the mutually dependent stakeholders, business units, and companies
+  working in a particular area. In a typical ecosystem, there ar eproducers and consumers. Note that a consumer is not
+  the end user but an organization that uses the product to enhance it. A software ecosystem is, for instance, a
+  supplier of an application working with companies doing the installation and support in different regions. Neither
+  could exist without the other.</p>
 <div class="third">Offshoring and outsourcing</div>
+<p>Offshoring means executing a business activity beyond sales and marketing outside the home country of an enterprise,
+  usually in low-cost countries or from specialized companies. Offshoring within a company is called captive offshoring.
+  Outsourcing is the result-oriented relationship with a supplier who executes business activities for an enterprise
+  when, traditionally, those activities were executed inside the enterprise. Outsourcing is site-independent.
+  Outsourcing might reduce cost per hour of software development but might increase number of hours and capital expenses
+  due to increased need for monitoring and communication.</p>
 
 <div class="first">Computing foundations</div><a class="anchor" id="computing_foundations"></a>
 <div class="second">Problem solving techniques</div>

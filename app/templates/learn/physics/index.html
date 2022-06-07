@@ -1,9 +1,33 @@
 {% extends 'base.html' %}
 
+{% block title %}Physics - {% endblock %}
 {% block content %}
 
 
 <style>
+	.first {
+		font-size: 30px;
+		margin: 30px 0 15px;
+		color: #333333;
+	}
+
+	.second {
+		font-size: 20px;
+		margin: 20px 0 10px;
+		text-decoration: underline;
+		color: #333333;
+	}
+
+	.third {
+		font-size: 100%;
+		color: #333333;
+		font-weight: 600;
+	}
+
+	.size {
+		font-size: 130%;
+	}
+
 	p,
 	button {
 		font-size: 100%;
@@ -83,6 +107,42 @@
 </style>
 
 <div class="sidebar">
+	<div class="core">College physics</div>
+	<div class="topic"><a href="#nature">Nature of science and physics</a></div>
+	<div class="topic"><a href="#kinematics">Kinematics</a></div>
+	<div class="topic"><a href="#2d_kinematics">Two-dimensional kinematics</a></div>
+	<div class="topic"><a href="#dynamics">Dynamics: force and Newton's laws of motion</a></div>
+	<div class="topic"><a href="#friction">Friction, drag, and elasticity</a></div>
+	<div class="topic"><a href="#circular">Gravitation and uniform circular motion</a></div>
+	<div class="topic"><a href="#work">Work, energy, and energy resources</a></div>
+	<div class="topic"><a href="#momentum">Linear momentum and collisions</a></div>
+	<div class="topic"><a href="#torque">Statics and torque</a></div>
+	<div class="topic"><a href="#rotation">Rotational motion and angular momentum</a></div>
+	<div class="topic"><a href="#fluid">Fluid statics</a></div>
+	<div class="topic"><a href="#fluid_dynamics">Fluid dynamics</a></div>
+	<div class="topic"><a href="#temperature">Temperature, kinetic theory, and gas laws</a></div>
+	<div class="topic"><a href="#heat">Heat and heat transfer methods</a></div>
+	<div class="topic"><a href="#thermodynamics">Thermodynamics</a></div>
+	<div class="topic"><a href="#oscillation">Oscillatory motion and waves</a></div>
+	<div class="topic"><a href="#sound">Sound</a></div>
+	<div class="topic"><a href="#charge">Electric charge and electric field</a></div>
+	<div class="topic"><a href="#potential">Electric potential and electric field</a></div>
+	<div class="topic"><a href="#ohms">Electric current, resistance, and Ohm's law</a></div>
+	<div class="topic"><a href="#circuits">Circuits, bioelectricity, and DC instruments</a></div>
+	<div class="topic"><a href="#magnetism">Magnetism</a></div>
+	<div class="topic"><a href="#induction">Electromagnetic induction, AC circuits, and electrical technologies</a>
+	</div>
+	<div class="topic"><a href="#electromagnetic_waves">Electromagnetic waves</a></div>
+	<div class="topic"><a href="#optics">Geometric optics</a></div>
+	<div class="topic"><a href="#vision">Vision and optical instruments</a></div>
+	<div class="topic"><a href="#wave_optics">Wave optics</a></div>
+	<div class="topic"><a href="#relativity">Special relativity</a></div>
+	<div class="topic"><a href="#quantum">Introduction to quantum physics</a></div>
+	<div class="topic"><a href="#atomic">Atomic physics</a></div>
+	<div class="topic"><a href="#nuclear">Radioactivity and nuclear physics</a></div>
+	<div class="topic"><a href="#medical">Medical applications of nuclear physics</a></div>
+	<div class="topic"><a href="#particle">Particle physics</a></div>
+	<div class="topic"><a href="#frontiers">Frontiers of physics</a></div>
 	<div class="core">Classical mechanics</div>
 	<div class="topic"><a href="#logic">Classical mechanics</a></div>
 	<div class="topic"><a href="#language">Newton's laws and forces</a></div>
@@ -120,6 +180,125 @@
 	<div class="topic"><a href="#sets">Diffraction</a></div>
 </div>
 
+<div class="first">Nature of science and physics</div><a class="anchor" id="nature"></a>
+<div class="second">Introduction</div>
+<p>A model is a representation of something that is too difficult to display directly. It is justified with experimental
+	proof but only accurate under limited situations. A theory is an explanation for patterns in nature supported by
+	scientific evidence and verified multiple times by researchers. A law uses concise language to describe a
+	generalized pattern that is supported by evidence and experiments, and can often be expressed in the form of a
+	single mathematical equation. A law is concise and very general (eg. law of motion F=ma), whereas a theory is less
+	concise (eg. theory of evolution). Less broadly applicable statements are usually called principles, but they are
+	similar to laws.</p>
+<p>Laws can never be known with absolute certainty because it is impossible to perform every imaginable experiment for
+	every possible scenario. Physcists operate under the assumption that all scientific laws and theories are valid
+	until a counterexample is observed.</p>
+<p>The scientific method is a way scientists gather information about the world. This process typiclaly begins with an
+	observation and a question. The scientist performs research about the topic and then devises a hypothesis. The
+	scientists test the hypothesis by performing an experiment. Finally, the scientist analyzes the results and draws a
+	conclusion.</p>
+<p>Classical physics is an approximation of the universe under the conditions that matter is moving at speeds less than
+	about 1% the speed of light, objects are large enough to be seen with a microscope, and only weak gravitational
+	fields are involved. This is mostly applicable to environments in which humans live. Classical physics is relevant
+	for a wide range of everyday circumstances and is necessary to undersatnd modern physics.</p>
+<p>Modern physics includes relativity, which is used when an object is traveling at a speed greater than 1% of light or
+	experiences a strong gravitational field such as near the sun, and quantum mechanics, which is used for objects
+	smaller than those that can be seen with a microscope. Relativistic quantum mechanics combines these two and is the
+	most universal theory but is not typically used due to its mathematical complexity.</p>
+<div class="second">Physical quantities and units</div>
+<p>A physical quantity is a physical property that can be quantified. Most physical quantities can be expressed as a
+	combination of only four fundamental physical quantities: length,
+	mass, time, and electric current. Measurements of physical quantities are expressed in terms of units. Two major
+	systems of units used in the world are SI units, also known as the metric system, and English units. Fundamental
+	units are units of length (meter), mass (kilogram), time (second), and electric current. Derived units are all
+	others and can be expressed as
+	algebraic combinations of length, mass, time, and current.</p>
+<div class="second">Accuracy, precision, and significant figures</div>
+<p>Accuracy is how close meausurements are to an actual value, and precision is how close measurements are to each
+	other.</p>
+<p>Uncertainty in a measurement, \(A\), is often denoted as \(\delta A\), so the measurement result is recorded as
+	\(A\pm \delta A\). Factors contributing to uncertainty include limitations of the measureing device, skill of the
+	person making the measurement, irregularities in the object being measured, etc. The percent uncertainty is
+	\(\frac{\delta A}{A}\times 100\%\).</p>
+<p>If the measurements going into a calculaiton have small uncertainties (a few percents or less), then the method of
+	adding percents can be used for multiplication or division. For example, if the floor has length 4.00 m and width
+	3.00 m, with uncertainties of 2% and 1%, then the area is \(12.0 \text{ m}^2\) with uncertainty of 3%.</p>
+<p>The significant figures in a measurement contains all certain digits plus one estimated digit. For example, if your
+	ruler has only inches marked, then you can measure 2.5 inches, but the 0.5 is uncertain and the 2 inches is
+	certain. Sceintific notation is writing just the significant digits and multiplying by a power of 10.</p>
+<div class="second">Approximation</div>
+<div class="first">Kinematics</div><a class="anchor" id="kinematics"></a>
+<div class="second">Displacement</div>
+<div class="second">Vectors, scalars, and coordinate systems</div>
+<div class="second">Time, velocity, and speed</div>
+<div class="second">Acceleration</div>
+<div class="second">Motion equations for constant acceleration in one dimension</div>
+<div class="second">Problem-solving basics for one dimensional kinematics</div>
+<div class="second">Falling objects</div>
+<div class="second">Graphical analysis of one dimensional motion</div>
+<div class="first">Two-dmensional kinematics</div><a class="anchor" id="2d_kinematics"></a>
+<div class="second">Kinematics in two dimensions: an introduction</div>
+<div class="second">Vector addition and subtraction: graphical methods</div>
+<div class="second">Vector addition and subtraction: analytical methods</div>
+<div class="second">Projectile motion</div>
+<div class="second">Addition of velocities</div>
+<div class="first">Dynamics: force and Newton's laws of motion</div><a class="anchor" id="dynamics"></a>
+<div class="second">Development of force concept</div>
+<div class="second">Newton's first law of motion: inertia</div>
+<div class="second">Newton's second law of motion: concept of a system</div>
+<div class="second">Newton's third law of motion: symmetry in forces</div>
+<div class="second">Normal, tension, and other examples of force</div>
+<div class="second">Problem-solving strategies</div>
+<div class="second">Further applications of Newton's laws of motion</div>
+<div class="second">The four basic forces, an introduction</div>
+<div class="first">Friction, drag, elasticity</div><a class="anchor" id="friction"></a>
+<div class="second">Friction</div>
+<div class="second">Drag forces</div>
+<div class="second">Elasticity: stress and strain</div>
+<div class="first">Gravitation and uniform circular motion</div><a class="anchor" id="circular"></a>
+<div class="second">Rotation angle and angular velocity</div>
+<div class="second">Centripetal acceleration</div>
+<div class="second">Centripetal force</div>
+<div class="second">Fictitious forces and non-inertial frames: the Coriolis force</div>
+<div class="second">Newton's universal law of gravitation</div>
+<div class="second">Satellites and Kepler's laws: an argument for simplicity</div>
+<div class="first">Work, energy, and energy resources</div><a class="anchor" id="work"></a>
+<div class="second">Work: the scientific definition</div>
+<div class="second">Kinetic energy and the work-energy theorem</div>
+<div class="second">Gravitational potential energy</div>
+<div class="second">Conservative forces and potential energy</div>
+<div class="second">Nonconservative forces</div>
+<div class="second">Conservation of energy</div>
+<div class="second">Power</div>
+<div class="second">Work, energy, and power in humans</div>
+<div class="second">World energy use</div>
+<div class="first">Linear momentum and collisions</div><a class="anchor" id="momentum"></a>
+<div class="second">Linear momentum and force</div>
+<div class="second">Impulse</div>
+<div class="second">Conservation of momentum</div>
+<div class="second">Elastic collisions in one dimension</div>
+<div class="second">Inelastic collisions in one dimension</div>
+<div class="second">Collisions of point masses in two dimensions</div>
+<div class="second">Introduction to rocket propulsion</div>
+<div class="first">Statics and torque</div><a class="anchor" id="torque"></a>
+<div class="second">The first condition for equilibrium</div>
+<div class="second">The second condition for equilibrium</div>
+<div class="second">Stability</div>
+<div class="second">Applications of statics, including problem-solving strategies</div>
+<div class="second">Simple machines</div>
+<div class="second">Forces and torques in muscles and joints</div>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+<div class="first">Nature</div><a class="anchor" id="nature"></a>
+
+
 https://www.overleaf.com/read/rhxwtnpzrxdf
 Currently taking notes on physics on overleaf.
 
@@ -128,64 +307,87 @@ Currently taking notes on physics on overleaf.
 <p>There are two signs of charge: positive charges (protons) and negative charges (electrons).</p>
 <h4>Electric Forces</h4>
 <p>Electric charges produce forces on other charges. Coulomb's law is an experimental law of physics that states the
-	magnitude of the force between two point charges (protons and electrons) is directly proportional to the product of
-	the magnitudes of charges and inversely proportional to the square of the distance between them. Like charges repel,
+	magnitude of the force between two point charges (protons and electrons) is directly proportional to the product
+	of
+	the magnitudes of charges and inversely proportional to the square of the distance between them. Like charges
+	repel,
 	whereas opposite charges attract.</p>
 $$|F|=K\frac{q_1q_2}{r^2}, \text{where }K=\text{Coulomb's
 constant}=8.988\times10^9\mathrm{N}\!\cdot\!\mathrm{m^2}\!\cdot\!\mathrm{C^{-2}}$$
 <h4>Charge Distribution and Geometry</h4>
-<p>Lines have a linear density of charge \(q/l\) per unit length. Areas have an areal density of charge \(q/A\) per unit
-	area, and volumes have a volumetric density of charge \(q/V\) per unit volume, which are related to Coulomb's Law
+<p>Lines have a linear density of charge \(q/l\) per unit length. Areas have an areal density of charge \(q/A\) per
+	unit
+	area, and volumes have a volumetric density of charge \(q/V\) per unit volume, which are related to Coulomb's
+	Law
 	via multivariable calculus.</p>
 <h4>Electric Fields</h4>
-<p>An electrical field is a physical field that surrounds electrically charged particles and exerts force on all other
-	charged particles. It is a vector field, where each point in the field has a magnitude and a direction. The electric
+<p>An electrical field is a physical field that surrounds electrically charged particles and exerts force on all
+	other
+	charged particles. It is a vector field, where each point in the field has a magnitude and a direction. The
+	electric
 	field can be visualized with a set of lines.</p>
 <h4>Electric Potential</h4>
 <p>The electric potential is the conversion of the electric field into a scalar.</p>
 <h4>Conservation of Charge</h4>
-<p>Total charge is conserved in the universe. You cannot create a net negative charge on an object without creating a
+<p>Total charge is conserved in the universe. You cannot create a net negative charge on an object without creating
+	a
 	corresponding net positive charge on another.</p>
 <h4>Coulombs</h4>
-<p>The unit of charge is the Coulomb. It is defined as positive for protons and negative for electrons. 1 electron is
+<p>The unit of charge is the Coulomb. It is defined as positive for protons and negative for electrons. 1 electron
+	is
 	-1.602x10^-19 coulombs.</p>
 <h4>Materials and "Free" Electrons</h4>
-<p>Most electrons are not free to move and are bound tightly to their nucleus. However, in some materials and at some
+<p>Most electrons are not free to move and are bound tightly to their nucleus. However, in some materials and at
+	some
 	temperatures, some electrons are free to move to neighboring atoms. These materials are called conductors.</p>
 <h4>Static Charges within a Conductor</h4>
-<p>Static charges are free to move through the conductor. Because these charges can move, they will naturally seek to
-	move as far away from each other as possible. They will therefore spread out to the surface or edge of a conductor.
+<p>Static charges are free to move through the conductor. Because these charges can move, they will naturally seek
+	to
+	move as far away from each other as possible. They will therefore spread out to the surface or edge of a
+	conductor.
 </p>
 <h4>Induced Charge</h4>
 <p>If a conductor is placed in the presence of an external electric field, the charges in a conductor will be
-	accelerated by the field. The charges will rearrange themselves until they perfectly cancel any electrical field.
-	This electrostatic charge is considered inducted because there was no contact with the external charge. In contrast,
+	accelerated by the field. The charges will rearrange themselves until they perfectly cancel any electrical
+	field.
+	This electrostatic charge is considered inducted because there was no contact with the external charge. In
+	contrast,
 	charges in an insulator cannot move.</p>
 <h4>Origins of Capacitance</h4>
-<p>The tendency for charges in a conductor to rearrange themselves along the surface to cancel out an external electric
+<p>The tendency for charges in a conductor to rearrange themselves along the surface to cancel out an external
+	electric
 	field leads us to the concept of capacitance.</p>
 <h4>Parallel Plate Capacitor</h4>
-<p>When two conductive plates are placed a short distance apart, with an insulating gap of constant width, this is often
-	called a parallel-plate capacitor. The capacitance of the plates goes up with dielectric material, larger surface
+<p>When two conductive plates are placed a short distance apart, with an insulating gap of constant width, this is
+	often
+	called a parallel-plate capacitor. The capacitance of the plates goes up with dielectric material, larger
+	surface
 	area, and a closer distance between the plates.</p>
 $$C=\frac{k\epsilon_0A}{d}$$
-<p>\(\epsilon_0\) is the permittivity of free space, and \(k\epsilon_0\) is the permittivity for the specific material
+<p>\(\epsilon_0\) is the permittivity of free space, and \(k\epsilon_0\) is the permittivity for the specific
+	material
 	in the gap, and A is the overlapping surface area of the plates, and d is the distance of the gap between the
 	plates.</p>
-<p>If you place an additional plate in between the two plates of the capacitor, then the charges will rearrange in that
+<p>If you place an additional plate in between the two plates of the capacitor, then the charges will rearrange in
+	that
 	plate such that the positive side is away from the positive capacitor plate and vice-versa. This effectively
 	increases the capacitance because the gap between the plates decreases.</p>
 <h4>Dielectrics</h4>
-<p>Dielectrics and permittivity have to do whether materials can be electrically polarized. In a vacuum, the "electric
+<p>Dielectrics and permittivity have to do whether materials can be electrically polarized. In a vacuum, the
+	"electric
 	permittivity of free space" is a particular constant \(\epsilon_0\).</p>
 <h4>Dielectrics in Capacitors</h4>
-<p>High-permittivity materials are often used as dielectrics within capacitors. Capacitors store energy in the slight
-	dislocation caused by polarizing the dielectric material. Imagine the dielectric in the capacitor where the positive
-	charges are fixed and a negative charge is connected to each positive charge by a tiny "spring." When an external
+<p>High-permittivity materials are often used as dielectrics within capacitors. Capacitors store energy in the
+	slight
+	dislocation caused by polarizing the dielectric material. Imagine the dielectric in the capacitor where the
+	positive
+	charges are fixed and a negative charge is connected to each positive charge by a tiny "spring." When an
+	external
 	field is applied, the negative charges are attracted to the plate storing up energy.</p>
 <h4>Roll, pitch yaw</h4>
 <p>For flying airplanes, rotation around the front-to-back axis is called roll (spinning like a torpedo). Rotation
-	around the side-to-side axis is called pitch (looking up or down). Rotation around the vertical axis is called yaw
+	around the side-to-side axis is called pitch (looking up or down). Rotation around the vertical axis is called
+	yaw
 	(turning left and right).</p>
 
 
@@ -235,41 +437,58 @@ A system is a collection of objects. An object is treated as if they have no int
 \section{Gravity/electricity}
 
 Force is proportional to the mass/electric charge of the two objects and inversely proportional to the square of the
-distance between them. Force is mass times acceleration and so holds both values. The gravitational field $g$ is and the
-electric field $E$ is about the same: they are models, fields which explain gravitational and electrostatic attraction.
-When something is placed into the field, they experience a force. The force they experience depends on the magnitude of
-the mass/charge. And so $F=Eq$. The electric field in this case is the force experienced by a unit charge ($1\unit{C}$).
-Same way, gravitational field is the force experienced by a unit mass ($1\unit{kg}$). Voltage is potential difference
-($E_2\ell_2-E_2\ell_2$) and so is the same as the potential difference for gravity ($g_1h_1-g_2h_2$) ($\ell$ and $h$ are
-both distances from a reference point). This potential difference is the amount of work needed to move a unit a certain
-distance. So if you want to find the work done for a specific charge/mass, just multiply the potential difference by the
+distance between them. Force is mass times acceleration and so holds both values. The gravitational field $g$ is and
+the
+electric field $E$ is about the same: they are models, fields which explain gravitational and electrostatic
+attraction.
+When something is placed into the field, they experience a force. The force they experience depends on the magnitude
+of
+the mass/charge. And so $F=Eq$. The electric field in this case is the force experienced by a unit charge
+($1\unit{C}$).
+Same way, gravitational field is the force experienced by a unit mass ($1\unit{kg}$). Voltage is potential
+difference
+($E_2\ell_2-E_2\ell_2$) and so is the same as the potential difference for gravity ($g_1h_1-g_2h_2$) ($\ell$ and $h$
+are
+both distances from a reference point). This potential difference is the amount of work needed to move a unit a
+certain
+distance. So if you want to find the work done for a specific charge/mass, just multiply the potential difference by
+the
 charge/mass, so $W=Vq$. Also remember work is force times distance. So remember that force is electric field times
-charge, so to find work you have to integrate electric field times charge over the distance. So we have $W=Vq$, where
-work is the voltage (potential difference) times the charge, and power is work over time, so $P=W/t=Vq/t$. Since $q/t$
+charge, so to find work you have to integrate electric field times charge over the distance. So we have $W=Vq$,
+where
+work is the voltage (potential difference) times the charge, and power is work over time, so $P=W/t=Vq/t$. Since
+$q/t$
 is charge over time or current, $P=IV$.
 
 Resistance is resistivity times length over area. So the higher the resistivity of the material, and the longer the
-material, the more resistance the resistor. If the resistor has high area, that resistance is reduced. Resistivity is
-the property of a material that measures how strongly it resists electrical current. Conductivity is the reciprocal of
+material, the more resistance the resistor. If the resistor has high area, that resistance is reduced. Resistivity
+is
+the property of a material that measures how strongly it resists electrical current. Conductivity is the reciprocal
+of
 electrical sensitivity.
 
 \section{Particle Classification}
 
 Four fundamental interactions or forces are the \textbf{strong force}, which holds the nucleus together, the
 electromagnetic force, which causes interactions between charges, the weak force, which causes beta decay, and the
-gravitational force, which causes interactions between states of energy. Any given particle may not be subject to all
+gravitational force, which causes interactions between states of energy. Any given particle may not be subject to
+all
 four interactions. For example, neutrinos experience only the weak and gravitational interactions.
 
 The fundamental particles may be classified into groups in several ways. First, all particles are classified into
 fermions, which obey Fermi-Dirac statistics and bosons, which obey Bose-Einstein statistics.
 
-A hadron is an subatomic particle made of two or more quarks held together by the strong interaction, and includes the
+A hadron is an subatomic particle made of two or more quarks held together by the strong interaction, and includes
+the
 proton and the neutron. Hadrons are categorized into baryons, which has an odd number of quarks (usually three), and
-mesons, which are made of usually one quark and one antiquark. Protons and neutrons are examples of baryons and pions
+mesons, which are made of usually one quark and one antiquark. Protons and neutrons are examples of baryons and
+pions
 are an example of a meson.
 
-A lepton is an elementary particle of half-integer spin that does not undergo strong interactions. Two main classes of
-leptons are charged leptons (aka muons) and neutral leptons (aka neutrinos). Unlike quarks, leptons are not subject to
+A lepton is an elementary particle of half-integer spin that does not undergo strong interactions. Two main classes
+of
+leptons are charged leptons (aka muons) and neutral leptons (aka neutrinos). Unlike quarks, leptons are not subject
+to
 the strong interaction, but are subject to the other three fundamental interactions.
 
 Particles with integer spin are bosons and particles with half-integer spin are fermions.
@@ -277,74 +496,101 @@ Particles with integer spin are bosons and particles with half-integer spin are 
 \section{Kinematics}
 Displacement
 
-When light from the Sun enters the atmosphere, it must pass through tiny molecules. Visible light has wavelengths which
-range from 400 to 700 nm. The dust particles are larger than these wavelengths. When light waves pass obstacles which
-are larger than their wavelength, then the probability that they are blocked or scattered is inversely proportional to
+When light from the Sun enters the atmosphere, it must pass through tiny molecules. Visible light has wavelengths
+which
+range from 400 to 700 nm. The dust particles are larger than these wavelengths. When light waves pass obstacles
+which
+are larger than their wavelength, then the probability that they are blocked or scattered is inversely proportional
+to
 their wavelength. The longer the wavelength, the smaller the chance that the light ray will be blocked. The longest
 wavelengths of light are the most likely to make it all the way without beign scattered or blocked, and so
 
 \section{Fluids}
-A fluid is a substance that will move under any shear stress. A shear stress is the result of a force that acts on the
+A fluid is a substance that will move under any shear stress. A shear stress is the result of a force that acts on
+the
 material from away from its center of mass. Fluids can be laminar or turbulent. \textbf{Laminar flow} is like a
 slow-moving stream where small disturbances are corrected quickly. \textbf{Turbulent flow} involves high speeds that
 lead to greater disruptions. \textbf{Surface tension} is a property of liquids called \textbf{cohesion} in which the
-same type of molecules on the surface of the fluid attract each other.\textbf{ Adhesion} is attraction between different
+same type of molecules on the surface of the fluid attract each other.\textbf{ Adhesion} is attraction between
+different
 molecules and allows liquids to perform capillary action.
 
-\textbf{Density} is the mass per volume of a substance $\rho=\frac{m}{v}$. The density of water is $1\si{\gram\per\ml}$
+\textbf{Density} is the mass per volume of a substance $\rho=\frac{m}{v}$. The density of water is
+$1\si{\gram\per\ml}$
 or $1\si{\gram\per\cm^3}$. When different fluids interact, their relative densities determines its \textbf{specific
 gravity}: $\text{SG}=\frac{\rho}{\rho_\text{water}}$.
 
-\textbf{Buoyancy} is the force that opposes gravity and pushes the object upwards. \textbf{Archimedes' principle} states
+\textbf{Buoyancy} is the force that opposes gravity and pushes the object upwards. \textbf{Archimedes' principle}
+states
 that the buoyant force is equal to the weight of the fluid displaced by the object. Meaning if an object is only
 partially floating, only the weight contained in that fluid that is immersed determines the buoyant force. Note that
 this is the weight of the fluid, and not the weight of the object. $F_B=m_\text{displaced}\times
-g=\rho_\text{fluid}\times V_\text{object} \times g$. The specific gravity tells us how much of a floating object with
+g=\rho_\text{fluid}\times V_\text{object} \times g$. The specific gravity tells us how much of a floating object
+with
 uniform density will be submerged. An object with a specific gravity of 0.7 will be 70% submerged.
 
 \textbf{Hydrostatic pressure} refers to all the different stresses on an object at rest in a fluid.
 
-\textbf{Gauge pressure} is helpful when dealing with objects submerged in fluids. $P=\rho \times g\times h$, where $h$
-is the depth below the surface. A \textbf{barometer} is used to measure pressure. Barometers are filled with a liquid of
+\textbf{Gauge pressure} is helpful when dealing with objects submerged in fluids. $P=\rho \times g\times h$, where
+$h$
+is the depth below the surface. A \textbf{barometer} is used to measure pressure. Barometers are filled with a
+liquid of
 a known density and are open at one end. Since the pressure exerted by the liquid must be equal to the atmospheric
-pressure at the open end, the height of the fluid column can be used to determine the local atmospheric pressure. In a
-simple mercury barometer, the fluid used is mercury. A height of 760 mm of mercury (mmHg) corresponds to 1 atm or 101k
+pressure at the open end, the height of the fluid column can be used to determine the local atmospheric pressure. In
+a
+simple mercury barometer, the fluid used is mercury. A height of 760 mm of mercury (mmHg) corresponds to 1 atm or
+101k
 pascals (Pa).
 
-\textbf{Pascal's law} states that the pressure applied to a liquid is transmitted evenly across all points at the same
-height $h$. This principle is well utilized in hydraulic presses. If you have a water-filled pipe with differently sized
+\textbf{Pascal's law} states that the pressure applied to a liquid is transmitted evenly across all points at the
+same
+height $h$. This principle is well utilized in hydraulic presses. If you have a water-filled pipe with differently
+sized
 openings, the pressure input on the small opening will be the same as the pressure output from the larger one. Since
-force equals pressure times area, the large opening will output a force much larger than the one you put in on the small
+force equals pressure times area, the large opening will output a force much larger than the one you put in on the
+small
 end. This allows mechanics to lift heavy cars with simple machinery. Note, however, that the work done on both sides
 remains constant. So even though the smaller piston requires less force, it requires the water to be pushed down
 farther.
 
 \[\frac{F_1}{A_1}=P=\frac{F_2}{A_2}\]
 
-Let's work through an example of a piston problem. You have a 1500kg car placed on a large piston with a radius of 4m.
-The first question is how much upward force must the large piston exert to lift the car? Well the car is pulled down by
-$F=mg=1500\si{\kilogram}\cdot 9.8\si{\meter\per\second^2}=14700\unit{kg.m/s^2}$. So 14700 N must be exerted to lift the
-car. The next part asks what is the minimum downward force that needs to be applied to a small piston if the mechanical
-advantage of the hydraulic lift system is 20. Mechanical advantage is the ratio between the force produced and the force
+Let's work through an example of a piston problem. You have a 1500kg car placed on a large piston with a radius of
+4m.
+The first question is how much upward force must the large piston exert to lift the car? Well the car is pulled down
+by
+$F=mg=1500\si{\kilogram}\cdot 9.8\si{\meter\per\second^2}=14700\unit{kg.m/s^2}$. So 14700 N must be exerted to lift
+the
+car. The next part asks what is the minimum downward force that needs to be applied to a small piston if the
+mechanical
+advantage of the hydraulic lift system is 20. Mechanical advantage is the ratio between the force produced and the
+force
 applied, $\text{MA}=\frac{F_2}{F_1}$. We know the output is 14700 N, so the force applied must be
 $14700/20=735\unit{kg.m/s^2}$. The next part asks what is the radius of the small piston. Pascal's law states that
 pressure is equal throughout the liquid system.
 \[\frac{735}{\pi r_1^2}=\frac{14700}{\pi (4)^2}\]
 \[r_1=0.89\unit{m}\]
 
-Viscosity is the measure of how much resistance a fluid has against stress. You can think of it as "internal friction"
-of a fluid, or the "thickness" of the fluid. Fluids with high viscosity flow more slowly. Poiseuille flow describes flow
+Viscosity is the measure of how much resistance a fluid has against stress. You can think of it as "internal
+friction"
+of a fluid, or the "thickness" of the fluid. Fluids with high viscosity flow more slowly. Poiseuille flow describes
+flow
 of viscous fluids in a circular pipe. Even though the fluid flowing through the pipe may have a certain average
 velocity, this does not mean the velocity is the same at all points in the cross section of the pipe. Since there is
-interaction between the fluid and the walls, the fluid at the wall of the pipe will move a little slower than the fluid
+interaction between the fluid and the walls, the fluid at the wall of the pipe will move a little slower than the
+fluid
 at the center of the pipe. This flow can be described by Poiseuille's law:
 \[Q=\frac{\pi r^4 \Delta P}{8\eta L}\]
-$Q$ is the flow rate, $r$ is the radius of the pipe, $\Delta P$ is the rate of pressure drop, $\eta$ is the viscosity of
-the fluid, and $L$ is the length of the pipe. Notice that flow will increase with the fourth power of the radius of the
+$Q$ is the flow rate, $r$ is the radius of the pipe, $\Delta P$ is the rate of pressure drop, $\eta$ is the
+viscosity of
+the fluid, and $L$ is the length of the pipe. Notice that flow will increase with the fourth power of the radius of
+the
 pipe and will decrease proportionally with the length of the pipe.
 
-For the continuity equation, remember that the total fluid must be flowing through a pipe at a constant speed, meaning
-if you push 1 liter of water into a pipe at one end, 1 liter of water must come out at the other. However, if the area
+For the continuity equation, remember that the total fluid must be flowing through a pipe at a constant speed,
+meaning
+if you push 1 liter of water into a pipe at one end, 1 liter of water must come out at the other. However, if the
+area
 of one area of the pipe is larger than the rest, the flow rate per unit area will slow down. $A\times
 v=\text{constant}$.
 
@@ -352,11 +598,14 @@ Bernoulli's equation is another form of the conservation of energy question, exc
 energy, another form of internal energy.
 \[P+\frac{1}{2}\rho v^2+\rho g h=\text{constant}\]
 In this case, $\frac{1}{2}\rho v^2$ is the kinetic energy per unit volume and $\rho g h$ is the potential energy per
-unit volume. The Venturi effect is the result of Bernoulli's equation. When a fluid passes through a constriction in a
-pipe, the fluid's velocity increases and pressure decreases. A Pitot tube is a flow measuring device. It measures the
+unit volume. The Venturi effect is the result of Bernoulli's equation. When a fluid passes through a constriction in
+a
+pipe, the fluid's velocity increases and pressure decreases. A Pitot tube is a flow measuring device. It measures
+the
 speed of flow indirectly.
 
-Let's say we have a pipe and we're given the area, speed of water, and pressure at point A but not point B. We also know
+Let's say we have a pipe and we're given the area, speed of water, and pressure at point A but not point B. We also
+know
 the difference in height, where A is $h$ meters higher than point B. How can we find the pressure at point B? Since
 we're dealing with meters, the density of water is $1000\unit{kg/m^3}$.
 
@@ -371,7 +620,8 @@ pipe (so that the speed decreases).
 \section{Light and optics}
 Light is an electromagnetic wave of any wavelength. Light waves have wavelengths going from radio waves to x-rays.
 Visible light includes waves with wavelengths of 400-700 nanometers. An electromagnetic wave is a wave composed of
-perpendicularly oscillating electric and magnetic fields. These two fields interact with each other and propagate light
+perpendicularly oscillating electric and magnetic fields. These two fields interact with each other and propagate
+light
 in the direction perpendicular to both oscillations. The speed of light, $c$, is about $3\times 10^8\unit{m/s}$ when
 traveling through a vacuum. However, this speed changes depending on what it is traveling through. Light can also be
 understood as a particle, in which a photon is a massless particle that represents a discrete unit of light. The
@@ -380,16 +630,21 @@ frequency of light.
 \[E=h\times f\]
 In this case, $E$ is the photon energy, $f$ is the frequency, and $h$ is Planck's constant, evaluated to be about
 $6.63\times 10^{-35}\unit{J.s}$. Also note that frequency and wavelength are inversely proportional, such that
-$\lambda=\frac{v}{f}$. Therefore, light with large wavelengths have a lower frequency and therefore carry less energy
+$\lambda=\frac{v}{f}$. Therefore, light with large wavelengths have a lower frequency and therefore carry less
+energy
 per photon.
 
 Constructive interference occurs when waves are in phase, and sum to make waves with a larger amplitude. Destructive
 interference occurs when waves are out of phase and cancel each other out to form a wave with zero amplitude. Thomas
-Young's double-slit experiment led scientists to believe that light behaves as a wave. In the double-slit experiment,
-light is shone through two narrow slits placed close together. After passing through the slits, the light strikes a wall
-and shows alternating bright spots and shadows, a pattern indicative of interference. The "maxima," or bright spots, are
+Young's double-slit experiment led scientists to believe that light behaves as a wave. In the double-slit
+experiment,
+light is shone through two narrow slits placed close together. After passing through the slits, the light strikes a
+wall
+and shows alternating bright spots and shadows, a pattern indicative of interference. The "maxima," or bright spots,
+are
 areas of constructive interference. The equation that determines where these maxima and minima occur is
-$d\times\sin{\theta}=m\times\lambda$. $d$ is the distance between the slits, $\theta$ is the angle from the horizontal
+$d\times\sin{\theta}=m\times\lambda$. $d$ is the distance between the slits, $\theta$ is the angle from the
+horizontal
 to the location on the wall, $m$ is which multiple, and $\lambda$ is the wavelength of the light. The assumptions in
 order to cause interference is that the light source is coherent (the waves are in-phase) and monochromatic.
 
@@ -399,47 +654,62 @@ In a single-slit experiment, light is shone through a single slit.
 
 Reflection occurs when light bounces off of a surface. Specular reflection occurs when light reflects off a smooth
 surface at a definite angle. The simplest form of specular reflection occurs when light is shone perpendicular at a
-surface. If the light is reflected at an angle, then the component of the vector of light perpendicular to the surface
-is reversed. Another way to say this is that the angle of incidence equals the angle of reflection, where these angles
-are measured as their distance from the perpendicular. Diffuse reflection occurs when light bounces off a rough surface,
+surface. If the light is reflected at an angle, then the component of the vector of light perpendicular to the
+surface
+is reversed. Another way to say this is that the angle of incidence equals the angle of reflection, where these
+angles
+are measured as their distance from the perpendicular. Diffuse reflection occurs when light bounces off a rough
+surface,
 and reflects in all directions rather than just one. This is why mirrors and pieces of paper don't reflect light the
 same.
 
-Light also undergoes refraction when it passes through different mediums. The index of refraction, $n$, is the factor by
+Light also undergoes refraction when it passes through different mediums. The index of refraction, $n$, is the
+factor by
 which the speed of light is reduced when traveling through a medium more dense than vacuum. $n=\frac{c}{v}$.
 
-Snell's law states that $n_1\sin{\theta_1}=n_2\sin\theta_2$ $\theta_1$ is the angle of incidence and $\theta_2$ is the
+Snell's law states that $n_1\sin{\theta_1}=n_2\sin\theta_2$ $\theta_1$ is the angle of incidence and $\theta_2$ is
+the
 angle of refraction, both of which are determined by the distance from the vector to the perpendicular, or normal.
 
-Even if the material is transparent, if the difference in density is too high, there can be total internal reflection. A
+Even if the material is transparent, if the difference in density is too high, there can be total internal
+reflection. A
 good example is when light goes from diamond to air. This occurs when the reflective angle becomes greater than
 $90\degree$. The critical angle is maximum incident angle before there occurs total internal reflection.
 $\theta_\text{crit}=\arcsin{\frac{n_r}{n_i}}$.
 
-In some materials, the speed of light differs depending on the wavelength of the light. The result of these different
+In some materials, the speed of light differs depending on the wavelength of the light. The result of these
+different
 refraction indices is dispersion. This is why rainbows exist and why prisms separate white light into all of the
-different colors. Because each color is traveling at a different speed. When sunlight shines through water in the air,
+different colors. Because each color is traveling at a different speed. When sunlight shines through water in the
+air,
 it separates into different colors.
 
 X-ray diffraction is a technique for determining the atomic or molecular structure of a material. X-rays are shot at
 crystals in order to determine the specific crystal structure.
 
-Thin-film diffraction is responsible for the rainbow patterns you see in oily water or in soap bubbles. Thin films are
-translucent. They reflect some light with their outer boundary and let the rest penetrate to the far boundary where they
+Thin-film diffraction is responsible for the rainbow patterns you see in oily water or in soap bubbles. Thin films
+are
+translucent. They reflect some light with their outer boundary and let the rest penetrate to the far boundary where
+they
 are reflected. Because the distance between the boundaries are so small, the pools of reflected light interfere with
 each other, causing regions of bright and dark colors.
 
-Opacity is the measure of light's ability to penetrate a given object or the ability of an object to transmit light. If
+Opacity is the measure of light's ability to penetrate a given object or the ability of an object to transmit light.
+If
 an object allows all light to pass through, it is transparent. If an object allows some light to pass through, it is
 translucent. If the object allows no light to pass through, it is opaque.
 
 Lenses are effectively transparent. Mirrors are opaque and transmit no light.
 
 Light polarization describes the organization of individual light waves. A single light wave is composed of
-perpendicularly oscillating electric and magnetic fields. But separate light waves are usually just randomly oriented.
-If they do become organized, they can become polarized. Selective absorption uses a polarizer to filter out light that
-is not polarized in a certain direction. Double refraction occurs when a material's index of refraction depends on the
-polarization of light. When randomly polarized light is transmitted through this material, it splits into differently
+perpendicularly oscillating electric and magnetic fields. But separate light waves are usually just randomly
+oriented.
+If they do become organized, they can become polarized. Selective absorption uses a polarizer to filter out light
+that
+is not polarized in a certain direction. Double refraction occurs when a material's index of refraction depends on
+the
+polarization of light. When randomly polarized light is transmitted through this material, it splits into
+differently
 polarized beams of light.
 
 Polarizing angles are angles at which all reflected light is polarized.
@@ -447,65 +717,88 @@ Polarizing angles are angles at which all reflected light is polarized.
 Optically active molecules rotate incident light. All optically active molecules are chiral, while not all chiral
 molecules are optically active.
 
-The Doppler effect describes a change in the frequency of a wave that is the result of relative motion between a wave
+The Doppler effect describes a change in the frequency of a wave that is the result of relative motion between a
+wave
 source and its observer.
 \[f'=\frac{c\pm v_o}{c\pm v_s}\times f\]
 It's important to recognize when to use plus and when to use minus. If the source and observer are moving close
 together, just make sure the frequency is increasing, and vice versa.
 
-Mirrors perfectly reflect light because they are opaque and smooth. Plane mirrors reflect all incident light the same
+Mirrors perfectly reflect light because they are opaque and smooth. Plane mirrors reflect all incident light the
+same
 way. Concave mirrors focus on incident light. Incident light converges after being reflected. The point where the
-uniform field of light converges is called the focal point. Concave mirrors do not focus light. Any incident light that
-is reflected will diverge away. Mirrors with circular curvature in two dimensions are called spherical mirrors. These
+uniform field of light converges is called the focal point. Concave mirrors do not focus light. Any incident light
+that
+is reflected will diverge away. Mirrors with circular curvature in two dimensions are called spherical mirrors.
+These
 cause convergence and divergence in the vertical direction in addition to the horizontal direction.
 
-Spherical mirrors are important because they are directly analogous to thin lenses. An object is any real-life object
-that is observed with a mirror or lens. An image is a reflection created by a mirror or the resulting distortion caused
-by a lens. The distances of the object to the lens is $o$ and the distance of the image to the lens is $i$. The distance
-from the focal point to the lens is the focal length denoted by $f$. The focal length is equal to one-half the radius of
+Spherical mirrors are important because they are directly analogous to thin lenses. An object is any real-life
+object
+that is observed with a mirror or lens. An image is a reflection created by a mirror or the resulting distortion
+caused
+by a lens. The distances of the object to the lens is $o$ and the distance of the image to the lens is $i$. The
+distance
+from the focal point to the lens is the focal length denoted by $f$. The focal length is equal to one-half the
+radius of
 curvature, or the radius of the spherical mirror.
 \[f=\frac{R}{2}\]
 Further, the focal length can be related to the image and object distances through the following equation:
 \[\frac{1}{f}=\frac{1}{i}+\frac{1}{o}\]
 
-A convex mirror makes light rays diverge, the image is upright and virtual, the image appears smaller, $f<0$, $o>0$, and
-	$i<0$. For concave mirrors, light rays converge, the image is inverted and real, the image appears larger, $f>0$,
+A convex mirror makes light rays diverge, the image is upright and virtual, the image appears smaller, $f<0$, $o>0$,
+	and
+	$i<0$. For concave mirrors, light rays converge, the image is inverted and real, the image appears larger, $f>
+		0$,
 		$o>O$, $i>0$.
 
 		Real images are formed by focus points of converging light rays and are always inverted. Concave mirrors and
-		convex lenses have real images. Virtual images are formed by diverging light rays and are not inverted. Convex
+		convex lenses have real images. Virtual images are formed by diverging light rays and are not inverted.
+		Convex
 		mirrors and concave lenses have virtual images.
 
 		\section{Atomic physics}
-		The plum pudding model of the atom was first proposed by J. J. Thomson in 1904 soon after the discovery of the
+		The plum pudding model of the atom was first proposed by J. J. Thomson in 1904 soon after the discovery of
+		the
 		electron but before the discovery of the atomic nucleus. The model tried to explain two properties of atoms:
 		that electrons are negatively charge particles and that atoms have no net electric charge. The plum pudding
 		model has electrons surrounded by a volume of positive charge, like negatively charged "plums" embedded in a
-		positively charged "pudding." Thomson was a British physicist and Nobel Laureate in Physics credited with the
-		discovery of the electron, the first subatomic particle to be discovered. In 1897 he showed that cathode rays
+		positively charged "pudding." Thomson was a British physicist and Nobel Laureate in Physics credited with
+		the
+		discovery of the electron, the first subatomic particle to be discovered. In 1897 he showed that cathode
+		rays
 		were composed of previously unknown negatively charged particles.
 
 		The Rutherford model was devised by Ernest Rutherford to describe an atom. Rutherford directed the
 		Geiger-Marsden experiment in 1909, which suggested that J. J. Thomson's plum pudding model of the atom was
 		incorrect. Rutherford's new model featured a relatively high central charge concentrated into a very small
-		volume in comparison to the rest of the atom and with this central volume also containing the bulk of the atomic
+		volume in comparison to the rest of the atom and with this central volume also containing the bulk of the
+		atomic
 		mass of the atom, known as the "nucleus."
-		Rutherford's gold foil experiment used alpha particles emitted by a radioactive element as probes. Most of the
-		beam went through the gold foil, but a few were deflected. The Rutherford model served to concentrate a great
+		Rutherford's gold foil experiment used alpha particles emitted by a radioactive element as probes. Most of
+		the
+		beam went through the gold foil, but a few were deflected. The Rutherford model served to concentrate a
+		great
 		deal of atom's charge and mass to a very small core, but didn't attribute any structure to the remaining
 		electrons and remaining mass.
 
 		In particle physics, annihilation is the process that occurs when a subatomic particle collides with its
-		respective antiparticle to produce other particles, such as an electron colliding with a positron to produce two
-		photons. The total energy and momentum of the initial pair are conserved in the process and distributed among a
+		respective antiparticle to produce other particles, such as an electron colliding with a positron to produce
+		two
+		photons. The total energy and momentum of the initial pair are conserved in the process and distributed
+		among a
 		set of other particles in the final state. Antiparticles have exactly opposite additive quantum numbers from
-		particles, so the sums of all quantum numbers of such an original pair are zero. Hence, any set of particles may
+		particles, so the sums of all quantum numbers of such an original pair are zero. Hence, any set of particles
+		may
 		be produced whose total quantum numbers are also zero as long as conservation of energy and conservation of
 		momentum are obeyed.
 
-		The force carrier particle that transmits the electromagnetic interaction is the photon. W and Z bosons are the
-		elementary particles that mediate the weak interaction. The graviton is the hypothetical quantum of gravity, an
-		elementary particle that mediates the force of gravitational interaction. The gluon is an elementary particle
+		The force carrier particle that transmits the electromagnetic interaction is the photon. W and Z bosons are
+		the
+		elementary particles that mediate the weak interaction. The graviton is the hypothetical quantum of gravity,
+		an
+		elementary particle that mediates the force of gravitational interaction. The gluon is an elementary
+		particle
 		that acts as the exchange particle for the strong force between quarks.
 
 		\section{Nuclear physics}
@@ -513,12 +806,15 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 		\[E=-\frac{13.6\unit{eV}}{n^2}\]
 		The unit $\unit{eV}$ is electronvolt and is the measure of an amount of kinetic energy gained by a single
 		electron accelerating from rest through an electric potential difference of one volt in vacuum. It is
-		numerically equivalent to the value of the charge of an electron in coulombs, except in joules. -13.6 eV is the
-		energy of an electron in the ground state of a hydrogen atom. Notice that as you increase the energy level $n$,
+		numerically equivalent to the value of the charge of an electron in coulombs, except in joules. -13.6 eV is
+		the
+		energy of an electron in the ground state of a hydrogen atom. Notice that as you increase the energy level
+		$n$,
 		the magnitude of energy decreases, but this is in fact increasing since we're talking about negative energy.
 		When E becomes zero, the electron dissociates.
 
-		Electromagnetic radiation can be absorbed or emitted by the electrons. Higher frequency light has more energy
+		Electromagnetic radiation can be absorbed or emitted by the electrons. Higher frequency light has more
+		energy
 		than lower frequency light.
 		\[E=hv=h\frac{c}{\lambda}\]
 		Here $h$ is Planck's constant and $v$ is the frequency of light. $c$ is the speed of light in a vacuum and
@@ -528,25 +824,33 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 		\[\frac{1}{\lambda}=R_H\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right)\]
 		Here $R_H$ is the Rydberg constant.
 
-		Nucleons are held together very tightly by the strong nuclear force. The energy required to split them all apart
-		is the binding energy of the atom. This relates to Einstein's $E=mc^2$, where it shows that any small mass is
+		Nucleons are held together very tightly by the strong nuclear force. The energy required to split them all
+		apart
+		is the binding energy of the atom. This relates to Einstein's $E=mc^2$, where it shows that any small mass
+		is
 		multipled by the square of the speed of light, so the energy required is huge.
 
 		There is a difference between the experimental mass of an atom that is measured and the predicted mass that
-		results by adding individual masses of nucleons together. The leftover mass in this equation accounts for the
-		mass defect. The experimental mass is always less than predicted because some mass is absorbed by the immense
+		results by adding individual masses of nucleons together. The leftover mass in this equation accounts for
+		the
+		mass defect. The experimental mass is always less than predicted because some mass is absorbed by the
+		immense
 		energy of the bonds between nucleons.
 		\[m_D=m_p-m_e\]\
 		\[m_D=\frac{E}{c^2}\]
 
-		In addition to the strong nuclear force, there is a weak nuclear force that serves to hold subatomic particles
+		In addition to the strong nuclear force, there is a weak nuclear force that serves to hold subatomic
+		particles
 		together.
 
-		Radioactive decay occurs when the nucleus splits off particles or energy in order to destabilize itself. For all
-		types, mass and charge are conserved during the decay. Therefore, the sum of the atomic numbers and mass on each
+		Radioactive decay occurs when the nucleus splits off particles or energy in order to destabilize itself. For
+		all
+		types, mass and charge are conserved during the decay. Therefore, the sum of the atomic numbers and mass on
+		each
 		side must be the same.
 
-		The first type of decay is alpha decay, where an atom emits an alpha particle at low speed. An alpha particle is
+		The first type of decay is alpha decay, where an atom emits an alpha particle at low speed. An alpha
+		particle is
 		two protons and two neutrons (essentially the nucleus of a helium atom). Alpha decay is the lowest energy
 		radioactive decay. The emitted particles move relatively slowly and can be stopped by something as thin as a
 		piece of paper.
@@ -554,7 +858,8 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 		\[\ce{^A_Z X \rightarrow ^{A-4}_{Z-2} Y + ^4_2 \alpha}\]
 
 		Beta decay shoots off a beta particle, which is a fast-moving electron or positron. Positron emission and
-		electron emission are also referred to as $\beta^+$ and $\beta^-$ decay. When an electron is emitted from the
+		electron emission are also referred to as $\beta^+$ and $\beta^-$ decay. When an electron is emitted from
+		the
 		nucleus, it is from a neutron which turns into a proton (or for a positron the other way around). For this
 		reason, $\beta^-$ decay increases the atomic number but doesn't change the atomic mass. Beta decay is higher
 		energy radiation than alpha; beta particles can pass through paper but not aluminum foil.
@@ -562,12 +867,15 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 		\[\ce{^A_Z X \rightarrow ^A_{Z+1} Y + ^0_{-1}\beta}\]
 
 		The last type of decay is gamma decay, the highest energy radioactive decay. No particles are ejected, but
-		high-energy gamma photons are ejected. The composition of the atom does not change but enters a more relaxed,
+		high-energy gamma photons are ejected. The composition of the atom does not change but enters a more
+		relaxed,
 		low-energy state. You would need a lead barrier to stop gamma decay. Gamma decay can destroy DNA and lead to
 		irreversible genetic damage.
 
-		A sample's rate of decay depends on the stability of the element's nucleus and how much of the sample is left.
-		All elements with more than 82 protons (anything "heavier" than lead) will eventually decay. Unstable isotopes,
+		A sample's rate of decay depends on the stability of the element's nucleus and how much of the sample is
+		left.
+		All elements with more than 82 protons (anything "heavier" than lead) will eventually decay. Unstable
+		isotopes,
 		such as oxygen O-19 isotope, will also decay. The instability of a certain element or isotope is quantified
 		through its half-life.
 
@@ -578,7 +886,8 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 
 		\[N=(N_0)(\frac{1}{2})^\frac{t}{\tau}\]
 
-		$t$ is how long it's been since the decay started, $\tau$ is the length of the half-life. So if you have gone 10
+		$t$ is how long it's been since the decay started, $\tau$ is the length of the half-life. So if you have
+		gone 10
 		days and the half life is 1 day, then the substance will have cut itself in half 10 times.
 
 		\[N=(N_0)(e^{\lambda t})\]
@@ -588,21 +897,28 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 		\section{Thermodynamics}
 		\textbf{Heat }is not the same as temperature. Heat is the energy put into or removed from a system, whereas
 		temperature is the measure of average energy due to motion of particles in an object. During a phase change,
-		heat is being put or removed but temperature remains constant. \textbf{Heat capacity} is the heat required to
-		raise the temperature of an object. \textbf{Specific heat} is the heat capacity for one unit of mass. The heat
-		of transformation, or latent heat, is the heat needed to generate a phase change. The heat of transformation can
-		be a heat of fusion (solid to liquid) or heat of vaporization (liquid to gas). Heat can be transferred through
+		heat is being put or removed but temperature remains constant. \textbf{Heat capacity} is the heat required
+		to
+		raise the temperature of an object. \textbf{Specific heat} is the heat capacity for one unit of mass. The
+		heat
+		of transformation, or latent heat, is the heat needed to generate a phase change. The heat of transformation
+		can
+		be a heat of fusion (solid to liquid) or heat of vaporization (liquid to gas). Heat can be transferred
+		through
 		conduction (direct touch), convection (through motion of a liquid or gas over another object), or radiation
 		(through electromagnetic waves).
 
 		\textbf{First law of thermodynamics} states that $\Delta U = Q-W$. When you add heat (Q) to the system, you
 		increase potential energy. When the system does work on the surroundings, you lose potential energy.
 
-		The \textbf{second law of thermodynamics} states that the total entropy of a system cannot decrease over time.
+		The \textbf{second law of thermodynamics} states that the total entropy of a system cannot decrease over
+		time.
 		Entropy can be described by $\Delta S = \frac{Q_{\text{rev}}}{T}$. As the heat in a system increases, the
 		entropy increases. Entropy can also be described by $\Delta S=k\times\ln{W}$. Here, $W$ represents the total
-		number of possible microstates the system can adapt, which are the combination of all possible orientations of
-		particles within a system. The more microstates are possible, the higher the entropy. $k$ here is the Boltzmann
+		number of possible microstates the system can adapt, which are the combination of all possible orientations
+		of
+		particles within a system. The more microstates are possible, the higher the entropy. $k$ here is the
+		Boltzmann
 		constant.
 
 		The \textbf{third law of thermodynamics }states that the entropy of a pure crystalline substance at absolute
@@ -612,33 +928,43 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 		temperature, volume, Gibbs' free energy, enthalpy, entropy, etc. Path functions depend on the path taken.
 		Examples are heat and work.
 
-		Open systems exchange both matter and energy with the environment. Closed systems can exchange energy, but not
+		Open systems exchange both matter and energy with the environment. Closed systems can exchange energy, but
+		not
 		matter. Isolated systems exchange neither energy nor matter.
 
-		\textbf{Isothermal} processes have constant temperature, and so $\Delta U=0$. \textbf{Adiabatic} processes do
-		not exchange heat, so $Q=0$. \textbf{Isovolumetric} processes do not change volume, so work cannot be done and
+		\textbf{Isothermal} processes have constant temperature, and so $\Delta U=0$. \textbf{Adiabatic} processes
+		do
+		not exchange heat, so $Q=0$. \textbf{Isovolumetric} processes do not change volume, so work cannot be done
+		and
 		so $W=0$. \textbf{Isobaric} processes do not change pressure. This can be investigated in a\textbf{ P-V
-		diagram}, where pressure is on the y-axis and volume is on the x-axis. The work done is the area under the curve
+		diagram}, where pressure is on the y-axis and volume is on the x-axis. The work done is the area under the
+		curve
 		for an open-loop process or the area inside the loop for a closed-loop process.
 
 		\section{Review}
 
 		Momentum
 
-		Momentum is mass with quantity. It refers to the quantity of motion that an object has. All objects have mass,
-		and so if the object is moving, then it has momentum. The amount of momentum depends on how much stuff is moving
-		and how fast it's moving. Momentum is a vector quantity, so it depends on the direction of the velocity vector.
+		Momentum is mass with quantity. It refers to the quantity of motion that an object has. All objects have
+		mass,
+		and so if the object is moving, then it has momentum. The amount of momentum depends on how much stuff is
+		moving
+		and how fast it's moving. Momentum is a vector quantity, so it depends on the direction of the velocity
+		vector.
 		\[p=mv\]
 		Newton's second law of motion states that the rate of change of a body's momentum is equal to the net force
-		acting on it. You can remove the momentum from an object if you apply a force in the opposite direction of the
-		movement. This is a change in momentum, called the impulse, which is equal to the force applied over a certain
+		acting on it. You can remove the momentum from an object if you apply a force in the opposite direction of
+		the
+		movement. This is a change in momentum, called the impulse, which is equal to the force applied over a
+		certain
 		amount of time.
 		\[F=ma\]
 		\[F=m\frac{\Delta v}{\Delta t}\]
 		\[F\Delta t= m\Delta v\]
 
 		An elastic collision is one in which kinetic energy and momentum is conserved. Inelastic collisions conserve
-		momentum but not energy. A perfectly inelastic collision is one in which the two objects move together after the
+		momentum but not energy. A perfectly inelastic collision is one in which the two objects move together after
+		the
 		collision. Momentum is conserved but energy is lost. An explosion is an inelastic collision in reverse; one
 		object becomes multiple objects. Momentum is still conserved but energy is gained.
 
@@ -662,7 +988,8 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 
 		\section{here}
 		\begin{enumerate}
-		\item What is the unit for linear momentum in the International System (SI) of units? $\boxed{1\unit{kg.m/s}}$
+		\item What is the unit for linear momentum in the International System (SI) of units?
+		$\boxed{1\unit{kg.m/s}}$
 		\item What is the unit for pressure in the International System (SI) of units? $\boxed{1\unit{Pa}}$
 		\item What is the unit of charge in the International System (SI) of units? $\boxed{1\unit{C}}$
 		\item What is the unit for work and energy in the International System (SI) of units? $\boxed{1\unit{J}}$
@@ -673,7 +1000,8 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 		\item What is the unit for mass in the International System (SI) of units? $\boxed{1\unit{kg}}$
 		\item What is the unit for frequency in the International System (SI) of units? $\boxed{1\unit{Hz}}$
 		\item What is the unit for amplitude in the International System (SI) of units? $\boxed{1\unit{m}}$
-		\item A ray of light travels from an air-to-liquid interface at an angle of 30.0\degree, angle of refraction for
+		\item A ray of light travels from an air-to-liquid interface at an angle of 30.0\degree, angle of refraction
+		for
 		the liquid is 19.0\degree. What is the speed of light in the liquid?
 
 		Snell's law:
@@ -684,10 +1012,12 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 		\[n_2=1.536\]
 		\[v=\frac{c}{n_2}=\frac{3.0\times10^8}{1.536}=\boxed{1.95\times10^8\unit{m/s}}\]
 
-		\item Find force (magnitude and direction) for $Q_3=-6\unit{mC}$, if $Q_3$ is at the middle point between $Q_1$
+		\item Find force (magnitude and direction) for $Q_3=-6\unit{mC}$, if $Q_3$ is at the middle point between
+		$Q_1$
 		and $Q2$ charges. Distance between the $Q_1=4\unit{mC}$ and $Q_2=5\unit{mC}$ charges is $10\unit{m}$.
 
-		Coulomb's law states that the magnitude of the force between two point charges is directly proportional to the
+		Coulomb's law states that the magnitude of the force between two point charges is directly proportional to
+		the
 		magnitude of the charges and inversely proportional to the square of the distance between them:
 		\[F_\text{left}=k\frac{(Q_1)(Q_2)}{r^2}=(8.99)\frac{(0.004)(-0.006)}{5^2}=-8.6304\times10^{-6}\]
 		\[F_\text{right}=k\frac{(Q_2)(Q_3)}{r^2}=(8.99)\frac{(-0.006)(0.005)}{5^2}=-1.0788\times10^{-5}\]
@@ -700,7 +1030,8 @@ A convex mirror makes light rays diverge, the image is upright and virtual, the 
 		\[\frac{1}{f}=1.375\]
 		\[f=0.73\unit{m}\]
 
-		\item The equivalent resistance of two resistors is the sum. So the equivalent resistance across the 20.0 and
+		\item The equivalent resistance of two resistors is the sum. So the equivalent resistance across the 20.0
+		and
 		30.0\ohm resistors is 50.0\ohm. There is a voltage across this series of 12 V. Due to Ohm's law, the current
 		across the 20\ohm resistor is $i=V/R=12/50=0.24\unit{A}$.
 
