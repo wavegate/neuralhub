@@ -203,41 +203,57 @@
 <h2>Logic</h2>-->
 <div class="first">Logic</div><a class="anchor" id="logic"></a>
 <div class="second">Propositional logic</div>
+<p>Propositional, or zeroth order, logic is the area of logic that deals with propositions. A proposition is a statement
+	that is either true or
+	false, but not both. The proposition \(P\) is a specific proposition; for example, "I am a human". A
+	lower case \(p\) indicates a generalization of any proposition.</p>
+<p>Law of excluded middle: for every proposition \(p\), either \(p\) is true or \(p\) is false.</p>
+<p>Law of contradiction: for every proposition \(p\), it is not the case that \(p\) is both true and false.</p>
+<p>Computer bit operations correspond to logical operations of Boolean variables, which are variables whose value is
+	either true or false.</p>
+<h4>Basic logical operators</h4>
+<p>\(\neg p\) or \(\sim p\) or \(!p\) indicates negation, ie. "I am NOT a human."</p>
+<p>Connections between propositions are called connectives. Propositions connected by connectives form compound
+	propositions.</p>
+<p>\(p \land q\) or \(p \cdot q\) or \(p \& q\) indicates logical conjunction, ie. "I am a human" AND "I eat
+	cheese".</p>
+<p>\(p \lor q\) or \(p + q\) or \(p \parallel q\) indicates logical disjunction (inclusive "or"), ie. "I am a human" OR
+	"I eat cheese" OR both.</p>
+<p>Note that the English "or" has two meanings. The exclusive "or" means that exactly one of two propositions is true.
+	In math, however, when we say "or" we usually are referring to the inclusive "or" which holds true if either is true
+	or if both are true.</p>
+<p>\(p \oplus q\) or \(p \veebar q\) or \(p \not\equiv q\) indicates the exclusive "or", ie. "I am a human" OR "I eat
+	cheese" but not both.</p>
+<p>\(p \implies q\) or \(p \to q\) or \(p \supset q\) indicates implication or material conditional or material
+	implication, ie. "If I am a human, then I eat cheese" or "I am a human implies I eat cheese". The
+	proposition to the left of the arrow is called the antecedent, and the proposition to the right is called the
+	consequent.</p>
+<p>\(p \iff q\) or \(p \equiv q\) or \(p \leftrightarrow q\) indicates material equivalence or the biconditional, or
+	that the truth value of \(p\) and \(q\) are the same. If both are true,
+	then the biconditional is true. If both propositions are false, then the biconditional is also true, ie. "I am a
+	human if and only if I eat cheese". The opposite of the biconditional is the exclusive
+	"or", since the biconditional is only true if the propositions are the same, and the exclusive "or" is only true if
+	the propositions are different.</p>
+<p>A compound proposition that is always true is a tautology. A compound proposition that is always false is a
+	contradiction. A compound proposition that is neither a tautology nor a contradiction is a contingency.</p>
+<p>Compound propositions that always have the same truth value are called logically equivalent (denoted by \(\equiv\)).
+</p>
+<h4>Laws of propositional logic</h4>
+<p>Identity laws:\[p \land T \equiv p\]\[p \lor F \equiv p\]</p>
+<p>Domination laws:\[p \lor T \equiv T\]\[p \land F \equiv F\]</p>
+<p>Idempotent laws:\[p \lor p \equiv p\]\[p \land p \equiv p\]</p>
+<p>Double negation law:\[\neg(\neg p)\equiv p\]</p>
+<p>Commutative laws:\[p \lor q \equiv q \lor p\]\[p \land q \equiv q \land p\]</p>
+<p>Associative laws:\[(p \lor q) \lor r \equiv p \lor (q \lor r)\]\[(p \land q) \land r \equiv p \land (q \land r)\]</p>
+<p>Distributive laws:\[(p \lor q) \land r \equiv (p \lor q) \land (p \lor r)\]\[(p \land q) \lor r \equiv (p \land q)
+	\lor (p \land r)\]</p>
+<p>De Morgan's laws:\[\neg(p \land q) \equiv \neg p \lor \neg q\]\[\neg(p \lor q) \equiv \neg p \land \neg q\]</p>
 <h4>Axioms</h4>
 <p>An axiom refers to both "logical axioms," which are statements taken to be true within the system of logic they
 	define and are often shown in symbolic form, as well as non-logical axioms, which are actually substantive
 	assertions about the elements of the domain of a specific mathematical theory. When used in the latter sense,
 	"axiom", "postulate", and "assumption" may be used interchangeably.</p>
 <div class="second">Common mathematical symbols</div>
-<p>Propositional logic, or zeroth order logic, is a language for math. The first set of symbols we need to learn is
-	about propositional logic. A proposition in this case is a statement which can take on two values: true or
-	false.
-	The proposition P is a specific proposition, for example, "I am a human," which can be true or false. If I use a
-	lower case p, then this a generalization of any proposition, which is useful when we talk about propositions in
-	general. The negation of a proposition, eg. "I am NOT a human" is symbolized as ¬P. Now, let's talk about
-	connectives. In English, you have conjunctions, typically things like "and", "or", "but", etc. In math, we call
-	these connections "connectives", and the word "conjunction" has a specific meaning. The word "conjunction" means
-	"and" is translated into the symbol ∧. So if we have two propositions, eg. "I am a human" and "I am fat", then P
-	∧ Q
-	means "I am a human AND I am fat," indicating that both propositions have the value of true. Now, flip that
-	symbol
-	upside down, and we get a disjunction, which means "or." P ∨ Q in this case will mean "I am a human OR I am
-	fat."
-	However, the English "or" has two meanings. The exclusive "or" means that exactly one of two propositions is
-	true.
-	The inclusive "or" means AT LEAST one of the discussed propositions is true. In math, when we say "or" we're
-	usually
-	referring to the INCLUSIVE "or", which means P ∨ Q holds true if P is true, Q is true, or if P and Q are both
-	true.
-	After disjunction, we have the material conditional, which is written P → Q. This means "if P then Q". The
-	proposition to the left of the arrow is called the antecedent, and the proposition to the right is called the
-	consequent. So in my example, P → Q means "If I am a human, then I am fat." The biconditional, written P ↔ Q,
-	means
-	that the truth value of P and Q are the same. Which means that if both P and Q are true, then P ↔ Q is true, and
-	if
-	both P and Q are false, then P ↔ Q is also true. The opposite of this is the aforementioned exclusive or,
-	written P
-	⊕ Q, which is only true when P and Q are different.</p>
 <div class="second">Propositional variables</div>
 <div class="second">Logical connectives</div>
 <div class="second">Truth tables</div>
@@ -252,29 +268,51 @@
 <div class="second">Proof by contrapositive</div>
 <div class="second">Proof by contradiction</div>
 <div class="second">Tautology</div>
-<div class="second">First order logic</div>
-<li>In first order logic, or predicate logic, we extend propositional logic slightly. Instead of statements having a
-	truth value, we now divide them into two parts: the subject and the predicate. The predicate is a statement that
-	has
-	a variable which does not have a truth value until that variable is defined. The subject is that variable that
-	needs
-	to be defined. So an example is, "I am x meters tall." This statement does not have a truth value until I define
-	what x is.</li>
-<p>Now, I want to reinforce that these comparisons... propositional logic and first-order logic, are about facts.
-	Propositional logic only discusses facts, facts that can be true or false.. in other words, they can only be 0
+<div class="second">Predicate logic</div>
+<p>In predicate, or first-order logic, we extend propositional logic slightly. Instead of statements having a
+	truth value, we now divide them into two parts: the variable (or subject) and the predicate. A predicate is a verb
+	phrase template
+	that describes some subject. Combined, the subject and predicate form a statement that does not have a truth value
+	until that subject is defined. So an example is, "\(x\) is red." This statement does not have a truth
+	value
+	until the predicate "is red" (let's call it \(R\)) is given a variable \(x\), and we can represent the statement as
+	\(R(x)\).
+</p>
+<p>Quantifiers allow statements about entire collections of objects rather than having to enumerate the objects by name.
+</p>
+<p>The universal quantifier or "for all" prefix is symbolized \(\forall\). For example, \(\forall x \text{Tiger}(x)
+	\to \text{Mammal}(x)\) means all tigers are mammals.</p>
+<p>The existential quantifier or "there exists" prefix is symbolized \(\exists\). For example, \(\exists x
+	\text{Tiger}(x) \to
+	\text{Man-eater}(x)\) means there exists at least one tiger that is a man-eater.</p>
+<p>A variable \(x\) that is introduced into a logical expression by a quantifier is bound to the closest enclosing
+	quantifier. For example, \(\exists x (\text{Cat}(x) \land \forall x (\text{Black}(x)))\) implies that cats exist and
+	everything is black. A variable is said to be a free variable if it is not bound to a quantifier.</p>
+<p>\(\mathbb{D}\) is the domain of discourse, often simply called the domain or the universe, the set over which
+	individual elements may be quantified.</p>
+<p>Now, I want to reinforce that these comparisons... propositional logic and first-order logic, are about
+	facts.
+	Propositional logic only discusses facts, facts that can be true or false.. in other words, they can only be
+	0
 	or 1.
-	First-order logic adds on this objects and relations. Meaning one fact can be true for multiple objects, and an
-	element can have a relationship to another object. There are other languages used to discuss the world around
+	First-order logic adds on this objects and relations. Meaning one fact can be true for multiple objects, and
+	an
+	element can have a relationship to another object. There are other languages used to discuss the world
+	around
 	us,
 	which are probability theory and fuzzy logic, which are studies into uncertainty. In probability, there is a
 	truth
-	value but we look at a chance that truth value is correct. In fuzzy logic, the language we use is uncertain, for
-	example, if you state, "I am tall." It is difficult to assign a truth value to this statement because it depends
+	value but we look at a chance that truth value is correct. In fuzzy logic, the language we use is uncertain,
+	for
+	example, if you state, "I am tall." It is difficult to assign a truth value to this statement because it
+	depends
 	on
 	what height we consider tall to be, and so fuzzy logic investigates these scenarios.</p>
 <p>The converse of a categorical or implicational statement is the result of reversing its two constituent
 	statements.
-	For the implication P->Q, the converse is Q->P. The truth of the converse is generally independent from that of
+	For the implication \(P \to Q\), the converse is \(Q \to P\). The truth of the converse is generally independent
+	from that
+	of
 	the
 	original statement.</p>
 <div class="second">Second order logic</div>
@@ -321,6 +359,12 @@ pure
 <div class="second">Negation normal form</div>
 <div class="second">Equivalence and equisatisfiability</div>
 <div class="first">Language of mathematics</div><a class="anchor" id="language"></a>
+<h4>Commutative, associative</h4>
+<p>Commutative means you can write the same thing forwards and backwards (\(a+b=b+a\)), associative means you
+	can
+	group
+	things in
+	different combinations (\((a+b)+c=a+(b+c)\)).</p>
 +, -, x, division, = sign
 <div class="second">Variables</div>
 subscript
@@ -329,6 +373,39 @@ subscript
 superscript, degree symbol, brackets, percentage, square root, 'x bar', recurring decimal sign (dot over digit)
 
 <div class="first">Reasoning and proving</div><a class="anchor" id="reasoning"></a>
+<p>A proof is an argument that rigorously establishes the truth of a statement. Statements used in a proof include
+	axioms and postulates that are essentially the underlying assumptions about mathematical structures, the hypotheses
+	of the theorem to be proved, and previously proved theorems. A theorem is a statement that can be shown to be true.
+	A lemma is a simple theorem used in the proof of other theorems. A corollary is a proposition that can be
+	established directly from a theorem that has been proved. A conjecture is a statement whose truth value is unknown.
+	When a conjecture is proved, the conjecture becomes a theorem.</p>
+<p>A direct proof is a technique to establish the implication \(p \to q\) is true by showing that \(q\) must be true
+	when \(p\) is true.</p>
+<p>For example, to show that if \(n\) is odd then \(n^2-1\) is even, assume \(n\) is odd. In other words, \(n=2k+1\) for
+	some integer \(k\). \(\therefore n^2=(2k+1)^2=4k^2+4k+1\). Since the first two terms on the Right Hand Side (RHS)
+	are
+	even numbers irrespective of the value of \(k\), \(n^2\), the Left Hand Side (LHS) must be an odd number. Thus,
+	\(n^2-1\) is even.</p>
+<p>A proposition \(p\) is true by contradiction if proved based on the truth of the implication \(\neg p \to q\) where
+	\(q\) is a contradiction.</p>
+<p>For example, to show that the sum of \(2x+1\) and \(2y-1\) is even, assume that the sum of \(2x+1\) and \(2y-1\) is
+	odd. In other words, \(2(x+y)\), which is a multiple of \(2\), is odd. This is a contradiction. Hence, the sum of
+	\(2x+1\) and \(2y-1\) is even.</p>
+<p>An inference rule is a pattern establishing that if a set of premises are all true, then it can be deduced that a
+	certain conclusion statement is true.</p>
+<p>Proof by induction is done in two phases. First, the proposition is established to be true for a base case—typically
+	for the positive integer \(1\). In the second phase, it is established that if the proposition holds for an
+	arbitrary positive integer \(k\), then it must also hold for the next greater integer \(k+1\). In other words, the
+	truth of an infinite sequence of propositions \(P(n), \forall n \in [1...\infty]\) is established if \(P(1)\) is
+	true, and secondly, \(\forall k \in [2...n]\) if \(P(k) \to P(k+1)\).</p>
+<p>For example, let's prove the proposition "The sum of the first \(n\) positive odd integers \(P(n)\) is \(n^2\). The
+	basis step: the proposition is true for \(n=1\) as \(P(1)=1^2=1\). The basis step is complete. Inductive step: the
+	induction hypothesis (IH) is that the proposition is true for \(n=k\), \(k\) being an arbitrary positive integer
+	\(k\). \(\therefore
+	1+3+5+...+(2k-1)=k^2\).\[P(k+1)=1+3+5+...+(2k-1)+(2k+1)\]\[=P(k)+(2k+1)\]\[=k^2+(2k+1)\]\[=k^2+2k+1\]\[=(k+1)^2\]Thus,
+	it is shown that if the proposition is true for \(n=k\), then it is also true for \(n=k+1\). The basis step together
+	iwth the inductive step of the proof show that \(P(1)\) is true and the condition statement \(P(k)\to P(k+1)\) is
+	true for all positive integers \(k\). Hence, the proposition is proved.</p>
 <p>Let's talk about writing proofs for a sec. I'm no mathematician so this is what I garner from a quick google
 	search
 	of how to write proofs by Eugenia Cheng. This is because I was dealing with a linear algebra textbook which
@@ -343,83 +420,157 @@ superscript, degree symbol, brackets, percentage, square root, 'x bar', recurrin
 	assuming
 	to be true, including definitions of what we're talking about. The middle has statements following logically
 	from
-	what came before, adn the end is what we're trying to prove. We are given the beginning and the end, but we have
+	what came before, and the end is what we're trying to prove. We are given the beginning and the end, but we
+	have
 	to
-	fill out the middle. The difficulty in writing a proof is that the order in which we write it is usually not the
-	order in which we thought it up, and we often think up of a proof backwards. So the first mistake to avoid is
+	fill out the middle. The difficulty in writing a proof is that the order in which we write it is usually not
+	the
+	order in which we thought it up, and we often think up of a proof backwards. So the first mistake to avoid
+	is
 	writing the proof in the order in which you thought of it.</p>
-<p>Some examples of things we try to prove are \(x=y\), \(x\implies y\) (x implies y), \(x\iff y\) (x is true if and
-	only if y is true), x is purple, \(\forall x\space p(x)\) is true (all animals of a certain kind x behave in a
+<p>Some examples of things we try to prove are \(x=y\), \(x\implies y\) (x implies y), \(x\iff y\) (x is true if
+	and
+	only if y is true), x is purple, \(\forall x\space p(x)\) is true (all animals of a certain kind x behave in
+	a
 	certain way
-	p(x)), \(\exists x\) (there exists x) such that p(x) is true. Or "suppose that a, b, c, and d are true. Then e
+	p(x)), \(\exists x\) (there exists x) such that p(x) is true. Or "suppose that a, b, c, and d are true. Then
+	e
 	is
 	true."</p>
-<p>For the general shape of a proof, the beginning will discuss axioms, definitions, and state the given. The middle
-	will have a series of equations alongside the axioms, definitions, and givens that are used to be able to make
+<p>For the general shape of a proof, the beginning will discuss axioms, definitions, and state the given. The
+	middle
+	will have a series of equations alongside the axioms, definitions, and givens that are used to be able to
+	make
 	those
-	equations valid. Then, at the end you restate what you were trying to prove. The three dots in the shape of a
-	triangle means "therefore", and Q.E.D. means "quod erat demonstrandum" or "which was to be demonstrated" and is
+	equations valid. Then, at the end you restate what you were trying to prove. The three dots in the shape of
+	a
+	triangle means "therefore", and Q.E.D. means "quod erat demonstrandum" or "which was to be demonstrated" and
+	is
 	placed at the end of proofs to indicate the proof is complete.</p>
-<p>It's important to remember that you want to end with what you're trying to prove, and not start with it and go
-	backwards. This is an easier mistake to make than first meets the eye. It's also important to not jump over too
+<p>It's important to remember that you want to end with what you're trying to prove, and not start with it and
+	go
+	backwards. This is an easier mistake to make than first meets the eye. It's also important to not jump over
+	too
 	many
 	steps without explaining what you're doing. Of course, you don't want to use logic that is just not correct
 	(I'll
-	try to figure out false logic later). Two classic forms of incorrect logic is negating a statement incorrectly
+	try to figure out false logic later). Two classic forms of incorrect logic is negating a statement
+	incorrectly
 	and
 	proving the converse of something instead of the thing itself. Negation is taught alongside
 	propositional/first-order logic. If in doubt, justify more than less.</p>
-<p>She gives some tips on how to write a proof practically. She mentions that writing a proof is hard and is more
+<p>She gives some tips on how to write a proof practically. She mentions that writing a proof is hard and is
+	more
 	like
 	being a poet, and a lot of the time you just need to sit down and stare at what you're trying to prove for a
 	long
-	time. But she suggests some tips. Write out the beginning very carefully in mathematical language. Write out the
+	time. But she suggests some tips. Write out the beginning very carefully in mathematical language. Write out
+	the
 	end
-	very carefully in mathematical language. Then try and manipulate both the beginning and the end to try and make
+	very carefully in mathematical language. Then try and manipulate both the beginning and the end to try and
+	make
 	them
-	look like one another. Take big leaps to see what happens, then make big leaps into smaller leaps afterwards.
+	look like one another. Take big leaps to see what happens, then make big leaps into smaller leaps
+	afterwards.
 	See if
-	the situation reminds you of any situations you've ever seen before. I like these tips because they are pretty
+	the situation reminds you of any situations you've ever seen before. I like these tips because they are
+	pretty
 	much
 	how I think people should deal with any problem in life logically. Note where you're starting off from, and
 	where
 	you want to go, then work both ways and see if you can connect the dots!</p>
-<p>One method for proofs, which may be familiar for those who work in programming as well, is proof by induction. In
+<p>One method for proofs, which may be familiar for those who work in programming as well, is proof by
+	induction. In
 	the
 	base step we verify that the statement is true for some first instance, and then in the inductive step we
 	establish
 	an implication, that if the statement is true for all prior cases then it follows for the present case also.
 	These
-	two steps prove together that the statement for all the steps because the base step is true and everything that
+	two steps prove together that the statement for all the steps because the base step is true and everything
+	that
 	follows is also true.</p>
 <p>To prove by mutual set inclusion is to prove that the solution set of a system equals something. This is by
 	proving
-	that any solution to the system is in the set, and anything in the set is a solution of the system. It's easy to
+	that any solution to the system is in the set, and anything in the set is a solution of the system. It's
+	easy to
 	confuse these two statements so try to visualize it in your head.</p>
-<p>She then goes into some examples of styles for typical proof cases but I'll probably learn those along the way.
+<p>She then goes into some examples of styles for typical proof cases but I'll probably learn those along the
+	way.
 </p>
 <div class="first">Sets, relations, set theory</div><a class="anchor" id="sets"></a>
 <h4>Sets</h4>
-<p>A set A is a collection of mathematical/everyday elements. e.g. \(A={1,2,5,a}\). The size or cardinality of
+<p>A set \(A\) is a collection of mathematical/everyday elements. e.g. \(A=\{1,2,5,a\}\). The symbol \(\in\)
+	means
+	that
+	an element is in a set. The size or cardinality of
 	\(A=|A|\) is the
-	number of elements in the set.</p>
-<p>\(A\cup B=\{x|x\in A \text{ or }x\in B\}\). The union of two sets is all x which is in either sets or is in
+	number of elements in the set. Sets can be finite or infinite.</p>
+<p>Set builder notation: \(\{x|P(x)\}\) refers to the set of all \(x\) such that \(P(x)\) is valid,
+	which is also the domain of \(P(x)\).</p>
+<p>The universal set \(U\) is the set of all elements, or the universe of discourse in which a predicate can be
+	interpreted. The empty set has no elements and is denoted \(\emptyset\).
+</p>
+<p>Two sets are equal if and only if they have the same elements: \(X=Y\equiv \forall p(p\in X \leftrightarrow
+	p\in
+	Y)\). (In natural language, for all p, p is in X if and only if p is in Y.)</p>
+<p>\(X\) is a subset of \(Y\) if all elements of \(X\) are included in \(Y\). This is denoted \(X \subseteq Y
+	\equiv
+	\forall p(p\in X \rightarrow p\in Y)\). (In natural language, for all p, if p is in X, then p is in Y.) A
+	proper
+	subset means a set is a subset but is not equal to the superset,
+	denoted \(X \subset Y\).</p>
+<p>The opposite of subset is superset, denoted \(Y\supseteq X\) or the proper superset \(Y \supset X\).</p>
+<p>The power set is the set of all subsets of a set, represented \(\wp(x)\) (the p symbol is the Weierstrass p).
+	For
+	example, if \(X=\{a,b,c\}\), then
+	\(\wp(X)=\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}\).
+	If
+	\(|X|=n\), then \(|\wp(X)|=2^n\).</p>
+<p>\(A\cup B=\{x|x\in A \lor x\in B\}\). The union of two sets is all x which is in either sets or is in
 	both.
 </p>
-<p>\(A\cap B=\{x|x\in A \text{ and } x\in B\}\). The intersection of two sets is all x which is in both sets.
+<p>\(A\cap B=\{x|x\in A \land x\in B\}\). The intersection of two sets is all x which is in both sets.
 </p>
-<p>\(A^C=\{x\in U|x \not\in A\}\). The complement of A is the set that is not in A and is in some universal set
+<p>\(A^C \text{ or } A'=\{x\in U|x \not\in A\}\). The complement of A is the set that is not in A and is in some
+	universal set
 	U.
 </p>
-<p>\(A\setminus B=\{x|x\in A \text{ and } x \not\in B\}\). This is the difference in the two sets.</p>
-<p>A subset is such that: \(C\subseteq
-	B\)
-	means \(x\in C \rightarrow
-	x\in B\) (if x is in C then x is in B).</p>
-<h4>Laws of set operations</h4>
-<p>\(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\)</p>
-<p>\(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\)</p>
-<p>These are seen as distributive laws.</p>
+<p>\(A\setminus B=\{x|x\in A \land x \not\in B\}\). This is the difference in the two sets.</p>
+<p>Given two sets \(X\) and \(Y\), their Cartesian product \(X\times Y\) is the set of all ordered pairs
+	\((p,q)\)
+	such
+	that \(p\in X\) and \(q\in Y\).</p>
+<p>Two sets are disjoint if they have no elements in common.</p>
+<h4>Common number sets</h4>
+<p>\(\mathbb{N}\) is the set of natural numbers, which are whole numbers from 0 or 1 upwards.</p>
+<p>\(\mathbb{Z}\) is the set
+	of integers, which are the negative whole numbers, zero, and positive whole numbers.</p>
+<p> \(\mathbb{Q}\) is the set of
+	rational numbers, which are numbers you can make by dividing one integer by any integer except zero. Its
+	symbol
+	is Q
+	because it stands for "quotient" since R is used for real numbers. pi, e, square roots, golden ratio are NOT
+	rational because their digits go on forever without repeating and they can't be written as a fraction.</p>
+<p> \(\mathbb{A}\) is the set of algebraic numbers,
+	numbers that are solutions to polynomial equations with rational coefficients.</p>
+<p>\(\mathbb{R}\) is the set of real
+	numbers, which are any value on the number line. Real numbers can be positive, negative, or zero, rational
+	or
+	irrational, algebraic or transcendental, and can have infinite digits.</p>
+<p>\(\mathbb{I}\) is the set of imaginary numbers,
+	that when squared give a negative result.</p>
+<p>\(\mathbb{C}\) is the set of complex numbers, combination of a real and an
+	imaginary number in the form a + bi, where a and b are real and i is imaginary.</p>
+<h4>Properties of sets</h4>
+<p>Associative laws:\[X \cup (Y \cup Z)=(X \cup Y) \cup Z\]\[X \cap (Y \cap Z)=(X \cap Y)\cap Z\]</p>
+<p>Commutative laws:\[X \cup Y=Y \cup X\]\[X \cap Y=Y\cap X\]</p>
+<p>Distributive laws:\[X\cup(Y\cap Z)=(X\cup Y)\cap (X\cup Z)\]\[X\cap(Y\cup Z)=(X\cap Y)\cup (X\cap Z)\]</p>
+<p>Identity laws:\[X \cup \emptyset = X\]\[X \cap U = X\]</p>
+<p>Complement laws:\[X \cup X' = U\]\[X \cap X' = \emptyset\]</p>
+<p>Indempotent laws:\[X \cup X = X\]\[X \cap X = X\]</p>
+<p>Bound laws:\[X \cup U = U\]\[X \cap \emptyset = \emptyset\]</p>
+<p>Absorption laws: \[X \cup (X \cap Y) = X\]\[X \cap (X \cup Y) = X\]</p>
+<p>De Morgan's laws:\[(X \cup Y)'=X' \cap Y'\]\[(X \cap Y)' = X' \cup Y'\]</p>
 <h4>Inclusion/exclusion</h4>
 <p>\(|A\cup B|=|A|+|B|-|A\cap B|\). The total number of elements in A and B is the sum of each minus the ones
 	that
@@ -447,62 +598,54 @@ J}A_j\right\vert\]
 	(the
 	intersection between any two sets is empty or \(\phi\), aka they do not overlap) and that fill up A.
 </p>
+<h4>Relations</h4>
+<p>A relation is an association between two sets of information. A pairing of elements of one set with the
+	elements
+	of
+	another set can be ordered; in this case, the first set is the domain set and the other set is the range
+	set.
+</p>
 <h4>Functions</h4>
-<p>Suppose A and B are sets and f: A->B is a function. Define \(\text{im}(f)=\{b\in B|b=f(a)\text{ for some
+<p>A function is a well-behaved relation which maps every element of the domain set to a single element of the
+	range
+	set. All functions are relations, but not all relations are functions.</p>
+<p>Suppose A and B are sets and \(f: A \rightarrow B\) is a function. Define \(\text{im}(f)=\{b\in
+	B|b=f(a)\text{
+	for
+	some
 	}a\in A\}\).
 	The image of the function is all the elements of b that comes from A transformed by the function. Define
 	\(f^{-1}(b)=\{a\in A | f(a)=b\}\). The inverse is the element in A that goes to b.</p>
-<h4>Commutative, associative</h4>
-<p>Commutative means you can write the same thing forwards and backwards (\(a+b=b+a\)), associative means you can
-	group
-	things in
-	different combinations (\((a+b)+c=a+(b+c)\)).</p>
-<h4> Union, Intersection, and Complement</h4>
-<p>The union of two sets contains all elements contained in both sets, and is denoted \(A\cup B\). The intersection
-	of
-	two sets contains only the elements that are in both sets, and is denoted \(A \cap B\). The complement of a
-	set A contains everything that is not in the set A, denoted \(A'\).</p>
-<p>Two sets are disjoint if they have no elements in common.</p>
 <h4>Domain, codomain, range</h4>
-<p>In its simplest form the domain is all the values that go into a function, and the range is all the values that
+<p>In its simplest form the domain is all the values that go into a function, and the range is all the values
+	that
 	come
-	out. A function relates an input to an output. A function is defined by sets (relates each element of a set with
-	exactly one element of another set). What can go into a function is called the domain. What may possibly come
+	out. A function relates an input to an output. A function is defined by sets (relates each element of a set
+	with
+	exactly one element of another set). What can go into a function is called the domain. What may possibly
+	come
 	out of
-	a function is called the codomain. What actually comes out of a function is called the range. For example, if
+	a function is called the codomain. What actually comes out of a function is called the range. For example,
+	if
 	the
-	function is f(x) = 2x+1, the domain is what x can be, the codomain is what 2x+1 can be, and the range (or image)
+	function is f(x) = 2x+1, the domain is what x can be, the codomain is what 2x+1 can be, and the range (or
+	image)
 	is
-	what f(x) can be. We define the domain and the codomain, and these along with the function determine the range.
+	what f(x) can be. We define the domain and the codomain, and these along with the function determine the
+	range.
 	For
-	example, if we set the codomain to be all real numbers, then square root is not a function, but if we define it
+	example, if we set the codomain to be all real numbers, then square root is not a function, but if we define
+	it
 	to
 	be non-negative real numbers, square root IS a function.</p>
-<p>\(f:\mathbb{N}\rightarrow \mathbb{N}\) means the function f has the domain N (natural numbers) and a codomain of
+<p>\(f:\mathbb{N}\rightarrow \mathbb{N}\) means the function f has the domain N (natural numbers) and a codomain
+	of
 	N as
 	well.</p>
 <p>\(f:x\mapsto x^2\) means the function f takes in x and returns x^2.</p>
 <p>\(f:x= x^2\) means the function f takes in x and returns x^2 (maps to).</p>
 <h4>Injective, surjective and bijective</h4>
 <img src="https://www.mathsisfun.com/sets/images/function-mapping.svg">
-<h4>Common number sets</h4>
-<p>\(\mathbb{N}\) is the set of natural numbers, which are whole numbers from 0 or 1 upwards.</p>
-<p>\(\mathbb{Z}\) is the set
-	of integers, which are the negative whole numbers, zero, and positive whole numbers.</p>
-<p> \(\mathbb{Q}\) is the set of
-	rational numbers, which are numbers you can make by dividing one integer by any integer except zero. Its symbol
-	is Q
-	because it stands for "quotient" since R is used for real numbers. pi, e, square roots, golden ratio are NOT
-	rational because their digits go on forever without repeating and they can't be written as a fraction.</p>
-<p> \(\mathbb{A}\) is the set of algebraic numbers,
-	numbers that are solutions to polynomial equations with rational coefficients.</p>
-<p>\(\mathbb{R}\) is the set of real
-	numbers, which are any value on the number line. Real numbers can be positive, negative, or zero, rational or
-	irrational, algebraic or transcendental, and can have infinite digits.</p>
-<p>\(\mathbb{I}\) is the set of imaginary numbers,
-	that when squared give a negative result.</p>
-<p>\(\mathbb{C}\) is the set of complex numbers, combination of a real and an
-	imaginary number in the form a + bi, where a and b are real and i is imaginary.</p>
 <p>A function is never one-to-many, tested by the vertical line test, but can be many-to-one. Injective is a
 	function in
 	which many-to-one is not okay, but you can have values that are not pointed at. Injective is also called
@@ -518,9 +661,11 @@ J}A_j\right\vert\]
 	rational
 	number. \(\sqrt{2}\) is a surd, \(\sqrt{4}=2\) is not.</p>
 <div class="second">Equivalence relations</div>
-<p>An equivalence relation is a binary relation that is reflexive, symmetric and transitive. Reflexive means that it
+<p>An equivalence relation is a binary relation that is reflexive, symmetric and transitive. Reflexive means
+	that it
 	is
-	equivalent to itself, symmetrical is a to b if and only if b to a, and transivity is if a to b and b to c then a
+	equivalent to itself, symmetrical is a to b if and only if b to a, and transivity is if a to b and b to c
+	then a
 	to
 	c.</p>
 <div class="first">Pre-numerical stage, concept of numbers</div><a class="anchor" id="concept"></a>
@@ -534,34 +679,49 @@ J}A_j\right\vert\]
 <div class="second">Number value or cardinality</div>
 <div class="second">Zero and numbers beyond 10</div>
 <div class="first">Natural numbers</div><a class="anchor" id="natural"></a>
-<p>The elements of the set of natural numbers:\[\mathbb{N}=\{1,2,3,4,5,...\}\]are the numbers we use for counting. They
+<p>The elements of the set of natural numbers:\[\mathbb{N}=\{1,2,3,4,5,...\}\]are the numbers we use for
+	counting.
+	They
 	come equipped with an ordering and also come equipped with the:</p>
 <p>Well-ordered axiom: Every set of natural numbers except the empty set has a smallest element.</p>
 <h4>Principle of induction</h4>
-<p>If \(S\) is a subset of \(\mathbb{N}\), such that (i) \(1\in S\) and (ii) whenever \(n\in S\), the next number after
-	\(n\) is also an element of \(S\), then \(S\) is equal to \(\mathbb{N}\), the set of all natural numbers.</p>
+<p>If \(S\) is a subset of \(\mathbb{N}\), such that (i) \(1\in S\) and (ii) whenever \(n\in S\), the next
+	number
+	after
+	\(n\) is also an element of \(S\), then \(S\) is equal to \(\mathbb{N}\), the set of all natural numbers.
+</p>
 <h4>Making definitions by induction</h4>
-<p>A function \(f\) whose domain is \(\mathbb{N}\) may be defined in two steps: (i) define \(f(1)\) and (ii) define
-	each \(f(n+1)\), possibly using a previous definition of \(f(n)\). The domain of the function \(f\) is then a subset
-	of \(\mathbb{N}\) that contains \(1\) by (i), and whenever \(n\) is in the domain, then \(n+1\) is also in the
+<p>A function \(f\) whose domain is \(\mathbb{N}\) may be defined in two steps: (i) define \(f(1)\) and (ii)
+	define
+	each \(f(n+1)\), possibly using a previous definition of \(f(n)\). The domain of the function \(f\) is then
+	a
+	subset
+	of \(\mathbb{N}\) that contains \(1\) by (i), and whenever \(n\) is in the domain, then \(n+1\) is also in
+	the
 	domain by (ii). Therefore the domain of \(f\) is \(\mathbb{N}\), by the principle of induction.</p>
 <h4>Primes</h4>
-<p>A natural number \(p\) (other than 1) is prime if the only numbers that divide \(p\) are 1 and \(p\) itself. The
+<p>A natural number \(p\) (other than 1) is prime if the only numbers that divide \(p\) are 1 and \(p\) itself.
+	The
 	primes are the building blocks of the natural numbers much like the elements are the building block of the
-	molecules. The factorization of a number into a product of primes is unique. If you are given a very large computer,
+	molecules. The factorization of a number into a product of primes is unique. If you are given a very large
+	computer,
 	there is no known algorithm for factoring it quickly as a product of primes.</p>
 <h4>Fundamental theorem of arithmetic</h4>
 <p>Every natural number except 1 factors as a product of prime numbers.</p>
 <h4>Euclid</h4>
 <p>There are infinitely many prime numbers.</p>
 <div class="first">Integers, rational numbers</div><a class="anchor" id="integer"></a>
-<p>The elements of the set of integers: \[\mathbb{Z}=\{...,-5,-4,-3,-2,-1,0,1,2,3,4,5,...\}\]consist of three types of
+<p>The elements of the set of integers: \[\mathbb{Z}=\{...,-5,-4,-3,-2,-1,0,1,2,3,4,5,...\}\]consist of three
+	types
+	of
 	numbers: (i) the natural numbers, the negative integers, and the number \(0\).</p>
 <div class="first">Real numbers, complex numbers</div><a class="anchor" id="real"></a>
-<p>The real numbers: \[\mathbb{R}=\{\text{numbers on the number-line\}\]require some real analysis for a "proper"
+<p>The real numbers: \[\mathbb{R}=\{\text{numbers on the number-line}\}\]require some real analysis for a
+	"proper"
 	definition.</p>
 <div class="first">Number theory</div><a class="anchor" id="number"></a>
-<p>Number theory, or arithmetic, is a branch of pure mathematics devoted primarily to the study of the integers and
+<p>Number theory, or arithmetic, is a branch of pure mathematics devoted primarily to the study of the integers
+	and
 	integer-valued functions.</p>
 <div class="first">Measures and units</div><a class="anchor" id="measure"></a>
 <div class="first">Ratio and proportion, percentages</div><a class="anchor" id="ratio"></a>
@@ -573,10 +733,15 @@ J}A_j\right\vert\]
 <div class="first">Transformation geometry</div><a class="anchor" id="transformation"></a>
 <div class="first">Plane and spherical trigonometry</div><a class="anchor" id="trigonometry"></a>
 <h4>Polar coordinates</h4>
-<p>For problems involving directions from a fixed origin (or pole) \(O\), it is often convenient to a specify a point
-	\(P\) by its polar coordinates \((r,\theta)\), where \(r\) is the distance \(OP\) and \(\theta\) is the angle that
-	the direction of \(r\) makes with a given initial line. Given the Cartesian equation for a curve, the polar equatoin
-	for the same curve can be obtained by substituting \(r\cos \theta\) and \(r\sin \theta\) for \(x\) and \(y\),
+<p>For problems involving directions from a fixed origin (or pole) \(O\), it is often convenient to a specify a
+	point
+	\(P\) by its polar coordinates \((r,\theta)\), where \(r\) is the distance \(OP\) and \(\theta\) is the
+	angle
+	that
+	the direction of \(r\) makes with a given initial line. Given the Cartesian equation for a curve, the polar
+	equatoin
+	for the same curve can be obtained by substituting \(r\cos \theta\) and \(r\sin \theta\) for \(x\) and
+	\(y\),
 	respectively.</p>
 <h4>Law of sines</h4>
 \[\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}\]
@@ -599,33 +764,54 @@ J}A_j\right\vert\]
 <div class="first">Descriptive geometry</div><a class="anchor" id="descriptive"></a>
 <div class="first">Elementary algebra</div><a class="anchor" id="elementary"></a>
 <h4>Parabolas</h4>
-<p>The graphs of quadratic functions are parabolas. All parabolas are vaguely "U" shaped and will have a highest or
-	lowest point called the vertex. Parabolas may open up or down and will always have a single y-intercept but may or
-	may not have x-intercepts. Every parabola has an axis of symmetry. In order to sketch a parabola, find the vertex,
-	then find the y-intercept, then solve \(f(x)=0\) to find the x-intercepts (if they exist). Find another point on the
+<p>The graphs of quadratic functions are parabolas. All parabolas are vaguely "U" shaped and will have a highest
+	or
+	lowest point called the vertex. Parabolas may open up or down and will always have a single y-intercept but
+	may
+	or
+	may not have x-intercepts. Every parabola has an axis of symmetry. In order to sketch a parabola, find the
+	vertex,
+	then find the y-intercept, then solve \(f(x)=0\) to find the x-intercepts (if they exist). Find another
+	point on
+	the
 	other side of the vertex, and sketch the graph.</p>
-<p>The first form of the parabola is \[f(x)=a(x-h)^2+k\]where \(a\) tells us if the parabola opens up (if positive) or
+<p>The first form of the parabola is \[f(x)=a(x-h)^2+k\]where \(a\) tells us if the parabola opens up (if
+	positive)
+	or
 	down (if negative), and the vertex is the point \((h,k)\).</p>
-<p>Most parabolas, however, are in the form:\[f(x)=ax^2+bx+c\]where \(a\) again tells us whether the parabola opens
-	upwards or downwards, and the vertex is in the form \((-\frac{b}{2a},f(-\frac{b}{2a}))\), and we're given the
+<p>Most parabolas, however, are in the form:\[f(x)=ax^2+bx+c\]where \(a\) again tells us whether the parabola
+	opens
+	upwards or downwards, and the vertex is in the form \((-\frac{b}{2a},f(-\frac{b}{2a}))\), and we're given
+	the
 	y-intercept for free as \((0,c)\).</p>
 <p>You can convert from the quadratic form to the first form by completing the square.</p>
 \[f(x)=ax^2+bx+c\]\[=a(x^2+\frac{b}{a}x+\frac{c}{a})\]\[=a(x^2+\frac{b}{a}x+(\frac{b}{2a})^2-(\frac{b}{2a})^2+\frac{c}{a})\]\[=a(x+\frac{b}{2a})^2-\frac{b^2}{4a}+c\]
 <h4>Ellipses</h4>
-<p>The standard form of an ellipse is:\[\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\]where the right side MUST be \(1\)
+<p>The standard form of an ellipse is:\[\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\]where the right side MUST be
+	\(1\)
 	and the point \((h,k)\) is the center of the ellipse.</p>
-<p>To sketch the ellipse, you can obtain the right most point at \((h+a,k)\), the left most point at \((h-a,k)\), the
+<p>To sketch the ellipse, you can obtain the right most point at \((h+a,k)\), the left most point at
+	\((h-a,k)\),
+	the
 	top most point at \((h,k+b)\), and the bottom most point at \((h,k-b)\).</p>
 <p>Note that circles are a special case of an ellipse where \(a=b\) and so the equation of a circle
 	is:\[(x-h)^2+(y-k)^2=a^2\]with a radius \(a\).</p>
 <h4>Hyperbolas</h4>
-<p>Hyperbolas look like two vaguely parabola shaped piees that open either up and down or right and left. Alongside them
-	are two lines called asymptotes that guide where the hyperbolas travel. The point where the two asymptotes cross is
+<p>Hyperbolas look like two vaguely parabola shaped piees that open either up and down or right and left.
+	Alongside
+	them
+	are two lines called asymptotes that guide where the hyperbolas travel. The point where the two asymptotes
+	cross
+	is
 	called the center of the hyperbola. The standard form of the hyperbola
-	is:\[\frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1\]where the center is \((h,k)\), the hyperbola opens left and right,
+	is:\[\frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1\]where the center is \((h,k)\), the hyperbola opens left and
+	right,
 	the vertices are at \((h+a,k)\) and \((h-a,k)\), the slopes of the asymptotes are \(\pm\frac{b}{a}\) and the
-	equations of the asymptotes are \(y=k\pm \frac{b}{a}(x-h)\). The standard form for the hyperbola that opens up and
-	down is the same except swap x and y in the equation and then the vertices are \((h,k+b)\) and \((h,k-b)\).</p>
+	equations of the asymptotes are \(y=k\pm \frac{b}{a}(x-h)\). The standard form for the hyperbola that opens
+	up
+	and
+	down is the same except swap x and y in the equation and then the vertices are \((h,k+b)\) and \((h,k-b)\).
+</p>
 <h4>Properties of logarithms</h4>
 \[\log_b 1=0\]
 \[\log_b b=1\]
@@ -637,44 +823,56 @@ J}A_j\right\vert\]
 \[\log_b(\frac{x}{y})=\log_b x-\log_b y\]
 \[\log_b(x^y)=y\log_b x\]
 \[\text{If }\log_b(x)=\log_b y, \text{ then }x=y\]
-exponent properties, rational exponents, negative exponnets, radicals, polynomials, factoring, rational expressions,
+exponent properties, rational exponents, negative exponnets, radicals, polynomials, factoring, rational
+expressions,
 complex numbers
 solving equations and inequalities - linear equations, quadratic equations, completing the square, quadratic
 formula,
 applications of linear and quadratic equations, reducible to quadratic form, equations with radicals, linear
 inequalities, polynomial & rational inequalities, absolute vlaue equations & inequalities
-graphing and functions - graphing lines, circles, and picewise functions, function definition, function notation,
+graphing and functions - graphing lines, circles, and picewise functions, function definition, function
+notation,
 function composition, inverse functions
-common graphs - parabolas, ellipses, hyperbolas, absolute value, square root, constant function, rational functions,
+common graphs - parabolas, ellipses, hyperbolas, absolute value, square root, constant function, rational
+functions,
 shift, reflections, symmetry
-polynomial functions - dividing polynomials, zeroes/roots of polynomials, finding zeroes of polynomials, graphing
+polynomial functions - dividing polynomials, zeroes/roots of polynomials, finding zeroes of polynomials,
+graphing
 polynomials, partial fractions
-exponential functions, logarithm functions, solving exponential functions, solving logarithm functions, applications
+exponential functions, logarithm functions, solving exponential functions, solving logarithm functions,
+applications
 systems of equations, substitution method, elimination method, augmented matrix, nonlinear systems
-<li>So let's discuss algebra real quick. The word itself is about the 'reunion of broken parts'... an Arabic word.
+<li>So let's discuss algebra real quick. The word itself is about the 'reunion of broken parts'... an Arabic
+	word.
 	It's
 	about the study of symbols. You can divide algebra into elementary algebra and abstract algebra. Elementary
 	algebra
-	is essential for studying any science, whereas abstract algebra is primarily studied by mathematicians. Algebra
+	is essential for studying any science, whereas abstract algebra is primarily studied by mathematicians.
+	Algebra
 	is
 	concerned with the solving of equations of numbers. Then it extended also into non-numerical objects and
 	abstracted
-	them into groups, rings, and fields, which we will look at later. Algebra is pretty much foundational to all of
+	them into groups, rings, and fields, which we will look at later. Algebra is pretty much foundational to all
+	of
 	math.</li>
 <h4>Fundamental Theorem of Algebra</h4>
-<p>Polynomials with complex coefficients factor into linear polynomials with complex coefficients. The factorization
+<p>Polynomials with complex coefficients factor into linear polynomials with complex coefficients. The
+	factorization
 	is
 	unique.</p>
 <h4>Binomial theorem</h4>
-<p>The binomial theorem, or binomial expansion, describes the algebraic expansion of powers of a binomial. According
+<p>The binomial theorem, or binomial expansion, describes the algebraic expansion of powers of a binomial.
+	According
 	to
 	the theorem, it is possible to expand the polynomial \((x+y)^n\) into a sum involving terms of the form
 	\(ax^by^c\),
-	where the exponents \(b\) and \(c\) are nonnegative integers \(b+c=n\), and the coefficient \(a\) of each term
+	where the exponents \(b\) and \(c\) are nonnegative integers \(b+c=n\), and the coefficient \(a\) of each
+	term
 	is a
 	specific positive integer depending on \(n\) and \(b\). The coefficient \(a\) is known as the binomial
 	coefficient
-	\(n \choose b\) or \(n \choose c\) (the two have the same value). These coefficients for varying \(n\) and \(b\)
+	\(n \choose b\) or \(n \choose c\) (the two have the same value). These coefficients for varying \(n\) and
+	\(b\)
 	can
 	be arranged to form Pascal's triangle.</p>
 \[(x+y)^n={n\choose 0}x^ny^0+{n\choose 1}x^{n-1}y^1+{n\choose 2}x^{n-2}y^2+\ldots+{n\choose
@@ -684,27 +882,37 @@ n}x^0y^n+\]
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a8beb14cd64d7451f9f9e4f965713d3e7e62cbb"
 	alt="pascals triangle">
 <h4>Factoring Cubic Polynomials</h4>
-<p>A cubic polynomial is of the form \(p(x)=a_3x^3+a_2x^2+a_1x+a_0\). The fundamental theorem of algebra guarantees
+<p>A cubic polynomial is of the form \(p(x)=a_3x^3+a_2x^2+a_1x+a_0\). The fundamental theorem of algebra
+	guarantees
 	that
 	if \(a_0, a_1, a_2, a_3\) are all real numbers, then we can factor the polynomial into the form
-	\(p(x)=a_3(x-b_1)(x^2+b_2 c + b_3)\). In other words, we can always factor the cubic polynomial into the product
+	\(p(x)=a_3(x-b_1)(x^2+b_2 c + b_3)\). In other words, we can always factor the cubic polynomial into the
+	product
 	of
 	a first degree polynomial and a second degree polynomial.</p>
 <p>The first method is factoring by grouping but only works in some cases. Consider the polynomial
-	\(p(x)=x^3-4x^2+3x-12\). Group the first two terms and the last two terms together: \(p(x)=(x^3-4x^2)+(3x-12)\)
+	\(p(x)=x^3-4x^2+3x-12\). Group the first two terms and the last two terms together:
+	\(p(x)=(x^3-4x^2)+(3x-12)\)
 	and
-	then pull out the common factors: \(p(x)=x^2(x-4)+3(x-4)\). Notice that we now have common factors and can now
+	then pull out the common factors: \(p(x)=x^2(x-4)+3(x-4)\). Notice that we now have common factors and can
+	now
 	factor out: \(p(x)=(x-4)(x^2+3)\).</p>
-<p>Otherwise, we can use the rational root theorem if all the coefficients are rational numbers. The rational root
-	theorem states that the possible roots of a polynomial are the factors of the last term divided by the factors
+<p>Otherwise, we can use the rational root theorem if all the coefficients are rational numbers. The rational
+	root
+	theorem states that the possible roots of a polynomial are the factors of the last term divided by the
+	factors
 	of
-	the first term. Take for example the polynomial \(p(x)=x^3+5x^2-2x-24\). The possible roots are the roots are
+	the first term. Take for example the polynomial \(p(x)=x^3+5x^2-2x-24\). The possible roots are the roots
+	are
 	the
-	factors of 24 over the factors of 1. Therefore, the possible roots are \(\pm 1,2,3,4,6,8,12,24\). We plug each
+	factors of 24 over the factors of 1. Therefore, the possible roots are \(\pm 1,2,3,4,6,8,12,24\). We plug
+	each
 	of
-	these numbers into \(p(x)\) until we find a root. This results in finding that 2 is such a root, meaning \(x-2\)
+	these numbers into \(p(x)\) until we find a root. This results in finding that 2 is such a root, meaning
+	\(x-2\)
 	is
-	a factor of our polynomial. Do long division and we can now simplify \(p(x)=(x-2)(x^2+7x+12)\). We can simplify
+	a factor of our polynomial. Do long division and we can now simplify \(p(x)=(x-2)(x^2+7x+12)\). We can
+	simplify
 	the
 	binomial further to get a final factor.</p>
 <div class="first">Equations and inequalities</div><a class="anchor" id="equation"></a>
@@ -717,35 +925,47 @@ n}x^0y^n+\]
 		href="https://www.youtube.com/watch?v=kjBOesZCoqc&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&ab_channel=3Blue1Brown"
 		target="_blank">3Brown1Blue's playlist on Essence of Linear Algebra</a>.</p>
 
-<p>Linear algebra discusses how to manipulate linear systems, vector spaces, maps between spaces, determinants, and
+<p>Linear algebra discusses how to manipulate linear systems, vector spaces, maps between spaces, determinants,
+	and
 	similarity.</p>
 
 <h4>Gauss's method</h4>
-<p>So what does it mean to have a linear combination? A linear combination is where you have a bunch of variables,
+<p>So what does it mean to have a linear combination? A linear combination is where you have a bunch of
+	variables,
 	and
 	you assign a coefficient to each of those variables. Those coefficients multiplied by their corresponding
 	variables
 	add up to a constant. A linear combination cannot have any modifications to the variable, so you can't have
 	\(\sin{x}\) or \(x^2\).</p>
 <p>To find the set of all solutions for the system of combinations is to solve the system. Gauss's method is to
-	transform each system by swapping, multiplying, rescaling, etc. such that the system is brought to a form that
+	transform each system by swapping, multiplying, rescaling, etc. such that the system is brought to a form
+	that
 	can
-	easily find the value of each variable. The three valid operations on a linear combination within a system is 1)
-	swapping with another, 2) multiplying both sides by a nonzero constant, and 3) replacing itself with the sum of
-	itself and a multiple of another. Note that multiplying by 0 is not allowed, and adding a multiple of a row to
+	easily find the value of each variable. The three valid operations on a linear combination within a system
+	is 1)
+	swapping with another, 2) multiplying both sides by a nonzero constant, and 3) replacing itself with the sum
+	of
+	itself and a multiple of another. Note that multiplying by 0 is not allowed, and adding a multiple of a row
+	to
 	itself
 	is not allowed because adding -1 times the row to itself has the effect of multiplying the row by 0.</p>
-<p>The first variable with a nonzero coefficient is the row's leading variable. A system is in echelon form if each
-	leading variable is to the right of the leading variable in the row above it, except for the leading variable in
+<p>The first variable with a nonzero coefficient is the row's leading variable. A system is in echelon form if
+	each
+	leading variable is to the right of the leading variable in the row above it, except for the leading
+	variable in
 	the
 	first row, and any rows with all-zero coefficients are at the bottom.</p>
-<p>Gaussian method systematically solves these linear systems by using operations to remove the leading variable one
+<p>Gaussian method systematically solves these linear systems by using operations to remove the leading variable
+	one
 	at
-	a time. So the first step is you remove x from all the equations by manipulating each equation to remove x, then
-	swap lines to get into echelon form, and then using the second equation to manipulate the rest, and so forth.
+	a time. So the first step is you remove x from all the equations by manipulating each equation to remove x,
+	then
+	swap lines to get into echelon form, and then using the second equation to manipulate the rest, and so
+	forth.
 	You
 	eventually get the last variable isolated and then back-solve to get the rest of the values.</p>
-<p>If there are redundant equations, eventually you will resolve the system so that one line says 0=0, indicating a
+<p>If there are redundant equations, eventually you will resolve the system so that one line says 0=0,
+	indicating a
 	redundant equation. If you get something like 0=2, then it means there's an inconsistency and that means the
 	system
 	has no solutions. If you can't isolate one variable, and are left with something like \(x+y=4\), then your
@@ -754,18 +974,23 @@ n}x^0y^n+\]
 <h4>Describing the solution set</h4>
 <p>It's best to describe the solution set if there are many solutions in terms of free variables, which are
 	variables
-	that are not leading in an echelon form linear system. You should rephrase the solution set in terms of these
+	that are not leading in an echelon form linear system. You should rephrase the solution set in terms of
+	these
 	variables to make it easier to understand. These variables that we use to describe a family of solutions are
 	called
 	parameters. Free variables and parameters aren't always the same because we can choose not to use a free
 	variable as
 	a parameter.</p>
 <h4>Matrices</h4>
-<p>An \(m\times n\) matrix is a rectangular array of numbers with m rows and n columns. Each number in the matrix is
+<p>An \(m\times n\) matrix is a rectangular array of numbers with m rows and n columns. Each number in the
+	matrix is
 	an
-	entry. Matrices are usually denoted with an upper case roman letter. A matrix with 2 rows and 3 columns would be
-	said to be a "two-by-three" matrix, with number of rows always stated first. Matrix entries are named with the
-	corresponding lower-case letter, then with subscripts of m,n. Writing linear systems in matrix form just makes
+	entry. Matrices are usually denoted with an upper case roman letter. A matrix with 2 rows and 3 columns
+	would be
+	said to be a "two-by-three" matrix, with number of rows always stated first. Matrix entries are named with
+	the
+	corresponding lower-case letter, then with subscripts of m,n. Writing linear systems in matrix form just
+	makes
 	things easier so you don't have to write all the variables and signs. Adding a vertical bar separates
 	coefficients
 	on the left side and constants on the right. With the bar, a matrix becomes an augmented matrix.</p>
@@ -773,67 +998,87 @@ n}x^0y^n+\]
 	adding
 	those vectors together (it's hard to visualize so have to look up at least until I can add it in mathjax). A
 	column
-	vector or a vector is a matrix with a single column. You can also have a row vector. The entries of a vector are
-	sometimes called components. A column or row vector whose components are all zeros is a zero vector. Vectors are
-	usually represented with an arrow above a lower-case letter. Vectors can be summed together (must have the same
+	vector or a vector is a matrix with a single column. You can also have a row vector. The entries of a vector
+	are
+	sometimes called components. A column or row vector whose components are all zeros is a zero vector. Vectors
+	are
+	usually represented with an arrow above a lower-case letter. Vectors can be summed together (must have the
+	same
 	number of entries) or scaled by a real number. All linear systems will, with Gauss's method, end up with the
 	same
 	free variables.</p>
 <p>The transpose of a matrix is the matrix whose columns are the rows of the original matrix.</p>
 <h4>General = Particular + Homogeneous</h4>
-<p>The solution description has two parts, the particular solution (for example (1,2,3)) and the unrestricted linear
-	combination of vectors for the free variables after Gaussian reduction. A linear equation is homogeneous if it
+<p>The solution description has two parts, the particular solution (for example (1,2,3)) and the unrestricted
+	linear
+	combination of vectors for the free variables after Gaussian reduction. A linear equation is homogeneous if
+	it
 	has a
 	constant of zero (all of the variables*coefficients add up to zero). A homogeneous system must always be
 	consistent
 	because there is always the zero vector as a solution.</p>
-<p>We say that the set of vectors is generated by or spanned by the set if the vector can be a linear combination of
+<p>We say that the set of vectors is generated by or spanned by the set if the vector can be a linear
+	combination of
 	the
 	vectors in the set.</p>
-<p>We call the matrix of the coefficients of a system nonsingular if it is a square matrix with a unique solution
+<p>We call the matrix of the coefficients of a system nonsingular if it is a square matrix with a unique
+	solution
 	(no
-	free variables) in a homogeneous system (setting all the constants to 0), which means there are the same number
+	free variables) in a homogeneous system (setting all the constants to 0), which means there are the same
+	number
 	of
-	echelon form equations as there are variables. A nonsingular coefficient matrix indicates the system only has
+	echelon form equations as there are variables. A nonsingular coefficient matrix indicates the system only
+	has
 	one
-	unique solution. A coefficient matrix is singular (singular in this case meaning different from expected) if its
-	homogeneous system has zero or infinite solutions. What this means to me is that you can "solve" a linear system
+	unique solution. A coefficient matrix is singular (singular in this case meaning different from expected) if
+	its
+	homogeneous system has zero or infinite solutions. What this means to me is that you can "solve" a linear
+	system
 	if
-	you have as many VALID equations AFTER Gaussian reduction as unknowns. The idea that you can solve a system as
+	you have as many VALID equations AFTER Gaussian reduction as unknowns. The idea that you can solve a system
+	as
 	long
 	as you have as many equations as unknowns is often not true.</p>
 <h4>Dot product</h4>
-<p>The dot product, or inner product, or scalar product, of two n-component real vectors is the linear combination
+<p>The dot product, or inner product, or scalar product, of two n-component real vectors is the linear
+	combination
 	of
 	their components. The dot product is commutative and distributive over vector addition, and associative over
 	scalar
 	multiplication.</p>
 <h4>Linear Geometry</h4>
-<p>The solution set of a linear system with \(n\) unknowns is a linear surface in \(\mathbb{R}^n\). Specifically, it
+<p>The solution set of a linear system with \(n\) unknowns is a linear surface in \(\mathbb{R}^n\).
+	Specifically, it
 	is
-	a k-dimensional linear surface, where k is the number of free variables in echelon form version of the system.
+	a k-dimensional linear surface, where k is the number of free variables in echelon form version of the
+	system.
 	For
 	instance, if there is just a single equation, then the solution set is an n-1-dimensional hyperplane. The
 	solution
 	set of the homogenous linear system is a linear surface passing through the origin. We can view the general
 	solution
-	set of any linear system as being the solution set of its associated homogeneous system offset from the origin
+	set of any linear system as being the solution set of its associated homogeneous system offset from the
+	origin
 	by a
 	vector, aka the particular solution.</p>
 <p>A vector in its canonical position starts from the origin.</p>
-<p>The length of a vector is the square root of the sum of the squares of its components. You can normalize a vector
+<p>The length of a vector is the square root of the sum of the squares of its components. You can normalize a
+	vector
 	by
 	reducing it to a vector with a magnitude of one. Then, take for example a two-dimensional plane. Put the two
 	vectors
 	in canonical position, and then take the plane formed by the origin and the endpoints. Consider a triangle
 	formed by
-	the origin and the endpoints of the two vectors. Applying the Law of Cosines, and taking into account that the
-	length of a vector is the square root of the sum of its squares, we can get the angle between the two vectors to
+	the origin and the endpoints of the two vectors. Applying the Law of Cosines, and taking into account that
+	the
+	length of a vector is the square root of the sum of its squares, we can get the angle between the two
+	vectors to
 	be:
 	$$\theta=\cos^{-1}(\frac{u_1v_1+u_2v_2+u_3v_3}{|\vec{u}||\vec{v}|})$$</p>
 <p>Even in higher-dimensional spaces, lines are straight and planes are flat. For any two points in a linear
 	surface,
-	the line segment between them is contained in that surface. If the linear surface was not flat, then that would
+	the line segment between them is contained in that surface. If the linear surface was not flat, then that
+	would
 	allow for shortcuts where the shortest path between two vectors would not be the line between them. Linear
 	surfaces
 	therefore have no bends.</p>
@@ -843,28 +1088,35 @@ $$\theta=\cos^{-1}(\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|})$$
 	only if
 	their dot product equals the product of their lengths.</p>
 <h4>Cauchy-Schwarz Inequality</h4>
-<p>Cauchy-Schwarz inequality states that \(|\vec{u}\cdot\vec{v}|\leq|\vec{u}||\vec{v}|\) with equality if and only
+<p>Cauchy-Schwarz inequality states that \(|\vec{u}\cdot\vec{v}|\leq|\vec{u}||\vec{v}|\) with equality if and
+	only
 	if one vector is a scalar multiple of the other. What this says is that if you take the dot product of two
 	vectors,
 	it
-	will be less than or equal to the product of the length of the vectors. This allows for the prior equation for
+	will be less than or equal to the product of the length of the vectors. This allows for the prior equation
+	for
 	the
 	angle between two vectors to be always possible.</p>
 <h4>Gauss-Jordan Reduction</h4>
-<p>The Gauss-Jordan Reduction is just an extension of Gauss's Method which making all of the leading entries into
+<p>The Gauss-Jordan Reduction is just an extension of Gauss's Method which making all of the leading entries
+	into
 	1's
-	and then uses the leading entries to eliminate all other entries in each column by combining upwards. Using one
+	and then uses the leading entries to eliminate all other entries in each column by combining upwards. Using
+	one
 	entry to clear out the rest of a column is called pivoting on that entry. The resulting matrix is in reduced
 	echelon
 	form, in which each leading entry is a 1 and is the only nonzero entry in its column. The only advantage of
 	reduced
-	echelon form to normal echelon form is you can read out the description of the solution set from the matrix. Any
+	echelon form to normal echelon form is you can read out the description of the solution set from the matrix.
+	Any
 	two
-	matrices that are interreducible by elementary row operations are row equivalent. Any matrix can only be reduced
+	matrices that are interreducible by elementary row operations are row equivalent. Any matrix can only be
+	reduced
 	down to one reduced echelon form: there are not multiple variants.</p>
 <p>It is not the set of parameters that is unique, it is the set of fre variables that is unique.</p>
 <p>"The idea here is that one way to understand a mathematical situation is
-	by being able to classify the cases that can happen. This is a theme in this book and we have seen this several
+	by being able to classify the cases that can happen. This is a theme in this book and we have seen this
+	several
 	times already. We classified solution sets of linear systems into the no-elements, one-element, and
 	infinitely-many
 	elements cases. We also classified linear systems with the same number of equations as unknowns into the
@@ -882,38 +1134,50 @@ $$\theta=\cos^{-1}(\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|})$$
 <h4>Vector space</h4>
 <p>A vector space is a set of vectors for which all vectors within the space and scalars satisfy that the set is
 	closed
-	under vector addition, vector addition is commutative, associative, there is a zero vector, each vector has an
-	additive inverse which sums to 0, scalar multiplication distributes over scalar addition and vector addition,
+	under vector addition, vector addition is commutative, associative, there is a zero vector, each vector has
+	an
+	additive inverse which sums to 0, scalar multiplication distributes over scalar addition and vector
+	addition,
 	scalar
 	multiplication associates, and multiplication by the scalar 1 gives the identity operation. Particularly
 	important
-	are the closure conditions, which specify that addition and scalar multiplication operations are always defined
+	are the closure conditions, which specify that addition and scalar multiplication operations are always
+	defined
 	for
-	every pair of vectors and every scalar and vector, and the result of the operation is a member of the set.</p>
+	every pair of vectors and every scalar and vector, and the result of the operation is a member of the set.
+</p>
 <p>A one-element vector space is a trivial space.</p>
 <img src="{{ url_for('static', filename='img/math/vector.png') }}">
 <h4>Subspaces and Spanning Sets</h4>
-<p>For any vector space, a subspace is a subset that is itself a vector space, under the inherited operations. Any
-	subspace that is not the entire space itself is a proper subspace. A subset is a subspace if and only if it is
-	closed under linear combinations. The span (or linear closure) of a nonempty subset S of a vector space is the
+<p>For any vector space, a subspace is a subset that is itself a vector space, under the inherited operations.
+	Any
+	subspace that is not the entire space itself is a proper subspace. A subset is a subspace if and only if it
+	is
+	closed under linear combinations. The span (or linear closure) of a nonempty subset S of a vector space is
+	the
 	set
 	of all linear combinations of vectors from S. The span is also a subspace of the vector space.</p>
 <h4>Span</h4>
 <p>The span, or linear closure, or linear span, or linear hull, of a set is the smallest linear subspace that
 	contains
-	the set. It is the set of linear combinations of elements of S. The span of a set is a vector space, so you can
+	the set. It is the set of linear combinations of elements of S. The span of a set is a vector space, so you
+	can
 	use
-	the phrases: set S spans vector space V; S generates V; V is spanned by S; V is generated by S; S is a spanning
+	the phrases: set S spans vector space V; S generates V; V is spanned by S; V is generated by S; S is a
+	spanning
 	set
 	of V; S is a generating set of V.</p>
 <h4>Linear Independence</h4>
-<p>In any vector space, a set of vectors is linearly independent if none of its elements is a linear combination of
+<p>In any vector space, a set of vectors is linearly independent if none of its elements is a linear combination
+	of
 	the
 	others from the set. Otherwise the set is linearly dependent. A spanning set is minimal if and only if it is
 	linearly independent. Subset preserves independence and superset preserves dependence.</p>
-<p>Sets are collections with two properties: (i) order does not matter, and (ii) duplicates collapse. A collection
+<p>Sets are collections with two properties: (i) order does not matter, and (ii) duplicates collapse. A
+	collection
 	where
-	order does not matter and duplicates don't collapse is a multiset. So technically if we have a duplicate vector
+	order does not matter and duplicates don't collapse is a multiset. So technically if we have a duplicate
+	vector
 	in
 	our set it's not technically a set.</p>
 <p>A set S is linearly independent if and only if for any vector v in S, its removal shrinks the span
@@ -921,15 +1185,19 @@ $$\theta=\cos^{-1}(\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|})$$
 	subset
 	with the same span. Any set with the zero vector is linearly dependent.</p>
 <h4>Linear combinations</h4>
-<p>A linear combination is an expression constructed from a set of terms by multiplying each term by a constant and
+<p>A linear combination is an expression constructed from a set of terms by multiplying each term by a constant
+	and
 	adding the results. So linear combinations are constructed from sets.</p>
 <h4>Real coordinate space</h4>
-<p>Real coordinate space of dimension n, denoted \(\mathbb{R}^n\), is the set of the n-tuples of real numbers, that
+<p>Real coordinate space of dimension n, denoted \(\mathbb{R}^n\), is the set of the n-tuples of real numbers,
+	that
 	is
-	the set of all sequences of n real numbers. It is a real vector space, and its elements are called coordinate
+	the set of all sequences of n real numbers. It is a real vector space, and its elements are called
+	coordinate
 	vectors. \(\mathbb{R}^n\) has an element \((x_1, x_2, ..., x_n)\).</p>
 <h4>Minimal/maximal sets</h4>
-<p>A minimal spanning set is one with the lowest number of vectors that spans the space. A maximal spanning set is
+<p>A minimal spanning set is one with the lowest number of vectors that spans the space. A maximal spanning set
+	is
 	the
 	one with the highest number of vectors, and therefore IS the space. A minimal spanning set is linearly
 	independent.
@@ -937,7 +1205,8 @@ $$\theta=\cos^{-1}(\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|})$$
 <h4>Basis</h4>
 <p>A basis for a vector space is a sequence of vectors that is linearly independent and that spans the space.
 	Because a
-	basis is a sequence, order matters and it is denoted with angle brackets \(\langle \vec{\beta}_1, \vec{\beta}_2,
+	basis is a sequence, order matters and it is denoted with angle brackets \(\langle \vec{\beta}_1,
+	\vec{\beta}_2,
 	...\rangle\). For any \(\mathbb{R}^n\), the standard or natural basis is the vectors that have 1 in their
 	respective
 	components and 0 in everything else. For example, R2 natural basis is (1,0) and (0,1). The trivial space has
@@ -947,93 +1216,127 @@ $$\theta=\cos^{-1}(\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|})$$
 	free variables. The vectors in the solution set is the basis and the solutions spanned by the basis is the
 	solution
 	set and the vector space of solutions.</p>
-<p>You can represent any vector in the vector space using the basis by using a column vector of the coefficients of
+<p>You can represent any vector in the vector space using the basis by using a column vector of the coefficients
+	of
 	a
 	linear combination of the basis vectors. This requires the basis to be in sequence.</p>
 $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pmatrix}_B$$
 <h4>Dimension</h4>
-<p>A vector space is finite-dimensional if it has a basis with only finitely many vectors. The Exchange Lemma states
+<p>A vector space is finite-dimensional if it has a basis with only finitely many vectors. The Exchange Lemma
+	states
 	that
-	if you have a basis, then you make a linear combination of the vectors in the basis and switch that vector with
+	if you have a basis, then you make a linear combination of the vectors in the basis and switch that vector
+	with
 	one
 	its constituents, then that new sequence with the vector is also a basis of the same space. In any
-	finite-dimensional vector space, all bases have the same number of elements. The dimension of a vector space is
+	finite-dimensional vector space, all bases have the same number of elements. The dimension of a vector space
+	is
 	the
-	number of vectors in any of its bases. No linearly independent set can have a size greater than the dimension of
+	number of vectors in any of its bases. No linearly independent set can have a size greater than the
+	dimension of
 	the
 	enclosing space. Basically, if you have a basis which is the size of the space, then this basis spans that
 	space.
-	You can have linearly independent sets within that basis that do not span the space, but you can turn those sets
+	You can have linearly independent sets within that basis that do not span the space, but you can turn those
+	sets
 	into a basis to eventually span the space.</p>
 <h4>Vector spaces</h4>
-<p>The row space of a matrix is the span of the set of its rows. The row rank is the dimension of this space, the
+<p>The row space of a matrix is the span of the set of its rows. The row rank is the dimension of this space,
+	the
 	number
-	of linearly independent rows. If two matrices are related by a row operation, then their row spaces are equal.
+	of linearly independent rows. If two matrices are related by a row operation, then their row spaces are
+	equal.
 	Gaussian reduction works by eliminating linear dependences among rows, leaving the span unchanged, until no
-	nontrivial linear relationships remain among the nonzero rows. In short, Gauss's method produces a basis for the
+	nontrivial linear relationships remain among the nonzero rows. In short, Gauss's method produces a basis for
+	the
 	row
-	space. The column space of a matrix is the span of the set of its columns. The column rank is the dimension of
+	space. The column space of a matrix is the span of the set of its columns. The column rank is the dimension
+	of
 	the
 	column space, the number of linearly independent columns.</p>
-<p>The tranpose of a matrix is the result of interchanging its rows and columns. To find the basis for the column
+<p>The tranpose of a matrix is the result of interchanging its rows and columns. To find the basis for the
+	column
 	space,
 	transpose the matrix, reduce by Gauss's method, and then transpose back.</p>
-<p>For any matrix, the row rank and column rank are equal. The rank of a matrix is its row rank or column rank. If a
+<p>For any matrix, the row rank and column rank are equal. The rank of a matrix is its row rank or column rank.
+	If a
 	linear system has at least one particular solution for the set of solutions, the number of parameters equals
 	\(n-r\),
 	the number of variables minus the rank of the matrix of coefficients.</p>
 <img src="{{ url_for('static', filename='img/math/rank.png') }}">
 <h4>Head canon summary</h4>
-<p>After reading the first couple of chapters of Linear Algebra book, my head started getting confused and I needed
+<p>After reading the first couple of chapters of Linear Algebra book, my head started getting confused and I
+	needed
 	to
-	review. This is how I ended up visualizing all these different parts in my head. Imagine a piece of paper as the
+	review. This is how I ended up visualizing all these different parts in my head. Imagine a piece of paper as
+	the
 	whole vector space, cut up into a bunch of squares. There's a line across the middle (x-axis location)
 	indicating
 	zero. Grab a bunch of these squares/spots on the vector space, and you have a set, which is a collection of
 	vectors.
-	If you extend each square/vector vertically up and down infinitely, that will represent linear closure of the
-	vector. Each vector will span a subspace (the line up and down) of the whole vector space. If you have a set of
-	vectors, then the set will span all those areas up and down. If you have more than one vector vertially aligned
+	If you extend each square/vector vertically up and down infinitely, that will represent linear closure of
+	the
+	vector. Each vector will span a subspace (the line up and down) of the whole vector space. If you have a set
+	of
+	vectors, then the set will span all those areas up and down. If you have more than one vector vertially
+	aligned
 	with
-	each other, then they are linearly dependent, meaning you can make up one vector from the other. A basis of a
+	each other, then they are linearly dependent, meaning you can make up one vector from the other. A basis of
+	a
 	vector
-	space is if you take one vector/square from each x-coordinate, so that the span of the set of vectors you chose
-	makes up the whole vector space. The natural basis is if you take each square from the x-axis. Gauss's method
-	basically takes a set of vectors, finds the vectors that are vertically aligned with others, and removes them
+	space is if you take one vector/square from each x-coordinate, so that the span of the set of vectors you
+	chose
+	makes up the whole vector space. The natural basis is if you take each square from the x-axis. Gauss's
+	method
+	basically takes a set of vectors, finds the vectors that are vertically aligned with others, and removes
+	them
 	and
 	boils them down to just one square per subspace (vertical span).</p>
 <img src="{{ url_for('static', filename='img/math/headcanon.png') }}">
 <img src="{{ url_for('static', filename='img/math/headcanon2.png') }}">
 <h4>Fields</h4>
 <p>A field is a set on which addition, subtraction, multiplication, and division are defined and behave as the
-	corresponding operations on rational and real numbers do. A field is a fundamental algebraic structure. The best
-	known fields are the field of rational numbers, the field of real numbers and the field of complex numbers. The
+	corresponding operations on rational and real numbers do. A field is a fundamental algebraic structure. The
+	best
+	known fields are the field of rational numbers, the field of real numbers and the field of complex numbers.
+	The
 	classic definition, referred as the field axioms, are:</p>
 <ul>
-	<li>Associativity of addition and multiplication: \(a+(b+c)=(a+b)+c\) and \(a\cdot(b\cdot c)=(a\cdot b)\cdot c\)
+	<li>Associativity of addition and multiplication: \(a+(b+c)=(a+b)+c\) and \(a\cdot(b\cdot c)=(a\cdot b)\cdot
+		c\)
 	</li>
 	<li>Commutativity of addition and multiplication: \(a+b=b+a\) and \(a\cdot b = b \cdot a\)</li>
-	<li>Additive and multiplicative identity: there exist two different elements 0 and 1 in F such that \(a+0=a\)
+	<li>Additive and multiplicative identity: there exist two different elements 0 and 1 in F such that
+		\(a+0=a\)
 		and \(a+(-a)=0\)</li>
-	<li>Additive inverses: for every a in F, there exists an element in F, denoted -a, called the additive inverse
+	<li>Additive inverses: for every a in F, there exists an element in F, denoted -a, called the additive
+		inverse
 		of a such that \(a+ (-a) = 0\)</li>
-	<li>Multiplicative inverses: for every \(a\neq 0\) in F, there exists an element in F, denoted by \(a^{-1}\),
+	<li>Multiplicative inverses: for every \(a\neq 0\) in F, there exists an element in F, denoted by
+		\(a^{-1}\),
 		called the multiplicative inverse of a such that \(a\cdot a^{-1}=1\)</li>
 	<li>Distributivity of multiplication over addition, such that \(a\cdot (b+c)=(a\cdot b)+(a\cdot c)\)</li>
 </ul>
-<p>An example of a field is the ste of rational numbers with its usual addition and multiplication operations. An
-	example of an algebraic structure that is not a field is the ingers, because it fails the condition that there
+<p>An example of a field is the ste of rational numbers with its usual addition and multiplication operations.
+	An
+	example of an algebraic structure that is not a field is the ingers, because it fails the condition that
+	there
 	is no multiplicative inverse. (5 is an integer but 1/5 is not.)</p>
 <h4>Dimensional analysis and Buckingham's theorem</h4>
 <p>In order to standardize across different unit systems, we should add units to all numerical values. To fix an
-	equation that we have already, we can add a dimensional constant to any constants that we use to convert between
-	units. Those equations that use dimensional constants (all values have units attached) are considered complete.
-	The dimensional formula of some variable is its units, for example velocity is length over time. If all of the
+	equation that we have already, we can add a dimensional constant to any constants that we use to convert
+	between
+	units. Those equations that use dimensional constants (all values have units attached) are considered
+	complete.
+	The dimensional formula of some variable is its units, for example velocity is length over time. If all of
+	the
 	terms that we add or subtract in our equation have the same dimensional formula, then our equation is
 	dimensionally homogeneous. If a term has no dimensions then it is dimensionless.</p>
 <p>So we know that you can construct a dimensionally homogeneous expression by either multiplying dimensionless
-	quantities or by adding dimensionless terms. If we assign any dimensionless product to be \(\prod_1, \prod_2,
-	...\), then there has to be some function f (either adding or subtracting the products) that results in 0.</p>
+	quantities or by adding dimensionless terms. If we assign any dimensionless product to be \(\prod_1,
+	\prod_2,
+	...\), then there has to be some function f (either adding or subtracting the products) that results in 0.
+</p>
 <p>Buckingham's theorem is a formalization of Rayleigh's method of dimensional analysis. Loosely, it states that
 	if
 	there is a physically meaningful equation involving a certain number n of physical variables, then the
@@ -1049,37 +1352,49 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 	allowfullscreen></iframe>
 <h4>Isomorphism</h4>
-<p>An isomorphism between two vector spaces V and W is a map V -> W such that 1) it is a correspondence (one-to-one
+<p>An isomorphism between two vector spaces V and W is a map V -> W such that 1) it is a correspondence
+	(one-to-one
 	and onto) and 2) preserves structure (if you add two vectors or scale a vector you'll get the corresponding
 	vector in the map). To show that something is onto, you must show that any member of one
 	domain is the image of some member of the other. In essence, each vector in vector space 1 must map onto a
-	vector in vector space 2. If this is possible, then the two vector spaces are isomorphs. Isomorphs have the same
+	vector in vector space 2. If this is possible, then the two vector spaces are isomorphs. Isomorphs have the
+	same
 	number of dimensions.</p>
 <img
 	src="https://shared.ontariotechu.ca/shared/department/student-life/student-learning-centre/nool/images/math/one-to-one-functions.JPG">
 <img
 	src="https://shared.ontariotechu.ca/shared/department/student-life/student-learning-centre/nool/images/math/onto-functions.JPG">
-<p>An automorphism is an isomorphism of a space with itself. A dilation map that multiplies all vectors by a nonzero
-	scalar s is an automorphism. Another automorphism is a rotation or turning map. A third type of automoprhism is
+<p>An automorphism is an isomorphism of a space with itself. A dilation map that multiplies all vectors by a
+	nonzero
+	scalar s is an automorphism. Another automorphism is a rotation or turning map. A third type of automoprhism
+	is
 	one that flips or reflects all vectors over a line through the origin.</p>
 <p>The rotation of a vector counterclockwise by \(\theta\) is \(\begin{pmatrix}\cos{\theta} && -\sin{\theta} \\
 	\sin{\theta} && \cos{\theta}\end{pmatrix}\).</p>
 <h4>Homomorphism</h4>
-<p>A function between vector spaces that preserves addition and scalar multiplication is a homomorphism or linear
-	map. Unlike isomorphisms, homomorphisms do not need to be onto or one-to-one. Therefore, under a homomorphism,
+<p>A function between vector spaces that preserves addition and scalar multiplication is a homomorphism or
+	linear
+	map. Unlike isomorphisms, homomorphisms do not need to be onto or one-to-one. Therefore, under a
+	homomorphism,
 	the
-	image of any subspace of the domain is also a subspace of the codomain. The image of the entire space, the range
+	image of any subspace of the domain is also a subspace of the codomain. The image of the entire space, the
+	range
 	of
 	the homomorphism, is a subspace of the codomain. The range space of a homomorphism is denoted h(V), and the
-	dimension of the range space is the map's rank. In generalizing from isomorphisms to homomorphisms by dropping
+	dimension of the range space is the map's rank. In generalizing from isomorphisms to homomorphisms by
+	dropping
 	the
-	one-to-one condition, we lose the property that, intuitively, the domain is "the same" as the range. We retain
+	one-to-one condition, we lose the property that, intuitively, the domain is "the same" as the range. We
+	retain
 	that
-	a homomorphism describes how the domain is "analogous to" or "like" the range. We think of \(\mathbb{R}^3\) as
-	like
-	\(\mathbb{R}^2\) except that vectors have an extra component. We think of the vector with components x, y, and z
+	a homomorphism describes how the domain is "analogous to" or "like" the range. We think of \(\mathbb{R}^3\)
 	as
-	like the vector with components x and y. Defining the projection map makes precise which members of the domain
+	like
+	\(\mathbb{R}^2\) except that vectors have an extra component. We think of the vector with components x, y,
+	and z
+	as
+	like the vector with components x and y. Defining the projection map makes precise which members of the
+	domain
 	we
 	are thinking of as related to which members of the codomain. The idea that a homomorphism between two spaces
 	expresses how the domain's vectors fall into classes that act like the range's vectors is a good way to view
@@ -1087,95 +1402,124 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <p>The null space or kernel of a linear map \(h:V\rightarrow W\) is the inverse image of \(\vec{0}_W\). The
 	dimension of
 	the
-	null space is the map's nullity. A linear map's rank plus its nullity equals the dimension of its domain.</p>
+	null space is the map's nullity. A linear map's rank plus its nullity equals the dimension of its domain.
+</p>
 <img src="{{ url_for('static', filename='img/math/nullity.png') }}">
-<p>So the range space is all the values that the map can create, so it can create (a, 0, b, 0), where a and b can be
-	anything. The inverse of (0, 0, 0, 0) would mean that x and y have to be 0, but z can be anything since z is not
-	accounted for in the image, so the null space is (0, 0, z). The dimension of (a 0 b 0) is how many vectors are
+<p>So the range space is all the values that the map can create, so it can create (a, 0, b, 0), where a and b
+	can be
+	anything. The inverse of (0, 0, 0, 0) would mean that x and y have to be 0, but z can be anything since z is
+	not
+	accounted for in the image, so the null space is (0, 0, z). The dimension of (a 0 b 0) is how many vectors
+	are
 	in a
-	basis (for example (1 0 0 0) and (0 0 1 0) is one basis), so the dimension of the range space (aka the rank of
+	basis (for example (1 0 0 0) and (0 0 1 0) is one basis), so the dimension of the range space (aka the rank
+	of
 	the
-	linear map) is 2. The dimension of (0 0 z) is 1, and so the nullity is 1. 2 + 1 = 3, which is the dimension of
+	linear map) is 2. The dimension of (0 0 z) is 1, and so the nullity is 1. 2 + 1 = 3, which is the dimension
+	of
 	the
 	domain (x y z) has a natural basis (1 0 0), (0 1 0), (0 0 1).</p>
 <p>For a homomorphism to exist, the dimension of the range must be less than or equal to the dimension of the
 	domain.
-	Under a homomorphism, independence may be lost. In contrast, dependence stays. Under a linear map, the image of
+	Under a homomorphism, independence may be lost. In contrast, dependence stays. Under a linear map, the image
+	of
 	a
 	linearly dependent set is linearly dependent.</p>
 <img src="{{ url_for('static', filename='img/math/nullity2.png') }}">
 <h4>Matrix representation of linear maps</h4>
 <img src="{{ url_for('static', filename='img/math/matrix_representation.png') }}">
 <img src="{{ url_for('static', filename='img/math/matrix_representation_example.png') }}">
-<p>To give a matrix representing a map, first fix some bases. Then, for each vector in the domain's basis, find its
-	image under the map. Then find the representation of each image with respect to the codomain's basis. Finally,
+<p>To give a matrix representing a map, first fix some bases. Then, for each vector in the domain's basis, find
+	its
+	image under the map. Then find the representation of each image with respect to the codomain's basis.
+	Finally,
 	adjoin these representations to give the representing matrix.</p>
-<p>The matrix-vector product of a mxn matrix and a nx1 vector is if you add up each term in each row in the matrix
+<p>The matrix-vector product of a mxn matrix and a nx1 vector is if you add up each term in each row in the
+	matrix
 	with
-	the values in the vector, each of these sums makes up the new matrix-vector product. Briefly, application of a
+	the values in the vector, each of these sums makes up the new matrix-vector product. Briefly, application of
+	a
 	linear map is represented by the matrix-vector product of the map's representative and the vector's
 	representative.
-	A good way to view matrix-vector product is that it is formed from the dot products of the rows of the matrix
+	A good way to view matrix-vector product is that it is formed from the dot products of the rows of the
+	matrix
 	with
 	the column vector.
 </p>
 <img src="{{ url_for('static', filename='img/math/matrix_product.png') }}">
-<p>The application of a linear map is represented by the matrix-vector product of the map's representative and the
+<p>The application of a linear map is represented by the matrix-vector product of the map's representative and
+	the
 	vector's representative.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RAGuqGDpauY" title="YouTube video player"
 	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 	allowfullscreen></iframe>
 <h4>Matrices as Linear Maps</h4>
-<p>Any matrix also defines a map. The dimension of the map's domain is the number of columns in the matrix and the
-	dimension of the codomain is the number of rows. Any matrix represents a homomorphism between vector spaces of
-	appropriate dimensions, with respect to any pair of bases. The rank of a matrix equals the rank of any map that
+<p>Any matrix also defines a map. The dimension of the map's domain is the number of columns in the matrix and
+	the
+	dimension of the codomain is the number of rows. Any matrix represents a homomorphism between vector spaces
+	of
+	appropriate dimensions, with respect to any pair of bases. The rank of a matrix equals the rank of any map
+	that
 	it
-	represents. A linear map is onto if the rank of its matrix representation equals the number of its rows, and a
-	linear map is one-to-one if and only if the rank of its matrix representation equals the number of its columns.
+	represents. A linear map is onto if the rank of its matrix representation equals the number of its rows, and
+	a
+	linear map is one-to-one if and only if the rank of its matrix representation equals the number of its
+	columns.
 	A
 	linear map that is one-to-one and onto is nonsingular, otherwise it is singular. That is, a linear map is
-	nonsingular if and only if it is an isomorphism. A nonsingular linear map is represented by a square matrix. A
-	square matrix represents nonsingular maps if and only if it is a nonsingular matrix. Thus, a matrix represents
+	nonsingular if and only if it is an isomorphism. A nonsingular linear map is represented by a square matrix.
+	A
+	square matrix represents nonsingular maps if and only if it is a nonsingular matrix. Thus, a matrix
+	represents
 	isomorphisms if and only if it is square and nonsingular. By fixing spaces and bases we get a correspondence
 	between
 	maps and matrices.</p>
 <h4>Matrix Operations</h4>
-<p>The scalar multiple of a matrix is the result of entry-by-entry scalar multiplication. The sum of two same-sized
+<p>The scalar multiple of a matrix is the result of entry-by-entry scalar multiplication. The sum of two
+	same-sized
 	matrices is their entry-by-entry sum. Any map scaled by 0 is the zero homomorphism and for any matrix
 	multiplication
-	by 0 is the matrix with all entries zero. A zero matrix has all entries 0, written as \(Z_{n\times m}\) or just
+	by 0 is the matrix with all entries zero. A zero matrix has all entries 0, written as \(Z_{n\times m}\) or
+	just
 	0.
 	The matrix-multiplicative product is shown below:
 </p>
 <img src="{{ url_for('static', filename='img/math/matrix_multiplicative.png') }}">
 <p>The number of columns in the first matrix must equal the number of rows in the second. The i, j entry of the
 	matrix
-	product is the dot product of row i of the left matrix with column j of the right one. The composition of linear
+	product is the dot product of row i of the left matrix with column j of the right one. The composition of
+	linear
 	maps
 	is represented by the matrix product of the representatives. Matrix products are associative and distributes
 	over
 	matrix addition. The matrix with all zeros except for 1s from the top left to bottom right is the identity
 	matrix,
-	such that IH=H. A matrix with all 0s except for a 1 in the i,j entry is an i,j unit matrix (or matrix unit). The
+	such that IH=H. A matrix with all 0s except for a 1 in the i,j entry is an i,j unit matrix (or matrix unit).
+	The
 	main diagonal (or principal diagonal or simply diagonal) of a square matrix goes form the upper left to the
 	lower
-	right. A diagonal matrix is square and has 0's off the main diagonal. A permutation matrix is square and is all
+	right. A diagonal matrix is square and has 0's off the main diagonal. A permutation matrix is square and is
+	all
 	0s
-	except for a single 1 in each row and column. The elementary reduction matrices (or just elementary matrices)
+	except for a single 1 in each row and column. The elementary reduction matrices (or just elementary
+	matrices)
 	result
 	from applying a single Gaussian operation to an identity matrix.</p>
 <p>If the elementary reduction matrix comes first, then it acts on the rows; if it's second, then it acts on the
 	columns.</p>
 <h4>Inverses</h4>
-<p>A matrix G is a left inverse matrix of the matrix H if GH is the identity matrix. It is a right inverse if HG is
+<p>A matrix G is a left inverse matrix of the matrix H if GH is the identity matrix. It is a right inverse if HG
+	is
 	the
 	identity. A matrix H with a two-sided inverse is an invertible matrix. That two-sided inverse is denoted
 	\(H^{-1}\).
 	A matrix is invertible if and only if it is nonsingular. A product of invertible matrices is invertible. A
 	matrix H
-	is invertible if and only if it can be written as the product of elementary reduction matrices. We can compute
+	is invertible if and only if it can be written as the product of elementary reduction matrices. We can
+	compute
 	the
-	inverse by applying to the identity matrix the same row steps, in the same order, that Gauss-Jordan reduce H.
+	inverse by applying to the identity matrix the same row steps, in the same order, that Gauss-Jordan reduce
+	H.
 </p>
 <img src="{{ url_for('static', filename='img/math/2by2_inverse.png') }}">
 <img src="{{ url_for('static', filename='img/math/inverse.png') }}">
@@ -1183,24 +1527,33 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <p>The change of basis matrix for bases B, D within V is the presentation of the identity map id: V -> V with
 	respect to those bases. A better name would be 'change of representation matrix' but the above name is
 	standard. If left-multiplication by a matrix changes the representation of the vecotr from one basis to
-	another, then M is the change of basis matrix. A matrix changes bases if and only if it is nonsingular. A matrix
+	another, then M is the change of basis matrix. A matrix changes bases if and only if it is nonsingular. A
+	matrix
 	is
 	nonsingular if and only if it represents the identity map with respect to some pair of bases.</p>
 <h4>Changing Map Representations</h4>
-<p>To convert from the matrix H representing a map h with respect to B, D, to the matrix \(\hat{H}\) representing it
+<p>To convert from the matrix H representing a map h with respect to B, D, to the matrix \(\hat{H}\)
+	representing it
 	wit
 	hrespect to \(\hat{B}\), \(\hat{D}\) use this formula.</p>
 \[\hat{H}=\text{Rep}_{D,\hat{D}}(\text{id})\cdot H \cdot \text{Rep}_{\hat{B},B}(\text{id})\]
-<p>Naturally we usually prefer representations that are easier to understand. We say that a map or matrix has been
-	diagonalized when we find a basis B such that the representation is diagonal with respect to B, B, that is, with
-	respect to the same starting basis as ending basis. Same-sized matrices H and \(\hat{H}\) are matrix equivalent
+<p>Naturally we usually prefer representations that are easier to understand. We say that a map or matrix has
+	been
+	diagonalized when we find a basis B such that the representation is diagonal with respect to B, B, that is,
+	with
+	respect to the same starting basis as ending basis. Same-sized matrices H and \(\hat{H}\) are matrix
+	equivalent
 	if
-	there are nonsingular matrices P and Q such that \(\hat{H}=PHQ\). Matrix equivalent matrices represent the same
+	there are nonsingular matrices P and Q such that \(\hat{H}=PHQ\). Matrix equivalent matrices represent the
+	same
 	map,
-	with respect to appropriate pairs of bases. Matrix equivalence is an equivalence relation. If matrices are row
-	equivalent then they are also matrix equivalent, but the converse is not always true. Any mxn matrix of rank k
+	with respect to appropriate pairs of bases. Matrix equivalence is an equivalence relation. If matrices are
+	row
+	equivalent then they are also matrix equivalent, but the converse is not always true. Any mxn matrix of rank
+	k
 	is
-	matrix equivalent to the mxn matrix that is all zeros except that the first k diagonal entries are ones. This is
+	matrix equivalent to the mxn matrix that is all zeros except that the first k diagonal entries are ones.
+	This is
 	a
 	block partial-identity form. This is the canonical representative of the matrix equivalence class. Matrix
 	equivalence classes are characterized by rank: two same-sized matrices are
@@ -1209,10 +1562,12 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <p>The orthogonal projection of a vector v onto the line spanned by a nonzero vector s is:</p>
 \[\text{proj}_{[\vec{s}]}(\vec{v})=\frac{\vec{v}\cdot \vec{s}}{\vec{s}\cdot \vec{s}}\vec{s}\]
 <h4>Gram-Schmidt Orthogonalization</h4>
-<p>Vectors are mutually orthogonal when any two are orthogonal. If the vectors in a set are mutually orthogonal and
+<p>Vectors are mutually orthogonal when any two are orthogonal. If the vectors in a set are mutually orthogonal
+	and
 	nonzero than that set is linearly indepdent. If the vectors in a size k subset of a k dimensional space are
 	mutually
-	orthogonal and nonzero than that set is a basis for the space. The converse does not necessarily hold. However,
+	orthogonal and nonzero than that set is a basis for the space. The converse does not necessarily hold.
+	However,
 	we
 	can get the partial converse that for every subspace there is at least one basis consisting of mutually
 	orthogonal
@@ -1223,53 +1578,69 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	producing an orthonormal basis.
 </p>
 <h4>Projection onto a subspace</h4>
-<p>For any direct sum \(V=M\oplus N\) and any \(\vec{v}\in V\), the projection of \(\vec{v}\) onto \(M\) along \(N\)
-	is \[\text{proj}_{M,N}(\vec{v})=\vec{m}\] where \(\vec{v}=\vec{m}+\vec{n}\) with \(\vec{m}\in M, \vec{n}\in N\).
+<p>For any direct sum \(V=M\oplus N\) and any \(\vec{v}\in V\), the projection of \(\vec{v}\) onto \(M\) along
+	\(N\)
+	is \[\text{proj}_{M,N}(\vec{v})=\vec{m}\] where \(\vec{v}=\vec{m}+\vec{n}\) with \(\vec{m}\in M, \vec{n}\in
+	N\).
 </p>
 <p>The
 	orthogonal complement of a subspace \(M\) of \(\mathbb{R}^n\) is \[M^\perp = \{\vec{v}\in
-	\mathbb{R}^n|\vec{v}\text{ is perpendicular to all vectors in M}\}\] (read "M perp"). The orthogonal projection
+	\mathbb{R}^n|\vec{v}\text{ is perpendicular to all vectors in M}\}\] (read "M perp"). The orthogonal
+	projection
 	\(\text{proj}_M(\vec{v})\) of a vector is its projection onto \(M\) along \(M^\perp\).</p>
 <h4>Direct sum</h4>
 <p>The direct sum is an operation in abstract algebra. The direct sum \(\mathbb{R}\oplus\mathbb{R}\) is the
 	Cartesian
 	plane \(\mathbb{R}^2\).</p>
 <h4>Abelian group</h4>
-<p>An abelian group, also called a commutative group, is a group in which the result of applying the group operation
+<p>An abelian group, also called a commutative group, is a group in which the result of applying the group
+	operation
 	of
 	two group elements does not depend on the order in which they are written. That is, the group operation is
 	commutative.</p>
 <h4>Line of Best Fit</h4>
 <p>Scientists are often presented with a system that has no solution but they must find an answer anyway. For
 	example,
-	let's say you flip a coin and try to find the probability of it being heads. You flip the coin 30 times and you
+	let's say you flip a coin and try to find the probability of it being heads. You flip the coin 30 times and
+	you
 	get
-	16 heads, 60 times and you get 34 heads, and 90 times and get 51 heads. The solution to this system to find the
-	probability doesn't work. That is, the vector of data that we collected is not in the subspace where ideally it
-	would be. However, we can create an orthogonal projection of the data vector into the line subspace that gives
+	16 heads, 60 times and you get 34 heads, and 90 times and get 51 heads. The solution to this system to find
+	the
+	probability doesn't work. That is, the vector of data that we collected is not in the subspace where ideally
+	it
+	would be. However, we can create an orthogonal projection of the data vector into the line subspace that
+	gives
 	us a
 	best guess, the vector in the subspace closest to the data vector. This will give us a line of best fit.
 	Minimizing
-	the distance between the given vector and the vector used as the right-hand side minimizes the total of these
+	the distance between the given vector and the vector used as the right-hand side minimizes the total of
+	these
 	vertical legnths and so we say that the line comes from fitting by least-squares.</p>
 <h4>Geometry of Linear Maps</h4>
 <p>You can think of any linear transformation is as a composition of dilations (scaling components by a number),
-	reflections (swapping components), skews (scaling a component relative to another component), and projections
-	(partial identity matrix). A linear transformation is one that maintains even spaces and lines. We can think of
+	reflections (swapping components), skews (scaling a component relative to another component), and
+	projections
+	(partial identity matrix). A linear transformation is one that maintains even spaces and lines. We can think
+	of
 	calculus as studying the local effect of a map. For example, representation of the rotation by (2pi/3)
 	counterclockwise is shown below:</p>
 <img src="{{ url_for('static', filename='img/math/rotation.png') }}" width="60%">
 <h4>Markov chains</h4>
-<p>Say you have a game where you win a dollar if you get heads on a coin flip and you lose a dollar on tails. You
+<p>Say you have a game where you win a dollar if you get heads on a coin flip and you lose a dollar on tails.
+	You
 	start
-	with $3 and you stop playing if you reach $0 or $5. What is the chance the game takes at least five flips? You
+	with $3 and you stop playing if you reach $0 or $5. What is the chance the game takes at least five flips?
+	You
 	can
 	define each dollar amount you can have as a state \(s_0, s_1,...,s_5\). A player in state \(s3\) has a 0.5
 	chance to
-	go to s2 or s4. Once you hit the boundary (s0 or s5), the state no longer changes (this is called an absorbing
-	state). If you know what the probability of someone being in a certain state, say s1, after n flips (\(p_1(n)\)
+	go to s2 or s4. Once you hit the boundary (s0 or s5), the state no longer changes (this is called an
+	absorbing
+	state). If you know what the probability of someone being in a certain state, say s1, after n flips
+	(\(p_1(n)\)
 	then
-	you can say that the probability of the person being at any state is denoted as \(\begin{pmatrix}0.5 && 0 && 0.5
+	you can say that the probability of the person being at any state is denoted as \(\begin{pmatrix}0.5 && 0 &&
+	0.5
 	&&
 	0 && 0 && 0\end{pmatrix}\). Adjoin all
 	these
@@ -1281,19 +1652,25 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	certain
 	number of steps. Each vector of p (such as the initial one we just listed) is a probability vector and the
 	matrix
-	shown above is the transition matrix. Markov chain models are notable in that they are historyless such that the
+	shown above is the transition matrix. Markov chain models are notable in that they are historyless such that
+	the
 	next state depends only on the current state.</p>
 <h4>Orthonormal Matrices</h4>
 <p>Euclid considered two figures to be thes ame if they have the same size and shape, stating that they are
 	congruent by
-	imagining that if we picked the plane up, slid it over and rotated it, but didn't warp or stretch it, and then
+	imagining that if we picked the plane up, slid it over and rotated it, but didn't warp or stretch it, and
+	then
 	put
-	it back down, we could superimpose the first figure on the second. In modern terminology, picking the plane up
+	it back down, we could superimpose the first figure on the second. In modern terminology, picking the plane
+	up
 	means
-	considering a map from the plane to itself. Accordingly, we consider a map to be distance-preserving or a rigid
-	motion or an isometry if all points remain equidistant from each other. We also define a plane figure to be a
+	considering a map from the plane to itself. Accordingly, we consider a map to be distance-preserving or a
+	rigid
+	motion or an isometry if all points remain equidistant from each other. We also define a plane figure to be
+	a
 	set of
-	points in the plane and that two figures are congruent if there is a distance-preserving map from the plane to
+	points in the plane and that two figures are congruent if there is a distance-preserving map from the plane
+	to
 	itself that carries on eifugre onto the other.</p>
 <p>Not all distance-preserving maps are linear (if it shifts it away from the origin). However, a map t that is
 	distance-preserving and sends the zero vector to itself is linear. Thus, any distance-preserving
@@ -1306,12 +1683,16 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <p>Matrices for which when the columns are written as vectors then they are of length one and are mutually
 	orthogonal
 	are called orthonormal or orthogonal matrices.</p>
-<p>A distance-preserving map is direct if it preserves orientations and opposite if it reverses orientation. Another
-	idea, besides congruence of figures, is that figures are similar if they are congruent after a change of scale.
+<p>A distance-preserving map is direct if it preserves orientations and opposite if it reverses orientation.
+	Another
+	idea, besides congruence of figures, is that figures are similar if they are congruent after a change of
+	scale.
 	We
-	have that figures are similar if there is an orthonormal matrix \(T\) such that the points \(\vec{q}\) on one
+	have that figures are similar if there is an orthonormal matrix \(T\) such that the points \(\vec{q}\) on
+	one
 	are
-	derived from the points \(\vec{p}\) by \(\vec{q}=(kT)\vec{v}+\vec{p}_0\) for some nonzero real number \(k\) and
+	derived from the points \(\vec{p}\) by \(\vec{q}=(kT)\vec{v}+\vec{p}_0\) for some nonzero real number \(k\)
+	and
 	a
 	constant vector \(\vec{p}_0\).</p>
 <h4>Determinants</h4>
@@ -1322,26 +1703,34 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	that
 	the
 	matrix is nonsingular if and only if the determinant is not 0.</p>
-<p>The determinant can be determined by Gauss reduction and multiplying the values on the diagonal (product down its
+<p>The determinant can be determined by Gauss reduction and multiplying the values on the diagonal (product down
+	its
 	diagonal). If there is an
-	addition of a scalar multiple of a row, the determinant stays the same. If there is a row swap, the determinant
-	switches signs (switches to negative or back). If there is a scalar multiple of a row, the determinant scales
+	addition of a scalar multiple of a row, the determinant stays the same. If there is a row swap, the
+	determinant
+	switches signs (switches to negative or back). If there is a scalar multiple of a row, the determinant
+	scales
 	with
-	that scalar. An identity matrix has a determinant of 1. A matrix with two identical rows has a determinant of
+	that scalar. An identity matrix has a determinant of 1. A matrix with two identical rows has a determinant
+	of
 	zero.
-	A matrix with a zero row has a determinant of zero. For each n, if there is an nxn determinant function then it
+	A matrix with a zero row has a determinant of zero. For each n, if there is an nxn determinant function then
+	it
 	is
 	unique.</p>
 <h4>Determinants as Size Functions</h4>
-<p>The box formed by two vectors is a box or parallelepiped. The determinant of a transformation matrix is how much
+<p>The box formed by two vectors is a box or parallelepiped. The determinant of a transformation matrix is how
+	much
 	area
 	is covered by
 	the
 	basis vectors (in the parallelepiped) after transforming by that matrix
-	relative to the starting area. Scaling one of the vectors leads to a scaling of this area, whereas addition of a
+	relative to the starting area. Scaling one of the vectors leads to a scaling of this area, whereas addition
+	of a
 	multiple of one vector onto another doesn't change the area. Swapping vectors changes the sign of the
 	determinant,
-	reflecting the orientation or sense of the box. The volume of a box is the absolute value of the determinant of
+	reflecting the orientation or sense of the box. The volume of a box is the absolute value of the determinant
+	of
 	a
 	matrix with those vectors as columns. The determinant of a product is the product of the determinants
 	\(|TS|=|T|\cdot |S|\). If a matrix is invertible then the determinant of its inverse is the inverse of its
@@ -1349,79 +1738,105 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <img src="{{ url_for('static', filename='img/math/parallel.png') }}">
 <img src="{{ url_for('static', filename='img/math/parallel2.png') }}">
 <h4>Projective Geometry</h4>
-<p>If we look at three random points from a distance and describe it in a painting, we are projecting a collection
+<p>If we look at three random points from a distance and describe it in a painting, we are projecting a
+	collection
 	of
-	three-dimensional points onto a common two dimensional image. This is a central projection from a single point
+	three-dimensional points onto a common two dimensional image. This is a central projection from a single
+	point
 	(from
-	our eyes). The operation of central projection preserves some geometric properties, for instance lines project
+	our eyes). The operation of central projection preserves some geometric properties, for instance lines
+	project
 	to
-	lines. But it fails to preserve some others, such as equal length segments in 3D space can project to segments
+	lines. But it fails to preserve some others, such as equal length segments in 3D space can project to
+	segments
 	of
 	unequal length. The study of these effects is projective geometry.</p>
 <p>If we look at parallel lines vanishing into the
 	horizon as a painter might paint lines, we call these points vanishing points, where the source has parallel
 	lines
 	that never intersect but the image does.</p>
-<p>The first case of central projection is projection done by a movie projector. We can think of each source point
+<p>The first case of central projection is projection done by a movie projector. We can think of each source
+	point
 	as
-	being pushed from the domain plane S outward to the image plane I. The second case of projection is that of the
-	artist pulling the source back to a canvas. A third example is if a pinhole shines an image of a solar eclipse
+	being pushed from the domain plane S outward to the image plane I. The second case of projection is that of
+	the
+	artist pulling the source back to a canvas. A third example is if a pinhole shines an image of a solar
+	eclipse
 	onto
-	a paper. In each of these situations, the source (S), point (P), and image (I) are positioned differently.</p>
+	a paper. In each of these situations, the source (S), point (P), and image (I) are positioned differently.
+</p>
 <img src="{{ url_for('static', filename='img/math/projector.png') }}">
 <img src="{{ url_for('static', filename='img/math/projector2.png') }}">
 <img src="{{ url_for('static', filename='img/math/projector3.png') }}">
-<p>We can describe each by saying that each is a central projection by P of S to I. If we position P such that it is
+<p>We can describe each by saying that each is a central projection by P of S to I. If we position P such that
+	it is
 	parallel to the planes S and I, we can create an environment where we can get all three cases visualized
 	similarly.
-	In the first image, P acts as a movie projector pushing points out from S to I. In the second image, P acts as a
-	painter, pulling the image from S onto I. And in the third, P acts as a pinhole, where the source projects an
+	In the first image, P acts as a movie projector pushing points out from S to I. In the second image, P acts
+	as a
+	painter, pulling the image from S onto I. And in the third, P acts as a pinhole, where the source projects
+	an
 	image
 	through P onto I.
 </p>
 <img src="{{ url_for('static', filename='img/math/projector4.png') }}">
-<p>Next, consider another model using a hemispheric dome where the projector P is at the origin and any source can
+<p>Next, consider another model using a hemispheric dome where the projector P is at the origin and any source
+	can
 	be
 	behind or in front of the
-	projector, or behind the image. For any nonzero vector, let the associated point v in the projective plane be
+	projector, or behind the image. For any nonzero vector, let the associated point v in the projective plane
+	be
 	the
-	set of nonzero vectors lying on the same line through the origin as the vector v. To describe a projective point
+	set of nonzero vectors lying on the same line through the origin as the vector v. To describe a projective
+	point
 	we
-	can give any representative member of the line. Each of these is a homogeneous coordinate vector for the point
+	can give any representative member of the line. Each of these is a homogeneous coordinate vector for the
+	point
 	\(\ell\).
 </p>
 <img src="{{ url_for('static', filename='img/math/projector5.png') }}">
-<p>Finally, reduce this model further by considering a sphere centered at the origin. Any line through the origin
-	intersects the sphere in two spots, said to be antipodal. In this case, any point in the projective plane can be
+<p>Finally, reduce this model further by considering a sphere centered at the origin. Any line through the
+	origin
+	intersects the sphere in two spots, said to be antipodal. In this case, any point in the projective plane
+	can be
 	drawn as a pair of antipodal spots o nthe sphere. They are not two different points but a pair of spots that
 	together make one projective point.</p>
-<p>Just as we did with each projective point, we can describe a projective line with a triple of reals. The reason
+<p>Just as we did with each projective point, we can describe a projective line with a triple of reals. The
+	reason
 	this
-	description as a triple is convenient is that in the projective plane a point v and a line L are incident if and
+	description as a triple is convenient is that in the projective plane a point v and a line L are incident if
+	and
 	only if a dot product of their representatives is zero.</p>
 <h4>Projective plane</h4>
-<p>A projective plane is a geometric structure that extends the concept of aplane. In an ordinary Euclidean plane,
+<p>A projective plane is a geometric structure that extends the concept of aplane. In an ordinary Euclidean
+	plane,
 	two
-	lines intersect in a single point, but there are some pairs of lines (parallel lines) that do not intersect. A
+	lines intersect in a single point, but there are some pairs of lines (parallel lines) that do not intersect.
+	A
 	projective plane can be thought of as an ordinary plane equipped with additional "points at infinity" where
 	parallel
-	lines intersect. A projective plane consists of a set of lines, a set of points, and a relation between points
+	lines intersect. A projective plane consists of a set of lines, a set of points, and a relation between
+	points
 	adn
 	lies called incidence having the properties such that 1) given any two distinct points, there is exactly one
 	line
-	incident with both of them, 2) given any two distinct lines, there is exactly one point incident with both of
+	incident with both of them, 2) given any two distinct lines, there is exactly one point incident with both
+	of
 	them,
 	and 3) there are four points such that no line is incident with more than two of them.</p>
 <h4>Polynomial Factoring and Complex Numbers</h4>
-<p>A polynomial has the form \(p(x)=c_n x^n + ... + c_1x + c0\) with leading coefficient \(c_n \neq 0\). The degree
+<p>A polynomial has the form \(p(x)=c_n x^n + ... + c_1x + c0\) with leading coefficient \(c_n \neq 0\). The
+	degree
 	of
-	this polynomial is \(n\). If \(n=0\) then \(p\) is a constant polynomial \(p(x)=c_0\). Constant polynomials that
+	this polynomial is \(n\). If \(n=0\) then \(p\) is a constant polynomial \(p(x)=c_0\). Constant polynomials
+	that
 	are
 	not the zero polynomial have degree zero. The zero polynomial has the degree \(-\infty\).</p>
 <h4>Division Theorem for Polynomials</h4>
 <p>Let \(p(x)\) be a polynomial. If \(d(x)\) is a non-zero polynomial then there are quotient and remainder
 	polynomials
-	\(q(x)\) and \(r(x)\) such that \[p(x)=d(x) \cdot q(x)+r(x)\] where the degree of \(r(x)\) is strictly less than
+	\(q(x)\) and \(r(x)\) such that \[p(x)=d(x) \cdot q(x)+r(x)\] where the degree of \(r(x)\) is strictly less
+	than
 	the
 	degree of \(d(x)\).</p>
 <p>The remainder when \(p(x)\) is divided by \(x-\lambda\) is the constant polynomial \(r(x)=p(\lambda)\). If
@@ -1432,15 +1847,20 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	\((x-\lambda)^n\) for some power larger than one. The largest such power is called the multiplicity of
 	\(\lambda\).
 </p>
-<p>For second degree polynomials we have the quadratic formula. If the discriminant \(b^2-4ac\) is negative then the
-	polynomial has no real number roots. A polynomial that cannot be factored into two lower-degree polynomials with
+<p>For second degree polynomials we have the quadratic formula. If the discriminant \(b^2-4ac\) is negative then
+	the
+	polynomial has no real number roots. A polynomial that cannot be factored into two lower-degree polynomials
+	with
 	real number coefficients is said to be irreducible over the reals.</p>
 \[\lambda=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\]
-<p>Any constant or linear polynomial is irreducible over the reals. A quadratic polynomial is irreducible over the
+<p>Any constant or linear polynomial is irreducible over the reals. A quadratic polynomial is irreducible over
+	the
 	reals
-	if and only if its discriminant is negative. No cubic or higher-degree polynomial is irredubiel over the reals.
+	if and only if its discriminant is negative. No cubic or higher-degree polynomial is irredubiel over the
+	reals.
 	Any
-	polynomial with real coefficients factors into a product of linear and irreducible quadratic polynomials with
+	polynomial with real coefficients factors into a product of linear and irreducible quadratic polynomials
+	with
 	real
 	coefficients. That factorization is unique; any two factorizations have the same factors raised to the same
 	powers.
@@ -1448,21 +1868,25 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <h4>Similarity</h4>
 <p>We considered matrices to be matrix equivalent if you can convert the matrix to the other with nonsingular
 	matrices.
-	Now, for similarity, we consider a special case of this, such that the codomain equals the domain, and so the
+	Now, for similarity, we consider a special case of this, such that the codomain equals the domain, and so
+	the
 	codomain's basis equals the domain's basis.</p>
 <p>The matrices \(T\) and \(S\) are similar if there is a nonsingular \(P\) such that \(T=PSP^{-1}\). The only
 	matrix
 	similar to the zero matrix is itself. The only matrix similar to the identity matrix is itself. All similar
 	matrices
-	are matrix equivalent but not all matrix equivalent matrices are similar. We can understand similarity classes
+	are matrix equivalent but not all matrix equivalent matrices are similar. We can understand similarity
+	classes
 	by
-	finding a canonical form for representatives, called Jordan form. We can decide if two matrices are similar by
+	finding a canonical form for representatives, called Jordan form. We can decide if two matrices are similar
+	by
 	checking whether they reduce to the same representative.</p>
 <h4>Diagonizability</h4>
 <p>A transformation is diagonalizable if it has a diagonal representation with respect to the same basis for the
 	codomain as for the domain. A diagonizable matrix is one that is similar to a diagonal matrix: \(T\) is
 	diagonalizable if there is a nonsingular \(P\) such that \(PTP^{-1}\) is diagonal. A transformation \(t\) is
-	diagonalizable if and only if there is a basis \(B=\langle\vec{\beta}_1,...,\vec{\beta}_n\rangle\) and scalars
+	diagonalizable if and only if there is a basis \(B=\langle\vec{\beta}_1,...,\vec{\beta}_n\rangle\) and
+	scalars
 	\(\lambda_1,...,\lambda_n\) such that \(t(\vec{\beta}_i)=\lambda_i \vec{\beta}_i\) for each \(i\).</p>
 <h4>Eigenvalues and Eigenvectors</h4>
 <p>A transformation \(t:V\rightarrow V\) has a scalar eigenvalue \(\lambda\) if there is a nonzero
@@ -1471,7 +1895,8 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	has a scalar eigenvalue \(\lambda\) associated with the nonzero eigenvector \(\vec{\zeta}\) if
 	\(T\vec{\zeta}=\lambda \cdot \vec{\zeta}\). Similar matrices have the same eigenvalues but need not have
 	the same eigenvectors.</p>
-<p>You can think of eigenvectors as those vectors which, if transformed, remain on the same line as it originally
+<p>You can think of eigenvectors as those vectors which, if transformed, remain on the same line as it
+	originally
 	was,
 	except scaled by some scalar. These vectors are considered the eigenvectors of that transformation, and the
 	scalar
@@ -1481,24 +1906,30 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 \[A\vec{v}=\lambda\vec{v}\]
 <p>Applying a transformation on an eigenvector is the same as scaling that eigenvector. Scaling a vector by
 	\(\lambda\)
-	can be rewritten as taking the product of \(\lambda I \vec{v}\) since multiplying by the identity matrix scaled
+	can be rewritten as taking the product of \(\lambda I \vec{v}\) since multiplying by the identity matrix
+	scaled
 	by
 	the scalar does the same thing as scaling the vector.</p>
 \[A\vec{v}-\lambda I\vec{v}=0\]
 \[(A-\lambda I)\vec{v}=0\]
-<p>Now, if \(\vec{v}=0\), then any matrix would work, but we want to find a nonzero eigenvector. So we want to find
+<p>Now, if \(\vec{v}=0\), then any matrix would work, but we want to find a nonzero eigenvector. So we want to
+	find
 	a
-	matrix \(A-\lambda I\) such that a nonzero vector becomes zero, and that is only possible if this transformation
+	matrix \(A-\lambda I\) such that a nonzero vector becomes zero, and that is only possible if this
+	transformation
 	squishes space into a lower dimension, which is only possible if the determinant is 0. Using this
 	\(\text{det}(A-\lambda I)=0\), you can solve for \(\lambda\), thereby giving you the eigenvalue.</p>
-<p>Take, for example, you have the transformation \(A=\begin{bmatrix}3 && 1 \\ 0 && 2\end{bmatrix}\). Subtract the
+<p>Take, for example, you have the transformation \(A=\begin{bmatrix}3 && 1 \\ 0 && 2\end{bmatrix}\). Subtract
+	the
 	identity matrix scaled by a scalar from this matrix, and set the value of the determinant of your resulting
 	matrix
 	to 0: \(\text{det}(A-\lambda I)=\text{det}(\begin{bmatrix}3-\lambda && 1 \\ 0 &&
-	2-\lambda\end{bmatrix})=(3-\lambda)(2-\lambda)=0\), so \(\lambda=2\text{ or } 3\), so the possible eigenvalues
+	2-\lambda\end{bmatrix})=(3-\lambda)(2-\lambda)=0\), so \(\lambda=2\text{ or } 3\), so the possible
+	eigenvalues
 	are 2
 	and 3.</p>
-<p>To solve for which eigenvectors these eigenvalues correspond to, plug in \(\lambda\) and solve for the vectors
+<p>To solve for which eigenvectors these eigenvalues correspond to, plug in \(\lambda\) and solve for the
+	vectors
 	that
 	the corresponding transformation sends to zero:</p>
 \[\begin{bmatrix}{3-2} && 1 \\ 0 && {2-2}\end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}=\begin{bmatrix}0 \\
@@ -1513,17 +1944,22 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <p>Not all transformations have eigenvectors (for example rotation around the origin). If you try to find the
 	eigenvalues of such a transformation, you will find there are no real answers... the only answers will be
 	complex. A
-	shear transformation keeps all vectors on the x-axis the same, and so its only eigenvectors are on the x-axis
+	shear transformation keeps all vectors on the x-axis the same, and so its only eigenvectors are on the
+	x-axis
 	and
 	eigenvalue is 1.</p>
 <p>If your basis vectors happen to be eigenvectors, then they are eigenbases. This only occurs when your
 	transformation
-	is diagonal, which means all entries are 0 except on the diagonal (top left to bottom right). Each column is an
+	is diagonal, which means all entries are 0 except on the diagonal (top left to bottom right). Each column is
+	an
 	eigenvector with the value on the diagonal as its eigenvalue.</p>
-<p>To simplify transformations to more readily work with them, you want to change its representation into that of
-	eigenbases, so that your transformation can be diagonal. An example of when this might be useful is if you are
+<p>To simplify transformations to more readily work with them, you want to change its representation into that
+	of
+	eigenbases, so that your transformation can be diagonal. An example of when this might be useful is if you
+	are
 	taking a matrix to the 100th power.</p>
-<p>The characteristic polynomial of a square matrix \(T\) is the determinant \(|T-xI|\) where \(x\) is a variable.
+<p>The characteristic polynomial of a square matrix \(T\) is the determinant \(|T-xI|\) where \(x\) is a
+	variable.
 	The
 	characteristic equation is \(|T-xI|=0\). The characteristic polynomial of a transformation \(t\) is the
 	characteristic polynomial of any matrix representation \(\text{Rep}_{B,B}(t)\).</p>
@@ -1533,15 +1969,18 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	eigenspace is a subspace. It is a nontrivial subspace.</p>
 <p>Where a characteristic polynomial factors into \((x-\lambda_1)^{m_1}\ldots (x-\lambda_k)^{m_k}\) then the
 	eigenvalue
-	\(\lambda_i\) has algebraic multiplicity \(m_i\). Its geometric multiplicity is the dimension of the associated
+	\(\lambda_i\) has algebraic multiplicity \(m_i\). Its geometric multiplicity is the dimension of the
+	associated
 	eigenspace \(V_{\lambda_i}\).</p>
-<p>For any set of distinct eigenvalues of a map or matrix, a set of associated eigenvectors, one per eigenvalue, is
+<p>For any set of distinct eigenvalues of a map or matrix, a set of associated eigenvectors, one per eigenvalue,
+	is
 	linearly independent. An \(n\times n\) matrix with \(n\) distinct eigenvalues is diagonalizable.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IOaAzKo4Fdg" title="YouTube video player"
 	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 	allowfullscreen></iframe>
 <h4>Nilpotence</h4>
-<p>For any transformation \(t:V\rightarrow V\), the range spaces of the powers form a descending chain \[V \supseteq
+<p>For any transformation \(t:V\rightarrow V\), the range spaces of the powers form a descending chain \[V
+	\supseteq
 	\mathscr{R}(t) \supseteq \mathscr{R}(t^2) \supseteq \ldots\] and the null spaces form an ascending chain.
 	\[\{\vec{0}\}\subseteq \mathscr{N}(t) \subseteq \mathscr{N}(t^2) \subseteq \ldots\]</p>
 <p>Further, there is a \(k>0\)
@@ -1558,26 +1997,32 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <h4>Sequences</h4>
 <p>A sequence is a function from a subset of the set of integers to a set \(S\). We use the notation \(a_n\) to
 	denote
-	the image of the integer \(n\) and call this a term of the sequence. For example, \(a_n=n^2\) gives the elements
+	the image of the integer \(n\) and call this a term of the sequence. For example, \(a_n=n^2\) gives the
+	elements
 	\(1,4,9,16,26,...\).</p>
 <h4>Arithmetic progression</h4>
-<p>An arithmetic progression is a sequence of the form \(a, a+d, a+2d, ...,a+nd\) where \(a\) is the intiial term
-	and \(d\) is common difference, such that both belong to \(\mathcal{R}\). For example, \(s_n=-1+4n\) gives the
+<p>An arithmetic progression is a sequence of the form \(a, a+d, a+2d, ...,a+nd\) where \(a\) is the intiial
+	term
+	and \(d\) is common difference, such that both belong to \(\mathcal{R}\). For example, \(s_n=-1+4n\) gives
+	the
 	members
 	\(-1,3,7,11,...\).</p>
 <h4>Geometric progression</h4>
-<p>A geometric progression is a sequence of the form \(a, ar, ar^2, ...,ar^k\) where \(a\) is the initial term and
+<p>A geometric progression is a sequence of the form \(a, ar, ar^2, ...,ar^k\) where \(a\) is the initial term
+	and
 	\(r\)
 	is the common ratio, both of which belong to \(\mathcal{R}\). For example, \(a_n=(\frac{1}{2})^n\) gives the
 	members
 	\(1, \frac{1}{2},\frac{1}{4},\frac{1}{8},...\).</p>
 <h4>Recursively defined sequences</h4>
-<p>A sequence can be defined recursively by stating the n-th term in terms of previous elements of the sequence and
+<p>A sequence can be defined recursively by stating the n-th term in terms of previous elements of the sequence
+	and
 	the
 	initial elements of the sequence. An example is the Fibonacci sequence, where \(a_0=0,a_1=1\) and
 	\(a_n=a_{n-1}+a_{n-2}\).</p>
 <h4>Summations</h4>
-<p>A summation has a variable \(j\) referred to as the index of summation, a lower limit \(m\) and an upper limit
+<p>A summation has a variable \(j\) referred to as the index of summation, a lower limit \(m\) and an upper
+	limit
 	\(n\).
 	\[\sum_{j=m}^na_j=a_m+a_{m+1}+...+a_n\].</p>
 <p>You can factor a constant out of a sum. \[\sum ca_k=c\sum a_k\]</p>
@@ -1585,9 +2030,11 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 <h4>Arithmetic series</h4>
 <p>The sum of the terms of the arithmetic progression is called an arithmetic series.</p>
 \[S=\sum_{j=1}^n(a+jd)=na+d\sum_{j=1}^nj=na+d\frac{n(n+1)}{2}\]
-<p>The crux in the proof is being able to see that:\[\sum_{j=1}^nj=1+2+3+4+...+(n-2)+(n-1)+n\] Combine the first and
+<p>The crux in the proof is being able to see that:\[\sum_{j=1}^nj=1+2+3+4+...+(n-2)+(n-1)+n\] Combine the first
+	and
 	last terms, then second and second-to last terms, and you will get the sum to be \(\frac{n}{2}(n+1)\).</p>
-<p>If your series does not start from 1, you can just find the series from 1 to m and from 1 to n and then find the
+<p>If your series does not start from 1, you can just find the series from 1 to m and from 1 to n and then find
+	the
 	difference.</p>
 <h4>Geometric series</h4>
 <p>The sum of the terms of a geometric progression is called a geometric series.
@@ -1601,32 +2048,40 @@ $$\text{Rep}_B(\vec{v})=[\vec{v}]_B=\begin{pmatrix}c_1\\c_2\\ \vdots\\c_n\end{pm
 	=\lim_{k\to\infty}\frac{x^{k+1}-1}{x-1}=-\frac{1}{x-1}=\frac{1}{1-x}\]
 </p>
 <h4>Power series</h4>
-<p>A power series is an infinite series in the form, where \(a_n\) represents the coefficient of the terms and \(c\)
+<p>A power series is an infinite series in the form, where \(a_n\) represents the coefficient of the terms and
+	\(c\)
 	is
 	a constant: \[\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+...\]They are present in mathematical
 	analysis,
-	where they arise as Taylor series of infinitely differentiable functions, combinatorics as generating functions,
+	where they arise as Taylor series of infinitely differentiable functions, combinatorics as generating
+	functions,
 	and
 	in electronic engineering under the name of Z-transform.</p>
 <h4>Taylor series</h4>
 <p>The Taylor series of a function is an infinite sum of terms that are expressed in terms of the function's
 	derivatives
-	at a single point. For most common functions, the function and the sum of its Taylor series are equal near this
+	at a single point. For most common functions, the function and the sum of its Taylor series are equal near
+	this
 	point.</p>
-<p>\[\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\]where \(f^{(n)}(a)\) denotes the nth derivative of f evaluated
+<p>\[\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\]where \(f^{(n)}(a)\) denotes the nth derivative of f
+	evaluated
 	at
 	the point a. When \(a=0\), the series is also called a Maclaurin series.</p>
 <div class="first">Differential calculus</div><a class="anchor" id="differential"></a>
 <h4>Limits</h4>
-<p>Sometimes we can't work something out directly, but we can see what it should be as we get closer and closer. For
-	example, \(\frac{x^2-1}{x-1}\) cannot be evaluated at \(x=1\). However, if we plug in 0.99999, we'll find that
+<p>Sometimes we can't work something out directly, but we can see what it should be as we get closer and closer.
+	For
+	example, \(\frac{x^2-1}{x-1}\) cannot be evaluated at \(x=1\). However, if we plug in 0.99999, we'll find
+	that
 	it
 	gives us 1.99999, and so we say that the limit of the term as x approaches 1 is 2.</p>
 \[\lim_{x \to 1}\frac{x^2-1}{x-1}=2\]
 <h4>Infinity</h4>
-<p>Infinity is impossible to reach but we can work out the value of functions that have infinity in them. We can't
+<p>Infinity is impossible to reach but we can work out the value of functions that have infinity in them. We
+	can't
 	say
-	\(\frac{1}{\infty}\) is 0, but we can say that the limit of \(\frac{1}{x}\) as x approaches infinity is 0.</p>
+	\(\frac{1}{\infty}\) is 0, but we can say that the limit of \(\frac{1}{x}\) as x approaches infinity is 0.
+</p>
 <h3>Derivatives</h3>
 <h4>Definition of the derivative</h4>
 <p>The derivative of \(f(x)\) with respect to x is the function \(f'(x)\) and is defined as:</p>
@@ -1637,7 +2092,8 @@ $$f'(x)=\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$$
 	in x. So the equation is just the slope. The slope of what? The slope in f(x) as the h, or change in x,
 	approaches
 	0. Therefore, it is the instantaneous slope at point x.</p>
-<p>If the limit is different from the left vs the right, then the ordinary limit does not exist. However, there can
+<p>If the limit is different from the left vs the right, then the ordinary limit does not exist. However, there
+	can
 	be a
 	left-hand limit and a right-hand limit.</p>
 <p>Given \(y=f(x)\):</p>
@@ -1722,10 +2178,13 @@ $$y'=-1/x^2$$
 	by
 	\(dy=df=f'(x)dx\).</p>
 <h4>Differential equations</h4>
-<p>A differential equation is an equation with a function and one or more of its derivatives. Ordinary Differential
-	Equations (ODEs) have a single independent variable, whereas partial differential equations (PDEs) have two or
+<p>A differential equation is an equation with a function and one or more of its derivatives. Ordinary
+	Differential
+	Equations (ODEs) have a single independent variable, whereas partial differential equations (PDEs) have two
+	or
 	more
-	indepedent variables. The Order is the highest derivative. The degree is the exponent of the highest derivative.
+	indepedent variables. The Order is the highest derivative. The degree is the exponent of the highest
+	derivative.
 	When the variable has no exponent or other function put on it, it is linear.</p>
 <div class="first">Integral calculus</div><a class="anchor" id="integral"></a>
 
@@ -1903,6 +2362,19 @@ $$-2x\frac{x^8+1}{x^4+1}$$
 <div class="first">Functional equations</div><a class="anchor" id="functional"></a>
 <div class="first">Complex analysis</div><a class="anchor" id="complex"></a>
 <div class="first">Combinatorics</div><a class="anchor" id="combinatorics"></a>
+<p>The sum rule states that if a task \(t_1\) can be done in \(n_1\) ways and a second task \(t_2\) can be done in
+	\(n_2\) ways, and if these tasks cannot be done at the same time, then there are \(n_1 + n_2\) ways to do either
+	task.</p>
+<p>This corresponds to the statement that if \(A\) and \(B\) are disjoint sets, then \(|A \cup B|=|A|+|B|\), and this
+	extends to multiple sets.</p>
+<p>The product rule states that if a task \(t_1\) can be done in \(n_1\) ways and a second task \(t_2\) can be done in
+	\(n_2\) ways after the first task has been done, then there are \(n_1 * n_2\) ways to do the procedure.</p>
+<p>This corresponds to the statement if \(A\) and \(B\) are disjoint sets, then \(|A \times B|=|A| * |B|\), extending to
+	multiple sets.</p>
+<p>The principle of inclusion-exclusion states that if a task \(t_1\) can be done in \(n_1\) ways and a second task
+	\(t_2\) can be done in \(n_2\) ways at the same time with t\(1\), then to find the total number of ways the two
+	tasks can be done, subtract the number of ways to do both tasks from \(n_1+n_2\).</p>
+<p>This corresponds to the inclusion/exclusion rule of sets. (link there)</p>
 <h4>Permutations and combinations</h4>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ohsRp6kZ6-0" title="YouTube video player"
 	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1993,7 +2465,8 @@ $$-2x\frac{x^8+1}{x^4+1}$$
 	the
 	equation for combinations without repetitions is just the equation for permutations without repetitions
 	divided
-	by \(r!\), aka \(\frac{n!}{r!(n-r)!}\). This is also called a binomial coefficient \(\binom{n}{r}\) or nCr (n
+	by \(r!\), aka \(\frac{n!}{r!(n-r)!}\). This is also called a binomial coefficient \(\binom{n}{r}\) or nCr
+	(n
 	choose
 	r). Note that this can also be described as finding how many subsets of size r you can get from a set of n
 	elements.
@@ -2091,7 +2564,8 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 <div class="first">Probability theory</div><a class="anchor" id="probability"></a>
 
 <h4>Probability and odds</h4>
-<p>The probability is the number of ways to reach a certain outcome \(O\) out of all possibilities. The probability
+<p>The probability is the number of ways to reach a certain outcome \(O\) out of all possibilities. The
+	probability
 	is
 	\(0\leq
 	p \leq 1\).</p>
@@ -2109,21 +2583,26 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 	this for, what is the chance I get 3s on the 1st and 2nd roll, 2nd and 3rd roll, 2nd and 4th roll and so
 	forth...
 	All the ways I can choose 2 to get (3s) from 5 rolls is \(5\choose 2\). So the answer is
-	\((\frac{1}{6})^2(\frac{5}{6})^3{5 \choose 2}\). This form of probability is called Bernoulli probability.</p>
+	\((\frac{1}{6})^2(\frac{5}{6})^3{5 \choose 2}\). This form of probability is called Bernoulli probability.
+</p>
 <p>Another way to think about this, is you have \(6^3\) total
 	possibilities on what you can roll. Then you have \(5 \choose 2\) ways you can roll 3 exactly twice, and for
 	each of
-	those ways, the rest of the numbers can be any number 1,2,4,5,6 that's not 3, so 5 possibilities for each extra
+	those ways, the rest of the numbers can be any number 1,2,4,5,6 that's not 3, so 5 possibilities for each
+	extra
 	digit (in this case there are 3 extra digits) for each time you roll 3 exactly twice. So the outcomes you're
 	looking
 	for over total possibilities is \({5 \choose 2}\cdot 5^3/6^3\) gives the same answer. </p>
 <h4>Bernoulli distribution</h4>
 <p>The Bernoulli distribution, named after Swiss mathematician Jacob Bernoulli, is the discrete probability
 	distribution
-	of a random variable which takes the value 1 with probability p and the value 0 with probability \(q=1-p\). Less
-	formally, it can be thought of as a model for the set of possible outcomes of a single experiment that asks a
+	of a random variable which takes the value 1 with probability p and the value 0 with probability \(q=1-p\).
+	Less
+	formally, it can be thought of as a model for the set of possible outcomes of a single experiment that asks
+	a
 	yes-no
-	question. The Bernoulli distribution is the special case of the binomial distribution where a single trial is
+	question. The Bernoulli distribution is the special case of the binomial distribution where a single trial
+	is
 	conducted.</p>
 <p>What's the probability of getting at least one pair from a 5 card hand (out of 52 cards)? A good way to think
 	about
@@ -2133,14 +2612,19 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 	48/51
 	cards (avoiding the other 3 that are the same as the first card). Then, for the third card, it has to be
 	different
-	from both your first and second cards, so your probability there is 44/50. And so forth, leading to the answer
+	from both your first and second cards, so your probability there is 44/50. And so forth, leading to the
+	answer
 	being
 	\(1-(1\times\frac{48}{51}\times \frac{44}{50}\times \frac{40}{49} \times \frac{36}{48})\simeq 0.4929\)</p>
 <h4>Odds</h4>
-<p>Odds are slightly different in that there's a monetary aspect. If the probability of an event is p, then the odds
-	(against) are \(1-p:p\). For example, if you're betting on a roll of the dice landing on a 3, then a bookkeeper
-	might say the odds are 5:1 (5 times it WON'T land on 3 versus 1 times it will). So he might offer you $50 if it
-	doesn't land on 3, and you offer $10 if it does. (Of course, in actual scenarios the bookkeeper wouldn't offer
+<p>Odds are slightly different in that there's a monetary aspect. If the probability of an event is p, then the
+	odds
+	(against) are \(1-p:p\). For example, if you're betting on a roll of the dice landing on a 3, then a
+	bookkeeper
+	might say the odds are 5:1 (5 times it WON'T land on 3 versus 1 times it will). So he might offer you $50 if
+	it
+	doesn't land on 3, and you offer $10 if it does. (Of course, in actual scenarios the bookkeeper wouldn't
+	offer
 	such
 	equitable odds).</p>
 <h4>Probability spaces</h4>
@@ -2150,33 +2634,44 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 	\(P(s) \geq 0\) satisfying \[\sum_{s\in S}P(s)=1\].</p>
 <p>A probability space is a sample space \(S\) with a particular probability measure \(P\): \((S,P)\).</p>
 <h4>Events</h4>
-<p>An event \(E\) is a subset of a sample space \(S\) (aka \(E\subseteq S\)). If \((S,P)\) is a probability space,
+<p>An event \(E\) is a subset of a sample space \(S\) (aka \(E\subseteq S\)). If \((S,P)\) is a probability
+	space,
 	then
 	the
 	probability of the event \(E\) is \[P(E)=\sum_{s\in E}P(s)\]</p>
-<p>If \(E\subseteq S\) is an event, the complement to the event \(E\) is \(E^C=\{s\in S | s \not\in E\}\), and so
+<p>If \(E\subseteq S\) is an event, the complement to the event \(E\) is \(E^C=\{s\in S | s \not\in E\}\), and
+	so
 	\(P(E^C)=1-P(E)\).</p>
 <p>You can apply inclusion/exclusion to probabilities: \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\).</p>
 <h4>Indepedent events</h4>
-<p>\(A\) and \(B\) are independent events if knowing one gives no information about the probability of the other. If
-	\(A,B\subseteq(S,P)\) are two events then \(A,B \text{ are indepenent}\iff P(A\cap B)=P(A)P(B)\). Conceptually,
+<p>\(A\) and \(B\) are independent events if knowing one gives no information about the probability of the
+	other. If
+	\(A,B\subseteq(S,P)\) are two events then \(A,B \text{ are indepenent}\iff P(A\cap B)=P(A)P(B)\).
+	Conceptually,
 	if
-	we know we're A, it doesn't tell us anything about the probability that we're B, so the probability of B in A is
-	just the same as the probability in S, so we just take the chance we're in A (\(P(A)\)) and multiply it by the
+	we know we're A, it doesn't tell us anything about the probability that we're B, so the probability of B in
+	A is
+	just the same as the probability in S, so we just take the chance we're in A (\(P(A)\)) and multiply it by
+	the
 	general population's probability of being in B (\(P(B)\)).</p>
-<p>If \(A,B\) are independent events from a probability space \((S,P)\) then i) \(A,B^C\) are independent, as are
+<p>If \(A,B\) are independent events from a probability space \((S,P)\) then i) \(A,B^C\) are independent, as
+	are
 	\(A^C,B\), and ii) \(A^C, B^C\) are also indepedent.</p>
-<p>We can extend this to more than two subsets. So if \(A, B, C\subseteq S\) and they are all mutually independent,
+<p>We can extend this to more than two subsets. So if \(A, B, C\subseteq S\) and they are all mutually
+	independent,
 	then
-	they are independent to each other, and the intersection is the multiple of all their individual probabilities:
+	they are independent to each other, and the intersection is the multiple of all their individual
+	probabilities:
 	\(p(A\cap B \cap B)=P(A)P(B)P(C)\).</p>
 <h4>Conditional probabilities</h4>
-<p>If \(A,B\) are events from a probability space \((S,P)\), then the conditional probability of \(A\) given \(B\)
+<p>If \(A,B\) are events from a probability space \((S,P)\), then the conditional probability of \(A\) given
+	\(B\)
 	is
 	\[P(A|B)=\frac{P(A\cap B)}{P(B)}\]</p>
 <h4>Total probability rule</h4>
 <p>Suppose \(\{A_1, A_2, ..., A_n\}\) is a partition of \(S\), and \(B\) is an event in \(S\). Then
-	\[P(B)=\sum_{i=1}^nP(B|A_i)P(A_i)\]. In other words, the total probability of B is the probability of B in each
+	\[P(B)=\sum_{i=1}^nP(B|A_i)P(A_i)\]. In other words, the total probability of B is the probability of B in
+	each
 	element in the partition.</p>
 <h4>Bayes' rule</h4>
 <p>Recall \(P(A|B)\) is not symmetric ie. \(P(A|B) \neq P(B|A)\). If \(\{A_1,A_2,...,A_n\}\) is a partition of
@@ -2190,16 +2685,20 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 <h4>Random variables, probability distribution, mean, variance</h4>
 <p>A random variable \(X\) is a function on a probability space \((S,P)\) i.e. \(X:S\rightarrow \mathbb{R}\). To
 	every
-	random variable \(X\) on a probability space \(S,P\), there are 3 important numbers: the mean \(\mu\), variance
+	random variable \(X\) on a probability space \(S,P\), there are 3 important numbers: the mean \(\mu\),
+	variance
 	\(\sigma^2\), and standard deviation \(\sigma\). These are also associated to a probability distribution
 	connected
-	to \(X\). To think about the probability distribution, looking at the figure below, it's the plotting of all the
+	to \(X\). To think about the probability distribution, looking at the figure below, it's the plotting of all
+	the
 	results of \(X(s)\) onto a number line.</p>
 <img src="{{ url_for('static', filename='img/math/prob_dist.svg') }}">
 <p>Suppose \(X:S\rightarrow \mathbb{Q}\) takes on values \(x_1, x_2, ..., x_k\). For each value \(x_i\), we can
 	define
-	\(X^{-1}(x_i)\subseteq S\) (all the events that lead to \(x_i\)). To each such event, we know it has a certain
-	probability. Therefore, we can define \(p_i\equiv P(X^{-1}(x_i))\). So for each value \(x_i\) of \(X\), there is
+	\(X^{-1}(x_i)\subseteq S\) (all the events that lead to \(x_i\)). To each such event, we know it has a
+	certain
+	probability. Therefore, we can define \(p_i\equiv P(X^{-1}(x_i))\). So for each value \(x_i\) of \(X\),
+	there is
 	a
 	probability \(p_i\).</p>
 <p>The expected value/mean \(E(X)=\mu\) is: \[E(X)=\sum_i x_ip_i\]</p>
@@ -2214,16 +2713,21 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 <h4>Binomial distribution</h4>
 <p>Say you have the question, if we toss a coin \(n\) times, what is the probably of getting
 	\(k\)
-	heads? The total possibilities is \(n^2\) and the total ways we can get \(k\) heads is \(n \choose k\), so the
+	heads? The total possibilities is \(n^2\) and the total ways we can get \(k\) heads is \(n \choose k\), so
+	the
 	probability is \({n\choose k}/2^n\). When you have such a function, we state that this defines a binomial
-	distribution: values \(x_i=0,1,2,...,n\) with probabilities \[p_k=P(k)=\frac{n \choose k}{2^n}, k=0,1,...,n\]
+	distribution: values \(x_i=0,1,2,...,n\) with probabilities \[p_k=P(k)=\frac{n \choose k}{2^n},
+	k=0,1,...,n\]
 </p>
-<p>Using a 50% heads, 50% tails example, creating probabilities for getting \(k\) heads after flipping a coin \(n\)
+<p>Using a 50% heads, 50% tails example, creating probabilities for getting \(k\) heads after flipping a coin
+	\(n\)
 	times gives the following \(B(10,0.5)\) binomial distribution.</p>
 <img src="{{ url_for('static', filename='img/math/binom10.png') }}">
-<p>However, binomial distributions also apply if the probabily of yes and no is not 50-50. In that case, we describe
+<p>However, binomial distributions also apply if the probabily of yes and no is not 50-50. In that case, we
+	describe
 	the
-	binomial distribution as \(B(n,p)\) where (notice if we plug in 1/2 for p here we get the same thing as above):
+	binomial distribution as \(B(n,p)\) where (notice if we plug in 1/2 for p here we get the same thing as
+	above):
 	\[p_k={n \choose
 	k}p^k(1-p)^{n-k}\]</p>
 <p>Here's the binomial distribution for \(B(10,0.2)\):</p>
@@ -2232,7 +2736,8 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 <h4>Probability generating functions</h4>
 <p>Suppose our probability distribution has positive integer values \(x_k=k,k=0,1,2,3,...\). Our probability
 	generating
-	function is as follows:\[g(t)\equiv p_0+p_1t+p_2t^2+\ldots\]Note here that \(g(1)=1\), since that's just the sum
+	function is as follows:\[g(t)\equiv p_0+p_1t+p_2t^2+\ldots\]Note here that \(g(1)=1\), since that's just the
+	sum
 	of
 	all the probabilities which must add up to 1. We can find the mean and variance with the
 	following:\[\mu=g'(1)\]\[\sigma^2=g''(1)+g'(1)-g'(1)^2\]</p>
@@ -2243,55 +2748,68 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 </p>
 <p>This probability generating function now allows us to calculate the mean and variance for any binomial
 	distribution
-	\(B(n,p)\). Recall that the probability for any positive integer \(p_k={n\choose k}p^kq^{n-k}\). This gives the
+	\(B(n,p)\). Recall that the probability for any positive integer \(p_k={n\choose k}p^kq^{n-k}\). This gives
+	the
 	generating function: \[{n \choose 0}q^n+{n\choose 1}pq^{n-1}t+{n\choose 2}p^2q^{n-2}t^2+\ldots+{n\choose
 	n}p^nt^n\]\[=(pt+q)^n\]Note the use of binomial theorem here.</p>
 <p>Now we can find the mean after application of chain rule (the vertical bar means evaluated
 	at):\[\mu=g'(1)=\left. n(pt+q)^{n-1}p\right|_{t=1}=np\]</p>
 \[\sigma^2=np(1-p)\]
-<p>An example of the use of the binomial distribution is, say you usually win 60% of your tennis matches. You hire a
+<p>An example of the use of the binomial distribution is, say you usually win 60% of your tennis matches. You
+	hire a
 	new
-	coach and you win 12 out of 15 of your next matches. Is the coach helping or not? The probability of winning 12
+	coach and you win 12 out of 15 of your next matches. Is the coach helping or not? The probability of winning
+	12
 	or
-	more matches out of 15 if your usual probability is 60% is the probability of you winning 12 + probability of
+	more matches out of 15 if your usual probability is 60% is the probability of you winning 12 + probability
+	of
 	you
 	winning 13, and so on. \[p_{12}+p_{13}+p_{14}+p_{15}=\sum_{k=12}^15{15\choose k}(0.6)^k(0.4)^{15-k}\approx
 	0.091\]
 </p>
 <h4>Geometric distributions</h4>
-<p>Now suppose we toss a p-biased coin continually until we get a head. We define our random variable \(X(s)=k\) if
+<p>Now suppose we toss a p-biased coin continually until we get a head. We define our random variable \(X(s)=k\)
+	if
 	the
 	first head appears in the \(k\)th position. So an element in the sample space might be
 	\(s=\text{TTTHHTH}\ldots\)
-	and so \(X(s)=4\). The probability \(p_k=q^{k-1}p\) because everything before k must be tails (which means it
+	and so \(X(s)=4\). The probability \(p_k=q^{k-1}p\) because everything before k must be tails (which means
+	it
 	has a
 	probabilty of q). This gives a generating function (note the use of infinite geometric
 	series):\[g(t)=pt+pqt^2+pq^2t^3+pq^3t^4+\ldots=pt(1+qt+q^2t^2+\ldots)=\frac{pt}{1-qt}\]</p>
 <p>This gives:\[\mu=\frac{1}{p}\]\[\sigma^2=\frac{q}{p^2}\]</p>
-<p>This is a pretty normal thing to think about if you play video games for loot drops. If the chance to get a drop
+<p>This is a pretty normal thing to think about if you play video games for loot drops. If the chance to get a
+	drop
 	is,
 	say, one out of
 	500, then on average, you need to kill the monster 500 times to get the drop.</p>
 <h4>Continuous probability distributions</h4>
-<p>The previous distributions dealt with random variables that take on discrete values (eg. number of heads or tails
+<p>The previous distributions dealt with random variables that take on discrete values (eg. number of heads or
+	tails
 	or
 	number of flips). But many random variables do not take on an integer, and so for these continuous
 	distributions, we
-	will need to switch over from sums to integrals. We define the probability of the random variable to take on any
+	will need to switch over from sums to integrals. We define the probability of the random variable to take on
+	any
 	continuous value to be determined by the probability density function or probability distribution function
 	\(p(x)\),
 	and the integration of all of these
-	values is \(\int_{-\infty}^\infty p(x)dx=1\) and the probability for the random variable to take on any value in
+	values is \(\int_{-\infty}^\infty p(x)dx=1\) and the probability for the random variable to take on any
+	value in
 	an
 	interval a to b to be \(p(x\in[a,b])=\int_a^bp(x)dx\).</p>
 <p>Therefore, the expected value or mean of a continuous distribution is a integral instead of summation of each
 	random
-	variable and its probability:\[E(X)=\mu=\int_{-\infty}^\infty xp(x)dx\]This is also how you would calculate the
+	variable and its probability:\[E(X)=\mu=\int_{-\infty}^\infty xp(x)dx\]This is also how you would calculate
+	the
 	center of mass of a rod, where the rod balances, with density instead of probability.</p>
 \[\text{Var}(X)=\sigma^2=\int_{-\infty}^\infty (x-\mu)^2p(x)dx\]
 <h4>Uniform distribution</h4>
-<p>A uniform distribution has that the probability of the random variable taking on a value is constant between two
-	values. The value must be \(\frac{1}{b-a}\) because the total area under the curve must be equal to 1. Thus, the
+<p>A uniform distribution has that the probability of the random variable taking on a value is constant between
+	two
+	values. The value must be \(\frac{1}{b-a}\) because the total area under the curve must be equal to 1. Thus,
+	the
 	probability of the random variable taking on a value between \(c\) and \(d\) if
 	\(p(x\in[c,d])=a&#60;c&#60;d&#60;b\)
 	is
@@ -2299,7 +2817,8 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Uniform_Distribution_PDF_SVG.svg/1200px-Uniform_Distribution_PDF_SVG.svg.png"
 	width="30%">
 <h4>Transformation formulas</h4>
-<p>We can transform a random variable \(X\) into say \(Y=aX+b\). In this case, note that the variance doesn't change
+<p>We can transform a random variable \(X\) into say \(Y=aX+b\). In this case, note that the variance doesn't
+	change
 	if
 	we add a constant.
 	\[E(X+b)=E(X)+b\]\[E(aX)=aE(X)\]\[\text{Var}(X+b)=\text{Var}(X)\]\[\text{Var}(aX)=a^2\text{Var}(X)\]
@@ -2321,16 +2840,19 @@ groups}}=\frac{|\overline{x_1}-\overline{x_2}|}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_
 	probability density function (shifting by the mean and dilating by a factor of
 	\(sigma\):\[p(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\mu)^2/(2\sigma^2)}\]</p>
 <p>Note that this probability density function does not use \(\phi\) or \(z\). So if we take the random variable
-	representing \(N(\mu,\sigma^2)\) and translate it such that the new random variable \(z=\frac{x-\mu}{\sigma}\),
+	representing \(N(\mu,\sigma^2)\) and translate it such that the new random variable
+	\(z=\frac{x-\mu}{\sigma}\),
 	then
 	this is now the standard normal \(N(0,1\).</p>
 <h4>Cumulative distribution function</h4>
-<p>If \(p(x)\) is any probability distribution (discrete or continuous), then the cumulative distribution function
+<p>If \(p(x)\) is any probability distribution (discrete or continuous), then the cumulative distribution
+	function
 	is
 	the integral from negative infinity to x:\[F(x)\equiv \int_{-\infty}^xp(t)dt\]</p>
 <p>The standard normal distribution has a cumulative distribution function which has been tabulated.</p>
 <h4>Central limit theorem</h4>
-<p>If we sample any distribution \(n\) times and take an average, then as \(n\to \infty\) the sampling distribution
+<p>If we sample any distribution \(n\) times and take an average, then as \(n\to \infty\) the sampling
+	distribution
 	of
 	averages approaches a
 	normal distribution.</p>

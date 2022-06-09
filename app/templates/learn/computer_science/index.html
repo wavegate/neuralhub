@@ -2524,96 +2524,546 @@ SWEBOK v3
   due to increased need for monitoring and communication.</p>
 
 <div class="first">Computing foundations</div><a class="anchor" id="computing_foundations"></a>
+<p>Because no software can exist in a vacuum or run without a computer, the core of such an environment is the computer.
+  It is generally accepted that software engineering builds on top of computer science and mathematics. Software
+  engineering is concerned with the application of computers, computing and software to practical purposes.</p>
 <div class="second">Problem solving techniques</div>
 <div class="third">Definition of problem solving</div>
+<p>Problem solving refers to thinking and activities conducted to answer or derive a solution to a problem. A general
+  guideline is to formulate a real problem, analyze the problem, and design a solution search strategy.</p>
 <div class="third">Formulating the real problem</div>
+<p>The problem statement specifies what the problem and the desired outcome are. Some general techniques include
+  statement-restatement, determining the source and the cause, revising the statement, analyzing present and desired
+  state, and using the fresh eye approach.</p>
 <div class="third">Analyze the problem</div>
+<p>The next step is to analyze the problem statement to help structure our search for a solution. Four types of analysis
+  include situation analysis, in which most urgent or critical aspects are identified first, problem analysis, in which
+  cause of problem is determined, decision analysis, in which the action needed to correct the problem must be
+  determined, and potential problem analyais, in which action needed to prevent reoccurrences of the problem must be
+  determined.</p>
 <div class="third">Design a solution search strategy</div>
+<p>The "best" solution could mean faster, cheaper, more usable, different capabilities, etc. Eliminate paths that do not
+  lead to viable solutions, design tasks in a way that provide the most guidance in searching for a solution.</p>
 <div class="third">Problem solving using programs</div>
+<p>To solve a problem using computers, we need to figure out what to tell the computer to do, how to convert the problem
+  statement into an algorithm, and how to convert the algorithm into machine instructions. In general, a problem should
+  be expressed in a way to facilitate the development of algorithms and data structures. Once an algorithm is found, the
+  final step converts the algorithm into machine instructions to form software.</p>
+<p>Abstractly speaking, problem solving using a computer can be considered a process of problem transformation of a
+  problem statement into a problem solution, to transform a problem expressed in natural language into electrons running
+  around a circuit. This transformation is broken down into 1) development of algorithms from the problem statement, 2)
+  application of algorithms to the problem, and 3) transformation of algorithms to program code. This process usually
+  follows a "stepwise refinement" or systematic decomposition in which a problem statement is rewritten as a task and
+  recursively decomposed into simpler subtasks. Three basic ways of decomposing are sequential, conditional, and
+  iterative.</p>
 <div class="second">Abstraction</div>
+<p>Abstraction refers to generalizing by reducing information of a concept, problem, or observable phenomenon, viewing
+  the problem from a higher level of conceptual understanding.</p>
 <div class="third">Levels of abstraction</div>
+<p>When abstracting, we concentrate on one level of the big picture at a time with confidence that we can then connect
+  effectively with levels above and below. Abstraction levels correspond to well-defined standard interfaces such as
+  programming APIs.</p>
 <div class="third">Encapsulation</div>
+<p>Encapsulation is a mechanism used to implement abstraction. When we are dealing with one level of abstraction, the
+  information below and above are encapsulated. Encapsulation usually comes with some degree of information hiding.</p>
 <div class="third">Hierarchy</div>
+<p>Most of the time, different levels of abstraction are organized in a hierarchy. Sometimes, a hierarchy of abstraction
+  is sequential, sometimes it has a tree-like structure, or a many-to-many structure. At no time shall there be a loop
+  in a hierarchy. A hierarchy forms naturally in task decomposition.</p>
 <div class="third">Alternate abstractions</div>
+<p>Alternate abstractions can complement each other in helping understanding the problem and its solution.</p>
 <div class="second">Programming fundamentals</div>
+<p>Programming is composed of the methodologies or activities for creating computer programs that perform a desired
+  function, an indispensable part in software construction, and is considered the process of designing, writing,
+  testing, debugging, and maintaining source code written in a programming language. Writing source code often requires
+  expertise in areas such as application domain, appropriate data structures, specialized algorithms, various language
+  constructs, good programming techniques, and software engineering.</p>
 <div class="third">The programming process</div>
+<p>Programming involves design, writing, testing, debugging, maintenance. Design is conception or invention of a scheme
+  for turning a customer requirement for computer software into operational software, linking application requirements
+  to coding and debugging. Writing is the actual coding of the design in an appropriate programming language. Testing is
+  the activity to verify that the code one writes actually does what it is supposed to do. Debugging finds and fix bugs
+  (faults) in the source code or design. Maintenance updates, corrects, and ehnances existing programs.</p>
 <div class="third">Programming paradigms</div>
+<p>Various programming paradigms have been developed to provide standardization to the highly creative and personal
+  activity of programming. Unstructured programming involves programmers following his/her hunch to write code as long
+  as the function is operational, also known as ad hoc programming. Structured/procedural/imperative programming uses
+  well-defined control structures, including procedures and/or functions with each performing a specific task.
+  Interfaces exist between procedures to facilitate correct and smooth calling operations of the programs.
+  Object-oriented programming (OOP) organizes a program around objects, which are abstract data structures that combine
+  both data and methods used to access or manipulate the data. Aspect-oriented programming (AOP) is a program paradigm
+  built on top of OOP which aims to isolate secondary or supporting functions from the main program's business logic by
+  focusing on the cross sections (concerns) of the objects. The motivation for AOP is to resolve object tangling and
+  scattering, emphasizing the separation of concerns. Functional programming treats all computations as the evaluation
+  of mathematical functions, and avoids state and mutable data.</p>
 <div class="second">Programming language basics</div>
 <div class="third">Programming language overview</div>
+<p>A programming language is designed to express computations that can be performed by a computer. It is a notation for
+  writing programs and thus should be able to express most data structures and algorithms. Some people restrict
+  programming languages to those languages that can express all possible algorithms. The most popular languages are
+  often defined by a specification document established by a well-known and respected organization. For example, the C
+  programming language is specified by an ISO standard named ISO/IEC 9899. Other languages such as Perl and Python often
+  have a dominant implementation used as a reference instead.</p>
 <div class="third">Syntax and semantics of programming languages</div>
+<p>Programming languages typically have some form of written specification of their syntax (form) and semantics
+  (meaning). Such specifications may include specific requirements for the definition of variables and constants (in
+  other words, declarations and types) and format requirements for instructions themselves. In general, a programming
+  language supports constructs such as variables, data types, constants, literals, assignment statements, control
+  statements, procedures, functions, and comments.</p>
 <div class="third">Low-level programming languages</div>
+<p>Low-level languages can be understood by a computer with no or minimal assistance and typically include machine
+  languages and assembly languages. A machine language uses ones and zeros to represent instructions and variables. An
+  assembly language contains same instructions as a machine language but the instructions and variables have symbolic
+  names easier for humans to remember. Assembly languages cannot be directly understood by a computer and must be
+  translated into a machine language by a utility program called an assembler. There often exists a correspondence
+  between instructions of an assembly language and a machine language. For example, "add r1, r2, r3" is an assembly
+  instruction for adding r2 and r3 and storing the sum into register r1. This instruction can be translated to machine
+  code "0001 0001 0010 0011" assuming the proper operation codes are used. One common trait is their close association
+  with the specifics of a type of computer or instruction set architecture (ISA).</p>
 <div class="third">High-level programming languages</div>
+<p>A high-level programming language has a strong abstraction from the detail of the computer's ISA. It often uses
+  natural-language lemeents and is thus much easier for humans to understand. While each microprocessor has its own ISA,
+  code written in a high-level programming language is usually portable between many different hardware platforms. Most
+  programmers use and most software are written in high-level programming languages, such as C, C++, C# ,and Java.</p>
 <div class="third">Declarative vs. imperative programming languages</div>
+<p>Most programming languages are imperative, which involve the programmer specifying every step clearly to the
+  computer. Declarative langauges allow programmers to describe the function without specifying exact instruction
+  sequences, and are high-level languages. The actual implementation of computation in a declarative language is hidden
+  from programmers. Declarative programming only describes what the program should accomplish without describing how to
+  accomplish it. Declarative programming languages include Lisp (also a functional programming language) and Prolog,
+  while imperative programming languages include C, C++, and Java.</p>
 <div class="second">Debugging tools and techniques</div>
+<p>Debugging is a methodical process of finding and reducing the number of bugs or faults in a program.</p>
 <div class="third">Types of errors</div>
+<p>Logical errors and data errors are known as two categories of "faults". Syntax errors are an error that prevents the
+  translator (compiler/interpreter) from successfully parsing the statement. In high-level programming languages, syntax
+  errors are caught during compilation or translation from the high-level language into machine code. Logic errors are
+  semantic errors that result in incorrect computations or program behaviors. Your program is legal, but wrong. Logic
+  errors are usually not machine checkable. Data errors are input errors that result either in input data that is
+  different from what the program expects or in the processing of wrong data.</p>
 <div class="third">Debugging techniques</div>
+<p>Static debugging usually takes the form of code review, while dynamic debugging usually takes the form of tracing and
+  is closely associated with testing. Postmortem debugging is the act of debugging the core dump (memory dump) of a
+  process, which is generated after a process has terminated due to an unhandled exception. The three ways to trace a
+  program is single-stepping (one instruction at a time), breakpoints (stopping at specific instructions), and watch
+  points (tell the program to stop when a register or memory location changes or when it equals to a specific value).
+  Watch points are useful when one doesn't know when a value is changed.</p>
 <div class="third">Debugging tools</div>
+<p>Debuggers are widely used to enable the programmer to monitor the execution of a program, stop the execution, restart
+  the execution, set breakpoints, change values in memory, and even, in some cases, go back in time. There are also many
+  static code analysis tools which look for specific set of known problems within source code. The UNIX lint program is
+  an example of a static code analysis tool.</p>
 <div class="second">Data structure and representation</div>
 <div class="third">Data structure overview</div>
+<p>Data structures are computer representations of data and are used in almost every program. Fundamentally, data
+  structures are abstractions defined on a collection of data and its associated operations. Examples of data structures
+  designed for algorithm efficiency are stacks, queues ,and heaps. Data structures can also be used for conceptual unity
+  such as the name and address of a person. A data structure is either linear or nonlinear, and can have classifications
+  such as homogeneous vs. heterogeneous, static vs. dynamic, persistent vs. transient, external vs. internal, primitive
+  vs. aggregate, recursive vs. nonrecursive, passive vs. active, and stateful vs. stateless.</p>
 <div class="third">Types of data structure</div>
+<p>Linear structures organize data items in a single dimension in which each data entry has one predecessor and one
+  successor with the exception of first and last entry. Nonlinear structures organize data items in two or more
+  dimensions. Examples of linear structures include lists, stacks, and queues. Examples of nonlinear structures include
+  heaps, hash tables, and trees (binary trees, balance trees, B-trees, and so forth). A compound data structure builds
+  on top of other more primitive data structures. Examples of compound structures are sets, graphs, and partitions (eg.
+  a partition is a set of sets).</p>
 <div class="third">Operations on data structures</div>
+<p>Basic operations supported by all data structures include create, read, update and delete (CRUD). Create inserts a
+  new data entry into the structure. Read retrieves a data entry from the structure. Update modifies an existing data
+  entry. Delete removes a data entry from the structure. Some additional operations include finding a particular
+  element, sorting all elements, traversing all elements in some order, and reorganizing or rebalancing the structure.
+  Different structures support different operations with different efficiencies. For example, it is easy to retrieve the
+  last item inserted into a stack, but finding a particular element within a stack is rather slow and tedious.</p>
 <div class="second">Algorithms and complexity</div>
 <div class="third">Overview of algorithms</div>
+<p>Abstractly speaking, algorithms guide the operations of computers and consist of a sequence of actions composed to
+  solve a problem. Some agreement exists that an algorithm needs to be correct, finite (will terminate eventually) and
+  unambiguous.</p>
 <div class="third">Attributes of algorithms</div>
+<p>The attributes of algorithms include modularity, correctness, maintainability, functionality, robustness,
+  user-friendliness, programmer time, simplicity, and extensibility. Performance or efficiency discuss time and
+  resource-usage. Efficiency determines if an algorithm is practical or not. An algorithm that takes one hundred years
+  to terminate is virtually uesless and is even considered incorrect.</p>
 <div class="third">Algorithmic analysis</div>
+<p>Analysis of algorithms is the theoretical study of computer-program performance and resource usage and can determine
+  goodness of an algorithm. Worst-case analysis determines the maximum time or resources required by the algorithm on
+  any input of size n. In average-case analysis, one determines time or resources required over all inputs of size n,
+  needing to make an assumption on the statistical distribution of inputs. Best-case analysis determines minimum time or
+  resources required on any input of size n. Average-case analysis is most relevant but also the most difficult to
+  perform.</p>
+<p>Amortized analysis determines the maximum time required by an algorithm over a sequence of operations, and
+  competitive analysis determines relative performance merit of an algorithm against the optimal algorithm in the same
+  category.</p>
 <div class="third">Algorithmic design strategies</div>
+<p>Brute force, divide and conquer, dynamic programming, and greedy selection are strategies for designing algorithms.
+  Brute force strategy is a no-strategy, exhaustively trying every possible way to tackle a problem. The divide and
+  conquer strategy divides a big problem into smaller, homogeneous problems, recursively solving smaller problems and
+  combining the solutions to solve the bigger problem. Dynamic programming eliminates redundant subproblems to improve
+  efficiency. Greedy selection recognizes that not all sub-problems contribute to the solution and eliminates all but
+  one sub-problem. Randomization can improve on greedy selection by eliminating complexity in determining the greedy
+  choice through coin flipping or randomization.</p>
 <div class="third">Algorithmic analysis strategies</div>
+<p>Basic counting analysis counts the number of steps an algorithm takes to complete the task. Asymptotic analysis only
+  considers the order of magnitude of the number of steps. Probabilistic analysis uses probabilities to analyze average
+  performance of an algorithm. Amortized analysis uses aggregation, potential, and accounting to analyze the worst
+  performance of an algorithm on a sequence of operations. Competitive analysis uses potential and accounting to analyze
+  the relative performance of an algorithm to an optimal algorithm.</p>
 <div class="second">Basic concept of a system</div>
+<p>A system can be simple like an ink pen or complex like an aircraft. Systems can be divided into technical
+  computer-based systems and sociotechnical systems. A sociotechnical system requires humans (eg. manned space
+  vehicles), whereas a technical computer-based system functions without human involvement.</p>
 <div class="third">Emergent system properties</div>
+<p>Emergent properties develop after integration of constituent parts, and can be functional (describes what a system
+  does) or nonfunctional (describes how a system behaves).</p>
 <div class="third">Systems engineering</div>
+<p>Systems engineering is the interdisciplinary approach governing the total technical and managerial effort
+  required to transform a set of customer needs, expectations, and constraints into a solution and to support that
+  solution throughout its life.</p>
 <div class="third">Overview of a computer system</div>
+<p>A computer is a machine that executes programs or software, consisting of a purposeful collection of mechnical,
+  electrical, and electronic componnets. A computer receives some input, stores and manipulates some data, and provides
+  some output. The most distinct feature of a computer is its ability to store and execute sequences of instructions
+  called programs. Computers have universal equivalence in functionality. Given enough time and memory, all computers
+  are capable of computing exactly the same things.</p>
+<p>Most computer systems have a structure known as the von Neumann model. A memory for storing instructions and data, a
+  central processing unit for performing arithmetic and logical operations, a control unit for sequencing and
+  interpreting instructions, input for getting external information into the memory, and output for producing results
+  for the user.</p>
+<img src="https://neuralhuborg.s3.amazonaws.com/img/vonneumann.png">
 <div class="second">Computer organization</div>
+<p>The gap between a computer's intended behavior and the underlying electronic devices is the computer organization,
+  which meshes various electrical, electronic, and mechanical devices into one device that forms a computer.</p>
 <div class="third">Computer organization overview</div>
+<p>A computer generally consists of a CPU, memory, input devices, and output devices. Abstractly, the organization of a
+  computer can be divided into four levels. The macro architecture level is the formal specification of all the
+  functions a particular machine can carry out and is known as the instruction set architecture. The micro architecture
+  is the implementation of the ISA in a specific CPU. The logic circuits level is the level where each functional
+  component of the micro architecture is built up of circuits that make decisions based on simple rules. The devices
+  level is the level where each logic circuit is actually built of electronic devices such as complementary metal-oxide
+  semiconductors (CMOS), n-channel metal oxide semiconductors (NMOS), or gallium arsenide (GaAs) transistors, etc.</p>
+<p>To a programmer, the most important level of abstraction is the ISA, which specifies such things as native data
+  types, instructions, registers, addressing modes, memory architecure, interrupt and exception handling, and the I/Os.
+  Overall, the ISA specifies the ability of a computer and what can be done on the computer with programming.</p>
 <div class="third">Digital systems</div>
+<p>The computer uses circuits and memory to hold charges that represents the presence or absence of voltage. The
+  presence of voltage is equal to 1 while the basence of voltage is a zero. Everything is expressed or encoded using
+  digital zeros and ones. In this sense, a computer becomes a digital system. For example, the decimal value 6 can be
+  encoded as 110, the addition struction may be encoded as 0001, and so forth.</p>
 <div class="third">Digital logic</div>
+<p>The logic behind a computer is called digital logic because it deals with operations of digital zeros and ones. For
+  example, digital logic spells out what the value will be if a zero and one is ANDed, ORed, or exclusively ORed
+  together. It also specifies how to build decoders, multiplexers (MUX), memory, and adders used to assemble the
+  computer.</p>
 <div class="third">Computer expression of data</div>
+<p>A computer is a binary expression system, and so the maximum numerical value expressible by an n-bits binary code is
+  \(2^n-1\). Specifically, binary number \(a_na_n-1...a_1a_0\) corresponds to
+  \(a_n\times2^n+a_{n-1}\times2^{n-1}+...+a_1\times2^1+a_0\times2^0\). Thus, the numerical value of the binary
+  expression of 1011 is \(1\times8+0\times4+1\times2+1\times1=11\). To express a nonnumerical value, we need to decide
+  the number of zeros and ones to use and the order in which those zeros and ones are arranged. Integers can be
+  expressed in the form of unsigned, one's complement, or two's complement. For characters, there are ASCII, Unicode,
+  and IBM's EBCDIC standards. For floating point numbers, there are IEEE-754 FP 1, 2, and 3 standards.</p>
 <div class="third">The central processing unit (CPU)</div>
+<p>The central processing unit is the place where instructions are actually executed. The executation usually takes
+  several steps, including fetching the program instruction, decoding the instruction, fetching operands, performing
+  arithmetic and logical operations on the operands, and storing the result. The main components of a CPU consist of
+  registers where instructions and data are often read from and written to. The arithmetic and logic unit (ALU) that
+  performs the actual arithmic and logic, the control unit responsible for producing proper signals to control the
+  operations, and various buses that link the components together and transport data to and from these components.</p>
 <div class="third">Memory system organization</div>
+<p>Memory is the storage unit of a computer. It concerns the assembling of a large-scale memory system from smaller and
+  single-digit storage units. The main topics covered by memory system architecture are memory cells and chips
+  (single-digital storage and assembling of single-digit units into one-dimensional memory arrays and the assembling of
+  one-dimensional storage arrays into multi-dimensional storage memory chips), memory boards and modules (assembling of
+  memory chips into memory systems), memory hierarchy and cache (supports efficient memory operations), and memory as a
+  subsystem of the computer (interface between the memory system and other parts of the computer).</p>
 <div class="third">Input and output (I/O)</div>
+<p>Common input devices include keyboard and mouse, and common ouput devices include disk, screen, printer, speakers.
+  I/O is how computers connect and manage various inputs and output devices to facilitate interaction between computers
+  and humans. Hardware I/O includes dedicated I/O (dedicates the CPU to the actual input and ouput operations during
+  I/O), memory-mapped I/O (treats I/O operations as memory operations), and hybrid I/O (combines the two into a single
+  holistic I/O operation mode).</p>
+<p>Software I/O can be programmed I/O (lets the CPU wait while the I/O device is using I/O), interrupt-driven I/O (lets
+  the CPU's handling of I/O be driven by the I/O device), and direct memory access DMA (lets I/O be handled by a
+  secondary CPU embedded in a DMA device).</p>
+<p>The main issues involved in I/O include I/O addressing (how to identify the I/O device for a specific I/O operation),
+  synchronization (how to make the CPU and I/O device work in harmony), and error detection and correction (deals with
+  the occurrence of transmission errors).</p>
 <div class="second">Compiler basics</div>
 <div class="third">Compiler/interpreter overview</div>
+<p>The CPU converts high level language code written by programmers into machine code using a compiler or an interpreter
+  in the process of compilation or interpretation.</p>
 <div class="third">Interpretation and compilation</div>
+<p>Interpretation translates the source code one statement at a time into machine language and executes it on the spot,
+  then goes back for another statement. Compilation translates the high-level-language source code into an entire
+  machine-language program (an executable image) by a program called a compiler. After compilation, only the executable
+  image is needed to run the program. Most application software is sold in compilation form. A compiler makes the
+  conversion just once, while an interpreter typically converts every time a program is executed. Interpreting code is
+  slower than running compiled code, and interpreters are slower at accessing variables.</p>
+<p>The primary tasks of a compiler may include preprocessing, lexical analysis, parsing, semantic analysis, code
+  generation, and code optimization. Program fualts caused by incorrect compiler behavior can be very difficult to track
+  down, so compiler implementers invest a lot of time ensuring the correctness of their software.</p>
 <div class="third">The compilation process</div>
+<p>Most compilers break down compilation into lexical analysis, syntax analysis or parsing, semantic analysis, and code
+  generation.</p>
+<p>Lexical analysis partitions the input text (the source code), which is a sequence of characaters, into separate
+  comments, which are to be ignored in subsequent actions, and basic symbols, which have lexical meanings. These basic
+  symbosl must correspond to some terminal symbols of the grammar of the particular programmign language.</p>
+<p>Syntax analysis is based on the results of lexical anlaysis and discovers the structure in the program and determines
+  whether or not a text conforms to an expected format. Syntax analysis determines if source code is correct and
+  converts it into a more structured representation (parse tree) for semantic analysis or transformation.</p>
+<p>Semantic analysis adds semantic information to the parse tree built during the syntax analysis and builds the symbol
+  table. It performs various semantic checks including type checking, object binding (associating variable and function
+  references with their definitions), and definite assignment (requiring all local variables to be initialized before
+  use).</p>
+<p>Once semantic analysis is complete, code generation transforms intermediate code produced into the machine machine
+  language of the computer under consideration. This involves resource and storage decisions, such as deciding which
+  variables to fit into registers and memory and the selection and scheduling of appropriate machine instructions, along
+  with their associated addressing modes.</p>
 <div class="second">Operating system basics</div>
+<p>A computer as a complex electrical-mechanical system has a manager for managing the resources and activities
+  occurring on it, called the operating system (OS).</p>
 <div class="third">Operating systems overview</div>
+<p>Operating systems is a collection of software and firmware that controls the execution of computer programs and
+  provides services such as computer resource allocation, job control, input/output control, and file management.
+  Conceptually, an operating system is a computer program that manages hardware resources and makes it easier to use by
+  applications by presenting nice abstractions. This abstraction is often called the virtual machine and includes such
+  things as processes, virtual memory, and file systems. An OS hides the complexity of the underlying hardware and is
+  found on all modern computers. The principal roles of OSs are management (allocation and recovery) (management of
+  physical resources among
+  multiple competing users/applications/tasks) and illusion (nice abstractions provided).</p>
 <div class="third">Tasks of an operating system</div>
+<p>Modern operating systems have tasks including CPU management, memory management, disk management (file system), I/O
+  device management, and security and protection. CPU management deals with allocation and releases of the CPU among
+  competing programs (called processes/threads in OS jargon), including the operating system itself. The main
+  abstraction provided by CPU management is the process/thread model. Memory management deals with allocation and
+  release of memory space among competing processes, and the main abstraction for memory management is virtual memory.
+  Disk management deals with sharing of magnetic or optical or solid state disks among multiple programs/users and its
+  main abstraction is the file system. I/O device management deals with allocation and releases of various I/O devices
+  among competing processes. Security and protection deal with the protection of computer resources from illegal use.
+</p>
 <div class="third">Operating system abstractions</div>
+<p>OSs use five abstractions: process/thread, virtual memory, file systems, input/output, and protection domains. The
+  overall OS abstraction is the virtual machine. For each task area of OS, there is both a physical reality and a
+  conceptual abstraction. The physical reality refers to the hardware resource under management; the conceptual
+  abstraction refers to the interface the OS presents to the users/programs above. In the thread model, the physical
+  reality is the CPU and the abstraction is multiple CPUs. Thus, a user doesn't have to work about sharing the CPU with
+  others when working on the abstraction provided by an OS. In the virtual memory abstraction, the physical reality is
+  the physical RAM or ROM and the abstraction is multiple unlimited memory space so the user doesn't have to worry about
+  sharing physical memory with others. In this context, virtual applies to something that appears to be there but isn't,
+  and transparent means something is there but appears not to be.</p>
 <div class="third">Operating systems classification</div>
+<p>From a historical perspective, an operating system can be classified as a batching OS (organizes and processes work
+  in batches such as IBM's FMS, IBSYS, and University of Michigan's UMES), multiprogrammed batching OS (adds multitask
+  capability such as IBM's OS/360), time-sharing OS (adds multi-task and interactive capabilities such as UNIX, Linux,
+  and NT), real-time OS (adds timing predictability by scheduling individual tasks according to each task's completion
+  deadlines such as VxWorks WindRiver and DART EMC), distributed OS (adds managing a network of computers), and embedded
+  OS (used for embedded systems such as cars and PDS such as Palm OS, Windows CE, and TOPPER).</p>
+<p>An OS can also be classified by its applicable target machine/environment, such as into mainframe OS (runs on the
+  mainframe computers such as OS/360, OS/390, AS/400, MVS and VM), server OS (runs on workstations or servers such as
+  UNIX, Windows, Linux, VMS), multicomputer OS (runs on multiple computers such as Novell Netware), personal computers
+  (runs on personal computers such as DOS, Windows, Mac OS, Linux), and mobile device OS (runs on personal devices such
+  as iOS, Android, Symdbian).</p>
 <div class="second">Database basics and data management</div>
+<p>A database consists of an organized collection of data for one or more uses. A database is usually external to
+  programs and permanent in existence compared to data structures. Databasea are used when the data volume is large or
+  logical relations between data items are miportant. The factors considered in database design include performance,
+  concurrency, integrity, and recovery from hardware failures.</p>
 <div class="third">Entity and schema</div>
+<p>Entities are things a database tries to model and store. An entity can be real-world objects, and can be primitive
+  such as a name, or a composite such as an employee that has a name, number, salary etc. The single most important
+  concept in a database is the schema, a description of the entire database structure from which all other database
+  activities are built. A schema defines the relationships between various entities. The database model describes the
+  type of relationship among various entities, such as relational, network, and object models.</p>
 <div class="third">Database management systems (DBMS)</div>
+<p>Database Management System (DBMS) components include database applications for the storage of structured and
+  unstructured data and the required functions needed to view, collect, store, and retrieve data. A DBMS controls the
+  creation, maintenance, and use of the database and is categorized acording to the database model it supports. A
+  relational database management system (RDBMS) implements features of a relational model, while an object database
+  management system (ODBMS) implements features of the object model.</p>
 <div class="third">Database query language</div>
+<p>Users/applications interact with a database through a databaes query language. One commonly used query language for
+  the relational database is the structured query language (SQL). A common query language for object databases is object
+  query language (OQL). SQL is made of Data Definition Language (DDL), Data Manipulation Language (DML), and Data
+  Control Language (DCL). An example of an DML query may look like the following:</p>
+<pre>
+  SELECT Component_No, Quantity
+  FROM COMPONENT
+  WHERE Item_No = 100
+</pre>
+<p>The above query selects all the Component_No and its corresponding quantity from a database table called COMPONENT,
+  where the Item_No equals to 100.</p>
 <div class="third">Tasks of DBMS packages</div>
+<p>Database development defines and organizes content, relationships, and structure of the data needed to build a
+  database.</p>
+<p>Database interrogation accesses data in a database for information retrieval and report generation. This is the
+  operation most users know about databases.</p>
+<p>Database maintenance adds, deletes, updates, and corrects data in a database.</p>
+<p>Application development develops prototypes of data entry screens, queries, forms, reports, tables, and labels for a
+  prorotyped application. It also refers to the use of 4th Generation Language or application generators to develop or
+  generate program code.</p>
 <div class="third">Data management</div>
+<p>In a relational model, data are organized as tables with different tables representing different entities or
+  relations among a set of entities. The storage of data deals with the storage of these databaes tables on disks. The
+  common ways for achieving this is to use files. Sequential, indexed, and hash files are all used in this purpose.</p>
 <div class="third">Data mining</div>
+<p>To take full advantage of a database (instead of "pinpointing" by looking for specific parts of the database), one
+  can perform statistical analysis and pattern discovery on the content of a
+  database using a technique called data mining, which is used to support a number of business activities such as
+  marketing, fraud detection, and trend analysis. Numerous ways to perform data mining have been invented in the past
+  decade and include techniques such as class description, class discrimination, cluster analysis, association analysis,
+  and outlier analysis.</p>
 <div class="second">Network communication basics</div>
+<p>A computer network connects a collection of computers and allows users of different computers to share resources with
+  other users. A network gives the illusion of a single, omnipresent computer. Every device connected to a network is a
+  network node. Computnig paradigms which have benefited from networks are distributed computing, grid computing,
+  Internet computing, and cloud computing.</p>
 <div class="third">Types of network</div>
+<p>Personal area network/home network is a computer network used for communication among devices close to one person,
+  such as PCs, faxes, PDAs, and TVs. This is the base on which the Internet of Things is built.</p>
+<p>Local area network (LAN) connects devices in a limited geographical area such as a school campus or computer lab.</p>
+<p>Campus network is an interconnection of LANs within a limited geographical area.</p>
+<p>Wide area network (WAN) is a network covering a large geographic area, such as a city or country. A WAN limited to a
+  city is sometimes called a Metropolitan Area Network.</p>
+<p>Internet is the global network.</p>
+<p>other classifications of networks divide networks into control networks, storage networks, virtual private networks
+  (VPN), wireless networks, point-to-point networks, and Internet of Things.</p>
 <div class="third">Basic network components</div>
+<p>All networks are made of the following hardware components: computers, network interface cards (NICs), bridges, hubs,
+  switches, and routers. All these components are called nodes in networking jargon. Each component performs a
+  distinctive function essential for packaging, connecting, transmitting, amplifying, controlling, unpacking, and
+  interpreting data. A repeater amplifies signals, a switch performs many-to-many connections, a hub performs
+  one-to-many connections, an interface card performs data packing and transmission, a bridge connects one network with
+  another, and a router is a computer itself that performs data analysis and flow control to regulate data from the
+  network. These functions performed by varying components are specified by one or more levels of the seven-layer Open
+  Systems Interconnect (OSI) networking model.</p>
 <div class="third">Networking protocols and standards</div>
+<p>Computers communicate with each other using protocols, which specify the format and regulations used to pack and
+  un-pack data. Network protocols are divided into different layers. The physical layer deals with the physical
+  connection, the data link layer deals with raw data transmission and flow control, and the network layer deals with
+  packing and unpacking data into a particular format understandable by the relevant parties. The most commonly used OSI
+  networking model organizes network protcols into seven layers: the application layer, presentation layer, session
+  layer, transport layer, network layer, data link layer, and physical layer.</p>
+<p>Not all network protocols implement all layers of the OSI model. The TCP/IP protocol implements neither the
+  presentation layer nor the session layer. UDP and TCP both work on the transport layer above IP's network layer,
+  providing best-effort unreliable transport (UDP) vs. reliable transport function (TCP). Physical layer protocols
+  include token ring, Ethernet, fast Ethernet, gigabit Ethernet, and wireless Ethernet. Data-link layer protocols
+  include frame-relay, asynchronous transfer mode (ATM), and Point-to-Point Protocol (PPP). Application layer protocols
+  include Fibre channel, Small Computer System Interface (SCSI), and Bluetooth.</p>
 <div class="third">The Internet</div>
+<p>The Internet is a global system of interconnected governmental, academic, corporate, public, and private computer
+  networks. Access to the internet is through organizations known as internet service providers (ISP), which maintains
+  one or more switching centers called a point of presence which connect users to the Internet.</p>
 <div class="third">Internet of things</div>
+<p>The Internet of Things refers to networking of everyday objects using wired or wireless networking technologies. The
+  purpose is to interconnect all things to facilitate autonomous and better living. Technologies used include RFID,
+  wireless and wired networking, sensor technology, and a lot of software.</p>
 <div class="third">Virtual private network (VPN)</div>
+<p>A virtual private network is a preplanned virtual connection between nodes in a LAN/WAN or on the internet. It allows
+  the network administrator to separate network traffic into user groups, improving performance and security between
+  nodes and allowing easier maintenance of circuits when troubleshooting.</p>
 <div class="second">Parallel and distributed computing</div>
+<p>Parallel computing emerges with the development of multi-functional units within a computer. The main objective of
+  parallel computing is to execute several tasks simultaneously on different functional units to improve throughput or
+  response or both. Distributed computing is a paradigm that emerges with the development of computer networks. Its
+  objective is to make use of multiple computers in the network to accomplish things otherwise not possible within a
+  single computer or to improve efficiency.</p>
 <div class="third">Parallel and distributed computing overview</div>
+<p>Parallel computing investigates ways to maximize concurrency (simultaneous execution of multiple tasks) within one
+  computer. Distributed computing consists of multiple autonomous computers that communicate through a computer network.
+  Distributed computing studies the ways of dividing a problem into many tasks and assigning such tasks to various
+  computers. Distributed computing is another form of parallel computing albeit on a grander scale. In distributed
+  computing, the functional units rae not ALU, FPU, or separate cores, but individual computers. Both parallel and
+  distributed computing are called concurrent computing.</p>
 <div class="third">Difference between parallel and distributed computing</div>
+<p>Parallel computing can be run on different processors within a single computer. The scope of parallel computing is
+  limited to where a shared memory is used by all processors involved in the computing, while distributed computing
+  refers to computations where private memory exists for each processor involved in the computations. Parallel computing
+  necessitates concurrent execution of several tasks while distributed computing does not have this necessity. Multicore
+  computing is a form of parallel computing.</p>
 <div class="third">Parallel and distributed computing models</div>
+<p>In a shared memory (parallel) model, all computers have access to a shared central memory where local caches are used
+  to speed up the processing power. These caches use a protocol to insure the lcoalized data is fresh and up to date,
+  typically the MESI protocol. The algorithm designer choosees the probgram for execution by each computer. Access to
+  the central memory can be synchronous or asynchronous, and must be coordinated such that coherency is maintained.</p>
+<p>In a message-passing (distributed) model, all computers run some programs that collectively achieve some purpose. The
+  system must work correctly regardless of the structure of the network. This mdoel can be further classified into
+  client-server (C/S), browser-server (B/S), and n-tier models. In the C/S model, the server provides services and the
+  client requests services from the server. In the B/S model, the server provides services and the client is the
+  browser. In the n-tier model, each tier provides services to the tier immediately above it and requests services form
+  the tier immediately below it. The n-tier model can be seen as a chain of client-server models. The tiers between the
+  bottommost and topmost tier are called middleware.</p>
 <div class="third">Main issues in distributed computing</div>
+<p>Memory coherency and consensus among all computers are the most difficult issues faced by coordinating all the
+  components in a distributed environment.</p>
 <div class="second">Basic user human factors</div>
 <div class="third">Input and output</div>
+<p>Input and output are the interfaces between users and software. Issues considered for input include the input
+  required, how the input is passed from users to computers, what the most convenient way for users to enter input is,
+  and the format by which computers require input data. The designer should request the minimum data from human input
+  only when data is not already stored in the system, and the designer should format and edit the data at the time of
+  entry to reduce errors arising from incorrect or malicious data entry. For output, consider the format users would
+  like to see the output, the most pleasing way to display output. Rules of thumb include simple and natural dialogue,
+  speaking users' language, minimizing user memory load, consistency, minimal surprise, conformance to standards (eg.
+  automobiles have a standard interface for accelerator, brake, steering).</p>
 <div class="third">Error messages</div>
+<p>Error messages should clearly explain what is happening (no codes), should pinpoint the cause of the error, and
+  should be displayed right when the error condition occurs. Error messages should not overload the users with too much
+  information that cause them to ignore the messages altogether. Messages relating to security access errors should not
+  provide extra information allowing unauthorized access.</p>
 <div class="third">Software robustness</div>
+<p>Software robustness refers to the ability of software to tolerate erroneous inputs. One should always check the
+  validity of the inputs and return values, one should always throw an exception when something unexpected occurs, and
+  one should never quit a program without first giving users/applications a chance to correct the condition.</p>
 <div class="second">Basic developer human factors</div>
+<p>To ensure that software is easy to read, structure (program layouts) and comments (documentation) exist.</p>
 <div class="third">Structure</div>
+<p>Well-structured programs are easier to understand. White space, indentation, parentheses, blank lines, braces, etc.
+  can be used to add structure to a program.</p>
 <div class="third">Comments</div>
+<p>Good comments explain the intent of the code and justify why this code looks the way it does. If the code is written
+  in a clear and precise manner such that its meaning is self-proclaimed, then no comment is needed. However, most
+  programs are not self-explanatory. Comments should be consistent across the entire program, each function should be
+  commented to explain the purpose of the function. Within a function, comments should explain the meaning and intention
+  of each logical section. Comments should stipulate what freedom does or does not the maintaining programmers have with
+  respect to making changes to that code. If a statement needs comments, one should reconsider the statement.</p>
 <div class="second">Secure software development and maintenance</div>
 <div class="third">Software requirements security</div>
+<p>Software requirements security deals with the clarification and specification of security policy and objectives into
+  software requirements.</p>
 <div class="third">Software design security</div>
+<p>Software design security deals with the design of software modules that fit together to meet security objectives
+  specified in the requirements. Factors considered may include frameworks and access modes that setup the overall
+  security monitoring/enforcement strategies.</p>
 <div class="third">Software construction security</div>
+<p>Software construction security concerns the question of how to write actual programming code for specific situations
+  such that security considerations are taken care of. It can mean coding a function in a secure way or the coding of
+  security into software. Most people are unclear as to how one can make specific coding more secure. For example, in C,
+  the expression i&#60;&#60;1 (shift the binary representation of i's value to the left by one bit) and 2*i (mlutiply
+  the value of variable i by constant 2) mean the same thing semantically, but might not have the same security
+  ramification. So most people regard construction security as coding of security into software. Rules for this include
+  structuring the process so that all sections requiring extra privilages are modules made as small as possible. Ensure
+  that any assumptions in the program are validated. If this is not possible, document them for installers and
+  maintainers so they know the assumptions that attackers will try to invalidate. Ensure that the program does not shrae
+  objects in memory with other programs. Check the error status of every function and do not try to recover unless
+  neither the cause of the error nor its effects affect any escurity considerations. The program should restore the
+  state of the software to the state it had before the process began, and the nterminate.</p>
 <div class="third">Software testing security</div>
+<p>Software testing security determines that software protects data and maintains security specification as given.</p>
 <div class="third">Build security into software engineering process</div>
+<p>One trend that emerges to build security into the engineering process is the Secure Development Lifecycle (SDL)
+  concept, which is a classical spiral model that takes a holistic view of security and ensures that security is
+  inherent in software design and development, not as an afterthought.</p>
 <div class="third">Software security guidelines</div>
+<p>Some reputable guidelines are published by the Computer Emergency Response Team (CERT) and its top 10 software
+  security practices are 1) validate input, 2) heed compiler warnings, 3) architect and design for security policies, 4)
+  keep it simple, 5) default deny, 6) adhere to the principle of least privilege, 7) sanitize data sent to other
+  software, 8) practice defense in depth, 9) use effective quality assurance techniques, 10) adopt a software
+  construction security standard.</p>
 
 <div class="first">Mathematical foundations</div><a class="anchor" id="mathematical_foundations"></a>
+<p>Mathematics, in a sense, is the study of formal systems, associated with preciseness, so there cannot be any
+  ambiguity or erroneous interpretation of fact.</p>
 <div class="second">Sets, relations, functions</div>
 <div class="third">Set operations</div>
 <div class="third">Properties of set</div>
