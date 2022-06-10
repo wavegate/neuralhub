@@ -228,14 +228,77 @@
 <div class="second">Approximation</div>
 <div class="first">Kinematics</div><a class="anchor" id="kinematics"></a>
 <div class="second">Displacement</div>
+<p>Displacement is the change in position of an object:\[\Delta x = x_f-x_0\]where \(\Delta x\) is displacement, \(x_f\)
+	is the final position, and \(x_0\) is the initial position.</p>
+<p>Distance is the magnitude or size of displacement between two positions. Distance traveled is the total length of the
+	path traveled between two positions. The distance traveled can be greater than the distance between two points, eg.
+	if a person walks back and forth between A and B, they travel a farther distance than the distance between A and B.
+</p>
 <div class="second">Vectors, scalars, and coordinate systems</div>
+<p>A vector is any quantity with both magnitude and direction. The direction of a vector in one-dimensional motion is
+	simply a plus or minus sign. Vectors are represented graphically by arrows, with a length proportional to the
+	vector's magnitude.</p>
+<p>A scalar is any quantity that has a magnitude but no direction.</p>
 <div class="second">Time, velocity, and speed</div>
+<p>In physics, the defintion of time is simple—time is change, or the interval over which change occurs. It is
+	impossible to know that time has passed unless something changes.</p>
+<p>Elapsed time \(\Delta t\) is the difference between beginning and ending time:\[\Delta t = t_f - t_0\]where (\Delta
+	t\) is the change in time or elapsed time, \(t_f\) is the time at the end of the motion, and \(t_0\) is the time at
+	the beginning of the motion.</p>
+<p>Average velocity is displacement (change in position) divided by the time of travel:\[\bar{v}=\frac{\Delta x}{\Delta
+	t}=\frac{x_f-x_0}{t_f-t_0}\]where \(\bar{v}\) is the average (indicated by the bar) velocity.</p>
+<p>Note that velocity is a vector because displacement is a vector.</p>
+<p>Instantaneous velocity \(v\) is the average velocity at a specific instant in time (or over an infinitesimally small
+	time interval).</p>
+<p>Instantaneous speed is the magnitude of instantaneous velocity. Average speed, however, can be greater than average
+	velocity, similar to how distance can be greater than displacement.</p>
 <div class="second">Acceleration</div>
+<p>Average acceleration is the rate at which velocity changes:\[\bar{a}=\frac{\Delta v}{\Delta t}\]</p>
+<p>Instantaneous acceleration \(a\), or the acceleration at a specific instant in time, is found by considering an
+	infinitesimally small interval of time.</p>
 <div class="second">Motion equations for constant acceleration in one dimension</div>
+<p>Assumptions that acceleration is constant allows us to avoid using calculus to find instantaneous acceleration. Since
+	acceleration is constant, the average and instantaneous accelerations are equal.</p>
+<p>In doing so, we can derive our equation for solving for displacement and final position from average velocity when
+	acceleration is constant:\[\bar{v}=\frac{\Delta x}{\Delta t}\]\[=\frac{x-x_0}{t}\]\[x=x_0+\bar{v}t\]where the
+	average velocity is \(\bar{v}=\frac{v_0+v}{2}\).</p>
+<p>Similarly, we can derive our equation for solving for final velocity:\[a=\frac{\Delta v}{\Delta
+	t}\]\[=\frac{v-v_0}{t}\]\[v=v_0+at\]</p>
+<p>Combining the two equations above, we can find the third equation that allows us to calculate the final position of
+	an object experiencing constant acceleration:\[v=v_0+at\]Add \(v_0\) to each side of the equation and divide by
+	2:\[\frac{v_0+v}{2}=v_0+\frac{1}{2}at\]\[\bar{v}=v_0+\frac{1}{2}at\]Substitute in the equation for
+	displacement:\[x=x_0+v_0t+\frac{1}{2}at^2\]</p>
+<p>We can find the final velocity when velocity is not constant with the following: First solve \(v=v_0+at\) for \(t\)
+	to get\[t=\frac{v-v_0}{a}\]Substitute this and \(\bar{v}=\frac{v_9+v}{2}\) into \(x=x_0+\bar{v}t\) to
+	get:\[v^2=v_0^2+2a(x-x_0)\]</p>
 <div class="second">Problem-solving basics for one dimensional kinematics</div>
+<p>First, examine the situation to determine which physical principles are involved. It often helps to draw a simple
+	sketch at the outset. Decide on which direction is positive and note that on your sketch. Next, make a list of what
+	is given or can be inferred from the problem as stated (identify the knowns). Remember that "stopped" means velocity
+	is zero and we often can take initial time and position as zero. Identify exactly what needs to be determined in the
+	problem (identify the unknowns). FInd an equation or set of equations that can help you solve the problem.
+	Substitutes the knowns along with their units into the appropriate equation, and obtain numerical solutions complete
+	with units. Check the answer to see if it is reasonable: does it make sense?</p>
 <div class="second">Falling objects</div>
+<p>In a given location, all objects fall toward the center of Earth with the same constant acceleration, independent of
+	their mass. For ideal situations, we neglect air resistance and assume objects are falling without air resistance or
+	friction, meaning the objects are in free-fall.</p>
+<p>The force of gravity causes objcts to fall towards the center of the Earth. The acceleration of free-falling objects
+	is called the acceleration due to gravity. Its magnitude is given its own symbol \(g\) and is constant at any
+	location earth with the value \(g=9.80\mathrm{m/s}^2\).</p>
+<p>An interesting finding is that if we throw a rock up or down at the same speed, the speed at which the rock is
+	traveling at a certain position is the same either way. For example, if we throw a rock 13 meters per second
+	upwards, and find the speed it is traveling when it is 5 meters below us, the speed will be the same as if we threw
+	the rock 13 meters per second downwards. This is related to the fact that the rock is moving 13 meters downwards by
+	the time it is passing us on the way down again. This is a little counterintuitive (we might expect the one we throw
+	downwards to be faster), but mathematically correct.</p>
+<img src="https://openstax.org/apps/archive/20220509.174553/resources/2d827b3a6d496612fc4ac6aeb1879276af981f20"
+	alt="rock thrown upwards and downwards has same speed">
 <div class="second">Graphical analysis of one dimensional motion</div>
-<div class="first">Two-dmensional kinematics</div><a class="anchor" id="2d_kinematics"></a>
+<p>The derivative of a position vs. time graph is the instantaneous velocity, and the derivative of a velocity vs. time
+	graph is instantaneous acceleration. The integral of an acceleration vs. time graph is instantaneous velocity, and
+	the integral of a velocity vs. time graph is position.</p>
+<div class="first">Two-dimensional kinematics</div><a class="anchor" id="2d_kinematics"></a>
 <div class="second">Kinematics in two dimensions: an introduction</div>
 <div class="second">Vector addition and subtraction: graphical methods</div>
 <div class="second">Vector addition and subtraction: analytical methods</div>

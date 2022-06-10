@@ -3064,6 +3064,7 @@ SWEBOK v3
 <div class="first">Mathematical foundations</div><a class="anchor" id="mathematical_foundations"></a>
 <p>Mathematics, in a sense, is the study of formal systems, associated with preciseness, so there cannot be any
   ambiguity or erroneous interpretation of fact.</p>
+See Mathematics section.
 <div class="second">Sets, relations, functions</div>
 <div class="third">Set operations</div>
 <div class="third">Properties of set</div>
@@ -3082,6 +3083,37 @@ SWEBOK v3
 <div class="second">Grammars</div>
 <div class="third">Language recognition</div>
 <div class="second">Numerical precision, accuracy, and errors</div>
+<p>The main goal of numerical analysis is to develop efficient algorithms for computing precise numerical values of
+  functions, solutions of algebraic and differential equations, optimization problems, etc.</p>
+<p>A matter of fact is that all digital computers can only store finite numbers. So the mathematics of approximation
+  becomes very critical to handle all the numbers in the finite range that a computer can handle.</p>
+<p>Each number in a computer is assigned a location or word, consisting of a specified number of binary digits or bits.
+  A \(k\) bit word can store a total of \(N=2^k\) different numbers. For example, a computer that uses 32 bit arithmetic
+  can store a total of \(N=2^{32} \approx 4.3 \times 10^9\) different numbers.</p>
+<p>The question is how to distribute these numbers over the real line for maximum efficiency and accuracy in practical
+  computations. One evident choice is to distribute them evenly, leading to fixed-point arithmetic. In this system, the
+  first bit in a word is used to represent a sign and the remaining bits are treated for integer values. This allows
+  representation of the integers from \(1-\frac{1}{2}N\). As an approximating method, this is not good for noninteger
+  numbers.</p>
+<p>Another option is to space the numbers closely together—say with a uniform gap of \(2^{-n}\)—and so distribute the
+  total \(N\) numbers uniformly over the interval \(-2^{-n-1}N &#60; x \leq 2^{-n-1}N\). Real numbers lying between the
+  gaps are represented by either rounding (closest exact representative) or chopping (meaning the exact representative
+  immediately below or above the number).</p>
+<p>Numbers lying beyond the range must be represented by the largest or largest negative number that can be represented,
+  becoming a symbol for overflow. Overflow occurs when a computation produces a value larger than the maximum value in
+  the range.</p>
+<p>When processing speed is a significant bottle-neck, the use of fixed-point representations is an attractive and
+  faster alternative to floating-point arithmetic most commonly used in practice.</p>
+<p>Accuracy is the closeness with which a measured or computed value agrees with the tree value. Precision, on the other
+  hand, is the closeness with which two or more measured or computed values for the same physical substance agree with
+  each other.</p>
+<p>Let \(x\) be a real number and let \(x*\) be an approximation. The absolute error in the approximation \(x* \approx
+  x\) is defined as \(|x*-x|\). The relative error is defined as the ratio of the absolute error to the size of \(x\),
+  ie. \(|x*-x|/|x|\).</p>
+<p>An approximation \(x*\) has \(k\) significant decimal digits if its relative error is \(&#60; 5 \times 10^{-k-1}\).
+  This means that the first \(k\) digits of \(x*\) following its first nonzero digit are the same as those of \(x\).</p>
+<p>Significant digits are the digits of a number that are known to be correct. In a measurement, one uncertain digit is
+  included.</p>
 <div class="second">Number theory</div>
 <div class="third">Divisibility</div>
 <div class="third">Prime number, GCD</div>
@@ -3090,6 +3122,9 @@ SWEBOK v3
 <div class="third">Rings</div>
 
 <div class="first">Engineering foundations</div><a class="anchor" id="engineering_foundations"></a>
+<p>Engineering is the application of a systematic, disciplined, quantifiable approach to structures, machines, products,
+  systems or processes. Completing engineering work efficiently and effectively is goal of all engineers in all
+  engineering disciplines.</p>
 <div class="second">Empirical methods and experimental techniques</div>
 <div class="third">Designed experiment</div>
 <div class="third">Observational study</div>
