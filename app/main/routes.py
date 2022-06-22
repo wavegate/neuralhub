@@ -423,3 +423,7 @@ def about():
 def settings():
 	specialty2 = session.get('specialty')
 	return render_template('settings.html', specialty2=specialty2)
+
+@bp.route('/webdev_examples')
+def webdev_examples():
+	return render_template('webdev_examples/index.html');

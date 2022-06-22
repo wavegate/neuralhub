@@ -252,7 +252,7 @@
   <div class="topic"><a href="#sets">System performance evaluation</a></div>
   <div class="core">Platform-based development</div>
   <div class="topic"><a href="#sets">Introduction</a></div>
-  <div class="topic"><a href="#sets">Web platforms</a></div>
+  <div class="topic"><a href="#web">Web platforms</a></div>
   <div class="topic"><a href="#sets">Mobile platforms</a></div>
   <div class="topic"><a href="#sets">Industrial platforms</a></div>
   <div class="topic"><a href="#sets">Game platforms</a></div>
@@ -3126,30 +3126,201 @@ See Mathematics section.
   systems or processes. Completing engineering work efficiently and effectively is goal of all engineers in all
   engineering disciplines.</p>
 <div class="second">Empirical methods and experimental techniques</div>
+<p>An engineering method for problem solving involves proposing solutions or models of solutions and then conducting
+  expermients or tests to study the proposed solutions or models.</p>
 <div class="third">Designed experiment</div>
+<p>A designed or controlled experiment is an investigation of a testable hypothesis where one or more independent
+  variables are manipulated to measure their effect on one or more dependent variables. A precondition for conducting an
+  experiment is the existence of a clear hypothesis. Each combination of values of the independent variables is a
+  treatment.</p>
 <div class="third">Observational study</div>
+<p>An observational or case study makes observations of processes or phenomena within a real-life context. A case study
+  is most useful when the focus of the study is on how and why questions, when the behavior of those involved in the
+  study cannot be manipulated, and when contextual conditions are relevant and the boundaries between the phenomena and
+  context are not clear.</p>
 <div class="third">Retrospective study</div>
+<p>A retrospective study involves the analysis of historical data, also known as historical studies.</p>
 <div class="second">Statistical analysis</div>
+<p>Most studies are carried out on the basis of samples and so the observed results need to be understood with respect
+  to the full population.</p>
 <div class="third">Unit of analysis (sampling units), population, and sample</div>
+<p>The unit of analysis are those units that are identified and chosen to be analyzed, also called sampling units.</p>
+<p>The set of all respondents or items (possible sampling units) to be studied forms the population.</p>
+<p>A sample is a subset of the population. The most crucial issue towards selection of a sample is its
+  representativeness, including size. The samples must be drawn in an independent manner, and the rules of drawing the
+  samples must be predefined so that the probability of selecting a particular sampling unit is known beforehand. This
+  method of selecting samples is called probability sampling.</p>
+<p>The outcome of an experiment is obtained in terms of real numbers and defines the random variable being studied. The
+  set of possible values of a random variable may be finite or infinite but countable, in which case the random variable
+  is called a discrete random variable. Otherwise, it is a continuous random variable.</p>
+<p>A subset of possible values of a random variable is called an event.</p>
+<p>The range and pattern of variation of a random variable is given by its distribution. Some common distributions
+  include the binomial distribution, which is used to model random variables that count the number of successes in \(n\)
+  trials carried independently of each other, where each trial results in success or failure. Poisson distribution is
+  used to model the count of occurrence of some event over time or space. Normal distribution is used to model
+  continuous random variables or discrete random variables by taking a very large number of values.</p>
+<p>A statistical distribution is characterized by some parameters. Binomial distribution is characterized by the
+  porportion of success in any given trial. The Poisson distribution is characterized by a rate of occurrence. A normal
+  distribution is characterized by its mean and standard deviation. Once the value of the parameters are known, the
+  probability of any event can be computed.</p>
+<p>The probabilities for a discrete random variable can be computed through the probability mass function, called the
+  pmf. The pmf is defined at discrete points and gives the point mass. Likewise, the probability density function exists
+  for the probability density function, or pdf.</p>
+<p>The true values of the parameters of a distribution are usually unknown and need to be estimated from sample
+  observations. The estimates are functions of the sample values and are called statistics. The statistic used to
+  estimate some population parameter is often referred to as the estimator of the parameter.</p>
+<p>The results of the estimators themselves are random. In the theory of estimation, we need to understand different
+  properties of estimators—particularly, how much the estimates can vary across samples and how to choose between
+  different alternative ways to obtain the estimates.</p>
+<p>When we use the value of a statistic to estimate a population parameter, we get a point estimate. An interval
+  estimate is a random interval with the lower and upper limits of the interval being functions of the sample
+  observations as well as the sample size.</p>
+<p>The most important properties are that an estimator is unbiased, efficient, and consistent with respect to the
+  population.</p>
+<p>A hypothesis is a statement about the possible values of a parameter. In tests of hypotheses, we decide on the basis
+  of sample observations whether a proposed hypothesis should be accepted or rejected. The null hypothesis is the
+  hypothesis of no change and is denoted as \(H_0\). An alternative hypothesis may be one-sided or two-sided. In order
+  to test a hypothesis, we first compute some statistic. A region is defined such that if the statistic falls in that
+  region, the null hypothesis is rejected. This region is called the critical region, or confidence interval.</p>
+<p>If you reject the null hypothesis erroneously, that is a type I error, with a probability equal to a. If you fail to
+  reject an incorrect null hypothesis, then that's a type II error, with a probability of b. In a test of hypotheses, we
+  aim at maximizing the power of the test (the value of \(1-b\)\) while ensuring that the probability of a type I error
+  is maintained within a particular value, typically 5%.</p>
 <div class="third">Concepts of correlation and regression</div>
+<p>The relationship between two variables is studied using methods of correlation and regression. The strength of linear
+  relationship between two variables is measured using the correlation coefficient.. The correlation coefficient takes a
+  value between -1 and +1. The values indicate a situation when the association between the variables is perfect, ie.
+  given the value of one variable, the other can be estimated with no error. A positive correlation coefficient
+  indicates a positive relationship. Correlation does not imply causation.</p>
+<p>The correlation analysis only measures the degree of relationship between two variables. Regression analysis finds
+  the relationship between two variables. The strength of the relationship between two variables is measured using the
+  coefficient of determination, which has a value between 0 and 1. A value of 1 indicates a perfect relationship.</p>
 <div class="second">Measurement</div>
+<p>The theory of measurement states that measurement is an attempt to describe an underlying real empirical system.
+  Measurement methods define activities that allocate a value or a symbo to an attribute of an entity. A measurement
+  method is defined to be a precisely specified operation that yields a number, called a measurement result.</p>
+<p>The defintion of attributes is rather abstract. The operational definition specifies the exact steps or method to
+  carry out a specific measurement, also called the measurement method or measurement procedure.</p>
 <div class="third">Levels (scales) of measurement</div>
+<p>Nominal scale is the lowest level of measurement and represents the most unrestricted assignment of numerals. The
+  nominal scale of measurement involves only classification and the observed sampling units are put into any one of the
+  mutually exclusive and collectively exhaustive categories. Examples of nominal scales are job titles in a company,
+  software development life cycle models (eg. waterfall, iterative, agile, etc.). In nominal scale, the names are just
+  labels and no relationship between them is assumed. The only operations that can be carried out on nominal scale is
+  counting the number of occurrences in different classes.</p>
+<p>Ordinal scale have an implicit ordering. The intervals between values are not specified and there is no objectively
+  defined zero element. Examples are skill levels (low, medium, high), Capability Maturity Model Integration (CMMI)
+  maturity levels of software development organizations, level of adherence to porcess as measured in a 5-point scale.
+  Measurement in ordinal scale satisfies the transitivity property in the sense that if A > B and B > C, then A > C.
+  However, arithmetic operations cannot be carried out on variables measured in ordinal scales. A common misuse of
+  ordinal scale measures is to present a mean and standard deviatoin for the data set, both of which are meaningless.
+  However, we can find the median, as computation of the median involves counting only.</p>
+<p>With the interval scale, the difference between levels of attributes can be computed and is meaningful. Examples are
+  measurement of temperature in Celsius scale, Calendar dates, many psychological measurements such as ratings of
+  intelligence. Almost all the usual statistical measures (mean, standard deviation, correlation, regression) are
+  applicable except those that require knowledge of a true zero point.</p>
+<p>Ratio scale is commonly encountered in physical science, and these scales are characterized by the fact that
+  operations exist for determining all 4 relations: equality, rank order, equality of intervals, and equality of ratios.
+  Existence of a nonarbitrary zero is mandatory. Logarithm usage is valid only when ratio scales are used. Some examples
+  of ratio measures are the number of statements in a software program, temperature measured in Kelvin scale.</p>
+<p>A scale in which no transformations are possible is an absolute scale, such as the number of programmers working on a
+  project.</p>
 <div class="third">Direct and derived measures</div>
+<p>Measures may be either direct or derived. An example of a direct measure is to count the number of times an event has
+  occurred. An example of a derived measure would be calculating the productivity of a team as the number of lines of
+  code developed per developer-month.</p>
 <div class="third">Reliability and validity</div>
+<p>The reliability of a measurement method is the extent to which the application of the measurement method yields
+  consistent measurement results. It is quantified by using index of variation, computed as the ratio between the
+  standard deviation and the mean. (Similar to precision.) Validity refers to whether the measurement method really
+  measures what we intend to measure, looked at from perspectives of construct validity, criteria validity, and content
+  validity. (Similar to accuracy.)</p>
 <div class="third">Assessing reliability</div>
+<p>The test-retest method, the alternative form method, the split-halves method, and the internal consistency method are
+  all used to assessing reliability. The test-retest method is applying the measurement method to the same subjects
+  twice. The correlation coefficient between the two results gives reliability of the measurement method.</p>
 <div class="second">Engineering design</div>
+<p>In engineering, most problems have many solutions and the focus is on finding a feasible solution that best meets the
+  needs presented. The set of possible solutions is often constrained by explicitly imposed limitations such as cost,
+  available resources, and the state of discipline or domain knowledge. THere are also implicit constraints such as
+  physical properties of materials or laws of physics that also restrict the set of feasible solutions for a given
+  problem.</p>
 <div class="third">Engineering design in engineering education</div>
+<p>Design is defined by the Canadian Engineering Accrediation Board as an ability to design solutions for complex,
+  open-ended engineering problems and to design systems, components or pocesses that meet specifie dneeds with
+  appropriate attention to health and safety risks, applicable standards, and economic, environmental, cultural, and
+  societal considerations.</p>
 <div class="third">Design as a problem solving activity</div>
+<p>Engineering design is primarily a problem solving activity. Design problems are open ended and more vaguely defined.
+  Design is generally considered to be a wicked problem, one that could be clearly defined only by solving it or by
+  solving part of it. This paradox implies, essentially, that a wicked problem must be solved once to define it and then
+  solved again to create a solution that works.</p>
 <div class="third">Steps involved in engineering design</div>
+<p>Define the problem: gather customer's requirements. Specific information about product functions and features are
+  closely examined. This step includes refining the problem statement to identify the real problem to be solved and
+  setting the design goals and criteria for success. This step is deceptively simple. It is an engineering task to limit
+  the scope of a problem and its solution through negotiation among stakeholders.</p>
+<p>Gather pertinent information: the designer attempts to expand his/her knowledge about the problem. This is a vital,
+  yet often neglected, stage. The problem may need to be redefined, identifying mistakes and false starts. This step may
+  involve the decomposition of the problem into smaller, more easily solved subproblems.</p>
+<p>Generate multiple solutions.</p>
+<p>Analyze and select a solution: an analysis includes a functional analysis to assess whether the proposed design would
+  meet the functional requirements. The types and amount of analysis used on a proposed solution are dependent on the
+  type of problem.</p>
+<p>Implement the solution: implementation refers to development and testing of the proposed solution. SOmetimes, a
+  preliminary, partial solution called a prototype may be developed initially to test the proposed design solution under
+  certain conditions. While designing tests, the engineer must think throug hdifferent possible failure modes and then
+  design tests based on those failure modes.</p>
 <div class="second">Modeling, simulation, and prototyping</div>
+<p>Modeling is part of the abstraction process used to represent some aspects of a system. Prototyping is another
+  abstraction process where a partial representation of the product or system is built.</p>
 <div class="third">Modeling</div>
+<p>An iconic model is a visually equivalent but incomplete 2-dimensional or 3-dimensional representation—for example,
+  maps, globes, or built-to-scale models of structures such as bridges or highways. An iconic model resembles the
+  artifact modeled. An anlogic model is a functionally equivalent but incomplete representation. The model behaves like
+  the physical artifact but may not physically resemble it. Examples of analogic models include a miniature airplane for
+  wind tunnel testing or a computer simulation of a manufacturing process. A symbolic model is a higher level of
+  abstraction, where the model is represented using symbols such as equations. An example is \(F=ma\).</p>
 <div class="third">Simulation</div>
+<p>All simulation models are a specification of reality. In software engineering, simulation is primarily discrete. The
+  main components in such a model include entities, activities and events, resources, the state of the system, a
+  simulation clock, and a random number generator. An important problem in the development of a discrete simulation is
+  that of initialization. Before a simulation can be run, the initial values of all state variables must be provided.
+</p>
 <div class="third">Prototyping</div>
+<p>In software engineering, prototypes are also an abstract model of part of the software but are usually not
+  constructed with all of the architectural, performance, and other quality characteristics expected in the finished
+  product.</p>
 <div class="second">Standards</div>
+<p>Standards provide requirements, specifications, guidelines, or characteristics that must be observed by engineers so
+  that the products, processes, and materials have acceptable levels of quality. For a standard to be useful,
+  conformance with the standard must add value to the product, process, or effort. There are many internationally
+  recognized standards-making organizations including the International Telecommunications Union (ITU), the
+  International Electrotechnical Commission (IEC), IEEE, and the International Organization for Standardization (ISO).
+</p>
+<p>Engineers must be aware of existing standards but must also update their understanding of the standards as those
+  standards change over time.</p>
 <div class="second">Root cause analysis</div>
+<p>Root cause analysis (RCA) is a process designed to investigate and identify why and how an undesirable event has
+  happened. A common way to identify specific underlying causes is to ask a series of why questions.</p>
 <div class="third">Techniques for conducting root cause analysis</div>
-
-
+<p>Techniques such as statement-restatement, why-why diagrams, revision method, present state and desired state
+  diagrams, and fresh-eye approach are used to identify the real problem. Once the real problem has been identified,
+  work can begin to determine the cause of the problem. Tools used for this can be check sheets or checklists, Pareto
+  diagrams, histograms, run charts, scatter diagrams, control charts, fishbone or cause-and-effect diagrams. Some newer
+  methods are affinity daigrams, relations diagrams, tree diagrams, matrix charts, matrix data analysis charts, process
+  decision program charts, and arrow diagrams.</p>
+<p>A fishbone or cause-and-effect diagram is a way to visualize the various factors that affect some characteristic. The
+  main line in the diagram represents the problem and the connecting lines represent the factors that led to or
+  influenced the problem.</p>
+<p>Checklists are a list of key points in a process with tasks that must be completed.</p>
+<p>Relations diagrams display complex relationships and give visual support to cause-and-effect thinking.</p>
+<p>Root cause analysis aims at preventing the recurrence of undesirable events. These techniques should be used offline
+  and not necessarily in direct response to the occurrence of some undesirable event. Cause-and-effect diagrams may be
+  used to identify the sub and sub-sub causes. Fault tree analysis is a technique used to understand the sources of
+  failures. Designed experiments may be used to understand the impact of various causes on the occurrence of undesirable
+  events. Various kinds of correlation analyses may be used to understand the relationship between various causes and
+  their impact.</p>
 
 <div class="first">Overview of operating systems</div><a class="anchor" id="overview_operating"></a>
 <h4>Kernel</h4>
@@ -3202,6 +3373,96 @@ See Mathematics section.
 <h4>Overview of Platform Languages (e.g., Objective C, HTML5)</h4>
 <h4>Programming under platform constraints</h4>
 <div class="first">Web platforms</div><a class="anchor" id="web"></a>
+<p>I'm going to use this space to document my learning web development.</p>
+https://www.theodinproject.com/paths
+How the internet works: browsers, domain names, hosting services, HTTP/HTTPS, DNS
+Browsers: edge, chrome, brave, safari, firefox
+Text editor: VS code
+Terminal: command prompt, powershell, WSL, gitbash, zsh
+HTML: basic syntax, semantic HTML, forms and validation, accessibility, SEO
+CSS: basic syntax, flexbox, grid, responsive design
+JavaScript: basic syntax, DOM, fetch API, json, ES6+
+Version control: git, github
+Hosting & deployment: Netlify, Vercel, Cloudflare, Github pages, Heroku, Linode
+Node.js: express, npm
+APIs: perform backend functions, REST, graphQL
+Databases: relational, document, graph, wide column
+Relational databases: related data, strict schemas, ORM needed, eg. SQL, MySQL, PostgreSQL, MS SQL
+Document databases: flexible, uses JSON, no ORM needed, eg. MongoDB
+JavaScript frameworks: build SPAs, stay organized, interactive UIs, eg. React, Vue, Angular; (built on top) Next.js,
+Gatsby, Nuxt.js
+CSS frameworks: Tailwind CSS, Bootstrap
+Authentication: oAuth, JWT, Auth0
+Content management systems (CMS): Wordpress, headless CMS, eg. Sanity.io, Strapi
+Other tech: Svelte, Svelte kit, Astro, Typescript, CSS animations, CSS preprocessors, CSS modules, CSS in JS, Fireship
+100 seconds (Go, Rust, Python, Dart, PHP, Java, Kotlin, C, C#), blockchain, cryptocurrencies, NFTs, Swift, Java/Kotlin,
+Ract Native, Flutter, Electron.js, AI & Machine learning, Github copilot
+History of internet: US department of defense created advanced research project agency (ARPA) to keep its technology
+more advanced than the Soviets, to create a network that could survive a nuclear attack. Joseph Licklider convinced ARPA
+to fund research into a computer network to connect
+scientists and engineers throughout the country. 1969 Arpanet formed as a messaging service between UCLA, UCSB,
+Stanford, and University of Utah.
+One of the first innovations by ARPAnet was packet switching as opposed to circuit switching .Packet switching allowed
+different computers to send messages along the same set of wires instead of each getting one. Arpanet used packet
+switching form the start sending them over phone lines. Stanford became the official record-keeper of everyone's
+addresses in 1973. Over 100 computers were connected by 1977. Hawaii was connected, then jumped over to England and
+Norway.
+Other networks were being formed but the networks weren't able to talk to each other easily.
+Transmission control protocol/Internet protocol (TCP/IP) was a standard way of formatting packets, so that everyone was
+speaking the same language. As all the different networks began to be connected to each other, that formed the Internet.
+Email was invented in 1971 and by 1973 made up more than 3/4 of all Arpanet's packets. The logistics of connecting
+everything was too difficult, so they came up with domain name system (DNS). Instead of each node having their own
+address, they divided things into a name system. At the top level was domain: instead of emailing john@example, you're
+emailing john@example.com. Within each domain, a host had a second domain (eg. mit.edu).
+For a while, most users of the Internet were business, universities, governments.. official organizations rather than
+single users.
+ARPANet's goal was government communication and the government wanted to move on, so in 1990, NSFNet officially replaced
+ARPAnet as the backbone of the internet to allow for more commercial goals. Congress passed a law in 1992 allowing
+commercial traffic on NSFnet
+1989 we got the first Internet Service Providers (ISPs) that connected local people to the Internet
+In 1995, NSFnet shut down and handed everything over to ISPs
+to connect to a network your computer placed a phone call to the network through a modem, which translated between the
+digital signals used in computers and the analog signals used in landline phones
+However, phone lines weren't made to transmit high frequencies, which were what was needed to transmit large amounts of
+information. One of the things modems did was check how high of a frequency the phone line could transmit, and then slow
+down your request
+Internet is a shortene form of the word "internetworking" coined in the 70s to refer to the physical cables and
+computers all connecting together
+Tim Berners-Lee and Robert Cailliau wanted to improve arrangement of information on the internet away from a tree-like
+structure, and used hypertext, which was invented in the 60s to go from one part of a document to another
+He started using hypertext as a means to navigate what he started to call the World Wide Web with hyperlinks connecting
+different web pages. The web was a hit at CERN, and was made public in 1993
+HTTP stands for Hypertext Transfer Protocol, set of programs to read documents with hypertext. // introduces what comes
+next. www means the page is part of the world wide web.
+Netscape navigator released in 1994 and code incorporated eventually into firefox
+90s had a lot of failed startups, and the dotcom bubble burst in 2000, when stocks in tech companies plummeted, over
+half of them declared bankruptcy, eventually losing trillions of dollars in total
+Napster had been one of the fastest-growing businesses in history, but went bankrupt paying back musicians for copyright
+infringement
+Microsoft narrowly avoided being broken up after violating antitrust laws
+Geocities encouraged users to create their own websites, was third-most popular site on the web in 1999, behind AOL and
+Yahoo!, was bought by Yahoo
+By the time Myspace took over, people were using broadband instead of dial-up. Dial-up could only transmit 56 kilobits
+per second
+DSL, which transmits digital data along phone lines instead of analog signals, and cable, which uses wires for a cable
+box to connect to the internet, became known as broadband (basically everything that wasn't dialup), which were 10s to
+1000s times faster than dialup, overtook dialup in 2005
+Data centers continued to survive even after dotcom bubble burst, and data centers began to be used to run special
+program sto look through that data and predict what you want to see
+How the internet works in 5 minutes: the internet is a wire in the ground. servers are computers directly connected to
+this wire. web pages are fires on that server's hard drive. every server has a unique internet protocol address, or IP
+address. your computer at home is not a server, but is called a client, because it is connected indirectly to the
+internet through an ISP via something like DSL. everything connected directly or indirectly to the internet has an IP
+address, including computers, servers, cell phones, and any equipment in between. anywhere two or more parts of the
+internet intersect there is a router that directs packets around the internet. each time the packet you send passes
+through a router, it adds on the IP address of the router as a wrapper, and as information is sent back, that wrapper is
+taken off by each router to know where to send it to.
+HTML
+Tim Berners Lee was creating browser World Wide Web, picked a syntax based on Standard Generalized Markup Language
+(SGML), which open and closed tags
+HTML transformed from 1991 to 2008 to HTML 5
+tags have innertext, innerhtml, attributes (key-value pairs)
+html files have a hierarchy of nodes based on Document Object Model (DOM)
 <h4>Web programming languages (e.g., HTML5, JavaScript, PHP, CSS)</h4>
 <h4>Web platform constraints</h4>
 <h4>Software as a Service (SaaS)</h4>
