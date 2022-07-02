@@ -1,237 +1,253 @@
-{% extends 'base.html' %}
-{% block title %}Web development - {% endblock %}
-{% block content %}
-
+{% extends 'base.html' %} {% block title %}Web development - {% endblock %} {%
+block content %}
 
 <style>
-    .first {
-        font-size: 24px;
-        line-height: 30px;
-        margin: 30px 0 15px;
-    }
+  .first {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 30px 0 15px;
+  }
 
-    .second {
-        font-size: 20px;
-        line-height: 30px;
-        margin: 30px 0 15px;
-    }
+  .second {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 30px 0 15px;
+  }
 
-    p,
-    button {
-        font-size: 100%;
-    }
+  p,
+  button {
+    font-size: 100%;
+  }
 
-    #integer1_remove {
-        display: none;
-    }
+  #integer1_remove {
+    display: none;
+  }
 
-    iframe {
-        display: block;
-        margin: 0 auto;
-    }
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
 
-    .sidebar {
-        position: fixed;
-        margin-left: -375px;
-        border-left: 8px solid #c8dce3;
-        background-color: #fff;
-        overflow-y: scroll;
-    }
+  .sidebar {
+    position: fixed;
+    margin-left: -375px;
+    border-left: 8px solid #c8dce3;
+    background-color: #fff;
+    overflow-y: scroll;
+  }
 
-    .sidebar {
-        width: 350px;
-        height: 85vh;
-    }
+  .sidebar {
+    width: 350px;
+    height: 85vh;
+  }
 
-    .core {
-        padding: 7px;
-        width: 100%;
-        background-color: beige;
-        font-size: larger;
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
+  .core {
+    padding: 7px;
+    width: 100%;
+    background-color: beige;
+    font-size: larger;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
 
-    .core:first-child {
-        margin-top: 0px;
-    }
+  .core:first-child {
+    margin-top: 0px;
+  }
 
-    .topic {
-        padding-left: 15px;
-    }
+  .topic {
+    padding-left: 15px;
+  }
 
-    .topic a {
-        color: #333333;
-    }
+  .topic a {
+    color: #333333;
+  }
 
-    .topic a:hover {
-        text-decoration: underline;
-    }
+  .topic a:hover {
+    text-decoration: underline;
+  }
 
-    a.anchor {
-        display: block;
-        position: relative;
-        top: -150px;
-        visibility: hidden;
-    }
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+  }
 
-    .sidebar::-webkit-scrollbar {
-        width: 8px;
-        /* width of the entire scrollbar */
-    }
+  .sidebar::-webkit-scrollbar {
+    width: 8px;
+    /* width of the entire scrollbar */
+  }
 
-    .sidebar::-webkit-scrollbar-track {
-        background: beige;
-        /* color of the tracking area */
-    }
+  .sidebar::-webkit-scrollbar-track {
+    background: beige;
+    /* color of the tracking area */
+  }
 
-    .sidebar::-webkit-scrollbar-thumb {
-        background-color: #c8dce3;
-        /* color of the scroll thumb */
-        /* roundness of the scroll thumb */
-        border: 3px solid #c8dce3;
-        /* creates padding around scroll thumb */
-    }
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #c8dce3;
+    /* color of the scroll thumb */
+    /* roundness of the scroll thumb */
+    border: 3px solid #c8dce3;
+    /* creates padding around scroll thumb */
+  }
 </style>
 
 <div class="sidebar">
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
-    <div class="core">
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-        <div class="topic"></div>
-    </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
+  <div class="core">
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+    <div class="topic"></div>
+  </div>
 </div>
 
 <p>Creative works done during my learning period:</p>
 <ol>
-    <li>
-        <a href="https://github.com/wavegate/beanie_babies" target="_blank">Beanie Babies</a></li>
-    <li><a href="https://github.com/wavegate/responsive_resume" target="_blank">Responsive Resume</a></li>
-    <li><a href="https://github.com/wavegate/test_taker" target="_blank">Test Taker</a></li>
-    <li><a href="https://github.com/wavegate/mellys_app" target="_blank">Melly's App</a></li>
+  <li>
+    <a href="https://github.com/wavegate/beanie_babies" target="_blank"
+      >Beanie Babies</a
+    >
+  </li>
+  <li>
+    <a href="https://github.com/wavegate/responsive_resume" target="_blank"
+      >Responsive Resume</a
+    >
+  </li>
+  <li>
+    <a href="https://github.com/wavegate/test_taker" target="_blank"
+      >Test Taker</a
+    >
+  </li>
+  <li>
+    <a href="https://github.com/wavegate/mellys_app" target="_blank"
+      >Melly's App</a
+    >
+  </li>
 </ol>
 
-<p>Web development is a passion of mine, so I will use this space to document my learning process. My goal in web
-    development is to work in tech to pay my medical school debt, before continuing on to BME research.
-    I keep track of general computer science learning in the computer science section. All learning specifically
-    applicable to developing for the web platform will be in this section. This section is not necessarily directed
-    towards neural engineering study; however, I have no doubt that the web will remain vital to the success of neural
-    engineering efforts.
+<p>
+  Web development is a passion of mine, so I will use this space to document my
+  learning process. My goal in web development is to work in tech to pay my
+  medical school debt, before continuing on to BME research. I keep track of
+  general computer science learning in the computer science section. All
+  learning specifically applicable to developing for the web platform will be in
+  this section. This section is not necessarily directed towards neural
+  engineering study; however, I have no doubt that the web will remain vital to
+  the success of neural engineering efforts.
 </p>
 
 <h4>Links and resources</h4>
@@ -239,119 +255,116 @@
 <p>https://www.theodinproject.com/paths</p>
 <h4>How the internet works</h4>
 <p>
-    History of internet: US department of defense created advanced research project agency (ARPA) to keep its technology
-    more advanced than the Soviets, to create a network that could survive a nuclear attack. Joseph Licklider convinced
-    ARPA
-    to fund research into a computer network to connect
-    scientists and engineers throughout the country. 1969 Arpanet formed as a messaging service between UCLA, UCSB,
-    Stanford, and University of Utah.
+  History of internet: US department of defense created advanced research
+  project agency (ARPA) to keep its technology more advanced than the Soviets,
+  to create a network that could survive a nuclear attack. Joseph Licklider
+  convinced ARPA to fund research into a computer network to connect scientists
+  and engineers throughout the country. 1969 Arpanet formed as a messaging
+  service between UCLA, UCSB, Stanford, and University of Utah.
 </p>
 <p>
-    One of the first innovations by ARPAnet was packet switching as opposed to circuit switching .Packet switching
-    allowed
-    different computers to send messages along the same set of wires instead of each getting one. Arpanet used packet
-    switching form the start sending them over phone lines. Stanford became the official record-keeper of everyone's
-    addresses in 1973. Over 100 computers were connected by 1977. Hawaii was connected, then jumped over to England and
-    Norway.
-</p>
-<p>Other networks were being formed but the networks weren't able to talk to each other easily.</p>
-<p>
-    Transmission control protocol/Internet protocol (TCP/IP) was a standard way of formatting packets, so that everyone
-    was
-    speaking the same language. As all the different networks began to be connected to each other, that formed the
-    Internet.
-    Email was invented in 1971 and by 1973 made up more than 3/4 of all Arpanet's packets. The logistics of connecting
-    everything was too difficult, so they came up with domain name system (DNS). Instead of each node having their own
-    address, they divided things into a name system. At the top level was domain: instead of emailing john@example,
-    you're
-    emailing john@example.com. Within each domain, a host had a second domain (eg. mit.edu).
+  One of the first innovations by ARPAnet was packet switching as opposed to
+  circuit switching .Packet switching allowed different computers to send
+  messages along the same set of wires instead of each getting one. Arpanet used
+  packet switching form the start sending them over phone lines. Stanford became
+  the official record-keeper of everyone's addresses in 1973. Over 100 computers
+  were connected by 1977. Hawaii was connected, then jumped over to England and
+  Norway.
 </p>
 <p>
-    For a while, most users of the Internet were business, universities, governments.. official organizations rather
-    than
-    single users.
+  Other networks were being formed but the networks weren't able to talk to each
+  other easily.
 </p>
 <p>
-    ARPANet's goal was government communication and the government wanted to move on, so in 1990, NSFNet officially
-    replaced
-    ARPAnet as the backbone of the internet to allow for more commercial goals. Congress passed a law in 1992 allowing
-    commercial traffic on NSFnet
-    1989 we got the first Internet Service Providers (ISPs) that connected local people to the Internet
-    In 1995, NSFnet shut down and handed everything over to ISPs
-    to connect to a network your computer placed a phone call to the network through a modem, which translated between
-    the
-    digital signals used in computers and the analog signals used in landline phones
-    However, phone lines weren't made to transmit high frequencies, which were what was needed to transmit large amounts
-    of
-    information. One of the things modems did was check how high of a frequency the phone line could transmit, and then
-    slow
-    down your request
+  Transmission control protocol/Internet protocol (TCP/IP) was a standard way of
+  formatting packets, so that everyone was speaking the same language. As all
+  the different networks began to be connected to each other, that formed the
+  Internet. Email was invented in 1971 and by 1973 made up more than 3/4 of all
+  Arpanet's packets. The logistics of connecting everything was too difficult,
+  so they came up with domain name system (DNS). Instead of each node having
+  their own address, they divided things into a name system. At the top level
+  was domain: instead of emailing john@example, you're emailing
+  john@example.com. Within each domain, a host had a second domain (eg.
+  mit.edu).
 </p>
 <p>
-    Internet is a shortene form of the word "internetworking" coined in the 70s to refer to the physical cables and
-    computers all connecting together
+  For a while, most users of the Internet were business, universities,
+  governments.. official organizations rather than single users.
 </p>
 <p>
-    Tim Berners-Lee and Robert Cailliau wanted to improve arrangement of information on the internet away from a
-    tree-like
-    structure, and used hypertext, which was invented in the 60s to go from one part of a document to another
-    He started using hypertext as a means to navigate what he started to call the World Wide Web with hyperlinks
-    connecting
-    different web pages. The web was a hit at CERN, and was made public in 1993
-    HTTP stands for Hypertext Transfer Protocol, set of programs to read documents with hypertext. // introduces what
-    comes
-    next. www means the page is part of the world wide web.
+  ARPANet's goal was government communication and the government wanted to move
+  on, so in 1990, NSFNet officially replaced ARPAnet as the backbone of the
+  internet to allow for more commercial goals. Congress passed a law in 1992
+  allowing commercial traffic on NSFnet 1989 we got the first Internet Service
+  Providers (ISPs) that connected local people to the Internet In 1995, NSFnet
+  shut down and handed everything over to ISPs to connect to a network your
+  computer placed a phone call to the network through a modem, which translated
+  between the digital signals used in computers and the analog signals used in
+  landline phones However, phone lines weren't made to transmit high
+  frequencies, which were what was needed to transmit large amounts of
+  information. One of the things modems did was check how high of a frequency
+  the phone line could transmit, and then slow down your request
 </p>
 <p>
-    Netscape navigator released in 1994 and code incorporated eventually into firefox
-    90s had a lot of failed startups, and the dotcom bubble burst in 2000, when stocks in tech companies plummeted, over
-    half of them declared bankruptcy, eventually losing trillions of dollars in total
-    Napster had been one of the fastest-growing businesses in history, but went bankrupt paying back musicians for
-    copyright
-    infringement
+  Internet is a shortene form of the word "internetworking" coined in the 70s to
+  refer to the physical cables and computers all connecting together
 </p>
 <p>
-    Microsoft narrowly avoided being broken up after violating antitrust laws
-    Geocities encouraged users to create their own websites, was third-most popular site on the web in 1999, behind AOL
-    and
-    Yahoo!, was bought by Yahoo
-    By the time Myspace took over, people were using broadband instead of dial-up. Dial-up could only transmit 56
-    kilobits
-    per second
-    DSL, which transmits digital data along phone lines instead of analog signals, and cable, which uses wires for a
-    cable
-    box to connect to the internet, became known as broadband (basically everything that wasn't dialup), which were 10s
-    to
-    1000s times faster than dialup, overtook dialup in 2005
+  Tim Berners-Lee and Robert Cailliau wanted to improve arrangement of
+  information on the internet away from a tree-like structure, and used
+  hypertext, which was invented in the 60s to go from one part of a document to
+  another He started using hypertext as a means to navigate what he started to
+  call the World Wide Web with hyperlinks connecting different web pages. The
+  web was a hit at CERN, and was made public in 1993 HTTP stands for Hypertext
+  Transfer Protocol, set of programs to read documents with hypertext. //
+  introduces what comes next. www means the page is part of the world wide web.
 </p>
 <p>
-    Data centers continued to survive even after dotcom bubble burst, and data centers began to be used to run special
-    program sto look through that data and predict what you want to see
-    How the internet works in 5 minutes: the internet is a wire in the ground. servers are computers directly connected
-    to
-    this wire. web pages are fires on that server's hard drive. every server has a unique internet protocol address, or
-    IP
-    address. your computer at home is not a server, but is called a client, because it is connected indirectly to the
-    internet through an ISP via something like DSL. everything connected directly or indirectly to the internet has an
-    IP
-    address, including computers, servers, cell phones, and any equipment in between. anywhere two or more parts of the
-    internet intersect there is a router that directs packets around the internet. each time the packet you send passes
-    through a router, it adds on the IP address of the router as a wrapper, and as information is sent back, that
-    wrapper is
-    taken off by each router to know where to send it to.
-    HTML
+  Netscape navigator released in 1994 and code incorporated eventually into
+  firefox 90s had a lot of failed startups, and the dotcom bubble burst in 2000,
+  when stocks in tech companies plummeted, over half of them declared
+  bankruptcy, eventually losing trillions of dollars in total Napster had been
+  one of the fastest-growing businesses in history, but went bankrupt paying
+  back musicians for copyright infringement
 </p>
 <p>
-    Tim Berners Lee was creating browser World Wide Web, picked a syntax based on Standard Generalized Markup Language
-    (SGML), which open and closed tags
+  Microsoft narrowly avoided being broken up after violating antitrust laws
+  Geocities encouraged users to create their own websites, was third-most
+  popular site on the web in 1999, behind AOL and Yahoo!, was bought by Yahoo By
+  the time Myspace took over, people were using broadband instead of dial-up.
+  Dial-up could only transmit 56 kilobits per second DSL, which transmits
+  digital data along phone lines instead of analog signals, and cable, which
+  uses wires for a cable box to connect to the internet, became known as
+  broadband (basically everything that wasn't dialup), which were 10s to 1000s
+  times faster than dialup, overtook dialup in 2005
+</p>
+<p>
+  Data centers continued to survive even after dotcom bubble burst, and data
+  centers began to be used to run special program sto look through that data and
+  predict what you want to see How the internet works in 5 minutes: the internet
+  is a wire in the ground. servers are computers directly connected to this
+  wire. web pages are fires on that server's hard drive. every server has a
+  unique internet protocol address, or IP address. your computer at home is not
+  a server, but is called a client, because it is connected indirectly to the
+  internet through an ISP via something like DSL. everything connected directly
+  or indirectly to the internet has an IP address, including computers, servers,
+  cell phones, and any equipment in between. anywhere two or more parts of the
+  internet intersect there is a router that directs packets around the internet.
+  each time the packet you send passes through a router, it adds on the IP
+  address of the router as a wrapper, and as information is sent back, that
+  wrapper is taken off by each router to know where to send it to. HTML
+</p>
+<p>
+  Tim Berners Lee was creating browser World Wide Web, picked a syntax based on
+  Standard Generalized Markup Language (SGML), which open and closed tags
 </p>
 <p>HTML transformed from 1991 to 2008 to HTML 5</p>
 <p>tags have innertext, innerhtml, attributes (key-value pairs)</p>
 <p>html files have a hierarchy of nodes based on Document Object Model (DOM)</p>
 
 <h4>Browsers</h4>
-browsers, domain names, hosting services, HTTP/HTTPS, DNS
-Browsers: edge, chrome, brave, safari, firefox
+browsers, domain names, hosting services, HTTP/HTTPS, DNS Browsers: edge,
+chrome, brave, safari, firefox
 
 <h4>Text editor</h4>
 : VS code
@@ -359,498 +372,568 @@ Browsers: edge, chrome, brave, safari, firefox
 <h4>Terminal</h4>
 Terminal: command prompt, powershell, WSL, gitbash, zsh
 
-
-<h4>HTML</h4>: basic syntax, semantic HTML, forms and validation, accessibility, SEO
-HTML semantic elements are tags that clearly describe its meaning. for example, using
-<pre>&lt;form&gt;</pre> is semantic instead of just using
+<h4>HTML</h4>
+: basic syntax, semantic HTML, forms and validation, accessibility, SEO HTML
+semantic elements are tags that clearly describe its meaning. for example, using
+<pre>&lt;form&gt;</pre>
+is semantic instead of just using
 <pre>&lt;div&gt;</pre>
-these semantic elements include article, aside, details, figcaption, figure, footer, header, main, mark, nav, section,
-summary, time
-HTML5 basic & semantic tags (page layout)
+these semantic elements include article, aside, details, figcaption, figure,
+footer, header, main, mark, nav, section, summary, time HTML5 basic & semantic
+tags (page layout)
 
 <h4>Uniform resource locator (URL)</h4>
-<p>A url follows the following syntax: scheme://prefix.domain:port/path/filename</p>
+<p>
+  A url follows the following syntax: scheme://prefix.domain:port/path/filename
+</p>
 <p>scheme defines type of internet service, http, https, ftp, or file</p>
 <p>prefix defines domain prefix, defaulted www</p>
 <p>domain defines Internet domain name</p>
 <p>port defines port number at the host, default is 80</p>
 <p>path: defines path at server, if ommitted is root directory of the site</p>
 <p>filename defines name of document or resource</p>
-<p>non-ASCII characters are converted replacing characters with a % followed by hexadecimal digits, replaces space with
-    + sign or %20</p>
+<p>
+  non-ASCII characters are converted replacing characters with a % followed by
+  hexadecimal digits, replaces space with + sign or %20
+</p>
 
 <h4>XHTML</h4>
 <p>XHTML stands for extensible hypertext markup language</p>
-<p>XHTML is stricter, more XML-based version of HTML. all documents must be marked up correctly</p>
-<p>In XHTML, certain things like doctype, html, head, title, body are mandatory, elements must be properly nested and
-    closed, must bein lowercase, etc.</p>
+<p>
+  XHTML is stricter, more XML-based version of HTML. all documents must be
+  marked up correctly
+</p>
+<p>
+  In XHTML, certain things like doctype, html, head, title, body are mandatory,
+  elements must be properly nested and closed, must bein lowercase, etc.
+</p>
 
 <h4>Document object model (DOM)</h4>
-<p>The DOM is a programming interface for web documents. It represents the page so that programs can change the document
-    structure, style, and content. The DOM represents the document as nodes and objects. It is an object-oriented
-    representation of the web page.</p>
+<p>
+  The DOM is a programming interface for web documents. It represents the page
+  so that programs can change the document structure, style, and content. The
+  DOM represents the document as nodes and objects. It is an object-oriented
+  representation of the web page.
+</p>
 
-<p>The DOM is built using multiple APIs that work together. The core DOM defines the entities describing tany document
-    and the objects within it. Examples of expansions are the HTML DOM API which supports representing HTML documents to
-    the core DOM and the SVG API for supporting representing SVG documents.</p>
+<p>
+  The DOM is built using multiple APIs that work together. The core DOM defines
+  the entities describing tany document and the objects within it. Examples of
+  expansions are the HTML DOM API which supports representing HTML documents to
+  the core DOM and the SVG API for supporting representing SVG documents.
+</p>
 
-<p>The DOM was designed to be independent of any particular programming language, making the structural representation
-    of the document available from a single, consistent API.</p>
+<p>
+  The DOM was designed to be independent of any particular programming language,
+  making the structural representation of the document available from a single,
+  consistent API.
+</p>
 
-<p>There are several fundamental data types. Document is the root object itself. Node is every object located within a
-    document. Element refers to an element or a node of type element returned by a member of the DOM API. Instead of a
-    method returning an object reference to a node, the method returns the element that has just been created by the
-    DOM. A nodelIst is an array of elements. An Attr is an object reference that exposes a special interface for
-    attributes. NamedNodeMap is like an array but the items are accessed by name or index.</p>
+<p>
+  There are several fundamental data types. Document is the root object itself.
+  Node is every object located within a document. Element refers to an element
+  or a node of type element returned by a member of the DOM API. Instead of a
+  method returning an object reference to a node, the method returns the element
+  that has just been created by the DOM. A nodelIst is an array of elements. An
+  Attr is an object reference that exposes a special interface for attributes.
+  NamedNodeMap is like an array but the items are accessed by name or index.
+</p>
 
 <h4>Advanced HTML/CSS Concepts crash course</h4>
-<a href="http://https://www.youtube.com/watch?v=XhqEuyWjbdo&t=1946s&ab_channel=codedamn" target="_blank"
-    rel="noopener noreferrer"></a>
-<p>HTML5 is a revision of HTML4.1 and comes with simplification of the doctype at the start of the document, comes with
-    more semantic tags and encouragement of its use.</p>
-p{meta tags provide metainformation, you can use &lt;meta charset="utf-8"&gt; to define the charset in which your page
-is read, &lt;meta name="description" content="This is a recipe website for pizzas"&gt; can provide information for SEO,
-&lt;meta http=equiv="refresh" content"5"&gt; actually refreshes the page every 5 seconds.}
-<p>a tag like &lt;strong&gt; and &lt;em&gt; provides more semantic information than &lt;b&gt; or &lt;i&gt;</p>
-<p>some websites might have something like &lt;!--[if (IE9)]&gt; in their html because internet explorer allowed a hack
-    for a comment to provide conditions, conditional comments, so just good to know these things might exist, should
-    never do this</p>
-<p>you can use HTML entities to display characters that are automatically encoded. for exmaple, to write out a html tag
-    to display as plaintext, you can write out &...; where between those two sides is the abbreviation for the code, for
-    example, less than is lt, greater than is gt, non-breaking space is nbsp</p>
-<p>iframe allows you to embedding a different domain into another domain, but most websites does not allow this because
-    X-frame-Options is set to sameorigin, you want to avoid too many iframes in one page because each one is like
-    running its own tab</p>
-<p>every css selector has a specificity which allows it to override others, id is very specific and has a value of 100,
-    class has a value of 10, div and p have value of 1; if there is equal specifity, the one that comes after is used
+<a
+  href="http://https://www.youtube.com/watch?v=XhqEuyWjbdo&t=1946s&ab_channel=codedamn"
+  target="_blank"
+  rel="noopener noreferrer"
+></a>
+<p>
+  HTML5 is a revision of HTML4.1 and comes with simplification of the doctype at
+  the start of the document, comes with more semantic tags and encouragement of
+  its use.
 </p>
-<p>typically, when you set width and height, that just determines the inner element and does not incorporate padding,
-    border, and margin. but if you add box-sizing: border-box, then the width and height includes everything such that
-    the total comes out to your height/width; default is content-box</p>
-<p>for css variables, parents cannot access variables of children but children can access variables of parents; so it
-    can be useful to put variables yo uwant to use on the html tag or :root pseudotag</p>
-<p>You can use calculations in css, such as font-size: calc(32px + 10vw); these calculations can be used in variables as
-    well, just make sure to use space between addition and subtraction</p>
-<p>you can use nth-child pseudo selector with something like nth-child(2n) to select every second element</p>
-<p>pseudoelements cannot be targeted by javascript; one colon means pseudoselector, two means pseudoelement</p>
+p{meta tags provide metainformation, you can use &lt;meta charset="utf-8"&gt; to
+define the charset in which your page is read, &lt;meta name="description"
+content="This is a recipe website for pizzas"&gt; can provide information for
+SEO, &lt;meta http=equiv="refresh" content"5"&gt; actually refreshes the page
+every 5 seconds.}
+<p>
+  a tag like &lt;strong&gt; and &lt;em&gt; provides more semantic information
+  than &lt;b&gt; or &lt;i&gt;
+</p>
+<p>
+  some websites might have something like &lt;!--[if (IE9)]&gt; in their html
+  because internet explorer allowed a hack for a comment to provide conditions,
+  conditional comments, so just good to know these things might exist, should
+  never do this
+</p>
+<p>
+  you can use HTML entities to display characters that are automatically
+  encoded. for exmaple, to write out a html tag to display as plaintext, you can
+  write out &...; where between those two sides is the abbreviation for the
+  code, for example, less than is lt, greater than is gt, non-breaking space is
+  nbsp
+</p>
+<p>
+  iframe allows you to embedding a different domain into another domain, but
+  most websites does not allow this because X-frame-Options is set to
+  sameorigin, you want to avoid too many iframes in one page because each one is
+  like running its own tab
+</p>
+<p>
+  every css selector has a specificity which allows it to override others, id is
+  very specific and has a value of 100, class has a value of 10, div and p have
+  value of 1; if there is equal specifity, the one that comes after is used
+</p>
+<p>
+  typically, when you set width and height, that just determines the inner
+  element and does not incorporate padding, border, and margin. but if you add
+  box-sizing: border-box, then the width and height includes everything such
+  that the total comes out to your height/width; default is content-box
+</p>
+<p>
+  for css variables, parents cannot access variables of children but children
+  can access variables of parents; so it can be useful to put variables yo uwant
+  to use on the html tag or :root pseudotag
+</p>
+<p>
+  You can use calculations in css, such as font-size: calc(32px + 10vw); these
+  calculations can be used in variables as well, just make sure to use space
+  between addition and subtraction
+</p>
+<p>
+  you can use nth-child pseudo selector with something like nth-child(2n) to
+  select every second element
+</p>
+<p>
+  pseudoelements cannot be targeted by javascript; one colon means
+  pseudoselector, two means pseudoelement
+</p>
 
-<h4>CSS</h4>: basic syntax, flexbox, grid, responsive design
-CSS fundamentals, CSS alignment (flexbox & css grid)
-Media queries/responsive design
-Simple animations/transitions
-Sass is a CSS pre-processor that adds to the functionality of CSS, offering variables, nesting, mixins, functions, etc.
-PostCSS is a tool for transforming CSS with JavaScript. There are plugins to add the stuff Sass offers and more.
-CSS frameworks, always learn the language before you learn framework: Bootstrap 5 - popular, high level, Tailwind CSS -
-low level, utility based, Materialize - based on material design, Bulma - mobilefirst, modular framework, Foundation -
-advanced CSS framework
-Tailwind low level means classes might just add one property rather than say bootstrap if you say something is a button
-then it adds a lot of properties
+<h4>CSS</h4>
+: basic syntax, flexbox, grid, responsive design CSS fundamentals, CSS alignment
+(flexbox & css grid) Media queries/responsive design Simple
+animations/transitions Sass is a CSS pre-processor that adds to the
+functionality of CSS, offering variables, nesting, mixins, functions, etc.
+PostCSS is a tool for transforming CSS with JavaScript. There are plugins to add
+the stuff Sass offers and more. CSS frameworks, always learn the language before
+you learn framework: Bootstrap 5 - popular, high level, Tailwind CSS - low
+level, utility based, Materialize - based on material design, Bulma -
+mobilefirst, modular framework, Foundation - advanced CSS framework Tailwind low
+level means classes might just add one property rather than say bootstrap if you
+say something is a button then it adds a lot of properties UI Design principles
+Color & contrast: text should be readable Whitespace: check space between
+elements Scale: relative element sizing Visual hierarchy: arrange in order of
+importance Typography: typeface, sizing, etc.
 
-UI Design principles
-Color & contrast: text should be readable
-Whitespace: check space between elements
-Scale: relative element sizing
-Visual hierarchy: arrange in order of importance
-Typography: typeface, sizing, etc.
-
-<p>Going through tutorials on W3Schools: https://www.w3schools.com/html/default.asp</p>
-<p>Important lessons in HTML: HTML tables, HTML semantics, HTML canvas, HTML web storage and web workers, server-side
-    events</p>
-<p>Important lessons in CSS: box model, pseudoclass/element, transitions, flexbox, responsive design, grid</p>
-<p>Important lessons in JS: DOM navigation (children, childNodes, nodes vs elements, text nodes), async (callbacks vs
-    promises vs async/await), function call/apply/bind/closure, iterable (Symbol.iterator), var vs let vs const</p>
+<p>
+  Going through tutorials on W3Schools:
+  https://www.w3schools.com/html/default.asp
+</p>
+<p>
+  Important lessons in HTML: HTML tables, HTML semantics, HTML canvas, HTML web
+  storage and web workers, server-side events
+</p>
+<p>
+  Important lessons in CSS: box model, pseudoclass/element, transitions,
+  flexbox, responsive design, grid
+</p>
+<p>
+  Important lessons in JS: DOM navigation (children, childNodes, nodes vs
+  elements, text nodes), async (callbacks vs promises vs async/await), function
+  call/apply/bind/closure, iterable (Symbol.iterator), var vs let vs const
+</p>
 
 <h4>Viewport</h4>
-<p>The viewport is the user's visible area of a web page. The meta viewport tag sets the width of the page to follow the
-    screen-width of the device, and the initial scale sets the initial zoom level.</p>
-<p>Rules include: Do NOT use large fixed width elements, because this will cause the viewport to scroll horizontally,
-    which people are not accusotmed to. Do NOT let the content rely on a particular viewport width to render well. Use
-    CSS media queries to apply different styling for small and large screens.</p>
-<p>Mobile first means designing for mobile screens first, which suggests instead of changing styles when the width gets
-    smaller, you should change styles when the width gets larger.</p>
-<p>Typical breakpoints are at 600px (phones, portrait tablets), 768 px (landscape tablets), 992px (smaller
-    laptops/desktops), and 1200px (larger laptops/desktops)</p>
+<p>
+  The viewport is the user's visible area of a web page. The meta viewport tag
+  sets the width of the page to follow the screen-width of the device, and the
+  initial scale sets the initial zoom level.
+</p>
+<p>
+  Rules include: Do NOT use large fixed width elements, because this will cause
+  the viewport to scroll horizontally, which people are not accusotmed to. Do
+  NOT let the content rely on a particular viewport width to render well. Use
+  CSS media queries to apply different styling for small and large screens.
+</p>
+<p>
+  Mobile first means designing for mobile screens first, which suggests instead
+  of changing styles when the width gets smaller, you should change styles when
+  the width gets larger.
+</p>
+<p>
+  Typical breakpoints are at 600px (phones, portrait tablets), 768 px (landscape
+  tablets), 992px (smaller laptops/desktops), and 1200px (larger
+  laptops/desktops)
+</p>
 
-<h4>JavaScript</h4>: basic syntax, DOM, fetch API, json, ES6+
-JavaScript is the language of the browser, and every web developer should have some level of JS knowledge: JS basics -
-data types, data structures, functions loops; DOM - document object model; Async JS - promises, async/await; Fetch API &
-HTTP - make requests to API's & understand HTTP; Array methods - map, filter, reduce, etc
+<h4>JavaScript</h4>
+: basic syntax, DOM, fetch API, json, ES6+ JavaScript is the language of the
+browser, and every web developer should have some level of JS knowledge: JS
+basics - data types, data structures, functions loops; DOM - document object
+model; Async JS - promises, async/await; Fetch API & HTTP - make requests to
+API's & understand HTTP; Array methods - map, filter, reduce, etc
 
-<h4>Version control</h4>: git, github
+<h4>Version control</h4>
+: git, github
 
-
-<h4>Hosting & deployment</h4>: Netlify, Vercel, Cloudflare, Github pages, Heroku, Linode
-Node.js: express, npm
-APIs: perform backend functions, REST, graphQL
-Databases: relational, document, graph, wide column
-Relational databases: related data, strict schemas, ORM needed, eg. SQL, MySQL, PostgreSQL, MS SQL
-Document databases: flexible, uses JSON, no ORM needed, eg. MongoDB
-JavaScript frameworks: build SPAs, stay organized, interactive UIs, eg. React, Vue, Angular; (built on top) Next.js,
-Gatsby, Nuxt.js
-CSS frameworks: Tailwind CSS, Bootstrap
-Authentication: oAuth, JWT, Auth0
-Content management systems (CMS): Wordpress, headless CMS, eg. Sanity.io, Strapi
-Other tech: Svelte, Svelte kit, Astro, Typescript, CSS animations, CSS preprocessors, CSS modules, CSS in JS, Fireship
-100 seconds (Go, Rust, Python, Dart, PHP, Java, Kotlin, C, C#), blockchain, cryptocurrencies, NFTs, Swift, Java/Kotlin,
-Ract Native, Flutter, Electron.js, AI & Machine learning, Github copilot
-Software as a Service means selling software as a service, can be anything, like online photo editor, etc.
+<h4>Hosting & deployment</h4>
+: Netlify, Vercel, Cloudflare, Github pages, Heroku, Linode Node.js: express,
+npm APIs: perform backend functions, REST, graphQL Databases: relational,
+document, graph, wide column Relational databases: related data, strict schemas,
+ORM needed, eg. SQL, MySQL, PostgreSQL, MS SQL Document databases: flexible,
+uses JSON, no ORM needed, eg. MongoDB JavaScript frameworks: build SPAs, stay
+organized, interactive UIs, eg. React, Vue, Angular; (built on top) Next.js,
+Gatsby, Nuxt.js CSS frameworks: Tailwind CSS, Bootstrap Authentication: oAuth,
+JWT, Auth0 Content management systems (CMS): Wordpress, headless CMS, eg.
+Sanity.io, Strapi Other tech: Svelte, Svelte kit, Astro, Typescript, CSS
+animations, CSS preprocessors, CSS modules, CSS in JS, Fireship 100 seconds (Go,
+Rust, Python, Dart, PHP, Java, Kotlin, C, C#), blockchain, cryptocurrencies,
+NFTs, Swift, Java/Kotlin, Ract Native, Flutter, Electron.js, AI & Machine
+learning, Github copilot Software as a Service means selling software as a
+service, can be anything, like online photo editor, etc.
 <h4>Web programming languages (e.g., HTML5, JavaScript, PHP, CSS)</h4>
 <h4>Web platform constraints</h4>
 <h4>Software as a Service (SaaS)</h4>
 <h4>Web standards</h4>
-Design and implement a simple web application
-Describe the constraints that the web puts on developers
-Compare and contrast web programming with general purpose programming
-Describe the differences between Software-as-a-Service and traditional software products
-Discuss how web standards impact software development
-Review an existing web application against a current web standard
+Design and implement a simple web application Describe the constraints that the
+web puts on developers Compare and contrast web programming with general purpose
+programming Describe the differences between Software-as-a-Service and
+traditional software products Discuss how web standards impact software
+development Review an existing web application against a current web standard
 
 <h4>Frontend vs backend</h4>
-frontend developer works on client side/browser and creates user iterfaces, using tools like HTML, CSS, JS, DOM, FE
-frameworks, etc
-backend developer works on server and deals with databases, using languages like JS, Python, PHP, etc. Databases like
-Postgres, MongoDB. HTTP, server configuration, deployment, etc.
-full stack developer works on both ends and most people are full stack
-front-end should familiarize with design software: figma, Adobe XD, Sketch
+frontend developer works on client side/browser and creates user iterfaces,
+using tools like HTML, CSS, JS, DOM, FE frameworks, etc backend developer works
+on server and deals with databases, using languages like JS, Python, PHP, etc.
+Databases like Postgres, MongoDB. HTTP, server configuration, deployment, etc.
+full stack developer works on both ends and most people are full stack front-end
+should familiarize with design software: figma, Adobe XD, Sketch
 
 <h4>UI Design</h4>
-UI is the design of website, identity design deals with logos, graphic design deals with graphics, UX deals with user
-experience, front-end makes the design functional
-Basic principles of UI design: color/contrast, whitespace, scale, visual hierarchy, typography, consistency
+UI is the design of website, identity design deals with logos, graphic design
+deals with graphics, UX deals with user experience, front-end makes the design
+functional Basic principles of UI design: color/contrast, whitespace, scale,
+visual hierarchy, typography, consistency Basic frontend developer should be
+able to: Create website layouts with HTML/CSS Understand some basic design
+principles Know JavaScript and how to work with the DOM Create basic interactive
+frontend applications Connect to APIs and make requests via Fetch Work with GIT
+and use version control Deploy and manage small production projects Frontend
+superstar build user interfaces with a frontend framework understand how to work
+with local and global state work with REST APIs & HTTP Added skills: Create
+applications with TypeScript Work with SSR & Jamstack technologies (SSG,
+headless CMS) Write unit, integration & e2e tests
 
-Basic frontend developer should be able to:
-Create website layouts with HTML/CSS
-Understand some basic design principles
-Know JavaScript and how to work with the DOM
-Create basic interactive frontend applications
-Connect to APIs and make requests via Fetch
-Work with GIT and use version control
-Deploy and manage small production projects
+<h4>SASS/SCSS</h4>
+Used for preprocessing of CSS, allowing for versatility in writing CSS.
 
-Frontend superstar
-build user interfaces with a frontend framework
-understand how to work with local and global state
-work with REST APIs & HTTP
-Added skills:
-Create applications with TypeScript
-Work with SSR & Jamstack technologies (SSG, headless CMS)
-Write unit, integration & e2e tests
+<h4>BEM</h4>
+Block Element Modifier naming convention
 
-<h4>Extra programming tools</h4>: Git, NPM, browser dev tools, emmet, live server, prettier, ESLint, GitHub Copilot,
-etc.
-Markdown for writing readme files for git
+<h4>CUBE</h4>
 
-<h4>Deploying Frontend Projects</h4>: netlify, vercel, cpanel, amazon s3
-Domain name registrars: namecheap, domain.com, bluehost, GoDaddy
-Multiple ways to deploy to a hosting platform: git, ssh, ftp/sftp
+<h4>Extra programming tools</h4>
+: Git, NPM, browser dev tools, emmet, live server, prettier, ESLint, GitHub
+Copilot, etc. Markdown for writing readme files for git
 
-You can take different paths: web design (learn more design, get better at CSS, simple websites, good for freelance),
-frontend framework (React, Vue, Svelte, state managers, server-side rendering), backend (node.js, Python, PHP, C#, Go,
-Databases - Postgres, MongoDB, HTTP & API Development), advanced JS (module bundlers, testing, design patterns)
-Frontend JS frameworks used for SPAs (single page apps):
-React - created & maintained by Facebook, most popular framework/library, moderate learning curve: react router, JSX,
-hooks, context API, redux
-Vue: second most popular framework, great community, low learning curve: Vue CLI, Vue router, composition API, Vuex
-Angular: created & maintained by Google, popular in Enterprise, steep learning curve: angular CLI, services, typescript,
-observables
-Svelte: gaining popularity, lightweight & performant compiler, lowest learning curve: SvelteKit, Stores
-
-TypeScript: superset of JavaScript that adds static typing and other features
-Static-type checking, class & module support, other ES6+ features, code less prone to errors, code is more robust and
-definitive
-
-UI Kits give reusable design elements/components for each framework
+<h4>Deploying Frontend Projects</h4>
+: netlify, vercel, cpanel, amazon s3 Domain name registrars: namecheap,
+domain.com, bluehost, GoDaddy Multiple ways to deploy to a hosting platform:
+git, ssh, ftp/sftp You can take different paths: web design (learn more design,
+get better at CSS, simple websites, good for freelance), frontend framework
+(React, Vue, Svelte, state managers, server-side rendering), backend (node.js,
+Python, PHP, C#, Go, Databases - Postgres, MongoDB, HTTP & API Development),
+advanced JS (module bundlers, testing, design patterns) Frontend JS frameworks
+used for SPAs (single page apps): React - created & maintained by Facebook, most
+popular framework/library, moderate learning curve: react router, JSX, hooks,
+context API, redux Vue: second most popular framework, great community, low
+learning curve: Vue CLI, Vue router, composition API, Vuex Angular: created &
+maintained by Google, popular in Enterprise, steep learning curve: angular CLI,
+services, typescript, observables Svelte: gaining popularity, lightweight &
+performant compiler, lowest learning curve: SvelteKit, Stores TypeScript:
+superset of JavaScript that adds static typing and other features Static-type
+checking, class & module support, other ES6+ features, code less prone to
+errors, code is more robust and definitive UI Kits give reusable design
+elements/components for each framework
 
 <h4>Testing</h4>
-Unit testing - test blocks of code (functions, modules, classes)
-Integration testing - modules are combined and tested together
-E2E testing - emulating a user
-JS testing tools include Jest, Cypress, and Puppeteer
+Unit testing - test blocks of code (functions, modules, classes) Integration
+testing - modules are combined and tested together E2E testing - emulating a
+user JS testing tools include Jest, Cypress, and Puppeteer
 
 <h4>Introduction to server side</h4>
-Static sites are sites that return the same hard-coded content from the server whenever a particular resource is
-requested. Dynamic sites generate response content dynamically, usually by inserting data from a database into
-placeholders in HTML templates, and can return different data depending on user or stored preferences and can perform
-other operations as part of returning a response such as sending notifications.
-
-Client-side code is primarily concerned with the user interface, and the server-side code is responsible for the
-business logic. The server-side code has full access to the server operating system. Web frameworks are collections of
-functions, object, rules, and other code constructs designed to solve common problems, speed up development, and
-simplify tasks.
-
-Server side programming can store information in a database, return data in a proper way for client-side web frameworks
-to process more easily, can provide customized user experience, can control access to content, store session/state
-information, allow for notifications and communication such as through email, SMS, etc, perform data analysis.
-
-To communicate with a web server, the web browser sends a HTTP request, which includes a header that contains
-information about the request and a body (often empty). The header contains information about the request, such as the
-type of request, the resource being requested, and the version of the protocol. The body contains the data that is being
-requested. The response contains a header that includes a response code, type of content, character set, how big the
-content is, etc.
-
-Server-side web frameworks can be selected with these factors: effort to learn aka familiarity with the underlying
-programming language (easiest is Django), productivity, performance, caching support, scalability, web security. Djagno
-was created to develop a newspaper website, so ti's good for blogs and publications. Flask, for example, is
-lighter-weight and great for web apps running on embedded devices. Opinionated frameworks are better at solving common
-problems but may have trouble being flexible to solve less common problems. Smaller frameworks can be run on more
-constrained environments but may require more effort to learn. Speed usually is not the most important factor for the
+Static sites are sites that return the same hard-coded content from the server
+whenever a particular resource is requested. Dynamic sites generate response
+content dynamically, usually by inserting data from a database into placeholders
+in HTML templates, and can return different data depending on user or stored
+preferences and can perform other operations as part of returning a response
+such as sending notifications. Client-side code is primarily concerned with the
+user interface, and the server-side code is responsible for the business logic.
+The server-side code has full access to the server operating system. Web
+frameworks are collections of functions, object, rules, and other code
+constructs designed to solve common problems, speed up development, and simplify
+tasks. Server side programming can store information in a database, return data
+in a proper way for client-side web frameworks to process more easily, can
+provide customized user experience, can control access to content, store
+session/state information, allow for notifications and communication such as
+through email, SMS, etc, perform data analysis. To communicate with a web
+server, the web browser sends a HTTP request, which includes a header that
+contains information about the request and a body (often empty). The header
+contains information about the request, such as the type of request, the
+resource being requested, and the version of the protocol. The body contains the
+data that is being requested. The response contains a header that includes a
+response code, type of content, character set, how big the content is, etc.
+Server-side web frameworks can be selected with these factors: effort to learn
+aka familiarity with the underlying programming language (easiest is Django),
+productivity, performance, caching support, scalability, web security. Djagno
+was created to develop a newspaper website, so ti's good for blogs and
+publications. Flask, for example, is lighter-weight and great for web apps
+running on embedded devices. Opinionated frameworks are better at solving common
+problems but may have trouble being flexible to solve less common problems.
+Smaller frameworks can be run on more constrained environments but may require
+more effort to learn. Speed usually is not the most important factor for the
 server.
 
-<h4>Server-side rendering</h4>: unlike with a SPA, react/vue/svelte apps render on the server-side
-Gives benefits like SEO, performance benefits, routing is easier
-Next.js - react based, data fetching ethods, image optimization, SEO, etc.
-Nuxt.js - Vue based, data fetching, automatic transpilation & bundling
-Remix - React based, loaders & actions, most control over http request/response
-SvelteKit - Svelte based, advanced routing, code splitting & other features
+<h4>Server-side rendering</h4>
+: unlike with a SPA, react/vue/svelte apps render on the server-side Gives
+benefits like SEO, performance benefits, routing is easier Next.js - react
+based, data fetching methods, image optimization, SEO, etc. Nuxt.js - Vue based,
+data fetching, automatic transpilation & bundling Remix - React based, loaders &
+actions, most control over http request/response SvelteKit - Svelte based,
+advanced routing, code splitting & other features
 
-<h4>Static site generators</h4> have lots of benefits such as performance, SEO, and more
-Gatsby - react based, graphQL data layer, image optimization, code splitting & more
-Next.js - react based, exports fast static websites, data fetching methods
-Gridsome - vue based, PWA ready, SEO benefits
-Jekyll - built on Ruby, been around a while, liquid template engine
+<h4>Static site generators</h4>
+have lots of benefits such as performance, SEO, and more Gatsby - react based,
+graphQL data layer, image optimization, code splitting & more Next.js - react
+based, exports fast static websites, data fetching methods Gridsome - vue based,
+PWA ready, SEO benefits Jekyll - built on Ruby, been around a while, liquid
+template engine
 
-<h4>Headless CMS</h4> are content management systems for creating APIs with no frontend
-Strapi - open source, based on node.js, customizable, self hosted
-Sanity.io - poewrful & flexible platform, great for collaboration, sanity studio toolkit
-Contentful - great for teams, optimized for speed, great for large businesses
-GraphCMS - build a GraphQL API instantly, lightweight & intuitive, UI extensions
+<h4>Headless CMS</h4>
+are content management systems for creating APIs with no frontend Strapi - open
+source, based on node.js, customizable, self hosted Sanity.io - poewrful &
+flexible platform, great for collaboration, sanity studio toolkit Contentful -
+great for teams, optimized for speed, great for large businesses GraphCMS -
+build a GraphQL API instantly, lightweight & intuitive, UI extensions
 
-<h4>Jamstack</h4> - broad term to refer to an architectural approach for building websites
-Variety of tools/technologies, decoupled, static-first, serverless functions, high performance, secure & affordable
-
+<h4>Jamstack</h4>
+- broad term to refer to an architectural approach for building websites Variety
+of tools/technologies, decoupled, static-first, serverless functions, high
+performance, secure & affordable
 
 <h4>Server-side language</h4>
-Node.js - javascript on the server, fast, asynchronous, event-based programming - falls short on CPU intensive tasks
-Python - good for machine learning, data science, AI
-PHP - efficient, widely used, great for freelancing and small business
-C# - general purpose, uses dotnet framework, ASP.net
-GoLang - created by Google
-Ruby - clean syntax, Ruby on Rails which is a framework
-Java - Springboot framework, great to learn basic programming languages, used in enterprise
-Kotlin - replacing Java, used for Android apps
-Rust - special purpose for web assembly, uses hyper as core http server, great for microservices
-Scala - combines object-oriented and functional programming, data engineering, building APIs and microservices
-R - statistical computing, data analytics, scientific research
-Swift - general purpose language, mobile apps (iOS apps)
+Node.js - javascript on the server, fast, asynchronous, event-based programming
+- falls short on CPU intensive tasks Python - good for machine learning, data
+science, AI PHP - efficient, widely used, great for freelancing and small
+business C# - general purpose, uses dotnet framework, ASP.net GoLang - created
+by Google Ruby - clean syntax, Ruby on Rails which is a framework Java -
+Springboot framework, great to learn basic programming languages, used in
+enterprise Kotlin - replacing Java, used for Android apps Rust - special purpose
+for web assembly, uses hyper as core http server, great for microservices Scala
+- combines object-oriented and functional programming, data engineering,
+building APIs and microservices R - statistical computing, data analytics,
+scientific research Swift - general purpose language, mobile apps (iOS apps)
 
-<h4>Server-side web framework</h4> (choose one): frameworks are used on the backend to build apps and APIs
-Handle http requests and send a response
-Nodejs
-- express - most popular, minimalistic, unopinionated, easy for JavaScript client-side to switch over into server-side,
-resource-efficient
-- fastify - newer, fast, plugin architecture
-- koa - minimalistic
-- nest.js - opinionated, similar to angular
-JavaScript
-- Deno: JavaScript/TypeScript framework built on top of Chrome V8 and Rust
-C#
-- Asp.net: built by Microsoft, built on Common Language Runtime (CLR) which allows any supported .NET language (C#,
-Visual Basic, etc.)
-- asp.net mvc
-Java
-- Spring - made of SpringBoot, SpringCloud, struts, opinionated, strength for building larger scale applications that
-use a cloud approach
-Rust - Rocket, actix web
-Python
-- Django - one of the best frameworks, very specific, fast, "Batteries included"
-- fastAPI - framework for building fast APIs
-- flask - great but closer to express, minimalistic, Jina2 templating, secure cookies, unit testing, RESTful request
-dispatching, extremely popular fordevelopers who need to provide web services on small, resource-constrained systems
-GoLang - gin, beego
-Kotlin - spring, vert.x
-php - laravel - very popular, elegant, symfony, slim
-ruby - ruby on rails - used to be very popular, great for rapid development, sinatra, similar design philosophy for
-Django (opinonated, encourages design patterns)
-scala - play, lift
-Perl
-- Mojolicious: Perl used to be used because of a great library called CGI, which is now implemented through Mojolicious
+<h4>Server-side web framework</h4>
+(choose one): frameworks are used on the backend to build apps and APIs Handle
+http requests and send a response Nodejs - express - most popular, minimalistic,
+unopinionated, easy for JavaScript client-side to switch over into server-side,
+resource-efficient - fastify - newer, fast, plugin architecture - koa -
+minimalistic - nest.js - opinionated, similar to angular JavaScript - Deno:
+JavaScript/TypeScript framework built on top of Chrome V8 and Rust C# - Asp.net:
+built by Microsoft, built on Common Language Runtime (CLR) which allows any
+supported .NET language (C#, Visual Basic, etc.) - asp.net mvc Java - Spring -
+made of SpringBoot, SpringCloud, struts, opinionated, strength for building
+larger scale applications that use a cloud approach Rust - Rocket, actix web
+Python - Django - one of the best frameworks, very specific, fast, "Batteries
+included" - fastAPI - framework for building fast APIs - flask - great but
+closer to express, minimalistic, Jina2 templating, secure cookies, unit testing,
+RESTful request dispatching, extremely popular fordevelopers who need to provide
+web services on small, resource-constrained systems GoLang - gin, beego Kotlin -
+spring, vert.x php - laravel - very popular, elegant, symfony, slim ruby - ruby
+on rails - used to be very popular, great for rapid development, sinatra,
+similar design philosophy for Django (opinonated, encourages design patterns)
+scala - play, lift Perl - Mojolicious: Perl used to be used because of a great
+library called CGI, which is now implemented through Mojolicious
 
 <h4>Website security</h4>
-Website security is the act/practice of protecting websites from unauthorized access, use, modification, destruction, or
-disruption. If you're using a server-wide web framework, it will almost certaintly enable "by default" robust and
-well-thought-out defense mechanisms against a number of the more common attacks. Other attacks can be mitigated through
-web server configuration (eg. HTTPS), and there are vulnerability scanner tools to check for obvious mistakes.
+Website security is the act/practice of protecting websites from unauthorized
+access, use, modification, destruction, or disruption. If you're using a
+server-wide web framework, it will almost certaintly enable "by default" robust
+and well-thought-out defense mechanisms against a number of the more common
+attacks. Other attacks can be mitigated through web server configuration (eg.
+HTTPS), and there are vulnerability scanner tools to check for obvious mistakes.
 
 <h4>Threats</h4>
-Cross-site scripting (XSS) is a class of attacks that inject client-side scripts into the browsers of other users. A
-reflected XSS vulnerability occurs when user content passed to the server is returned immediately and unmodified for
-display in the browser. For example, being able to add scripts to URL parameters. A persistent XSS vulnerability occurs
-when the malicious script is stored on the website, eg. submitting a comment with malicious script through unmodified
-HTML. This is very popular as the attacker does not have any direct engagement with the victims. The best defense
-against XSS is to remove or disable markup that can run code, such as the script, object, embed, and link tags. This
-process of modifying user data to prevent scripts is known as input sanitization. Many web frameworks automatically
-sanitize user input from HTML forms by default.
-
-SQL injection attacks databases. The attacker inputs user input to a SQL statement that changes the meaning of that
-statement. For example, instead of entering their username, they can enter something that destroys the users table. To
-avoid this attack, you must ensure that any user data passed to an SQL query cannot change the nature of the query. One
-way to do this is t oescape all characters in the user input that hvae a special meaning in SQL.
-
-Cross-site request forgery (CSRF) is a type of attack where the attacker steals credential information of a user and
-uses that information to submit a request to a server. One way to prevent this type of attack is to require POST
-requests have a user-specific site-generated secret, supplied by the server, thereby preventing John from creating his
-own form.
-
-General strategies for security include input sanitization, effective password management (strong passwords, two-factor
-authentication), HTTPS (encrypts data), keep track of most popular threats, use vulnerability scanning tools, and only
-store and display data that you need (eg. display only 4 digits of credit card number).
+Cross-site scripting (XSS) is a class of attacks that inject client-side scripts
+into the browsers of other users. A reflected XSS vulnerability occurs when user
+content passed to the server is returned immediately and unmodified for display
+in the browser. For example, being able to add scripts to URL parameters. A
+persistent XSS vulnerability occurs when the malicious script is stored on the
+website, eg. submitting a comment with malicious script through unmodified HTML.
+This is very popular as the attacker does not have any direct engagement with
+the victims. The best defense against XSS is to remove or disable markup that
+can run code, such as the script, object, embed, and link tags. This process of
+modifying user data to prevent scripts is known as input sanitization. Many web
+frameworks automatically sanitize user input from HTML forms by default. SQL
+injection attacks databases. The attacker inputs user input to a SQL statement
+that changes the meaning of that statement. For example, instead of entering
+their username, they can enter something that destroys the users table. To avoid
+this attack, you must ensure that any user data passed to an SQL query cannot
+change the nature of the query. One way to do this is t oescape all characters
+in the user input that hvae a special meaning in SQL. Cross-site request forgery
+(CSRF) is a type of attack where the attacker steals credential information of a
+user and uses that information to submit a request to a server. One way to
+prevent this type of attack is to require POST requests have a user-specific
+site-generated secret, supplied by the server, thereby preventing John from
+creating his own form. General strategies for security include input
+sanitization, effective password management (strong passwords, two-factor
+authentication), HTTPS (encrypts data), keep track of most popular threats, use
+vulnerability scanning tools, and only store and display data that you need (eg.
+display only 4 digits of credit card number).
 
 <h4>Python</h4>
-Python was created by Guido van Rossum in 1991, used for web development, software development, mathematics, and system
-scripting. It has simple syntax similar to English, works on different platforms, uses fewer lines, runs on an
-interpreter system (quick prototyping), an dcan be treated in a procedural, object-oriented, or functional way. It was
-designed for readability and has similarities to English language with influence from mathematics. Python relies on
-indentation to define scope (as opposed to curly-brackets).
+Python was created by Guido van Rossum in 1991, used for web development,
+software development, mathematics, and system scripting. It has simple syntax
+similar to English, works on different platforms, uses fewer lines, runs on an
+interpreter system (quick prototyping), an dcan be treated in a procedural,
+object-oriented, or functional way. It was designed for readability and has
+similarities to English language with influence from mathematics. Python relies
+on indentation to define scope (as opposed to curly-brackets).
 
-<h4>Databases:</h4> backend & full stack developers work with various databses & tools
-Relational store data in tables and rows using SQL
-NoSQL store data in collections formatted like json objects
-PostgreSQL - object relational database as opposed to purely relational, adheres more closely to SQL standards
-MySQL
-MS SQL server
-SQLite
-MongoDB - noSQL database, document database, holds collections of documents rather than tables of records, each document
-is like a json object, popular in node.js world (MERN stack, MEAN stack)
-Firebase - hosted platform by Google, all-in-one, includes authentication, etc., noSQL, downside is you don't have full
-control of database, can't install
-your own server
-Supabase - alternative to firebase, open source, abstraction layer, postGres
-Redis - in memory data structure store used for caching
+<h4>Databases:</h4>
+backend & full stack developers work with various databses & tools Relational
+store data in tables and rows using SQL NoSQL store data in collections
+formatted like json objects PostgreSQL - object relational database as opposed
+to purely relational, adheres more closely to SQL standards MySQL MS SQL server
+SQLite MongoDB - noSQL database, document database, holds collections of
+documents rather than tables of records, each document is like a json object,
+popular in node.js world (MERN stack, MEAN stack) Firebase - hosted platform by
+Google, all-in-one, includes authentication, etc., noSQL, downside is you don't
+have full control of database, can't install your own server Supabase -
+alternative to firebase, open source, abstraction layer, postGres Redis - in
+memory data structure store used for caching
 
-<h4>ORMs</h4> - object relational mapper, layer that sits over database that allows you to query your database
-Sequelize, typeORM, mongoose, prisma, sqlalchemy, doctrine
+<h4>ORMs</h4>
+- object relational mapper, layer that sits over database that allows you to
+query your database Sequelize, typeORM, mongoose, prisma, sqlalchemy, doctrine
 
-<h4>REST APIs:</h4> APIs that conform to the REST architectural style and interacts with RESTful services
-Representational state transfer
-HTTP requests work with data/resources
+<h4>REST APIs:</h4>
+APIs that conform to the REST architectural style and interacts with RESTful
+services Representational state transfer HTTP requests work with data/resources
 Specific URL structure for endpoints
 
-<h4>GraphQL:</h4> data query & manipulation language for APIs
-Request specific data points
-Strongly typed
-Less maintenance than REST
-Apollo is a popular GraphQL client
+<h4>GraphQL:</h4>
+data query & manipulation language for APIs Request specific data points
+Strongly typed Less maintenance than REST Apollo is a popular GraphQL client
 
-<h4>Authentication & authorization</h4>: process of identifying an individual and authorization pertains to the
-permissions that
-individual has
-JSON web tokens
-Cookies & sessions
-OAuth (Login via Google, Twitter, Github)
-Authentication libraries (Passport, Grant, etc)
-Password hashing (Bcrypt)
-Protecting endpoints and routes
+<h4>Authentication & authorization</h4>
+: process of identifying an individual and authorization pertains to the
+permissions that individual has JSON web tokens Cookies & sessions OAuth (Login
+via Google, Twitter, Github) Authentication libraries (Passport, Grant, etc)
+Password hashing (Bcrypt) Protecting endpoints and routes
 
-<h4>Wordpress</h4>: full-featured PHP content management system
-Wordpress is still widely used
-Great for freelancing
-Small business clients like it
-It can also be used as a headless CMS
+<h4>Wordpress</h4>
+: full-featured PHP content management system Wordpress is still widely used
+Great for freelancing Small business clients like it It can also be used as a
+headless CMS
 
 <h4>Deploying full stack projects & devops</h4>
-Hosting platforms: aws - big enterprise indepth applications, might be overkill, heroku - easier, runs on dyno,
-digitalocean - cloud servers called droplets, takes some knowledge in linux
-Server software: apache, nginx
-Containers & virtualization: docker - operating system level virtualization to deliver containers, will run same on any
-machine, kubernetes
-Image & video - cloudinary, amazon s3
+Hosting platforms: aws - big enterprise indepth applications, might be overkill,
+heroku - easier, runs on dyno, digitalocean - cloud servers called droplets,
+takes some knowledge in linux Server software: apache, nginx Containers &
+virtualization: docker - operating system level virtualization to deliver
+containers, will run same on any machine, kubernetes Image & video - cloudinary,
+amazon s3
 
 <h4>The Twelve-factor App</h4>
 <a href="https://12factor.net/">Link to resource</a>
-The twelve-factor app is a short overview on best practices for an app.
-1. Codebase: Always track in a version control system such as Git, Mercurial, or Subversion. A copy of the revision
-tracking database is known as the code repository, shortened to code repo or just repo. A codebase is a single repo or
-any set of repos who share a root commit. A deploy is a running instance of the app. One codebase, one app with multiple
-deploys.
-
-2. Dependencies: Always declare dependencies via a dependency declaration manifest and avoid implicit dependencies from
-leaking in from the surrounding system using a dependency isolation tool. For Python, this is done with Pip for
-declaration and Virtualenv for isolation.
-
-3. Config: An app's config is everything that is likely to vary between deploys. Store config in environmental variables
-(or env vars or env). Avoid grouping into development, test, and production, and instead keep every environmental
-variable independent from each other to allow for scalability.
-
-4. Backing services: A backing service is any service the app consumes over the network as part of its normal operation.
-Avoid making any distinction between local and third party services, so that you can swap out services easily. Each
-distinct backing service is a resource. Treat resources as attached resources, indicating a loose coupling to the deploy
-they are attached to.
-
-5. Build, release, run: The build stage transforms a code repo into an executable bundle known as a build, which fetches
-vendors dependencies and compiles binaries and assets. The release stage combines the build with the deploy's current
-config, and produces a release that is ready for immediate execution in the execution environment. The run stage (or
-runtime) runs the app in the execution environment, by laucnhing some set of the app's processes against a selected
-release. Strictly separate between these stages. Every release should have a unique release ID.
-
-6. Processes: The app is executed in the execution environment as one or more processes. Keep processes stateless and
-share-nothing. Put data that needs to persist in a stateful backing service, typically a database. Reserve the memory
-space of the process to brief, single-transaction caches such as downloading a large file, operating on it, and storing
-the results in a database. Never assume that anything cached in memory or on disk will be available for a future request
-or job. Avoid things like django-assetpackager which uses the filesystem as a cache for compiled assets, or "sticky
-sessions" which cache user session data in memory of the app's processes. Instead, cache assets during the build stage
-and use datastores with time-expiration like Memcached or Redis.
-
-7. Port binding: Make your app self-contained and do not rely on runtime injection of a webserver into the execution
-environment to create a web-facing service. The web app exports HTTP as a service by binding to a port, and listening to
-requests coming in on that port.
-
-8. Concurrency: Make processes a priority. Take cues form the unix process model for running service daemons, assigning
-each type of work to a process type to handle diverse workloads. Use a share-nothing, horizontally partitionable nature.
-The array of process types and number of processes of each type is known as the process formation. Never daemonize or
-write PID files. Instead, rely on the operating system's process manager to manage output streams, respond to crashed
-processes, and handle user-initiated restarts and shutdowns.
-
-9. Disposability: Make processes disposable, such that they can be started or stopped at a moment's notice (when they
-receive a SIGTERM signal from the process manager). Develop robustness against sudden death.
-
-10. Dev/prod parity: Keep development, staging, and production as similar as possible. This reduces time gap, personnel
-gap, and tools gap. Resist the urge to use different backing services between development and production (eg. SQLite in
-development and MySQL in production).
-
-11. Logs: Logs provide visibility into the behavior of a running app and are the stream of aggregated, time-ordered
-events collected from output streams of all running processes and backing services. Never concern yourself with routing
-or storage of the output stream. Do not manage logfiles. Instead, write event streams, unbuffered, to stdout.
-
-12. Admin process: Process formation is the array of processes used to do the app's regular business as it runs. Use
-languages that provide a REPL shell out of the box. Run one-off admin processes in an identical environment as the
-regular long-running processes of the app, against a release using the same codebase and config as any process against
-that release, and ship with application code to avoid synchronization issues.
+The twelve-factor app is a short overview on best practices for an app. 1.
+Codebase: Always track in a version control system such as Git, Mercurial, or
+Subversion. A copy of the revision tracking database is known as the code
+repository, shortened to code repo or just repo. A codebase is a single repo or
+any set of repos who share a root commit. A deploy is a running instance of the
+app. One codebase, one app with multiple deploys. 2. Dependencies: Always
+declare dependencies via a dependency declaration manifest and avoid implicit
+dependencies from leaking in from the surrounding system using a dependency
+isolation tool. For Python, this is done with Pip for declaration and Virtualenv
+for isolation. 3. Config: An app's config is everything that is likely to vary
+between deploys. Store config in environmental variables (or env vars or env).
+Avoid grouping into development, test, and production, and instead keep every
+environmental variable independent from each other to allow for scalability. 4.
+Backing services: A backing service is any service the app consumes over the
+network as part of its normal operation. Avoid making any distinction between
+local and third party services, so that you can swap out services easily. Each
+distinct backing service is a resource. Treat resources as attached resources,
+indicating a loose coupling to the deploy they are attached to. 5. Build,
+release, run: The build stage transforms a code repo into an executable bundle
+known as a build, which fetches vendors dependencies and compiles binaries and
+assets. The release stage combines the build with the deploy's current config,
+and produces a release that is ready for immediate execution in the execution
+environment. The run stage (or runtime) runs the app in the execution
+environment, by laucnhing some set of the app's processes against a selected
+release. Strictly separate between these stages. Every release should have a
+unique release ID. 6. Processes: The app is executed in the execution
+environment as one or more processes. Keep processes stateless and
+share-nothing. Put data that needs to persist in a stateful backing service,
+typically a database. Reserve the memory space of the process to brief,
+single-transaction caches such as downloading a large file, operating on it, and
+storing the results in a database. Never assume that anything cached in memory
+or on disk will be available for a future request or job. Avoid things like
+django-assetpackager which uses the filesystem as a cache for compiled assets,
+or "sticky sessions" which cache user session data in memory of the app's
+processes. Instead, cache assets during the build stage and use datastores with
+time-expiration like Memcached or Redis. 7. Port binding: Make your app
+self-contained and do not rely on runtime injection of a webserver into the
+execution environment to create a web-facing service. The web app exports HTTP
+as a service by binding to a port, and listening to requests coming in on that
+port. 8. Concurrency: Make processes a priority. Take cues form the unix process
+model for running service daemons, assigning each type of work to a process type
+to handle diverse workloads. Use a share-nothing, horizontally partitionable
+nature. The array of process types and number of processes of each type is known
+as the process formation. Never daemonize or write PID files. Instead, rely on
+the operating system's process manager to manage output streams, respond to
+crashed processes, and handle user-initiated restarts and shutdowns. 9.
+Disposability: Make processes disposable, such that they can be started or
+stopped at a moment's notice (when they receive a SIGTERM signal from the
+process manager). Develop robustness against sudden death. 10. Dev/prod parity:
+Keep development, staging, and production as similar as possible. This reduces
+time gap, personnel gap, and tools gap. Resist the urge to use different backing
+services between development and production (eg. SQLite in development and MySQL
+in production). 11. Logs: Logs provide visibility into the behavior of a running
+app and are the stream of aggregated, time-ordered events collected from output
+streams of all running processes and backing services. Never concern yourself
+with routing or storage of the output stream. Do not manage logfiles. Instead,
+write event streams, unbuffered, to stdout. 12. Admin process: Process formation
+is the array of processes used to do the app's regular business as it runs. Use
+languages that provide a REPL shell out of the box. Run one-off admin processes
+in an identical environment as the regular long-running processes of the app,
+against a release using the same codebase and config as any process against that
+release, and ship with application code to avoid synchronization issues.
 
 <h4>Backend & full stack web developer:</h4>
-comfortable with a server-side programming language
-know how to setup and manage a database & ORM/ ODM
-know how to create REST APIs and implement authentication
-comfortable with terminal and Unix commands
-know how to deploy projects and work with servers
+comfortable with a server-side programming language know how to setup and manage
+a database & ORM/ ODM know how to create REST APIs and implement authentication
+comfortable with terminal and Unix commands know how to deploy projects and work
+with servers
 
 <h4>Mobile development via web technologies:</h4>
-React native - react based, code reusability, large community
-Flutter - dart programming language, extremely fast, strong documentation
-Ionic - use any framework, pre-designed UI components, developer-friendly tooling
-Xamarin - mobile apps with .NET & C#, cross-platform apps, high performance
+React native - react based, code reusability, large community Flutter - dart
+programming language, extremely fast, strong documentation Ionic - use any
+framework, pre-designed UI components, developer-friendly tooling Xamarin -
+mobile apps with .NET & C#, cross-platform apps, high performance
 
-<h4>Web3</h4>: opens up a whole new possibility of decentralized apps (Dapps) that offer benefits such as transparency,
-security,
-anonymity and more
-Blockchain - basically decentralized, distributed public ledger that is immutable
-Ethereum & smart contracts
-Solidity programming
-NFTs (non-fungible tokens)
+<h4>Web3</h4>
+: opens up a whole new possibility of decentralized apps (Dapps) that offer
+benefits such as transparency, security, anonymity and more Blockchain -
+basically decentralized, distributed public ledger that is immutable Ethereum &
+smart contracts Solidity programming NFTs (non-fungible tokens) Web1.0 -
+information web Web2.0 - interactive web where public creates content but
+everything is centralized Web3.0 - decentralized apps
 
-Web1.0 - information web
-Web2.0 - interactive web where public creates content but everything is centralized
-Web3.0 - decentralized apps
-
-<h4>Web assembly:</h4> a low-level assembly-like language or bytecode for the web
-Develop high-performance web applications
-Write programs in Rust, C, C++ and compile to WASM
-AssemblyScript is a TypeScript variant
-NOT a replacement for JS!
+<h4>Web assembly:</h4>
+a low-level assembly-like language or bytecode for the web Develop
+high-performance web applications Write programs in Rust, C, C++ and compile to
+WASM AssemblyScript is a TypeScript variant NOT a replacement for JS!
 
 <h4>Artificial intelligence</h4>
-Programming tools (GitHub Copilot)
-Testing tools
-ML APIs
-Chatbots, Spam filters, suggestions, etc.
-
-{% endblock %}
+Programming tools (GitHub Copilot) Testing tools ML APIs Chatbots, Spam filters,
+suggestions, etc. {% endblock %}

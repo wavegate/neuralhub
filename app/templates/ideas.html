@@ -1,19 +1,14 @@
-{% extends "base.html" %}
-
-{% block blurred %}
+{% extends "base.html" %} {% block blurred %}
 <div class="blurred-container">
-  <div class="img-src" style="background-image: url({{ url_for('static', filename='img/kindel2.jpg') }})"></div>
-  <div class="motto">
-    Companies
-  </div>
+  <div
+    class="img-src"
+    style="background-image: url({{ url_for('static', filename='img/kindel2.jpg') }})"
+  ></div>
+  <div class="motto">Companies</div>
   <div class="tag">Photo by Kindel Media from Pexels</div>
 </div>
-{% endblock %}
-
-{% block content %}
-<div class="row">
-
-</div>
+{% endblock %} {% block content %}
+<div class="row"></div>
 <pre>
   -cognitive testing application
   -obsidian.md with applied graph theory, anki with upgraded intelligence... an intelligent "flashcard" or extremely simple brain model
@@ -26,6 +21,11 @@
   -latex2html
   -image to pixel art converter
   -facebook for dogs
+  -drug storage list with dosages and reminders to take, possibly openFDA incorporation, take photo of drug vials
+  -calorie counter
+  -CYNIC or STRAY or DINGO or SWIFT logo of White Dog, tagline "Learn, To Live"
+  -button designer where there's just a button and you have different designs and when they click the button, it tells you what percentage of people hit the button with different designs
+  -Sports physics
 </pre>
 
 <style>
@@ -57,7 +57,7 @@
     border-radius: 10px;
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
   }
 
   .overlay2 {
@@ -73,11 +73,10 @@
 
   .overlay2 {
     position: relative;
-
   }
 
   .overlay2:after {
-    content: '\A';
+    content: "\A";
     position: absolute;
     width: 250px;
     height: 250px;
@@ -110,11 +109,7 @@
   }
 
   .study1 {
-    background-image: url({{ url_for('static', filename='img/low-back-pain.jpg')
-  }
-  }
-
-  );
+    background-image: url({{url_for("static", filename= "img/low-back-pain.jpg")}});
   }
 
   .case-study__img {
@@ -134,7 +129,7 @@
   }
 
   .case-study__overlay:after {
-    content: '';
+    content: "";
     width: 100%;
     border-radius: 10px;
     height: 100%;
@@ -144,7 +139,7 @@
     top: 0;
     z-index: -10;
     left: 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .case-study__title {
@@ -153,7 +148,7 @@
     margin-bottom: 2rem;
     margin-top: 4rem;
     font-size: 2.25rem;
-    font-family: 'Oswald';
+    font-family: "Oswald";
     font-weight: 100;
     color: white;
     text-align: center;
@@ -192,7 +187,7 @@
   }
 
   .case-study:hover .case-study__overlay:after {
-    opacity: .75;
+    opacity: 0.75;
   }
 </style>
 {% endblock %}
